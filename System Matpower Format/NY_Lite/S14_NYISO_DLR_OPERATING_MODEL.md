@@ -42,7 +42,7 @@ conductor and weather provenance may be DLR-eligible.
 
 ## Safe implementation order
 
-1. Complete the S13-FULL Phase 1B UPNY-ConEd topology.
+1. Preserve the completed S13-FULL Phase 1B UPNY-ConEd checkpoint.
 2. Complete the S13-FULL Phase 1C downstate H-J/K-J topology.
 3. Complete passive residualization of overlapping NYISO aggregate branches.
 4. Freeze a cumulative S14 retention set from the completed S13-FULL topology.
@@ -52,12 +52,13 @@ conductor and weather provenance may be DLR-eligible.
 8. Run independent S12/PERFORM behavior tests and the six public-hour gates.
 
 A Phase 1A retention inventory may be used for diagnostics, but it may not
-freeze the final ports or equivalent. Phase 1B/1C can change both the required
-boundary detail and which internal NPCC branches overlap the physical overlay.
+freeze the final ports or equivalent. The completed Phase 1B overlay and the
+pending Phase 1C topology change both the required retained detail and which
+internal NPCC branches overlap the physical overlay.
 
-## Current Phase 1A provisional inventory
+## Historical Phase 1A provisional inventory
 
-The current S13-FULL Phase 1A case contains 53 NYISO-side buses: 46 original
+The immutable S13-FULL Phase 1A checkpoint contains 53 NYISO-side buses: 46 original
 NPCC NY buses, three S7 transit buses, and four Phase 1A PERFORM terminals. It
 contains 88 NY-internal branches: 68 original NPCC rows, 13 S7 rows, and seven
 Phase 1A physical rows.
@@ -66,10 +67,11 @@ Ten active NY/external tie rows reach ten first external terminals. Retaining
 those terminals gives a provisional 63-bus skeleton with 88 internal rows and
 ten source tie rows. The remaining 155 external-external rows, including the
 existing connection between external terminals 124 and 125, belong to the
-eventual external-network reduction. These counts are diagnostic and must be
-rebuilt after every topology phase.
+eventual external-network reduction. These are historical Phase 1A diagnostic
+counts and are already stale relative to the cumulative Phase 1B checkpoint.
 They are a read-only manual design audit, not a promotion gate or canonical
-artifact; `build_s14_nyiso_retention_set.m` must reproduce them before use.
+artifact. No S14 retention builder may be created until Phase 1C and the
+required S13-FULL construction-source gates are complete.
 
 | Boundary group | NY-side buses | Provisional first external terminals |
 |---|---|---|

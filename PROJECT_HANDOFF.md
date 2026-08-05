@@ -97,7 +97,7 @@ S10a seven-interface MAE                   224.95 MW
 S10a mean normalized control-group Q error 0.1870
 ```
 
-The current Phase 1A S13-FULL construction checkpoint adds four exact PERFORM terminals (Fraser,
+The immutable Phase 1A S13-FULL construction checkpoint adds four exact PERFORM terminals (Fraser,
 Coopers Corner, Marcy, and Rock Tavern) and seven direct physical source rows
 between matching EDIC and Ramapo attachments. It has 147 buses, 253 branches,
 and 62 generators. All 29 mandatory structural gates pass; the five
@@ -107,8 +107,26 @@ the inherited-snapshot standard-PF smoke test. Both fail that
 snapshot's Q-limit PF, so the smoke result is not an operating gate. S13-FULL
 is never the DLR delivery case; its remaining validation determines whether it
 is fit to supply the NYISO topology and external reduction source for S14.
-All seven canonical overlay registers and the structural ledger match fresh
+All seven canonical overlay registers and the structural ledger matched fresh
 in-memory tables, and all 20 adversarial mutations fail at their expected gate.
+
+The current cumulative Phase 1B checkpoint adds E. Fishkill and Ladentown plus
+nine exact PERFORM 345-kV physical/support circuits. It has 149 buses, 262
+branches, and 62 generators. Its six-circuit UPNY-ConEd 345-kV proxy is a
+graph-validated nonintersecting local cut: F36/F37, F30/F31, Y88, and Y94 are
+members; Ramapo–Ladentown and E. Fishkill–Wood Street are same-side support
+rows; Wood Street–Millwood is excluded. The proxy passes 24/24 mandatory
+operator gates, while RFK305 and independently identifiable BK1/BK2 remain
+three explicit public-completeness gaps. It is not an exact public operator.
+
+The two Phase 1B local subnetworks pass 33/33 no-fit identity gates. Maximum
+direct errors are 8.19e-12 MW and 2.88e-12 MVAr, and the omitted-network-
+injection solves recover the interior flows and voltages to machine precision.
+Rows 94 and 235 are registered but remain unfitted overlap candidates. No
+parent R/X/B, shunt, dispatch, or control is calibrated. The cumulative 149-
+bus case passes all 30 structural gates; four later construction-qualification
+gates remain fail-closed. S13-FULL remains permanently ineligible for DLR
+delivery, and S14-NYISO remains unbuilt.
 
 The S13.1 no-fit local fixture now passes 20/20 mandatory gates. Direct
 seven-branch power recomputation differs from full PERFORM by at most
@@ -169,19 +187,24 @@ This command:
 8. verifies that the S12 oracle snapshot sidecar contains the complete
    eight-circuit Total East operator and matches a fresh recomputation;
 9. reruns the durable S13 adversarial mutation suite; and
-10. runs the exact S13.1 local physical-circuit identity fixture and the
-    fail-closed common-input representability audit, then compares all twelve
-    committed S13.1 evidence CSVs against canonical rebuilt tables; and
-11. runs the inherited-snapshot S7/S13 standard- and Q-limit-PF smoke
-    diagnostic, reporting its limitations without treating it as an S14 promotion
-    gate or a 2019 operating-point comparison.
+10. runs the exact immutable S13.1 local physical-circuit identity fixture and
+    the fail-closed common-input representability audit, then compares all
+    twelve committed S13.1 evidence CSVs against canonical rebuilt tables;
+11. runs the cumulative Phase 1B local-identity, nonintersecting UPNY proxy,
+    committed-artifact, and adversarial-mutation checks; and
+12. runs both inherited-snapshot smoke diagnostics: the immutable two-case
+    S7/Phase-1A check and the cumulative three-case S7/Phase-1A/Phase-1B check.
+    Their standard- and Q-limit-PF results are diagnostic only and are not an
+    S14 promotion gate or a 2019 operating-point comparison.
 
-The `s13-artifact-integrity` GitHub workflow repeats the structural, artifact,
-adversarial, S12-sidecar, S13.1 preflight, and inherited-snapshot smoke checks for pull requests,
-`main`/`codex/**` pushes, and manual dispatch. CI writes no smoke artifacts and
-asserts only `standard_pf_both_pass`; it reports but does not assert Q-limit PF
-success because the inherited snapshot's Q-limit failure is a known diagnostic,
-not an S13-FULL construction gate or an S14 promotion gate.
+The `s13-artifact-integrity` GitHub workflow repeats the cumulative structural,
+register, adversarial, S12-sidecar, immutable S13.1 preflight, Phase 1B local,
+UPNY-operator, evidence-artifact, and inherited-snapshot smoke checks for pull
+requests, `main`/`codex/**` pushes, and manual dispatch. CI writes no smoke
+artifacts. It requires all three standard PFs in the cumulative Phase 1B smoke,
+but reports rather than requires Q-limit PF success because the inherited
+snapshot remains diagnostic rather than an S13-FULL construction gate or an
+S14 promotion gate.
 
 The default remains an S7 provenance and S13-FULL construction-parent
 reproduction. It must report the promoted operating model as pending S14-NYISO
@@ -861,12 +884,13 @@ portion with a separately registered AC multi-terminal boundary equivalent.
 The fail-closed implementation contract is documented in
 `System Matpower Format/NY_Lite/S14_NYISO_DLR_OPERATING_MODEL.md`.
 
-At the current Phase 1A checkpoint, S13-FULL has 53 NYISO-side buses and ten
+The earlier Phase 1A design audit counted 53 NYISO-side buses and ten
 active NY/external tie rows. Retaining the ten first external terminals gives a
 provisional 63-bus inventory. It would preserve 88 NY-internal branch rows plus
 the ten tie rows; all 155 external-external rows, including row 178 between
 external terminals 124 and 125, belong to the eventual external equivalent.
-This inventory is not final because Phase 1B/1C add NYISO terminals and the
+This inventory is not final because Phase 1B has now added NYISO terminals and
+Phase 1C will add the
 downstate landing detail needed by several public schedule groups.
 These figures come from a read-only design audit and are non-gating until the
 future retention builder reproduces them in a canonical register.
@@ -884,20 +908,19 @@ not a promotion artifact, until a committed reduction audit reproduces them.
 
 ## 12. Recommended Next Work
 
-1. **Phase 1B — UPNY-ConEd physical cut.** Add East Fishkill and Ladentown and
-   preserve Pleasant Valley–East Fishkill, Ladentown–Buchanan, and Pleasant
-   Valley–Wood Street circuits. Replace the conceptual operator with a
-   nonintersecting physical cutset.
-2. **Phase 1C — downstate interface mesh.** Add separate Sprain Brook,
+1. **Phase 1C — downstate interface mesh.** Add separate Sprain Brook,
    Dunwoodie, West 49th Street, Tremont/Academy, Jamaica, Lake Success, and
    Valley Stream terminals. Diagnose H-J, K-J, and net Zone-J import separately.
-3. **Phase 1D — passive internal residual equivalents.** Freeze added physical circuits,
+2. **Phase 1D — passive internal residual equivalents.** Freeze added physical circuits,
    the five DLR circuits, and nonoverlapping original branches. Rows 34/36 are
    physical-overlap residual candidates. Rows 40/42 are adjacent E-F
    calibration candidates and remain frozen unless paired multi-snapshot
    response evidence and strong regularization explicitly authorize them.
    Reject negative-resistance or materially nonpassive residuals and add more
    physical detail instead.
+3. **Qualify the full-NPCC operating source.** Resolve source-backed zonal
+   generation, regional tie-flow control, distributed AC-loss balance, and a
+   common voltage/Q-control policy after the Phase 1A-1D network is frozen.
 4. **Define the cumulative S14 retention set.** Retain all Zones A-K buses,
    every Phase 1A-1C physical addition, NYISO generators and Q-control buses,
    DLR terminals, NY-side tie terminals, and only the first external terminals
@@ -947,7 +970,26 @@ System Matpower Format/NY_Lite/run_s13_phase1a_oracle_comparison.m
 System Matpower Format/NY_Lite/test_s13_phase1a_oracle_comparison.m
 System Matpower Format/NY_Lite/validate_s13_phase1a_oracle_artifact_consistency.m
 System Matpower Format/NY_Lite/test_s13_phase1a_oracle_artifact_consistency.m
+System Matpower Format/NY_Lite/add_npcc_perform_upny_coned_detail.m
+System Matpower Format/NY_Lite/build_s13_phase1b_candidate.m
+System Matpower Format/NY_Lite/merge_s13_overlay_reports.m
+System Matpower Format/NY_Lite/run_s13_phase1b_local_identity.m
+System Matpower Format/NY_Lite/test_s13_phase1b_local_identity.m
+System Matpower Format/NY_Lite/validate_s13_phase1b_upny_operator.m
+System Matpower Format/NY_Lite/validate_s13_phase1b_artifact_consistency.m
+System Matpower Format/NY_Lite/test_s13_phase1b_validator_adversarial.m
+System Matpower Format/NY_Lite/validate_s13_phase1b_smoke.m
 System Matpower Format/NY_Lite/s13_structural_adversarial_results.csv
+System Matpower Format/NY_Lite/s13_phase1b_local_identity.csv
+System Matpower Format/NY_Lite/s13_phase1b_local_omitted_injections.csv
+System Matpower Format/NY_Lite/s13_phase1b_terminal_voltage_comparison.csv
+System Matpower Format/NY_Lite/s13_phase1b_operator_validation.csv
+System Matpower Format/NY_Lite/s13_phase1b_terminal_reuse_audit.csv
+System Matpower Format/NY_Lite/s13_phase1b_generation_audit.csv
+System Matpower Format/NY_Lite/s13_phase1b_gate_ledger.csv
+System Matpower Format/NY_Lite/s13_phase1b_artifact_consistency.csv
+System Matpower Format/NY_Lite/s13_phase1b_adversarial_results.csv
+System Matpower Format/NY_Lite/s13_phase1b_smoke_validation.csv
 System Matpower Format/NY_Lite/s12_generate_interface_snapshot_sums.m
 System Matpower Format/NY_Lite/test_s12_interface_snapshot_sums.m
 System Matpower Format/NY_Lite/s12_interface_snapshot_sums.csv

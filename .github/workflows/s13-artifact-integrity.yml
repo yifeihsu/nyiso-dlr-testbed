@@ -33,7 +33,7 @@ jobs:
   repository-integrity:
     name: S13 registers and structural mutations
     runs-on: windows-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -60,12 +60,16 @@ jobs:
             assert(nnz(strcmp(policy.setting, 'reference_oracle')) == 1 && nnz(strcmp(policy.setting, 'reference_oracle') & strcmp(policy.value, 'npcc_ny_lite_s12_perform_retention_core')) == 1);
             s14_promotion_scope = strcmp(policy.category, 's14_nyiso') & strcmp(policy.setting, 'promotion_eligible');
             assert(nnz(s14_promotion_scope) == 1 && nnz(s14_promotion_scope & strcmp(policy.value, 'false')) == 1);
+            s14_status_scope = strcmp(policy.category, 's14_nyiso') & strcmp(policy.setting, 'status');
+            assert(nnz(s14_status_scope) == 1 && nnz(s14_status_scope & strcmp(policy.value, 'pending_retention_and_external_equivalent')) == 1);
+            assert(~isfile(fullfile(pwd, 'System Matpower Format', 'npcc_ny_lite_s14_nyiso_dlr_operating_model.m')) && ~isfile(fullfile(pwd, 'System Matpower Format', 'NY_Lite', 'build_s14_nyiso_retention_set.m')) && ~isfile(fullfile(pwd, 'System Matpower Format', 'NY_Lite', 's14_nyiso_retention_set.csv')));
             s7 = loadcase('npcc_ny_lite_s7_seven_interface_perform_direct_candidate');
             assert(~s7.userdata.ny_lite.s7_seven_interface_calibration.promotion_eligible);
             s12 = loadcase('npcc_ny_lite_s12_perform_retention_core');
             assert(~s12.userdata.promotion_eligible);
             s13_full = loadcase('npcc_ny_lite_s13_npcc_augmented_2019');
-            assert(strcmp(s13_full.userdata.s13.governing_hierarchy_role, 's13_full_construction_validation_parent') && strcmp(s13_full.userdata.s13.downstream_operating_model, 'npcc_ny_lite_s14_nyiso_dlr_operating_model') && ~s13_full.userdata.s13.dlr_delivery_eligible && ~s13_full.userdata.s13.promotion_eligible);
+            assert(strcmp(s13_full.userdata.s13.current_phase, 'phase1b') && isequal([size(s13_full.bus, 1), size(s13_full.branch, 1), size(s13_full.gen, 1)], [149 262 62]));
+            assert(strcmp(s13_full.userdata.s13.governing_hierarchy_role, 's13_full_construction_validation_parent') && strcmp(s13_full.userdata.s13.downstream_operating_model, 'npcc_ny_lite_s14_nyiso_dlr_operating_model') && ~s13_full.userdata.s13.dlr_delivery_eligible && ~s13_full.userdata.s13.construction_source_qualified && ~s13_full.userdata.s13.promotion_eligible);
             structural = validate_s13_structural_preservation(struct('write_outputs', false, 'fail_on_structural', true));
             assert(structural.all_structural_gates_pass && ~structural.all_construction_gates_pass && ~structural.construction_source_qualified && ~structural.promotion_eligible);
             artifacts = validate_s13_artifact_consistency(struct('fail_on_mismatch', true));
@@ -80,3 +84,16 @@ jobs:
             assert(oracle_artifacts.all_artifacts_match && oracle_artifacts.artifact_count == 12);
             smoke = validate_s13_phase1a_smoke(struct('write_outputs', false));
             assert(smoke.standard_pf_both_pass);
+            phase1b_local = run_s13_phase1b_local_identity(struct('write_outputs', false, 'fail_on_gate', true, 'verbose', false));
+            assert(phase1b_local.pass && all(phase1b_local.gate_ledger.pass(phase1b_local.gate_ledger.mandatory)) && phase1b_local.phase1a_report_exact_match && phase1b_local.phase1a_physical_rows_bit_identical && phase1b_local.candidate_fail_closed);
+            phase1b_local_test = test_s13_phase1b_local_identity(struct('verbose', false));
+            assert(phase1b_local_test.pass && phase1b_local_test.operator_validator_available && phase1b_local_test.operator_mandatory_proxy_pass);
+            phase1b_operator = validate_s13_phase1b_upny_operator(struct('write_outputs', false, 'fail_on_gate', true, 'verbose', false));
+            phase1b_operator_mandatory = phase1b_operator.gate_ledger.mandatory_for_phase1b_proxy;
+            assert(phase1b_operator.pass && phase1b_operator.mandatory_proxy_pass && phase1b_operator.mandatory_proxy_pass_count == 24 && phase1b_operator.mandatory_proxy_gate_count == 24 && all(phase1b_operator.gate_ledger.pass(phase1b_operator_mandatory)) && phase1b_operator.public_gap_pass_count == 0 && phase1b_operator.public_gap_gate_count == 3 && ~phase1b_operator.exact_public_operator && ~phase1b_operator.promotion_eligible);
+            phase1b_artifacts = validate_s13_phase1b_artifact_consistency(struct('write_outputs', false, 'fail_on_mismatch', true, 'verbose', false));
+            assert(phase1b_artifacts.all_artifacts_match && phase1b_artifacts.matched_artifact_count == 7 && phase1b_artifacts.artifact_count == 7 && phase1b_artifacts.dependency_count == 6 && phase1b_artifacts.passed_dependency_count == 6 && ~phase1b_artifacts.promotion_eligible);
+            phase1b_adversarial = test_s13_phase1b_validator_adversarial(struct('output_file', fullfile(tempdir, 's13_phase1b_adversarial_results.csv'), 'write_outputs', true, 'fail_on_unrejected', true, 'verbose', false));
+            assert(phase1b_adversarial.all_expected_gates_observed && height(phase1b_adversarial.results) == 9 && nnz(phase1b_adversarial.results.pass) == 9);
+            phase1b_smoke = validate_s13_phase1b_smoke(struct('write_outputs', false, 'fail_on_standard_pf', true, 'verbose', false));
+            assert(phase1b_smoke.standard_pf_all_pass && height(phase1b_smoke.summary) == 3 && nnz(phase1b_smoke.summary.standard_pf_success) == 3 && ~phase1b_smoke.construction_source_qualified && ~phase1b_smoke.promotion_eligible);

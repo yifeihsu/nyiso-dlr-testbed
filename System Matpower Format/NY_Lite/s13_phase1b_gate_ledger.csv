@@ -1,0 +1,34 @@
+overlay_path_id,gate_id,metric_value,limit,comparator,mandatory,pass,notes
+phase1b_all,source_q_limit_pf_converged,1,1,==,1,1,full PERFORM Q-limit reference
+phase1b_all,phase1a_report_exact_match,1,1,==,1,1,fresh immutable Phase 1A builder
+phase1b_all,phase1a_physical_rows_bit_identical,1,1,==,1,1,full immutable Phase 1A branch rows
+phase1b_all,candidate_remains_fail_closed,1,1,==,1,1,no residual fit or promotion
+phase1b_all,source_and_model_orientation_exact,1,1,==,1,1,registered source and model endpoints
+phase1b_all,raw_circuit_identity_exact,1,1,==,1,1,RAW endpoint R/X/B and circuit identity
+phase1b_all,s13_parameter_controls_exact,1,1,==,1,1,R/X/B ratings tap shift and status
+phase1b_pv_wood_mesh,source_interior_zero_device_status,1,1,==,1,1,PD/QD/GS/BS and online generators
+phase1b_pv_wood_mesh,omitted_network_partition_valid,1,1,==,1,1,no unregistered branch internal to local buses
+phase1b_pv_wood_mesh,source_kcl_residual_current_pu,6.72263648133021e-14,1e-07,<=,1,1,retained plus omitted terminal current
+phase1b_pv_wood_mesh,direct_max_p_error_mw,0,1e-06,<=,1,1,Yf/Yt phasor recomputation
+phase1b_pv_wood_mesh,direct_max_q_error_mvar,0,1e-06,<=,1,1,Yf/Yt phasor recomputation
+phase1b_pv_wood_mesh,injection_local_pf_converged,1,1,==,1,1,two fixed boundary phasors
+phase1b_pv_wood_mesh,injection_max_p_error_mw,0,0.05,<=,1,1,source-derived omitted-network injection
+phase1b_pv_wood_mesh,injection_max_q_error_mvar,0,0.1,<=,1,1,source-derived omitted-network injection
+phase1b_pv_wood_mesh,injection_max_interior_vm_error_pu,0,1e-05,<=,1,1,single interior physical terminal
+phase1b_pv_wood_mesh,injection_max_interior_va_error_deg,0,0.001,<=,1,1,single interior physical terminal
+phase1b_pv_wood_mesh,fixed_boundary_vm_error_pu,0,1e-10,<=,1,1,exact source boundary magnitudes
+phase1b_pv_wood_mesh,fixed_boundary_va_error_deg,0,1e-09,<=,1,1,exact source boundary angles
+phase1b_ramapo_buchanan_path,source_interior_zero_device_status,1,1,==,1,1,PD/QD/GS/BS and online generators
+phase1b_ramapo_buchanan_path,omitted_network_partition_valid,1,1,==,1,1,no unregistered branch internal to local buses
+phase1b_ramapo_buchanan_path,source_kcl_residual_current_pu,2.06057393370429e-13,1e-07,<=,1,1,retained plus omitted terminal current
+phase1b_ramapo_buchanan_path,direct_max_p_error_mw,8.18545231595635e-12,1e-06,<=,1,1,Yf/Yt phasor recomputation
+phase1b_ramapo_buchanan_path,direct_max_q_error_mvar,2.88480350718601e-12,1e-06,<=,1,1,Yf/Yt phasor recomputation
+phase1b_ramapo_buchanan_path,injection_local_pf_converged,1,1,==,1,1,two fixed boundary phasors
+phase1b_ramapo_buchanan_path,injection_max_p_error_mw,0,0.05,<=,1,1,source-derived omitted-network injection
+phase1b_ramapo_buchanan_path,injection_max_q_error_mvar,0,0.1,<=,1,1,source-derived omitted-network injection
+phase1b_ramapo_buchanan_path,injection_max_interior_vm_error_pu,0,1e-05,<=,1,1,single interior physical terminal
+phase1b_ramapo_buchanan_path,injection_max_interior_va_error_deg,0,0.001,<=,1,1,single interior physical terminal
+phase1b_ramapo_buchanan_path,fixed_boundary_vm_error_pu,0,1e-10,<=,1,1,exact source boundary magnitudes
+phase1b_ramapo_buchanan_path,fixed_boundary_va_error_deg,0,1e-09,<=,1,1,exact source boundary angles
+phase1b_upny_operator,operator_mandatory_proxy_pass,1,1,==,1,1,optional validator mandatory proxy rows
+phase1b_upny_operator,operator_remains_nonpublic_unpromoted,1,1,==,1,1,exact public operator and promotion both remain false

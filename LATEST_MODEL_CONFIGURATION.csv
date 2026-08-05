@@ -23,9 +23,9 @@ model,base_mva,100,MATPOWER system base
 structural_parent,s7_bus_count,143,Original 140 plus three zero-load transit buses
 structural_parent,s7_branch_count,246,Full NPCC-derived topology including the existing NY delivery spine
 structural_parent,s7_generator_count,62,Original units plus fourteen zonal equivalents
-s13_phase1a,status,s13_full_construction_checkpoint,Physical E-G overlay built in the full-NPCC construction parent; residual and response evidence remain pending
+s13_phase1a,status,immutable_s13_full_construction_checkpoint,Physical E-G overlay and its preflight artifacts remain the frozen Phase 1A record
 s13_phase1a,metadata_schema_version,2,Machine-readable role and false-status fields are structurally validated and mutation-tested
-s13_phase1a,case_name,npcc_ny_lite_s13_npcc_augmented_2019,Target filename does not imply promotion
+s13_phase1a,case_name,npcc_ny_lite_s13_npcc_augmented_2019,Immutable Phase 1A builder output; the shared case wrapper now returns cumulative Phase 1B
 s13_phase1a,case_size,147 buses / 253 branches / 62 generators,S7 plus four PERFORM terminals and seven direct physical branches
 s13_phase1a,source_bus_additions,1228|1222|1567|772,Fraser|Coopers Corner|Marcy|Rock Tavern
 s13_phase1a,source_branch_rows,2137|2131|2154|2133|1567|1568|1571,Direct full-PERFORM R/X/B and RATE_A/B/C; no invented attachment impedance
@@ -42,13 +42,35 @@ s13_phase1a,heldout_response,pending,No held-out library is run before a frozen 
 s13_phase1a,oracle_preflight_gates,38 / 59 pass fail-closed,Stage A and schema-policy evidence pass while common-baseline system and held-out response gates remain blocked
 s13_phase1a,oracle_artifact_consistency,12 / 12 pass,Local readiness blocked system comparison circuit summary held-out summary 432-row metric manifest and gate ledger are canonical LF matches
 s13_phase1a,heldout_metric_manifest,432 blocked rows,All 12 perturbations register seven-circuit delta P/Q/current six-terminal delta VM/VA and E-G/E-F/loss metrics with no refit and pending balancing policy
-s13_phase1a,repository_ci,s13-artifact-integrity,Pull requests main/codex pushes and manual dispatch run structural register adversarial S12 sidecar S13.1 preflight 12 evidence-artifact and inherited-snapshot standard-PF smoke checks; Q-limit smoke is reported but not asserted
+s13_phase1a,repository_ci_evidence,retained_in_s13-artifact-integrity,Immutable S13.1 preflight and its 12 committed evidence artifacts remain checked within cumulative Phase 1B CI
 s13_phase1a,legacy_snapshot_standard_pf,pass / pass,S7 Phase 0 parent and S13 candidate both converge; smoke test only
 s13_phase1a,legacy_snapshot_q_limit_pf,fail / fail,Inherited S7 snapshot limitation; not a 2019 same-snapshot test or S14 promotion gate
 s13_phase1a,residualization,pending,Rows 34|36 are physical-overlap residual candidates; rows 40|42 are frozen adjacent calibration candidates pending paired response evidence and strong regularization
-s13_phase1a,construction_source_qualified,false,Phase 1B Phase 1C passive residualization and a frozen solved reduction-source state remain pending
+s13_phase1a,construction_source_qualified,false,Historical Phase 1A checkpoint; later cumulative phases do not alter its evidence
 s13_phase1a,promotion_eligible,false,S13-FULL is a construction and validation parent rather than the DLR delivery model under every gate outcome
-s14_nyiso,status,pending_retention_and_external_equivalent,No S14 case exists yet; Phase 1B and 1C topology plus a passive external multi-port realization remain prerequisites
+s13_phase1b,status,cumulative_s13_full_structural_checkpoint,UPNY-ConEd physical topology is appended without residual fitting dispatch closure or promotion
+s13_phase1b,case_name,npcc_ny_lite_s13_npcc_augmented_2019,Shared case wrapper returns the cumulative Phase 1B construction parent while the immutable Phase 1A builder remains available separately
+s13_phase1b,case_size,149 buses / 262 branches / 62 generators,Phase 1A plus E. Fishkill and Ladentown and nine exact PERFORM physical/support branches
+s13_phase1b,source_bus_additions,858|774,E. Fishkill 345 kV and Ladentown 345 kV zero-injection physical terminals
+s13_phase1b,source_branch_rows,1389|1390|1391|1392|1689|1690|1577|1576|1738,F36|F37|F30|F31 plus three support rows and Y88|Y94
+s13_phase1b,structural_preservation,30 / 30 pass,Cumulative disjoint phase ownership exact Phase 1A rebuild identity and append-only source provenance pass
+s13_phase1b,construction_validation,31 / 35 pass,Phase 1B topology passes while dedicated full-construction Phase 1C passive-residual and solved-source gates remain fail-closed
+s13_phase1b,local_identity,33 / 33 pass,Two no-fit local subnetworks use fixed source boundary phasors and omitted-network injections
+s13_phase1b,local_identity_max_source_error,8.19e-12 MW / 2.88e-12 MVAr,Direct Yf/Yt recomputation from Q-limit-solved full PERFORM phasors
+s13_phase1b,local_identity_max_injection_error,0 MW / 0 MVAr,Interior VM and VA errors are also zero to saved precision
+s13_phase1b,zero_injection_fixture,diagnostic only,Maximum 0.002415 pu and 0.6221 degrees; never an acceptance gate
+s13_phase1b,upny_operator,6-circuit source-realizable nonintersecting 345-kV proxy,F36|F37|F30|F31|Y88|Y94 cross the declared local cut exactly once
+s13_phase1b,upny_operator_validation,24 / 24 pass,Orientation invariance unique physical keys and same-side support exclusions pass
+s13_phase1b,upny_public_completeness,0 / 3 fail-closed,RFK305 is absent and BK1/BK2 are not independently identifiable; is_exact_public_operator=false
+s13_phase1b,residual_register,rows 94|235 pending,Physical-overlap candidates are registered but parent R/X/B and shunts remain unchanged
+s13_phase1b,generation_audit,4 source records not transferred,Pleasant Valley proxy Ladentown C1 and both offline Buchanan/Indian Point units are evidence only
+s13_phase1b,adversarial_validator,9 / 9 pass,Phase ownership attachment parent-admittance series-double-counting orientation and exact-public mutations are rejected
+s13_phase1b,repository_ci,s13-artifact-integrity,Cumulative structural and register checks immutable S13.1 preflight Phase 1B local and UPNY operator checks seven evidence artifacts nine adversarial mutations and three-case standard-PF smoke are required
+s13_phase1b,legacy_snapshot_standard_pf,3 / 3 pass,S7 Phase 0 immutable Phase 1A and cumulative Phase 1B converge; diagnostic only
+s13_phase1b,legacy_snapshot_q_limit_pf,1 / 3 pass,Only cumulative Phase 1B converges in this inherited snapshot; not a common-2019 operating gate
+s13_phase1b,construction_source_qualified,false,Phase 1C passive residualization operating-source qualification and a frozen solved reduction-source state remain pending
+s13_phase1b,dlr_delivery_eligible,false,S13-FULL remains permanently ineligible for delivery and S14-NYISO remains unbuilt
+s14_nyiso,status,pending_retention_and_external_equivalent,No S14 case exists yet; Phase 1C topology passive internal residualization operating-source qualification and a passive external multi-port remain prerequisites
 s14_nyiso,target_case_name,npcc_ny_lite_s14_nyiso_dlr_operating_model,Future NYISO-focused DLR operating model and only case eligible for promotion
 s14_nyiso,retention_policy,zones_A_to_K_plus_physical_overlays_and_boundary_terminals,Retain NYISO buses circuits controls DLR terminals NY-side tie terminals and selected first external terminals
 s14_nyiso,external_equivalent_policy,reduce_only_non_ny_npcc_as_ac_multi_terminal_equivalent,Preserve boundary coupling losses and reactive exchange without copying S12 Kron branches or using one unlimited slack
@@ -78,10 +100,10 @@ interfaces,count,7,Dysinger East; West Central; Moses South; Central East; Total
 interfaces,objective,Fixed-scale squared normalized residual,Scales stored in nyiso_interface_objective_scales.csv
 tie,GILBOA_LEEDS_R_X_B,0.00131 / 0.01997 / 0.51614,Direct PERFORM circuit
 tie,GILBOA_LEEDS_RATE_A_MVA,1216,Direct PERFORM rating
-tie,PLEASANT_VLY_WOOD_STREET_R_X_B,0.000405 / 0.006185 / 0.63943,Two-circuit PERFORM parallel equivalent
-tie,PLEASANT_VLY_WOOD_STREET_RATE_A_MVA,2432,Two-circuit aggregate
-tie,WOOD_STREET_MILLWOOD_R_X_B,0.000185 / 0.002815 / 0.29107,Two-circuit PERFORM parallel equivalent
-tie,WOOD_STREET_MILLWOOD_RATE_A_MVA,2432,Two-circuit aggregate
+tie,PLEASANT_VLY_WOOD_STREET_R_X_B,0.000405 / 0.006185 / 0.63943,S7 aggregate proxy; Phase 1B appends exact F30/F31 and registers overlapping parent row 235 without fitting
+tie,PLEASANT_VLY_WOOD_STREET_RATE_A_MVA,2432,S7 aggregate proxy rating; not the identity of either appended Phase 1B physical circuit
+tie,WOOD_STREET_MILLWOOD_R_X_B,0.000185 / 0.002815 / 0.29107,S7 aggregate proxy retained outside the six-circuit Phase 1B nonintersecting operator
+tie,WOOD_STREET_MILLWOOD_RATE_A_MVA,2432,S7 aggregate proxy rating; Wood-Street-Millwood is excluded from the Phase 1B operator to prevent series double counting
 solver,standard_pf,pf.enforce_q_lims = 0,Primary interface-consistency calculation
 solver,q_diagnostic_pf,pf.enforce_q_lims = 1,All six current 2019 public scenarios converge
 solver,dc_inverse,lsqlin,Requires MATLAB Optimization Toolbox
