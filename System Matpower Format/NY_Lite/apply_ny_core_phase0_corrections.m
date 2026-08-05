@@ -9,9 +9,32 @@ function [mpc, report] = apply_ny_core_phase0_corrections(mpc, options)
 %   branch-index driven, so it applies unchanged to the 49-bus NY-only core
 %   and the 143-bus full case.
 %
-%   (0.5) Reactance. One multiplier per zone-boundary group, fitted so the
-%         core's cut PTDFs match PERFORM's over canonical zonal transfers,
-%         regularised toward m = 1.
+%   (0.5) Reactance. OFF BY DEFAULT - opt in with options.fit_reactance.
+%
+%         One multiplier per zone-boundary group, fitted so the core's cut
+%         PTDFs match PERFORM's over canonical zonal transfers, regularised
+%         toward m = 1.
+%
+%         It is off by default because it was measured against the project's
+%         own acceptance metric and it loses. On the six 2019 scaled
+%         scenarios the fixed-scale all-hour interface objective goes
+%         0.489612 -> 0.561823, a 14.7% REGRESSION. It helps exactly the two
+%         corridors diagnosed as too stiff - Dysinger East MAE 133.5 -> 113.3
+%         and West Central 215.6 -> 192.6 - and hurts everything east of
+%         them: Central East 110.1 -> 148.7, Total East 361.9 -> 388.5,
+%         Dunwoodie South 276.6 -> 308.2.
+%
+%         The reason is structural, not a tuning failure. The core has no E-G
+%         corridor at all (PERFORM has 7 circuits, 3054 MVA, Coopers
+%         Corners-Rock Tavern), so every eastbound MW is forced through E-F.
+%         Matching PERFORM's E-F PTDF then requires making E-F stiffer, which
+%         reduces its flow - and the S7 dispatch already underflows every
+%         eastern target. No reactance setting can fix a missing path. Adding
+%         E-G is Phase 1.
+%
+%         Ratings, by contrast, are free: RATE_A does not enter the power
+%         flow, so with fit_reactance = false the impedances are bit-identical
+%         and the interface objective is exactly unchanged at 0.489612.
 %
 %         Two other targets were tried and rejected, both recorded here
 %         because the rejection is informative:
@@ -85,7 +108,7 @@ function [mpc, report] = apply_ny_core_phase0_corrections(mpc, options)
 if nargin < 2, options = struct(); end
 nylite = fileparts(mfilename('fullpath'));
 if ~isfield(options, 'reference_dir'), options.reference_dir = nylite; end
-if ~isfield(options, 'fit_reactance'), options.fit_reactance = true; end
+if ~isfield(options, 'fit_reactance'), options.fit_reactance = false; end
 if ~isfield(options, 'apply_ratings'), options.apply_ratings = true; end
 if ~isfield(options, 'scale_r'), options.scale_r = true; end
 if ~isfield(options, 'scale_b'), options.scale_b = false; end

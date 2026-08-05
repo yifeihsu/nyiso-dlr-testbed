@@ -123,11 +123,14 @@ this the 1/x split inside F-G re-rated GILBOA–LEEDS, a real 1,216 MVA circuit,
 down to 340 MVA because the parallel New Scotland–Leeds equivalent has ~12× its
 susceptance.
 
-## 0.5 Reactances
+## 0.5 Reactances — **off by default, opt in with `fit_reactance`**
 
 One multiplier per boundary group, fitted so the core's cut PTDFs match
 PERFORM's over canonical zonal transfers, regularised toward m = 1
 (`reg_weight` 0.30, bounds [0.25, 4]).
+
+**It is off by default because it was measured against the project's own
+acceptance metric and it loses.** See the validation section below.
 
 Two other targets were tried and rejected:
 
@@ -160,19 +163,65 @@ in testing, against a source whose reactive load is already ≈ 0 MVAr.
 
 ## Validation (MATLAB R2026a, MATPOWER 8.1)
 
-49-bus core, standard AC PF:
+`validate_phase0_interfaces.m` rebuilds the S7 direct-PERFORM scenario path for
+the selected candidate and scores the six 2019 scaled scenarios before and
+after. **The "before" run reproduces the published S7 baseline exactly** —
+all-hour 0.489612, train 0.295784, holdout 0.193827 — so the harness is sound.
 
-| | PF | Q-lim PF | V range | loss | overloads | worst |
-|---|---|---|---|---:|---:|---|
-| before | ✓ | ✓ | 0.9000–1.1000 | 418.7 MW | 1 | New Scotland–Leeds 3463/2500 (1.385) |
-| after | ✓ | ✓ | 0.8913–1.1239 | 470.9 MW | 3 | New Scotland–Leeds 3493/3388 (1.158) |
+### Ratings only (the default): objective-neutral, strictly beneficial
 
-Placeholder ratings 72 → 41 of 83 branches; distinct RATE_A values 4 → 33.
-Rated-branch utilisation mean 0.232 → 0.302, max 1.385 → 1.158.
+`RATE_A` does not enter the power flow. With `fit_reactance = false` the
+impedances are bit-identical, so the interface objective is **exactly
+unchanged at 0.489612** while 33 branches gain source-backed ratings.
 
-**More overloads is the intended result.** The prior case hid real loading
-behind fake headroom — I-J alone was rated 22,500 MVA against a true 5,804. Peak
-overload severity falls from 38.5% to 15.8%.
+| metric | before | after |
+|---|---:|---:|
+| all-hour objective | 0.489612 | 0.489612 |
+| PF convergence | 6/6 | 6/6 |
+| placeholder ratings | 72 of 81 | 41 of 81 |
+| distinct RATE_A values | 4 | 33 |
+
+On the standalone 49-bus DLR case, rated-branch utilisation goes mean
+0.232 → 0.302 and max 1.385 → 1.158: peak overload severity falls from 38.5%
+to 15.8%, and more branches show as loaded because the prior case hid real
+loading behind fake headroom (I-J alone was rated 22,500 MVA against a true
+5,804).
+
+### Reactance fit: a measured regression, hence off by default
+
+| | all-hour J | train | holdout |
+|---|---:|---:|---:|
+| before | 0.489612 | 0.295784 | 0.193827 |
+| with reactance fit | **0.561823** | 0.319691 | 0.242132 |
+
+Per-interface MAE (MW), before → with fit:
+
+| Interface | before | after | |
+|---|---:|---:|---|
+| Dysinger East | 133.5 | **113.3** | better |
+| West Central | 215.6 | **192.6** | better |
+| Moses South | 53.7 | 53.8 | flat |
+| Central East | 110.1 | 148.7 | worse |
+| Total East | 361.9 | 388.5 | worse |
+| UPNY-ConEd | 105.5 | 110.8 | worse |
+| Dunwoodie South | 276.6 | 308.2 | worse |
+
+It helps exactly the two corridors diagnosed as too stiff and hurts everything
+east of them. **The reason is structural.** The core has no E-G corridor at all
+(PERFORM: 7 circuits, 3,054 MVA, Coopers Corners–Rock Tavern), so every
+eastbound MW is forced through E-F. Matching PERFORM's E-F PTDF then requires
+making E-F *stiffer*, reducing its flow — and the S7 dispatch already underflows
+every eastern target. No reactance setting can substitute for a missing path.
+
+A share-corrected scoring variant (comparing `share × cut_flow` to the target,
+using the measured 0.82–0.88 shares) was tried and **does not rescue it**:
+0.489612 → 1.044018 before, 1.138820 after. The model already underflows, so
+scaling the cut flow down widens the gap. The prevailing "cut = interface"
+convention is only accidentally reasonable — it happens to offset the underflow
+bias.
+
+This quantifies the Phase 1 case: adding the E-G corridor is a precondition for
+the reactance calibration to pay off.
 
 ## Known gaps left open
 
@@ -182,13 +231,24 @@ overload severity falls from 38.5% to 15.8%.
    all 36 boundary branches are source-backed (33 re-rated + 3 protected), 47
    intra-zone branches still carry placeholders.
 
-2. **The chronic Niagara West–Huntley overload is NOT fixed, and my earlier
-   attribution of it to the A-B under-rating was wrong.** It sits on an
-   *intra-zone-A* branch with a 790 MVA placeholder, untouched here. Exact name
-   matching misses it because the core splits Niagara into NIAGARA W / NIAGARA E
-   while PERFORM has a single NIAGARA. The A-B *boundary* branch that shares the
-   placeholder — NIAGARA W–ROCHESTER — is re-rated and does clear. Fixing the
-   intra-zone case needs substation aliasing.
+2. **The chronic Niagara West–Huntley overload is NOT fixed, and the earlier
+   attribution of it to the A-B cut under-rating was wrong.** It is the *only*
+   overloaded branch in all six 2019 scenarios, before and after Phase 0:
+
+   | scenario | worst overload (unchanged by Phase 0) |
+   |---|---|
+   | S1 summer peak | NIAGARA W–HUNTLEY 800/790 |
+   | S2 winter peak | NIAGARA W–HUNTLEY 832/790 |
+   | S3 shoulder | NIAGARA W–HUNTLEY 1131/790 |
+   | S4 high NYC/LI | NIAGARA W–HUNTLEY 865/790 |
+   | S5 high Total East | NIAGARA W–HUNTLEY 819/790 |
+   | S6 low Total East | NIAGARA W–HUNTLEY 885/790 |
+
+   It sits on an *intra-zone-A* branch carrying a 790 MVA placeholder. It cannot
+   be fixed by substation name matching either: **PERFORM has no direct
+   Niagara–Huntley circuit at all** (they connect indirectly via the 230/345 kV
+   network), so this branch is a genuine equivalent with no single-circuit
+   counterpart. Rating it needs a sub-zonal cutset abstraction — Phase 1.
 
 3. **West Central, UPNY-ConEd and Dunwoodie South operator definitions** remain
    broken in the S12 operator file. Cutset semantics avoid the defect in the
