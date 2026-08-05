@@ -1,17 +1,21 @@
 # NPCC-NY Lite Calibration Project Handoff
 
-**Handoff date:** 2026-07-12  
-**Recommended structural case:** `npcc_ny_lite_s7_seven_interface_perform_direct_candidate`  
-**Current status:** the S7 network is the structural baseline; inherited capability
-and voltage-control assumptions are not operationally certified.
+**Original handoff date:** 2026-07-12
+**Model-hierarchy update:** 2026-08-05
+**Recommended structural parent:** `npcc_ny_lite_s7_seven_interface_perform_direct_candidate`
+**Promoted operating case:** pending `npcc_ny_lite_s13_npcc_augmented_2019`
+**Reference oracle:** `npcc_ny_lite_s12_perform_retention_core`
+**Current status:** S7 remains the full NPCC-derived parent. S11 is diagnostic
+only, S12 is an oracle only, and no S13 case is promoted yet.
 
 ## 1. Executive Summary
 
-This project modifies the public NPCC MATPOWER case into a New-York-focused
-reduced model that can reproduce scaled public NYISO zonal loads, external
-interchange schedules, and seven public internal interface-flow patterns.
+This project augments the public NPCC MATPOWER case with selected New York
+detail while preserving the full NPCC-derived network. Reduced models support
+diagnostics and reference comparisons, but they do not replace the promoted
+testbed hierarchy.
 
-The final structural case has:
+The current S7 structural parent, pending S13 augmentation, has:
 
 ```text
 143 buses
@@ -25,32 +29,79 @@ corridors with explicit support in the PERFORM dataset. It is a
 **network-structural baseline with inherited S4 capability assumptions**, not a
 certified operating case. Scenario validation is performed on a 49-bus NY
 boundary-equivalent model so that each public external interchange schedule can
-be held fixed in an ordinary power flow.
+be held fixed in an ordinary power flow; that reduced validation model is a
+diagnostic benchmark only.
 
-Main result:
+### 1.1 Governing model hierarchy
+
+| Model | Repository role |
+|---|---|
+| Original NPCC / S7 full case | Structural parent |
+| Pending S13 NPCC-augmented case | Promoted DLR testbed after all gates pass |
+| S11 49-bus NY boundary equivalent | Diagnostic/reduced-model benchmark only |
+| S12 317-bus PERFORM reduction | Calibration and validation oracle only |
+| Full PERFORM 2019 case | Source dataset and highest-fidelity reference |
+
+The intended inheritance is original NPCC → S7 → Phase 0 source-backed
+corrections → S13 selective physical NYISO augmentation. All original NPCC bus
+IDs and branch records must remain traceable. No external NPCC area may be
+replaced by a boundary equivalent, and no S12 Kron-equivalent branch may enter
+S13. Added physical circuits may receive DLR conductor data; aggregate or
+residual equivalents may not.
+
+Topology is append-only, but admittance is not blindly additive. When an
+original NPCC branch already embeds a newly explicit physical path, that
+original row remains in place and may be refit only as a registered passive
+residual equivalent. A nonpassive residual is rejected in favor of adding more
+physical internal detail.
+
+Current 2019 public-hour S7 validation:
 
 ```text
-Current S4 seven-interface objective       0.285577
-Direct-PERFORM S7 objective                0.233303
-Improvement                                18.3%
-Held-out objective improvement             30.7%
+Current S4 seven-interface objective       0.499136
+Direct-PERFORM S7 objective                0.489612
+Improvement                                 1.9%
+Held-out objective improvement              2.5%
 Standard PF convergence                    6/6
-Q-limit-enforced PF convergence            5/6
+Q-limit-enforced PF convergence            6/6
+Worst interface residual                 888.553 MW
+Minimum / maximum voltage             0.952721 / 1.110022 pu
+```
+
+Legacy 2025-target diagnostics retained for provenance, but not rerun against
+the current 2019 public-hour targets:
+
+```text
 S8.1 inherited 0.8-cap minimum eta        2.7013
 S9a free-voltage temporary Q support       0 MVAr
 S9a full S1-reference status               not demonstrated
 S9b last hard-feasible S1 weight           0.8075
 S9b first restored S1 weight               0.8100
 S9b refined/reference audit solves         182/182
+```
+
+Separate 2019 same-snapshot S10a diagnostic:
+
+```text
 S10a 2019 reduced Q-limit PF               converged
 S10a retained/pilot voltage RMSE           0.003840 pu
 S10a seven-interface MAE                   224.95 MW
 S10a mean normalized control-group Q error 0.1870
 ```
 
-The model is appropriate for continued reduced-network calibration research.
-It is not yet appropriate for claiming fully feasible NYISO operations or
-detailed circuit-level equivalence.
+The current Phase 1A S13 candidate adds four exact PERFORM terminals (Fraser,
+Coopers Corner, Marcy, and Rock Tavern) and seven direct physical source rows
+between matching EDIC and Ramapo attachments. It has 147 buses, 253 branches,
+and 62 generators. All 28 mandatory structural gates pass; the five
+promotion-only gates remain fail-closed. Both S7/Phase 0 and S13 converge in
+the inherited-snapshot standard-PF smoke test. Both fail that
+snapshot's Q-limit PF, so the smoke result is not an operating gate. S13 remains
+unpromoted pending passive residualization, paired S12 snapshot/response tests,
+and the six public-hour gates.
+
+The package is appropriate for continued structural augmentation and diagnostic
+research. It is not yet appropriate for claiming a promoted S13 operating case,
+fully feasible NYISO operations, or detailed circuit-level equivalence.
 
 ## 2. Software and Reproduction
 
@@ -77,7 +128,30 @@ This command:
 2. rebuilds fixed interface objective scales;
 3. reruns S6 zonal net-injection estimation and standard/Q-diagnostic PFs;
 4. compares current ties with direct PERFORM ties;
-5. reloads and verifies the recommended S7 case dimensions.
+5. applies the ratings-only Phase 0 correction to the full S7 parent;
+6. verifies the original 140 buses, original 233 branch-row identities and
+   names, all three S7 transit buses, source-backed zero-injection terminals,
+   append-only structure, registered attachment paths, and absence of
+   S12/Kron admittance;
+7. compares the seven committed S13 register CSVs with freshly rebuilt
+   in-memory tables and fails on any schema, row, column, type, or value drift;
+8. verifies that the S12 oracle snapshot sidecar contains the complete
+   eight-circuit Total East operator and matches a fresh recomputation;
+9. reruns the durable S13 adversarial mutation suite; and
+10. runs the inherited-snapshot S7/S13 standard- and Q-limit-PF smoke
+    diagnostic, reporting its limitations without treating it as a promotion
+    gate or a 2019 operating-point comparison.
+
+The `s13-artifact-integrity` GitHub workflow repeats the structural, artifact,
+adversarial, S12-sidecar, and inherited-snapshot smoke checks for pull requests,
+`main`/`codex/**` pushes, and manual dispatch. CI writes no smoke artifacts and
+asserts only `standard_pf_both_pass`; it reports but does not assert Q-limit PF
+success because the inherited snapshot's Q-limit failure is a known diagnostic,
+not a Phase 1A promotion gate.
+
+The default remains a structural-parent reproduction until the existing S13
+candidate passes every mandatory gate. It must not report S7, S11, or S12 as
+the promoted operating case.
 
 To rerun the iterative AC injection-closure diagnostic:
 
@@ -323,14 +397,16 @@ Training: S1 summer, S2 winter, S4 high NYC/LI, S5 high Total East
 Holdout:  S3 shoulder light load, S6 low Total East
 ```
 
-The direct PERFORM candidate is recommended over the lower-training-error
-fitted sensitivity because it has slightly better holdout, minimum-voltage,
-and worst-residual behavior.
+The direct PERFORM candidate remains the structural parent because it preserves
+source-backed circuit parameters. The lower-training-error fitted-sensitivity
+comparison discussed below is a legacy 2025-target result and has not been
+rerun against the current 2019 public-hour targets.
 
-### 4.9 S8: Iterative AC Injection Closure
+### 4.9 S8: Iterative AC Injection Closure (legacy 2025-target diagnostic)
 
-S8 does not change the structural case. It applies an operational re-estimation
-experiment to the direct-PERFORM S7 network.
+S8 does not change the structural case. This retained experiment applies an
+operational re-estimation to the direct-PERFORM S7 network, but its numerical
+results below have not been rerun against the current 2019 public-hour targets.
 
 `derive_nyiso_zonal_net_injections_ac_iterative.m` starts from the constrained
 DC estimate, measures AC losses, distributes the loss requirement by available
@@ -349,7 +425,7 @@ the maximum Q violation is 1189.18 MVAr, Q-limit PF fails, and the West-Central
 residual remains 416.00 MW with A/B generation essentially at PMAX. Direct S7
 therefore remains the recommended structural baseline.
 
-### 4.10 S8.1: Local Linear Capability-Envelope Certificate
+### 4.10 S8.1: Local Linear Capability-Envelope Certificate (legacy 2025-target diagnostic)
 
 S8.1 tests the shoulder West-Central target against A/B/C capability envelopes
 of 0.8, 0.9, and 1.0 using the final S8 AC sensitivity matrix. The inherited
@@ -367,7 +443,7 @@ No independent hour-specific 2025 unit availability table is present. Static
 Gold Book capability is not relabeled as scenario availability; a template is
 included for that future input.
 
-### 4.11 S9a: Minimum-Q and Voltage-Control Diagnostic
+### 4.11 S9a: Minimum-Q and Voltage-Control Diagnostic (legacy 2025-target diagnostic)
 
 S9a adds penalized positive/negative temporary Q-only devices for diagnosis and
 tests both inherited and PERFORM-scaled zonal Q envelopes. With free OPF voltage
@@ -387,7 +463,7 @@ of a proven bulk reactive-capability shortage. The leading issue is inconsistent
 or missing voltage-control detail: generator schedules, transformer taps,
 shunts, reactors, and scenario-dependent control status.
 
-### 4.12 S9b: Voltage-Reference and AC Restoration Audit
+### 4.12 S9b: Voltage-Reference and AC Restoration Audit (legacy 2025-target diagnostic)
 
 S9b now selects an explicit source-controlled reference set, uses
 `opf.start = 2`, and attempts a hard ACOPF before invoking MATPOWER AC soft
@@ -412,8 +488,8 @@ first slack                                     CE UG VMAX, 0.00002727 pu
 ```
 
 Reference provenance materially changes the result. Coarse hard-feasibility
-brackets are 0.75-0.80 for original NPCC, 0.80-0.825 for S1/current S7, and
-0.90-1.00 for the provisional PERFORM zonal envelope. Therefore, no threshold
+brackets are 0.75-0.80 for original NPCC, 0.80-0.825 for the then-current S7,
+and 0.90-1.00 for the provisional PERFORM zonal envelope. Therefore, no threshold
 is interpreted as a real-system voltage-control limit.
 
 The PERFORM PSS/E RAW source has now been parsed directly: all 649
@@ -601,34 +677,42 @@ The recommended S7 structural case uses direct PERFORM values:
 | Pleasant Valley-Wood Street | 0.000405 | 0.006185 | 0.63943 | 2432 |
 | Wood Street-Millwood | 0.000185 | 0.002815 | 0.29107 | 2432 |
 
-The fitted sensitivity used multipliers `2.0 / 0.85 / 1.0` respectively. It
-reduced the all-hour objective to 0.22842 but was not promoted because direct
-PERFORM had better held-out and feasibility-oriented diagnostics.
+In the legacy 2025-target sweep, the fitted sensitivity used multipliers
+`2.0 / 0.85 / 1.0` respectively and reduced that vintage's all-hour objective
+to 0.22842. It was not promoted. Those fitted-sweep metrics are not comparable
+to the current 2019-target objective and have not been rerun on that target set.
 
 ## 10. Current Results
 
 | Case | Training objective | Holdout objective | All-hour objective | Worst residual |
 |---|---:|---:|---:|---:|
-| Current S4 ties | 0.13566 | 0.14992 | 0.28558 | 572.6 MW |
-| Direct PERFORM S7 | 0.12945 | 0.10385 | 0.23330 | 424.9 MW |
-| Fitted sensitivity | 0.12435 | 0.10407 | 0.22842 | 435.5 MW |
+| Current S4 ties, 2019 targets | 0.300342 | 0.198794 | 0.499136 | 890.08 MW |
+| Direct PERFORM S7, 2019 targets | 0.295784 | 0.193827 | 0.489612 | 888.55 MW |
 
-Direct PERFORM improves all-hour normalized consistency by 18.3% and held-out
-consistency by 30.7%.
+Direct PERFORM improves all-hour normalized consistency by 1.9% and held-out
+consistency by 2.5% on the current 2019 target set. Standard and Q-limit-
+enforced PF both converge 6/6. The maximum standard-PF branch overload is
+341.03 MVA, the maximum standard-PF Q-limit violation is 253.46 MVAr, and the
+voltage range is 0.952721-1.110022 pu. These are convergence and diagnostic
+results, not promotion or feasibility certification.
 
 Mean absolute residuals for the recommended case:
 
 | Interface | MAE |
 |---|---:|
-| Dysinger East | 57.0 MW |
-| West Central | 138.9 MW |
-| Moses South | 26.8 MW |
-| Central East | 104.4 MW |
-| Total East | 142.1 MW |
-| UPNY-ConEd | 259.8 MW |
-| Dunwoodie South | 239.5 MW |
+| Dysinger East | 133.5 MW |
+| West Central | 215.6 MW |
+| Moses South | 53.7 MW |
+| Central East | 110.1 MW |
+| Total East proxy | 361.9 MW |
+| UPNY-ConEd | 105.5 MW |
+| Dunwoodie South | 276.6 MW |
 
-Operational closure diagnostic:
+### 10.1 Legacy 2025-target operational-closure diagnostic
+
+The following S8 table is retained for method provenance only. It has not been
+rerun against the current 2019 public-hour targets and is not current S7 or S13
+performance evidence.
 
 | Score | Objective | Mean absolute residual | Worst residual |
 |---|---:|---:|---:|
@@ -636,14 +720,22 @@ Operational closure diagnostic:
 | Frozen S6 dispatch on direct S7 | 0.233303 | 138.35 MW | 424.91 MW |
 | S8 iterative AC dispatch | 0.015310 | 19.49 MW | 416.00 MW |
 
-S8 reduces UPNY-ConEd MAE from 259.81 to 11.40 MW and Dunwoodie
-South MAE from 239.47 to 2.20 MW. This confirms that loss and dispatch closure
-have substantially more leverage than another three-corridor impedance sweep.
-The remaining worst residual is the shoulder West-Central target.
+In that legacy experiment, S8 reduced UPNY-ConEd MAE from 259.81 to 11.40 MW
+and Dunwoodie South MAE from 239.47 to 2.20 MW. It showed that loss and dispatch
+closure had more leverage than another three-corridor impedance sweep for that
+target vintage. It does not establish the same result for the current 2019
+targets. The remaining legacy worst residual was the shoulder West-Central
+target.
 
-## 11. Current Problems
+## 11. Open Problems and Legacy Diagnostics
 
-### 11.1 Shoulder operating-point infeasibility
+For the current 2019 direct-S7 run, Q-limit PF converges 6/6, but the worst
+interface residual remains 888.55 MW, the maximum branch overload is 341.03
+MVA, and voltages reach 1.110022 pu. Sections 11.1-11.6 retain the older
+2025-target diagnostic record for provenance; their numerical values are not
+current 2019 public-hour results.
+
+### 11.1 Shoulder operating-point infeasibility (legacy 2025-target diagnostic)
 
 Standard PF converges for all six scenarios, but Q-limit-enforced PF fails for
 the shoulder-light-load hour. In standard PF for that hour:
@@ -669,7 +761,7 @@ begins at 0.8100 across tested directions and starts. Different reference sets
 produce materially different brackets. These values remain reference-, metric-,
 and trajectory-dependent and are not a global infeasibility certificate.
 
-### 11.2 Capability-envelope conflict
+### 11.2 Capability-envelope conflict (legacy 2025-target diagnostic)
 
 The shoulder West-Central target is linearly incompatible with the inherited
 0.8 A/B/C participation envelope (`eta = 2.7013`). A minimum 272.58 MW A/B/C
@@ -678,19 +770,19 @@ worsens nonlinear voltage/Q feasibility. Scenario-specific available capability
 cannot be tested until an independent hourly availability or commitment table
 is supplied.
 
-### 11.3 Remaining voltage violations
+### 11.3 Remaining voltage violations (legacy 2025-target diagnostic)
 
 The direct PERFORM charging improves the worst standard-PF minimum voltage from
 0.8037 to 0.9022 pu. Maximum voltage remains 1.1128 pu, and up to three buses
 still exceed their 1.10-pu upper bounds.
 
-### 11.4 Persistent branch overload
+### 11.4 Persistent branch overload (legacy 2025-target diagnostic)
 
 Branch 29, Niagara West-Huntley, overloads in every scenario. The largest
 excess is 168.06 MVA in the shoulder case. The tie calibration did not remove
 this western constraint.
 
-### 11.5 Reference-generator loss balancing
+### 11.5 Reference-generator loss balancing (legacy 2025-target diagnostic)
 
 The frozen S7 comparison places AC loss imbalance on one Zone J reference unit.
 Reference adjustment ranges from roughly 146 to 589 MW and biases downstream
@@ -698,7 +790,7 @@ interface flows. S8 closes this mismatch with headroom-weighted loss allocation
 and reduces final reference pickup below 0.1 MW. Frozen S7 remains the structural
 topology score; S8 is the separate in-sample operational score.
 
-### 11.6 Interface residuals remain material
+### 11.6 Interface residuals remain material (legacy 2025-target diagnostic)
 
 The objective improves, but UPNY-ConEd and Dunwoodie South MAEs remain roughly
 260 and 240 MW. These errors likely combine coarse topology, missing transformer
@@ -727,26 +819,36 @@ shifters, or another equivalent formulation.
 
 ## 12. Recommended Next Work
 
-1. Replace the conceptual UPNY-ConEd and Dunwoodie cuts, and the remaining
-   zone-pair proxies, with exact monitored branch/sign operators.
-2. Validate or tighten the provisional Q envelopes at EDIC, Porter, and East
-   Garden City; preserve switched-shunt blocks, deadbands, transformer control
-   modes, and scenario status rather than only their source snapshot.
-3. Refine the control-preserving network reduction so the 125-MW loss gap,
-   225-MW interface MAE, and 18.7% mean normalized Q error decrease without
-   hidden boundary-Q movement.
-4. Obtain scenario-specific unit availability/commitment and rerun the S8.1
-   capability envelope; do not substitute static Gold Book PMAX.
-5. Audit Niagara West-Huntley branch data and western transfer representation.
-6. Validate inferred dispatch with leave-one-interface-out and independent
-   seasonal hours or observed zonal-generation estimates.
-7. Derive unsupported proxy corridors from a PERFORM Ward/Kron equivalent and
-   retain only identifiable parameter combinations.
-8. Do not perform another R/X/B multiplier search until the capability,
-   measurement, and Q/V-control issues above are resolved.
-9. Implement lexicographic S9c only after the voltage controls and exact
-   interface measurement operators are source-backed; Stage 1 must include
-   normalized interface residual slack before Stage 2 minimizes control motion.
+1. **Phase 1A — complete the E-G evidence.** The source-backed Coopers
+   Corner–Rock Tavern path is now appended at matching EDIC and Ramapo
+   terminals. Re-derive dispatch for the changed topology and validate Central
+   East, E-G, Total East, currents, losses, and voltages against S12.
+2. **Phase 1B — UPNY-ConEd physical cut.** Add East Fishkill and Ladentown and
+   preserve Pleasant Valley–East Fishkill, Ladentown–Buchanan, and Pleasant
+   Valley–Wood Street circuits. Replace the conceptual operator with a
+   nonintersecting physical cutset.
+3. **Phase 1C — downstate interface mesh.** Add separate Sprain Brook,
+   Dunwoodie, West 49th Street, Tremont/Academy, Jamaica, Lake Success, and
+   Valley Stream terminals. Diagnose H-J, K-J, and net Zone-J import separately.
+4. **Phase 1D — passive residual equivalents.** Freeze added physical circuits,
+   the five DLR circuits, and nonoverlapping original branches. Rows 34/36 are
+   physical-overlap residual candidates. Rows 40/42 are adjacent E-F
+   calibration candidates and remain frozen unless paired multi-snapshot
+   response evidence and strong regularization explicitly authorize them.
+   Reject negative-resistance or materially nonpassive residuals and add more
+   physical detail instead.
+5. Run same-snapshot S12 comparisons and held-out ±250/±500 MW transfers,
+   Zone-J/Zone-K load changes, external-schedule changes, and one-circuit
+   outages without refitting S13.
+6. Only after structural and response gates pass, reconstruct the six
+   similarity-scaled 2019 public hours with bounded dispatch closure. Report
+   movement explicitly and do not treat S12 closed dispatch as observed history.
+7. Represent full-NPCC P-32 schedules as area-interchange constraints or
+   physical controls with balancing redispatch in the corresponding external
+   area. Do not add S11/S12 boundary injections on top of the retained network.
+8. Obtain scenario-specific unit availability and unsupported PAR/tap schedules
+   where possible; otherwise use fixed snapshot values or bounded variables
+   with documented uncertainty.
 
 ## 13. High-Value Files
 
@@ -754,10 +856,30 @@ shifters, or another equivalent formulation.
 
 ```text
 System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m
+System Matpower Format/npcc_ny_lite_s13_npcc_augmented_2019.m
+System Matpower Format/NY_Lite/S13_NPCC_PRESERVING_AUGMENTATION.md
+System Matpower Format/NY_Lite/add_npcc_perform_eg_corridor.m
+System Matpower Format/NY_Lite/build_s13_phase1a_candidate.m
+System Matpower Format/NY_Lite/validate_s13_structural_preservation.m
+System Matpower Format/NY_Lite/validate_s13_artifact_consistency.m
+System Matpower Format/NY_Lite/test_s13_structural_validator_adversarial.m
+System Matpower Format/NY_Lite/s13_structural_adversarial_results.csv
+System Matpower Format/NY_Lite/s12_generate_interface_snapshot_sums.m
+System Matpower Format/NY_Lite/test_s12_interface_snapshot_sums.m
+System Matpower Format/NY_Lite/s12_interface_snapshot_sums.csv
+System Matpower Format/NY_Lite/validate_s13_phase1a_smoke.m
+System Matpower Format/NY_Lite/npcc_perform_overlay_bus_map.csv
+System Matpower Format/NY_Lite/npcc_perform_overlay_branch_map.csv
+System Matpower Format/NY_Lite/npcc_residual_equivalent_register.csv
+System Matpower Format/NY_Lite/npcc_residual_shunt_register.csv
+System Matpower Format/NY_Lite/npcc_overlay_path_register.csv
+System Matpower Format/NY_Lite/npcc_added_physical_circuit_register.csv
+System Matpower Format/NY_Lite/npcc_2019_interface_operator_map.csv
 System Matpower Format/npcc_ny_lite_s10a_perform_control_mapped_2019.m
 System Matpower Format/npcc_ny_lite_s10a_perform_control_mapped_2019_pf_solution.m
 run_handoff_reproduction.m
 LATEST_MODEL_CONFIGURATION.csv
+.github/workflows/s13-artifact-integrity.yml
 ```
 
 ### Public-data pipeline
@@ -879,10 +1001,11 @@ control groups and pilot buses using plant/GSK rules plus a Ward
 effective-impedance metric. That mapping is still provisional where Q envelopes
 are broad or exact retained electrical equivalents are absent.
 
-The current S7 network remains a reduced structural calibration candidate. Its
-inherited S4 capability envelope and voltage-control state are not certified,
-and S8/S8.1/S9a/S9b/S10a are diagnostic operating-point experiments rather than
-promoted cases.
+The current S7 network remains the full NPCC-derived structural parent pending
+S13. Its inherited S4 capability envelope and voltage-control state are not
+certified, and S8/S8.1/S9a/S9b/S10a/S11 are diagnostic operating-point or
+reduced-model experiments rather than promoted cases. S12 is a separate
+reference oracle, not a promoted case.
 
 ## 15. Handoff Package and Integrity
 
@@ -900,7 +1023,8 @@ ENLITEN-Grid-Econ-Data-main/
 output/
 ```
 
-`PERFORM/` is included unchanged as the higher-resolution reference dataset.
+`PERFORM/` is included unchanged as the source dataset and highest-fidelity
+reference.
 `ENLITEN-Grid-Econ-Data-main/` is included so the original NPCC source case can
 be traced independently. `System Matpower Format/NY_Lite/nyiso_public_cache/`
 contains the downloaded NYISO public inputs used by the reproducible scenario
