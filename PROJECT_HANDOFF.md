@@ -92,8 +92,9 @@ S10a mean normalized control-group Q error 0.1870
 The current Phase 1A S13 candidate adds four exact PERFORM terminals (Fraser,
 Coopers Corner, Marcy, and Rock Tavern) and seven direct physical source rows
 between matching EDIC and Ramapo attachments. It has 147 buses, 253 branches,
-and 62 generators. Structural-preservation gates pass, and both S7/Phase 0 and
-S13 converge in the inherited-snapshot standard-PF smoke test. Both fail that
+and 62 generators. All 28 mandatory structural gates pass; the five
+promotion-only gates remain fail-closed. Both S7/Phase 0 and S13 converge in
+the inherited-snapshot standard-PF smoke test. Both fail that
 snapshot's Q-limit PF, so the smoke result is not an operating gate. S13 remains
 unpromoted pending passive residualization, paired S12 snapshot/response tests,
 and the six public-hour gates.
@@ -128,10 +129,16 @@ This command:
 3. reruns S6 zonal net-injection estimation and standard/Q-diagnostic PFs;
 4. compares current ties with direct PERFORM ties;
 5. applies the ratings-only Phase 0 correction to the full S7 parent;
-6. verifies the original 140 buses, original 233 branch-row identities, all
-   three S7 transit buses, append-only structure, source-row provenance,
-   registered attachment paths, and absence of S12/Kron admittance; and
-7. runs the inherited-snapshot S7/S13 standard- and Q-limit-PF smoke
+6. verifies the original 140 buses, original 233 branch-row identities and
+   names, all three S7 transit buses, source-backed zero-injection terminals,
+   append-only structure, registered attachment paths, and absence of
+   S12/Kron admittance;
+7. compares the five committed S13 register CSVs with freshly rebuilt
+   in-memory tables and fails on any schema, row, column, type, or value drift;
+8. verifies that the S12 oracle snapshot sidecar contains the complete
+   eight-circuit Total East operator and matches a fresh recomputation;
+9. reruns the durable S13 adversarial mutation suite; and
+10. runs the inherited-snapshot S7/S13 standard- and Q-limit-PF smoke
    diagnostic, reporting its limitations without treating it as a promotion
    gate or a 2019 operating-point comparison.
 
@@ -817,9 +824,12 @@ shifters, or another equivalent formulation.
    Dunwoodie, West 49th Street, Tremont/Academy, Jamaica, Lake Success, and
    Valley Stream terminals. Diagnose H-J, K-J, and net Zone-J import separately.
 4. **Phase 1D — passive residual equivalents.** Freeze added physical circuits,
-   the five DLR circuits, and nonoverlapping original branches. Refit only
-   registered overlapping aggregate rows; reject negative-resistance or
-   materially nonpassive residuals and add more physical detail instead.
+   the five DLR circuits, and nonoverlapping original branches. Rows 34/36 are
+   physical-overlap residual candidates. Rows 40/42 are adjacent E-F
+   calibration candidates and remain frozen unless paired multi-snapshot
+   response evidence and strong regularization explicitly authorize them.
+   Reject negative-resistance or materially nonpassive residuals and add more
+   physical detail instead.
 5. Run same-snapshot S12 comparisons and held-out ±250/±500 MW transfers,
    Zone-J/Zone-K load changes, external-schedule changes, and one-circuit
    outages without refitting S13.
@@ -844,6 +854,12 @@ System Matpower Format/NY_Lite/S13_NPCC_PRESERVING_AUGMENTATION.md
 System Matpower Format/NY_Lite/add_npcc_perform_eg_corridor.m
 System Matpower Format/NY_Lite/build_s13_phase1a_candidate.m
 System Matpower Format/NY_Lite/validate_s13_structural_preservation.m
+System Matpower Format/NY_Lite/validate_s13_artifact_consistency.m
+System Matpower Format/NY_Lite/test_s13_structural_validator_adversarial.m
+System Matpower Format/NY_Lite/s13_structural_adversarial_results.csv
+System Matpower Format/NY_Lite/s12_generate_interface_snapshot_sums.m
+System Matpower Format/NY_Lite/test_s12_interface_snapshot_sums.m
+System Matpower Format/NY_Lite/s12_interface_snapshot_sums.csv
 System Matpower Format/NY_Lite/validate_s13_phase1a_smoke.m
 System Matpower Format/NY_Lite/npcc_perform_overlay_bus_map.csv
 System Matpower Format/NY_Lite/npcc_perform_overlay_branch_map.csv
@@ -856,6 +872,7 @@ System Matpower Format/npcc_ny_lite_s10a_perform_control_mapped_2019.m
 System Matpower Format/npcc_ny_lite_s10a_perform_control_mapped_2019_pf_solution.m
 run_handoff_reproduction.m
 LATEST_MODEL_CONFIGURATION.csv
+.github/workflows/s13-artifact-integrity.yml
 ```
 
 ### Public-data pipeline

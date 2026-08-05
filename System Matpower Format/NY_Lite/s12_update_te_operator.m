@@ -39,6 +39,13 @@ for k = 1:numel(te_extra_src)
         names(k), "medium", 'VariableNames', op.Properties.VariableNames)]; %#ok<AGROW>
 end
 op = [op(op.interface_name ~= "Total_East_proxy", :); te];
+expected_te_source_rows = sort([935; 1345; 1346; 1567; 1568; 1609; 1612; 2136]);
+actual_te_source_rows = sort(te.source_branch);
+assert(height(te) == 8 && ...
+    numel(unique(te.source_branch)) == 8 && ...
+    isequal(actual_te_source_rows, expected_te_source_rows), ...
+    ['Total_East_proxy must contain exactly the five Central East rows plus ' ...
+    'Fraser-Gilboa and both Coopers Corner-Rock Tavern circuits.']);
 s12.userdata.s12_interface_operators = op;
 
 % snapshot sums with new operator
@@ -48,9 +55,7 @@ rows = op(op.interface_name == "Total_East_proxy", :);
 fprintf('new Total East operator: %d circuits, source snapshot sum %.2f MW\n', ...
     height(rows), sum(rows.sign .* src.branch(rows.source_branch, PF)));
 
+ws.s12 = s12;
 save(fullfile(nylite, 's12_case.mat'), '-struct', 'ws');
-% note: ws.s12 must be updated before save
-ws.s12 = s12; %#ok<STRNU>
-save(fullfile(nylite, 's12_case.mat'), '-struct', 'ws');
-writetable(op, fullfile(nylite, 's12_interface_operators.csv'));
+ny_lite_writetable_lf(op, fullfile(nylite, 's12_interface_operators.csv'));
 fprintf('updated s12_case.mat and s12_interface_operators.csv\n');

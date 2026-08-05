@@ -28,7 +28,8 @@ The inheritance path is original NPCC → S7 → Phase 0 source-backed correctio
 5. No S12 Ward/Kron-equivalent branch is copied into S13.
 6. New buses and branches are appended and provenance-registered.
 7. Only source-backed physical circuits are DLR-eligible.
-8. Every adjusted original branch is registered as an aggregate residual.
+8. Every adjusted original branch is registered with a residual class and the
+   evidence required to authorize that adjustment.
 
 Branch traceability is row-based, not just endpoint-pair based, because parallel
 circuits can share endpoints. A topology-preservation gate must fail if an
@@ -41,8 +42,12 @@ physical circuits can overlap transfer paths already embedded in original NPCC
 aggregate branches. Adding both without adjustment would double-count series
 admittance, charging, capability, losses, and interface flow.
 
-The original row remains in place and is classified as an aggregate residual.
-Its R/X/B may be refit to represent only the unmodeled remainder. A simple
+The original row remains in place. Rows with demonstrated physical overlap are
+classified as `physical_overlap_residual_candidate`. Adjacent equivalents that
+might improve calibration but do not have direct overlap evidence are classified
+as `adjacent_equivalent_calibration_candidate` and remain frozen until paired
+multi-snapshot response evidence and stronger regularization are documented.
+An authorized row's R/X/B may be refit to represent only the unmodeled remainder. A simple
 two-terminal `Y_old - Y_physical` subtraction is insufficient where the old and
 new networks have different terminals; use a passive multi-terminal fit. Reject
 negative resistance, nonfinite parameters, or materially nonpassive residuals
@@ -73,7 +78,8 @@ and 76 Ramapo are exact-name, 345-kV, same-zone attachment matches to PERFORM
 buses 1233 and 1519. The resulting 147-bus/253-branch/62-generator candidate
 contains no invented attachment impedance. It is not promoted because the
 overlapping aggregate residual fit and all operating-response gates are still
-pending.
+pending. The four added terminals are source-zero-injection buses; the committed
+bus map records their source PD/QD/GS/BS values explicitly.
 
 ### Phase 1B — UPNY-ConEd
 
@@ -92,8 +98,11 @@ and total net import into Zone J before defining a combined public operator.
 ### Phase 1D — residual equivalents
 
 Freeze all added physical circuits, the five DLR circuits, and nonoverlapping
-original branches. Fit only registered overlapping aggregate rows and shunts.
-Promotion remains blocked until every residual passes passive-admittance gates.
+original branches. Rows 34/36 are physical-overlap residual candidates. Rows
+40/42 are adjacent E-F calibration candidates and remain frozen until paired
+multi-snapshot S12/S13 evidence and strong deviation regularization authorize
+them. Promotion remains blocked until every fitted residual passes the required
+evidence and passive-admittance gates.
 
 ## Required registers
 
@@ -109,11 +118,15 @@ Every added branch records source PERFORM row and endpoints, circuit ID, source
 R/X/B and ratings, S13 endpoints, physical/equivalent class, DLR eligibility,
 mapping confidence, construction method, and implementation status. S13
 network-admittance rows may not name S12 as their source model.
+The default reproduction also rebuilds and compares the bus, branch, residual,
+physical-circuit, and interface-operator tables against their committed CSVs.
+Any schema, row, column, type, or value mismatch fails closed.
 
 ## Validation hierarchy and gates
 
-1. **Structural preservation:** original rows, transit buses, append-only
-   provenance, registered attachment paths, and no S12/Kron admittance.
+1. **Structural preservation:** original rows and normalized names, transit
+   buses, source-zero-injection evidence, append-only provenance, registered
+   attachment paths, residual-candidate class policy, and no S12/Kron admittance.
    Passive residual fitting is a later promotion gate, not part of the current
    Phase 1A structural pass.
 2. **Same snapshot:** apply identical PERFORM 2019 injections to S12 and S13;

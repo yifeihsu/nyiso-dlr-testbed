@@ -27,6 +27,27 @@ function Get-RelativePackagePath([IO.FileInfo]$File) {
     return [IO.Path]::GetRelativePath($workspacePath, $File.FullName).Replace('\', '/')
 }
 
+function Remove-ExactTemporaryArchive([string]$Path) {
+    if (-not [IO.File]::Exists($Path)) {
+        return
+    }
+    for ($attempt = 1; $attempt -le 20; $attempt++) {
+        try {
+            [IO.File]::Delete($Path)
+            if (-not [IO.File]::Exists($Path)) {
+                return
+            }
+        }
+        catch [IO.IOException] {
+            if ($attempt -eq 20) {
+                throw
+            }
+        }
+        Start-Sleep -Milliseconds 250
+    }
+    throw "Verified temporary archive could not be removed: $Path"
+}
+
 function Get-PackageFiles([bool]$IncludeMetadata) {
     $files = [Collections.Generic.List[IO.FileInfo]]::new()
     foreach ($file in Get-ChildItem -LiteralPath $workspacePath -File -Force) {
@@ -93,7 +114,7 @@ $manifestText = (($manifestRecords | ConvertTo-Csv -NoTypeInformation) -join "`n
 [IO.File]::WriteAllText($manifestPath, $manifestText, $utf8NoBom)
 
 if (Test-Path -LiteralPath $tempArchivePath) {
-    Remove-Item -LiteralPath $tempArchivePath -Force
+    Remove-ExactTemporaryArchive $tempArchivePath
 }
 Add-Type -AssemblyName System.IO.Compression
 Add-Type -AssemblyName System.IO.Compression.FileSystem
@@ -209,10 +230,7 @@ $sidecarText = "$finalArchiveHash  $([IO.Path]::GetFileName($archivePath))`n"
 [IO.File]::WriteAllText($sidecarPath, $sidecarText, $utf8NoBom)
 [GC]::Collect()
 [GC]::WaitForPendingFinalizers()
-[IO.File]::Delete($tempArchivePath)
-if ([IO.File]::Exists($tempArchivePath)) {
-    throw "Verified temporary archive could not be removed: $tempArchivePath"
-}
+Remove-ExactTemporaryArchive $tempArchivePath
 
 [pscustomobject]@{
     archive = $archivePath

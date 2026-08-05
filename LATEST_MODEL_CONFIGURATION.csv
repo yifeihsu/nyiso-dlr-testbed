@@ -10,6 +10,7 @@ model,admittance_policy,append_physical_detail_and_residualize_overlap,Overlappi
 model,target_data_vintage,2019 public hours (similarity-scaled),Retargeted 2026-07-20 from 2025 hours; not a raw-MW reproduction of actual NYISO snapshots
 reference_s12,case_size,317 buses / 3531 branches / 615 generators,359 physical branches plus 3172 Kron equivalent branches; oracle only
 reference_s12,snapshot_exactness,max 0.017 MW on 47 monitored circuits,Ward identity residual 3.7e-11 pu; voltage RMSE 1e-6 pu
+reference_s12,total_east_snapshot_operator,8 circuits,Committed snapshot sidecar is regenerated after s12_update_te_operator and checked by the default reproduction
 reference_s12,interface_operators,7 operators / 47 retained monitored circuits,Reference operators only; UPNY-ConEd and Dunwoodie require nonintersecting S13 cutsets
 reference_s12,seasonal_priors,NYISO rtfuelmix 2019 + NYGenUCV4 winter capacities,Unit outputs are capability-proportional constructed priors; closed dispatch is not observed historical dispatch
 reference_s12,device_controls,34 switched shunts preserved; PARs/taps absent in source RAW,Use fixed snapshot values or bounded documented calibration variables where controls are unsupported
@@ -26,10 +27,13 @@ s13_phase1a,case_name,npcc_ny_lite_s13_npcc_augmented_2019,Target filename does 
 s13_phase1a,case_size,147 buses / 253 branches / 62 generators,S7 plus four PERFORM terminals and seven direct physical branches
 s13_phase1a,source_bus_additions,1228|1222|1567|772,Fraser|Coopers Corner|Marcy|Rock Tavern
 s13_phase1a,source_branch_rows,2137|2131|2154|2133|1567|1568|1571,Direct full-PERFORM R/X/B and RATE_A/B/C; no invented attachment impedance
-s13_phase1a,structural_preservation,pass,Original 140 buses and 233 branch rows plus all S7 rows remain traceable; no S12 markers or Kron construction
+s13_phase1a,structural_preservation,28 / 28 pass,All mandatory structural gates pass; five promotion-only gates remain fail-closed
+s13_phase1a,artifact_consistency,5 / 5 pass,Committed bus branch residual physical and operator CSVs exactly match fresh in-memory registers
+s13_phase1a,adversarial_validator,9 / 9 pass,Durable isolated mutations include committed-CSV truncation; no premature exceptions
+s13_phase1a,repository_ci,s13-artifact-integrity,Pull requests and main/codex pushes run structural artifact adversarial and S12 sidecar checks
 s13_phase1a,legacy_snapshot_standard_pf,pass / pass,S7 Phase 0 parent and S13 candidate both converge; smoke test only
 s13_phase1a,legacy_snapshot_q_limit_pf,fail / fail,Inherited S7 snapshot limitation; not a 2019 same-snapshot or promotion test
-s13_phase1a,residualization,pending,Rows 34|36|40|42 registered as passive multi-terminal residual-fit candidates
+s13_phase1a,residualization,pending,Rows 34|36 are physical-overlap residual candidates; rows 40|42 are frozen adjacent calibration candidates pending paired response evidence and strong regularization
 s13_phase1a,promotion_eligible,false,Same-snapshot S12 paired comparison held-out response and six-hour gates remain pending
 diagnostic_s11,network_form,NY boundary equivalent,Diagnostic only; this form is not the promoted NPCC testbed
 diagnostic_s11,ny_bus_count,49,NY-only reduced benchmark derived from the S7 structural parent

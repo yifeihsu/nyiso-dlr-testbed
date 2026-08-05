@@ -94,7 +94,7 @@ function [mpc, report] = apply_ny_core_phase0_corrections(mpc, options)
 %
 %   Options:
 %     .reference_dir  where the ny_core_*_reference.csv files live
-%     .fit_reactance  default true
+%     .fit_reactance  default false
 %     .apply_ratings  default true
 %     .scale_r        scale BR_R with BR_X (default true)
 %     .scale_b        scale BR_B with BR_X (default FALSE). Charging on a
@@ -103,7 +103,7 @@ function [mpc, report] = apply_ny_core_phase0_corrections(mpc, options)
 %                     large reactive surplus against a PERFORM source whose
 %                     reactive load is ~0 MVAr, so inflating charging is never
 %                     the right default.
-%     .m_bounds       [lo hi] multiplier bounds (default [0.05 20])
+%     .m_bounds       [lo hi] multiplier bounds (default [0.25 4])
 %
 %   See also BUILD_NY_CORE_CUTSET_REFERENCE.
 
