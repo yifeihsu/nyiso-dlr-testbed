@@ -1,0 +1,12 @@
+zone,nyiso_zone_name,nyiso_summer_capability_mw,nyiso_share,model_scaled_capability_mw,current_model_pmax_mw,model_minus_scaled_target_mw,recommended_equivalent_pmax_mw,action,notes,source
+A,WEST,3492.4,0.092639307778211,1616.40266972774,5244.8202066,3628.41753687226,0,reduce_participation,"Current reduced model is western-capability heavy.",user_provided_2025_gold_book_summary
+B,GENESE,780.5,0.0207035218534228,361.242206998769,1246.75388,885.511673001231,0,reduce_participation,"Current reduced model is Genesee-capability heavy.",user_provided_2025_gold_book_summary
+C,CENTRL,6781.1,0.179875274875394,3138.52598318944,4056.6810405,918.155057310566,0,reduce_participation,"Current reduced model is somewhat high in Central capability.",user_provided_2025_gold_book_summary
+D,NORTH,1918.5,0.0508900790208733,887.947692667699,984.9807077,97.0330150323015,0,keep,"Close to scaled NYISO capability target.",user_provided_2025_gold_book_summary
+E,MHK VL,1293.1,0.0343007355652287,598.491092722753,0,-598.491092722753,600,add_equivalent,"Add small Mohawk Valley equivalent capability if residuals require.",user_provided_2025_gold_book_summary
+F,CAPITL,4775.6,0.126677436211667,2210.31170242578,568.003995,-1642.30770742578,1600,add_equivalent,"Add Capital-region aggregate capability around Gilboa/Albany/Rotterdam/New Scotland.",user_provided_2025_gold_book_summary
+G,HUD VL,4704,0.12477817655157,2177.17276325716,0,-2177.17276325716,2200,add_equivalent,"Add Hudson Valley aggregate capability around Pleasant Valley/Ramapo/Leeds.",user_provided_2025_gold_book_summary
+H,MILLWD,53.5,0.00141913955049086,24.7616375072827,0,-24.7616375072827,0,keep_minor,"Small scaled NYISO capability; no first-pass equivalent added.",user_provided_2025_gold_book_summary
+I,DUNWOD,0,0,0,565.099092,565.099092,0,reclassify_as_import,"Treat CE UG generator as an interface/import or voltage-support proxy, not native Zone I.",user_provided_2025_gold_book_summary
+J,N.Y.C.,8704.7,0.23090063635809,4028.83413102138,4197.07746,168.243328978621,0,keep_zone_j_equivalent,"Keep bounded 3.0 GW Zone-J equivalent as S3 feasibility repair.",user_provided_2025_gold_book_summary
+K,LONGIL,5195.5,0.137815692235052,2404.65584428201,584.929342,-1819.72650228201,1800,add_equivalent,"Add Long Island aggregate capability at Northport/East Garden City.",user_provided_2025_gold_book_summary

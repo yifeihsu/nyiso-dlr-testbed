@@ -1,0 +1,6 @@
+metric,value,unit,source,note
+epsilon_threshold,1e-08,,audit,
+max_abs_pg_orig_minus_s0,0,MW,runopf,
+max_abs_vm_orig_minus_s0,0,p.u.,runopf,
+max_abs_sbranch_orig_minus_s0,0,MVA,runopf,max of complex from/to branch flow differences
+metadata_validation_pass,1,flag,audit,1 means S0 metadata did not alter network equations

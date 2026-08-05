@@ -1,0 +1,24 @@
+metric,value,unit,note
+full_pf_success,1,flag,
+ny_equiv_pf_success,1,flag,
+kept_bus_count,46,count,
+kept_branch_count,68,count,
+kept_original_gen_count,21,count,
+added_boundary_equiv_gen_count,10,count,
+max_abs_ny_vm_delta,1.33226762955019e-15,p.u.,
+mean_abs_ny_vm_delta,9.89546608905031e-17,p.u.,
+max_abs_ny_va_delta,1.06581410364015e-13,deg,angle reference differs after reduction
+full_ny_load_mw,10902.2197987,MW,
+ny_equiv_load_mw,10902.2197987,MW,
+full_ny_generation_mw,12269.5592951223,MW,NY generators only
+ny_equiv_total_generation_mw,11161.5735693086,MW,includes boundary equivalents
+boundary_equiv_pg_mw,-1107.98572581365,MW,positive is import into NY
+boundary_equiv_qg_mvar,-853.365467632651,MVAr,positive is injection into NY
+interface_delta_Total_East_proxy,2.27373675443232e-13,MW,NY-only equivalent minus full S1 PF
+interface_delta_Central_East,2.27373675443232e-13,MW,NY-only equivalent minus full S1 PF
+interface_delta_Moses_South,1.27897692436818e-13,MW,NY-only equivalent minus full S1 PF
+interface_delta_UPNY_ConEd,4.09272615797818e-12,MW,NY-only equivalent minus full S1 PF
+interface_delta_Millwood_South,2.72848410531878e-12,MW,NY-only equivalent minus full S1 PF
+interface_delta_Dunwoodie_South,3.41060513164848e-13,MW,NY-only equivalent minus full S1 PF
+interface_delta_ConEd_LIPA_IK,0,MW,NY-only equivalent minus full S1 PF
+interface_delta_ConEd_LIPA_total,0,MW,NY-only equivalent minus full S1 PF

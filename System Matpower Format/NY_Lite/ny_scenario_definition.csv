@@ -1,0 +1,7 @@
+scenario_id,date_time_or_reference,ny_total_load,zonal_load_source,generation_source,external_interchange_source,topology_source,calibration_or_holdout,status,note
+S0_NPCC_BASE,NPCC embedded snapshot,10902.2197987,npcc_original.m Pd,npcc_original.m Pg,embedded boundary flows,Original NPCC,baseline,ready,Snapshot only; embedded PG is not limit-feasible
+S1_PERFORM_COMPATIBLE_PEAK,TBD,,NYISO/Perform matched,Perform or documented dispatch,ny_external_interchange_schedule.csv,NY-lite composed initial,calibration,template,Primary parameter calibration
+S2_SHOULDER_LOAD,TBD,,NYISO/Perform matched,Perform or documented dispatch,ny_external_interchange_schedule.csv,NY-lite composed initial,holdout,template,Lower-transfer holdout
+S3_HIGH_DOWNSTATE_LOAD,TBD,,NYISO/Perform matched,Perform or documented dispatch,ny_external_interchange_schedule.csv,NY-lite composed initial,calibration/holdout,template,Stress G-K
+S4_HIGH_WESTERN_NORTHERN_GENERATION,TBD,,NYISO/Perform matched,Perform or documented dispatch,ny_external_interchange_schedule.csv,NY-lite composed initial,calibration/holdout,template,Stress eastbound interfaces
+S5_ALTERED_EXTERNAL_INTERCHANGE,TBD,,NYISO/Perform matched,Perform or documented dispatch,ny_external_interchange_schedule.csv,NY-lite composed initial,holdout,template,Robustness to schedules

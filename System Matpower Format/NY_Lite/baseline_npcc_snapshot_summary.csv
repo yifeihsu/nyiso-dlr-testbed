@@ -1,0 +1,16 @@
+metric,value,unit,source,note
+total_system_load,30349.7613567,MW,embedded_snapshot,Static bus Pd
+total_NY_load,10902.2197987,MW,embedded_snapshot,Mapped load-allocation groups
+NY_generation,9353.019,MW,embedded_snapshot,Embedded Pg; may violate PMAX
+system_losses,358.0380012207554,MW,embedded_snapshot,"Computed from embedded Vm/Va, not runpf"
+minimum_voltage,0.9523,p.u.,embedded_snapshot,Embedded Vm
+maximum_voltage,1.07625,p.u.,embedded_snapshot,Embedded Vm
+interface_Moses_South,163.8687653366143,MW,embedded_snapshot,Source-side PF/PT convention
+interface_Central_East,653.416812585347,MW,embedded_snapshot,Source-side PF/PT convention
+interface_Total_East_proxy,342.8266577066607,MW,embedded_snapshot,Source-side PF/PT convention
+interface_UPNY_ConEd,378.23344332968793,MW,embedded_snapshot,Source-side PF/PT convention
+interface_Millwood_South,274.67363182412333,MW,embedded_snapshot,Source-side PF/PT convention
+interface_Dunwoodie_South,-1239.7594282607847,MW,embedded_snapshot,Source-side PF/PT convention
+interface_ConEd_LIPA_IK,-19.947816676834915,MW,embedded_snapshot,Source-side PF/PT convention
+interface_ConEd_LIPA_JK,0.0,MW,embedded_snapshot,Source-side PF/PT convention
+interface_ConEd_LIPA_total,-19.947816676834915,MW,embedded_snapshot,Source-side PF/PT convention

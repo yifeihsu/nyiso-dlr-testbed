@@ -1,0 +1,7 @@
+scenario_id,case_version,power_flow_success,ny_total_load_mw,system_losses_mw,min_voltage_pu,max_voltage_pu,max_p_limit_violation_mw,max_q_limit_violation_mvar,Moses_South_mw,Central_East_mw,Total_East_proxy_mw,UPNY_ConEd_mw,Millwood_South_mw,Dunwoodie_South_mw,ConEd_LIPA_total_mw,structural_fingerprint,operating_point_fingerprint,status,note
+S0_NPCC_BASE,,,,,,,,,,,,,,,,,,template,Populate after runpf and interface audit
+S1_PERFORM_COMPATIBLE_PEAK,,,,,,,,,,,,,,,,,,template,Populate after runpf and interface audit
+S2_SHOULDER_LOAD,,,,,,,,,,,,,,,,,,template,Populate after runpf and interface audit
+S3_HIGH_DOWNSTATE_LOAD,,,,,,,,,,,,,,,,,,template,Populate after runpf and interface audit
+S4_HIGH_WESTERN_NORTHERN_GENERATION,,,,,,,,,,,,,,,,,,template,Populate after runpf and interface audit
+S5_ALTERED_EXTERNAL_INTERCHANGE,,,,,,,,,,,,,,,,,,template,Populate after runpf and interface audit

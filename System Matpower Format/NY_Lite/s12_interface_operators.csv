@@ -1,0 +1,52 @@
+interface_name,source_branch,reduced_branch,from_zone,to_zone,sign,sign_rule,monitored_circuit,mapping_confidence
+Central_East,1609,218,F,E,-1,area_rule,"Edic-New Scotland 14",medium
+Central_East,1612,220,F,E,-1,area_rule,"Marcy-New Scotland 18",medium
+Central_East,1345,162,E,F,1,area_rule,"Porter-Rotterdam 30/31; East Springfield-Inghams 7-942; PAR; R81; PV20",low
+Central_East,1346,163,E,F,1,area_rule,"Porter-Rotterdam 30/31; East Springfield-Inghams 7-942; PAR; R81; PV20",low
+Central_East,935,84,F,E,-1,area_rule,"Porter-Rotterdam 30/31; East Springfield-Inghams 7-942; PAR; R81; PV20",low
+Dunwoodie_South,1262,144,I,J,1,area_rule,"Sprain Brook-Dunwoodie South aggregate path",low
+Dunwoodie_South,1263,145,I,J,1,area_rule,"Sprain Brook-Dunwoodie South aggregate path",low
+Dunwoodie_South,1264,146,I,J,1,area_rule,"Sprain Brook-Dunwoodie South aggregate path",low
+Dunwoodie_South,1236,132,J,I,-1,area_rule,"Sprain Brook-West 49th M51/M52",low
+Dunwoodie_South,1237,133,J,I,-1,area_rule,"Sprain Brook-West 49th M51/M52",low
+Dunwoodie_South,1248,141,J,I,-1,area_rule,"Sprain Brook-Tremont X28; Sprain Brook-Academy M29",low
+Dunwoodie_South,1249,142,J,I,-1,area_rule,"Sprain Brook-Tremont X28; Sprain Brook-Academy M29",low
+Dunwoodie_South,1250,143,J,I,-1,area_rule,"Sprain Brook-Tremont X28; Sprain Brook-Academy M29",low
+Dunwoodie_South,55,7,K,J,1,snapshot_direction_fallback,"Lake Success-Jamaica 903",low
+Dunwoodie_South,56,8,K,J,1,snapshot_direction_fallback,"Lake Success-Jamaica 903",low
+Dunwoodie_South,1336,156,K,J,1,snapshot_direction_fallback,"Valley Stream-Jamaica 901L_M and remaining Jamaica ties",low
+Dunwoodie_South,1337,157,K,J,1,snapshot_direction_fallback,"Valley Stream-Jamaica 901L_M and remaining Jamaica ties",low
+Dysinger_East,2162,304,B,A,-1,area_rule,"Dysinger-Henrietta DH1/DH2; Niagara-Henrietta; 115/230-kV Dysinger elements",medium
+Dysinger_East,2163,305,B,A,-1,area_rule,"Dysinger-Henrietta DH1/DH2; Niagara-Henrietta; 115/230-kV Dysinger elements",medium
+Dysinger_East,2164,306,B,A,-1,area_rule,"Dysinger-Henrietta DH1/DH2; Niagara-Henrietta; 115/230-kV Dysinger elements",medium
+Dysinger_East,2252,339,A,A,-1,snapshot_direction_fallback,"Dysinger-Henrietta DH1/DH2; Niagara-Henrietta; 115/230-kV Dysinger elements",medium
+Moses_South,2143,286,E,E,-1,snapshot_direction_fallback,"Moses South seven-circuit public operator",low
+Moses_South,2125,272,E,E,-1,snapshot_direction_fallback,"Moses South seven-circuit public operator",low
+Moses_South,2126,273,E,E,-1,snapshot_direction_fallback,"Moses South seven-circuit public operator",low
+Moses_South,920,81,E,E,-1,snapshot_direction_fallback,"Moses South seven-circuit public operator",low
+Moses_South,921,82,E,E,1,snapshot_direction_fallback,"Moses South seven-circuit public operator",low
+Moses_South,866,78,E,E,-1,snapshot_direction_fallback,"Moses South seven-circuit public operator",low
+Moses_South,851,77,E,E,1,snapshot_direction_fallback,"Moses South seven-circuit public operator",low
+UPNY_ConEd,1389,170,G,G,1,snapshot_direction_fallback,"Pleasant Valley-East Fishkill F36/F37 and unresolved UPNY-ConEd aggregate paths",low
+UPNY_ConEd,1390,171,G,G,1,snapshot_direction_fallback,"Pleasant Valley-East Fishkill F36/F37 and unresolved UPNY-ConEd aggregate paths",low
+UPNY_ConEd,1691,232,G,G,1,snapshot_direction_fallback,"Pleasant Valley-East Fishkill F36/F37 and unresolved UPNY-ConEd aggregate paths",low
+UPNY_ConEd,1576,210,G,H,1,area_rule,"Ladentown-Buchanan South Y88; Ramapo-Buchanan North Y94",medium
+UPNY_ConEd,1738,241,G,H,1,area_rule,"Ladentown-Buchanan South Y88; Ramapo-Buchanan North Y94",medium
+UPNY_ConEd,1391,172,G,G,1,snapshot_direction_fallback,"Pleasant Valley-Wood Street F30/F31 path, represented at Wood Street-Millwood circuit 1",medium
+UPNY_ConEd,1392,173,G,G,1,snapshot_direction_fallback,"Pleasant Valley-Wood Street F30/F31 path, represented at Wood Street-Millwood circuit 1",medium
+UPNY_ConEd,1734,237,G,H,1,area_rule,"Pleasant Valley-Wood Street F30/F31 path, represented at Wood Street-Millwood circuit 1",medium
+UPNY_ConEd,1735,238,G,H,1,area_rule,"Pleasant Valley-Wood Street F30/F31 path, represented at Wood Street-Millwood circuit 2",medium
+West_Central,2157,299,B,C,1,area_rule,"Pannell Road-Clay PC1/PC2",medium
+West_Central,2158,300,B,C,1,area_rule,"Pannell Road-Clay PC1/PC2",medium
+West_Central,2337,358,B,C,1,area_rule,"Pannell-Farmington 4 and West Central 115-kV/transformer elements",low
+West_Central,471,44,B,B,-1,snapshot_direction_fallback,"Pannell-Farmington 4 and West Central 115-kV/transformer elements",low
+West_Central,470,43,B,B,-1,snapshot_direction_fallback,"Pannell-Farmington 4 and West Central 115-kV/transformer elements",low
+West_Central,333,36,A,A,-1,snapshot_direction_fallback,"Pannell-Farmington 4 and West Central 115-kV/transformer elements",low
+Total_East_proxy,1609,218,F,E,-1,area_rule,"Central East element within Total East composite",medium
+Total_East_proxy,1612,220,F,E,-1,area_rule,"Central East element within Total East composite",medium
+Total_East_proxy,1345,162,E,F,1,area_rule,"Central East element within Total East composite",low
+Total_East_proxy,1346,163,E,F,1,area_rule,"Central East element within Total East composite",low
+Total_East_proxy,935,84,F,E,-1,area_rule,"Central East element within Total East composite",low
+Total_East_proxy,2136,280,E,F,1,area_rule,"Fraser-Gilboa GF5-35",medium
+Total_East_proxy,1567,203,G,E,-1,area_rule,"Coopers Corner-Rock Tavern CKT1",medium
+Total_East_proxy,1568,204,G,E,-1,area_rule,"Coopers Corner-Rock Tavern CKT2",medium

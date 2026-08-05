@@ -1,0 +1,6 @@
+scenario_id,transaction_id,method,interface_name,external_source_bus,ny_sink_bus,scheduled_import_mw,scheduled_mvar,external_source_gen_idx,ny_sink_gen_idx,status,note
+S1_PERFORM_COMPATIBLE_PEAK,S1_PERFORM_COMPATIBLE_PEAK_EXT_TXN,generator_redispatch,TBD,,,,0,,,template,Populate source/sink buses or generator indices; positive MW means import into NY
+S2_SHOULDER_LOAD,S2_SHOULDER_LOAD_EXT_TXN,generator_redispatch,TBD,,,,0,,,template,Populate source/sink buses or generator indices; positive MW means import into NY
+S3_HIGH_DOWNSTATE_LOAD,S3_HIGH_DOWNSTATE_LOAD_EXT_TXN,generator_redispatch,TBD,,,,0,,,template,Populate source/sink buses or generator indices; positive MW means import into NY
+S4_HIGH_WESTERN_NORTHERN_GENERATION,S4_HIGH_WESTERN_NORTHERN_GENERATION_EXT_TXN,generator_redispatch,TBD,,,,0,,,template,Populate source/sink buses or generator indices; positive MW means import into NY
+S5_ALTERED_EXTERNAL_INTERCHANGE,S5_ALTERED_EXTERNAL_INTERCHANGE_EXT_TXN,generator_redispatch,TBD,,,,0,,,template,Populate source/sink buses or generator indices; positive MW means import into NY

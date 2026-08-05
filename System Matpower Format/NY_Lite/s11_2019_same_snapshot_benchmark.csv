@@ -1,0 +1,19 @@
+metric_type,metric_name,physical_circuit_id,source_branch_index,reduced_branch_index,source_value,reduced_value,unit,absolute_error,absolute_percent_error,gate_percent,assessment,note
+physical_circuit_current,PERFORM_818_1227_CKT_1,PERFORM_818_1227_CKT_1,1635,69,1.16895853263436,1.22800298714009,kA,0.0590444545057285,5.05103071301134,15,pass,Exact source branch series-current magnitude; any persisted non-DLR correction is reported and Ward-gated separately.
+physical_circuit_current,PERFORM_651_902_CKT_1,PERFORM_651_902_CKT_1,1391,70,0.820226538220057,0.882196829723224,kA,0.0619702915031672,7.55526535847605,15,pass,Exact source branch series-current magnitude; any persisted non-DLR correction is reported and Ward-gated separately.
+physical_circuit_current,PERFORM_651_902_CKT_2,PERFORM_651_902_CKT_2,1392,82,0.820226538220057,0.882196829723224,kA,0.0619702915031672,7.55526535847605,15,pass,Exact source branch series-current magnitude; any persisted non-DLR correction is reported and Ward-gated separately.
+physical_circuit_current,PERFORM_902_897_CKT_1,PERFORM_902_897_CKT_1,1734,71,0.474206211980357,0.527801322259039,kA,0.0535951102786819,11.3020683670213,15,pass,Exact source branch series-current magnitude; any persisted non-DLR correction is reported and Ward-gated separately.
+physical_circuit_current,PERFORM_902_897_CKT_2,PERFORM_902_897_CKT_2,1735,83,0.474206211980357,0.527801322259039,kA,0.0535951102786819,11.3020683670213,15,pass,Exact source branch series-current magnitude; any persisted non-DLR correction is reported and Ward-gated separately.
+system_balance,active_network_loss,,NaN,NaN,625.937880307882,625.937281330019,MW,0.000598977863091932,9.56928605754473e-05,15,pass,Series active loss plus GS*VM^2; checked against PG-PD.
+system_balance,corrected_net_network_q,,NaN,NaN,717.582967333684,699.857387729324,MVAr,17.7255796043594,2.47017841995639,15,pass,series Q - real charging - BS*VM^2; checked against QG-QD.
+power_flow,q_limit_pf_success,,NaN,NaN,1,1,flag,NaN,NaN,NaN,diagnostic,Both cases use pf.enforce_q_lims=1.
+q_limit_diagnostic,q_saturation_count,,NaN,NaN,61,0,count,NaN,NaN,NaN,diagnostic,Counts online variable-Q rows at QMIN or QMAX; fixed-P/Q boundaries excluded.
+q_limit_diagnostic,variable_q_generator_count,,NaN,NaN,377,35,count,NaN,NaN,NaN,diagnostic,Denominator for Q-saturation reporting.
+q_limit_diagnostic,q_saturation_fraction,,NaN,NaN,0.161803713527851,0,ratio,NaN,NaN,NaN,diagnostic,Q-saturation count divided by variable-Q generator count.
+q_limit_diagnostic,pv_to_pq_conversion_count,,NaN,NaN,29,0,count,NaN,NaN,NaN,diagnostic,Input PV/REF buses returned as PQ after Q-limit enforcement.
+identity_check,active_balance_identity_residual,,NaN,NaN,8.99831320566591e-10,-1.68574274539424e-07,MW,NaN,NaN,NaN,diagnostic,(PG-PD) - (series active loss + GS*VM^2).
+identity_check,reactive_balance_identity_residual,,NaN,NaN,-1.66403424373129e-09,-5.33422621629143e-07,MVAr,NaN,NaN,NaN,diagnostic,(QG-QD) - (series Q - real charging - BS*VM^2).
+control_validation,fixed_map_boundary_group_count,,NaN,NaN,NaN,7,count,NaN,NaN,NaN,diagnostic,Same-snapshot-only map-derived fixed-P/fixed-Q boundary groups.
+control_validation,maximum_native_pg_prior_error,,NaN,NaN,0,0,MW,NaN,NaN,NaN,diagnostic,Mapped solved-source native PG priors are applied without scaling.
+control_validation,maximum_q_prior_error,,NaN,NaN,0,1.00000000458067e-06,MVAr,NaN,NaN,NaN,diagnostic,Mapped solved-source Q priors are applied without scaling.
+overall,all_mandatory_gates_pass,,NaN,NaN,1,1,flag,NaN,NaN,NaN,diagnostic,Requires converged reduced PF and every current/loss/net-Q error <= 15%.

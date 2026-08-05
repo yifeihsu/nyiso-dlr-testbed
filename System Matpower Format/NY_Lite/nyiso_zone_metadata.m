@@ -1,0 +1,16 @@
+function zones = nyiso_zone_metadata
+%NYISO_ZONE_METADATA Return NYISO zone metadata used by the NY-lite model.
+%   perform_zone_code follows the attached Perform v23 case. Note that
+%   H/MILLWD uses 73 and I/DUNWOD uses 72.
+
+letters = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'};
+names = { ...
+    'WEST', 'GENESE', 'CENTRL', 'NORTH', 'MHK VL', 'CAPITL', ...
+    'HUD VL', 'MILLWD', 'DUNWOD', 'N.Y.C.', 'LONGIL'};
+perform_zone_codes = [65 66 67 68 69 70 71 73 72 74 75];
+
+zones = struct('id', num2cell(1:numel(letters)), ...
+    'letter', letters, ...
+    'name', names, ...
+    'perform_zone_code', num2cell(perform_zone_codes));
+end

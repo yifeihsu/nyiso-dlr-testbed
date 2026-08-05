@@ -1,0 +1,333 @@
+function outputs = run_s7_seven_interface_perform_tieline_calibration(options)
+%RUN_S7_SEVEN_INTERFACE_PERFORM_TIELINE_CALIBRATION Fit direct PERFORM ties.
+%   Uses frozen seven-interface S6 zonal generation targets. Four scenarios
+%   train impedance/B multipliers around direct PERFORM corridor parameters;
+%   two scenarios are held out for validation. Generation and public external
+%   schedules are not re-estimated while tie parameters change.
+
+if nargin < 1, options = struct(); end
+helper_dir = fileparts(mfilename('fullpath'));
+case_dir = fileparts(helper_dir);
+addpath(case_dir); addpath(helper_dir);
+options = defaults(options, helper_dir);
+
+scenarios = readtable(options.scenario_file, 'TextType', 'string', ...
+    'VariableNamingRule', 'preserve');
+frozen = readtable(options.frozen_zonal_file, 'TextType', 'string', ...
+    'VariableNamingRule', 'preserve');
+base_full = loadcase('npcc_ny_lite_s4_cost_calibration_candidate_v2');
+[gsk, ~] = build_perform_npcc_generation_shift_keys(base_full);
+candidates = candidate_grid(options);
+pfopt = mpoption('verbose', 0, 'out.all', 0, 'pf.enforce_q_lims', 0);
+
+run_rows = table();
+residual_rows = table();
+for c = 1:height(candidates)
+    params = candidate_params(candidates(c, :));
+    [candidate_full, ~] = apply_perform_tieline_calibration(base_full, params);
+    [candidate_core, ~] = build_ny_only_equivalent_case(candidate_full);
+    [candidate_core, ~] = align_npcc_generation_capacity_to_perform_gsk( ...
+        candidate_core, gsk);
+    for s = 1:height(scenarios)
+        scenario_id = string(scenarios.scenario_id(s));
+        target = frozen(string(frozen.scenario_id) == scenario_id, :);
+        if height(target) ~= 11
+            error('Expected 11 frozen zonal targets for %s, found %d.', ...
+                scenario_id, height(target));
+        end
+        mpc = candidate_core;
+        [mpc, ~] = apply_nyiso_zonal_loads(mpc, scenario_id, 1.0, ...
+            struct('preserve_total_ny_load', true));
+        [mpc, ~] = apply_perform_generation_allocation(mpc, ...
+            target(:, {'zone','target_generation_mw'}), gsk);
+        [mpc, ext] = apply_nyiso_external_interface_injections(mpc, ...
+            scenario_id, struct('target_file', options.external_target_file));
+        mpc = set_internal_reference(mpc, ext.added_gen_index, "J");
+        try
+            result = runpf(mpc, pfopt);
+            [row, detail] = score_run(result, scenario_id, ...
+                candidates(c, :), ext, options);
+        catch ME
+            row = failed_run_row(scenario_id, candidates(c, :), ME.message, options);
+            detail = table();
+        end
+        run_rows = append_table(run_rows, row);
+        residual_rows = append_table(residual_rows, detail);
+    end
+end
+
+summary = summarize_candidates(candidates, run_rows, options);
+eligible = summary.mode == "perform_scaled" & ...
+    summary.train_pf_success_count == numel(options.train_scenarios);
+if ~any(eligible)
+    error('No PERFORM-scaled candidate solved every training scenario.');
+end
+[~, local_idx] = min(summary.selection_objective(eligible));
+eligible_idx = find(eligible);
+selected_idx = eligible_idx(local_idx);
+selected = summary(selected_idx, :);
+selected_id = selected.candidate_id;
+selected_runs = run_rows(run_rows.candidate_id == selected_id, :);
+selected_residuals = residual_rows(residual_rows.candidate_id == selected_id, :);
+
+[selected_params, selected_ties] = selected_parameter_report( ...
+    base_full, selected, options);
+q_diagnostics = q_enforced_selected(base_full, selected, scenarios, ...
+    frozen, gsk, options);
+
+writetable(candidates, options.grid_file);
+writetable(run_rows, options.run_file);
+writetable(residual_rows, options.residual_file);
+writetable(summary, options.summary_file);
+writetable(selected_runs, options.selected_run_file);
+writetable(selected_residuals, options.selected_residual_file);
+writetable(selected_params, options.selected_parameter_file);
+writetable(selected_ties, options.selected_tie_file);
+writetable(q_diagnostics, options.q_diagnostic_file);
+
+outputs = struct('grid_file', options.grid_file, 'run_file', options.run_file, ...
+    'residual_file', options.residual_file, 'summary_file', options.summary_file, ...
+    'selected_run_file', options.selected_run_file, ...
+    'selected_residual_file', options.selected_residual_file, ...
+    'selected_parameter_file', options.selected_parameter_file, ...
+    'selected_tie_file', options.selected_tie_file, ...
+    'q_diagnostic_file', options.q_diagnostic_file, ...
+    'candidate_count', height(candidates), 'pf_run_count', height(run_rows), ...
+    'pf_success_count', sum(run_rows.pf_success), ...
+    'selected_candidate_id', selected_id);
+end
+
+function options = defaults(options, helper_dir)
+items = { ...
+    'scenario_file', fullfile(helper_dir, 'nyiso_public_scenarios.csv'); ...
+    'frozen_zonal_file', fullfile(helper_dir, 's6_nyiso_zonal_net_injection_targets.csv'); ...
+    'external_target_file', fullfile(helper_dir, 'ny_external_interface_targets.csv'); ...
+    'interface_target_file', fullfile(helper_dir, 'nyiso_public_interface_targets.csv'); ...
+    'interface_scale_file', fullfile(helper_dir, 'nyiso_interface_objective_scales.csv'); ...
+    'grid_file', fullfile(helper_dir, 's7_perform_tieline_candidate_grid.csv'); ...
+    'run_file', fullfile(helper_dir, 's7_perform_tieline_calibration_runs.csv'); ...
+    'residual_file', fullfile(helper_dir, 's7_perform_tieline_calibration_residuals.csv'); ...
+    'summary_file', fullfile(helper_dir, 's7_perform_tieline_calibration_summary.csv'); ...
+    'selected_run_file', fullfile(helper_dir, 's7_perform_tieline_selected_pf_results.csv'); ...
+    'selected_residual_file', fullfile(helper_dir, 's7_perform_tieline_selected_residuals.csv'); ...
+    'selected_parameter_file', fullfile(helper_dir, 's7_perform_tieline_selected_parameters.csv'); ...
+    'selected_tie_file', fullfile(helper_dir, 's7_perform_tieline_selected_branch_parameters.csv'); ...
+    'q_diagnostic_file', fullfile(helper_dir, 's7_perform_tieline_selected_q_diagnostics.csv'); ...
+    'train_scenarios', ["S1_2019_SUMMER_PEAK_PUBLIC"; ...
+        "S2_2019_WINTER_PEAK_PUBLIC"; "S4_2019_HIGH_NYC_LI_LOAD_PUBLIC"; ...
+        "S5_2019_HIGH_TOTAL_EAST_PUBLIC"]; ...
+    'holdout_scenarios', ["S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC"; ...
+        "S6_2019_LOW_TOTAL_EAST_PUBLIC"]; ...
+    'gl_scales', [0.75 1 1.25]; ...
+    'pv_wood_scales', [0.75 1 1.5 2.5 4]; ...
+    'wood_millwood_scales', [0.75 1 2 4 7]; ...
+    'b_fractions', [0 0.5 1]; ...
+    'regularization_weight', 0.005; ...
+    'b_regularization_weight', 0.002};
+for k = 1:size(items, 1)
+    if ~isfield(options, items{k, 1}), options.(items{k, 1}) = items{k, 2}; end
+end
+end
+
+function tbl = candidate_grid(options)
+tbl = table("CURRENT", "current", NaN, NaN, NaN, NaN, ...
+    'VariableNames', {'candidate_id','mode','gilboa_leeds_scale', ...
+    'pleasant_wood_scale','wood_millwood_scale','lower_hudson_b_fraction'});
+for gl = options.gl_scales
+    for pv = options.pv_wood_scales
+        for wm = options.wood_millwood_scales
+            for bf = options.b_fractions
+                id = "PERF_GL" + token(gl) + "_PV" + token(pv) + ...
+                    "_WM" + token(wm) + "_B" + token(bf);
+                row = table(id, "perform_scaled", gl, pv, wm, bf, ...
+                    'VariableNames', tbl.Properties.VariableNames);
+                tbl = [tbl; row]; %#ok<AGROW>
+            end
+        end
+    end
+end
+end
+
+function value = token(x)
+value = replace(string(sprintf('%.4g', x)), ".", "p");
+end
+
+function params = candidate_params(row)
+params = struct('mode', string(row.mode), ...
+    'gilboa_leeds_scale', row.gilboa_leeds_scale, ...
+    'pleasant_wood_scale', row.pleasant_wood_scale, ...
+    'wood_millwood_scale', row.wood_millwood_scale, ...
+    'lower_hudson_b_fraction', row.lower_hudson_b_fraction);
+end
+
+function mpc = set_internal_reference(mpc, external_idx, zone_name)
+define_constants;
+mpc = attach_nyiso_zone_metadata(mpc);
+[mapped, bi] = ismember(mpc.gen(:, GEN_BUS), mpc.bus(:, BUS_I));
+zones = strings(size(mpc.gen, 1), 1);
+zones(mapped) = string(mpc.userdata.nyiso_physical_zone(bi(mapped)));
+mask = mpc.gen(:, GEN_STATUS) > 0 & zones == zone_name;
+mask(external_idx) = false;
+idx = find(mask);
+if isempty(idx), error('No reference generator is available in zone %s.', zone_name); end
+q_range = mpc.gen(idx, QMAX) - mpc.gen(idx, QMIN);
+if any(q_range > 1e-6), idx = idx(q_range > 1e-6); end
+[~, k] = max(mpc.gen(idx, PMAX) - mpc.gen(idx, PG));
+mpc = set_scenario_reference_bus(mpc, idx(k), struct('require_external', false));
+end
+
+function [row, detail] = score_run(results, scenario_id, candidate, ext, options)
+define_constants;
+success = isfield(results, 'success') && logical(results.success);
+is_train = ismember(scenario_id, options.train_scenarios);
+if ~success
+    row = failed_run_row(scenario_id, candidate, ...
+        'PF returned success = 0', options);
+    detail = table();
+    return;
+end
+targets = read_public_interface_targets(scenario_id, options.interface_target_file);
+flows = ny_lite_interface_flows(results, ny_lite_interface_definitions(results));
+[J, detail] = interface_target_objective_balanced(flows, targets, ...
+    struct('scale_file', options.interface_scale_file, 'min_scale_mw', 500));
+detail = addvars(detail, repmat(string(candidate.candidate_id), height(detail), 1), ...
+    repmat(scenario_id, height(detail), 1), repmat(is_train, height(detail), 1), ...
+    'Before', 1, 'NewVariableNames', {'candidate_id','scenario_id','is_train'});
+
+sf = hypot(results.branch(:, PF), results.branch(:, QF));
+st = hypot(results.branch(:, PT), results.branch(:, QT));
+smax = max(sf, st);
+rated = results.branch(:, RATE_A) > 0 & results.branch(:, BR_STATUS) > 0;
+over = max(0, smax - results.branch(:, RATE_A));
+vviol = max(0, results.bus(:, VMIN) - results.bus(:, VM)) + ...
+    max(0, results.bus(:, VM) - results.bus(:, VMAX));
+pviol = max(max(0, results.gen(:, PMIN) - results.gen(:, PG)), ...
+    max(0, results.gen(:, PG) - results.gen(:, PMAX)));
+qviol = max(max(0, results.gen(:, QMIN) - results.gen(:, QG)), ...
+    max(0, results.gen(:, QG) - results.gen(:, QMAX)));
+ext_idx = ext.added_gen_index(:);
+ext_error = max(abs(results.gen(ext_idx, PG) - ext.target_flow_mw));
+row = table(string(candidate.candidate_id), scenario_id, is_train, true, J, ...
+    max(abs(detail.residual_mw)), min(results.bus(:, VM)), max(results.bus(:, VM)), ...
+    sum(vviol > 1e-6), sum(rated & over > 1e-6), max([0; over(rated)]), ...
+    sum(pviol > 1e-6), max([0; pviol]), sum(qviol > 1e-6), ...
+    max([0; qviol]), ext_error, "", 'VariableNames', run_names());
+end
+
+function row = failed_run_row(scenario_id, candidate, message, options)
+is_train = ismember(scenario_id, options.train_scenarios);
+row = table(string(candidate.candidate_id), scenario_id, is_train, false, ...
+    NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, ...
+    string(regexprep(message, '\s+', ' ')), 'VariableNames', run_names());
+end
+
+function names = run_names()
+names = {'candidate_id','scenario_id','is_train','pf_success', ...
+    'interface_objective','max_abs_interface_residual_mw','min_voltage_pu', ...
+    'max_voltage_pu','voltage_violation_count','branch_overload_count', ...
+    'max_branch_overload_mva','generator_p_violation_count', ...
+    'max_generator_p_violation_mw','generator_q_violation_count', ...
+    'max_generator_q_violation_mvar','max_external_schedule_error_mw','diagnostic'};
+end
+
+function summary = summarize_candidates(candidates, runs, options)
+summary = table();
+for c = 1:height(candidates)
+    id = candidates.candidate_id(c);
+    r = runs(runs.candidate_id == id, :);
+    tr = r(r.is_train, :);
+    ho = r(~r.is_train, :);
+    reg = regularization(candidates(c, :), options);
+    train_obj = sum(tr.interface_objective, 'omitnan');
+    holdout_obj = sum(ho.interface_objective, 'omitnan');
+    all_obj = sum(r.interface_objective, 'omitnan');
+    if sum(tr.pf_success) < numel(options.train_scenarios), train_obj = Inf; end
+    selection = train_obj + reg;
+    row = [candidates(c, :), table(train_obj, holdout_obj, all_obj, reg, ...
+        selection, sum(tr.pf_success), sum(ho.pf_success), sum(r.pf_success), ...
+        max(r.max_abs_interface_residual_mw, [], 'omitnan'), ...
+        min(r.min_voltage_pu, [], 'omitnan'), max(r.max_voltage_pu, [], 'omitnan'), ...
+        max(r.voltage_violation_count, [], 'omitnan'), ...
+        max(r.branch_overload_count, [], 'omitnan'), ...
+        max(r.max_branch_overload_mva, [], 'omitnan'), ...
+        max(r.generator_p_violation_count, [], 'omitnan'), ...
+        max(r.generator_q_violation_count, [], 'omitnan'), ...
+        max(r.max_external_schedule_error_mw, [], 'omitnan'), ...
+        'VariableNames', {'train_interface_objective','holdout_interface_objective', ...
+        'all_interface_objective','regularization_term','selection_objective', ...
+        'train_pf_success_count','holdout_pf_success_count','all_pf_success_count', ...
+        'max_abs_interface_residual_mw','min_voltage_pu','max_voltage_pu', ...
+        'max_voltage_violation_count','max_branch_overload_count', ...
+        'max_branch_overload_mva','max_generator_p_violation_count', ...
+        'max_generator_q_violation_count','max_external_schedule_error_mw'})];
+    summary = append_table(summary, row);
+end
+summary = sortrows(summary, 'selection_objective');
+end
+
+function value = regularization(candidate, options)
+if candidate.mode == "current", value = NaN; return; end
+v = [candidate.gilboa_leeds_scale, candidate.pleasant_wood_scale, ...
+    candidate.wood_millwood_scale];
+value = options.regularization_weight * sum(log(v).^2) + ...
+    options.b_regularization_weight * (candidate.lower_hudson_b_fraction - 1)^2;
+end
+
+function [params_table, tie_report] = selected_parameter_report(base, selected, options)
+params = candidate_params(selected);
+[~, tie_report] = apply_perform_tieline_calibration(base, params);
+params_table = selected(:, {'candidate_id','mode','gilboa_leeds_scale', ...
+    'pleasant_wood_scale','wood_millwood_scale','lower_hudson_b_fraction', ...
+    'train_interface_objective','holdout_interface_objective', ...
+    'all_interface_objective','regularization_term','selection_objective'});
+params_table.train_scenarios = repmat(strjoin(options.train_scenarios, ';'), ...
+    height(params_table), 1);
+params_table.holdout_scenarios = repmat(strjoin(options.holdout_scenarios, ';'), ...
+    height(params_table), 1);
+end
+
+function rows = q_enforced_selected(base, selected, scenarios, frozen, gsk, options)
+params = candidate_params(selected);
+[candidate_full, ~] = apply_perform_tieline_calibration(base, params);
+[core, ~] = build_ny_only_equivalent_case(candidate_full);
+[core, ~] = align_npcc_generation_capacity_to_perform_gsk(core, gsk);
+qopt = mpoption('verbose', 0, 'out.all', 0, 'pf.enforce_q_lims', 1);
+rows = table();
+for s = 1:height(scenarios)
+    scenario_id = string(scenarios.scenario_id(s));
+    target = frozen(string(frozen.scenario_id) == scenario_id, :);
+    mpc = core;
+    [mpc, ~] = apply_nyiso_zonal_loads(mpc, scenario_id, 1.0, ...
+        struct('preserve_total_ny_load', true));
+    [mpc, ~] = apply_perform_generation_allocation(mpc, ...
+        target(:, {'zone','target_generation_mw'}), gsk);
+    [mpc, ext] = apply_nyiso_external_interface_injections(mpc, scenario_id, ...
+        struct('target_file', options.external_target_file));
+    mpc = set_internal_reference(mpc, ext.added_gen_index, "J");
+    success = false; J = NaN; max_residual = NaN; note = "";
+    try
+        result = runpf(mpc, qopt);
+        success = logical(result.success);
+        if success
+            targets = read_public_interface_targets(scenario_id, options.interface_target_file);
+            flows = ny_lite_interface_flows(result, ny_lite_interface_definitions(result));
+            [J, detail] = interface_target_objective_balanced(flows, targets, ...
+                struct('scale_file', options.interface_scale_file, 'min_scale_mw', 500));
+            max_residual = max(abs(detail.residual_mw));
+        else
+            note = "Q-limit-enforced PF returned success = 0";
+        end
+    catch ME
+        note = string(regexprep(ME.message, '\s+', ' '));
+    end
+    row = table(scenario_id, success, J, max_residual, note, ...
+        'VariableNames', {'scenario_id','q_enforced_pf_success', ...
+        'interface_objective','max_abs_interface_residual_mw','diagnostic'});
+    rows = append_table(rows, row);
+end
+end
+
+function out = append_table(out, row)
+if isempty(row), return; end
+if isempty(out), out = row; else, out = [out; row]; end
+end

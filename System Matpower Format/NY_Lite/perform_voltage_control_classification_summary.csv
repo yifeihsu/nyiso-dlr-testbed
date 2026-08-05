@@ -1,0 +1,12 @@
+metric,value,unit,note
+raw_generator_section_records,649,records,All PSS/E RAW generator-section rows
+online_a_k_generator_section_control_records,417,records,Online records whose source bus maps to NYISO A-K
+online_a_k_distinct_source_buses,179,buses,Distinct source buses among online A-K records
+online_a_k_reactive_only_qs_records,34,records,ID QS; zero P capability; nonzero Q range
+online_a_k_positive_active_capability_records,381,records,Positive PMAX; includes native and positive import/reference records
+online_a_k_fixed_negative_active_records,2,records,PMIN equals PMAX below zero
+online_a_k_remote_regulation_records,1,records,IREG points to a nonlocal bus
+online_a_k_missing_regulated_bus_records,0,records,Regulated bus absent from source RAW bus table
+raw_converted_status_mismatch_records,6,records,RAW STAT differs from converted MATPOWER GEN_STATUS
+converted_snapshot_online_a_k_control_records,411,records,Converted-case status for non-QS records; RAW status for QS records
+converted_non_qs_mapping_records,615,records,RAW non-QS rows aligned to converted PERFORM gen/genfuel rows

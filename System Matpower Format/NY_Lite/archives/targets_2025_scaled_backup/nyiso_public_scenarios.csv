@@ -1,0 +1,7 @@
+scenario_id,timestamp,source_load_file,source_interface_file,nyiso_total_load_mw,npcc_ny_total_load_mw,scale_factor_gamma,solver,notes
+S1_2025_SUMMER_PEAK_PUBLIC,2025-07-29 18:00,20250701palIntegrated_csv.zip,20250701ExternalLimitsFlows_csv.zip,30644.9878,10902.2197987,0.355758660106238,IPOPT,summer max total load from July 2025 P-58C
+S2_2025_WINTER_PEAK_PUBLIC,2025-01-22 18:00,20250101palIntegrated_csv.zip,20250101ExternalLimitsFlows_csv.zip,23521.3492,10902.2197987,0.463503164975757,IPOPT,winter max total load from January 2025 P-58C
+S3_2025_SHOULDER_LIGHT_LOAD_PUBLIC,2025-04-20 14:00,20250401palIntegrated_csv.zip,20250401ExternalLimitsFlows_csv.zip,11060.559,10902.2197987,0.985684340068165,IPOPT,shoulder minimum total load from April 2025 P-58C
+S4_2025_HIGH_NYC_LI_LOAD_PUBLIC,2025-07-29 17:00,20250701palIntegrated_csv.zip,20250701ExternalLimitsFlows_csv.zip,30414.5116,10902.2197987,0.358454541111224,IPOPT,summer max NYC plus Long Island load from July 2025 P-58C
+S5_2025_HIGH_TOTAL_EAST_PUBLIC,2025-07-17 16:00,20250701palIntegrated_csv.zip,20250701ExternalLimitsFlows_csv.zip,28333.182,10902.2197987,0.384786283400855,IPOPT,maximum hourly Total East flow from July 2025 P-32
+S6_2025_LOW_TOTAL_EAST_PUBLIC,2025-07-27 17:00,20250701palIntegrated_csv.zip,20250701ExternalLimitsFlows_csv.zip,23862.1083,10902.2197987,0.456884180627912,IPOPT,minimum hourly Total East flow from July 2025 P-32

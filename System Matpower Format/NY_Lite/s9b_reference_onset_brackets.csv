@@ -1,0 +1,9 @@
+audit_group,voltage_reference_set,boundary_q_mode,highest_weight_with_any_hard_success,lowest_weight_with_any_nonzero_restoration,tested_weight_count,hard_success_weight_count,nonzero_restoration_weight_count
+REFERENCE_SET_COMPARISON,CURRENT_S7_MODEL_REFERENCE,present_limited_q,0.8,0.825,7,4,3
+REFERENCE_SET_COMPARISON,ORIGINAL_NPCC_VG_REFERENCE,present_limited_q,0.75,0.8,7,3,4
+REFERENCE_SET_COMPARISON,PERFORM_ZONE_AGGREGATE_REFERENCE,present_limited_q,0.9,1,7,6,1
+REFERENCE_SET_COMPARISON,S1_OPF_SOLVED_REFERENCE,present_limited_q,0.8,0.825,7,4,3
+S1_PERTURBED_STARTS,S1_OPF_SOLVED_REFERENCE,present_limited_q,0.8075,0.81,11,4,7
+S1_REFINED_BIDIRECTIONAL,S1_OPF_SOLVED_REFERENCE,fixed_scenario_q,0.8075,0.81,11,4,7
+S1_REFINED_BIDIRECTIONAL,S1_OPF_SOLVED_REFERENCE,no_discretionary_q,0.8075,0.81,11,4,7
+S1_REFINED_BIDIRECTIONAL,S1_OPF_SOLVED_REFERENCE,present_limited_q,0.8075,0.81,11,4,7

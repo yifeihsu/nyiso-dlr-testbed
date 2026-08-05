@@ -1,0 +1,24 @@
+metric,s1_original_opf,s1_gilboa_leeds_opf,delta_gl_minus_s1,unit,note
+opf_success,1,0,-1,flag,
+opf_raw_info,1,-1,-2,code,
+objective,823806.977434,822855.64903,-951.328403998,$/h,GL value is a failed-solver candidate if opf_success=0
+total_absolute_redispatch,0,376.307432411,376.307432411,MW,sum(abs(PG_GL - PG_S1))
+max_single_generator_redispatch,0,147.457320299,147.457320299,MW,gen_idx=44 bus=133
+branch_80_flow_mva,773.970761764,773.975293791,0.00453202724782,MVA,
+branch_80_rate_a_mva,773.970762,773.970762,0,MVA,
+branch_80_loading_pct,99.9999999694,100.000585525,0.000585555355613,pct,
+branch_80_overload_mva,0,0.00453179075316,0.00453179075316,MVA,
+branch_190_flow_mva,773.970761968,772.356313403,-1.61444856469,MVA,
+branch_190_rate_a_mva,773.970762,773.970762,0,MVA,
+branch_190_loading_pct,99.9999999959,99.7914070303,-0.208592965517,pct,
+gilboa_leeds_pf_mw,,406.374043362,,MW,
+gilboa_leeds_qf_mvar,,22.3666557476,,MVAr,
+gilboa_leeds_pt_mw,,-404.358718454,,MW,
+gilboa_leeds_qt_mvar,,-47.268327901,,MVAr,
+gilboa_leeds_smax_mva,,407.112107426,,MVA,
+total_east_proxy_flow_mw,1140.04448671,1180.72409817,40.6796114651,MW,
+upny_coned_flow_mw,1291.94346531,1299.41337557,7.46991026325,MW,
+voltage_bound_count,27,27,0,count,
+binding_branch_count,2,0,-2,count,
+rate_a_overload_count,0,1,1,count,
+max_rate_a_overload_mva,0,0.00453179075316,0.00453179075316,MVA,

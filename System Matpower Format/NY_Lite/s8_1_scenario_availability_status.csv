@@ -1,0 +1,2 @@
+scenario_id,expected_input_file,schema_detected,complete_scenario_rows,status,note
+S3_2025_SHOULDER_LIGHT_LOAD_PUBLIC,System Matpower Format/NY_Lite/nyiso_scenario_available_capability.csv,0,0,not_run_missing_independent_input,No complete 2025 hour-specific unit availability/commitment table is present. Static Gold Book capability is not treated as scenario availability.

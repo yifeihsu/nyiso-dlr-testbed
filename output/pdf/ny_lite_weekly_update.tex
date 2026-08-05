@@ -1,0 +1,309 @@
+\documentclass[aspectratio=169,10pt]{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{dolphin}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\definecolor{deepblue}{RGB}{32,73,105}
+\definecolor{alertred}{RGB}{168,50,45}
+\definecolor{softgreen}{RGB}{59,123,88}
+\definecolor{mutedgray}{RGB}{95,101,110}
+
+\setbeamercolor{title}{fg=deepblue}
+\setbeamercolor{frametitle}{fg=deepblue}
+\setbeamercolor{structure}{fg=deepblue}
+\setbeamercolor{alerted text}{fg=alertred}
+
+\newcommand{\good}[1]{\textcolor{softgreen}{#1}}
+\newcommand{\bad}[1]{\textcolor{alertred}{#1}}
+\newcommand{\muted}[1]{\textcolor{mutedgray}{#1}}
+\newcommand{\mw}{\si{MW}}
+
+\title[NY-lite Calibration]{NY-lite Calibration Weekly Update}
+\subtitle{Public NYISO targets, ACOPF results, and current feasibility blockers}
+\author{NPCC / NY-lite Calibration Workstream}
+\date{July 1, 2026}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Executive Summary}
+\begin{itemize}
+  \item Built the public NYISO calibration scaffold using P-58C zonal loads and P-32 interface flows.
+  \item Preserved the original NPCC New York load scale: \textbf{10,902.22 MW}.
+  \item Generated six scaled public scenarios, 66 zonal load target rows, and 30 interface target rows.
+  \item Ran IPOPT ACOPF for original topology and Gilboa-Leeds topology across all six scenarios.
+  \item Current blocker: \bad{all 12 public-load ACOPF runs returned \texttt{opf\_success = 0}}.
+\end{itemize}
+
+\vspace{0.5em}
+\begin{block}{Main interpretation}
+The public NYISO load shape is a large spatial perturbation from the original NPCC case, especially because NPCC has zero explicit original load in HUD VL and NYC proxy zones.
+\end{block}
+\end{frame}
+
+\begin{frame}{Completed This Week}
+\begin{itemize}
+  \item Confirmed S0/original NPCC AC power flow converges but embedded dispatch is not active-power feasible.
+  \item Built S1 from ACOPF solution instead of embedded S0 dispatch.
+  \item Verified S1 original and S1 plus Gilboa-Leeds with IPOPT on the original S1 load point.
+  \item Added public NYISO scenario ingestion and target generation scripts.
+  \item Added IPOPT public-scenario runner with per-interface residual reporting.
+  \item Added Gilboa-Leeds one-dimensional X grid-search driver and smoke-tested it.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Calibration Workflow Implemented}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.23\linewidth}
+\begin{block}{Public data}
+\scriptsize P-58C zonal load\\
+P-32 interface flow
+\end{block}
+\end{column}
+\begin{column}{0.23\linewidth}
+\begin{block}{Scale}
+\scriptsize Preserve NPCC NY total:\\
+10,902.22 MW
+\end{block}
+\end{column}
+\begin{column}{0.23\linewidth}
+\begin{block}{Solve}
+\scriptsize Run IPOPT ACOPF:\\
+original and GL topology
+\end{block}
+\end{column}
+\begin{column}{0.23\linewidth}
+\begin{block}{Fit}
+\scriptsize Grid search over\\
+$X_{GL}$
+\end{block}
+\end{column}
+\end{columns}
+
+\vspace{0.2em}
+\begin{center}
+\small Public data $\rightarrow$ scaled targets $\rightarrow$ NY-lite ACOPF $\rightarrow$ interface residuals
+\end{center}
+
+\vspace{1em}
+\begin{itemize}
+  \item Load targets are written as MW targets only, avoiding mixed MW/share inputs.
+  \item P-32 interface targets are used for reporting/objective terms, not as branch ratings.
+  \item The first calibration variable is the Gilboa-Leeds reactance, $X_{GL}$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Public Scenario Targets}
+\scriptsize
+\begin{tabularx}{\linewidth}{l r r r}
+\toprule
+\textbf{Scenario} & \textbf{NYISO total MW} & \textbf{NPCC NY MW} & \textbf{Scale $\gamma$} \\
+\midrule
+Summer peak & 30,644.99 & 10,902.22 & 0.35576 \\
+Winter peak & 23,521.35 & 10,902.22 & 0.46350 \\
+Shoulder light load & 11,060.56 & 10,902.22 & 0.98568 \\
+High NYC plus LI & 30,414.51 & 10,902.22 & 0.35845 \\
+High Total East flow & 28,333.18 & 10,902.22 & 0.38479 \\
+Low Total East flow & 23,862.11 & 10,902.22 & 0.45688 \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.8em}
+\begin{block}{Scaling rule}
+\[
+P_z^{target}(t) =
+P_{NY}^{NPCC}
+\frac{L_z^{NYISO}(t)}
+{\sum_{k=A}^{K} L_k^{NYISO}(t)}
+= \gamma(t) L_z^{NYISO}(t)
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}{Load Distribution Mismatch}
+\scriptsize
+\begin{tabularx}{\linewidth}{l l r r r}
+\toprule
+\textbf{Zone} & \textbf{Name} & \textbf{NPCC share} & \textbf{NYISO avg share} & \textbf{Delta pp} \\
+\midrule
+A & WEST & 24.04\% & 9.15\% & +14.89 \\
+C & CENTRL & 16.40\% & 8.64\% & +7.76 \\
+D & NORTH & 8.05\% & 2.42\% & +5.63 \\
+G & HUD VL & 0.00\% & 6.73\% & -6.73 \\
+I & DUNWOD & 21.21\% & 4.36\% & +16.85 \\
+J & N.Y.C. & 0.00\% & 34.57\% & -34.57 \\
+K & LONGIL & 7.42\% & 15.12\% & -7.70 \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.8em}
+\begin{columns}[T]
+\begin{column}{0.48\linewidth}
+\begin{block}{Original NPCC}
+A-F upstate share: \textbf{70.29\%}\\
+G-K downstate share: \textbf{29.71\%}
+\end{block}
+\end{column}
+\begin{column}{0.48\linewidth}
+\begin{block}{Public NYISO average}
+A-F upstate share: \textbf{37.20\%}\\
+G-K downstate share: \textbf{62.80\%}
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Important Mapping Clarification}
+\begin{itemize}
+  \item HUD VL and NYC proxy buses do exist in the reduced NPCC mapping.
+  \item They have \bad{zero original active load} in the base NPCC case.
+  \item CE UG is a bus, not a zone:
+    \begin{itemize}
+      \item Bus 78: CE UG
+      \item Mapped zone: I / DUNWOD
+      \item Original load: 2,311.84 MW
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.6em}
+\scriptsize
+\begin{tabularx}{\linewidth}{l l l r}
+\toprule
+\textbf{Bus} & \textbf{Name} & \textbf{Mapped zone} & \textbf{Base Pd MW} \\
+\midrule
+39, 73, 75, 76 & Leeds / Pleasant Valley / Ramapo & G / HUD VL & 0.00 \\
+79, 81, 82 & RAV A-3 / Goethals / AK-3 & J / N.Y.C. & 0.00 \\
+78 & CE UG & I / DUNWOD & 2,311.84 \\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{Public ACOPF Results}
+\begin{itemize}
+  \item Ran six public scenarios for two topology variants:
+    \begin{itemize}
+      \item S1 original topology
+      \item S1 plus Gilboa-Leeds
+    \end{itemize}
+  \item Solver/settings:
+    \begin{itemize}
+      \item \texttt{opf.ac.solver = IPOPT}
+      \item \texttt{opf.flow\_lim = S}
+      \item \texttt{opf.violation = 1e-6}
+      \item \texttt{opf.use\_vg = 0}
+      \item \texttt{opf.ignore\_angle\_lim = 0}
+    \end{itemize}
+  \item Result: \bad{0 / 12 public ACOPF runs certified feasible}.
+  \item The Gilboa-Leeds grid-smoke driver ran, but every trial had \texttt{success\_count = 0}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Failure Evidence}
+\begin{itemize}
+  \item Representative public-load diagnostic:
+    \begin{itemize}
+      \item Base constraints: failed.
+      \item Branch ratings removed only: still failed.
+      \item Branch ratings plus voltage bounds relaxed: solved, but voltages reached unrealistic levels up to 1.5 pu.
+    \end{itemize}
+  \item This points to a combined feasibility issue, with voltage/reactive feasibility as the leading suspect.
+  \item Branch 190 and several ratings remain tight, but branch limits alone do not explain the failure.
+\end{itemize}
+
+\vspace{0.7em}
+\begin{block}{Current assessment}
+The public load-shape shift appears too severe for the current reduced topology, reactive support model, and voltage constraints.
+\end{block}
+\end{frame}
+
+\begin{frame}{Largest Interface Residuals}
+\scriptsize
+\begin{tabularx}{\linewidth}{l l l r r r}
+\toprule
+\textbf{Scenario} & \textbf{Variant} & \textbf{Interface} &
+\textbf{Target MW} & \textbf{Lite MW} & \textbf{Residual MW} \\
+\midrule
+Low Total East & GL & Total East & -325.57 & 2,493.54 & 2,819.10 \\
+Low Total East & Original & Total East & -325.57 & 2,290.27 & 2,615.83 \\
+Low Total East & GL & Central East & -48.92 & 2,169.24 & 2,218.16 \\
+Low Total East & Original & Central East & -48.92 & 2,109.89 & 2,158.82 \\
+Shoulder light load & Original & UPNY-ConEd & 3,945.62 & 2,581.78 & -1,363.83 \\
+Low Total East & GL & UPNY-ConEd & 1,250.58 & 2,590.35 & 1,339.77 \\
+Shoulder light load & Original & Dunwoodie South & 3,173.77 & 1,876.72 & -1,297.05 \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.6em}
+\begin{alertblock}{Caveat}
+These residuals are diagnostic only because the corresponding OPF runs did not certify feasibility.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Likely Failure Reasons}
+\begin{enumerate}
+  \item \textbf{Voltage and Q infeasibility}: downstate load is moved to proxy buses without matching detailed voltage support.
+  \item \textbf{Load allocation concentration}: zero-load zones G and J rely on proxy weights, causing large new loads at a few buses.
+  \item \textbf{Reactive load modeling}: new proxy load uses simplified Q assumptions, which may over-stress local Q limits.
+  \item \textbf{Mismatch of operating assumptions}: public NYISO load hours do not include matching external interchange, unit commitment, voltage controls, or internal NYISO topology.
+  \item \textbf{Tight branch constraints}: branch 190 and other limits can bind, but they are not the sole blocker.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Recommended Next Diagnostics}
+\begin{enumerate}
+  \item Run an \textbf{eta continuation}: apply 0\%, 10\%, ..., 100\% of the NYISO load-shape shift.
+  \item At the first failed eta, report:
+    \begin{itemize}
+      \item voltage-bound buses,
+      \item generator Q-limit activity,
+      \item binding or overloaded branches,
+      \item zone-level load movement.
+    \end{itemize}
+  \item Audit proxy weights for Zones G, J, and K before fitting $X_{GL}$.
+  \item Test alternative reactive-load assumptions for zero-load proxy zones.
+  \item Only resume Gilboa-Leeds X calibration after at least one public scenario is ACOPF-feasible.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Artifacts Produced}
+\scriptsize
+\begin{tabularx}{\linewidth}{l X}
+\toprule
+\textbf{File} & \textbf{Purpose} \\
+\midrule
+\texttt{nyiso\_public\_scenarios.csv} & Six public operating-hour definitions and scale factors. \\
+\texttt{ny\_zonal\_load\_targets.csv} & Scaled A-K zonal MW targets, including S0 and public scenarios. \\
+\texttt{nyiso\_public\_interface\_targets.csv} & Scaled P-32 flow and aggregate-limit references. \\
+\texttt{nyiso\_public\_acopf\_results.csv} & IPOPT ACOPF summary by scenario and topology. \\
+\texttt{nyiso\_public\_interface\_residuals.csv} & Per-interface residuals against public targets. \\
+\texttt{npcc\_original\_bus\_zone\_loads.csv} & Bus number, bus name, mapped zone, and original base-case load. \\
+\texttt{nyiso\_public\_calibration\_results.zip} & Packaged calibration result tables. \\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{Current Decision Point}
+\begin{block}{Do not calibrate $X_{GL}$ yet}
+The public scenario ACOPF base points are not certified feasible, so fitting Gilboa-Leeds against those residuals would tune against failed solutions.
+\end{block}
+
+\begin{block}{Recommended next step}
+Use eta continuation and voltage/Q diagnostics to find the smallest public-load shift that breaks the reduced case. Then repair the load allocation or voltage/reactive support assumptions before re-running the grid search.
+\end{block}
+\end{frame}
+
+\end{document}

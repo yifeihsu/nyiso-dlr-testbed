@@ -1,0 +1,15 @@
+metric,value,unit,source,note
+objective,823806.977434,$/h,runopf,
+total_load_mw,30349.7613567,MW,runopf,
+total_generation_mw,31108.1559142,MW,runopf,
+losses_mw,758.394557476,MW,runopf,
+min_voltage,0.900000000424,p.u.,runopf,
+max_voltage,1.09999999981,p.u.,runopf,
+number_of_generators_at_pmax,28,count,audit,
+number_of_generators_at_pmin,13,count,audit,
+number_of_voltage_bounds,27,count,audit,
+number_of_binding_branches,2,count,audit,
+number_of_rate_a_overloads,0,count,audit,
+max_rate_a_overload_mva,0,MVA,audit,
+branch_190_flow_mva,773.970761968,MVA,audit,max of from/to apparent flow
+branch_190_rate_a_mva,773.970762,MVA,case,

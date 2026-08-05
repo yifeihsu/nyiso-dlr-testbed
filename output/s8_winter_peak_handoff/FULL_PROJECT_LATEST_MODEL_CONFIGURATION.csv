@@ -1,0 +1,90 @@
+category,setting,value,notes
+model,recommended_case,npcc_ny_lite_s7_seven_interface_perform_direct_candidate,Network-structural baseline with inherited S4 capability assumptions
+model,base_mva,100,MATPOWER system base
+model,full_case_bus_count,143,Original 140 plus three zero-load transit buses
+model,full_case_branch_count,246,Includes downstate delivery spine
+model,full_case_generator_count,62,Original units plus fourteen zonal equivalents
+validation,network_form,NY boundary equivalent,Required to fix public external schedules exactly in standard PF
+validation,ny_bus_count,49,NY-only S7 core
+validation,ny_branch_count,81,NY-only S7 core
+validation,ny_internal_generator_count,35,Before eight external boundary equivalents
+validation,external_equivalent_count,8,Fixed scaled P-32 schedules
+load,source,NYISO P-58C Integrated Real-Time Actual Load,Six selected 2025 public hours
+load,npcc_ny_total_mw,10902.2197987,Preserved for every public scenario
+load,bus_allocation,Original NPCC weights plus proxy weights,Reactive load preserves Q/P or uses 0.97 power factor for new proxy load
+generation,zonal_target_method,Constrained seven-interface DC inverse,Capability bounded with PERFORM zonal prior
+generation,operational_closure_method,Iterative finite-difference AC zonal redispatch,S8 diagnostic on direct-PERFORM S7
+generation,loss_participation,Available zonal headroom,Final reference pickup below 0.1 MW
+generation,ac_sensitivity_slack,Distributed participation vector,Directions use e_z minus alpha rather than Zone-J-only transfers
+generation,ac_iteration_damping,0.4,Maximum six iterations
+generation,bus_allocation,PERFORM generation shift keys,Applied within each inferred zone total
+generation,zone_j_equivalent_pmax_mw,3000,40 percent RAV A-3; 30 percent AK-3; 30 percent Goethals
+generation,s4_equivalent_cost_c1,180,Linear cost coefficient used in S4 OPF calibration
+generation,s4_equivalent_cost_c2,0.02,Quadratic cost coefficient used in S4 OPF calibration
+generation,abc_cap_factor,0.8,Inherited S4 participation envelope; not an operationally certified availability limit
+external_interchange,source,NYISO P-32,Positive target means import into NY
+external_interchange,p_tolerance_mw,0.001,Boundary generator PMIN/PMAX tolerance
+interfaces,count,7,Dysinger East; West Central; Moses South; Central East; Total East; UPNY-ConEd; Dunwoodie South
+interfaces,objective,Fixed-scale squared normalized residual,Scales stored in nyiso_interface_objective_scales.csv
+tie,GILBOA_LEEDS_R_X_B,0.00131 / 0.01997 / 0.51614,Direct PERFORM circuit
+tie,GILBOA_LEEDS_RATE_A_MVA,1216,Direct PERFORM rating
+tie,PLEASANT_VLY_WOOD_STREET_R_X_B,0.000405 / 0.006185 / 0.63943,Two-circuit PERFORM parallel equivalent
+tie,PLEASANT_VLY_WOOD_STREET_RATE_A_MVA,2432,Two-circuit aggregate
+tie,WOOD_STREET_MILLWOOD_R_X_B,0.000185 / 0.002815 / 0.29107,Two-circuit PERFORM parallel equivalent
+tie,WOOD_STREET_MILLWOOD_RATE_A_MVA,2432,Two-circuit aggregate
+solver,standard_pf,pf.enforce_q_lims = 0,Primary interface-consistency calculation
+solver,q_diagnostic_pf,pf.enforce_q_lims = 1,Five of six scenarios converge
+solver,dc_inverse,lsqlin,Requires MATLAB Optimization Toolbox
+software,MATLAB,R2026a Update 3,Version 26.1.0.3276743 used for final verification
+software,MATPOWER,8.1,IPOPT feature also available
+status,standard_pf_success,6 / 6,Does not imply limit feasibility
+status,q_enforced_pf_success,5 / 6,Shoulder-light-load case fails
+status,all_interface_objective,0.23330263476232,Direct PERFORM candidate
+status,holdout_interface_objective,0.103848450581776,Two held-out scenarios
+status,worst_interface_residual_mw,424.907845405738,Dunwoodie South in the worst scenario
+status,min_voltage_pu,0.902171794313055,Standard PF across six scenarios
+status,max_voltage_pu,1.11280331929648,Voltage upper-bound violations remain
+status,max_branch_overload_mva,168.060408138865,Niagara West-Huntley
+status,max_q_limit_violation_mvar,472.980033424525,CE UG in shoulder-light-load standard PF
+operational_status,s8_reporting_objective,0.0153097682237959,In-sample AC dispatch reoptimization
+operational_status,s8_objective_reduction_percent,93.4378074043643,Relative to frozen direct-PERFORM S7 dispatch
+operational_status,s8_mean_abs_residual_mw,19.4948001389454,Across seven interfaces and six scenarios
+operational_status,s8_worst_residual_mw,416.002007589673,West-Central in shoulder scenario
+operational_status,s8_max_reference_adjustment_mw,0.0982659546207287,Distributed loss closure
+operational_status,s8_q_enforced_pf_success,5 / 6,Shoulder scenario still fails
+operational_status,s8_min_voltage_pu,0.85457007033278,Shoulder scenario
+operational_status,s8_max_voltage_pu,1.10845722340888,Winter scenario
+operational_status,s8_max_branch_overload_mva,170.242652317838,Niagara West-Huntley
+operational_status,s8_max_q_limit_violation_mvar,1189.18011813479,CE UG in shoulder scenario
+operational_status,s8_acceptance,diagnostic only,Direct-PERFORM S7 network remains structural baseline
+capability_status,s8_1_shoulder_cap_0p8_minimum_eta,2.70130413848751,Inherited A/B/C envelope is incompatible with the 150 MW reporting bands
+capability_status,s8_1_shoulder_cap_0p8_minimum_relaxation_mw,272.579926012896,Minimum aggregate A/B/C relaxation for eta less than or equal to 1
+capability_status,s8_1_shoulder_cap_0p9_minimum_eta,1.57415631955044,Still incompatible in the saved AC linearization
+capability_status,s8_1_shoulder_cap_1p0_minimum_eta,0.993729578315577,Linearly compatible but not nonlinearly acceptable
+capability_status,s8_1_cap_1p0_nonlinear_min_voltage_pu,0.86538,Strict nonlinear AC recheck
+capability_status,s8_1_cap_1p0_nonlinear_max_q_violation_mvar,998.76,Q-limit PF fails
+capability_status,scenario_specific_availability,not run,No independent hour-specific 2025 availability or commitment input
+reactive_status,s9a_free_voltage_temporary_q_mvar,0,PERFORM-scaled Q envelope with opf.use_vg = 0
+reactive_status,s9a_s1_reference_weight_0p80_temporary_q_mvar,36.0686,Current VG fields are primarily S1 OPF-solved voltage references
+reactive_status,s9a_s1_reference_weight_0p85_temporary_q_mvar,227.83965,AK-3 and Huntley
+reactive_status,s9a_s1_reference_weight_0p90_temporary_q_mvar,833.2683,Huntley; AK-3; Binghamton
+reactive_status,s9a_full_s1_reference,not demonstrated,IPOPT exception and MIPS nonconvergence are not infeasibility certificates
+reactive_status,s9a_interpretation,voltage-control inconsistency,Zero temporary internal Q is conditional on free voltage and boundary Q flexibility
+restoration_status,s9b_method,MATPOWER AC soft-limit feasibility restoration,AC balance and active-power bounds remain hard
+restoration_status,s9b_default_cases_solved,27 / 27,Three boundary-Q modes by nine S1 numerical-reference weights
+restoration_status,s9b_hard_first_attempt,enabled,Soft restoration is invoked only after unsuccessful hard ACOPF
+restoration_status,s9b_opf_start,2,Uses current MATPOWER case state for actual warm continuation
+restoration_status,s9b_refined_reference_cases_solved,182 / 182,Bidirectional warm; cold; perturbed; four reference sets
+restoration_status,s9b_s1_highest_hard_feasible_weight,0.8075,Consistent across tested directions starts and boundary-Q modes
+restoration_status,s9b_s1_first_nonzero_restoration_weight,0.8100,CE UG upper reference-derived bound by 0.00002727 pu
+restoration_status,s9b_original_npcc_coarse_bracket,0.75 to 0.80,Reference-dependent diagnostic
+restoration_status,s9b_perform_aggregate_coarse_bracket,0.90 to 1.00,Provisional zonal mapping; RAW VS and IREG controls extracted but not preserved device-by-device
+voltage_control,perform_raw_generator_records,649,PSS/E RAW rev33 generator records with VS and IREG
+voltage_control,perform_online_nyiso_generator_controls,417,All regulated buses resolved in the source RAW bus table
+voltage_control,perform_online_remote_regulation_records,1,Source control extracted; reduced-model mapping remains pending
+restoration_status,s9b_s1_full_reference_q_slack_range_mvar,133.73 to 170.41,Depends on external boundary-Q mode
+restoration_status,s9b_s1_full_reference_voltage_slack_range_pu,0.07692 to 0.08652,Aggregate VMIN plus VMAX slack
+restoration_status,s9b_branch_slack_mva,0,No branch restoration slack in the 27-run default study or 182-run reference audit
+restoration_status,s9b_max_ac_balance_residual_mva,0.001067,Independent evaluation across 182 refined/reference solves
+restoration_status,s9b_solver_exceptions,0,All 182 final solves returned IPOPT status 0
+restoration_status,s9b_acceptance,diagnostic only,Threshold and slack decomposition depend on voltage-reference provenance and restoration metric

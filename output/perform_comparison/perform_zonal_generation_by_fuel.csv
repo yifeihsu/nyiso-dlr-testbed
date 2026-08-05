@@ -1,0 +1,54 @@
+zone,fuel,generator_types,all_gen_count,online_gen_count,online_dispatch_mw,online_pmax_mw,all_pmax_mw
+A,ng,"CC (Combined Cycle Generic); GT (Gas Turbine); ST (Steam Turbine)",9,7,532.851472,565.900004,656.600004
+A,wind,"WT (Wind Turbine)",7,7,544.229602,547.699999,547.699999
+A,import,"proxy",5,2,725,725,754
+A,dfo,"IC (Internal Combustion)",1,0,0,0,1.1
+A,other,"ST (Steam Turbine)",2,2,49.683166,50,50
+A,coal,"ST (Steam Turbine)",5,0,0,0,1282.300032
+A,hydro,"HY (Hydro); PS (Hydro Pumped Storage)",25,25,1513.745538,2669.099938,2669.099938
+B,ng,"CC (Combined Cycle Generic)",1,1,66.575444,67.000002,67.000002
+B,nuclear,"ST (Steam Turbine)",1,1,610.109282,613.999987,613.999987
+B,dfo,"ST (Steam Turbine)",2,0,0,0,25.4
+B,other,"IC (Internal Combustion)",11,0,0,0,11.2
+B,hydro,"HY (Hydro)",4,4,43.129685,44.000003,44.000003
+B,coal,"ST (Steam Turbine)",7,0,0,0,132.900005
+C,hydro,"HY (Hydro)",15,15,66.556942,67.9,67.9
+C,ng,"CC (Combined Cycle Generic); ST (Steam Turbine)",8,5,1375.884074,1378.100001,1518.299996
+C,wind,"WT (Wind Turbine)",5,5,199.428228,200.700002,200.700002
+C,import,"proxy",2,0,0,0,20
+C,dfo,"GT (Gas Turbine); IC (Internal Combustion); ST (Steam Turbine)",5,1,47.397739,47.7,1853.29993
+C,other,"IC (Internal Combustion); ST (Steam Turbine)",19,1,39.249703,39.500001,57.100001
+C,nuclear,"ST (Steam Turbine)",3,3,2766.756395,2784.40008,2784.40008
+C,solar,"PV (Photovoltaic)",2,2,33.784552,34.000001,34.000001
+D,hydro,"HY (Hydro)",6,6,26.858029,27.4,27.4
+D,ng,"CC (Combined Cycle Generic)",1,0,0,0,285.599995
+D,wind,"WT (Wind Turbine)",5,5,596.694821,600.500018,600.500018
+E,hydro,"HY (Hydro)",45,45,908.079616,1255.899983,1255.899983
+E,ng,"CC (Combined Cycle Generic)",4,1,63.793194,64.200002,337.000001
+E,wood,"ST (Steam Turbine)",1,1,55.148321,55.500001,55.500001
+E,wind,"WT (Wind Turbine)",10,10,625.61045,629.60001,629.60001
+E,dfo,"IC (Internal Combustion); ST (Steam Turbine)",3,0,0,0,29.999999
+E,import,"proxy",2,2,950,1400,1400
+E,reference,"reference",1,1,-0.070196,1,1
+F,hydro,"HY (Hydro); PS (Hydro Pumped Storage)",56,56,1392.794666,1420.900003,1420.900003
+F,ng,"CC (Combined Cycle Generic)",7,5,1919.399661,2104.600001,2300.000001
+F,other,"BA (Energy Storage, Battery); FW (Energy Storage, Flywheel); ST (Steam Turbine)",3,3,54.055286,54.399999,54.399999
+F,dfo,"ST (Steam Turbine)",1,0,0,0,42.1
+F,wood,"ST (Steam Turbine)",1,1,28.816235,28.999999,28.999999
+F,import,"proxy",1,1,-835.999966,-835.999966,-835.999966
+G,dfo,"GT (Gas Turbine); IC (Internal Combustion); ST (Steam Turbine)",10,4,130.7661,131.600002,669.000019
+G,ng,"CC (Combined Cycle Generic); ST (Steam Turbine)",9,7,2952.332212,3854.600002,4499.000006
+G,hydro,"HY (Hydro)",3,3,14.115168,14.4,14.4
+G,import,"proxy",3,2,-640.75799,-640.75799,-630.75799
+H,dfo,"IC (Internal Combustion)",12,0,0,0,15.4
+I,other,"ST (Steam Turbine)",1,1,59.321702,59.7,59.7
+I,nuclear,"ST (Steam Turbine)",2,0,0,0,2310.99997
+J,ng,"CC (Combined Cycle Generic); GT (Gas Turbine); IC (Internal Combustion); ST (Steam Turbine)",110,50,7612.912514,8000.900025,9292.100024
+J,dfo,"GT (Gas Turbine); IC (Internal Combustion); ST (Steam Turbine)",82,30,628.591437,632.6,789.599998
+J,import,"proxy",4,4,579.392993,579.392993,579.392993
+K,ng,"CC (Combined Cycle Generic); GT (Gas Turbine); IC (Internal Combustion); ST (Steam Turbine)",55,38,3517.87912,3822.599943,4667.69993
+K,dfo,"GT (Gas Turbine); IC (Internal Combustion)",26,10,396.47168,399.000005,761.999993
+K,import,"proxy",3,3,514.999985,514.999985,514.999985
+K,other,"ST (Steam Turbine)",4,4,135.237588,136.100001,136.100001
+K,rfo,"IC (Internal Combustion)",2,0,0,0,2.8
+K,solar,"PV (Photovoltaic)",3,3,75.91588,76.4,76.4

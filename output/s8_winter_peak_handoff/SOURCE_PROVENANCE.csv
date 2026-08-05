@@ -1,0 +1,8 @@
+asset,source,application,caveat,scenario_id
+structural_network,S7 direct-PERFORM structural candidate,flattened 143-bus structural source,"structural candidate, not certified operating case",S2_2025_WINTER_PEAK_PUBLIC
+zonal_load,NYISO P-58C scaled,preserve 10902.22 MW NPCC NY total,"scaled public snapshot",S2_2025_WINTER_PEAK_PUBLIC
+internal_interface_targets,NYISO P-32 scaled,seven in-sample PF targets,"used to infer dispatch, so not holdout validation",S2_2025_WINTER_PEAK_PUBLIC
+external_interchange,NYISO P-32 scaled,fixed boundary-equivalent schedules,"fixed P schedules with simplified Q behavior",S2_2025_WINTER_PEAK_PUBLIC
+within_zone_generation_allocation,PERFORM 2019 GSK,allocate zonal generation to buses,"single 2019 on-peak prior",S2_2025_WINTER_PEAK_PUBLIC
+zonal_generation_totals,S8 iterative AC inverse,loss-adjusted AC interface closure,"operational diagnostic, not observed generation",S2_2025_WINTER_PEAK_PUBLIC
+supported_tie_parameters,PERFORM direct circuits,three supported added corridors,"remaining added proxy ties are engineering equivalents",S2_2025_WINTER_PEAK_PUBLIC

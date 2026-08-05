@@ -1,0 +1,67 @@
+scenario_id,nyiso_zone_letter,nyiso_zone_name,load_mw,generation_mw,pmax_mw,net_injection_mw,generation_source,interchange_source,status,note
+S0_NPCC_BASE,A,WEST,2621.2122825000,3522.0000000000,5244.8202066000,900.7877175000,npcc_original.m embedded Pg,baseline boundary-flow audit,snapshot-only,Embedded PG may violate PMAX; do not use as calibrated dispatch
+S0_NPCC_BASE,B,GENESE,1066.9137300000,833.0000000000,1246.7538800000,-233.9137300000,npcc_original.m embedded Pg,baseline boundary-flow audit,snapshot-only,Embedded PG may violate PMAX; do not use as calibrated dispatch
+S0_NPCC_BASE,C,CENTRL,1788.2075120000,1182.0000000000,4056.6810405000,-606.2075120000,npcc_original.m embedded Pg,baseline boundary-flow audit,snapshot-only,Embedded PG may violate PMAX; do not use as calibrated dispatch
+S0_NPCC_BASE,D,NORTH,877.3429232000,800.0000000000,984.9807077000,-77.3429232000,npcc_original.m embedded Pg,baseline boundary-flow audit,snapshot-only,Embedded PG may violate PMAX; do not use as calibrated dispatch
+S0_NPCC_BASE,E,MHK VL,295.9154000000,0.0000000000,0.0000000000,-295.9154000000,npcc_original.m embedded Pg,baseline boundary-flow audit,snapshot-only,Embedded PG may violate PMAX; do not use as calibrated dispatch
+S0_NPCC_BASE,F,CAPITL,1013.7414280000,370.0000000000,568.0039950000,-643.7414280000,npcc_original.m embedded Pg,baseline boundary-flow audit,snapshot-only,Embedded PG may violate PMAX; do not use as calibrated dispatch
+S0_NPCC_BASE,G,HUD VL,0.0000000000,0.0000000000,0.0000000000,0.0000000000,npcc_original.m embedded Pg,baseline boundary-flow audit,snapshot-only,Embedded PG may violate PMAX; do not use as calibrated dispatch
+S0_NPCC_BASE,H,MILLWD,117.9037920000,0.0000000000,0.0000000000,-117.9037920000,npcc_original.m embedded Pg,baseline boundary-flow audit,snapshot-only,Embedded PG may violate PMAX; do not use as calibrated dispatch
+S0_NPCC_BASE,I,DUNWOD,2311.8390600000,466.0190000000,565.0990920000,-1845.8200600000,npcc_original.m embedded Pg,baseline boundary-flow audit,snapshot-only,Embedded PG may violate PMAX; do not use as calibrated dispatch
+S0_NPCC_BASE,J,N.Y.C.,0.0000000000,1460.0000000000,1197.0774600000,1460.0000000000,npcc_original.m embedded Pg,baseline boundary-flow audit,snapshot-only,Embedded PG may violate PMAX; do not use as calibrated dispatch
+S0_NPCC_BASE,K,LONGIL,809.1436710000,720.0000000000,584.9293420000,-89.1436710000,npcc_original.m embedded Pg,baseline boundary-flow audit,snapshot-only,Embedded PG may violate PMAX; do not use as calibrated dispatch
+S1_PERFORM_COMPATIBLE_PEAK,A,WEST,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S1_PERFORM_COMPATIBLE_PEAK,B,GENESE,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S1_PERFORM_COMPATIBLE_PEAK,C,CENTRL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S1_PERFORM_COMPATIBLE_PEAK,D,NORTH,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S1_PERFORM_COMPATIBLE_PEAK,E,MHK VL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S1_PERFORM_COMPATIBLE_PEAK,F,CAPITL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S1_PERFORM_COMPATIBLE_PEAK,G,HUD VL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S1_PERFORM_COMPATIBLE_PEAK,H,MILLWD,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S1_PERFORM_COMPATIBLE_PEAK,I,DUNWOD,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S1_PERFORM_COMPATIBLE_PEAK,J,N.Y.C.,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S1_PERFORM_COMPATIBLE_PEAK,K,LONGIL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S2_SHOULDER_LOAD,A,WEST,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S2_SHOULDER_LOAD,B,GENESE,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S2_SHOULDER_LOAD,C,CENTRL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S2_SHOULDER_LOAD,D,NORTH,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S2_SHOULDER_LOAD,E,MHK VL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S2_SHOULDER_LOAD,F,CAPITL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S2_SHOULDER_LOAD,G,HUD VL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S2_SHOULDER_LOAD,H,MILLWD,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S2_SHOULDER_LOAD,I,DUNWOD,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S2_SHOULDER_LOAD,J,N.Y.C.,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S2_SHOULDER_LOAD,K,LONGIL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S3_HIGH_DOWNSTATE_LOAD,A,WEST,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S3_HIGH_DOWNSTATE_LOAD,B,GENESE,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S3_HIGH_DOWNSTATE_LOAD,C,CENTRL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S3_HIGH_DOWNSTATE_LOAD,D,NORTH,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S3_HIGH_DOWNSTATE_LOAD,E,MHK VL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S3_HIGH_DOWNSTATE_LOAD,F,CAPITL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S3_HIGH_DOWNSTATE_LOAD,G,HUD VL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S3_HIGH_DOWNSTATE_LOAD,H,MILLWD,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S3_HIGH_DOWNSTATE_LOAD,I,DUNWOD,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S3_HIGH_DOWNSTATE_LOAD,J,N.Y.C.,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S3_HIGH_DOWNSTATE_LOAD,K,LONGIL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S4_HIGH_WESTERN_NORTHERN_GENERATION,A,WEST,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S4_HIGH_WESTERN_NORTHERN_GENERATION,B,GENESE,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S4_HIGH_WESTERN_NORTHERN_GENERATION,C,CENTRL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S4_HIGH_WESTERN_NORTHERN_GENERATION,D,NORTH,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S4_HIGH_WESTERN_NORTHERN_GENERATION,E,MHK VL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S4_HIGH_WESTERN_NORTHERN_GENERATION,F,CAPITL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S4_HIGH_WESTERN_NORTHERN_GENERATION,G,HUD VL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S4_HIGH_WESTERN_NORTHERN_GENERATION,H,MILLWD,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S4_HIGH_WESTERN_NORTHERN_GENERATION,I,DUNWOD,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S4_HIGH_WESTERN_NORTHERN_GENERATION,J,N.Y.C.,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S4_HIGH_WESTERN_NORTHERN_GENERATION,K,LONGIL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S5_ALTERED_EXTERNAL_INTERCHANGE,A,WEST,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S5_ALTERED_EXTERNAL_INTERCHANGE,B,GENESE,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S5_ALTERED_EXTERNAL_INTERCHANGE,C,CENTRL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S5_ALTERED_EXTERNAL_INTERCHANGE,D,NORTH,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S5_ALTERED_EXTERNAL_INTERCHANGE,E,MHK VL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S5_ALTERED_EXTERNAL_INTERCHANGE,F,CAPITL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S5_ALTERED_EXTERNAL_INTERCHANGE,G,HUD VL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S5_ALTERED_EXTERNAL_INTERCHANGE,H,MILLWD,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S5_ALTERED_EXTERNAL_INTERCHANGE,I,DUNWOD,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S5_ALTERED_EXTERNAL_INTERCHANGE,J,N.Y.C.,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required
+S5_ALTERED_EXTERNAL_INTERCHANGE,K,LONGIL,,,,,Populate from matched scenario,ny_external_interchange_schedule.csv,template,Add E/G/H equivalents when nonzero targets are required

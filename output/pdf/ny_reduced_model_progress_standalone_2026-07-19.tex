@@ -1,0 +1,367 @@
+\documentclass[aspectratio=169,10pt]{beamer}
+\usepackage{default_latex_beamer_template}
+
+\title[NY Reduced Model Progress]{NY Reduced Power-System Model:\\Current Progress}
+\subtitle{Validation of a 49-bus research model for interface-flow and preliminary dynamic line-rating studies}
+\author{NPCC / NY Reduced-Model Workstream}
+\date{Status through July 14, 2026 \quad $\vert$ \quad Prepared July 19, 2026}
+
+\begin{document}
+
+\defaulttitleframe{A self-contained update for technical audiences new to the project}
+
+\begin{frame}{Executive Summary}
+\small
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.64\linewidth}
+\begin{itemize}
+  \item A \pass{49-bus New York reduced model is now accepted} for the summer-peak operating point and two reactive-load sensitivity tests.
+  \item The accepted model passes AC power flow, generator and voltage limits, trusted branch limits, interface-flow accuracy, dispatch-movement limits, and a full-to-reduced structural benchmark.
+  \item Four transfer interfaces are calibrated, and five physical transmission circuits have current results that can support later conductor mapping.
+  \item \fail{Winter peak and high-Total-East conditions remain excluded} because they exceed fixed dispatch and/or interface-accuracy limits.
+\end{itemize}
+\end{column}
+\begin{column}{0.33\linewidth}
+\metric{green}{ACCEPTED}{Summer-peak research case}
+\vspace{0.35em}
+\metric{blue}{71.7 MW}{Calibrated-interface MAE}
+\vspace{0.35em}
+\metric{amber}{5 circuits}{Physical current scope}
+\end{column}
+\end{columns}
+
+\begin{alertblock}{Claim boundary}
+{\scriptsize The model supports preliminary dynamic line-rating methodology research. It does not yet contain the physical and operational data needed for utility planning or real-time operating claims.}
+\end{alertblock}
+\vspace{-0.24cm}
+\source{Current validation, interface, dispatch, and structural benchmark ledgers}
+\end{frame}
+
+\begin{frame}{What Are We Building?}
+\begin{tikzpicture}[
+  node distance=0.58cm,
+  box/.style={rounded corners=2pt,minimum height=1.65cm,text width=3.65cm,align=center,inner sep=0.38cm,draw=blue,fill=paleblue},
+  arrow/.style={-{Stealth[length=2.5mm]},very thick,blue}
+]
+\node[box] (source) {\textbf{Regional source model}\par\scriptsize Detailed topology, generators, controls, and operating data};
+\node[box,right=of source,fill=palegreen,draw=green] (reduced) {\textbf{NY-focused reduced model}\par\scriptsize 49 retained buses, boundary equivalents, explicit interfaces};
+\node[box,right=of reduced,fill=paleamber,draw=amber] (research) {\textbf{Research outputs}\par\scriptsize Voltages, transfers, circuit currents, and future weather-based ratings};
+\draw[arrow] (source) -- (reduced);
+\draw[arrow] (reduced) -- (research);
+\end{tikzpicture}
+
+\vspace{0.55cm}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\linewidth}
+\begin{block}{Reduced model}
+A smaller electrical equivalent that preserves the behavior needed for selected New York studies while removing most of the surrounding regional detail.
+\end{block}
+\end{column}
+\begin{column}{0.49\linewidth}
+\begin{block}{Dynamic line rating}
+A weather-dependent current limit. This deck validates electrical currents; conductor and weather inputs are a later layer.
+\end{block}
+\end{column}
+\end{columns}
+\source{Current model architecture and validation documentation}
+\end{frame}
+
+\begin{frame}{How the Project Moved Forward}
+\centering
+\begin{tikzpicture}[scale=0.84,transform shape,
+  node distance=0.45cm,
+  box/.style={rounded corners=2pt,minimum height=1.55cm,text width=3.25cm,align=left,inner sep=0.40cm},
+  arrow/.style={-{Stealth[length=2.5mm]},very thick,blue}
+]
+\node[box,fill=palered,draw=red] (old) {\textbf{Starting blocker}\par\small Public-load cases did not produce certified feasible solutions.};
+\node[box,fill=paleblue,draw=blue,right=of old] (controls) {\textbf{Controls repaired}\par\small Source-backed status, voltage targets, reactive limits, and reference control were preserved.};
+\node[box,fill=paleamber,draw=amber,right=of controls] (network) {\textbf{Reduction improved}\par\small Explicit interfaces and physical circuits were added; non-physical equivalents were corrected.};
+\node[box,fill=palegreen,draw=green,right=of network] (now) {\textbf{Current result}\par\small Summer peak passes every mandatory gate; two broader conditions remain excluded.};
+\draw[arrow] (old) -- (controls);
+\draw[arrow] (controls) -- (network);
+\draw[arrow] (network) -- (now);
+\end{tikzpicture}
+
+\vspace{0.65cm}
+\begin{block}{The major process change}
+Cases are no longer accepted because they merely converge. Publication now requires electrical feasibility, realistic control provenance, bounded redispatch, interface accuracy, and full-to-reduced structural agreement.
+\end{block}
+\source{Project handoff and current validation policy}
+\end{frame}
+
+\begin{frame}{Current Model Configuration}
+\small
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\linewidth}
+\begin{block}{Network and operating point}
+\begin{itemize}
+  \item 49 buses, 83 branches, 49 generator records
+  \item New York zones A--K plus external boundary equivalents
+  \item Five explicitly mapped physical circuits
+  \item Summer load: 30,644.99 MW
+  \item Generation: 31,433.46 MW
+  \item Active loss: 788.47 MW
+\end{itemize}
+\end{block}
+\end{column}
+\begin{column}{0.49\linewidth}
+\begin{block}{Controls and measurements}
+\begin{itemize}
+  \item 35 regulating generators at seven eligible buses
+  \item Source-backed active and reactive limits
+  \item Fixed external active-power schedules
+  \item Fixed-zero external reactive schedule by default
+  \item Four calibrated interface operators
+  \item Three additional interface proxies retained as diagnostics
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
+\begin{exampleblock}{Why the circuit count increased}
+Two retained corridors are represented as separate parallel circuits, producing 83 model branches rather than 81 while preserving five one-to-one physical circuit rows.
+\end{exampleblock}
+\source{Current case dimensions, control map, and dispatch/loss ledger}
+\end{frame}
+
+\begin{frame}{What the Validation Gates Mean}
+\scriptsize
+\begin{tabularx}{\linewidth}{>{\bfseries}p{2.75cm} X >{\raggedleft\arraybackslash}p{2.5cm} >{\raggedleft\arraybackslash}p{2.0cm}}
+\toprule
+Gate family & Requirement & Current result & Status \\
+\midrule
+Power flow & Standard and reactive-limit AC power flow & both converge & \pass{PASS} \\
+Restoration & No artificial P/Q/voltage/branch slack & 0 & \pass{PASS} \\
+Physical limits & Voltage, generator P/Q, trusted branch violations & 0 / 0 / 0 / 0 & \pass{PASS} \\
+Power balance & Reference adjustment below 1 MW & $1.17\times10^{-6}$ MW & \pass{PASS} \\
+Interfaces & MAE $\leq100$; max $\leq200$; $|$bias$|\leq50$ MW & 71.7 / 98.2 / 28.8 & \pass{PASS} \\
+Dispatch & Movement $\leq10\%$ and $\leq3000$ MW & 6.433\%; 1,971 MW & \pass{PASS} \\
+Controls & No unexpected regulating buses; reference matched & 0; matched & \pass{PASS} \\
+Structural match & Current, loss, and net-Q errors each $\leq15\%$ & all below 15\% & \pass{PASS} \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.55em}
+\begin{block}{Margin indicators}
+Trusted static maximum loading is 56.3\% of its stated rating, and no regulating group is at a reactive limit. Voltages reach approximately 0.90--1.10 pu, so hard bounds pass but preferred voltage margin remains narrow.
+\end{block}
+\source{Current mandatory and preferred validation ledger}
+\end{frame}
+
+\begin{frame}{Accepted Summer-Peak Interface Results}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.62\linewidth}
+\begin{tikzpicture}
+\begin{axis}[
+  xbar,
+  width=0.94\linewidth,
+  height=5.45cm,
+  xmin=-120,xmax=120,
+  axis x line*=bottom,
+  axis y line*=left,
+  symbolic y coords={Moses South,West Central,Central East,Dysinger East},
+  ytick=data,
+  xlabel={Target error (MW)},
+  grid=major,
+  grid style={draw=muted!18},
+  tick label style={font=\scriptsize},
+  label style={font=\scriptsize},
+  nodes near coords,
+  nodes near coords align={horizontal},
+  every node near coord/.append style={font=\scriptsize},
+  enlarge y limits=0.18
+]
+\addplot[fill=teal,draw=teal] coordinates {
+  (-85.74,Moses South)
+  (65.37,West Central)
+  (37.35,Central East)
+  (98.19,Dysinger East)
+};
+\end{axis}
+\end{tikzpicture}
+\end{column}
+\begin{column}{0.35\linewidth}
+\metric{blue}{71.7 MW}{Mean absolute error}
+\vspace{0.42em}
+\metric{green}{98.2 MW}{Maximum error}
+\vspace{0.42em}
+\metric{teal}{28.8 MW}{Signed bias}
+\vspace{0.55em}
+{\scriptsize All aggregate gates pass: MAE $\leq100$, maximum $\leq200$, and $|$bias$|\leq50$ MW.}
+\end{column}
+\end{columns}
+\source{Current summer-peak interface validation ledger; calibrated operators only}
+\end{frame}
+
+\begin{frame}{Operating Conditions Tested}
+\scriptsize
+\begin{tabularx}{\linewidth}{X c r r r r l}
+\toprule
+Condition & Reactive load & IF MAE & Max IF & Dispatch & Load & Decision \\
+ & & MW & MW & MW & \% & \\
+\midrule
+Summer peak & Nominal & 71.7 & 98.2 & 1,971 & 6.433 & \pass{Accepted} \\
+Summer peak & 90\% & 71.5 & 98.1 & 1,971 & 6.433 & \pass{Accepted} \\
+Summer peak & 110\% & 71.6 & 98.1 & 1,971 & 6.433 & \pass{Accepted} \\
+\addlinespace
+Winter peak & All tests & 41.4 & 80.9 & 3,199 & 13.602 & \fail{Excluded} \\
+High Total East & All tests & 156.8 & 318.4 & 3,410 & 12.037 & \fail{Excluded} \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.65cm}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\linewidth}
+\begin{alertblock}{Winter peak}
+Electrical and interface tests pass, but the case requires more than 3,000 MW of zonal redispatch and more than 10\% of total load.
+\end{alertblock}
+\end{column}
+\begin{column}{0.49\linewidth}
+\begin{alertblock}{High Total East}
+The case exceeds both redispatch limits and the calibrated-interface accuracy limits.
+\end{alertblock}
+\end{column}
+\end{columns}
+\source{Current dispatch, loss, and interface validation ledgers}
+\end{frame}
+
+\begin{frame}{Full-to-Reduced Structural Benchmark}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.67\linewidth}
+\begin{tikzpicture}
+\begin{axis}[
+  ybar,
+  width=\linewidth,
+  height=5.3cm,
+  ymin=0,ymax=17,
+  bar width=15pt,
+  xtick={1,2,3,4,5},
+  xticklabels={GL,PV--WS 1,PV--WS 2,WS--MW 1,WS--MW 2},
+  ylabel={Circuit-current error (\%)},
+  grid=major,
+  grid style={draw=muted!18},
+  tick label style={font=\scriptsize},
+  label style={font=\scriptsize},
+  nodes near coords,
+  every node near coord/.append style={font=\scriptsize},
+]
+\addplot[fill=blue,draw=blue] coordinates {(1,5.051) (2,7.555) (3,7.555) (4,11.302) (5,11.302)};
+\draw[red,dashed,very thick] (axis cs:0.5,15) -- (axis cs:5.5,15);
+\node[anchor=south east,font=\scriptsize,text=red] at (axis cs:5.5,15) {15\% gate};
+\end{axis}
+\end{tikzpicture}
+\end{column}
+\begin{column}{0.30\linewidth}
+\metric{green}{0.000096\%}{Active-loss error}
+\vspace{0.40em}
+\metric{blue}{2.470\%}{Net-network-Q error}
+\vspace{0.40em}
+\metric{teal}{PASS}{Reactive-limit power flow}
+\end{column}
+\end{columns}
+
+\begin{block}{What this demonstrates}
+For the same 2019 operating snapshot, the reduced network matches selected physical-circuit currents, active losses, and net reactive behavior within the adopted 15\% research threshold.
+\end{block}
+\source{2019 full-to-reduced structural benchmark ledger}
+\end{frame}
+
+\begin{frame}{Dynamic-Line-Rating Circuit Scope}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.58\linewidth}
+\scriptsize
+\begin{tabularx}{\linewidth}{X c r}
+\toprule
+Physical corridor & Circuit count & Summer current \\
+\midrule
+Gilboa--Leeds & 1 & 1.157 kA \\
+Pleasant Valley--Wood Street & 2 & 0.925 kA each \\
+Wood Street--Millwood & 2 & 0.591 kA each \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.65em}
+\begin{exampleblock}{What is usable now}
+The five mapped rows carry terminal and series currents with physical-circuit provenance suitable for later conductor assignment.
+\end{exampleblock}
+\end{column}
+\begin{column}{0.39\linewidth}
+\begin{alertblock}{What is not yet included}
+\begin{itemize}
+  \item Conductor type and ampacity
+  \item Thermal parameters and weather
+  \item Route segmentation and sag/clearance
+  \item Terminal-equipment ratings
+  \item Dynamic ampacity calculation
+\end{itemize}
+\end{alertblock}
+\end{column}
+\end{columns}
+
+\begin{block}{Interpretation rule}
+Currents on aggregate and boundary equivalents are electrical diagnostics only. A model branch rating is not automatically a conductor ampacity or dynamic rating.
+\end{block}
+\source{Current branch-current and physical-circuit mapping ledgers}
+\end{frame}
+
+\begin{frame}{Remaining Issues and Limitations}
+\small
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\linewidth}
+\begin{alertblock}{Operating coverage}
+\begin{itemize}
+  \item Winter peak and high-Total-East conditions fail fixed acceptance gates.
+  \item Total East, UPNY--ConEd, and Dunwoodie South remain diagnostic because their complete monitored-circuit definitions are not conserved.
+  \item Summer voltages reach approximately 0.90/1.10 pu: hard bounds pass, but preferred margin is narrow.
+\end{itemize}
+\end{alertblock}
+\end{column}
+\begin{column}{0.49\linewidth}
+\begin{alertblock}{Reduction and physical fidelity}
+\begin{itemize}
+  \item The non-physical equivalent correction is empirical rather than an exact Ward reduction.
+  \item Three control locations remain provisional fixed-reactive-power buses.
+  \item One legacy equivalent rating overload remains diagnostic because its rating meaning is not trusted.
+  \item No conductor or weather layer has been attached.
+\end{itemize}
+\end{alertblock}
+\end{column}
+\end{columns}
+
+\begin{block}{Claim boundary}
+The model is a defensible preliminary research equivalent, not a utility planning, reliability, facility-rating, real-time dispatch, or operating model.
+\end{block}
+\source{Current limitations and mandatory-gate documentation}
+\end{frame}
+
+\begin{frame}{Recommended Next Work}
+\begin{enumerate}
+  \item \textbf{Complete interface definitions:} replace diagnostic proxies with explicit conserved circuit or cutset operators where the retained topology supports them.
+  \item \textbf{Broaden operating coverage without relaxing gates:} reduce winter and high-Total-East redispatch, and improve high-Total-East interface closure.
+  \item \textbf{Increase voltage-control margin:} investigate buses near 0.90/1.10 pu and resolve the three provisional control locations without placeholder reactive limits.
+  \item \textbf{Add the physical rating layer:} map conductors, equipment limits, route segments, weather, thermal models, and sag/clearance constraints to the five circuits.
+  \item \textbf{Revalidate before publication:} rerun all operating and structural gates and publish only cases that pass every mandatory test.
+\end{enumerate}
+
+\begin{exampleblock}{Near-term deliverable}
+An updated validation package that preserves the accepted summer-peak model and either passes the broader operating conditions under unchanged gates or keeps them explicitly excluded.
+\end{exampleblock}
+\source{Current documented limitations and acceptance policy}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[navy] (current page.south west) rectangle (current page.north east);
+  \fill[teal] (current page.south west) rectangle ([xshift=0.18cm]current page.north west);
+\end{tikzpicture}
+\vspace{1.18cm}
+{\color{white}\Huge\bfseries Current takeaway\par}
+\vspace{0.65cm}
+{\color{paleblue}\Large Use the accepted summer-peak model for preliminary dynamic line-rating methodology development.\par}
+\vspace{0.45cm}
+{\color{white}\large Keep winter peak and high-Total-East conditions excluded. Do not make utility-operational or dynamic-rating claims until interface coverage and physical conductor/weather inputs are complete.\par}
+\vfill
+{\color{paleblue}\small Status through July 14, 2026}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,11 @@
+bus_id,bus_name,zone,online_mapped_control_count,source_backed_regulating_count,reactive_only_qs_count,boundary_import_count,source_qmin_mvar,source_qmax_mvar,source_q_range_mvar,broad_q_limit_record_count,low_confidence_mapping_count,s10a_diagnostic_pv_enabled,source_bus_ids,recommended_treatment,reason
+37,NEW SEATHED,F,61,60,2,1,-431.2,664.05,1095.25,0,0,1,6|31|32|84|194|463|469|474|489|563|632|682|683|685|693|705|706|799|811|867|870|1204|1213,PV_candidate_source_backed,online mapped regulating device with bounded Q range
+38,GILBOA,F,4,4,0,0,-550,700,1250,0,0,1,1227,PV_candidate_source_backed,online mapped regulating device with bounded Q range
+39,LEEDS,G,8,8,3,0,-878.92,1196.4,2075.32,0,0,1,512|817|821|822|828|1484,PV_candidate_source_backed,online mapped regulating device with bounded Q range
+41,ROTTERDAM,F,1,1,0,0,-237.16,254.1,491.26,0,0,1,508,PV_candidate_source_backed,online mapped regulating device with bounded Q range
+43,EDIC,E,35,32,0,3,-478.9,607.8,1086.7,0,32,1,15|21|60|80|83|368|378|395|405|408|526|573|1039|1052|1053|1194|1223|1230|1231|1263|1546,PV_candidate_pending_q_envelope_validation,source control exists but Q envelope or mapping is provisional
+44,PORTER,E,25,25,0,0,-634.84,796.95,1431.79,0,25,1,21|82|83|378|381|395|399|406|407|409|768|1052|1194|1230|1287,PV_candidate_pending_q_envelope_validation,source control exists but Q envelope or mapping is provisional
+73,PLEASANT VLY,G,4,4,1,0,-1222.2,1414.9,2637.1,0,0,1,535|539|847,PV_candidate_source_backed,online mapped regulating device with bounded Q range
+76,RAMAPO,G,9,7,1,2,-398,606.8,1004.8,0,0,1,535|546|638|651|773|861|899,PV_candidate_source_backed,online mapped regulating device with bounded Q range
+81,GOETHALS,J,39,35,2,4,-898.04,1652.75,2550.79,0,0,1,79|570|571|595|623|1129|1130|1131|1132|1133|1135|1136|1528,PV_candidate_source_backed,online mapped regulating device with bounded Q range
+9003,EAST GARDEN CITY,K,77,74,23,3,-2516.05,8489.725,11005.775,8,0,1,17|18|19|552|554|564|569|577|580|587|589|608|609|614|619|621|733|735|736|737|738|739|740|840|842|846|994|999|1138|1146|1147|1148|1160|1161|1164|1169|1170|1489|1496|1539,PV_candidate_pending_q_envelope_validation,source control exists but Q envelope or mapping is provisional

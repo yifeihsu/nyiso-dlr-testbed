@@ -1,0 +1,7 @@
+case_id,check_group,zone_j_pmax_mw,voltage_penalty_rho,scenario_count,success_count,sum_classic_interface_objective,sum_balanced_interface_objective,mean_zone_j_equiv_pg_mw,max_zone_j_equiv_pg_mw,mean_s4_equiv_pg_mw,max_s4_equiv_pg_mw,max_voltage_bound_count,max_branch_overload_count,min_voltage_observed,max_voltage_observed
+S4_CAND_voltage_penalty_JPMAX3000_VRHO100,voltage_penalty,3000,100,6,6,93.523824759103,7.72778151040561,2861.3393381945,3000,649.435395385123,959.366064499601,17,0,0.9,1.1
+S4_CAND_voltage_penalty_JPMAX3000_VRHO1000,voltage_penalty,3000,1000,6,6,93.5483037068056,7.72893429187909,2861.30140220729,3000,649.489641857741,959.384495694886,14,0,0.9,1.1
+S4_CAND_voltage_penalty_JPMAX3000_VRHO1e+04,voltage_penalty,3000,10000,6,6,93.0034232323026,7.75368568708008,2862.43944934451,3000,651.449211530252,961.839475758904,10,0,0.9,1.1
+S4_CAND_zone_j_cap_sensitivity_JPMAX3000_VRHO0,zone_j_cap_sensitivity,3000,0,6,6,93.520678621135,7.72768317782114,2861.34210585331,3000,649.432877174423,959.365966373239,17,0,0.9,1.1
+S4_CAND_zone_j_cap_sensitivity_JPMAX3500_VRHO0,zone_j_cap_sensitivity,3500,0,6,6,95.0211506596176,8.53738398126007,3056.09827998264,3248.86191891658,455.11435439933,711.081889960899,17,0,0.9,1.1
+S4_CAND_zone_j_cap_sensitivity_JPMAX4000_VRHO0,zone_j_cap_sensitivity,4000,0,6,6,95.6517995589792,8.74367554119431,3106.29395685449,3354.73104801812,405.0799754497,609.569902746607,17,0,0.9,1.1

@@ -1,0 +1,64 @@
+variant,metric,value,unit,source,note
+S1 original topology,status,ok,,runpf,
+S1 original topology,power_flow_success,1,flag,runpf,
+S1 original topology,objective,823806.977445,$/h,dispatch_cost,
+S1 original topology,total_load_mw,30349.7613567,MW,runpf,
+S1 original topology,total_generation_mw,31108.1559167,MW,runpf,
+S1 original topology,losses_mw,758.394559983,MW,runpf,
+S1 original topology,min_voltage,0.9,p.u.,runpf,
+S1 original topology,max_voltage,1.1,p.u.,runpf,
+S1 original topology,number_of_voltage_bounds,27,count,audit,
+S1 original topology,number_of_voltage_violations,0,count,audit,
+S1 original topology,number_of_binding_branches,2,count,audit,
+S1 original topology,number_of_rate_a_overloads,0,count,audit,
+S1 original topology,max_rate_a_overload_mva,0,MVA,audit,
+S1 original topology,worst_rate_a_branch_index,80,index,audit,
+S1 original topology,worst_rate_a_branch_from_to,66-134,bus_pair,audit,
+S1 original topology,worst_rate_a_branch_flow_mva,773.970764455,MVA,audit,
+S1 original topology,worst_rate_a_branch_rate_a_mva,773.970762,MVA,case,
+S1 original topology,branch_190_flow_mva,773.970761385,MVA,audit,max of from/to apparent flow
+S1 original topology,branch_190_rate_a_mva,773.970762,MVA,case,
+S1 original topology,branch_190_loading_pct,99.9999999206,pct,audit,
+S1 original topology,interface_Total_East_proxy,1140.0444878,MW,runpf,F-G
+S1 original topology,interface_Central_East,1443.79053288,MW,runpf,E-F
+S1 original topology,interface_Moses_South,50.2786156128,MW,runpf,D-E
+S1 original topology,interface_UPNY_ConEd,1291.94346527,MW,runpf,G-H
+S1 original topology,interface_Millwood_South,1147.49764517,MW,runpf,H-I
+S1 original topology,interface_Dunwoodie_South,-834.586070253,MW,runpf,I-J
+S1 original topology,interface_ConEd_LIPA_IK,231.852634345,MW,runpf,I-K
+S1 original topology,interface_ConEd_LIPA_total,231.852634345,MW,runpf,I-K
+S1 plus Gilboa-Leeds,status,ok,,runpf,
+S1 plus Gilboa-Leeds,power_flow_success,1,flag,runpf,
+S1 plus Gilboa-Leeds,objective,823581.633837,$/h,dispatch_cost,
+S1 plus Gilboa-Leeds,total_load_mw,30349.7613567,MW,runpf,
+S1 plus Gilboa-Leeds,total_generation_mw,31100.4683203,MW,runpf,
+S1 plus Gilboa-Leeds,losses_mw,750.706963588,MW,runpf,
+S1 plus Gilboa-Leeds,min_voltage,0.9,p.u.,runpf,
+S1 plus Gilboa-Leeds,max_voltage,1.1,p.u.,runpf,
+S1 plus Gilboa-Leeds,number_of_voltage_bounds,27,count,audit,
+S1 plus Gilboa-Leeds,number_of_voltage_violations,0,count,audit,
+S1 plus Gilboa-Leeds,number_of_binding_branches,0,count,audit,
+S1 plus Gilboa-Leeds,number_of_rate_a_overloads,1,count,audit,
+S1 plus Gilboa-Leeds,max_rate_a_overload_mva,34.6732324293,MVA,audit,
+S1 plus Gilboa-Leeds,worst_rate_a_branch_index,80,index,audit,
+S1 plus Gilboa-Leeds,worst_rate_a_branch_from_to,66-134,bus_pair,audit,
+S1 plus Gilboa-Leeds,worst_rate_a_branch_flow_mva,808.643994429,MVA,audit,
+S1 plus Gilboa-Leeds,worst_rate_a_branch_rate_a_mva,773.970762,MVA,case,
+S1 plus Gilboa-Leeds,branch_190_flow_mva,758.91522661,MVA,audit,max of from/to apparent flow
+S1 plus Gilboa-Leeds,branch_190_rate_a_mva,773.970762,MVA,case,
+S1 plus Gilboa-Leeds,branch_190_loading_pct,98.0547669073,pct,audit,
+S1 plus Gilboa-Leeds,interface_Total_East_proxy,1202.31772681,MW,runpf,F-G
+S1 plus Gilboa-Leeds,interface_Central_East,1423.67317576,MW,runpf,E-F
+S1 plus Gilboa-Leeds,interface_Moses_South,49.8497639492,MW,runpf,D-E
+S1 plus Gilboa-Leeds,interface_UPNY_ConEd,1315.67614744,MW,runpf,G-H
+S1 plus Gilboa-Leeds,interface_Millwood_South,1169.48251222,MW,runpf,H-I
+S1 plus Gilboa-Leeds,interface_Dunwoodie_South,-820.401344408,MW,runpf,I-J
+S1 plus Gilboa-Leeds,interface_ConEd_LIPA_IK,231.852634345,MW,runpf,I-K
+S1 plus Gilboa-Leeds,interface_ConEd_LIPA_total,231.852634345,MW,runpf,I-K
+S1 plus Gilboa-Leeds,gilboa_leeds_branch_index,234,index,case,GILBOA_LEEDS
+S1 plus Gilboa-Leeds,gilboa_leeds_pf_mw,413.948347547,MW,runpf,
+S1 plus Gilboa-Leeds,gilboa_leeds_qf_mvar,41.5162671649,MVAr,runpf,
+S1 plus Gilboa-Leeds,gilboa_leeds_pt_mw,-411.755518128,MW,runpf,
+S1 plus Gilboa-Leeds,gilboa_leeds_qt_mvar,-61.5627733315,MVAr,runpf,
+S1 plus Gilboa-Leeds,gilboa_leeds_reactive_injection_mvar,20.0465061666,MVAr,audit,"-(QF + QT), positive means branch injects MVAr into buses"
+S1 plus Gilboa-Leeds plus zonal load adjustment,status,not_run,,apply_nyiso_zonal_loads,apply_nyiso_zonal_loads:EmptyTargets: No numeric MW or share targets were supplied.

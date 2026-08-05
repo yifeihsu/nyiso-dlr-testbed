@@ -1,0 +1,9 @@
+candidate_name,from_bus,to_bus,interface,BR_R_initial,BR_X_initial,BR_B_initial,RATE_A_initial,RATE_B_initial,RATE_C_initial,include_default,physical_or_equivalent,calibration_status
+EDIC_GILBOA,43,38,E-F Central East proxy,0.0029,0.0351,0.0,2500,2500,2500,False,aggregate-equivalent,initial-not-calibrated
+GILBOA_LEEDS,38,39,F-G Total East proxy,0.00131,0.01997,0.51614,1216,2454,1804,True,physical-line-proxy,initial-not-calibrated
+GILBOA_PLEASANT_VLY,38,73,F-G Total East parallel proxy,0.0045,0.055,0,2500,2500,2500,False,aggregate-equivalent,initial-not-calibrated
+LEEDS_MILLWOOD,39,74,G-H UPNY-ConEd proxy,0.0041,0.0379,0,2500,2500,2500,False,aggregate-equivalent,initial-not-calibrated
+PLEASANT_VLY_RAMAPO,73,76,G internal reinforcement proxy,0.0045,0.045,0,2500,2500,2500,False,aggregate-equivalent,initial-not-calibrated
+MILLWOOD_RAMAPO,74,76,G-H lower-Hudson reinforcement proxy,0.0033,0.03,0,2500,2500,2500,False,aggregate-equivalent,initial-not-calibrated
+BUCHANAN_CE_UG,77,78,H-I Millwood South proxy,0.001,0.02,0,2500,2500,2500,False,aggregate-equivalent,initial-not-calibrated
+GOETHALS_NORTHPORT,81,80,J-K ConEd-LIPA proxy,0.01,0.08,0,2500,2500,2500,False,aggregate-equivalent,initial-not-calibrated

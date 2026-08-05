@@ -1,0 +1,4 @@
+mode,branch_name,branch_index,old_r_pu,old_x_pu,old_b_pu,old_rate_a_mva,new_r_pu,new_x_pu,new_b_pu,new_rate_a_mva,parameter_source,impedance_scale,b_fraction,perform_r_pu,perform_x_pu,perform_b_pu,calibration_source
+perform_scaled,GILBOA_LEEDS,234,0.00131,0.01997,0.51614,1216,0.00131,0.01997,0.51614,1216,PERFORM direct circuit,1,1,0.00131,0.01997,0.51614,PERFORM direct parameter prior with fitted impedance multiplier
+perform_scaled,PLEASANT_VLY_WOOD_STREET,235,0.0015,0.025,0,5000,0.000405,0.006185,0.63943,2432,PERFORM two-circuit parallel equivalent,1,1,0.000405,0.006185,0.63943,PERFORM direct parameter prior with fitted impedance multiplier
+perform_scaled,WOOD_STREET_MILLWOOD,236,0.0012,0.02,0,5000,0.000185,0.002815,0.29107,2432,PERFORM two-circuit parallel equivalent,1,1,0.000185,0.002815,0.29107,PERFORM direct parameter prior with fitted impedance multiplier
