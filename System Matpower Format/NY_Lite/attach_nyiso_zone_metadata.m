@@ -39,16 +39,49 @@ if isfield(mpc, 'userdata') && isfield(mpc.userdata, 'ny_lite') && ...
     end
 end
 
-% Correct a stale transit-bus classification embedded in older S7 cases.
-% PERFORM bus 902 WOOD STREET is zone G; only MILLWOOD (bus 897) is zone H.
-wood = find(mpc.bus(:, 1) == 9002, 1);
-if ~isempty(wood)
-    physical_zone{wood} = 'G';
-    load_group{wood} = 'G';
-    zone_name{wood} = 'HUD VL';
-    zone_id(wood) = 7;
-    perform_zone_code(wood) = 71;
-    mpc.bus(wood, ZONE) = 71;
+% Transit-bus zone defaults.
+%
+% Buses 9001/9002/9003 are the three zero-load transit buses added by
+% add_ny_downstate_delivery_spine. They are deliberately absent from
+% nyiso_bus_zone_map (which errors on any mapped bus the case does not
+% contain, and must stay loadable against the 140-bus baseline), so cases
+% normally carry them in userdata.ny_lite.transit_zone_metadata.
+%
+% The 49-bus S11/DLR case does not carry that userdata, which left 9001 and
+% 9003 with an empty physical_zone. Any zone-cut interface operator - such as
+% legacy_definitions in ny_lite_interface_definitions - matches on zone pairs,
+% so every branch touching an unzoned bus was silently dropped from its
+% interface. For 9003 that removed the CE UG -> East Garden City I-K crossing
+% (Con Ed-LIPA) from the cutset entirely.
+%
+% Zones are the PERFORM area field for the corresponding substation:
+% WOOD STREET and EAST GARDEN CITY are areas 71 (G) and 75 (K). KNICKERBOCKER
+% has no PERFORM counterpart; it is a synthetic transit node inserted on the
+% Leeds-Pleasant Valley path, and both of its neighbours are zone G, so G
+% keeps that path intra-zone. Labelling it F would manufacture two spurious
+% F-G crossings and corrupt the Total East cut.
+%
+% Defaults fill only where a zone is still unset, so an explicit
+% transit_zone_metadata entry always wins. The 9002 assignment is applied
+% unconditionally because it also corrects a stale zone-H classification
+% embedded in older S7 cases.
+transit_defaults = struct( ...
+    'bus_id',      {9001,     9002,     9003}, ...
+    'zone',        {'G',      'G',      'K'}, ...
+    'zone_name',   {'HUD VL', 'HUD VL', 'LONGIL'}, ...
+    'zone_id',     {7,        7,        11}, ...
+    'perform_code',{71,       71,       75}, ...
+    'force',       {false,    true,     false});
+for k = 1:numel(transit_defaults)
+    idx = find(mpc.bus(:, 1) == transit_defaults(k).bus_id, 1);
+    if isempty(idx), continue; end
+    if ~transit_defaults(k).force && ~isempty(physical_zone{idx}), continue; end
+    physical_zone{idx} = transit_defaults(k).zone;
+    load_group{idx} = transit_defaults(k).zone;
+    zone_name{idx} = transit_defaults(k).zone_name;
+    zone_id(idx) = transit_defaults(k).zone_id;
+    perform_zone_code(idx) = transit_defaults(k).perform_code;
+    mpc.bus(idx, ZONE) = transit_defaults(k).perform_code;
 end
 
 mpc.userdata.nyiso_zone = physical_zone;              % backward-compatible alias

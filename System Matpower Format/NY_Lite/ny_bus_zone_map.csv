@@ -45,3 +45,6 @@ bus_id,bus_name,base_kv,original_npcc_area,physical_zone,load_allocation_group,n
 80,NORTHPORT,138.0,3,K,K,K,LONGIL,75,0,1,1.0,high,Northport Long Island generation/load proxy
 81,GOETHALS,345.0,3,J,J,J,N.Y.C.,74,1,0,0.1,high,Goethals is a Zone-J proxy
 82,AK-3,22.0,3,J,J,J,N.Y.C.,74,1,1,0.45,medium,NYC generation/load-allocation proxy
+9001,KNICKERBOCKER,345.0,2,G,G,G,HUD VL,71,0,0,0.0,medium,Transit bus added by add_ny_downstate_delivery_spine; no PERFORM counterpart; G keeps the Leeds-Pleasant Valley path intra-zone. Applied via attach_nyiso_zone_metadata transit defaults NOT via nyiso_bus_zone_map (which errors on buses absent from the 140-bus baseline).
+9002,WOOD STREET,345.0,2,G,G,G,HUD VL,71,0,0,0.0,high,Transit bus; PERFORM WOOD STREET 345 kV is area 71 = zone G. Applied unconditionally by attach_nyiso_zone_metadata to also correct a stale zone-H classification in older S7 cases.
+9003,EAST GARDEN CITY,345.0,3,K,K,K,LONGIL,75,0,0,0.0,high,Transit bus; PERFORM EAST GARDEN CITY 345 kV is area 75 = zone K. Applied via attach_nyiso_zone_metadata transit defaults; restores the CE UG-East Garden City I-K Con Ed-LIPA crossing to the cutset.
