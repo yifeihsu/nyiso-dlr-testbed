@@ -97,8 +97,6 @@ grp = { ...
 ext = table();
 for k = 1:size(grp, 1)
     sb = grp{k, 1};
-    gi = find(mpc.gen(:, GEN_BUS) == sb & mpc.gen(:, PMIN) == mpc.gen(:, PMAX) ...
-        | mpc.gen(:, GEN_BUS) == sb, 1);
     gset = find(mpc.gen(:, GEN_BUS) == sb);
     % boundary equivalents: pick the fixed-P record(s) at this bus
     for gi = gset'
@@ -158,6 +156,10 @@ s12.userdata.s12_zone_base_load_p = PB;
 s12.userdata.s12_zone_base_load_q = QB;
 s12.userdata.s12_provenance = ['Retention-set Ward/Kron reduction of PERFORM ' ...
     'nyiso_On_Peak_v23_shunts_as_z_load; exact snapshot reproduction; built 2026-07-20'];
+s12.userdata.model_hierarchy_role = 'reference_oracle_only';
+s12.userdata.promotion_eligible = false;
+s12 = add_userfcn(s12, 'savecase', @s12_oracle_savecase);
 save(fullfile(nylite, 's12_case.mat'), 's12', '-v7.3');
-savecase(fullfile(case_dir, 'npcc_ny_lite_s12_perform_retention_core.m'), red);
+savecase(fullfile(case_dir, 'npcc_ny_lite_s12_perform_retention_core.m'), ...
+    s12);
 fprintf('saved s12_case.mat and npcc_ny_lite_s12_perform_retention_core.m\n');

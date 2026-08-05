@@ -1,5 +1,5 @@
 function out = run_s12_scenario_validation(options)
-%RUN_S12_SCENARIO_VALIDATION Six 2019 scaled scenarios on the S12 case.
+%RUN_S12_SCENARIO_VALIDATION Six 2019 scaled scenarios on the S12 oracle.
 %   Builds each scenario on the PERFORM retention-core case with fuel-mix
 %   seasonal priors and 2019 P-32 external schedules, balances with the
 %   Marcy reference, and optionally applies a bounded zonal DC-inverse
@@ -11,6 +11,7 @@ function out = run_s12_scenario_validation(options)
 %   s12_zonal_closure_movement.csv.
 
 if nargin < 1, options = struct(); end
+if ~isfield(options, 'write_outputs'), options.write_outputs = true; end
 if ~isfield(options, 'do_closure'), options.do_closure = true; end
 if ~isfield(options, 'trust_mw'), options.trust_mw = 1090; end
 if ~isfield(options, 'reg_weight'), options.reg_weight = 0.05; end
@@ -192,9 +193,11 @@ for s = 1:height(scen)
         sid, res.success, q_ok, sum(abs(dz_total)), pickup);
 end
 
-writetable(results, fullfile(nylite, 's12_scenario_summary.csv'));
-writetable(ifc_rows, fullfile(nylite, 's12_scenario_interface_validation.csv'));
-writetable(move_rows, fullfile(nylite, 's12_zonal_closure_movement.csv'));
+if options.write_outputs
+    writetable(results, fullfile(nylite, 's12_scenario_summary.csv'));
+    writetable(ifc_rows, fullfile(nylite, 's12_scenario_interface_validation.csv'));
+    writetable(move_rows, fullfile(nylite, 's12_zonal_closure_movement.csv'));
+end
 
 fprintf('\nPer-interface MAE (MW): forward -> closed\n');
 for m = 1:numel(ifc_names)
@@ -206,8 +209,11 @@ end
 fprintf('all-hour objective (fixed 2019 scales): forward %.6f, closed %.6f\n', J_fwd, J_closed);
 fprintf('S7 direct-PERFORM all-hour reference: 0.489612\n');
 
-out = struct('summary', results, 'interfaces', ifc_rows, 'movement', move_rows, ...
-    'objective_forward', J_fwd, 'objective_closed', J_closed);
+out = struct('model_role', 'reference_oracle', ...
+    'promotion_eligible', false, 'summary', results, ...
+    'interfaces', ifc_rows, 'movement', move_rows, ...
+    'objective_forward', J_fwd, 'objective_closed', J_closed, ...
+    'outputs_written', logical(options.write_outputs));
 end
 
 function [mpc, res, pickup] = balance_with_reference(mpc, ref_gen, internal, mpopt)

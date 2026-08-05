@@ -3,8 +3,14 @@
 **Date:** 2026-08-05
 **Scope:** corrections that add **no buses and no branches**, keeping the
 NPCC-derived structure intact.
-**Applies to:** `npcc_ny_lite_s11_dlr_pf_base` (49-bus NY core) and
-`npcc_ny_lite_s7_seven_interface_perform_direct_candidate` (143-bus full case).
+**Structural parent:** `npcc_ny_lite_s7_seven_interface_perform_direct_candidate`
+(143-bus full NPCC-derived case).
+**Diagnostic application:** `npcc_ny_lite_s11_dlr_pf_base` (49-bus NY-only
+benchmark). S11 is not the promoted NPCC testbed.
+
+Phase 0 is the foundation for the pending
+`npcc_ny_lite_s13_npcc_augmented_2019` model. It corrects metadata and ratings
+without changing topology; it does not promote a new operating case by itself.
 
 ## What ships
 
@@ -15,12 +21,20 @@ NPCC-derived structure intact.
 | `ny_core_official_share_reference.csv` | NYISO monitored subset vs full-cut flow, per interface |
 | `ny_core_corridor_reference.csv` | named corridors for core branches with no zone-pair counterpart |
 | `ny_core_ptdf_reference.csv` | 150 (canonical transfer, cut) DC sensitivities |
-| `apply_ny_core_phase0_corrections.m` | applies ratings + fitted reactances to a case |
+| `apply_ny_core_phase0_corrections.m` | applies ratings and, only when explicitly enabled, fitted reactances to a case |
 
 ```matlab
 addpath('System Matpower Format'); addpath('System Matpower Format/NY_Lite');
 build_ny_core_cutset_reference();
-mpc = apply_ny_core_phase0_corrections(loadcase('npcc_ny_lite_s11_dlr_pf_base'));
+mpc = apply_ny_core_phase0_corrections(loadcase( ...
+    'npcc_ny_lite_s7_seven_interface_perform_direct_candidate'));
+```
+
+For the reduced diagnostic only:
+
+```matlab
+diagnostic = apply_ny_core_phase0_corrections( ...
+    loadcase('npcc_ny_lite_s11_dlr_pf_base'));
 ```
 
 ## Zone D correction (prerequisite)
@@ -49,16 +63,18 @@ sits on, at the solved PERFORM snapshot:
 | UPNY-ConEd | 4839.1 | 3996.5 | **1.211** | subset exceeds the whole boundary |
 | Dunwoodie South | 1420.7 | 1024.6 | **1.387** | subset exceeds the whole boundary |
 
-A subset of a boundary cannot carry more than the boundary. UPNY-ConEd sums the
-series pair Pleasant Valley→Wood Street and Wood Street→Millwood (Wood Street
-is a pure transit node); Dunwoodie South mixes four Con Ed–LIPA K→J circuits
-into an I→J operator. **Under cutset semantics neither defect can occur**, which
-is a structural advantage of the NPCC-core approach over the S12 hand-picked
-operator lists. Rebuilding those two S12 operators needs new nodes → Phase 1.
+A subset-to-net-cut share above one is not interpretable as a direct fraction
+without checking counterflow and operator overlap. Here the topology identifies
+specific defects: UPNY-ConEd sums the series pair Pleasant Valley→Wood Street
+and Wood Street→Millwood (Wood Street is a pure transit node), while Dunwoodie
+South mixes four Con Ed–LIPA K→J circuits into an I→J operator. A properly
+oriented, nonintersecting cutset avoids those double-counting and mixed-boundary
+defects. Rebuilding the two S12 operators needs new nodes → Phase 1.
 
-The four consistent shares (0.82–0.88) are what a monitored subset of a
-boundary should look like, and their agreement independently validates both the
-cut definitions and the Zone D correction.
+The four consistent shares (0.82–0.88) are consistent with a monitored subset
+of a boundary. Their agreement supports the internal consistency of the cut
+definitions and Zone D correction; one solved snapshot is not independent
+validation of either interpretation.
 
 ## 0.2 Transit bus zones
 
@@ -73,9 +89,11 @@ loadable against the 140-bus baseline). Cases normally carry them in
 | `npcc_ny_lite_s11_dlr_pf_base` (49) | **9001, 9003 unzoned** |
 | `..._s7_..._direct_candidate` (143) | carries the userdata — unaffected |
 
-The 49-bus DLR case was the affected one. Zone-cut operators match on zone
-pairs, so branches touching an unzoned bus were silently dropped — losing the
-CE UG → East Garden City I-K (Con Ed–LIPA) crossing entirely.
+The 49-bus diagnostic case was the affected one. Zone-cut operators match on
+zone pairs, so branches touching an unzoned bus were silently dropped — losing
+the CE UG → East Garden City I-K (Con Ed–LIPA) crossing entirely. This finding
+repairs the diagnostic benchmark; it does not change the S7 structural parent
+or the pending S13 topology.
 
 `attach_nyiso_zone_metadata` now carries a presence-guarded transit default
 table (G / G / K, from PERFORM areas 71 / 71 / 75) replacing a hardcoded 9002
@@ -142,7 +160,8 @@ Two other targets were tried and rejected:
   G-H ×13, H-I ×17, I-K ×20 and made the independent cut-PTDF check *worse*
   (0.187 → 0.283).
 
-**The honest ceiling is modest.** Cut-PTDF normalised RMS:
+**The honest ceiling is modest.** Cut-PTDF normalised RMS (the 49-bus row is
+diagnostic evidence only; the 143-bus row governs the structural parent):
 
 | Case | before | after | reduction |
 |---|---:|---:|---:|
@@ -168,7 +187,7 @@ the selected candidate and scores the six 2019 scaled scenarios before and
 after. **The "before" run reproduces the published S7 baseline exactly** —
 all-hour 0.489612, train 0.295784, holdout 0.193827 — so the harness is sound.
 
-### Ratings only (the default): objective-neutral, strictly beneficial
+### Ratings only (the default): objective-neutral, source-backed correction
 
 `RATE_A` does not enter the power flow. With `fit_reactance = false` the
 impedances are bit-identical, so the interface objective is **exactly
@@ -181,7 +200,7 @@ unchanged at 0.489612** while 33 branches gain source-backed ratings.
 | placeholder ratings | 72 of 81 | 41 of 81 |
 | distinct RATE_A values | 4 | 33 |
 
-On the standalone 49-bus DLR case, rated-branch utilisation goes mean
+On the standalone 49-bus diagnostic case, rated-branch utilisation goes mean
 0.232 → 0.302 and max 1.385 → 1.158: peak overload severity falls from 38.5%
 to 15.8%, and more branches show as loaded because the prior case hid real
 loading behind fake headroom (I-J alone was rated 22,500 MVA against a true
@@ -220,8 +239,10 @@ scaling the cut flow down widens the gap. The prevailing "cut = interface"
 convention is only accidentally reasonable — it happens to offset the underflow
 bias.
 
-This quantifies the Phase 1 case: adding the E-G corridor is a precondition for
-the reactance calibration to pay off.
+This motivates testing the missing E-G path on the full 143-bus parent. It does
+not establish that an NY-only 49-bus overlay should be promoted, and topology
+changes must be rescored with operating-point closure re-derived for the changed
+network.
 
 ## Known gaps left open
 

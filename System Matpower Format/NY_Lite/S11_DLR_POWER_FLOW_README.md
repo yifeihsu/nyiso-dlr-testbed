@@ -1,10 +1,11 @@
-# S11-DLR preliminary AC power-flow model
+# S11-DLR diagnostic/reduced-model AC benchmark
 
 ## Current status
 
 The central-Q `S1_2025_SUMMER_PEAK_PUBLIC` case passed the implemented hard
-validation gates on 2026-07-14 and is the promoted preliminary S11 operating
-model. The authoritative unsolved input and solved result are:
+validation gates on 2026-07-14 and is retained as the accepted nominal S11
+diagnostic benchmark. It is not the promoted NPCC DLR testbed. The retained
+unsolved input and solved result are:
 
 - `npcc_ny_lite_s11_dlr_pf_base.m`
 - `npcc_ny_lite_s11_dlr_pf_solution.m`
@@ -16,17 +17,24 @@ Their managed case files were deliberately invalidated rather than left looking
 current. This follows the plan's rule to exclude a scenario rather than soften
 limits or save a misleading case.
 
-The CSV gate ledger is authoritative. A filename alone is not proof that a case
-is accepted.
+The CSV gate ledger is authoritative for acceptance within the S11 diagnostic
+set. A filename alone is not proof that a case is accepted.
 
 ## Latest validation result
 
 The full S1/S2/S5 by central/0.90/1.10-Q matrix and the shared 2019 PERFORM
 benchmark were rebuilt on 2026-07-14.
 
+The 2026-08-05 hierarchy update changed only S11 role/status labels in the
+historical ledgers. The electrical values below were not rerun: the current
+public target tables have been retargeted to 2019 IDs, while this S11 matrix
+still names the retired 2025 scenario IDs. A future S11 refresh must first map
+that diagnostic matrix onto the current target set; it cannot silently treat
+missing 2025 rows as failed electrical cases.
+
 | Central-Q scenario | Result | Interface MAE / max / bias (MW) | Reference pickup (MW) | Zonal redispatch |
 |---|---:|---:|---:|---:|
-| S1 summer peak | promoted | 71.662 / 98.191 / 28.793 | 0.000001 | 1,971.297 MW (6.433%) |
+| S1 summer peak | diagnostic pass | 71.662 / 98.191 / 28.793 | 0.000001 | 1,971.297 MW (6.433%) |
 | S2 winter peak | excluded | 41.441 / 80.915 / -20.690 | 0.020 | 3,199.397 MW (13.602%) |
 | S5 high Total East | excluded | 156.800 / 318.407 / -86.401 | -0.000009 | 3,410.424 MW (12.037%) |
 
@@ -53,10 +61,11 @@ The corrected 2019 same-snapshot benchmark passed:
 
 ## Model composition and provenance
 
-S11 is a 49-bus NYISO A-K core with external NPCC boundary equivalents. The
+S11 is a 49-bus NYISO A-K core with external NPCC boundary equivalents and is
+used only for fast algorithm tests and reduced-model diagnostics. The
 143-bus `npcc_ny_lite_s7_seven_interface_perform_direct_candidate` case is the
-structural/provenance source and remains in the package for topology tracing and
-future external-NPCC work.
+full structural parent and remains in the package for topology tracing and
+future S13 external-NPCC work.
 
 The builder performs this sequence:
 
@@ -130,7 +139,8 @@ direct physical DLR branches are never optimization variables.
 
 The local five-anchor Ward/Kron diagnostic worsens from approximately 0.317 to
 0.889 complex relative Frobenius error. This is reported, not concealed. It is
-diagnostic rather than a promotion gate; the mandatory structural gates are the
+diagnostic rather than a repository promotion gate; the mandatory S11
+acceptance checks are the
 five selected-circuit currents, active loss, and corrected net network Q, all of
 which pass. The correction is therefore an empirical reduced equivalent, not an
 exact Ward reduction or a utility planning equivalent.
@@ -171,7 +181,7 @@ out = run_s11_dlr_validation(struct( ...
 
 The current managed case outputs are:
 
-- `npcc_ny_lite_s11_dlr_pf_base.m` - authoritative unsolved nominal input;
+- `npcc_ny_lite_s11_dlr_pf_base.m` - retained unsolved nominal input;
 - `npcc_ny_lite_s11_dlr_pf_solution.m` - solved nominal Q-limit PF result;
 - `npcc_ny_lite_s11_dlr_summer_peak_q090_sensitivity.m`;
 - `npcc_ny_lite_s11_dlr_summer_peak_q110_sensitivity.m`.
@@ -182,8 +192,8 @@ because S2 and S5 fail mandatory gates. Their Q-sensitivity files are absent for
 the same reason.
 
 The direct builder defaults to `write_cases=false` and can write only explicitly
-named `candidate_unvalidated` files when requested. Authoritative filenames are
-owned by the full validator, which stages, reloads, numerically compares, and
+named `candidate_unvalidated` files when requested. Managed benchmark filenames
+are owned by the full validator, which stages, reloads, numerically compares, and
 Q-limit-PF tests each case before publication. Plain MATPOWER case functions do
 not retain arbitrary `userdata`; the CSV ledger and this README carry scenario
 status and provenance. S3 shoulder light load remains excluded and is not built.
@@ -230,9 +240,10 @@ segmentation, sag/clearance, terminal-equipment ratings, and dynamic ampacity
 are not included. A branch `RATE_A` value is not automatically a DLR limit or a
 conductor ampacity.
 
-S11 is suitable for methodological preliminary DLR research. It is not a
-utility operating model and does not support utility operating, facility-rating,
-reliability, or real-time dispatch claims.
+S11 is suitable for fast algorithm tests and reduced-model diagnostics only.
+It is not the promoted NPCC DLR testbed, a utility operating model, or support
+for utility operating, facility-rating, reliability, or real-time dispatch
+claims.
 
 ## Validation outputs
 

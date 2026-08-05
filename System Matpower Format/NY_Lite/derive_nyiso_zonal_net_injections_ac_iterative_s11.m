@@ -14,7 +14,7 @@ function [targets, diagnostics] = derive_nyiso_zonal_net_injections_ac_iterative
 %   target_flow_mw column instead.
 %
 %   This function performs standard AC power flows. Hard Q-limit PF and any
-%   feasibility projection remain separate S11 promotion gates.
+%   feasibility projection remain separate S11 diagnostic acceptance checks.
 
 if nargin < 1 || isempty(mpc)
     error('derive_nyiso_zonal_net_injections_ac_iterative_s11:MissingCase', ...
@@ -1465,8 +1465,8 @@ function [generation, result, allocation, case_mpc, history, ...
         reference_gen, definitions, targets, calibration_mask, accuracy_scale, ...
         scenario_id, options)
 % Refine interface closure on the actual Q-limit-enforced AC manifold. This
-% second phase prevents standard-PF Q violations from defining the promoted
-% interface result while retaining the same 50-100 MW zonal trust region.
+% second phase prevents standard-PF Q violations from defining an accepted
+% diagnostic result while retaining the same 50-100 MW zonal trust region.
 qpfopt = mpoption('verbose', 0, 'out.all', 0, 'pf.enforce_q_lims', 1);
 history = table();
 sensitivity_history = table();

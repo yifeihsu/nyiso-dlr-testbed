@@ -2,16 +2,19 @@
 
 **Date:** 2026-07-20
 **Case:** `npcc_ny_lite_s12_perform_retention_core.m` (network) +
-`s12_case.mat` (authoritative, with operators/metadata userdata)
-**Status:** validated research candidate on the six 2019 scaled public
-scenarios; supersedes the S7/NPCC-derived 49-bus core and the S11 empirical
-admittance correction for calibration purposes.
+`s12_case.mat` (authoritative only for the S12 reference artifact and its
+operators/metadata userdata)
+**Status:** calibration and validation oracle only. S12 is a reference
+reduction used to design and test the NPCC-preserving S13 augmentation; it does
+not supersede the full 143-bus S7 structural parent, promote the 49-bus S11
+diagnostic, or replace full PERFORM as the highest-fidelity source.
 
 ## What S12 is
 
 A 317-bus, 3,531-branch (359 physical + 3,172 equivalent) reduction of the
-PERFORM 2019 NY case (1,576 buses), built so that everything the calibration
-and DLR research needs is **conserved exactly** rather than proxied:
+PERFORM 2019 NY case (1,576 buses). The listed same-snapshot quantities are
+retained or reproduced at high precision, making S12 useful as an oracle. Its
+dense Ward/Kron network is not the promoted NPCC DLR testbed:
 
 - **All 47 monitored circuits** referenced by the seven NYISO interface
   operators (including every Dunwoodie South, UPNY-ConEd, and Total East
@@ -25,7 +28,7 @@ and DLR research needs is **conserved exactly** rather than proxied:
   exact Kron elimination operator with **zone labels preserved**
   (`s12_zone_base_load_p/q` userdata), so per-zone scenario scaling works.
 
-### Snapshot exactness (replaces the S11 empirical admittance patch)
+### Snapshot exactness for oracle comparisons
 
 | Check | Result |
 |---|---:|
@@ -35,18 +38,23 @@ and DLR research needs is **conserved exactly** rather than proxied:
 | Interface operator sums vs source | < 0.05 MW |
 
 The S11 sparse admittance correction (Ward diagnostic 0.317 -> 0.889) is not
-used; the S12 equivalent derives from exact elimination with only couplings
-below 1e-5 pu admittance dropped (their diagonal effect kept as shunts).
+used in this reference artifact; the S12 equivalent derives from exact
+elimination with only couplings below 1e-5 pu admittance dropped (their
+diagonal effect kept as shunts). This is a reference-model distinction, not a
+change to the repository model hierarchy.
 
 ## Interface operators
 
-`s12_interface_operators.csv`: per-circuit reduced-branch operators with
-area-rule signs. Total East was rebuilt as the physical east-boundary cut
+`s12_interface_operators.csv` contains reference per-circuit reduced-branch
+operators with area-rule signs. Total East was rebuilt as the physical east-boundary cut
 {5 Central East circuits + Fraser-Gilboa GF5-35 + Coopers Corner-Rock Tavern
 CKT1/2} (8 circuits, 2,670 MW at snapshot). It remains a **proxy** for the
 official composite (which also includes external ties and Rockland elements);
 UPNY-ConEd (9 circuits) and Dunwoodie South (12 circuits) now use their full
-source monitored sets.
+source monitored sets. Those latter lists are not final S13 truth operators:
+UPNY-ConEd double-counts series paths around Wood Street, and Dunwoodie mixes
+H-J and K-J transfer families. S13 must use corrected nonintersecting physical
+cutsets after the required terminals are added.
 
 ## Seasonal dispatch priors (NYGenUCV4 + NYISO fuel mix)
 
@@ -60,9 +68,11 @@ source monitored sets.
   99.7%+ of fuel-mix MW allocate in every hour.
 - **NYGenUCV4 winter capacities** matched 594/594 eligible units by plant name
   and cap winter-hour allocation weights.
-- **Commitment follows the prior**: units offline in the on-peak snapshot but
-  running in 2019 reality (notably Indian Point 2/3, offline in PERFORM v23,
-  ~2.1 GW in zone H) are re-committed for the scenario hours.
+- **Unit commitment is a constructed prior, not an observation**: each
+  statewide fuel-class total is allocated across eligible positive-capability
+  units in proportion to capability. This can assign output to units that are
+  offline in the PERFORM on-peak snapshot, including Indian Point 2/3, but it
+  does not establish historical unit commitment or plant-level dispatch.
 
 Outputs: `s12_unit_dispatch_priors.csv`, `s12_zonal_generation_priors.csv`,
 `s12_fuel_class_allocation.csv`.
@@ -96,8 +106,9 @@ buses (W 49th St, Newbridge, Gowanus, Shoreham, Northport).
 `run_s12_scenario_validation.m`; results in `s12_scenario_summary.csv`,
 `s12_scenario_interface_validation.csv`, `s12_zonal_closure_movement.csv`.
 
-- **Standard PF: 6/6. Q-limit-enforced PF: 6/6** (S7 reached Q-PF 6/6 only
-  after the 2019 retarget; the 2025-era shoulder failure is structurally gone).
+- **Standard PF: 6/6. Q-limit-enforced PF: 6/6** (S7 also reaches Q-PF 6/6
+  after the 2019 retarget; the 2025-era shoulder failure is absent under this
+  changed operating-point set, not demonstrated to be structurally eliminated).
 - Voltages within [0.991, 1.068] pu in every scenario; reference pickup < 1 MW.
 - Forward (prior-only, no interface fitting) vs closed (bounded zonal
   DC-inverse, per-zone trust +-1090 MW scaled) interface MAE across six hours:
@@ -113,7 +124,9 @@ buses (W 49th St, Newbridge, Gowanus, Shoreham, Northport).
 | Dunwoodie South | 321.9 | 13.0 |
 
 - **All-hour fixed-scale objective: 0.0558 closed (S7 baseline: 0.4896 on
-  identical targets and scales — 8.8x better).** Forward objective 1.587.
+  identical targets and scales).** This is an in-sample oracle benchmark:
+  interfaces inform the closure, so the numerical improvement cannot determine
+  promoted-model status. Forward objective 1.587.
 
 ### Honest caveats
 
@@ -130,9 +143,21 @@ buses (W 49th St, Newbridge, Gowanus, Shoreham, Northport).
 5. Switched shunts are static at BINIT; boundary Q is fixed at scaled
    snapshot values.
 6. Equivalent branches (3,172) have no thermal ratings; only physical
-   branches carry ratings, which is the correct DLR scope.
+   branches carry ratings. This is appropriate for reference-current
+   comparisons, but it does not determine S13 DLR eligibility.
+
+## How S12 may and may not be used
+
+Use S12 to identify source endpoints, physical-circuit parameters and ratings,
+interface membership, controls supported by the source, same-snapshot currents,
+losses, PTDFs, and held-out perturbation responses. Do not copy its 3,172
+Kron-equivalent branches, dense 317-bus topology, full 615-generator dispatch,
+or fitted closed dispatch into S13. Full PERFORM remains the source dataset and
+highest-fidelity reference.
 
 ## Reproduction
+
+This refreshes the reference oracle only; it does not promote S12.
 
 ```matlab
 addpath('System Matpower Format'); addpath('System Matpower Format/NY_Lite');

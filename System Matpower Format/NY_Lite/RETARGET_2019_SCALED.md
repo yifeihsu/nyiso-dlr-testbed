@@ -109,15 +109,17 @@ Notable observations:
 
 ## Not rerun / now stale
 
-- **S8, S8.1, S9a, S9b, S10a result CSVs and assessments** still reflect the
+- **S8, S8.1, S9a, and S9b result CSVs and assessments** still reflect the
   2025-target configuration. Their runner scripts have been re-pointed to the
   2019 IDs and can be refreshed via the corresponding
-  `run_handoff_reproduction` options.
+  `run_handoff_reproduction` options. S10a is a separate 2019 same-snapshot
+  diagnostic and is not part of this stale group.
 - **S11 DLR layer** (raw-NYISO-scale, 2025 summer peak) was deliberately left
   untouched: its scripts still reference `S*_2025_*` IDs and raw public
   targets, so it will not run against the regenerated target CSVs. Rebuilding
   the DLR operating layer on the scaled 2019 configuration is a separate step
   and should reuse the source-backed 2019 PG priors, which are now
   contemporaneous with the targets.
-- `PROJECT_HANDOFF.md` is the dated 2026-07-12 handoff record for the 2025
-  configuration and was intentionally not rewritten.
+- `PROJECT_HANDOFF.md` retains its original 2026-07-12 handoff date but was
+  updated on 2026-08-05 with the governing hierarchy, current 2019 results,
+  and the unpromoted S13 Phase 1A status.

@@ -89,7 +89,7 @@ $manifestRecords = @(
     $payloadRecords
     Get-FileRecord ([IO.FileInfo]::new($contentRootPath))
 ) | Sort-Object relative_path
-$manifestText = (($manifestRecords | ConvertTo-Csv -NoTypeInformation) -join "`r`n") + "`r`n"
+$manifestText = (($manifestRecords | ConvertTo-Csv -NoTypeInformation) -join "`n") + "`n"
 [IO.File]::WriteAllText($manifestPath, $manifestText, $utf8NoBom)
 
 if (Test-Path -LiteralPath $tempArchivePath) {
@@ -207,7 +207,12 @@ if ($finalArchiveHash -ne $tempArchiveHash) {
 $sidecarPath = $archivePath + '.sha256.txt'
 $sidecarText = "$finalArchiveHash  $([IO.Path]::GetFileName($archivePath))`n"
 [IO.File]::WriteAllText($sidecarPath, $sidecarText, $utf8NoBom)
-Remove-Item -LiteralPath $tempArchivePath -Force
+[GC]::Collect()
+[GC]::WaitForPendingFinalizers()
+[IO.File]::Delete($tempArchivePath)
+if ([IO.File]::Exists($tempArchivePath)) {
+    throw "Verified temporary archive could not be removed: $tempArchivePath"
+}
 
 [pscustomobject]@{
     archive = $archivePath

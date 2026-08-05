@@ -1,5 +1,7 @@
 function mpc = npcc_ny_lite_s12_perform_retention_core
 %NPCC_NY_LITE_S12_PERFORM_RETENTION_CORE
+%   S12 reference oracle only. This dense PERFORM Ward/Kron reduction is not
+%   the promoted NPCC DLR testbed and must not supply equivalent branches to S13.
 
 %% MATPOWER Case Format : Version 2
 mpc.version = '2';
@@ -5726,6 +5728,12 @@ mpc.genfuel = {
 	'import';
 	'import';
 };
+
+%%-----  Model Hierarchy Role  -----%%
+% S12 is a reference oracle only; it is not a promoted NPCC testbed.
+mpc.userdata.model_hierarchy_role = 'reference_oracle_only';
+mpc.userdata.promotion_eligible = false;
+mpc = add_userfcn(mpc, 'savecase', @s12_oracle_savecase);
 
 %% bus names
 mpc.bus_name = {

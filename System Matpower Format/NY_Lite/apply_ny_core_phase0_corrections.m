@@ -6,8 +6,9 @@ function [mpc, report] = apply_ny_core_phase0_corrections(mpc, options)
 %   2019 source instead of round-number placeholders.
 %
 %   Adds no buses and no branches. Topology/zone-map driven rather than
-%   branch-index driven, so it applies unchanged to the 49-bus NY-only core
-%   and the 143-bus full case.
+%   branch-index driven, so it applies unchanged to both hierarchy roles:
+%   the 143-bus full S7 structural parent and the 49-bus S11 diagnostic core.
+%   Applying this function to S11 does not promote the reduced model.
 %
 %   (0.5) Reactance. OFF BY DEFAULT - opt in with options.fit_reactance.
 %
@@ -24,13 +25,14 @@ function [mpc, report] = apply_ny_core_phase0_corrections(mpc, options)
 %         them: Central East 110.1 -> 148.7, Total East 361.9 -> 388.5,
 %         Dunwoodie South 276.6 -> 308.2.
 %
-%         The reason is structural, not a tuning failure. The core has no E-G
+%         The remaining mismatch is structurally confounded rather than
+%         resolvable by a scalar tuning claim. The core has no E-G
 %         corridor at all (PERFORM has 7 circuits, 3054 MVA, Coopers
 %         Corners-Rock Tavern), so every eastbound MW is forced through E-F.
 %         Matching PERFORM's E-F PTDF then requires making E-F stiffer, which
 %         reduces its flow - and the S7 dispatch already underflows every
-%         eastern target. No reactance setting can fix a missing path. Adding
-%         E-G is Phase 1.
+%         eastern target. Phase 1 therefore tests E-G and other missing paths
+%         on the full S7 parent before any further reactance calibration.
 %
 %         Ratings, by contrast, are free: RATE_A does not enter the power
 %         flow, so with fit_reactance = false the impedances are bit-identical
@@ -118,6 +120,7 @@ if ~isfield(options, 'protect_pairs')
     % [from to] bus pairs carrying PERFORM-direct parameters.
     options.protect_pairs = [38 39; 73 9002; 9002 74];
 end
+if ~isfield(options, 'protect_branch_rows'), options.protect_branch_rows = []; end
 if ~isfield(options, 'verbose'), options.verbose = true; end
 define_constants;
 
@@ -168,6 +171,15 @@ for k = 1:nl
         if isequal(pair, sort(pp(:)')), prot(k) = true; end
     end
 end
+registered_rows = options.protect_branch_rows(:);
+if isfield(mpc, 'userdata') && isfield(mpc.userdata, 'ny_lite') && ...
+        isfield(mpc.userdata.ny_lite, 'phase0_protected_branch_rows')
+    registered_rows = [registered_rows; ...
+        mpc.userdata.ny_lite.phase0_protected_branch_rows(:)]; %#ok<AGROW>
+end
+registered_rows = unique(registered_rows(isfinite(registered_rows) & ...
+    registered_rows >= 1 & registered_rows <= nl));
+prot(registered_rows) = true;
 n_prot = sum(prot);
 
 % electrical mass weights, same definition as the reference generator
