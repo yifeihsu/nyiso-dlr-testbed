@@ -1,8 +1,10 @@
 name: S13 artifact integrity
 
 on:
+  workflow_dispatch:
   pull_request:
     paths:
+      - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
       - "LATEST_MODEL_CONFIGURATION.csv"
       - "System Matpower Format/NY_Lite/**"
@@ -12,6 +14,7 @@ on:
       - main
       - "codex/**"
     paths:
+      - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
       - "LATEST_MODEL_CONFIGURATION.csv"
       - "System Matpower Format/NY_Lite/**"
@@ -52,3 +55,5 @@ jobs:
             assert(adversarial.all_expected_gates_observed);
             s12_sidecar = test_s12_interface_snapshot_sums;
             assert(s12_sidecar.pass && s12_sidecar.total_east_circuit_count == 8);
+            smoke = validate_s13_phase1a_smoke(struct('write_outputs', false));
+            assert(smoke.standard_pf_both_pass);

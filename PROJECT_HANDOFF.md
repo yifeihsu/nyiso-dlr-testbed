@@ -133,14 +133,21 @@ This command:
    names, all three S7 transit buses, source-backed zero-injection terminals,
    append-only structure, registered attachment paths, and absence of
    S12/Kron admittance;
-7. compares the five committed S13 register CSVs with freshly rebuilt
+7. compares the seven committed S13 register CSVs with freshly rebuilt
    in-memory tables and fails on any schema, row, column, type, or value drift;
 8. verifies that the S12 oracle snapshot sidecar contains the complete
    eight-circuit Total East operator and matches a fresh recomputation;
 9. reruns the durable S13 adversarial mutation suite; and
 10. runs the inherited-snapshot S7/S13 standard- and Q-limit-PF smoke
-   diagnostic, reporting its limitations without treating it as a promotion
-   gate or a 2019 operating-point comparison.
+    diagnostic, reporting its limitations without treating it as a promotion
+    gate or a 2019 operating-point comparison.
+
+The `s13-artifact-integrity` GitHub workflow repeats the structural, artifact,
+adversarial, S12-sidecar, and inherited-snapshot smoke checks for pull requests,
+`main`/`codex/**` pushes, and manual dispatch. CI writes no smoke artifacts and
+asserts only `standard_pf_both_pass`; it reports but does not assert Q-limit PF
+success because the inherited snapshot's Q-limit failure is a known diagnostic,
+not a Phase 1A promotion gate.
 
 The default remains a structural-parent reproduction until the existing S13
 candidate passes every mandatory gate. It must not report S7, S11, or S12 as

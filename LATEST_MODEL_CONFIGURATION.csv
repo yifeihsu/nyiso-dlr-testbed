@@ -28,9 +28,9 @@ s13_phase1a,case_size,147 buses / 253 branches / 62 generators,S7 plus four PERF
 s13_phase1a,source_bus_additions,1228|1222|1567|772,Fraser|Coopers Corner|Marcy|Rock Tavern
 s13_phase1a,source_branch_rows,2137|2131|2154|2133|1567|1568|1571,Direct full-PERFORM R/X/B and RATE_A/B/C; no invented attachment impedance
 s13_phase1a,structural_preservation,28 / 28 pass,All mandatory structural gates pass; five promotion-only gates remain fail-closed
-s13_phase1a,artifact_consistency,5 / 5 pass,Committed bus branch residual physical and operator CSVs exactly match fresh in-memory registers
+s13_phase1a,artifact_consistency,7 / 7 pass,All committed S13 bus branch residual shunt path physical and operator CSVs exactly match fresh in-memory registers
 s13_phase1a,adversarial_validator,9 / 9 pass,Durable isolated mutations include committed-CSV truncation; no premature exceptions
-s13_phase1a,repository_ci,s13-artifact-integrity,Pull requests and main/codex pushes run structural artifact adversarial and S12 sidecar checks
+s13_phase1a,repository_ci,s13-artifact-integrity,Pull requests main/codex pushes and manual dispatch run structural artifact adversarial S12 sidecar and inherited-snapshot standard-PF smoke checks; Q-limit smoke is reported but not asserted
 s13_phase1a,legacy_snapshot_standard_pf,pass / pass,S7 Phase 0 parent and S13 candidate both converge; smoke test only
 s13_phase1a,legacy_snapshot_q_limit_pf,fail / fail,Inherited S7 snapshot limitation; not a 2019 same-snapshot or promotion test
 s13_phase1a,residualization,pending,Rows 34|36 are physical-overlap residual candidates; rows 40|42 are frozen adjacent calibration candidates pending paired response evidence and strong regularization
