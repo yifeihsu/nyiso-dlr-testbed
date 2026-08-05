@@ -92,8 +92,8 @@ loadable against the 140-bus baseline). Cases normally carry them in
 The 49-bus diagnostic case was the affected one. Zone-cut operators match on
 zone pairs, so branches touching an unzoned bus were silently dropped — losing
 the CE UG → East Garden City I-K (Con Ed–LIPA) crossing entirely. This finding
-repairs the diagnostic benchmark; it does not change the S7 structural parent
-or the pending S13 topology.
+repairs the diagnostic benchmark; it does not change the S7 provenance case or
+the S13-FULL construction topology.
 
 `attach_nyiso_zone_metadata` now carries a presence-guarded transit default
 table (G / G / K, from PERFORM areas 71 / 71 / 75) replacing a hardcoded 9002

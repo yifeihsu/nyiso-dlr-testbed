@@ -122,4 +122,4 @@ Notable observations:
   contemporaneous with the targets.
 - `PROJECT_HANDOFF.md` retains its original 2026-07-12 handoff date but was
   updated on 2026-08-05 with the governing hierarchy, current 2019 results,
-  and the unpromoted S13 Phase 1A status.
+  the S13-FULL Phase 1A construction status, and the pending S14-NYISO role.
