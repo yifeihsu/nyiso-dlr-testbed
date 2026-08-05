@@ -92,12 +92,28 @@ S10a mean normalized control-group Q error 0.1870
 The current Phase 1A S13 candidate adds four exact PERFORM terminals (Fraser,
 Coopers Corner, Marcy, and Rock Tavern) and seven direct physical source rows
 between matching EDIC and Ramapo attachments. It has 147 buses, 253 branches,
-and 62 generators. All 28 mandatory structural gates pass; the five
+and 62 generators. All 29 mandatory structural gates pass; the five
 promotion-only gates remain fail-closed. Both S7/Phase 0 and S13 converge in
 the inherited-snapshot standard-PF smoke test. Both fail that
 snapshot's Q-limit PF, so the smoke result is not an operating gate. S13 remains
 unpromoted pending passive residualization, paired S12 snapshot/response tests,
 and the six public-hour gates.
+
+The S13.1 no-fit local fixture now passes 20/20 mandatory gates. Direct
+seven-branch power recomputation differs from full PERFORM by at most
+2.67e-11 MW and 1.87e-11 MVAr; the omitted-network-injection solve recovers
+the four interior voltages to machine precision; and S12 retained-circuit
+flows differ by at most 0.084744 MW. The isolated zero-injection fixture is
+diagnostic only because it reaches 2.44455 degrees of angle error and reverses
+one branch direction.
+
+The full paired S12/S13 operating comparison is still fail-closed. Its common
+input audit passes 14/18 readiness gates. The blockers are the nonrepresentable
+generation projection in 15 scenario-zone rows (H plus selected A/B/C/E
+capacity cases), the missing full-NPCC regional tie-flow controller,
+and missing common AC-loss and voltage-control policies. No S12 boundary
+injection, interface-flow closure, or residual R/X/B fit is used to bypass
+those prerequisites.
 
 The package is appropriate for continued structural augmentation and diagnostic
 research. It is not yet appropriate for claiming a promoted S13 operating case,
@@ -138,12 +154,15 @@ This command:
 8. verifies that the S12 oracle snapshot sidecar contains the complete
    eight-circuit Total East operator and matches a fresh recomputation;
 9. reruns the durable S13 adversarial mutation suite; and
-10. runs the inherited-snapshot S7/S13 standard- and Q-limit-PF smoke
+10. runs the exact S13.1 local physical-circuit identity fixture and the
+    fail-closed common-input representability audit, then compares all twelve
+    committed S13.1 evidence CSVs against canonical rebuilt tables; and
+11. runs the inherited-snapshot S7/S13 standard- and Q-limit-PF smoke
     diagnostic, reporting its limitations without treating it as a promotion
     gate or a 2019 operating-point comparison.
 
 The `s13-artifact-integrity` GitHub workflow repeats the structural, artifact,
-adversarial, S12-sidecar, and inherited-snapshot smoke checks for pull requests,
+adversarial, S12-sidecar, S13.1 preflight, and inherited-snapshot smoke checks for pull requests,
 `main`/`codex/**` pushes, and manual dispatch. CI writes no smoke artifacts and
 asserts only `standard_pf_both_pass`; it reports but does not assert Q-limit PF
 success because the inherited snapshot's Q-limit failure is a known diagnostic,
@@ -819,10 +838,13 @@ shifters, or another equivalent formulation.
 
 ## 12. Recommended Next Work
 
-1. **Phase 1A — complete the E-G evidence.** The source-backed Coopers
-   Corner–Rock Tavern path is now appended at matching EDIC and Ramapo
-   terminals. Re-derive dispatch for the changed topology and validate Central
-   East, E-G, Total East, currents, losses, and voltages against S12.
+1. **Phase 1A — make the common system input representable.** The exact local
+   Coopers Corner–Rock Tavern fixture passes. Define a source-backed projection
+   for the currently nonrepresentable A/B/C/E/H generation priors, implement
+   bounded AC regional tie-flow
+   control on the retained NPCC network, and document common loss-balancing and
+   voltage-control policies. Then run the no-fit S12/S13 comparison. Do not add
+   S12 boundary generators to S13 or use interface closure.
 2. **Phase 1B — UPNY-ConEd physical cut.** Add East Fishkill and Ladentown and
    preserve Pleasant Valley–East Fishkill, Ladentown–Buchanan, and Pleasant
    Valley–Wood Street circuits. Replace the conceptual operator with a
@@ -837,7 +859,8 @@ shifters, or another equivalent formulation.
    response evidence and strong regularization explicitly authorize them.
    Reject negative-resistance or materially nonpassive residuals and add more
    physical detail instead.
-5. Run same-snapshot S12 comparisons and held-out ±250/±500 MW transfers,
+5. After the common-input readiness gates pass, run same-snapshot S12
+   comparisons and held-out ±250/±500 MW transfers,
    Zone-J/Zone-K load changes, external-schedule changes, and one-circuit
    outages without refitting S13.
 6. Only after structural and response gates pass, reconstruct the six
@@ -863,6 +886,14 @@ System Matpower Format/NY_Lite/build_s13_phase1a_candidate.m
 System Matpower Format/NY_Lite/validate_s13_structural_preservation.m
 System Matpower Format/NY_Lite/validate_s13_artifact_consistency.m
 System Matpower Format/NY_Lite/test_s13_structural_validator_adversarial.m
+System Matpower Format/NY_Lite/run_s13_phase1a_local_identity.m
+System Matpower Format/NY_Lite/test_s13_phase1a_local_identity.m
+System Matpower Format/NY_Lite/assess_s13_phase1a_common_input_readiness.m
+System Matpower Format/NY_Lite/test_s13_phase1a_common_input_readiness.m
+System Matpower Format/NY_Lite/run_s13_phase1a_oracle_comparison.m
+System Matpower Format/NY_Lite/test_s13_phase1a_oracle_comparison.m
+System Matpower Format/NY_Lite/validate_s13_phase1a_oracle_artifact_consistency.m
+System Matpower Format/NY_Lite/test_s13_phase1a_oracle_artifact_consistency.m
 System Matpower Format/NY_Lite/s13_structural_adversarial_results.csv
 System Matpower Format/NY_Lite/s12_generate_interface_snapshot_sums.m
 System Matpower Format/NY_Lite/test_s12_interface_snapshot_sums.m

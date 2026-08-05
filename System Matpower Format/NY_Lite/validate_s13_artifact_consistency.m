@@ -1,5 +1,5 @@
 function out = validate_s13_artifact_consistency(options)
-%VALIDATE_S13_ARTIFACT_CONSISTENCY Verify committed S13 Phase-1A registers.
+%VALIDATE_S13_ARTIFACT_CONSISTENCY Verify committed cumulative S13 registers.
 %   Rebuilds/loads the unpromoted S13 candidate and compares all seven
 %   canonical committed CSV artifacts against the corresponding in-memory
 %   report tables. Schema, column order, variable types, row order, and values
@@ -29,10 +29,10 @@ end
 report = struct();
 report_present = isfield(candidate, 'userdata') && ...
     isfield(candidate.userdata, 's13') && ...
-    isfield(candidate.userdata.s13, 'phase1a_report') && ...
-    isstruct(candidate.userdata.s13.phase1a_report);
+    isfield(candidate.userdata.s13, 'overlay_report') && ...
+    isstruct(candidate.userdata.s13.overlay_report);
 if report_present
-    report = candidate.userdata.s13.phase1a_report;
+    report = candidate.userdata.s13.overlay_report;
 end
 
 spec = table([ ...

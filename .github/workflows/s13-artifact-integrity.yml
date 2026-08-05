@@ -55,5 +55,9 @@ jobs:
             assert(adversarial.all_expected_gates_observed);
             s12_sidecar = test_s12_interface_snapshot_sums;
             assert(s12_sidecar.pass && s12_sidecar.total_east_circuit_count == 8);
+            oracle = run_s13_phase1a_oracle_comparison(struct('write_outputs', false, 'verbose', false, 'fail_on_incomplete', false));
+            assert(oracle.stage_a_pass && ~oracle.common_input_ready && ~oracle.stage_b_executed && ~oracle.stage_c_executed && ~oracle.promotion_eligible);
+            oracle_artifacts = validate_s13_phase1a_oracle_artifact_consistency(struct('oracle_result', oracle, 'fail_on_mismatch', true, 'verbose', false));
+            assert(oracle_artifacts.all_artifacts_match && oracle_artifacts.artifact_count == 12);
             smoke = validate_s13_phase1a_smoke(struct('write_outputs', false));
             assert(smoke.standard_pf_both_pass);

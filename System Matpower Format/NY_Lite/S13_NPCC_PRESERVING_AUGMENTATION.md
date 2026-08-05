@@ -78,8 +78,42 @@ and 76 Ramapo are exact-name, 345-kV, same-zone attachment matches to PERFORM
 buses 1233 and 1519. The resulting 147-bus/253-branch/62-generator candidate
 contains no invented attachment impedance. It is not promoted because the
 overlapping aggregate residual fit and all operating-response gates are still
-pending. The four added terminals are source-zero-injection buses; the committed
-bus map records their source PD/QD/GS/BS values explicitly.
+pending. The four added terminals have zero local source PD/QD/GS/BS and no
+online generators; the committed bus map records those values explicitly.
+They are not isolated zero-injection buses in the seven-branch fixture: eleven
+other active PERFORM branches exchange power with them.
+
+The no-fit local identity test therefore uses two distinct checks. First, it
+recomputes the seven branch terminal powers from the solved PERFORM phasors and
+the copied branch model. Second, it fixes EDIC and Ramapo at the source phasors
+and solves the four interior buses with complex injections derived from the
+omitted incident branches. All 20 mandatory local gates pass: maximum direct
+P/Q errors are about 2.7e-11 MW and 1.9e-11 MVAr; the injection-supported solve
+recovers interior voltage magnitude and angle to machine precision; and the
+read-only S12 circuit comparison differs by at most 0.0848 MW. A separate
+zero-injection truncation is diagnostic only. Its maximum angle error is about
+2.45 degrees and one circuit reverses direction, so it is prohibited as an
+acceptance gate.
+
+The full same-snapshot comparison remains pending. The common-input audit
+currently passes 14 of 18 readiness gates and fails closed on four prerequisites:
+a common generation projection is missing for 15 scenario-zone rows (Zone H
+has no S13 generator, while selected A/B/C/E priors exceed current mapped
+capability), a full-NPCC regional tie-flow controller is not implemented, and
+common AC-loss and voltage-control policies are not yet representable. S12 boundary generators are never added to
+S13, interface-flow closure is disabled, and no R/X/B is fitted by the audit.
+
+`run_s13_phase1a_oracle_comparison.m` preserves this claim boundary in durable
+artifacts. It records 22 blocked same-snapshot metric rows, five blocked cut
+operators, seven physical-circuit rows with real Stage-A evidence and separate
+future common-baseline fields, twelve blocked perturbation summaries, and a
+432-row long-form held-out metric manifest. That manifest reserves delta P/Q/
+current for every circuit, delta voltage magnitude/aligned angle for every
+terminal, and E-G/E-F cut plus internal-NY loss metrics for every perturbation.
+All unexecuted values remain NaN, every row records the pending balancing policy
+and no-refit rule, and the oracle ledger remains fail-closed at 38/59 gates.
+Twelve committed S13.1 CSVs are compared byte-for-byte with canonical LF
+serialization of freshly rebuilt tables.
 
 ### Phase 1B — UPNY-ConEd
 
@@ -118,9 +152,20 @@ Every added branch records source PERFORM row and endpoints, circuit ID, source
 R/X/B and ratings, S13 endpoints, physical/equivalent class, DLR eligibility,
 mapping confidence, construction method, and implementation status. S13
 network-admittance rows may not name S12 as their source model.
-The default reproduction also rebuilds and compares the bus, branch, residual,
-physical-circuit, and interface-operator tables against their committed CSVs.
+The default reproduction also rebuilds and compares all seven bus, branch,
+residual, residual-shunt, path, physical-circuit, and interface-operator tables
+against their committed CSVs.
 Any schema, row, column, type, or value mismatch fails closed.
+
+`candidate.userdata.s13.overlay_report` is the cumulative register source of
+truth. `candidate.userdata.s13.phase_reports` stores per-phase evidence, and
+`phase1a_report` remains a compatibility alias that must exactly equal
+`phase_reports.phase1a`. The generic model role is
+`unpromoted_s13_candidate`; `current_phase` records `phase1a` through `phase1d`.
+Every declared phase report must contain the seven registered table classes,
+and every matched row must equal the cumulative report across all columns—not
+only its key. The structural validator fails on role, phase, report, provenance,
+or alias disagreement.
 
 ## Validation hierarchy and gates
 
@@ -129,13 +174,17 @@ Any schema, row, column, type, or value mismatch fails closed.
    attachment paths, residual-candidate class policy, and no S12/Kron admittance.
    Passive residual fitting is a later promotion gate, not part of the current
    Phase 1A structural pass.
-2. **Same snapshot:** apply identical PERFORM 2019 injections to S12 and S13;
+2. **Local identity:** verify exact copied branch physics and the omitted-network
+   injection fixture before any system comparison. The isolated zero-injection
+   fixture is non-gating.
+3. **Same snapshot:** apply a common documented aggregate 2019 input to S12 and S13;
    compare physical-circuit flows/currents, interface operators, terminal
-   voltages, active losses, and reactive balance.
-3. **Held-out response:** without refitting S13, test ±250 MW and ±500 MW zonal
+   voltages, identically scoped NY losses, and reactive balance. Do not claim
+   identical bus-level injections across the two network representations.
+4. **Held-out response:** without refitting S13, test ±250 MW and ±500 MW zonal
    transfers, Zone-J/Zone-K load changes, external interchange changes, and
    one-circuit outages against S12 response.
-4. **Public hours:** only after the first three stages pass, reconstruct all six
+5. **Public hours:** only after the preceding stages pass, reconstruct all six
    similarity-scaled 2019 hours with bounded AC dispatch closure.
 
 | Metric | Mandatory gate |
