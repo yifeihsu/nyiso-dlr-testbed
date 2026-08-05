@@ -5,16 +5,17 @@
 `s12_case.mat` (authoritative only for the S12 reference artifact and its
 operators/metadata userdata)
 **Status:** calibration and validation oracle only. S12 is a reference
-reduction used to design and test the NPCC-preserving S13 augmentation; it does
-not supersede the full 143-bus S7 structural parent, promote the 49-bus S11
-diagnostic, or replace full PERFORM as the highest-fidelity source.
+reduction used to design and test the S13-FULL construction parent and validate
+the future S14-NYISO operating model. It does not supersede the S7 provenance
+case, promote the 49-bus S11 diagnostic, or replace full PERFORM as the
+highest-fidelity source.
 
 ## What S12 is
 
 A 317-bus, 3,531-branch (359 physical + 3,172 equivalent) reduction of the
 PERFORM 2019 NY case (1,576 buses). The listed same-snapshot quantities are
 retained or reproduced at high precision, making S12 useful as an oracle. Its
-dense Ward/Kron network is not the promoted NPCC DLR testbed:
+dense Ward/Kron network is not the promoted NYISO DLR operating model:
 
 - **All 47 monitored circuits** referenced by the seven NYISO interface
   operators (including every Dunwoodie South, UPNY-ConEd, and Total East
@@ -51,10 +52,11 @@ operators with area-rule signs. Total East was rebuilt as the physical east-boun
 CKT1/2} (8 circuits, 2,670 MW at snapshot). It remains a **proxy** for the
 official composite (which also includes external ties and Rockland elements);
 UPNY-ConEd (9 circuits) and Dunwoodie South (12 circuits) now use their full
-source monitored sets. Those latter lists are not final S13 truth operators:
+source monitored sets. Those latter lists are not final S13-FULL/S14 operators:
 UPNY-ConEd double-counts series paths around Wood Street, and Dunwoodie mixes
-H-J and K-J transfer families. S13 must use corrected nonintersecting physical
-cutsets after the required terminals are added.
+H-J and K-J transfer families. S13-FULL must construct corrected
+nonintersecting physical cutsets after the required terminals are added, and
+S14 must inherit those physical operators.
 
 ## Seasonal dispatch priors (NYGenUCV4 + NYISO fuel mix)
 
@@ -144,7 +146,7 @@ buses (W 49th St, Newbridge, Gowanus, Shoreham, Northport).
    snapshot values.
 6. Equivalent branches (3,172) have no thermal ratings; only physical
    branches carry ratings. This is appropriate for reference-current
-   comparisons, but it does not determine S13 DLR eligibility.
+   comparisons, but it does not determine S14 DLR eligibility.
 
 ## How S12 may and may not be used
 
@@ -152,8 +154,8 @@ Use S12 to identify source endpoints, physical-circuit parameters and ratings,
 interface membership, controls supported by the source, same-snapshot currents,
 losses, PTDFs, and held-out perturbation responses. Do not copy its 3,172
 Kron-equivalent branches, dense 317-bus topology, full 615-generator dispatch,
-or fitted closed dispatch into S13. Full PERFORM remains the source dataset and
-highest-fidelity reference.
+or fitted closed dispatch into S13-FULL or S14. Full PERFORM remains the source
+dataset and highest-fidelity reference.
 
 ## Reproduction
 

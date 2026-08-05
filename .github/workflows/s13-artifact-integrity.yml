@@ -4,20 +4,26 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
+      - ".gitattributes"
       - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
       - "LATEST_MODEL_CONFIGURATION.csv"
       - "System Matpower Format/NY_Lite/**"
+      - "System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m"
+      - "System Matpower Format/npcc_ny_lite_s12_perform_retention_core.m"
       - "System Matpower Format/npcc_ny_lite_s13_npcc_augmented_2019.m"
   push:
     branches:
       - main
       - "codex/**"
     paths:
+      - ".gitattributes"
       - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
       - "LATEST_MODEL_CONFIGURATION.csv"
       - "System Matpower Format/NY_Lite/**"
+      - "System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m"
+      - "System Matpower Format/npcc_ny_lite_s12_perform_retention_core.m"
       - "System Matpower Format/npcc_ny_lite_s13_npcc_augmented_2019.m"
 
 permissions:
@@ -47,13 +53,30 @@ jobs:
             addpath(genpath(fullfile(getenv('RUNNER_TEMP'), 'matpower')));
             addpath(fullfile(pwd, 'System Matpower Format'));
             addpath(fullfile(pwd, 'System Matpower Format', 'NY_Lite'));
+            policy = readtable(fullfile(pwd, 'LATEST_MODEL_CONFIGURATION.csv'), 'TextType', 'string');
+            assert(nnz(strcmp(policy.setting, 'structural_provenance_case')) == 1 && nnz(strcmp(policy.setting, 'structural_provenance_case') & strcmp(policy.value, 'npcc_ny_lite_s7_seven_interface_perform_direct_candidate')) == 1);
+            assert(nnz(strcmp(policy.setting, 'construction_validation_parent')) == 1 && nnz(strcmp(policy.setting, 'construction_validation_parent') & strcmp(policy.value, 'npcc_ny_lite_s13_npcc_augmented_2019')) == 1);
+            assert(nnz(strcmp(policy.setting, 'promoted_operating_case')) == 1 && nnz(strcmp(policy.setting, 'promoted_operating_case') & strcmp(policy.value, 'pending_npcc_ny_lite_s14_nyiso_dlr_operating_model')) == 1);
+            assert(nnz(strcmp(policy.setting, 'reference_oracle')) == 1 && nnz(strcmp(policy.setting, 'reference_oracle') & strcmp(policy.value, 'npcc_ny_lite_s12_perform_retention_core')) == 1);
+            s14_promotion_scope = strcmp(policy.category, 's14_nyiso') & strcmp(policy.setting, 'promotion_eligible');
+            assert(nnz(s14_promotion_scope) == 1 && nnz(s14_promotion_scope & strcmp(policy.value, 'false')) == 1);
+            s7 = loadcase('npcc_ny_lite_s7_seven_interface_perform_direct_candidate');
+            assert(~s7.userdata.ny_lite.s7_seven_interface_calibration.promotion_eligible);
+            s12 = loadcase('npcc_ny_lite_s12_perform_retention_core');
+            assert(~s12.userdata.promotion_eligible);
+            s13_full = loadcase('npcc_ny_lite_s13_npcc_augmented_2019');
+            assert(strcmp(s13_full.userdata.s13.governing_hierarchy_role, 's13_full_construction_validation_parent') && strcmp(s13_full.userdata.s13.downstream_operating_model, 'npcc_ny_lite_s14_nyiso_dlr_operating_model') && ~s13_full.userdata.s13.dlr_delivery_eligible && ~s13_full.userdata.s13.promotion_eligible);
             structural = validate_s13_structural_preservation(struct('write_outputs', false, 'fail_on_structural', true));
-            assert(structural.all_structural_gates_pass && ~structural.promotion_eligible);
+            assert(structural.all_structural_gates_pass && ~structural.all_construction_gates_pass && ~structural.construction_source_qualified && ~structural.promotion_eligible);
             artifacts = validate_s13_artifact_consistency(struct('fail_on_mismatch', true));
-            assert(artifacts.all_artifacts_match);
+            assert(artifacts.all_artifacts_match && artifacts.register_artifact_count == 7 && artifacts.structural_ledger_count == 1);
             adversarial = test_s13_structural_validator_adversarial(struct('output_file', fullfile(tempdir, 's13_structural_adversarial_results.csv')));
             assert(adversarial.all_expected_gates_observed);
             s12_sidecar = test_s12_interface_snapshot_sums;
             assert(s12_sidecar.pass && s12_sidecar.total_east_circuit_count == 8);
+            oracle = run_s13_phase1a_oracle_comparison(struct('write_outputs', false, 'verbose', false, 'fail_on_incomplete', false));
+            assert(oracle.stage_a_pass && ~oracle.common_input_ready && ~oracle.stage_b_executed && ~oracle.stage_c_executed && ~oracle.promotion_eligible);
+            oracle_artifacts = validate_s13_phase1a_oracle_artifact_consistency(struct('oracle_result', oracle, 'fail_on_mismatch', true, 'verbose', false));
+            assert(oracle_artifacts.all_artifacts_match && oracle_artifacts.artifact_count == 12);
             smoke = validate_s13_phase1a_smoke(struct('write_outputs', false));
             assert(smoke.standard_pf_both_pass);

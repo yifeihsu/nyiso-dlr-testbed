@@ -1,0 +1,60 @@
+stage,gate_id,gate_kind,metric_value,limit,comparator,required,passed,status,evidence,blocked_reason
+stage_a_local_identity,source_q_limit_pf_converged,executed_metric,1,1,==,1,1,pass,"full PERFORM Q-limit reference",
+stage_a_local_identity,source_and_model_orientation_exact,executed_metric,1,1,==,1,1,pass,"registered row endpoints",
+stage_a_local_identity,raw_circuit_identity_exact,executed_metric,1,1,==,1,1,pass,"RAW oriented endpoint R/X/B and CKT",
+stage_a_local_identity,s13_physical_parameters_exact,executed_metric,1,1,==,1,1,pass,"copied R/X/B/rating/tap/shift/status",
+stage_a_local_identity,source_interior_zero_device_status,executed_metric,1,1,==,1,1,pass,"PD/QD/GS/BS and online generators",
+stage_a_local_identity,omitted_network_partition_valid,executed_metric,1,1,==,1,1,pass,"no unregistered local branch",
+stage_a_local_identity,source_kcl_residual_current_pu,executed_metric,1.01219456322449e-12,1e-07,<=,1,1,pass,"retained plus omitted terminal current",
+stage_a_local_identity,direct_max_p_error_mw,executed_metric,2.66879851551494e-11,1e-06,<=,1,1,pass,"Yf/Yt phasor recomputation",
+stage_a_local_identity,direct_max_q_error_mvar,executed_metric,1.87014848052058e-11,1e-06,<=,1,1,pass,"Yf/Yt phasor recomputation",
+stage_a_local_identity,injection_local_pf_converged,executed_metric,1,1,==,1,1,pass,"two fixed boundary phasors",
+stage_a_local_identity,injection_max_p_error_mw,executed_metric,7.21911419532262e-12,0.05,<=,1,1,pass,"source-derived omitted-network injections",
+stage_a_local_identity,injection_max_q_error_mvar,executed_metric,2.46984654950211e-11,0.1,<=,1,1,pass,"source-derived omitted-network injections",
+stage_a_local_identity,injection_max_interior_vm_error_pu,executed_metric,2.22044604925031e-16,1e-05,<=,1,1,pass,"four interior buses",
+stage_a_local_identity,injection_max_interior_va_error_deg,executed_metric,0,0.001,<=,1,1,pass,"four interior buses",
+stage_a_local_identity,fixed_boundary_vm_error_pu,executed_metric,2.22044604925031e-16,1e-10,<=,1,1,pass,"EDIC and RAMAPO",
+stage_a_local_identity,fixed_boundary_va_error_deg,executed_metric,0,1e-09,<=,1,1,pass,"EDIC and RAMAPO",
+stage_a_local_identity,s12_readonly_pf_converged,executed_metric,1,1,==,1,1,pass,"unmodified S12 reduction workspace",
+stage_a_local_identity,s12_retained_branch_mapping_complete,executed_metric,1,1,==,1,1,pass,"seven retained source rows",
+stage_a_local_identity,s12_max_p_error_mw,executed_metric,0.0847440891352846,0.2,<=,1,1,pass,"read-only oracle consistency",
+stage_a_local_identity,s12_max_q_error_mvar,executed_metric,0.00616057376196721,0.2,<=,1,1,pass,"read-only oracle consistency",
+stage_b_common_input,scale_convention_explicit,readiness_prerequisite,1,1,==,1,1,pass,"Six public 2019 patterns are similarity-scaled to the fixed NPCC-NY load magnitude.",
+stage_b_common_input,six_public_scenarios_complete,readiness_prerequisite,1,1,==,1,1,pass,"Expected six scenario rows and scenario-specific gamma values.",
+stage_b_common_input,common_zonal_p_q_generation_defined,readiness_prerequisite,1,1,==,1,1,pass,"A-K active load, PERFORM Q/P reactive load, and fuel-mix generation priors are explicit.",
+stage_b_common_input,s12_zonal_inputs_representable,readiness_prerequisite,1,1,==,1,1,pass,"S12 has the required zone load components and generation capacity.",
+stage_b_common_input,s13_zonal_loads_representable,readiness_prerequisite,1,1,==,1,1,pass,"Every A-K zone has an S13 load-allocation location.",
+stage_b_common_input,s13_zonal_generation_representable,readiness_prerequisite,0,1,==,1,0,blocked_fail_closed,"Nonzero source-backed zonal priors require S13 generation and sufficient PMAX.",common_input_prerequisite_not_met
+stage_b_common_input,s12_nine_groups_to_four_regions_mapped,readiness_prerequisite,1,1,==,1,1,pass,"Nine S12 P-32 groups are aggregated to HQ, ONTARIO, ISONE, and PJM.",
+stage_b_common_input,regional_public_targets_complete,readiness_prerequisite,1,1,==,1,1,pass,"Every group and regional aggregate has a finite scaled P-32 target.",
+stage_b_common_input,s13_regional_tie_rows_and_signs_verified,readiness_prerequisite,1,1,==,1,1,pass,"All ten full-NPCC NY boundary rows are assigned once with NY-import metering signs.",
+stage_b_common_input,unrepresentable_individual_controls_flagged,readiness_prerequisite,1,1,==,1,1,pass,"NPX/HTP/Neptune/VFT path controls are explicitly regional-only in S13.",
+stage_b_common_input,validated_full_npcc_tie_controller,readiness_prerequisite,0,1,==,1,0,blocked_fail_closed,"Pending bounded AC tie-flow control with corresponding external-area redispatch.",common_input_prerequisite_not_met
+stage_b_common_input,common_ac_loss_balance_policy,readiness_prerequisite,0,1,==,1,0,blocked_fail_closed,"Pending a common bounded loss-balancing participation rule.",common_input_prerequisite_not_met
+stage_b_common_input,common_voltage_control_policy,readiness_prerequisite,0,1,==,1,0,blocked_fail_closed,"S12 source controls and S13 inherited controls are not yet a common representable set.",common_input_prerequisite_not_met
+stage_b_common_input,no_s12_boundary_injections_added_to_s13,readiness_prerequisite,1,1,==,1,1,pass,"S13 retains exactly the S7 generator rows; S12 boundary records remain oracle-only.",
+stage_b_common_input,no_interface_flow_closure,readiness_prerequisite,1,1,==,1,1,pass,"This audit reads public interfaces only for schedules, never for internal-flow fitting.",
+stage_b_common_input,parent_branch_rxb_frozen,readiness_prerequisite,1,1,==,1,1,pass,"Every inherited S7 branch retains identical R/X/B.",
+stage_b_common_input,added_physical_branch_rxb_source_exact,readiness_prerequisite,1,1,==,1,1,pass,"Every Phase 1A physical branch retains source PERFORM R/X/B.",
+stage_b_common_input,no_residual_rxb_fit,readiness_prerequisite,1,1,==,1,1,pass,"No inherited or added physical branch admittance is fitted by this audit.",
+stage_b_same_snapshot,frozen_common_baseline_available,prerequisite,NaN,NaN,defined,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_b_same_snapshot,paired_standard_pf_executed,execution,NaN,1,==,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_b_same_snapshot,paired_q_limit_pf_executed,execution,NaN,1,==,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_b_same_snapshot,correct_E_G_flow_direction,system_response,NaN,1,==,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_b_same_snapshot,complete_E_G_cut_error,system_response,NaN,15,<=percent_or_150MW,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_b_same_snapshot,individual_physical_circuit_error,system_response,NaN,15,<=,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_b_same_snapshot,E_F_E_G_split_error_percentage_points,system_response,NaN,10,<=,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_b_same_snapshot,added_terminal_voltage_error_pu,system_response,NaN,0.02,<=,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_b_same_snapshot,added_terminal_aligned_angle_error_deg,system_response,NaN,2,<=,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_b_same_snapshot,internal_NY_active_loss_error_percent,system_response,NaN,15,<=,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_b_same_snapshot,legacy_DLR_current_error_percent,system_response,NaN,15,<=,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_b_same_snapshot,added_physical_branch_overload_count,system_response,NaN,0,==,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_c_heldout,requested_perturbation_manifest_complete,manifest,1,1,==,1,1,pass,"All requested perturbations have the complete 432-row metric schema.",
+stage_c_heldout,no_refit_policy,policy,1,1,==,1,1,pass,"No perturbation may refit S13.",
+stage_c_heldout,all_heldout_runs_executed,blocked_metric,NaN,1,==,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_c_heldout,physical_current_change_direction_all,blocked_metric,NaN,1,==,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_c_heldout,maximum_physical_delta_I_error_percent,blocked_metric,NaN,15,<=,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_c_heldout,E_G_cut_delta_P_error_percent,blocked_metric,NaN,15,<=,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+stage_c_heldout,response_regression_slope,blocked_metric,NaN,0.85,within_0.85_1.15,1,0,blocked_fail_closed,"Not evaluated without the frozen common baseline.",Frozen common S12/S13 baseline unavailable: s13_zonal_generation_representable; validated_full_npcc_tie_controller; common_ac_loss_balance_policy; common_voltage_control_policy
+orchestration,six_output_tables_built,artifact,1,1,==,1,1,pass,"All six output schemas, including this ledger, are constructed.",
+orchestration,promotion_remains_false,safety_policy,1,1,==,1,1,pass,"This runner cannot promote or tag S13.",

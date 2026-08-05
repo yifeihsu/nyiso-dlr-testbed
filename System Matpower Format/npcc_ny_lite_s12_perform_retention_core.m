@@ -1,7 +1,8 @@
 function mpc = npcc_ny_lite_s12_perform_retention_core
 %NPCC_NY_LITE_S12_PERFORM_RETENTION_CORE
 %   S12 reference oracle only. This dense PERFORM Ward/Kron reduction is not
-%   the promoted NPCC DLR testbed and must not supply equivalent branches to S13.
+%   the promoted NYISO DLR model and must not supply equivalent branches to
+%   either the S13-FULL construction parent or the future S14 operating case.
 
 %% MATPOWER Case Format : Version 2
 mpc.version = '2';

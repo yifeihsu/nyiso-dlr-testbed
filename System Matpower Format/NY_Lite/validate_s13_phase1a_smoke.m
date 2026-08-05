@@ -17,7 +17,7 @@ candidate = loadcase('npcc_ny_lite_s13_npcc_augmented_2019');
 
 cases = {base, candidate};
 case_id = ["s7_phase0_parent"; "s13_phase1a_candidate"];
-model_role = ["structural_parent"; "unpromoted_phase1a_candidate"];
+model_role = ["structural_parent"; "unpromoted_s13_candidate"];
 summary = table();
 pfopt = mpoption('verbose', 0, 'out.all', 0);
 qopt = mpoption('verbose', 0, 'out.all', 0, 'pf.enforce_q_lims', 1);

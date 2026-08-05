@@ -1,20 +1,21 @@
 category,setting,value,notes
-model,recommended_structural_parent,npcc_ny_lite_s7_seven_interface_perform_direct_candidate,Full NPCC-derived 143-bus parent retained until S13 passes every mandatory promotion gate
-model,promoted_operating_case,pending_s13_npcc_augmented_2019,Target name npcc_ny_lite_s13_npcc_augmented_2019; no S13 case is promoted yet
+model,structural_provenance_case,npcc_ny_lite_s7_seven_interface_perform_direct_candidate,Full NPCC-derived 143-bus provenance case and ancestor of S13-FULL
+model,construction_validation_parent,npcc_ny_lite_s13_npcc_augmented_2019,Full-NPCC S13-FULL parent used to append and validate source-backed NYISO detail
+model,promoted_operating_case,pending_npcc_ny_lite_s14_nyiso_dlr_operating_model,S14-NYISO will retain NYISO detail and replace only the non-NY network with a validated AC multi-terminal boundary equivalent
 model,diagnostic_reduced_case,npcc_ny_lite_s11_dlr_pf_base,49-bus NY-only benchmark for fast algorithm and reduced-model diagnostics only
-model,reference_case,npcc_ny_lite_s12_perform_retention_core,317-bus PERFORM Ward/Kron reduction used only as a calibration and validation oracle
-model,reference_case_role,calibration_and_validation_oracle_only,S12 does not supersede S7 and must not supply Kron-equivalent branches to S13
+model,reference_oracle,npcc_ny_lite_s12_perform_retention_core,317-bus PERFORM Ward/Kron reduction used only as a calibration and validation oracle
+model,reference_oracle_role,calibration_and_validation_oracle_only,S12 does not supersede S7 or S13-FULL and must not supply Kron-equivalent branches to S14
 model,source_dataset,full_PERFORM_2019_case,Highest-fidelity source for physical endpoints circuits controls and same-snapshot reference quantities
-model,topology_policy,preserve_original_npcc_and_append_selected_nyiso_detail,All original NPCC buses and branch identities remain traceable; no external area is replaced by a boundary equivalent
+model,topology_policy,s13_full_preserved_s14_nyiso_retention_with_external_multiport_equivalent,S13-FULL preserves the full NPCC network; S14 retains NYISO identities and reduces only the non-NY external network
 model,admittance_policy,append_physical_detail_and_residualize_overlap,Overlapping original aggregate branches may be refit only as passive registered residual equivalents
 model,target_data_vintage,2019 public hours (similarity-scaled),Retargeted 2026-07-20 from 2025 hours; not a raw-MW reproduction of actual NYISO snapshots
 reference_s12,case_size,317 buses / 3531 branches / 615 generators,359 physical branches plus 3172 Kron equivalent branches; oracle only
 reference_s12,snapshot_exactness,max 0.017 MW on 47 monitored circuits,Ward identity residual 3.7e-11 pu; voltage RMSE 1e-6 pu
 reference_s12,total_east_snapshot_operator,8 circuits,Committed snapshot sidecar is regenerated after s12_update_te_operator and checked by the default reproduction
-reference_s12,interface_operators,7 operators / 47 retained monitored circuits,Reference operators only; UPNY-ConEd and Dunwoodie require nonintersecting S13 cutsets
+reference_s12,interface_operators,7 operators / 47 retained monitored circuits,Reference operators only; UPNY-ConEd and Dunwoodie require nonintersecting S13-FULL cutsets inherited by S14
 reference_s12,seasonal_priors,NYISO rtfuelmix 2019 + NYGenUCV4 winter capacities,Unit outputs are capability-proportional constructed priors; closed dispatch is not observed historical dispatch
 reference_s12,device_controls,34 switched shunts preserved; PARs/taps absent in source RAW,Use fixed snapshot values or bounded documented calibration variables where controls are unsupported
-reference_s12,scenario_pf_success,6 / 6 standard and 6 / 6 Q-limit enforced,Reference-oracle result; does not establish S13 promotion
+reference_s12,scenario_pf_success,6 / 6 standard and 6 / 6 Q-limit enforced,Reference-oracle result; does not establish S14 promotion
 reference_s12,all_hour_objective_closed,0.055790,In-sample reference closure on fixed 2019 scales; not a promotion comparison
 reference_s12,all_hour_objective_forward,1.587072,Prior-only forward dispatch with no interface fitting
 reference_s12,closure_movement_range_mw,1734 to 2970 scaled,16-27 percent of NY load; closed dispatch is a feasibility benchmark only
@@ -22,20 +23,37 @@ model,base_mva,100,MATPOWER system base
 structural_parent,s7_bus_count,143,Original 140 plus three zero-load transit buses
 structural_parent,s7_branch_count,246,Full NPCC-derived topology including the existing NY delivery spine
 structural_parent,s7_generator_count,62,Original units plus fourteen zonal equivalents
-s13_phase1a,status,unpromoted_candidate,Physical E-G overlay built; passive residualization and operating-response gates remain pending
+s13_phase1a,status,s13_full_construction_checkpoint,Physical E-G overlay built in the full-NPCC construction parent; residual and response evidence remain pending
+s13_phase1a,metadata_schema_version,2,Machine-readable role and false-status fields are structurally validated and mutation-tested
 s13_phase1a,case_name,npcc_ny_lite_s13_npcc_augmented_2019,Target filename does not imply promotion
 s13_phase1a,case_size,147 buses / 253 branches / 62 generators,S7 plus four PERFORM terminals and seven direct physical branches
 s13_phase1a,source_bus_additions,1228|1222|1567|772,Fraser|Coopers Corner|Marcy|Rock Tavern
 s13_phase1a,source_branch_rows,2137|2131|2154|2133|1567|1568|1571,Direct full-PERFORM R/X/B and RATE_A/B/C; no invented attachment impedance
-s13_phase1a,structural_preservation,28 / 28 pass,All mandatory structural gates pass; five promotion-only gates remain fail-closed
-s13_phase1a,artifact_consistency,7 / 7 pass,All committed S13 bus branch residual shunt path physical and operator CSVs exactly match fresh in-memory registers
-s13_phase1a,adversarial_validator,9 / 9 pass,Durable isolated mutations include committed-CSV truncation; no premature exceptions
-s13_phase1a,repository_ci,s13-artifact-integrity,Pull requests main/codex pushes and manual dispatch run structural artifact adversarial S12 sidecar and inherited-snapshot standard-PF smoke checks; Q-limit smoke is reported but not asserted
+s13_phase1a,structural_preservation,29 / 29 pass,All mandatory structural gates including cumulative metadata coherence pass; five construction-validation gates remain fail-closed
+s13_phase1a,artifact_consistency,7 / 7 registers + 1 / 1 ledger pass,All canonical S13 registers and the structural-gate ledger exactly match fresh in-memory tables
+s13_phase1a,adversarial_validator,20 / 20 pass,Durable isolated mutations include malformed metadata shapes schema and false-status claims placeholder and non-key phase-report divergence plus committed-CSV truncation
+s13_phase1a,local_identity,20 / 20 pass,Exact seven-branch phasor model omitted-network injection fixture RAW circuit IDs and S12 retained-row oracle checks
+s13_phase1a,local_identity_max_source_error,2.67e-11 MW / 1.87e-11 MVAr,Direct Yf/Yt recomputation from solved full-PERFORM phasors
+s13_phase1a,local_identity_max_s12_error,0.084744 MW / 0.006161 MVAr,Read-only S12 retained physical-circuit comparison; S12 remains oracle only
+s13_phase1a,zero_injection_fixture,diagnostic only,Maximum 0.003042 pu and 2.44455 degrees; omitted branch exchanges are required for the exact local fixture
+s13_phase1a,common_input_readiness,14 / 18 pass fail-closed,Fifteen A/B/C/E/H scenario-zone generation rows plus full-NPCC tie control AC loss balance and common voltage-control policies block the optional S13-FULL paired diagnostic
+s13_phase1a,same_snapshot_system_comparison,pending,No paired S12/S13-FULL PF is run until the common aggregate input and external tie controls are representable without boundary-injection double counting
+s13_phase1a,heldout_response,pending,No held-out library is run before a frozen converged no-fit common baseline exists
+s13_phase1a,oracle_preflight_gates,38 / 59 pass fail-closed,Stage A and schema-policy evidence pass while common-baseline system and held-out response gates remain blocked
+s13_phase1a,oracle_artifact_consistency,12 / 12 pass,Local readiness blocked system comparison circuit summary held-out summary 432-row metric manifest and gate ledger are canonical LF matches
+s13_phase1a,heldout_metric_manifest,432 blocked rows,All 12 perturbations register seven-circuit delta P/Q/current six-terminal delta VM/VA and E-G/E-F/loss metrics with no refit and pending balancing policy
+s13_phase1a,repository_ci,s13-artifact-integrity,Pull requests main/codex pushes and manual dispatch run structural register adversarial S12 sidecar S13.1 preflight 12 evidence-artifact and inherited-snapshot standard-PF smoke checks; Q-limit smoke is reported but not asserted
 s13_phase1a,legacy_snapshot_standard_pf,pass / pass,S7 Phase 0 parent and S13 candidate both converge; smoke test only
-s13_phase1a,legacy_snapshot_q_limit_pf,fail / fail,Inherited S7 snapshot limitation; not a 2019 same-snapshot or promotion test
+s13_phase1a,legacy_snapshot_q_limit_pf,fail / fail,Inherited S7 snapshot limitation; not a 2019 same-snapshot test or S14 promotion gate
 s13_phase1a,residualization,pending,Rows 34|36 are physical-overlap residual candidates; rows 40|42 are frozen adjacent calibration candidates pending paired response evidence and strong regularization
-s13_phase1a,promotion_eligible,false,Same-snapshot S12 paired comparison held-out response and six-hour gates remain pending
-diagnostic_s11,network_form,NY boundary equivalent,Diagnostic only; this form is not the promoted NPCC testbed
+s13_phase1a,construction_source_qualified,false,Phase 1B Phase 1C passive residualization and a frozen solved reduction-source state remain pending
+s13_phase1a,promotion_eligible,false,S13-FULL is a construction and validation parent rather than the DLR delivery model under every gate outcome
+s14_nyiso,status,pending_retention_and_external_equivalent,No S14 case exists yet; Phase 1B and 1C topology plus a passive external multi-port realization remain prerequisites
+s14_nyiso,target_case_name,npcc_ny_lite_s14_nyiso_dlr_operating_model,Future NYISO-focused DLR operating model and only case eligible for promotion
+s14_nyiso,retention_policy,zones_A_to_K_plus_physical_overlays_and_boundary_terminals,Retain NYISO buses circuits controls DLR terminals NY-side tie terminals and selected first external terminals
+s14_nyiso,external_equivalent_policy,reduce_only_non_ny_npcc_as_ac_multi_terminal_equivalent,Preserve boundary coupling losses and reactive exchange without copying S12 Kron branches or using one unlimited slack
+s14_nyiso,promotion_eligible,false,Retention register reduction controls same-snapshot response and six-hour operating gates are not yet implemented
+diagnostic_s11,network_form,NY boundary equivalent,Diagnostic only; this historical reduced form is not S14-NYISO
 diagnostic_s11,ny_bus_count,49,NY-only reduced benchmark derived from the S7 structural parent
 diagnostic_s11,ny_branch_count,81,NY-only reduced benchmark before S11 physical-circuit additions
 diagnostic_s11,ny_internal_generator_count,35,Before eight external boundary equivalents
