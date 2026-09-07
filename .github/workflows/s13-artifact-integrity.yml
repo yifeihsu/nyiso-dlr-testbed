@@ -7,6 +7,7 @@ on:
       - ".gitattributes"
       - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
+      - "run_electrical_model_reproduction.m"
       - "LATEST_MODEL_CONFIGURATION.csv"
       - "System Matpower Format/NY_Lite/**"
       - "System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m"
@@ -20,6 +21,7 @@ on:
       - ".gitattributes"
       - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
+      - "run_electrical_model_reproduction.m"
       - "LATEST_MODEL_CONFIGURATION.csv"
       - "System Matpower Format/NY_Lite/**"
       - "System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m"
@@ -45,6 +47,7 @@ jobs:
         uses: matlab-actions/setup-matlab@v3
         with:
           release: R2026a
+          products: Optimization_Toolbox
 
       - name: Validate committed model artifacts
         uses: matlab-actions/run-command@v3
@@ -61,8 +64,8 @@ jobs:
             s14_promotion_scope = strcmp(policy.category, 's14_nyiso') & strcmp(policy.setting, 'promotion_eligible');
             assert(nnz(s14_promotion_scope) == 1 && nnz(s14_promotion_scope & strcmp(policy.value, 'false')) == 1);
             s14_status_scope = strcmp(policy.category, 's14_nyiso') & strcmp(policy.setting, 'status');
-            assert(nnz(s14_status_scope) == 1 && nnz(s14_status_scope & strcmp(policy.value, 'pending_retention_and_external_equivalent')) == 1);
-            assert(~isfile(fullfile(pwd, 'System Matpower Format', 'npcc_ny_lite_s14_nyiso_dlr_operating_model.m')) && ~isfile(fullfile(pwd, 'System Matpower Format', 'NY_Lite', 'build_s14_nyiso_retention_set.m')) && ~isfile(fullfile(pwd, 'System Matpower Format', 'NY_Lite', 's14_nyiso_retention_set.csv')));
+            assert(nnz(s14_status_scope) == 1 && nnz(s14_status_scope & strcmp(policy.value, 'unpromoted_electrical_diagnostics_implemented')) == 1);
+            assert(~isfile(fullfile(pwd, 'System Matpower Format', 'npcc_ny_lite_s14_nyiso_dlr_operating_model.m')) && isfile(fullfile(pwd, 'System Matpower Format', 'NY_Lite', 'build_s14_nyiso_retention_set.m')));
             s7 = loadcase('npcc_ny_lite_s7_seven_interface_perform_direct_candidate');
             assert(~s7.userdata.ny_lite.s7_seven_interface_calibration.promotion_eligible);
             s12 = loadcase('npcc_ny_lite_s12_perform_retention_core');
@@ -97,3 +100,11 @@ jobs:
             assert(phase1b_adversarial.all_expected_gates_observed && height(phase1b_adversarial.results) == 9 && nnz(phase1b_adversarial.results.pass) == 9);
             phase1b_smoke = validate_s13_phase1b_smoke(struct('write_outputs', false, 'fail_on_standard_pf', true, 'verbose', false));
             assert(phase1b_smoke.standard_pf_all_pass && height(phase1b_smoke.summary) == 3 && nnz(phase1b_smoke.summary.standard_pf_success) == 3 && ~phase1b_smoke.construction_source_qualified && ~phase1b_smoke.promotion_eligible);
+
+      - name: Validate electrical candidate implementation
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(genpath(fullfile(getenv('RUNNER_TEMP'), 'matpower')));
+            electrical = run_electrical_model_reproduction(struct('write_outputs', false, 'run_operating_diagnostic', false));
+            assert(all(electrical.tests.passed) && electrical.reduction.direct_passed && electrical.direct.reduction_metrics_passed && ~electrical.promotion_eligible);

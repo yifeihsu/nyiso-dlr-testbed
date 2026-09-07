@@ -1,2 +1,5 @@
 # Evidence CSVs are serialized and validated byte-for-byte with canonical LF.
 *.csv text eol=lf
+# Original NYISO archive members retain their raw bytes and published-source
+# fingerprints. Generated evidence CSVs above still use canonical LF.
+"System Matpower Format/NY_Lite/contemporary_source_data/*.csv" -text !eol whitespace=cr-at-eol

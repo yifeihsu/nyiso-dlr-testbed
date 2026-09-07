@@ -6,9 +6,12 @@
 **Construction and validation parent:** `npcc_ny_lite_s13_npcc_augmented_2019` (`S13-FULL`)
 **Promoted operating case:** pending `npcc_ny_lite_s14_nyiso_dlr_operating_model` (`S14-NYISO`)
 **Reference oracle:** `npcc_ny_lite_s12_perform_retention_core`
-**Current status:** S7 preserves structural provenance; S13-FULL preserves the
-full NPCC construction network; S11 is diagnostic only; S12 is an oracle only;
-and no S14 operating case has been built or promoted.
+**Current status (2026-09-06):** The historical Phase 1B wrapper and evidence
+remain preserved. A separate Phase 1C electrical candidate, contemporary input
+registers, bounded AC reconstruction and passive S14 diagnostic reduction are
+implemented. No S14 operating case has been promoted. See
+[electrical implementation and remaining gates](ELECTRICAL_MODEL_IMPLEMENTATION.md)
+and run `run_electrical_model_reproduction` for the new evidence.
 
 ## 1. Executive Summary
 
@@ -54,8 +57,11 @@ original NPCC bus IDs and branch records remain traceable in S13-FULL. No
 external NPCC area may be replaced inside S13-FULL, and no S12 Kron-equivalent
 branch may enter S13-FULL or S14. S14 may eliminate only non-NY detail after
 retaining the NYISO network, physical overlays, controls, DLR terminals, and
-registered boundary terminals. Added physical circuits may receive DLR
-conductor data; aggregate, residual, and boundary-equivalent branches may not.
+registered boundary terminals. The revised research contract permits both
+source-traceable overhead circuits and explicitly realized synthetic overhead
+corridors to receive future thermal models after consistency checks. Arbitrary
+residual and boundary equivalents remain nonthermal. A synthetic realization
+does not establish physical provenance.
 
 Topology is append-only, but admittance is not blindly additive. When an
 original NPCC branch already embeds a newly explicit physical path, that

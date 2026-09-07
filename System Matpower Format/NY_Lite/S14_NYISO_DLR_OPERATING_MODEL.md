@@ -1,7 +1,9 @@
 # S14-NYISO: retained-network DLR operating model
 
 **Target case:** `npcc_ny_lite_s14_nyiso_dlr_operating_model`
-**Status:** pending; no S14 case, reducer, or promotion artifact exists
+**Status (2026-09-06):** diagnostic retention, passive reducer, bounded snapshot
+sources and independent replay are implemented; operating promotion remains
+pending. See `ELECTRICAL_MODEL_IMPLEMENTATION.md` at the repository root.
 **Construction and validation parent:** `npcc_ny_lite_s13_npcc_augmented_2019` (`S13-FULL`)
 **Reference oracle:** `npcc_ny_lite_s12_perform_retention_core`
 **Highest-fidelity source:** full PERFORM 2019 case
@@ -37,8 +39,10 @@ S14 may eliminate:
   multi-port realization.
 
 No S12 Ward/Kron branch, historical S11 boundary injection, or single unlimited
-external slack may enter S14. Only one-to-one physical circuits with completed
-conductor and weather provenance may be DLR-eligible.
+external slack may enter S14. Source-traceable overhead circuits and explicitly
+realized synthetic overhead corridors may be DLR-eligible only after their
+own current/resistance/heating tests. Arbitrary residual and external boundary
+equivalents remain nonthermal; synthetic assumptions never imply physical identity.
 
 ## Safe implementation order
 
@@ -69,9 +73,10 @@ ten source tie rows. The remaining 155 external-external rows, including the
 existing connection between external terminals 124 and 125, belong to the
 eventual external-network reduction. These are historical Phase 1A diagnostic
 counts and are already stale relative to the cumulative Phase 1B checkpoint.
-They are a read-only manual design audit, not a promotion gate or canonical
-artifact. No S14 retention builder may be created until Phase 1C and the
-required S13-FULL construction-source gates are complete.
+They are a read-only historical design audit, not a promotion gate. Diagnostic
+retention and reduction can now be executed on unqualified construction
+snapshots, with source qualification explicitly false. Final operating ports
+and promotion remain contingent on completed construction-source gates.
 
 | Boundary group | NY-side buses | Provisional first external terminals |
 |---|---|---|
@@ -127,7 +132,7 @@ audit regenerates the multi-port and its passive-realization evidence.
 
 ## Planned artifacts
 
-The implementation phase will create, but this checkpoint does not fabricate:
+The original implementation inventory was:
 
 - `build_s14_nyiso_retention_set.m`;
 - `s14_nyiso_retention_set.csv`;

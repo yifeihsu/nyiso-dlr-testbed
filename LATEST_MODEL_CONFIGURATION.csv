@@ -69,12 +69,24 @@ s13_phase1b,repository_ci,s13-artifact-integrity,Cumulative structural and regis
 s13_phase1b,legacy_snapshot_standard_pf,3 / 3 pass,S7 Phase 0 immutable Phase 1A and cumulative Phase 1B converge; diagnostic only
 s13_phase1b,legacy_snapshot_q_limit_pf,1 / 3 pass,Only cumulative Phase 1B converges in this inherited snapshot; not a common-2019 operating gate
 s13_phase1b,construction_source_qualified,false,Phase 1C passive residualization operating-source qualification and a frozen solved reduction-source state remain pending
-s13_phase1b,dlr_delivery_eligible,false,S13-FULL remains permanently ineligible for delivery and S14-NYISO remains unbuilt
-s14_nyiso,status,pending_retention_and_external_equivalent,No S14 case exists yet; Phase 1C topology passive internal residualization operating-source qualification and a passive external multi-port remain prerequisites
+s13_phase1b,dlr_delivery_eligible,false,S13-FULL remains permanently ineligible for delivery; separate S14 electrical diagnostics do not imply operating promotion
+s14_nyiso,status,unpromoted_electrical_diagnostics_implemented,Diagnostic retention passive external reduction bounded snapshot sources and replay implemented; source qualification overlap resolution and independent behavior gates remain pending
 s14_nyiso,target_case_name,npcc_ny_lite_s14_nyiso_dlr_operating_model,Future NYISO-focused DLR operating model and only case eligible for promotion
 s14_nyiso,retention_policy,zones_A_to_K_plus_physical_overlays_and_boundary_terminals,Retain NYISO buses circuits controls DLR terminals NY-side tie terminals and selected first external terminals
 s14_nyiso,external_equivalent_policy,reduce_only_non_ny_npcc_as_ac_multi_terminal_equivalent,Preserve boundary coupling losses and reactive exchange without copying S12 Kron branches or using one unlimited slack
-s14_nyiso,promotion_eligible,false,Retention register reduction controls same-snapshot response and six-hour operating gates are not yet implemented
+s14_nyiso,promotion_eligible,false,Implemented diagnostic reduction does not satisfy pending overlap current-vintage input and operating qualification gates
+s13_phase1c,status,separate_partial_electrical_construction_candidate,Historical Phase1B case wrapper and its canonical evidence remain unchanged
+s13_phase1c,case_size,170 buses / 315 branches / 62 generators,21 source terminals and 53 exact source electrical elements including transformers
+s13_phase1c,operating_allocation,conserved_zonal_load_and_bounded_generation_redistribution,Separate reconstructed spatial allocation; source unlimited Q placeholders are not copied
+s13_phase1c,overlap_resolution,pending_source_backed_port_targets,Eight additional possible overlaps remain registered and unchanged
+electrical_review,reproduction,run_electrical_model_reproduction,Separate implementation test ledger and scientific qualification ledger under output/electrical_model_review
+electrical_review,bounded_ac_reconstruction,implemented_fixed_network_and_finite_controls,Generation priors regional terminal-flow operators voltages P/Q capability branch ratings and AC loss accounting; no automatic promotion
+electrical_review,residual_fit,implemented_registered_passive_port_admittance_fit,Requires matching target bases vintage and source; real corridor fits await source-backed targets
+contemporary_research,infrastructure_cutoff,2026-09-06,Nine source-dated infrastructure records do not imply completed electrical parameter mapping
+contemporary_research,power_scale,actual_mw,Public statewide variation retained; historical scaled-pattern targets remain separate
+contemporary_research,public_load_inputs,72 hourly points / 792 zonal observations,Authentic NYISO August 1 15 and 25 2026 integrated load; other matched operating observations remain unavailable
+contemporary_research,generator_inventory,historical_rows_not_redated,Current unit crosswalk and capabilities remain unverified
+contemporary_research,branch_classes,physical_overhead_synthetic_overhead_nonthermal,Explicit synthetic realizations permitted without claiming physical provenance; no thermal implementation in this change
 diagnostic_s11,network_form,NY boundary equivalent,Diagnostic only; this historical reduced form is not S14-NYISO
 diagnostic_s11,ny_bus_count,49,NY-only reduced benchmark derived from the S7 structural parent
 diagnostic_s11,ny_branch_count,81,NY-only reduced benchmark before S11 physical-circuit additions
