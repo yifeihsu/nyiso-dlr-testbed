@@ -5,10 +5,16 @@ function out = reconstruct_ac_operating_point(source, controls, options)
 % target_mw and tolerance_mw constrain their aggregate, never individual ties.
 % All generators (including the angle-reference bus) obey finite P/Q limits.
 % No economic objective, network fit, added support, or load shedding occurs.
+% options.solver='matpower_prior' minimizes native P-prior deviations using
+% bounded MIPS AC OPF, followed by the same independent fixed-input PF gates.
+% This prior-only backend has no voltage/reactive penalty or interface fit.
 if nargin < 2, controls = struct(); end
 if nargin < 3, options = struct(); end
 options = defaults(options, 'max_iterations', 500, 'verbose', false, ...
-    'tolerance', 1e-6, 'voltage_sigma', 0.05, 'reactive_sigma_mvar', 100);
+    'tolerance', 1e-6, 'voltage_sigma', 0.05, 'reactive_sigma_mvar', 100, 'solver', 'fmincon');
+assert(ismember(string(options.solver),["fmincon","matpower_prior"]),'Unknown reconstruction solver.');
+assert(~(string(options.solver)=="matpower_prior"&&isfield(controls,'operator_from')), ...
+    'reconstruct_ac_operating_point:PriorOnly','The MATPOWER backend is prior-only; no operator constraints allowed.');
 [~,~,REF,~,~,BUS_TYPE,PD,QD,GS,~,~,VM,VA,~,~,VMAX,VMIN]=idx_bus;
 [GEN_BUS,PG,QG,QMAX,QMIN,VG,~,GEN_STATUS,PMAX,PMIN]=idx_gen;
 [F_BUS,T_BUS,~,~,~,RATE_A,~,~,~,~,~,PF,QF,PT,QT,~,~,ANGMIN,ANGMAX]=idx_brch;
@@ -56,13 +62,18 @@ x0 = [va0;vm0;min(m.gen(:,PMAX)/base,max(m.gen(:,PMIN)/base,prior)); ...
 % A bounded MATPOWER reconstruction seeds large cases before regional flow
 % constraints are added. Its quadratic cost penalizes prior deviation only.
 seed_success=false;
-if n>30
+if n>30 || string(options.solver)=="matpower_prior"
     seed=m; seed=rmfield(seed,'order');
     seed.gencost=[2*ones(g,1),zeros(g,2),3*ones(g,1), ...
         1./(sigma*base).^2,-2*prior*base./(sigma*base).^2, ...
         (prior./sigma).^2];
     try
-        seed=runopf(seed,mpoption('verbose',0,'out.all',0,'opf.ac.solver','MIPS'));
+        seed_options=mpoption('verbose',0,'out.all',0,'opf.ac.solver','MIPS');
+        if string(options.solver)=="matpower_prior"
+            seed_options=mpoption(seed_options,'opf.violation',min(1e-8,options.tolerance/100), ...
+                'mips.feastol',min(1e-9,options.tolerance/1000));
+        end
+        seed=runopf(seed,seed_options);
         seed_success=logical(seed.success);
         if seed_success
             angles=seed.bus(:,VA)*pi/180;
@@ -96,12 +107,18 @@ rate=m.branch(limited,RATE_A)/base;
 al=isfinite(angle_min);au=isfinite(angle_max);
 vref=min(m.bus(:,VMAX),max(m.bus(:,VMIN),ones(n,1)));
 qprior=m.gen(:,QG)/base; qs=options.reactive_sigma_mvar/base;
-opts=optimoptions('fmincon','Algorithm','interior-point','Display','off', ...
-    'SpecifyObjectiveGradient',true,'SpecifyConstraintGradient',true, ...
-    'HessianApproximation','lbfgs','MaxIterations',options.max_iterations, ...
-    'ConstraintTolerance',options.tolerance/10,'OptimalityTolerance',1e-6, ...
-    'StepTolerance',1e-12);
-[x,cost,exitflag,solver]=fmincon(@objective,x0,[],[],[],[],lb,ub,@constraints,opts);
+if string(options.solver)=="matpower_prior"
+    x=x0;exitflag=double(seed_success);cost=sum(((x(2*n+1:2*n+g)-prior)./sigma).^2);
+    solver=struct('algorithm','MATPOWER MIPS bounded prior-only AC OPF','converged',seed_success);
+    if isfield(seed,'raw'),solver.details=seed.raw.output;end
+else
+    opts=optimoptions('fmincon','Algorithm','interior-point','Display','off', ...
+        'SpecifyObjectiveGradient',true,'SpecifyConstraintGradient',true, ...
+        'HessianApproximation','lbfgs','MaxIterations',options.max_iterations, ...
+        'ConstraintTolerance',options.tolerance/10,'OptimalityTolerance',1e-6, ...
+        'StepTolerance',1e-12);
+    [x,cost,exitflag,solver]=fmincon(@objective,x0,[],[],[],[],lb,ub,@constraints,opts);
+end
 [initial_ineq,initial_eq]=constraints(x0);
 [ineq,eq]=constraints(x);
 constraint_error=max([0;ineq;abs(eq);lb-x;x-ub]);
@@ -154,6 +171,7 @@ out=struct('result',result,'fixed_input_pf',pf, ...
     'operator_mw',base*(Af*real(Sf/base)+At*real(St/base)), ...
     'network_loss_mw',sum(real(Sf+St)), ...
     'bus_shunt_loss_mw',sum(result.bus(:,GS).*result.bus(:,VM).^2));
+out.solver_backend=string(options.solver);
 out.accounting_error_mw=sum(result.gen(online,PG))-sum(result.bus(:,PD))- ...
     out.network_loss_mw-out.bus_shunt_loss_mw;
 out.success=out.success && abs(out.accounting_error_mw)<=base*options.tolerance*n;

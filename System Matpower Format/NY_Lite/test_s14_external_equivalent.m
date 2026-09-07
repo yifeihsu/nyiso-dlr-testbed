@@ -86,6 +86,13 @@ iface=table("synthetic_NY_interface",1,1,'VariableNames', ...
 validation=validate_s14_against_s13_full(source,a,struct('interface_map',iface));
 assert(validation.passed&&~validation.public_target_fit_evaluated&&~validation.promotion_eligible);
 names(end+1)="independent_direct_source_gate_replay";passed(end+1)=true;values(end+1)=0;
+assert(validation.reduction_metrics_passed && ...
+    any(validation.required_reduction_metrics=="registered_interface_max_error_mw"));
+missing_operator=validate_s14_against_s13_full(source,a);
+interface_gate=missing_operator.gates.metric=="registered_interface_max_error_mw";
+assert(~missing_operator.reduction_metrics_passed && ~missing_operator.gates.passed(interface_gate) && ...
+    missing_operator.gates.status(interface_gate)=="unavailable_no_registered_operator");
+names(end+1)="missing_interface_blocks_named_reduction_gate";passed(end+1)=true;values(end+1)=0;
 bad=source;bad.gen(2,[4 5])=[Inf -Inf];
 unbounded=build_s14_external_equivalent(bad,opts);
 checked=validate_s14_against_s13_full(bad,unbounded);

@@ -1,5 +1,13 @@
 # Electrical work from the September 2026 review
 
+This report records the earlier electrical diagnostic implementation. The
+current next-step contract is the NY-only Package A foundation, implemented
+by `run_ny_only_foundation` and independently replayed by
+`replay_ny_only_foundation`. See the
+[bounded historical reference results](output/ny_only_package_a/NY_ONLY_FOUNDATION_RESULTS.md).
+External NPCC qualification and the optional external reduction below are
+not prerequisites for that foundation or the subsequent NY-only candidate.
+
 The review correctly separates electrical qualification from assumed conductor
 realization. This change implements the electrical construction, input,
 reconstruction, residual-fit and external-reduction workflows. It does **not**
