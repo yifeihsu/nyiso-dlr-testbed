@@ -44,5 +44,29 @@ bad.gen=[bad.gen;g];bad=rmfield(bad,'gencost');
 a=audit_ny_ac_reference(bad);
 assert(~a.passed&&a.summary.excluded_online_generator_present);
 tests(end+1)="online_reactive_source_at_excluded_bus_rejected";
+% A single zero angle endpoint is a real bound. Only the pair [0,0]
+% disables angle limits; MATPOWER's one-sided conventions must be preserved.
+angles=m.bus(m.branch(:,F_BUS),VA)-m.bus(m.branch(:,T_BUS),VA);
+positive=find(angles>1,1);negative=find(angles< -1,1);
+assert(~isempty(positive)&&~isempty(negative));
+bad=m;bad.branch(positive,[ANGMIN ANGMAX])=[-360 0];
+a=audit_ny_ac_reference(bad);
+assert(~a.passed&&a.branch.angle_above_max_deg(positive)>1);
+tests(end+1)="one_sided_zero_upper_angle_limit_rejected";
+bad=m;bad.branch(negative,[ANGMIN ANGMAX])=[0 360];
+a=audit_ny_ac_reference(bad);
+assert(~a.passed&&a.branch.angle_below_min_deg(negative)>1);
+tests(end+1)="one_sided_zero_lower_angle_limit_rejected";
+bad=m;bad.branch(positive,[ANGMIN ANGMAX])=[-361 0];
+a=audit_ny_ac_reference(bad);
+assert(~a.passed&&a.branch.angle_above_max_deg(positive)>1);
+tests(end+1)="unbounded_lower_does_not_disable_zero_upper_angle_limit";
+bad=m;bad.branch(negative,[ANGMIN ANGMAX])=[0 361];
+a=audit_ny_ac_reference(bad);
+assert(~a.passed&&a.branch.angle_below_min_deg(negative)>1);
+tests(end+1)="unbounded_upper_does_not_disable_zero_lower_angle_limit";
+bad=m;bad.branch(:,[ANGMIN ANGMAX])=0;
+a=audit_ny_ac_reference(bad);assert(a.passed);
+tests(end+1)="paired_zero_angle_limits_remain_unrestricted";
 report=table(tests(:),true(numel(tests),1),'VariableNames',{'test','passed'});disp(report);
 end

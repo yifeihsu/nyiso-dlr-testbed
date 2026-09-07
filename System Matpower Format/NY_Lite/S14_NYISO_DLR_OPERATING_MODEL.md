@@ -2,13 +2,13 @@
 
 **Target case:** `npcc_ny_lite_s14_nyiso_dlr_operating_model`
 
-**Contract revision:** 2026-09-07, Package A (Steps 1–4)
+**Contract revision:** 2026-09-07, Packages A and B (Steps 1–5)
 
 **Operating form:** New York network with explicit NY-side boundary injections
 
 **Electrical qualification:** determined by operating-result artifacts, never by this specification
 
-**Reproduction entry point:** `run_ny_only_foundation`
+**Reproduction entry points:** `run_ny_only_foundation`, `run_ny_only_regional_candidate`
 
 ## Model roles and scope
 
@@ -132,7 +132,35 @@ Package A ends with one qualified historical NY-only source reference or a
 quantified report of the remaining repairs. This benchmark does not commit
 the operating project to the entire PERFORM network. Internal replacement,
 contemporary asset realization/calibration and full electrical release
-validation belong to later Packages B, C and D respectively.
+validation are separate stages.
+
+## Package B: complete regional reconstruction
+
+The historical operating candidate is available as
+`npcc_ny_lite_s14_ny_only_regional_candidate`. It contains 855 original-source
+D-K buses and23 retained NPCC A-C buses, with1375 branches and595 generator
+records. Row235 Pleasant Valley-Wood Street is first proven to be the exact
+parallel equivalent of the two explicit source circuits and retired. The
+regional package then retires every inherited D-K incident contribution and
+all legacy NY bus/gen injections before applying source-keyed devices once.
+
+Other old paths have assumed functional correspondence; their original
+parameters and historical alternative remain in provenance. NPCC A-C topology,
+source-load aggregation and merged local controls remain explicit research
+assumptions. Exact branch identity at common terminal phasors does not prove
+upstream response equivalence. Separate independently solved source-response
+tables quantify voltage and P/Q/current differences without inventing an
+acceptance threshold.
+
+The accepted MIPS prior-only AC reconstruction and independent fixed-input
+PF preserve actual source demand, fixed Package A boundary P/Q, finite native
+P/Q limits, voltage envelopes and branch parameters. The assumed Marcy support
+remains P=0,Q bounded to plus/minus900MVAr. Failed smaller variants are retained.
+`replay_ny_only_regional_candidate` verifies frozen input hashes and source
+accounting against a fresh construction before running PF without optimization.
+This qualifies one assumed historical electrical baseline. Contemporary
+realization and broader response validation remain Packages C and D; overhead
+thermal eligibility and DLR readiness remain false.
 
 ## Optional external-reduction experiment
 

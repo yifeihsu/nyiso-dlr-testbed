@@ -1,30 +1,31 @@
 # NPCC-NY Lite Calibration Project Handoff
 
 **Original handoff date:** 2026-07-12
-**Model-contract update:** 2026-09-07 (Package A: NY-only foundation)
+**Model-contract update:** 2026-09-07 (Package B: NY-only regional reconstruction)
 **Structural provenance case:** `npcc_ny_lite_s7_seven_interface_perform_direct_candidate`
 **Construction and validation parent:** `npcc_ny_lite_s13_npcc_augmented_2019` (`S13-FULL`)
 **Promoted operating case:** pending `npcc_ny_lite_s14_nyiso_dlr_operating_model` (`S14-NYISO`)
 **Reference oracle:** `npcc_ny_lite_s12_perform_retention_core`
-**Current scope:** Package A establishes a NY-only historical reference with
-explicit boundary injections and declared finite native controls. Use
-`run_ny_only_foundation` for source reproduction, bounded-reference attempts
-and independent replay. Its operating artifacts determine electrical
-qualification; contemporary validation coverage and DLR readiness remain
-separate. The historical Phase 1B wrapper, Phase 1C construction candidate and
-86-bus external-reduction experiment retain their original meaning. No final
-S14 delivery case is promoted by this contract update. The earlier
+**Current scope:** Package B establishes a bounded historical NY-only regional
+candidate: 855 source D-K buses plus 23 retained NPCC A-C buses,1375 branches
+and595 generator records. `run_ny_only_regional_candidate` rebuilds its complete
+device replacement and bounded operating evidence; `replay_ny_only_regional_candidate`
+independently verifies the frozen case. The [Package B implementation](NY_ONLY_PACKAGE_B_IMPLEMENTATION.md)
+and [generated results](output/ny_only_package_b/NY_ONLY_REGIONAL_RESULTS.md)
+describe its assumptions and exact scope. The historical Phase 1B wrapper,
+Phase 1C construction candidate, Package A source reference and 86-bus
+external-reduction experiment retain their original meaning. No final
+contemporary or DLR delivery case is promoted. The earlier
 [electrical implementation report](ELECTRICAL_MODEL_IMPLEMENTATION.md) and
 `run_electrical_model_reproduction` remain historical diagnostic references.
 
-The accepted Package A status is scoped to **one assumed 2019 historical
-source reference**, with bounded prior-only reconstruction and independent AC
-replay. It does not qualify the final NPCC-derived S14 candidate or validate
-contemporary assets. The accepted reference uses no relaxed nodal balance or
-fictitious injections; exact operating quantities are recorded by the
-foundation runner rather than copied from solver probes. Both the final S14
-candidate's electrical qualification and all DLR readiness statuses remain
-false.
+Package A qualifies **one assumed 2019 historical source reference**; Package B
+qualifies **one assumed 2019 NPCC/PERFORM regional electrical candidate**.
+Both use bounded prior-only reconstruction and independent AC replay without
+relaxed balance or fictitious active injections. Source response equivalence,
+contemporary validation and DLR readiness remain unestablished. In particular,
+the retained NPCC A-C network and aggregated controls are declared functional
+assumptions, and the separate source-response comparison records their effect.
 
 ## 1. Executive Summary
 
@@ -945,7 +946,7 @@ NPCC solve, an external multiport, or preservation of every active NY element.
 
 ## 12. Recommended Next Work
 
-1. **Package A — NY-only foundation (current scope).** Pin and normalize the
+1. **Package A — NY-only foundation (implemented).** Pin and normalize the
    original PERFORM representation, classify source devices, reconcile the
    boundary-record inventory and build explicit NY-side fixed P/Q injections.
    Reproduce the source snapshot with its violations, then establish one
@@ -953,11 +954,13 @@ NPCC solve, an external multiport, or preservation of every active NY element.
    repairs. Independently replay accepted results and report reference
    adjustment. This is a source benchmark, not a decision to use the entire
    PERFORM case as the final operating network.
-2. **Package B — internal reconstruction (later scope).** Replace connected
-   NPCC-derived NY regions with complete branch/device/control packages.
-   Pleasant Valley–Wood Street row 235 is the first planned overlap audit;
-   fully replaced paths may be retired after exact parameter, tap, charging
-   and provenance checks. No such replacement is implemented by Package A.
+2. **Package B — internal reconstruction (implemented).** Exact Pleasant
+   Valley–Wood Street row235 overlap is resolved. Complete source D-K branch,
+   device and control replacement retains NPCC A-C with explicit aggregation.
+   Smaller G-K and D+G-K variants remain recorded unsuccessful attempts;
+   D-K passes bounded full-demand reconstruction and independent replay.
+   This establishes the declared historical electrical baseline, with
+   separate source-response differences and no contemporary/DLR claim.
 3. **Package C — contemporary model (later scope).** Realize dated assets with
    explicit old-element dispositions and bounded parameter assumptions.
    Assemble matched actual-MW scenarios, distinguish observed/reconstructed/

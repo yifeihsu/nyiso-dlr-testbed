@@ -64,10 +64,16 @@ rated=active&m.branch(:,RATE_A)>0;
 f_over=max(0,sf-m.branch(:,RATE_A)).*rated;t_over=max(0,st-m.branch(:,RATE_A)).*rated;
 [~,fb]=ismember(m.branch(:,F_BUS),m.bus(:,BUS_I));[~,tb]=ismember(m.branch(:,T_BUS),m.bus(:,BUS_I));
 angle=m.bus(fb,VA)-m.bus(tb,VA);
-has_angle=active&((m.branch(:,ANGMIN)~=0&m.branch(:,ANGMIN)>-360)| ...
-    (m.branch(:,ANGMAX)~=0&m.branch(:,ANGMAX)<360));
-lo=has_angle&m.branch(:,ANGMIN)>-360;hi=has_angle&m.branch(:,ANGMAX)<360;
-alow=max(0,m.branch(:,ANGMIN)-angle).*lo;ahigh=max(0,angle-m.branch(:,ANGMAX)).*hi;
+% MATPOWER treats zero/zero as unrestricted, but a lone zero is a real
+% one-sided limit (for example [-360,0] imposes an upper bound of zero).
+% Delegate the exact convention to the same constraint constructor as OPF.
+angle_branch=m.branch;angle_branch(:,F_BUS)=fb;angle_branch(:,T_BUS)=tb;
+[~,angle_lower,angle_upper,angle_rows]=makeAang(m.baseMVA,angle_branch,ni,mpoption);
+on_angle=active(angle_rows);angle_rows=angle_rows(on_angle);
+angle_lower=angle_lower(on_angle)*180/pi;angle_upper=angle_upper(on_angle)*180/pi;
+alow=zeros(nl,1);ahigh=alow;
+alow(angle_rows)=max(0,angle_lower-angle(angle_rows));
+ahigh(angle_rows)=max(0,angle(angle_rows)-angle_upper);
 br_bad=f_over>options.power_tolerance|t_over>options.power_tolerance| ...
     alow>options.angle_tolerance|ahigh>options.angle_tolerance|branch_limits_invalid|flow_bad;
 bkeys="BRANCH_ROW:"+string((1:nl)');

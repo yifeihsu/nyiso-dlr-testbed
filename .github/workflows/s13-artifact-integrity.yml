@@ -9,12 +9,17 @@ on:
       - "run_handoff_reproduction.m"
       - "run_electrical_model_reproduction.m"
       - "run_ny_only_foundation.m"
+      - "run_ny_only_regional_candidate.m"
+      - "replay_ny_only_regional_candidate.m"
+      - "NY_ONLY_PACKAGE_B_IMPLEMENTATION.md"
+      - "output/ny_only_package_b/**"
       - "PROJECT_HANDOFF.md"
       - "LATEST_MODEL_CONFIGURATION.csv"
       - "System Matpower Format/NY_Lite/**"
       - "System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m"
       - "System Matpower Format/npcc_ny_lite_s12_perform_retention_core.m"
       - "System Matpower Format/npcc_ny_lite_s13_npcc_augmented_2019.m"
+      - "System Matpower Format/npcc_ny_lite_s14_ny_only_regional_candidate.m"
   push:
     branches:
       - main
@@ -25,12 +30,17 @@ on:
       - "run_handoff_reproduction.m"
       - "run_electrical_model_reproduction.m"
       - "run_ny_only_foundation.m"
+      - "run_ny_only_regional_candidate.m"
+      - "replay_ny_only_regional_candidate.m"
+      - "NY_ONLY_PACKAGE_B_IMPLEMENTATION.md"
+      - "output/ny_only_package_b/**"
       - "PROJECT_HANDOFF.md"
       - "LATEST_MODEL_CONFIGURATION.csv"
       - "System Matpower Format/NY_Lite/**"
       - "System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m"
       - "System Matpower Format/npcc_ny_lite_s12_perform_retention_core.m"
       - "System Matpower Format/npcc_ny_lite_s13_npcc_augmented_2019.m"
+      - "System Matpower Format/npcc_ny_lite_s14_ny_only_regional_candidate.m"
 
 permissions:
   contents: read
@@ -68,7 +78,7 @@ jobs:
             s14_promotion_scope = strcmp(policy.category, 's14_nyiso') & strcmp(policy.setting, 'promotion_eligible');
             assert(nnz(s14_promotion_scope) == 1 && nnz(s14_promotion_scope & strcmp(policy.value, 'false')) == 1);
             s14_status_scope = strcmp(policy.category, 's14_nyiso') & strcmp(policy.setting, 'status');
-            assert(nnz(s14_status_scope) == 1 && nnz(s14_status_scope & strcmp(policy.value, 'ny_only_foundation_candidate')) == 1);
+            assert(nnz(s14_status_scope) == 1 && nnz(s14_status_scope & strcmp(policy.value, 'ny_only_regional_historical_candidate')) == 1);
             contract = research_model_contract('historical_actual_mw');
             assert(contract.power_scale == "actual_mw" && ~contract.external_npcc_qualification_required && ~contract.external_reduction_required && ~contract.require_all_original_ny_elements_active && contract.preserve_historical_cases);
             status_names = ["electrical_baseline_qualified", "contemporary_validation_coverage", "dlr_ready"];
@@ -164,5 +174,49 @@ jobs:
         with:
           name: ny-only-foundation-${{ github.run_id }}
           path: ${{ runner.temp }}/ny_only_package_a/
+          if-no-files-found: warn
+          retention-days: 14
+
+  ny-only-regional-candidate:
+    name: Package B reconstruction and independent source-checked replay
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Fetch MATPOWER 8.1
+        run: git clone --depth 1 --branch 8.1 https://github.com/MATPOWER/matpower.git "$env:RUNNER_TEMP\matpower"
+
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2026a
+          products: Optimization_Toolbox
+
+      - name: Rebuild Package B and replay committed and fresh artifacts
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(genpath(fullfile(getenv('RUNNER_TEMP'), 'matpower')));
+            addpath(fullfile(pwd, 'System Matpower Format', 'NY_Lite'));
+            committed = replay_ny_only_regional_candidate;
+            assert(committed.passed && committed.source_accounting_verified && ~committed.reconstruction_performed);
+            guards = test_ny_regional_candidate_replay;
+            assert(guards.pass);
+            evidence_dir = fullfile(getenv('RUNNER_TEMP'), 'ny_only_package_b');
+            candidate = run_ny_only_regional_candidate(struct('output_dir', evidence_dir, 'write_outputs', true, 'run_tests', true, 'run_operating', true));
+            assert(candidate.electrical_baseline_qualified && all(candidate.tests.passed) && ~candidate.dlr_ready);
+            independent = replay_ny_only_regional_candidate(evidence_dir);
+            assert(independent.passed && independent.source_accounting_verified && ~independent.reconstruction_performed);
+            assert(isequal([size(candidate.build.candidate.bus,1),size(candidate.build.candidate.branch,1),size(candidate.build.candidate.gen,1)],[878 1375 595]));
+            assert(height(candidate.attempts)==3 && all(candidate.attempts.regional_mapping_passed) && ~any(candidate.attempts.relaxation_used));
+
+      - name: Preserve Package B operating evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ny-only-regional-candidate-${{ github.run_id }}
+          path: ${{ runner.temp }}/ny_only_package_b/
           if-no-files-found: warn
           retention-days: 14
