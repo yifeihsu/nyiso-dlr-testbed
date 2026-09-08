@@ -1,466 +1,156 @@
 \documentclass[aspectratio=169,10pt]{beamer}
 \usepackage{default_latex_beamer_template}
 \usepackage{amsmath}
-\hypersetup{pdftitle={NYgrid 2019 interface-flow verification and compact-model calibration diagnostics},pdfauthor={NPCC / New York modeling project},colorlinks=true,urlcolor=blue,linkcolor=muted}
+\hypersetup{pdftitle={NYgrid 2019 interface-flow project update},pdfauthor={NPCC / New York modeling project},colorlinks=true,urlcolor=blue,linkcolor=muted}
 \pdfstringdefDisableCommands{\def\translate#1{#1}}
 \setbeamertemplate{itemize item}{\color{teal}\small\textbullet}
-\setlength{\tabcolsep}{7pt}
-\renewcommand{\arraystretch}{1.16}
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.2}
 \renewcommand{\source}[1]{\par\vfill{\color{muted}\fontsize{6.5}{7.5}\selectfont Source: #1\par}}
 \newcommand{\lead}[1]{{\large\color{navy}\bfseries #1}\par\medskip}
 \newcommand{\minor}[1]{{\small\color{muted}#1}\par}
-\newcommand{\tightitems}{\setlength{\itemsep}{0.65em}}
-\newcommand{\plot}[2]{\begin{center}\includegraphics[height=#2,keepaspectratio]{figures/#1}\end{center}}
-\title[NYgrid 2019 | Interface-flow project update]{NYgrid interface-flow verification\\and compact-model calibration diagnostics}
-\subtitle{Historical 2019 reconstruction and preliminary DLR research}
+\newcommand{\tightitems}{\setlength{\itemsep}{1em}}
+\title[NYgrid 2019 interface-flow update]{NYgrid 2019 interface flow}
+\subtitle{Compact-model calibration experiments}
 \author{NPCC / New York modeling project}
 \date{September 8, 2026}
-
 \begin{document}
 
-% 1
-\defaulttitleframe{Project update: released NYgrid study, matched-input experiments, selected snapshots, and remaining validation}
+% 1: title
+\defaulttitleframe{Project update}
 
-% 2
-\begin{frame}{Annual accuracy improves, with a clear interface tradeoff}
-\lead{The compact model's annual pooled error falls by 5.07 percentage points.}
+% 2: scope and metric
+\begin{frame}{Models and comparison setup}
 \begin{center}
-\begin{tabular}{lrrr}
+\begin{tabular}{lrl}
 \toprule
-Annual WAPE & NYgrid reference & Compact 51 & Compact 51 + Marcy \\
+Model & Buses & Role \\
 \midrule
-All seven interfaces & 11.22\% & 17.38\% & \textbf{12.32\%} \\
-Central East & 9.63\% & 49.23\% & \textcolor{teal}{\textbf{7.09\%}} \\
-UPNY--ConEd & 9.91\% & 10.55\% & \textcolor{red}{\textbf{18.59\%}} \\
+Released NYgrid & 57 & Reproduce the paper's 2019 study \\
+NY-only reference & 46 & Exact replay with boundary injections \\
+Historical compact & 51 & Test matched 2019 inputs and Marcy paths \\
+Year-end 2025 variant & 71 & Unchanged in this experiment \\
 \bottomrule
 \end{tabular}
 \end{center}
-\par\medskip
+\medskip
 \begin{itemize}\tightitems
-\item All three series use the same 8,760 hours, 2019 source inputs, and corrected paper-role interface definitions.
-\item A selected compact hour reaches \textbf{3.28\% pooled error}, with every interface below \textbf{4.86\%}.
-\item This experiment diagnoses representation and allocation choices; shared-parameter fitting and untouched predictive evaluation remain next steps.
+\item Compare all \textbf{8,760 hours} using common 2019 inputs and paper-role interface definitions.
+\item Scale all compact-model power inputs and targets once by $\gamma=0.35866$. Percentage errors are unchanged.
 \end{itemize}
-\source{[3,4]; frozen annual/monthly metrics and best-snapshot records, project commit c472e25. WAPE uses actual flow as denominator.}
-\end{frame}
-
-% 3
-\begin{frame}{The low-error results belong to a historical 51-bus variant}
-\lead{The existing 71-bus year-end 2025 model was unchanged.}
-\small
-\renewcommand{\arraystretch}{1.08}
-\begin{tabularx}{\textwidth}{lrr>{\raggedright\arraybackslash}X}
-\toprule
-Network role & Buses & AC branches\textsuperscript{*} & Purpose in this update \\
-\midrule
-Released NYgrid source & 57 & 94 & 2019 DC study, including external equivalents. \\
-NY-only reference control & 46 & 67 & Exact snapshot replay with fixed NY-side boundary injections. \\
-Historical compact & 51 & 92 / 87 & Pre-2025 parent with matched 2019 injections. \\
-Compact + Marcy hypothesis & 51 & 94 / 89 & Two added source-informed branches. \\
-Year-end 2025 variant & 71 & 135 / 117 & Existing expansion; unchanged here. \\
-\bottomrule
-\end{tabularx}
-\par\medskip
-\minor{\textsuperscript{*}Stored / active where shown. The source also has four separate DC-link records.}
-\par\medskip
-The separate AC checkpoint uses the \textbf{51-bus network without Marcy}, with two restored nuclear proxies and 37 generator records.
-\source{[3,4]; reference export contract, compact export description, and model ledger. Historical compact is a research reconstruction, not an exact 2019 as-built system.}
-\end{frame}
-
-% 4
-\begin{frame}{NYgrid combines network reduction with reconstructed operation}
-\begin{columns}[T,onlytextwidth]
-\column{0.45\textwidth}
-\lead{Network representation}
-\begin{itemize}\tightitems
-\item Start from the 140-bus NPCC benchmark.
-\item Modified Ward reduction preserves 46 New York buses, nine external boundary buses, and two auxiliaries.
-\item Add the paper's selected network modifications and controlled transfers.
-\end{itemize}
-\column{0.51\textwidth}
-\lead{2019 operating inputs}
-\begin{itemize}\tightitems
-\item Thermal profiles and daily nuclear reconstruction.
-\item Hourly hydro split: 80\% Niagara / St. Lawrence, 20\% smaller hydro; monthly St. Lawrence output.
-\item NYISO zonal demand and external schedules.
-\item Released generation-residual policy assigns uncovered generation to Zone J.
-\end{itemize}
-\end{columns}
-\par\bigskip
-\textbf{Then solve DC power flow and compare interface flows with NYISO.}\par
-\minor{The paper was published in 2023; the operating study uses 2019 data. Reconstructed generation is not independent unit telemetry, and the flow replay does not enforce operating bounds.}
-\source{[1,2,3]; Liu et al., IEEE Transactions on Power Systems 38(4), 2023; released updateOpCond, allocateLoad, and modifyMPC code.}
-\end{frame}
-
-% 5
-\begin{frame}{``Percent error'' changes meaning with its denominator}
-\small
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.1cm}p{5.3cm}>{\raggedright\arraybackslash}X}
-\toprule
-Metric & Definition & Interpretation \\
-\midrule
-Paper Eq. 11 & $100\,(F_{\rm obs}-F_{\rm model})/L^{+}$ & Signed mismatch divided by the hourly positive limit. \\[1ex]
-Selected-hour error & $100\,|F_{\rm model}-F_{\rm obs}|/|F_{\rm obs}|$ & Proportional error against that interface's actual flow. \\[1ex]
-Annual interface WAPE & $100\,\dfrac{\sum_t |F_{{\rm model},t}-F_{{\rm obs},t}|}{\sum_t |F_{{\rm obs},t}|}$ & Annual absolute mismatch divided by annual absolute observed flow. \\
-\bottomrule
-\end{tabularx}
-\par\medskip
-\begin{itemize}\tightitems
-\item The paper's ``within 10\%'' statement is \textbf{limit-normalized}; it does not mean 10\% of actual flow.
-\item West Central uses a positive-limit value of 9999 throughout the released data; this is not a verified physical rating.
-\item Pooled WAPE sums across seven overlapping interfaces. It measures comparison accuracy, not statewide energy imbalance.
-\end{itemize}
-\source{[1,2,3]; paper Eq. 11, released flow4Plot code, and metric-definition audit. Near-zero observed flows can inflate selected-hour proportional errors.}
-\end{frame}
-
-% 6
-\begin{frame}{Repairing the measurement formulas precedes calibration}
-\lead{Five stale plotting formulas selected the wrong branch rows.}
-\begin{center}
-\begin{tikzpicture}[>=Latex, every node/.style={font=\small,align=center}]
-\node[draw=navy,rounded corners,minimum width=3.0cm,minimum height=1.1cm] (pf) at (0,0) {Same 8,760\\solved electrical states};
-\node[anchor=west] (old) at (5,0.7) {Literal plotting rows\\\textcolor{red}{\textbf{60.66\% pooled WAPE}}};
-\node[anchor=west] (new) at (5,-0.8) {Corrected released interface map\\\textcolor{teal}{\textbf{11.22\% pooled WAPE}}};
-\draw[->,thick,muted] (pf.east) -- ++(1.0,0) |- (old.west);
-\draw[->,thick,teal] (pf.east) -- ++(1.0,0) |- (new.west);
-\end{tikzpicture}
-\end{center}
-\small
-Affected: Dysinger East, West Central, Moses South, UPNY--ConEd, and Dunwoodie/Sprain. Central East and Total East were already correct.
-\par\medskip
-\textbf{UPNY example:} the old expression included bus 71--72, a C--C branch. The corrected map uses the directed G--H crossings 73--74 and 77--74.
-\par\medskip
-\minor{Endpoint and role checks support the repair. No injection, impedance, dispatch, or observed target was fitted in this step.}
-\source{[2,3]; operator audit formulas and terms; annual reproduction metrics. This is an audited replay of released data/code, with a documented measurement correction.}
-\end{frame}
-
-% 7
-\begin{frame}{The reference is strongest on major eastern interfaces}
-\plot{01_nygrid_annual_interface_wape.pdf}{5.45cm}
-\minor{Annual pooled WAPE: \textbf{11.22\%}. West Central is the weakest interface: 46.81\% WAPE and 1,006 opposite-direction hours.}
-\source{[3]; corrected released interface map, all 8,760 prepared hours in 2019. Total seven-interface opposite-direction count: 1,092 / 61,320.}
-\end{frame}
-
-% 8
-\begin{frame}{NYgrid has a strong selected hour across all seven interfaces}
-\lead{January 8, 2019 at 15:00 New York local time}
-\small
-\begin{center}
-\begin{tabular}{lrrrr}
-\toprule
-Interface & Observed MW & Model MW & Absolute error MW & Error \\
-\midrule
-Dysinger East & 1,471.7 & 1,467.3 & 4.3 & 0.30\% \\
-West Central & 844.6 & 875.3 & 30.7 & 3.63\% \\
-Moses South & 1,996.8 & 2,078.0 & 81.2 & 4.07\% \\
-Central East & 2,725.4 & 2,772.5 & 47.1 & 1.73\% \\
-Total East & 4,738.2 & 4,856.4 & 118.1 & 2.49\% \\
-UPNY--ConEd & 2,106.4 & 2,153.2 & 46.7 & 2.22\% \\
-Dunwoodie/Sprain & 2,422.6 & 2,419.5 & 3.1 & 0.13\% \\
-\bottomrule
-\end{tabular}
-\end{center}
-\textbf{Pooled: 2.03\%. Worst interface: 4.07\%. No opposite directions.}
-\par\medskip
-\minor{Best under both pooled-error and minimax ranking, selected retrospectively from the examined year. All seven channels have 12 distinct samples and no imputation or DST ambiguity.}
-\source{[3]; output/nygrid\_2019/best\_snapshots/BEST\_SNAPSHOTS.md and selected per-interface records. These are actual-scale MW. Annual error remains 11.22\%.}
-\end{frame}
-
-% 9
-\begin{frame}{The matched experiment separates network and input effects}
-\begin{center}
-\begin{tabular}{lcc}
-\toprule
- & Released paper inputs & Current pipeline's 2019 inputs \\
-\midrule
-46-bus NYgrid control & A & B \\
-51-bus compact & C & D \\
-51-bus compact + Marcy & C + Marcy & D + Marcy \\
-\bottomrule
-\end{tabular}
-\end{center}
-\begin{itemize}\tightitems
-\item \textbf{Annual comparison:} A, C, and C + Marcy across all 8,760 hours. The six-arm input/network matrix uses five common development hours.
-\item \textbf{One power scale:} $\gamma=0.3586622254$ multiplies load, generation, boundary injection, and flow targets. Reactances are unchanged; WAPE is invariant.
-\item \textbf{Consistent comparison:} paper-role interface cuts and bus 74 as the DC balancing reference. Native input generation, solved generation, and slack adjustment are recorded separately.
-\item \textbf{Exact control:} export NY-side AC crossings, four controlled links, and HQ once. The 46-bus control reproduces source internal flows to approximately $10^{-11}$ MW.
-\end{itemize}
-\source{[4]; reference export, network/input matrix, and independent validation. Boundary values are model-derived terminal injections; exactness applies to each fixed snapshot.}
-\end{frame}
-
-% 10
-\begin{frame}{Seven bus-role differences affect allocation and metering}
-\begin{columns}[T,onlytextwidth]
-\column{0.54\textwidth}
-\small
-\begin{tabular}{rlcc}
-\toprule
-Bus & Name & Paper role & Compact role \\
-\midrule
-38 & Gilboa & E & F \\
-46 & Colton & E & D \\
-47 & Moses W & E & D \\
-62 & Stolle Road & B & A \\
-69 & Binghamton & E & C \\
-77 & Buchanan & G & H \\
-79 & RAVA-3 & K & J \\
-\bottomrule
-\end{tabular}
-\column{0.43\textwidth}
-\lead{Use a common role system to interpret the comparison.}
-\small
-All 46 original NY buses remain in compact51. Source generation at buses 45, 49, 62, 74, and 77 can be preserved as DC bus injections despite absent compact generator records.
-\par\medskip
-Restored Indian Point proxies land at source bus 74 in the separate AC fleet experiment.
-\end{columns}
-\par\bigskip
-\textbf{Sensitivity:} applying current physical-zone cuts to the same annual states gives pooled WAPE \textbf{19.07\% $\rightarrow$ 19.67\%} after Marcy. Operator meaning materially changes the score.
-\source{[4]; bus-role and operator crosswalks; annual metrics. Roles are equivalent-model assignments, not a claim that one set of labels is geographic truth.}
-\end{frame}
-
-% 11
-\begin{frame}{The Marcy experiment tests two specific network branches}
-\begin{center}
-\begin{tikzpicture}[>=Latex, every node/.style={font=\small,align=center},bus/.style={circle,draw=navy,thick,minimum size=0.8cm,fill=white}]
-\node[bus] (a) at (0,0.3) {43};
-\node[bus] (b) at (4.0,0.3) {38};
-\node[bus] (c) at (8.0,0.3) {77};
-\node[bus] (d) at (2.2,-1.7) {69};
-\node[bus] (e) at (5.8,-1.7) {39};
-\draw[teal,line width=1.7pt] (a) -- node[above=3pt]{Added: $X=0.0427$ pu} (b);
-\draw[teal,line width=1.7pt] (b) -- node[above=3pt]{Added: $X=0.0147$ pu} (c);
-\draw[muted,thick] (b) -- (d);
-\draw[muted,thick] (b) -- (e);
-\node[anchor=east,text=muted] at (2.1,-0.8) {Retained\\$X=0.0485$ pu};
-\node[anchor=west,text=muted] at (5.9,-0.8) {Retained S4\\Gilboa--Leeds};
-\end{tikzpicture}
-\end{center}
-\begin{itemize}\tightitems
-\item Two \textbf{AC-network branches used in the DC approximation}, with reactances from the paper's model on a 100 MVA base. Bus count stays at 51.
-\item The inherited compact backbone and its parallel paths remain. No identical active endpoint pair is duplicated; broader functional overlap is unresolved.
-\item $R=B=0$ and RATE\_A = 0 are numerical placeholders. Physical parameters, ratings, AC controls, and DLR suitability remain unqualified.
-\end{itemize}
-\source{[2,4]; modifyMPC, Marcy hypothesis ledger, and network-pair audit. Schematic shows modeled connectivity only; positions are not geographic.}
-\end{frame}
-
-% 12
-\begin{frame}{Central East improves, but UPNY--ConEd gets worse}
-\plot{02_annual_model_comparison.pdf}{5.55cm}
-\minor{Compact pooled WAPE: \textbf{17.38\% $\rightarrow$ 12.32\%}. West Central remains at 46.81\%; the variant does not meet a uniform per-interface accuracy target.}
-\source{[4]; annual metrics, all 8,760 hours with identical paper inputs and paper-role cuts. Marcy branch parameters are source-informed, not fitted to these observations.}
-\end{frame}
-
-% 13
-\begin{frame}{The pooled improvement appears in every month}
-\plot{03_monthly_pooled_wape.pdf}{5.55cm}
-\minor{Monthly improvement ranges from approximately \textbf{4.06 to 5.87 percentage points}. These are all examined months, not untouched validation blocks.}
-\source{[4]; annual\_monthly\_metrics.csv. Common 2019 inputs and paper-role operators across all three network series.}
-\end{frame}
-
-% 14
-\begin{frame}{Total East reveals regional balance rather than path sharing}
-\lead{For a complete cut in the fixed-injection, lossless DC problem:}
+\medskip
 \[
-\underbrace{F_{\rm Total\ East}}_{\text{western export}}
-=\sum_{i\in\mathcal{W}}\left(P_{G,i}+P_{{\rm boundary},i}-P_{{\rm net\ load},i}\right)
+\mathrm{WAPE}=100\,\frac{\sum |F_{\rm model}-F_{\rm observed}|}{\sum |F_{\rm observed}|}
 \]
+\minor{We report error relative to actual flow. The paper's Eq. 11 instead divides by the positive interface limit.}
+\source{[1--3]. Historical compact is a research reconstruction, not an exact 2019 as-built network.}
+\end{frame}
+
+% 3: source baseline
+\begin{frame}{NYgrid annual performance}
 \begin{columns}[T,onlytextwidth]
-\column{0.47\textwidth}
-\textbf{What Marcy changes}\par\medskip
-Reactances redistribute flow among parallel paths. Central East WAPE falls from 49.23\% to 7.09\%.
-\column{0.47\textwidth}
-\textbf{What remains fixed}\par\medskip
-The complete regional net export is set by injections. Total East WAPE stays at 7.235\% in the matched experiment.
+\column{0.57\textwidth}
+\small\input{data/annual_nygrid_table.tex}
+\par\medskip
+\minor{MAE uses actual-scale MW.}
+\column{0.39\textwidth}
+\lead{11.22\% pooled WAPE}
+\begin{itemize}\tightitems
+\item Corrected five stale plotting formulas using the released interface map.
+\item Same solved states: pooled WAPE changes from 60.66\% to 11.22\%.
+\item West Central remains weakest, with 1,006 opposite-direction hours.
+\end{itemize}
 \end{columns}
 \par\bigskip
-\textbf{Calibration implication:} regional balance errors require checking load, generation, boundary allocation, and interface membership. Impedance changes alone cannot remove a complete-cut mismatch with fixed injections.
-\source{[4]; Total East regional ledger and annual metrics. This identity uses the study's complete western cut; AC losses and redispatch require additional terms.}
+\textbf{The formula correction repairs measurement; it changes no electrical parameters.}
+\source{[2]. Corrected paper-role operators, all 8,760 prepared hours. DC convergence alone does not establish AC or thermal feasibility.}
 \end{frame}
 
-% 15
-\begin{frame}{Allocation tests identify candidates, not a universal policy}
-\lead{Five common development hours, compact + Marcy network}
-\small
-\begin{tabularx}{\textwidth}{lc>{\raggedright\arraybackslash}X}
-\toprule
-Change from released policy & Hours improved & Interpretation \\
-\midrule
-Statewide thermal residual & 4 / 5 & The released Zone-J-only policy is not consistently superior. \\
-Current hydro spatial rule & 2 / 5 & Hydro location needs better evidence; neither tested rule wins throughout. \\
-Current load roles + weights & 0 / 5 & A combined spatial reassignment can strongly worsen flows despite retained demand totals. \\
-Current boundary preparation & 4 / 5 & Boundary allocation and time aggregation are material sources of mismatch. \\
-\bottomrule
-\end{tabularx}
-\par\bigskip
-\textbf{Keep the interpretation controlled:} the load test changes roles and weights together; the boundary test also changes preparation methodology and can change net imports/slack.
-\par\medskip
-\minor{No delivered model switches to the best policy hour by hour. These are fixed-policy comparisons to guide the next shared-parameter calibration.}
-\source{[4]; allocation\_ablations.csv and network/input matrix. Five hours are development evidence; no new target-fitting or held-out test was performed.}
-\end{frame}
-
-% 16
-\begin{frame}{Three compact hours keep every interface error near 5\%}
-\small
+% 4: method
+\begin{frame}{How we adapted the paper's method}
+\begin{enumerate}\tightitems
+\item Transfer NYgrid's reconstructed generation, zonal load, and NY-side boundary injections to compact51.
+\item Align bus allocation roles and interface cuts across the networks.
+\item Test the paper-derived Marcy paths while retaining the inherited compact backbone.
+\end{enumerate}
+\medskip
 \begin{center}
-\begin{tabular}{lrrr}
-\toprule
-2019 local hour & Jul 3, 04:00 & Jul 22, 04:00 & Sep 8, 05:00 \\
-\midrule
-Dysinger East & 1.46\% & 0.44\% & 2.57\% \\
-West Central & 1.48\% & 5.31\% & 3.14\% \\
-Moses South & 4.85\% & 2.26\% & 0.96\% \\
-Central East & 4.22\% & 3.39\% & 4.32\% \\
-Total East & 3.02\% & 1.42\% & 0.40\% \\
-UPNY--ConEd & 3.75\% & 1.62\% & 5.59\% \\
-Dunwoodie/Sprain & 2.45\% & 5.09\% & 0.01\% \\
-\midrule
-\textbf{Pooled error} & \textbf{3.28\%} & \textbf{2.63\%} & \textbf{1.95\%} \\
-\textbf{Worst interface} & \textbf{4.85\%} & \textbf{5.31\%} & \textbf{5.59\%} \\
-\bottomrule
-\end{tabular}
+\begin{tikzpicture}[every node/.style={font=\small,align=center},bus/.style={circle,draw=navy,thick,minimum size=0.8cm}]
+\node[bus] (a) at (0,0) {43};
+\node[bus] (b) at (4.5,0) {38};
+\node[bus] (c) at (9,0) {77};
+\draw[teal,line width=1.7pt] (a) -- node[above=5pt]{$X=0.0427$ pu} (b);
+\draw[teal,line width=1.7pt] (b) -- node[above=5pt]{$X=0.0147$ pu} (c);
+\end{tikzpicture}
 \end{center}
-\minor{Top three \textbf{minimax} hours: rank each hour by its largest individual proportional error. No opposite directions; no imputation or DST ambiguity; 12 distinct samples per channel.}
-\source{[4]; compact + Marcy, paper inputs and paper-role cuts. Retrospective development examples selected from the examined year; no per-hour target fit.}
+\minor{Two added AC-network branches in the DC approximation, on a 100 MVA base. The model remains at 51 buses.}
+\par\bigskip
+\textbf{This is a calibration diagnostic: no new shared-parameter or per-hour target fitting.}
+\source{[1,3]. Source-informed reactances; AC parameters and ratings remain unqualified. Earlier compact S4/S7 calibration history is inherited.}
 \end{frame}
 
-% 17
-\begin{frame}{Selected-hour flows closely track the observed magnitudes}
-\plot{04_selected_snapshot_flows.pdf}{5.55cm}
-\minor{Two independently selected dates, \textbf{not a same-hour network comparison}. Compact flows are divided by $\gamma$ for an actual-scale GW display; the operating model remains at benchmark scale.}
-\source{[3,4]; source Jan 8 best hour and compact + Marcy Jul 3 best minimax hour. Actual-flow proportional errors; retrospective selection.}
+% 5: annual comparison
+\begin{frame}{Annual error improves, with a UPNY tradeoff}
+\begin{center}
+\includegraphics[height=4.95cm,keepaspectratio]{figures/02_annual_model_comparison.pdf}
+\end{center}
+\textbf{Pooled WAPE: 17.38\% to 12.32\%.} Improvement appears in all 12 months.
+\par\medskip
+Central East: \textcolor{teal}{\textbf{49.23\% to 7.09\%}}.\qquad UPNY--ConEd: \textcolor{red}{\textbf{10.55\% to 18.59\%}}.
+\source{[3]. Common paper-role cuts and 2019 inputs. Under current physical-zone cuts, pooled WAPE changes from 19.07\% to 19.67\%; operator choice matters.}
 \end{frame}
 
-% 18
-\begin{frame}{A separate AC checkpoint establishes three feasible examples}
-\lead{Unchanged compact51 network, restored 2019 fleet, current-pipeline inputs}
+% 6: selected-hour evidence
+\begin{frame}{Best examples: errors for every interface}
+\begin{center}
 \small
 \begin{tabular}{lrr}
 \toprule
-Three-hour pooled WAPE & DC & Bounded AC + fresh PF \\
+ & NYgrid reference & Compact + Marcy \\
+2019 local hour & Jan 8, 15:00 & Jul 3, 04:00 \\
 \midrule
-Current physical-zone operators & 19.06\% & 17.54\% \\
-Paper-role operators & 23.43\% & 22.47\% \\
+Dysinger East & 0.30\% & 1.46\% \\
+West Central & 3.63\% & 1.48\% \\
+Moses South & 4.07\% & 4.85\% \\
+Central East & 1.73\% & 4.22\% \\
+Total East & 2.49\% & 3.02\% \\
+UPNY--ConEd & 2.22\% & 3.75\% \\
+Dunwoodie/Sprain & 0.13\% & 2.45\% \\
+\midrule
+\textbf{Pooled error} & \textbf{2.03\%} & \textbf{3.28\%} \\
+\textbf{Worst interface} & \textbf{4.07\%} & \textbf{4.85\%} \\
 \bottomrule
 \end{tabular}
-\par\medskip
-\begin{itemize}\tightitems
-\item January 21, April 21, and July 20 pass the bounded AC solve and a fresh power-flow replay. No interface-flow objective or relaxed operating limits.
-\item These cases use \textbf{no Marcy additions} and AC reference bus 42. They do not establish AC feasibility of the best Marcy DC hours.
-\item Feasible controls differ materially from the raw prior. April required an IPOPT fallback; losses rose from \textbf{98.99 to 206.54 benchmark MW} under the control adjustment.
-\end{itemize}
-\minor{The result establishes bounded feasible operating examples, not reconstructed historical voltage/reactive controls. Some individual interface errors worsen.}
-\source{[4]; AC feasibility/control summary and paired scoring. Three seasonal hours, 21 interface comparisons per operator set; AC uses terminal PF/PT consistently.}
+\end{center}
+\minor{Each interface error is $100|F_{\rm model}-F_{\rm observed}|/|F_{\rm observed}|$. These are different, retrospectively selected hours, with no opposite directions or imputed observations.}
+\source{[2,3]. Both are best minimax examples, ranked by the largest interface error. Selection is development evidence, not held-out validation.}
 \end{frame}
 
-% 19
-\begin{frame}{Next, turn the diagnostics into a validated calibration}
-\begin{enumerate}\tightitems
-\item \textbf{Freeze the model and measurement contract.}\par
-\small Decide intended allocation roles and interface cuts; keep original bus IDs, boundary signs, and power scaling traceable.\normalsize
-\item \textbf{Fit a small, physically bounded set of shared parameters.}\par
-\small Prioritize UPNY sharing, West Central direction/error, hydro allocation, and uncovered generation. Avoid per-hour corrections that absorb every mismatch.\normalsize
-\item \textbf{Build a credible AC realization of the candidate topology.}\par
-\small Resolve Marcy representation, finite line parameters/ratings, parallel-path overlap, generator capability, voltage and reactive controls.\normalsize
-\item \textbf{Evaluate on data not used to choose or fit the model.}\par
-\small Predeclare metrics and holdout periods. Validate the 71-bus 2025 expansion with consistent 2025 infrastructure and operating inputs before validated DLR inference.\normalsize
-\end{enumerate}
-\par\medskip
-\textcolor{teal}{\textbf{Current achievement:}} reproducible 2019 DC evidence and promising compact snapshots, with the dominant remaining uncertainties identified.
-\source{Proposed next experiment, informed by [3,4]. No new shared-parameter fitting or independent holdout evaluation has been completed in this update.}
-\end{frame}
-
-\appendix
-% 20
-\begin{frame}{Appendix | Source reconstruction and time quality are audited}
-\begin{columns}[T,onlytextwidth]
-\column{0.48\textwidth}
-\lead{Public-data reconstruction}
+% 7: limits and next work
+\begin{frame}{What the results support and what comes next}
+\lead{A useful 2019 DC baseline and low-error compact examples}
 \begin{itemize}\tightitems
-\item 12 NYISO monthly archives; 365 daily files; 1,897,236 raw rows.
-\item 18 channels: seven interfaces and 11 schedules.
-\item All 157,680 prepared hour/channel keys reproduced within $6.37\times10^{-12}$ in source units.
+\item \textbf{Main gaps:} West Central uncertainty and UPNY transfer sharing. Test bounded, shared allocation and network parameters.
+\item \textbf{AC qualification:} resolve Marcy line parameters, ratings, and controls. A separate three-hour AC checkpoint passed on compact51 \emph{without Marcy}.
+\item \textbf{Independent evaluation:} freeze parameters before testing new periods. Use consistent 2025 data to validate the 71-bus expansion for DLR inference.
 \end{itemize}
-\column{0.48\textwidth}
-\lead{8760 local-hour labels}
-\begin{itemize}\tightitems
-\item Two interpolated labels: March 10 at 02:00 and December 12 at 12:00.
-\item November 3 at 01:00 combines both fall-DST folds.
-\item Excluding these three labels changes WAPE from 11.2181\% to 11.2194\%.
-\end{itemize}
-\end{columns}
 \par\bigskip
-\textbf{Independent DC replay:} all 8,760 cases succeed; maximum branch-flow difference from MATPOWER is approximately $1.21\times10^{-11}$ MW.
-\par\medskip
-\minor{This numerical agreement verifies reproduction, not agreement with actual operation. Raw duplicates and irregular sampling were retained and audited.}
-\source{[3,5]; NYISO source audit, channel summaries, and independent DC replay. Released data use timezone-naive local-hour labels.}
+\minor{The selected 2019 snapshots do not establish accuracy of the 2025 model or AC/DLR feasibility of the Marcy variant.}
+\source{[3]. Next steps are proposed work. No new parameter fit or untouched predictive evaluation was completed in this experiment.}
 \end{frame}
 
-% 21
-\begin{frame}{Appendix | Five-hour matrix exposes input dependence}
-\small
-\begin{center}
-\begin{tabular}{lrrrrrr}
-\toprule
-2019 local hour & A & B & C & D & C + Marcy & D + Marcy \\
-\midrule
-Jan 21, 18:00 & 9.40 & 16.96 & 19.52 & 19.73 & 14.43 & 16.97 \\
-Apr 21, 04:00 & 22.62 & 36.66 & 27.91 & 39.50 & 19.08 & 29.85 \\
-Jul 17, 16:00 & 20.72 & 26.23 & 30.83 & 25.40 & 26.10 & 27.53 \\
-Jul 20, 16:00 & 12.34 & 16.13 & 23.05 & 19.42 & 16.84 & 17.43 \\
-Jul 27, 02:00 & 18.86 & 26.87 & 22.84 & 22.94 & 23.20 & 27.95 \\
-\bottomrule
-\end{tabular}
-\end{center}
-\small
-All entries are pooled WAPE (\%). A/B use the 46-bus reference; C/D use compact51. A/C use released paper inputs; B/D use current-pipeline 2019 inputs. Common paper-role cuts, DC reference 74.
-\par\medskip
-\begin{itemize}\tightitems
-\item B maps the extra compact bus 9003 injection equally to 78 and 80 through an exact compact-network Kron injection map. This is a declared topology-dependent equivalent.
-\item Released boundary targets use a raw-sample arithmetic mean; current preparation uses forward hold. Input differences include time aggregation.
-\item July 17 at 08:00 is excluded from this matrix due to a current-input boundary gap; the released-input annual study retains the hour.
-\end{itemize}
-\source{[4]; network\_input\_matrix.csv, Kron injection map and validation, and input export description. Values rounded to two decimal places.}
-\end{frame}
-
-% 22
-\begin{frame}{Appendix | Selecting by pooled error can hide one bad interface}
-\begin{center}
-\small\input{data/compact_best_rankings_table.tex}
-\end{center}
-\par\medskip
-\textbf{For preliminary examples, minimax selection is easier to defend:} every interface must perform reasonably well at the selected hour.
-\par\medskip
-\minor{The smallest pooled error is 1.77\%, but its worst interface error is 16.15\%. All rankings are retrospective; the low-error hours do not substitute for the 12.32\% annual compact + Marcy result.}
-\source{[4]; best\_snapshots.csv. Pooled sums absolute mismatch / absolute observed flow; worst is the largest of seven individual proportional errors.}
-\end{frame}
-
-% 23
-\begin{frame}{Appendix | Reproduction leaves physical limits to resolve}
-\begin{itemize}\tightitems
-\item \textbf{Released DC states are not bounded operating solutions.}\par
-\small 8,745 hours exceed at least one positive RATE\_A value; 70 of 94 AC branches have no positive rating. DC convergence does not establish thermal or AC feasibility.\normalsize
-\item \textbf{Source generation contains reconstruction assumptions.}\par
-\small One July St. Lawrence prior is 921.12 MW against an 856 MW parameter capacity. The combined Zone-H generation prior assigned to nuclear proxies exceeds restored capacity in two of five development hours; it was retained transparently.\normalsize
-\item \textbf{The inherited compact backbone is not identical to NYgrid.}\par
-\small Original parent files contain 233 versus 227 branch records; 43--50 and 74--78 multiplicities differ, with additional S4 paths. No blanket branch pruning was applied.\normalsize
-\item \textbf{The AC control checkpoint has a different scope.}\par
-\small It restores two nuclear proxies with finite assumed reactive capability. Large reactive/voltage adjustments and April's loss increase require a better control prior before historical interpretation.\normalsize
-\end{itemize}
-\source{[3,4]; source capacity audit, branch-pair crosswalk, AC controls and fresh-PF validation. Prior compact S4/S7 calibration history is inherited; this experiment performs no new fit.}
-\end{frame}
-
-% 24
-\begin{frame}{References and reproducibility}
-\small
-\begin{enumerate}\setlength{\itemsep}{0.75em}
-\item M. V. Liu, B. Yuan, Z. Wang, J. A. Sward, K. M. Zhang, and C. L. Anderson. ``An Open Source Representation for the NYS Electric Grid to Support Power Grid and Market Transition Studies.'' \emph{IEEE Transactions on Power Systems}, 38(4), 3293--3303, 2023. \href{https://doi.org/10.1109/TPWRS.2022.3200887}{DOI: 10.1109/TPWRS.2022.3200887}.
-\item \href{https://github.com/AndersonEnergyLab-Cornell/NYgrid/tree/47698b6c7823ae7b1bc6935e5601d5b64b8f918e}{Released NYgrid source}, pinned commit \texttt{47698b6}. This update reproduces its 2019 study with documented measurement corrections.
-\item \href{https://github.com/yifeihsu/nyiso-dlr-testbed/blob/c472e250753b441223d8c6e029aa86e6dd56db8e/NYGRID_2019_INTERFACE_VERIFICATION.md}{Project: NYgrid 2019 interface verification}. Full-year metrics, source reconstruction, formula audit, and selected-hour records.
-\item \href{https://github.com/yifeihsu/nyiso-dlr-testbed/blob/c472e250753b441223d8c6e029aa86e6dd56db8e/NYGRID_COMPACT_2019_COMPARISON.md}{Project: matched compact 2019 comparison}. Annual/matrix/ablation results, role crosswalks, source hashes, and separate AC checkpoint.
-\item \href{https://mis.nyiso.com/public/P-32list.htm}{NYISO public P-32 archives}. Historical interface-flow and schedule records, audited against the released prepared inputs.
+% 8: compact references
+\begin{frame}{References}
+\begin{enumerate}\setlength{\itemsep}{1.3em}
+\item M. V. Liu et al.\ (2023). \emph{An Open Source Representation for the NYS Electric Grid to Support Power Grid and Market Transition Studies}. IEEE Transactions on Power Systems, 38(4), 3293--3303.\par
+\href{https://doi.org/10.1109/TPWRS.2022.3200887}{Paper DOI}\qquad
+\href{https://github.com/AndersonEnergyLab-Cornell/NYgrid/tree/47698b6c7823ae7b1bc6935e5601d5b64b8f918e}{Pinned NYgrid source}
+\item \href{https://github.com/yifeihsu/nyiso-dlr-testbed/blob/c472e250753b441223d8c6e029aa86e6dd56db8e/NYGRID_2019_INTERFACE_VERIFICATION.md}{NYgrid 2019 interface verification}\par
+Annual results, formula audit, source-data checks, and selected hours.
+\item \href{https://github.com/yifeihsu/nyiso-dlr-testbed/blob/c472e250753b441223d8c6e029aa86e6dd56db8e/NYGRID_COMPACT_2019_COMPARISON.md}{Matched compact 2019 comparison}\par
+Network experiments, allocation tests, selected snapshots, and the separate AC checkpoint.
 \end{enumerate}
-\par\medskip
-\minor{Scientific evidence is frozen at project commit \texttt{c472e25}. The accompanying LaTeX source, vector figures, editable CSVs, generation script, and hash manifests make this deck reviewable and rebuildable. No studies were rerun for this presentation.}
+\vfill
+\minor{Scientific evidence: project commit \texttt{c472e25}. Additional detail remains in the linked reports.}
 \end{frame}
-
 \end{document}

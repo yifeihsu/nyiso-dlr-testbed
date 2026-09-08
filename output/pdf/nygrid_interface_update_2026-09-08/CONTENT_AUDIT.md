@@ -1,5 +1,7 @@
 # Content audit: NYgrid interface update, 8 September 2026
 
+Revision note: the delivered deck now has eight slides. The detailed review below describes the original 24-slide draft and its evidence; it remains as a source audit. The concise revision retains model identity, actual-flow error definitions, the measurement repair, common-input/role transfer, the Marcy hypothesis and annual tradeoff, two selected-hour error columns, and AC/holdout limitations. The annual and selected-hour table values were rechecked against the frozen CSVs. Detailed matrix, allocation and AC-control discussion moved out of the presentation into the linked reports.
+
 Prepared independently from the two project reports and their numerical evidence. This file is a narrative/claim audit, not a new simulation or parameter fit. No existing model, output, or report was edited.
 
 ## Recommended framing

@@ -1,12 +1,12 @@
 # NYgrid interface-flow project update
 
-24-slide LaTeX Beamer deck: 19 main slides and five appendix slides. Prepared September 8, 2026.
+8-slide LaTeX Beamer deck, condensed from the original 24-slide version at the user's request. Updated September 8, 2026.
 
-Open `nygrid_interface_update.pdf` to present. Edit `nygrid_interface_update.tex` for narrative, tables, and the native TikZ connectivity diagram. The four scientific charts are vector PDFs in `figures/`, with editable data in `data/`.
+Open `nygrid_interface_update.pdf` to present. Edit `nygrid_interface_update.tex` for narrative, tables, and the native TikZ connectivity diagram. The annual comparison chart is a vector PDF in `figures/`, with editable data in `data/`. Additional figures from the longer version remain available in the source bundle.
 
 ## Scope and main result
 
-The deck covers the released 2019 NYgrid DC reproduction, the correction to five interface measurement formulas, and matched-2019 experiments on the historical 51-bus compact network. Adding the paper-derived Marcy branch hypothesis reduces annual pooled actual-flow WAPE from 17.38% to 12.32%, with Central East improving and UPNY–ConEd worsening. Three retrospective minimax snapshots have worst-interface errors of 4.85%, 5.31%, and 5.59%.
+The deck covers the released 2019 NYgrid DC reproduction, the measurement correction, and matched-2019 experiments on the historical 51-bus compact network. Annual pooled actual-flow WAPE falls from 17.38% to 12.32%, with Central East improving and UPNY–ConEd worsening. A seven-interface table compares the best NYgrid and compact minimax examples at their respective selected hours.
 
 The 71-bus year-end 2025 model is unchanged. The new experiment performs no shared-parameter fitting or per-hour interface-target fitting and has no untouched holdout. The compact ancestry retains older S4/S7 calibration history. A separate three-hour bounded AC checkpoint uses the compact network without the Marcy additions; it does not qualify the selected Marcy DC hours for AC or DLR studies.
 
@@ -33,11 +33,17 @@ Scientific evidence is frozen at repository commit `c472e250753b441223d8c6e029aa
 
 To regenerate figures from the original frozen study outputs, place this directory at its repository path `output/pdf/nygrid_interface_update_2026-09-08/` and run `python figures/build_figures.py`. This optional step requires the full repository outputs and NumPy, pandas, matplotlib, and Pillow. It is unnecessary for standalone LaTeX compilation. Editable CSVs also support independent chart recreation.
 
-All selected-hour dates are 2019 New York local time. Chart 4 displays actual-scale GW by dividing compact values by the single study power scale; AC loss values on slide 18 are benchmark MW. Annual WAPE compares seven overlapping interfaces and is not a statewide energy-balance metric.
+All selected-hour dates are 2019 New York local time. Annual MAE is actual-scale MW. WAPE compares seven overlapping interfaces and is not a statewide energy-balance metric.
 
 ## Reading route
 
-- Slides 1–8: model identity, NYgrid methodology, measurement correction, annual and selected-hour results.
-- Slides 9–17: matched experimental design, role crosswalks, Marcy hypothesis, annual/monthly/ablation results and compact snapshots.
-- Slides 18–19: separate AC checkpoint and next calibration priorities.
-- Slides 20–24: source/time quality, development matrix, selection criteria, physical limitations and linked references.
+- 1: Title.
+- 2: Model scope and error metric.
+- 3: NYgrid annual performance and measurement correction.
+- 4: How the experiment adapts the paper's method.
+- 5: Annual compact-model improvement and UPNY tradeoff.
+- 6: Selected-hour errors for every interface.
+- 7: Remaining gaps and next steps.
+- 8: Linked references with the detailed evidence.
+
+The previous 24-slide deck is retained in Git history at commit `e0b079e`.
