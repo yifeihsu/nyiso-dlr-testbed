@@ -1,0 +1,90 @@
+[
+  {
+    "figure": "01_nygrid_annual_interface_wape",
+    "question": "How large is the released NYgrid DC interface mismatch over 2019?",
+    "takeaway": "Error varies by interface; West Central has the largest actual-flow WAPE.",
+    "family": "horizontal_bar",
+    "rows": 7,
+    "scope": "8760 timezone-naive 2019 local hours, corrected if.map; no source-quality filter",
+    "width_cm": 11.8,
+    "height_cm": 7.5,
+    "renderer": "matplotlib vector PDF",
+    "delivery": "16:9 Beamer slide",
+    "palette": {
+      "navy": "#122A42",
+      "blue": "#256399",
+      "teal": "#0F8480",
+      "amber": "#DB8F18",
+      "grid": "#E2E7EC",
+      "muted": "#536778"
+    },
+    "non_color_encoding": "ordered groups, hatches and line/marker styles",
+    "qualification": "DC only; retrospective development comparison"
+  },
+  {
+    "figure": "02_annual_model_comparison",
+    "question": "How does topology change affect the same annual inputs and role definitions?",
+    "takeaway": "The two added Marcy reactances reduce Central East error but increase UpNY-Coned error.",
+    "family": "grouped_horizontal_bar",
+    "rows": 21,
+    "scope": "Same scaled source injections and corrected paper-role operator semantics; annual WAPE",
+    "width_cm": 13.0,
+    "height_cm": 8.0,
+    "renderer": "matplotlib vector PDF",
+    "delivery": "16:9 Beamer slide",
+    "palette": {
+      "navy": "#122A42",
+      "blue": "#256399",
+      "teal": "#0F8480",
+      "amber": "#DB8F18",
+      "grid": "#E2E7EC",
+      "muted": "#536778"
+    },
+    "non_color_encoding": "ordered groups, hatches and line/marker styles",
+    "qualification": "DC only; retrospective development comparison"
+  },
+  {
+    "figure": "03_monthly_pooled_wape",
+    "question": "Does the annual paper-role improvement persist across months?",
+    "takeaway": "The Marcy variant improves pooled WAPE over Compact 51 in every month; the reference remains better overall.",
+    "family": "three_series_line",
+    "rows": 36,
+    "scope": "12 calendar months in 2019; pool all seven overlapping interfaces with flow-weighted denominator",
+    "width_cm": 13.0,
+    "height_cm": 7.2,
+    "renderer": "matplotlib vector PDF",
+    "delivery": "16:9 Beamer slide",
+    "palette": {
+      "navy": "#122A42",
+      "blue": "#256399",
+      "teal": "#0F8480",
+      "amber": "#DB8F18",
+      "grid": "#E2E7EC",
+      "muted": "#536778"
+    },
+    "non_color_encoding": "ordered groups, hatches and line/marker styles",
+    "qualification": "DC only; retrospective development comparison"
+  },
+  {
+    "figure": "04_selected_snapshot_flows",
+    "question": "How closely do two retrospectively selected hours reproduce observed flows?",
+    "takeaway": "Both chosen hours align closely, but these are post-selection development examples.",
+    "family": "faceted_paired_dot",
+    "rows": 14,
+    "scope": "Reference Jan8 best pooled vs compactMarcy July3 best minimax; actual-scale GW; equal panel scales",
+    "width_cm": 13.0,
+    "height_cm": 7.7,
+    "renderer": "matplotlib vector PDF",
+    "delivery": "16:9 Beamer slide",
+    "palette": {
+      "navy": "#122A42",
+      "blue": "#256399",
+      "teal": "#0F8480",
+      "amber": "#DB8F18",
+      "grid": "#E2E7EC",
+      "muted": "#536778"
+    },
+    "non_color_encoding": "ordered groups, hatches and line/marker styles",
+    "qualification": "DC only; retrospective development comparison"
+  }
+]

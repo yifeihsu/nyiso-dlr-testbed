@@ -19,3 +19,5 @@ output/nygrid_compact_2019/** -text whitespace=cr-at-eol
 scripts/nygrid_compact_2019/** -text whitespace=cr-at-eol
 # Preserve the exact MATLAB table display captured by the independent replay.
 output/nygrid_compact_2019/verification/*.log whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Presentation evidence and source manifests preserve their exact hashed bytes.
+output/pdf/nygrid_interface_update_2026-09-08/** -text whitespace=cr-at-eol
