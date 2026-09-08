@@ -1,5 +1,7 @@
 # NPCC NY-Lite Adaptation
 
+The latest preliminary extension is the [66-bus 2025 NY research baseline](../../COMPACT_NY_2025_DLR_METHODOLOGY.md), with matched NYISO demand, bounded interface-proxy calibration and 23 assumed overhead thermal realizations. Earlier cases below retain their historical scope.
+
 This package is a **calibration scaffold**, not a validated NYISO planning case.
 It retains the small NPCC network, maps retained New York buses to NYISO A-K
 zones, supports zonal load/generation scenarios, and adds only selected

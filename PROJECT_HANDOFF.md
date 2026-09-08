@@ -1,5 +1,7 @@
 # NPCC-NY Lite Calibration Project Handoff
 
+**Current research baseline — 2026-09-08:** [Compact 2025 NY methodology and results](COMPACT_NY_2025_DLR_METHODOLOGY.md). The new case has 66 NY buses, 112 active branches and 37 generator records. Four 2025 hours fit seven interface proxies; two unused hours retain material prediction errors. Twelve snapshots pass bounded AC checks. Twenty-three explicitly assumed overhead realizations pass synthetic thermal experiments. Observed zonal generation and exact public flowgate completeness remain unvalidated. Use `run_compact_ny_2025_calibration`, `run_compact_ny_dlr_baseline`, and the new `npcc_ny_2025_dlr_research` / `npcc_ny_2025_synthetic_dlr` loaders. The notes below describe preserved earlier milestones and their original qualification scope.
+
 **Original handoff date:** 2026-07-12
 **Model-contract update:** 2026-09-07 (compact NPCC NY benchmark, hard 200-bus cap)
 **Structural provenance case:** `npcc_ny_lite_s7_seven_interface_perform_direct_candidate`

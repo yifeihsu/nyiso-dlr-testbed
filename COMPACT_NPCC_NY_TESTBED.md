@@ -1,5 +1,7 @@
 # Compact NPCC NY electrical testbed
 
+**Historical 51-bus benchmark.** The subsequent [66-bus 2025 research baseline](COMPACT_NY_2025_DLR_METHODOLOGY.md) adds NYISO demand/interface calibration and assumed thermal realizations. This document and its saved artifacts retain their original benchmark scope.
+
 The active direction is a **small NY-only testbed that retains the NPCC backbone and adds a few explicit source corridors**. The operating case has a hard limit of **200 buses**. The selected design has **51 buses, 92 branch records, 87 active branches, and 35 generator records**. It preserves all 46 original NPCC NY bus IDs, the three S7 transit buses, and two additional corridor terminals.
 
 This is a preliminary electrical testbed at the **NPCC benchmark scale**, with gross NY demand of **10,902.2198 MW**. It is not an attempt to reproduce the full PERFORM load level or current NYISO operations. The [generated operating results](output/compact_npcc_ny/COMPACT_NPCC_NY_RESULTS.md) and independent replay establish electrical qualification under the declared benchmark assumptions. The contract alone does not establish feasibility. The `dlr` name indicates the intended later research use; no thermal model or DLR-ready status is supplied by this work.

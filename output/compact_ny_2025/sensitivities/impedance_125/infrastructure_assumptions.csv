@@ -1,0 +1,12 @@
+assumption,declaration
+cutoff,2025-12-31
+parameter_source,public project endpoints plus historical PERFORM templates and declared equivalent parameters
+ratings,MVA limits are finite research assumptions; public MW project benefit is not a circuit MVA rating
+NYC_receiving_network,station and 138kV connections approximate omitted local network; no device-level fidelity claim
+injections,all parent PD QD GS BS generators and capabilities preserved; all added nodes zero injection
+controls,fixed nominal transformer/PAR taps and zero phase shifts; no new unlimited Q or voltage support
+project_status,RCC Queens confirmed2023; Brooklyn/Staten assumed2025 from owner announced May2025 energization
+excluded_future,CHPE SmartPathConnect RCC_LongIslandCity2026 and Propel2030 excluded from default
+impedance_sensitivity,1.25 applied to non-split R and X; allowed0.75to1.25
+charging_sensitivity,1 applied to non-split B; allowed0to1.5
+rating_sensitivity,1 applied to non-split static MVA; allowed0.8to1.2

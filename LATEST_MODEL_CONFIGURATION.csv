@@ -2,7 +2,7 @@ category,setting,value,notes
 model,structural_provenance_case,npcc_ny_lite_s7_seven_interface_perform_direct_candidate,Full NPCC-derived 143-bus provenance case and ancestor of S13-FULL
 model,construction_validation_parent,npcc_ny_lite_s13_npcc_augmented_2019,Preserved full-NPCC historical construction parent; its operating qualification is not a prerequisite for the new NY-only reference
 model,promoted_operating_case,pending_npcc_ny_lite_s14_nyiso_dlr_operating_model,NY-only candidate with explicit NY-side boundary injections; electrical qualification and contemporary coverage and DLR readiness are separate
-model,preferred_operating_candidate,npcc_ny_compact_dlr_testbed,51 NY buses with all46 original NPCC NY identities and a hard200-bus ceiling; benchmark load scale and fixed boundary PQ
+model,preferred_operating_candidate,npcc_ny_2025_dlr_research,66 NY buses retaining all46 original NPCC NY identities; matched public inputs at fixed year-peak benchmark scale with explicit 2025 assumptions
 model,diagnostic_reduced_case,npcc_ny_lite_s11_dlr_pf_base,49-bus NY-only benchmark for fast algorithm and reduced-model diagnostics only
 model,reference_oracle,npcc_ny_lite_s12_perform_retention_core,317-bus PERFORM Ward/Kron reduction used only as a calibration and validation oracle
 model,reference_oracle_role,optional_historical_comparison_only,S12 is optional and must not supply dense Kron-equivalent branches to the operating model
@@ -71,15 +71,15 @@ s13_phase1b,legacy_snapshot_standard_pf,3 / 3 pass,S7 Phase 0 immutable Phase 1A
 s13_phase1b,legacy_snapshot_q_limit_pf,1 / 3 pass,Only cumulative Phase 1B converges in this inherited snapshot; not a common-2019 operating gate
 s13_phase1b,construction_source_qualified,false,Phase 1C passive residualization operating-source qualification and a frozen solved reduction-source state remain pending
 s13_phase1b,dlr_delivery_eligible,false,S13-FULL remains permanently ineligible for delivery; separate S14 electrical diagnostics do not imply operating promotion
-s14_nyiso,status,compact_npcc_ny_benchmark,Preferred preliminary electrical case retains46 original NPCC NY buses with five added terminals and fixed benchmark boundaries
-s14_nyiso,target_case_name,npcc_ny_compact_dlr_testbed,Separate compact benchmark loader; final contemporary and thermal qualification remain pending
-s14_nyiso,retention_policy,retain_original46_NPCC_NY_buses_with_hard200_bus_cap,Five inherited branch records deactivated with explicit dispositions and eleven selected source circuits appended
-s14_nyiso,external_equivalent_policy,matched_NPCC_reference_prepares_fixed_boundary_PQ,145-bus construction prepares the matched boundary snapshot; operating NY case contains51 buses with no external equivalent network
+s14_nyiso,status,compact_npcc_ny_2025_research_baseline,66-bus approximate 2025 research case with source-dated events and declared topology generation boundary and conductor assumptions
+s14_nyiso,target_case_name,npcc_ny_2025_dlr_research,Electrical loader defaults to the calibrated 2025 summer hour; synthetic thermal states use a separate loader
+s14_nyiso,retention_policy,retain_original46_NPCC_NY_buses_with_hard200_bus_cap,Focused corridor and 2025 infrastructure replacements with explicit retired rows and source or assumed parameter provenance
+s14_nyiso,external_equivalent_policy,ten_matched_P32_scheduled_channels_fixed_P_assumed_zero_Q,No external buses or response equivalent; default HQ-NY plus separate Cedars excludes overlapping HQ_IMPORT_EXPORT
 s14_nyiso,boundary_accounting,gross_load_minus_fixed_boundary_PQ,Native generation gross load and boundary injections remain separate; allocation occurs before solver-case assembly
-s14_nyiso,electrical_baseline_qualified,true,One reconstructed NPCC benchmark under inherited aggregate capability assumptions; bounded and independent replay evidence in output/compact_npcc_ny
-s14_nyiso,contemporary_validation_coverage,not_claimed_benchmark,Compact electrical qualification does not validate contemporary assets or observed operations
-s14_nyiso,dlr_ready,false,Conductor realization and independent electrothermal checks remain later work
-s14_nyiso,promotion_eligible,false,Compact benchmark electrical qualification does not promote final contemporary or DLR delivery
+s14_nyiso,electrical_baseline_qualified,true,Twelve fixed-year-peak matched snapshots pass bounded AC and independent fixed-input replay under declared research assumptions
+s14_nyiso,contemporary_validation_coverage,partial_public_input_and_proxy_flow_coverage,Four 2025 calibration hours fit closely; two heldout hours retain large errors; observed generation and exact public operators remain unvalidated
+s14_nyiso,dlr_ready,false,Electrical loader carries no thermal qualification; separate synthetic thermal loader audits only23 assumed overhead realizations
+s14_nyiso,promotion_eligible,false,Approximate electrical and synthetic thermal evidence does not promote an exact public or as-built NYISO operating model
 historical_power_scale,legacy_mode,historical_similarity_scaled,Existing historical_2019 API and archived approximately 10.9-GW public targets remain unchanged
 historical_power_scale,actual_mw_mode,historical_actual_mw,Separate full-scale 2019 source reference without statewide normalization
 ny_only_foundation,reproduction,run_ny_only_foundation,Separate Package A orchestration; source reproduction and bounded-reference acceptance are distinct
@@ -101,6 +101,7 @@ ny_only_regional,electrical_baseline_qualified,true,Source and native conservati
 ny_only_regional,contemporary_validation_coverage,not_evaluated,Packages C and D remain future work
 ny_only_regional,dlr_ready,false,Line-versus-cable and conductor realizations are unresolved; transformer electrical roles are preserved from source
 compact_npcc_ny,reproduction,run_compact_npcc_ny_testbed,Focused S7 Phase0 construction and bounded full-reference reconstruction followed by NY extraction and independent fixed-input PF
+compact_npcc_ny,current_role,preserved_historical_benchmark,51-bus case remains independently reproducible; preferred 2025 research case is separately versioned
 compact_npcc_ny,replay,replay_compact_npcc_ny_testbed,Hash and fresh-source reconstruction verification plus bounded full and NY PF replay without optimization
 compact_npcc_ny,contract,compact_npcc_model_contract,Standalone compact policy leaves historical research_model_contract modes unchanged
 compact_npcc_ny,case_size,51 buses / 92 branch records / 87 active / 35 generator records,All46 original NPCC NY buses plus three S7 terminals and two source terminals
@@ -111,6 +112,25 @@ compact_npcc_ny,generation_policy,21_NPCC_identities_plus14_S4_P_only_equivalent
 compact_npcc_ny,retired_parent_rows,88|89|94|235|236,Exact S7 parallel replacements235/236; original corridor functions88/89/94 retired under declared response-change assumptions
 compact_npcc_ny,electrical_baseline_qualified,true,Bounded fixed-hardware reconstruction and independent AC replay under benchmark assumptions
 compact_npcc_ny,dlr_ready,false,Electrical source identity and model terminal currents only; conductor realization and thermal implementation pending
+compact_ny_2025,electrical_loader,npcc_ny_2025_dlr_research,Optional 2025 scenario ID; default calibrated summer hour; heldout scenarios are predictions from frozen training participation
+compact_ny_2025,reproduction,run_compact_ny_2025_calibration,2019 prior-only historical validation plus four 2025 calibration hours and two untouched heldout interface targets
+compact_ny_2025,replay,replay_compact_ny_2025_electrical,Hash and code manifest plus source rebuild and thirteen fresh fixed-input AC power flows; no optimizer
+compact_ny_2025,electrical_artifact,output/compact_ny_2025/electrical_fixed_peak/compact_ny_2025_electrical_campaign.mat,Constant-total predecessor is preserved separately as a diagnostic
+compact_ny_2025,bus_count,66,All46 original NPCC NY identities retained; no external buses
+compact_ny_2025,active_branch_count,112,125 branch records retain explicit retired-element provenance
+compact_ny_2025,generator_record_count,37,35 inherited aggregates plus two scaled identified project proxies carved from existing regional capability
+compact_ny_2025,power_scale,fixed_year_peak_benchmark_MW,One gamma per vintage preserves seasonal demand and interchange variation; each selected summer peak equals10902.2197987MW
+compact_ny_2025,boundary_policy,ten_scheduled_P_channels_assumed_landings_and_zero_Q,HQ_IMPORT_EXPORT excluded from nominal additive scope; separate swap-only sensitivity retains Cedars
+compact_ny_2025,generation_policy,bounded_inferred_dispatch_with_declared_2025_capacity_events,Cricket Valley and South Fork carveouts plus assumed Astoria retirement; broad inherited Q envelopes remain benchmark assumptions
+compact_ny_2025,electrical_baseline_qualified,true,12 of12 snapshots pass bounded AC and fresh fixed-input replay; this is physical model consistency under assumptions
+compact_ny_2025,observed_generation_validated,false,Hourly zonal and unit observations unavailable; fitting interface targets does not validate generator dispatch
+compact_ny_2025,exact_public_interface_validation,false,Seven explicitly declared physical or conceptual proxies; public monitored-element completeness remains unresolved
+compact_ny_2025,training_proxy_MAE_mw,2.017 / 1.180 / 1.075 / 1.995,Four 2025 fitted hours at benchmark scale; in-sample calibration only
+compact_ny_2025,heldout_proxy_MAE_mw,284.372 / 317.055,Frozen training mean participation used with matched loads and boundaries; no heldout interface fitting
+compact_ny_2025,synthetic_thermal_loader,npcc_ny_2025_synthetic_dlr,Separate saved electrothermal states with R(T) and dispatch consistent under each declared synthetic weather scenario
+compact_ny_2025,synthetic_thermal_replay,replay_compact_ny_dlr_baseline,Fresh fixed-input AC and heat checks against registered realizations without optimization
+compact_ny_2025,assumed_thermal_corridor_count,23,Whitelisted overhead catalog conductor surrogates; no installed-conductor identity claim
+compact_ny_2025,physical_thermal_asset_validation,false,Cables transformers DC boundaries and unrealized equivalents excluded; weather scenarios synthetic; sag and dynamic security unvalidated
 s14_external_reduction,role,optional_preserved_diagnostic,Existing 86-bus 182-branch external-reduction experiment and outputs retain historical meaning
 s13_phase1c,status,separate_partial_electrical_construction_candidate,Historical Phase1B case wrapper and its canonical evidence remain unchanged
 s13_phase1c,case_size,170 buses / 315 branches / 62 generators,21 source terminals and 53 exact source electrical elements including transformers
