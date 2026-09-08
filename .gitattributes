@@ -13,3 +13,9 @@ output/nygrid_2019/*.md -text whitespace=cr-at-eol
 output/nygrid_2019/*.log -text whitespace=cr-at-eol
 # Exact patches include original upstream blank-line whitespace as evidence.
 output/nygrid_2019/*.patch -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+
+# Matched-comparison evidence and its code are fingerprinted as exact bytes.
+output/nygrid_compact_2019/** -text whitespace=cr-at-eol
+scripts/nygrid_compact_2019/** -text whitespace=cr-at-eol
+# Preserve the exact MATLAB table display captured by the independent replay.
+output/nygrid_compact_2019/verification/*.log whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

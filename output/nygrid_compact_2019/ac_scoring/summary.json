@@ -1,0 +1,53 @@
+{
+  "gamma2019": 0.358662225381536,
+  "snapshot_count": 3,
+  "interfaces_per_snapshot": 7,
+  "reference_bus": 42,
+  "observation_policy": "same_2019_hourly_raw_arithmetic_sample_mean_as_annual_predictions",
+  "source_input_policy": "existing_independent_source_priors_P32_forward_hold_600s_gap_coverage",
+  "current_roles": "exported_51bus_current_physical_role_partitions",
+  "paper_roles": "released_adjacent_role_pairs_with_declared_compact_extension_roles",
+  "paper_role_extension_assumptions": {
+    "774": "G",
+    "858": "G",
+    "9001": "G",
+    "9002": "G",
+    "9003": "K"
+  },
+  "AC_metering": "forward_PF_reverse_PT_at_upstream_terminal_no_minus_PF_substitution",
+  "DC_input": "same_raw_unclipped_37generator_prior_same_effective_loads_REF42_balancing",
+  "bounded_AC": "same_network_existing_capabilities_reoptimized_P_Q_and_voltage_controls",
+  "incremental_error_scope": "combined_dispatch_control_and_AC_effect_not_isolated_AC_losses",
+  "control_policy_caveat": "P_only_prior_objective_has_no_Q_or_voltage_movement_penalty_and_may_change_losses_to_preserve_source_P",
+  "Marcy_DC_hypothesis_AC_qualified": false,
+  "matrix_DC_REF74_comparison": false,
+  "zero_denominator_policy": "pointwise_percentage_undefined_no_floor_WAPE_uses_total_absolute_observed_flow",
+  "MATPOWER_DC_branch_flow_parity_max_mw": 5.3859139370615594e-12,
+  "MATPOWER_DC_generation_parity_max_mw": 1.6768808563938364e-12,
+  "overall": [
+    {
+      "operator_role": "current_roles",
+      "interface_name": "ALL_7",
+      "points": 21,
+      "DC_WAPE_pct": 19.059162308949926,
+      "AC_WAPE_pct": 17.542661082870918,
+      "AC_minus_DC_WAPE_percentage_points": -1.5165012260790078,
+      "DC_MAE_public_mw": 417.87928371850046,
+      "AC_MAE_public_mw": 384.6294254173022,
+      "DC_wrong_direction_count": 0,
+      "AC_wrong_direction_count": 0
+    },
+    {
+      "operator_role": "paper_roles",
+      "interface_name": "ALL_7",
+      "points": 21,
+      "DC_WAPE_pct": 23.426107851783634,
+      "AC_WAPE_pct": 22.4650802253653,
+      "AC_minus_DC_WAPE_percentage_points": -0.9610276264183355,
+      "DC_MAE_public_mw": 513.6262030162137,
+      "AC_MAE_public_mw": 492.5553117749549,
+      "DC_wrong_direction_count": 0,
+      "AC_wrong_direction_count": 0
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "read_only_audit": true,
+  "observed_interfaces_used": false,
+  "network_or_dispatch_modified": false,
+  "all_original_46_NY_buses_preserved": true,
+  "role_mismatches": [
+    38,
+    46,
+    47,
+    62,
+    69,
+    77,
+    79
+  ],
+  "source_generator_role_missing_buses": [
+    45,
+    49,
+    62,
+    74,
+    77
+  ],
+  "source_internal_branches": 67,
+  "compact_active_branches": 87,
+  "source_original_branch_records": 227,
+  "compact_S7_parent_branch_records": 246,
+  "compact_inherited_NPCC_branch_records_before_13_S4_additions": 233,
+  "source_Marcy_existing_same_endpoint_count": 0,
+  "runtime": {
+    "python": "3.13.7",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.15.2"
+  }
+}

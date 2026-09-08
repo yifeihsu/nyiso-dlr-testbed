@@ -1,0 +1,25 @@
+interface_name,nygrid_branch_row,source_from_bus,source_to_bus,source_PF_coefficient,matching_active_compact_count,matching_active_compact_keys,identity_status,exact_electrical_response_identity
+Dysinger East,33,53,55,-1,1,NPCC_S7:BRANCH_ROW:59,same_endpoint_identity,False
+Dysinger East,35,54,52,1,1,NPCC_S7:BRANCH_ROW:222,same_endpoint_identity,False
+Dysinger East,38,54,62,1,1,NPCC_S7:BRANCH_ROW:62,same_endpoint_identity,False
+Dysinger East,48,58,62,1,1,NPCC_S7:BRANCH_ROW:70,same_endpoint_identity,False
+West Central,29,50,52,-1,1,NPCC_S7:BRANCH_ROW:55,same_endpoint_identity,False
+West Central,30,51,53,-1,1,NPCC_S7:BRANCH_ROW:56,same_endpoint_identity,False
+West Central,34,53,65,1,1,NPCC_S7:BRANCH_ROW:60,same_endpoint_identity,False
+West Central,51,62,63,1,1,NPCC_S7:BRANCH_ROW:73,same_endpoint_identity,False
+Total East,14,41,45,-1,1,NPCC_S7:BRANCH_ROW:42,same_endpoint_identity,False
+Total East,12,40,44,-1,1,NPCC_S7:BRANCH_ROW:40,same_endpoint_identity,False
+Total East,3,37,38,-1,1,NPCC_S7:BRANCH_ROW:33,same_endpoint_identity,False
+Total East,6,37,43,-1,1,NPCC_S7:BRANCH_ROW:36,same_endpoint_identity,False
+Total East,8,38,77,1,0,,missing_direct_edge,False
+Moses South,25,47,48,-1,1,NPCC_S7:BRANCH_ROW:53,same_endpoint_identity,False
+Moses South,19,44,48,-1,1,NPCC_S7:BRANCH_ROW:47,same_endpoint_identity,False
+Moses South,24,46,49,-1,1,NPCC_S7:BRANCH_ROW:52,same_endpoint_identity,False
+Central East,14,41,45,-1,1,NPCC_S7:BRANCH_ROW:42,same_endpoint_identity,False
+Central East,12,40,44,-1,1,NPCC_S7:BRANCH_ROW:40,same_endpoint_identity,False
+Central East,3,37,38,-1,1,NPCC_S7:BRANCH_ROW:33,same_endpoint_identity,False
+Central East,6,37,43,-1,1,NPCC_S7:BRANCH_ROW:36,same_endpoint_identity,False
+UpNY-Coned,66,73,74,1,0,,missing_direct_edge,False
+UpNY-Coned,67,74,77,-1,1,NPCC_S7:BRANCH_ROW:90,same_endpoint_identity,False
+Dun/SPR-South,74,78,81,1,2,NPCC_S7:BRANCH_ROW:97;NPCC_S7:BRANCH_ROW:239,multiple_parallel_records_all_must_be_accounted,False
+Dun/SPR-South,75,78,82,1,2,NPCC_S7:BRANCH_ROW:98;NPCC_S7:BRANCH_ROW:241,multiple_parallel_records_all_must_be_accounted,False
