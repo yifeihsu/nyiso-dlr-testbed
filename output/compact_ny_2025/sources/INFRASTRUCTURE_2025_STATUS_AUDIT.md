@@ -41,7 +41,9 @@ An energization milestone does not prove continuous operational availability. Fo
 
 The static RCC project page still calls Brooklyn/Staten Island active. The dated August earnings report and September Brooklyn completion report are stronger completion evidence. Completion does not validate the frozen model's fixed PAR taps, cable impedances or conversion of a public 300-MW project benefit into an assumed 300-MVA branch limit. None of those quantities was reclassified as measured/as-built in this audit.
 
-## Proposed small partial-SPC alternative — not implemented
+## Small partial-SPC alternative recorded during the audit
+
+**Implemented follow-up:** The separate [71-bus variant](../../../COMPACT_NY_PARTIAL_SPC_BASELINE.md) now passes its electrical and synthetic thermal checks. Its final implementation reuses the added zero-injection Adirondack model ID with an explicit replacement of its 230-kV role by a 345-kV role, adding five station sections. The design considerations below preserve the audit's original removal-and-six-additions proposal; the final [specification](../../../COMPACT_NY_PARTIAL_SPC_SPECIFICATION.md) records the adopted details. Neither version claims a physical-device identity from the reused model ID.
 
 The evidence supports a separately named year-end-2025 alternative while preserving the 66-bus reference. A compact design can remain far below 200 buses:
 

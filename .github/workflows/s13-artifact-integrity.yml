@@ -7,6 +7,7 @@ on:
       - "*compact*generation*.py"
       - "*compact*generation*.m"
       - "*compact*nyiso*.py"
+      - "*compact*partial_spc*"
       - ".gitattributes"
       - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
@@ -36,6 +37,8 @@ on:
       - "System Matpower Format/npcc_ny_2025_dlr_research.m"
       - "System Matpower Format/npcc_ny_2025_synthetic_dlr.m"
       - "System Matpower Format/npcc_ny_2025_source_generation.m"
+      - "System Matpower Format/npcc_ny_2025_partial_spc.m"
+      - "System Matpower Format/npcc_ny_2025_partial_spc_dlr.m"
   push:
     branches:
       - main
@@ -44,6 +47,7 @@ on:
       - "*compact*generation*.py"
       - "*compact*generation*.m"
       - "*compact*nyiso*.py"
+      - "*compact*partial_spc*"
       - ".gitattributes"
       - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
@@ -73,6 +77,8 @@ on:
       - "System Matpower Format/npcc_ny_2025_dlr_research.m"
       - "System Matpower Format/npcc_ny_2025_synthetic_dlr.m"
       - "System Matpower Format/npcc_ny_2025_source_generation.m"
+      - "System Matpower Format/npcc_ny_2025_partial_spc.m"
+      - "System Matpower Format/npcc_ny_2025_partial_spc_dlr.m"
 
 permissions:
   contents: read
@@ -397,6 +403,27 @@ jobs:
             loader_tests = test_npcc_ny_2025_source_generation;
             assert(height(loader_tests)==8 && all(loader_tests.passed));
 
+      - name: Rebuild and replay the separate partial-2025 infrastructure variant
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(fullfile(getenv('RUNNER_TEMP'), 'matpower'));
+            assert(install_matpower(1, 0, 0, 1));
+            addpath(fullfile(pwd, 'System Matpower Format'));
+            addpath(fullfile(pwd, 'System Matpower Format', 'NY_Lite'));
+            topology_tests = test_compact_2025_partial_spc;
+            assert(topology_tests.pass && all(topology_tests.gates.passed));
+            partial = replay_compact_2025_partial_spc;
+            assert(partial.passed && height(partial.records)==15 && ~partial.optimizer_called && ~partial.fresh_holdout_validation);
+            loader_tests = test_npcc_ny_2025_partial_spc;
+            assert(all(loader_tests.passed));
+            nominal = npcc_ny_2025_partial_spc;
+            assert(isequal([size(nominal.bus,1),size(nominal.branch,1),size(nominal.gen,1)],[71 135 37]) && nnz(nominal.branch(:,11)>0)==117);
+            thermal = replay_compact_partial_spc_dlr;
+            assert(thermal.passed && all(thermal.records.passed) && ~thermal.optimizer_called);
+            thermal_loader_tests = test_npcc_ny_2025_partial_spc_dlr;
+            assert(height(thermal_loader_tests)==7 && all(thermal_loader_tests.passed));
+
   independent-generation-sources:
     name: Independent public generation source accounting and freeze
     runs-on: ubuntu-latest
@@ -418,7 +445,7 @@ jobs:
           python -m unittest -v test_compact_nyiso_time_alignment
           test_compact_nyiso_hourly_inputs test_build_compact_epa_generation_inputs
           test_compact_nonfossil_generation_inputs test_compact_combined_generation_prior
-          test_compact_named_generation_priors
+          test_compact_named_generation_priors test_score_compact_2025_partial_spc
 
       - name: Verify saved methods inputs and predictions were frozen before scoring
         run: python freeze_compact_generation_methodology.py --verify

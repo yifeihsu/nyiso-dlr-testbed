@@ -1,5 +1,7 @@
 # Compact New York 2025 DLR research baseline
 
+**Preserved 66-bus milestone:** The preferred preliminary model is now the separate [71-bus partial-2025 infrastructure variant](COMPACT_NY_PARTIAL_SPC_BASELINE.md), with source-estimated generation and 25 synthetic overhead realizations. The results below retain the original 66-bus calibration and thermal scope.
+
 The new preliminary model has **66 New York buses, 125 branch records (112 active), and 37 generator records**. It retains all 46 original NPCC New York bus IDs, stays below the 200-bus ceiling, and represents neighboring systems through ten fixed scheduled injection channels. External NPCC buses remain in the construction for provenance; the operating case contains only New York. The earlier 51-bus benchmark and larger Package A/B artifacts remain separate references.
 
 NYISO zonal demand shares enter the case correctly, and four 2025 operating points closely fit seven interface proxies. Twenty-three explicitly assumed overhead-conductor realizations provide tested electrical/thermal consistency. A [separate independent generation reconstruction](COMPACT_NY_GENERATION_RECONSTRUCTION.md) now tests four new hours without fitting interface targets; mean errors are 134–185 benchmark MW. Complete observed zonal generation remains unavailable. This is an approximate research baseline, not a validated NYISO planning case.

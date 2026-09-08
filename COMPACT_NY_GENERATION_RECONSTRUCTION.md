@@ -1,5 +1,7 @@
 # Independent generation and interface check for the compact New York model
 
+**Current preferred variant:** The separately qualified [71-bus year-end infrastructure baseline](COMPACT_NY_PARTIAL_SPC_BASELINE.md) adds selected late-2025 northern equipment and a new synthetic thermal campaign. This document preserves the 66-bus source experiment and its original four-hour independent comparison.
+
 The 66-bus NPCC-derived case now has a separate operating variant driven by independent public generation estimates. All fourteen hours with qualified input coverage pass bounded AC optimization and fresh power-flow replay. Four calendar-selected hours, reserved before consulting their interface values, have mean absolute interface errors of **134–185 benchmark MW**, with a largest error of **429 MW**. This is a useful preliminary comparison, but it does not establish exact NYISO interface reproduction or observed zonal-dispatch validation.
 
 The network still retains all 46 original NPCC New York buses, 125 branch records (112 active), 37 generator records and ten fixed external injection channels. The old calibrated electrical case and its 23-corridor synthetic thermal campaign remain available. This new electrical operating variant has not yet been substituted into that thermal campaign.
@@ -57,7 +59,7 @@ The selected overlay adds 15 buses and 33 branch records and retires eight prede
 
 **The previous blanket exclusion of Smart Path Connect as post-2025 was too broad.** Owner filings show Austin Road–Edic Line 11 energized October 8, Haverstock–Adirondack HA2 October 13, and Adirondack–Austin Road Line 13 November 17, 2025. HA1 and Adirondack–Marcy Line 12 entered service in March 2026. Consequently the retained all-230-kV northern templates are a selected historical approximation, not exact year-end-2025 equipment. Related Dover equipment also entered service in December 2025 and is omitted from the Churchtown-only overlay. [Primary-source status audit and proposed small alternative](output/compact_ny_2025/sources/INFRASTRUCTURE_2025_STATUS_AUDIT.md).
 
-This audit preserves the 66-bus evidence and proposes a separately qualified partial-SPC alternative of approximately 71 buses. That topology correction is not yet implemented. The existing conductor/thermal experiments remain valid for their declared equivalent lines and synthetic conditions; they do not validate omitted or newly commissioned physical equipment.
+The audit led to a separately implemented and qualified [71-bus partial-SPC alternative](COMPACT_NY_PARTIAL_SPC_BASELINE.md), with independent source priors and its own synthetic thermal campaign. The 66-bus evidence remains preserved. Its original conductor/thermal experiments retain their declared scope; they do not validate newly commissioned physical equipment.
 
 ## Reproduction and verified scope
 

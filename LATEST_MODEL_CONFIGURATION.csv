@@ -2,7 +2,9 @@ category,setting,value,notes
 model,structural_provenance_case,npcc_ny_lite_s7_seven_interface_perform_direct_candidate,Full NPCC-derived 143-bus provenance case and ancestor of S13-FULL
 model,construction_validation_parent,npcc_ny_lite_s13_npcc_augmented_2019,Preserved full-NPCC historical construction parent; its operating qualification is not a prerequisite for the new NY-only reference
 model,promoted_operating_case,pending_npcc_ny_lite_s14_nyiso_dlr_operating_model,NY-only candidate with explicit NY-side boundary injections; electrical qualification and contemporary coverage and DLR readiness are separate
-model,preferred_operating_candidate,npcc_ny_2025_dlr_research,66 NY buses retaining all46 original NPCC NY identities; matched public inputs at fixed year-peak benchmark scale with explicit 2025 assumptions
+model,preferred_operating_candidate,npcc_ny_2025_partial_spc,71 NY buses retaining all46 original NPCC NY identities; source-estimated dispatch on a fixed year-end2025 topology with explicit approximations
+model,preserved_calibrated_2025_case,npcc_ny_2025_dlr_research,Frozen66-bus interface-fitted reference remains independently reproducible
+model,preserved_source_generation_case,npcc_ny_2025_source_generation,Frozen66-bus independent source experiment with four previously reserved hours remains separately reproducible
 model,diagnostic_reduced_case,npcc_ny_lite_s11_dlr_pf_base,49-bus NY-only benchmark for fast algorithm and reduced-model diagnostics only
 model,reference_oracle,npcc_ny_lite_s12_perform_retention_core,317-bus PERFORM Ward/Kron reduction used only as a calibration and validation oracle
 model,reference_oracle_role,optional_historical_comparison_only,S12 is optional and must not supply dense Kron-equivalent branches to the operating model
@@ -71,14 +73,14 @@ s13_phase1b,legacy_snapshot_standard_pf,3 / 3 pass,S7 Phase 0 immutable Phase 1A
 s13_phase1b,legacy_snapshot_q_limit_pf,1 / 3 pass,Only cumulative Phase 1B converges in this inherited snapshot; not a common-2019 operating gate
 s13_phase1b,construction_source_qualified,false,Phase 1C passive residualization operating-source qualification and a frozen solved reduction-source state remain pending
 s13_phase1b,dlr_delivery_eligible,false,S13-FULL remains permanently ineligible for delivery; separate S14 electrical diagnostics do not imply operating promotion
-s14_nyiso,status,compact_npcc_ny_2025_research_baseline,66-bus approximate 2025 research case with source-dated events and declared topology generation boundary and conductor assumptions
-s14_nyiso,target_case_name,npcc_ny_2025_dlr_research,Electrical loader defaults to the calibrated 2025 summer hour; synthetic thermal states use a separate loader
+s14_nyiso,status,compact_npcc_ny_2025_partial_spc_research_baseline,71-bus approximate year-end2025 case with selected partial commissioning and declared source generation boundary and conductor assumptions
+s14_nyiso,target_case_name,npcc_ny_2025_partial_spc,Electrical loader defaults to source-estimated summer inputs on fixed year-end topology; synthetic thermal states use a separate loader
 s14_nyiso,retention_policy,retain_original46_NPCC_NY_buses_with_hard200_bus_cap,Focused corridor and 2025 infrastructure replacements with explicit retired rows and source or assumed parameter provenance
 s14_nyiso,external_equivalent_policy,ten_matched_P32_scheduled_channels_fixed_P_assumed_zero_Q,No external buses or response equivalent; default HQ-NY plus separate Cedars excludes overlapping HQ_IMPORT_EXPORT
 s14_nyiso,boundary_accounting,gross_load_minus_fixed_boundary_PQ,Native generation gross load and boundary injections remain separate; allocation occurs before solver-case assembly
-s14_nyiso,electrical_baseline_qualified,true,Twelve fixed-year-peak matched snapshots pass bounded AC and independent fixed-input replay under declared research assumptions
-s14_nyiso,contemporary_validation_coverage,partial_public_input_and_proxy_flow_coverage,Four 2025 calibration hours fit closely; two heldout hours retain large errors; observed generation and exact public operators remain unvalidated
-s14_nyiso,dlr_ready,false,Electrical loader carries no thermal qualification; separate synthetic thermal loader audits only23 assumed overhead realizations
+s14_nyiso,electrical_baseline_qualified,true,Nine source-qualified nominal hours and six summer sensitivities pass bounded AC and independent replay; no interface fitting or physical-bound relaxation
+s14_nyiso,contemporary_validation_coverage,partial_public_input_and_revisited_counterfactual_flow_coverage,Four previously exposed calendar hours have MAE133to185MW and max471MW; these are not new holdouts or historical as-operated reconstructions
+s14_nyiso,dlr_ready,false,Electrical loader carries no thermal qualification; separate synthetic thermal campaign qualifies25 assumed overhead realizations in four weather cases
 s14_nyiso,promotion_eligible,false,Approximate electrical and synthetic thermal evidence does not promote an exact public or as-built NYISO operating model
 historical_power_scale,legacy_mode,historical_similarity_scaled,Existing historical_2019 API and archived approximately 10.9-GW public targets remain unchanged
 historical_power_scale,actual_mw_mode,historical_actual_mw,Separate full-scale 2019 source reference without statewide normalization
@@ -131,6 +133,18 @@ compact_ny_2025,synthetic_thermal_loader,npcc_ny_2025_synthetic_dlr,Separate sav
 compact_ny_2025,synthetic_thermal_replay,replay_compact_ny_dlr_baseline,Fresh fixed-input AC and heat checks against registered realizations without optimization
 compact_ny_2025,assumed_thermal_corridor_count,23,Whitelisted overhead catalog conductor surrogates; no installed-conductor identity claim
 compact_ny_2025,physical_thermal_asset_validation,false,Cables transformers DC boundaries and unrealized equivalents excluded; weather scenarios synthetic; sag and dynamic security unvalidated
+partial_spc_2025,current_role,preferred_preliminary_research_baseline,Fixed year-end2025 topology with source-estimated dispatch and separately qualified synthetic DLR scenarios
+partial_spc_2025,bus_count,71,All46 original NPCC NY bus IDs retained; no external operating buses
+partial_spc_2025,branch_inventory,135_records_117_active,Five predecessor records retired once and ten new northern records added
+partial_spc_2025,generator_records,37,Exactly preserves the preceding source-generation case capability bounds and prior vectors
+partial_spc_2025,peak_gross_load_mw,10902.2197987,Fixed2025 scale0.355758660106238 preserves all eleven NYISO zonal shares
+partial_spc_2025,electrical_campaign,output/compact_ny_2025/partial_spc/campaign.mat,All15 registered operating and sensitivity cases qualified; two require strict IPOPT fallback
+partial_spc_2025,electrical_replay,replay_compact_2025_partial_spc,Rebuild topology and source priors then independently run power flow without optimization
+partial_spc_2025,synthetic_thermal_loader,npcc_ny_2025_partial_spc_dlr,Separate saved electrothermal states for four declared weather conditions
+partial_spc_2025,synthetic_thermal_replay,replay_compact_partial_spc_dlr,Fresh AC and heat checks with source and code fingerprints
+partial_spc_2025,assumed_overhead_realizations,25,Eleven PERFORM source circuits plus eight CEEC NYES equivalents plus six partial SPC surrogates
+partial_spc_2025,research_thermal_qualified,true,All four synthetic conditions pass consistent current heating and temperature resistance audits
+partial_spc_2025,physical_asset_weather_or_exact_interface_validation,false,Installed conductors actual weather sag dynamic security exact public flowgates and observed zonal dispatch remain unvalidated
 s14_external_reduction,role,optional_preserved_diagnostic,Existing 86-bus 182-branch external-reduction experiment and outputs retain historical meaning
 s13_phase1c,status,separate_partial_electrical_construction_candidate,Historical Phase1B case wrapper and its canonical evidence remain unchanged
 s13_phase1c,case_size,170 buses / 315 branches / 62 generators,21 source terminals and 53 exact source electrical elements including transformers
