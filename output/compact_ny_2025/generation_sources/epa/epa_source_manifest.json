@@ -1,0 +1,110 @@
+{
+  "schema_version": "compact_epa_generation_inputs_v1",
+  "source_accessed_utc": "2026-09-08",
+  "annual_reporting_unit_counts": {
+    "2019": 310,
+    "2025": 234
+  },
+  "source_files": [
+    {
+      "filename": "emissions-hourly-2019-ny.csv",
+      "url": "https://api.epa.gov/easey/bulk-files/emissions/hourly/state/emissions-hourly-2019-ny.csv",
+      "sha256": "e58710fec124f42d829ac340fe319562da3aa7aaea8345f5b595d2e1b42a0221",
+      "bytes": 485630847,
+      "source_release": "2025-10-02"
+    },
+    {
+      "filename": "emissions-hourly-2025-ny.csv",
+      "url": "https://api.epa.gov/easey/bulk-files/emissions/hourly/state/emissions-hourly-2025-ny.csv",
+      "sha256": "a2d0cfba9466fc2347fec867fafd9bba8c39d5a1b821664e5e792901e6148f6a",
+      "bytes": 442207147,
+      "source_release": "2026-08-29"
+    },
+    {
+      "filename": "emissions-daily-2025-ny.csv",
+      "url": "https://api.epa.gov/easey/bulk-files/emissions/daily/state/emissions-daily-2025-ny.csv",
+      "sha256": "0f74bcbfc13e3cacec751f3a61b844934dbaddc1f5ee341a4204d280f389bd1e",
+      "bytes": 16387133,
+      "source_release": "retrieved_2026-09-08"
+    },
+    {
+      "filename": "thermalGenMatched_2019.xlsx",
+      "url": "https://raw.githubusercontent.com/AndersonEnergyLab-Cornell/NYgrid/47698b6c7823ae7b1bc6935e5601d5b64b8f918e/Data/thermalGenMatched_2019.xlsx",
+      "sha256": "dbf3542eea2250305ec3139a6d125e96dc4f6c67923fb87c027123812363296f",
+      "bytes": 39496,
+      "source_release": "2019_mapping_published_2022"
+    },
+    {
+      "filename": "epa_eia_crosswalk.csv",
+      "url": "https://raw.githubusercontent.com/USEPA/camd-eia-crosswalk/master/epa_eia_crosswalk.csv",
+      "sha256": "acea4d8dbbfd133c1a4ec67f2831cbcbb0d48c13da72d0f47bea35c5618923ad",
+      "bytes": 2298091,
+      "source_release": "2018_EIA_basis_v0.3_2022_release"
+    },
+    {
+      "filename": "facility-2019.csv",
+      "url": "https://api.epa.gov/easey/bulk-files/facility/facility-2019.csv",
+      "sha256": "d6b074ba7e5173d4c3318b8178b85b055885b11c1c186c15180dc8af698d375d",
+      "bytes": 1717839,
+      "source_release": "retrieved_2026-09-08"
+    },
+    {
+      "filename": "facility-2025.csv",
+      "url": "https://api.epa.gov/easey/bulk-files/facility/facility-2025.csv",
+      "sha256": "d7b743273c8919b5af8a6fef45f813dd17f9dfada8c3330e508f342383a1690d",
+      "bytes": 1556685,
+      "source_release": "2026-09-06"
+    }
+  ],
+  "extracts": [
+    {
+      "filename": "selected_epa_source_rows_2019.csv",
+      "sha256": "7da10da1acc820a010e72633ca24b8299f912624c3b0922aede0a1ef55c8f683",
+      "bytes": 991762
+    },
+    {
+      "filename": "selected_epa_source_rows_2025.csv",
+      "sha256": "57fd8ae61d9603b408757e3bc28a080e39d6cf9a45a6e333b78252397d902b50",
+      "bytes": 1415758
+    },
+    {
+      "filename": "nygrid_2019_identity_crosswalk.csv",
+      "sha256": "0020e547dcff2cfb10cc9b74a5c0864668ab406f1d164f27e3ab57cf58f10b50",
+      "bytes": 28453
+    },
+    {
+      "filename": "epa_eia_crosswalk_ny.csv",
+      "sha256": "565795c8fcdc865c6b668e9c85d952a0a5029136a2f3718084ffb328ff569aff",
+      "bytes": 120979
+    },
+    {
+      "filename": "epa_facility_attributes_ny.csv",
+      "sha256": "6473f859c8f7502afe4feaa61cbf730522e7bc3c7c322f4ee68303fc27263b24",
+      "bytes": 186043
+    },
+    {
+      "filename": "quantity_audit_hourly_source.csv",
+      "sha256": "d4fcddf7f5f8555bae1555c1a79e1bef07429c0027338dfb76aca3494b0ad7a1",
+      "bytes": 20567
+    },
+    {
+      "filename": "quantity_audit_daily_source.csv",
+      "sha256": "1f4129c85fd59e0391c8cdad0a8350d23794af3051260d03ee92a3489a933fae",
+      "bytes": 1184
+    },
+    {
+      "filename": "declared_facility_zone_evidence.csv",
+      "sha256": "075be8ab8ab0a6fd43cd0a292cb2376e4572cd62d0517feb2a1322d4a724047b",
+      "bytes": 2977
+    }
+  ],
+  "scenario_catalog_sha256": "849402ce85577579f5d9ae689c3aae6ff1f75cdb9bdaf72221c0f58afc629480",
+  "preregistration_protocol_sha256": "b9fdef829f29a26a25df84c8199581b1ce9f8a9943c44551681dff7b45b2fbf9",
+  "code_sha256": "553a6cee8b06553c933e2deace06977271d5c872bdd24a585f37415777ea6436",
+  "internal_interface_observations_read": false,
+  "unit_row_expansion": false,
+  "source_gross_is_net": false,
+  "zonal_mapping_is_observed": false,
+  "missing_gross_values_imputed_zero": false,
+  "notes": "Public EPA Part75 subset; 2019 crosswalk identity continuity is an assumption; 2022 EPA-EIA crosswalk is not a 2025 census. No NYISO internal-interface values used."
+}

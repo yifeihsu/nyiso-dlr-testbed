@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "method": "independent_numpy_scipy_DC_nodal_solve_no_MATPOWER_calls",
+  "hours_replayed": 24,
+  "complete_2019_annual_coverage": false,
+  "source_failures_or_missing_hours_silently_excluded": false,
+  "scope": "explicit_complete_input_subset_not_annual",
+  "tolerance_mw": 1e-07,
+  "passed": true,
+  "maximum_branch_pf_error_mw": 7.275957614183426e-12,
+  "maximum_angle_error_deg": 2.8421709430404007e-13,
+  "maximum_result_pg_error_mw": 1.0118128557223827e-11,
+  "maximum_nodal_residual_mw": 1.0174971976084635e-11,
+  "maximum_released_operator_error_mw": 9.208633855450898e-12,
+  "maximum_corrected_operator_error_mw": 1.0913936421275139e-11,
+  "hours_with_positive_rate_a_overload": 24,
+  "maximum_rate_a_overload_mw": 564.148075866763,
+  "rating_note": "DC_PF does not enforce branch bounds; rateA applied as active-flow diagnostic only, no AC or thermal qualification",
+  "equations": {
+    "branch_pf_mw": "baseMVA*status/(x*tap)*(theta_from-theta_to-shift_rad)",
+    "nodal_net_input_mw": "online_input_generation - PD - GS + DCto - DCfrom",
+    "reference": "fixed base_case REF angle, checked against every saved REF angle; only first online REF generator absorbs balance",
+    "shunts": "GS included at unity DC voltage; BS and charging excluded by DC equations, not evidence of AC neglect",
+    "DC_links": "all four records accounted; loss0/loss1 must equalzero"
+  },
+  "static_input_scope": "Every saved input/output array is checked; per-hour static status/GS/tap hardware relies on savedbase_case and the separately verified released construction",
+  "inputs": [
+    {
+      "mat_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\pilot.mat",
+      "mat_sha256": "f93ac5e34e45f3a4dda3390d04063236d3ecfa97b1a503a0a610f11f0129a6a4",
+      "final_csv_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\pilot_cases.csv",
+      "final_csv_sha256": "1a422461f1037efce3ccee0dc5e2a9f8afbeb221784d37039ca278856a1bbfbb",
+      "first_hour": 1,
+      "last_hour": 24,
+      "hours": 24
+    }
+  ],
+  "inventory": [
+    {
+      "source_chunk": "pilot.mat",
+      "buses": 57,
+      "branch_records": 94,
+      "active_branches": 94,
+      "generator_records": 271,
+      "online_generators": 271,
+      "dc_link_records": 4,
+      "active_dc_links": 4,
+      "active_branches_with_positive_rate_a": 24,
+      "unrated_active_branches": 70,
+      "reference_bus": 74,
+      "reference_input_angle_deg": 0.2979
+    }
+  ],
+  "interfaces": [
+    "Dysinger East",
+    "West Central",
+    "Total East",
+    "Moses South",
+    "Central East",
+    "UpNY-Coned",
+    "Dun/SPR-South"
+  ],
+  "runtime": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\Holiday\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "numpy": "1.26.4",
+    "scipy": "1.15.2",
+    "platform": "Windows-11-10.0.26220-SP0"
+  },
+  "script_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2019\\replay_dc.py",
+  "script_sha256": "bf48540453c4ab8191b6b8e2cb65d8248acaae425b154ab85f6d182be3e57434",
+  "per_hour_csv": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\pilot_independent_dc_replay.csv",
+  "per_hour_csv_sha256": "ef6989b7b7fa5897fe090b0b2b0ccc231b630388cea2e76acedc46653c7e0b34"
+}

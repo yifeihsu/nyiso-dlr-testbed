@@ -1,0 +1,73 @@
+{
+  "hours": 8760,
+  "gamma": 0.358662225381536,
+  "reference_ny_only_max_branch_error_mw": 4.490630090003833e-12,
+  "reference_ny_only_max_interface_error_mw": 6.366462912410498e-12,
+  "annual_pooled": [
+    {
+      "experiment": "reference_NY46__paper_roles",
+      "period": "annual",
+      "interface": "ALL_SEVEN_POOLED",
+      "hours": 8760,
+      "observations": 61320,
+      "wape_pct": 11.218076930625283,
+      "mae_benchmark_mw": 83.01009898122865,
+      "mae_actual_scale_mw": 231.44366232860057,
+      "bias_benchmark_mw": 29.737677030857412,
+      "wrong_direction_count": 1092
+    },
+    {
+      "experiment": "compact51__paper_roles",
+      "period": "annual",
+      "interface": "ALL_SEVEN_POOLED",
+      "hours": 8760,
+      "observations": 61320,
+      "wape_pct": 17.38250825028392,
+      "mae_benchmark_mw": 128.6248738818076,
+      "mae_actual_scale_mw": 358.6239776017104,
+      "bias_benchmark_mw": 67.11670312457318,
+      "wrong_direction_count": 1092
+    },
+    {
+      "experiment": "compact51__current_roles",
+      "period": "annual",
+      "interface": "ALL_SEVEN_POOLED",
+      "hours": 8760,
+      "observations": 61320,
+      "wape_pct": 19.072096095592332,
+      "mae_benchmark_mw": 141.12727114150567,
+      "mae_actual_scale_mw": 393.482394170108,
+      "bias_benchmark_mw": 72.00852261186702,
+      "wrong_direction_count": 1090
+    },
+    {
+      "experiment": "compact51_marcy__paper_roles",
+      "period": "annual",
+      "interface": "ALL_SEVEN_POOLED",
+      "hours": 8760,
+      "observations": 61320,
+      "wape_pct": 12.317215002075475,
+      "mae_benchmark_mw": 91.14336109641648,
+      "mae_actual_scale_mw": 254.12032449043227,
+      "bias_benchmark_mw": -2.040630371941697,
+      "wrong_direction_count": 1092
+    },
+    {
+      "experiment": "compact51_marcy__current_roles",
+      "period": "annual",
+      "interface": "ALL_SEVEN_POOLED",
+      "hours": 8760,
+      "observations": 61320,
+      "wape_pct": 19.670485236703158,
+      "mae_benchmark_mw": 145.55515500610076,
+      "mae_actual_scale_mw": 405.8279481516705,
+      "bias_benchmark_mw": 76.43640647646382,
+      "wrong_direction_count": 1090
+    }
+  ],
+  "input_parameter_fitting": false,
+  "untouched_holdout": false,
+  "preferred_2025_baseline_changed": false,
+  "boundary_source": "NYgrid model-derived NY terminal injections, not measured tie telemetry",
+  "scope": "DC matched-representation diagnostic; AC and thermal not established here"
+}

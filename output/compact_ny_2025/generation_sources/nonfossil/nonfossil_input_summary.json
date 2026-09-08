@@ -1,0 +1,40 @@
+{
+  "policy": {
+    "scope": "Retrospective approximate zonal generation priors; not observed zonal telemetry or as-of operational forecast.",
+    "forbidden_inputs": "No internal interface observations, fitted participation, model flow results or interface-derived generation.",
+    "p63_interval": "Sample value represents preceding interval ending at its timestamp (declared integration assumption); both trailing and leading one-hour bins retained.",
+    "p63_gap": "Intervals longer than 600 seconds are uncovered; no bridging long gaps or silent nearest-hour substitution.",
+    "nuclear": "NRC daily morning availability fraction times EIA seasonal net capability; normalized to statewide P63 nuclear MW. Status is not an observed hourly electrical output.",
+    "nrc_timing": "Reports collected 04:00-08:00 Eastern. Use previous day for hours before 08:00; otherwise same day; daily within-day constancy remains assumed.",
+    "hydro": "Positive published monthly EIA923 conventional HY/WAT mean MW form plant baselines, clipped to active EIA860 seasonal net capability. Below-baseline totals scale these baselines down. Above-baseline P63 Hydro is allocated in proportion to unused HY and PS generation headroom. PS monthly net pumping is retained separately and never relabeled zero observed generation. Annual-respondent monthly values, plant-hour output and PS residual are estimates; storage energy availability is unobserved. Totals above all HY/PS capability fail qualification.",
+    "wind": "Vintage EIA860 nameplate capacities of units in operation by the snapshot month determine geographic shares. Gold Book site-zone identities override approximate county zones. Same capacity factor across sites is assumed.",
+    "other_renewables": "Vintage EIA860 biomass/waste/solar capacities determine approximate shares. Solar weight multiplied by positive sine of approximate local solar altitude (no weather). Market/behind-meter category coverage is not exact; storage is not separately allocated.",
+    "inventory_vintage": "Annual end-year operating plus within-year retired inventory is filtered by operating/retirement month. Start-month units excluded until next month; retirement-month units excluded. Intra-year capacity changes not reconstructed.",
+    "annual_status_assumption": "OP/SB annual units are eligible; OA/OS units are excluded throughout that vintage as a conservative assumption. Annual outage status is not hourly availability evidence. For 2025 this excludes St Lawrence unit21 and Lewiston unit2 from seasonal capability.",
+    "geography": "Explicit site overrides plus county-to-zone approximations; county borders need not match electrical zones. H/I distinction for generic Westchester remains approximate.",
+    "2025_release": "EIA860/923 2025 early release downloaded 2026-09-08; retrospective information, not fully validated by EIA.",
+    "scaling": "Uniform fixed-year peak gamma copied from registered snapshot metadata; no independent fitting.",
+    "double_counting": "These four nonfossil fuel totals replace corresponding source priors; they must not be added to total fleet priors a second time."
+  },
+  "primary_window": "hour_beginning",
+  "scenario_count": 16,
+  "row_counts": {
+    "registered_hours.csv": 16,
+    "statewide_fuelmix_hourly.csv": 224,
+    "statewide_fuelmix_raw_samples.csv": 3451,
+    "eia860_nonfossil_inventory.csv": 2117,
+    "eia923_monthly_hydro.csv": 960,
+    "nrc_daily_reactor_inputs.csv": 76,
+    "hydro_plant_hourly_estimates.csv": 2546,
+    "zonal_nonfossil_priors.csv": 704,
+    "named_renewable_priors.csv": 16,
+    "zonal_allocation_shares.csv": 704,
+    "source_manifest.csv": 45
+  },
+  "all_conservation_checks_pass": true,
+  "incomplete_primary_fuel_hours": [],
+  "hydro_capacity_ineligible_scenarios": [],
+  "input_metadata_projection_sha256": "0cfaeb9cae7e356a8eb443cc4a1bfd27899d6e3e2c30bc8364de9d712621ebd0",
+  "protocol_sha256": "b9fdef829f29a26a25df84c8199581b1ce9f8a9943c44551681dff7b45b2fbf9",
+  "source_input_interface_values_read": false
+}

@@ -23,7 +23,13 @@ options = defaults(options, helper_dir, perform_dir);
 addpath(case_dir); addpath(helper_dir); addpath(perform_dir);
 define_constants;
 
-candidate = loadcase(options.s13_case);
+if isempty(options.s13_case)
+    checkpoint = build_s13_phase1a_candidate(struct( ...
+        'write_outputs', false, 'verbose', false));
+    candidate = checkpoint.candidate;
+else
+    candidate = loadcase(options.s13_case);
+end
 overlay = overlay_report(candidate);
 physical = overlay.physical_register;
 physical = physical(physical.overlay_path_id == ...
@@ -149,7 +155,9 @@ if ~isfield(options, 'fail_on_gate'), options.fail_on_gate = true; end
 if ~isfield(options, 'verbose'), options.verbose = true; end
 if ~isfield(options, 'output_dir'), options.output_dir = helper_dir; end
 if ~isfield(options, 's13_case')
-    options.s13_case = 'npcc_ny_lite_s13_npcc_augmented_2019';
+    % Empty selects the immutable Phase 1A builder.  The public S13 wrapper
+    % advances cumulatively and must not redefine this historical fixture.
+    options.s13_case = [];
 end
 if ~isfield(options, 'source_case')
     options.source_case = 'nyiso_On_Peak_v23_shunts_as_z_load';

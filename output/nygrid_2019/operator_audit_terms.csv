@@ -1,0 +1,145 @@
+smoke_case,interface,operator_variant,branch_row,PF_coefficient,from_bus,to_bus,from_name,to_name,from_zone,to_zone,status,semantic_PF_coefficient,coefficient_matches_semantic_cut,observations_used_for_construction
+1,Dysinger East,literal_plot,32,-1,52,53,ROCHESTER,ROCHESTER,B,B,1,0,0,0
+1,Dysinger East,literal_plot,34,1,53,65,ROCHESTER,GESONIDGE,B,C,1,0,0,0
+1,Dysinger East,literal_plot,37,1,54,56,NIAGARA W,HUNTLEY,A,A,1,0,0,0
+1,Dysinger East,literal_plot,47,1,58,60,GARDENVILLE,DUNKIRK,A,A,1,0,0,0
+1,Dysinger East,released_if_map,33,-1,53,55,ROCHESTER,NIAGARA E,B,A,1,-1,1,0
+1,Dysinger East,released_if_map,35,1,54,52,NIAGARA W,ROCHESTER,A,B,1,1,1,0
+1,Dysinger East,released_if_map,38,1,54,62,NIAGARA W,STOLLE RD,A,B,1,1,1,0
+1,Dysinger East,released_if_map,48,1,58,62,GARDENVILLE,STOLLE RD,A,B,1,1,1,0
+1,Dysinger East,semantic_zone_crossing,33,-1,53,55,ROCHESTER,NIAGARA E,B,A,1,-1,1,0
+1,Dysinger East,semantic_zone_crossing,35,1,54,52,NIAGARA W,ROCHESTER,A,B,1,1,1,0
+1,Dysinger East,semantic_zone_crossing,38,1,54,62,NIAGARA W,STOLLE RD,A,B,1,1,1,0
+1,Dysinger East,semantic_zone_crossing,48,1,58,62,GARDENVILLE,STOLLE RD,A,B,1,1,1,0
+1,West Central,literal_plot,28,-1,50,51,CLAY,CLAY,C,C,1,0,0,0
+1,West Central,literal_plot,29,-1,50,52,CLAY,ROCHESTER,C,B,1,-1,1,0
+1,West Central,literal_plot,33,1,53,55,ROCHESTER,NIAGARA E,B,A,1,0,0,0
+1,West Central,literal_plot,50,1,60,61,DUNKIRK,DUNKIRK,A,A,1,0,0,0
+1,West Central,released_if_map,29,-1,50,52,CLAY,ROCHESTER,C,B,1,-1,1,0
+1,West Central,released_if_map,30,-1,51,53,CLAY,ROCHESTER,C,B,1,-1,1,0
+1,West Central,released_if_map,34,1,53,65,ROCHESTER,GESONIDGE,B,C,1,1,1,0
+1,West Central,released_if_map,51,1,62,63,STOLLE RD,MEYER,B,C,1,1,1,0
+1,West Central,semantic_zone_crossing,29,-1,50,52,CLAY,ROCHESTER,C,B,1,-1,1,0
+1,West Central,semantic_zone_crossing,30,-1,51,53,CLAY,ROCHESTER,C,B,1,-1,1,0
+1,West Central,semantic_zone_crossing,34,1,53,65,ROCHESTER,GESONIDGE,B,C,1,1,1,0
+1,West Central,semantic_zone_crossing,51,1,62,63,STOLLE RD,MEYER,B,C,1,1,1,0
+1,Total East,literal_plot,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+1,Total East,literal_plot,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+1,Total East,literal_plot,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+1,Total East,literal_plot,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+1,Total East,literal_plot,8,1,38,77,GILBOA,BUCHANAN,E,G,1,1,1,0
+1,Total East,released_if_map,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+1,Total East,released_if_map,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+1,Total East,released_if_map,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+1,Total East,released_if_map,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+1,Total East,released_if_map,8,1,38,77,GILBOA,BUCHANAN,E,G,1,1,1,0
+1,Total East,semantic_zone_crossing,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+1,Total East,semantic_zone_crossing,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+1,Total East,semantic_zone_crossing,8,1,38,77,GILBOA,BUCHANAN,E,G,1,1,1,0
+1,Total East,semantic_zone_crossing,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+1,Total East,semantic_zone_crossing,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+1,Moses South,literal_plot,24,-1,46,49,COLTON,PLATTSBURGH,E,D,1,-1,1,0
+1,Moses South,literal_plot,18,-1,44,45,PORTER,PORTER,E,E,1,0,0,0
+1,Moses South,literal_plot,23,-1,46,47,COLTON,MOSES W,E,E,1,0,0,0
+1,Moses South,released_if_map,25,-1,47,48,MOSES W,MOSES E,E,D,1,-1,1,0
+1,Moses South,released_if_map,19,-1,44,48,PORTER,MOSES E,E,D,1,-1,1,0
+1,Moses South,released_if_map,24,-1,46,49,COLTON,PLATTSBURGH,E,D,1,-1,1,0
+1,Moses South,semantic_zone_crossing,19,-1,44,48,PORTER,MOSES E,E,D,1,-1,1,0
+1,Moses South,semantic_zone_crossing,24,-1,46,49,COLTON,PLATTSBURGH,E,D,1,-1,1,0
+1,Moses South,semantic_zone_crossing,25,-1,47,48,MOSES W,MOSES E,E,D,1,-1,1,0
+1,Central East,literal_plot,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+1,Central East,literal_plot,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+1,Central East,literal_plot,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+1,Central East,literal_plot,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+1,Central East,released_if_map,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+1,Central East,released_if_map,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+1,Central East,released_if_map,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+1,Central East,released_if_map,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+1,Central East,semantic_zone_crossing,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+1,Central East,semantic_zone_crossing,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+1,Central East,semantic_zone_crossing,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+1,Central East,semantic_zone_crossing,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+1,UpNY-Coned,literal_plot,65,1,71,72,BINGHAMTON,LAPEER,C,C,1,0,0,0
+1,UpNY-Coned,literal_plot,66,-1,73,74,PLEASANT VLY,MILLWOOD,G,H,1,1,0,0
+1,UpNY-Coned,released_if_map,66,1,73,74,PLEASANT VLY,MILLWOOD,G,H,1,1,1,0
+1,UpNY-Coned,released_if_map,67,-1,74,77,MILLWOOD,BUCHANAN,H,G,1,-1,1,0
+1,UpNY-Coned,semantic_zone_crossing,66,1,73,74,PLEASANT VLY,MILLWOOD,G,H,1,1,1,0
+1,UpNY-Coned,semantic_zone_crossing,67,-1,74,77,MILLWOOD,BUCHANAN,H,G,1,-1,1,0
+1,Dun/SPR-South,literal_plot,73,1,78,80,CE UG,NORTHPORT,I,K,1,0,0,0
+1,Dun/SPR-South,literal_plot,74,1,78,81,CE UG,GOETHALS,I,J,1,1,1,0
+1,Dun/SPR-South,released_if_map,74,1,78,81,CE UG,GOETHALS,I,J,1,1,1,0
+1,Dun/SPR-South,released_if_map,75,1,78,82,CE UG,AK-3,I,J,1,1,1,0
+1,Dun/SPR-South,semantic_zone_crossing,74,1,78,81,CE UG,GOETHALS,I,J,1,1,1,0
+1,Dun/SPR-South,semantic_zone_crossing,75,1,78,82,CE UG,AK-3,I,J,1,1,1,0
+2,Dysinger East,literal_plot,32,-1,52,53,ROCHESTER,ROCHESTER,B,B,1,0,0,0
+2,Dysinger East,literal_plot,34,1,53,65,ROCHESTER,GESONIDGE,B,C,1,0,0,0
+2,Dysinger East,literal_plot,37,1,54,56,NIAGARA W,HUNTLEY,A,A,1,0,0,0
+2,Dysinger East,literal_plot,47,1,58,60,GARDENVILLE,DUNKIRK,A,A,1,0,0,0
+2,Dysinger East,released_if_map,33,-1,53,55,ROCHESTER,NIAGARA E,B,A,1,-1,1,0
+2,Dysinger East,released_if_map,35,1,54,52,NIAGARA W,ROCHESTER,A,B,1,1,1,0
+2,Dysinger East,released_if_map,38,1,54,62,NIAGARA W,STOLLE RD,A,B,1,1,1,0
+2,Dysinger East,released_if_map,48,1,58,62,GARDENVILLE,STOLLE RD,A,B,1,1,1,0
+2,Dysinger East,semantic_zone_crossing,33,-1,53,55,ROCHESTER,NIAGARA E,B,A,1,-1,1,0
+2,Dysinger East,semantic_zone_crossing,35,1,54,52,NIAGARA W,ROCHESTER,A,B,1,1,1,0
+2,Dysinger East,semantic_zone_crossing,38,1,54,62,NIAGARA W,STOLLE RD,A,B,1,1,1,0
+2,Dysinger East,semantic_zone_crossing,48,1,58,62,GARDENVILLE,STOLLE RD,A,B,1,1,1,0
+2,West Central,literal_plot,28,-1,50,51,CLAY,CLAY,C,C,1,0,0,0
+2,West Central,literal_plot,29,-1,50,52,CLAY,ROCHESTER,C,B,1,-1,1,0
+2,West Central,literal_plot,33,1,53,55,ROCHESTER,NIAGARA E,B,A,1,0,0,0
+2,West Central,literal_plot,50,1,60,61,DUNKIRK,DUNKIRK,A,A,1,0,0,0
+2,West Central,released_if_map,29,-1,50,52,CLAY,ROCHESTER,C,B,1,-1,1,0
+2,West Central,released_if_map,30,-1,51,53,CLAY,ROCHESTER,C,B,1,-1,1,0
+2,West Central,released_if_map,34,1,53,65,ROCHESTER,GESONIDGE,B,C,1,1,1,0
+2,West Central,released_if_map,51,1,62,63,STOLLE RD,MEYER,B,C,1,1,1,0
+2,West Central,semantic_zone_crossing,29,-1,50,52,CLAY,ROCHESTER,C,B,1,-1,1,0
+2,West Central,semantic_zone_crossing,30,-1,51,53,CLAY,ROCHESTER,C,B,1,-1,1,0
+2,West Central,semantic_zone_crossing,34,1,53,65,ROCHESTER,GESONIDGE,B,C,1,1,1,0
+2,West Central,semantic_zone_crossing,51,1,62,63,STOLLE RD,MEYER,B,C,1,1,1,0
+2,Total East,literal_plot,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+2,Total East,literal_plot,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+2,Total East,literal_plot,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+2,Total East,literal_plot,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+2,Total East,literal_plot,8,1,38,77,GILBOA,BUCHANAN,E,G,1,1,1,0
+2,Total East,released_if_map,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+2,Total East,released_if_map,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+2,Total East,released_if_map,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+2,Total East,released_if_map,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+2,Total East,released_if_map,8,1,38,77,GILBOA,BUCHANAN,E,G,1,1,1,0
+2,Total East,semantic_zone_crossing,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+2,Total East,semantic_zone_crossing,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+2,Total East,semantic_zone_crossing,8,1,38,77,GILBOA,BUCHANAN,E,G,1,1,1,0
+2,Total East,semantic_zone_crossing,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+2,Total East,semantic_zone_crossing,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+2,Moses South,literal_plot,24,-1,46,49,COLTON,PLATTSBURGH,E,D,1,-1,1,0
+2,Moses South,literal_plot,18,-1,44,45,PORTER,PORTER,E,E,1,0,0,0
+2,Moses South,literal_plot,23,-1,46,47,COLTON,MOSES W,E,E,1,0,0,0
+2,Moses South,released_if_map,25,-1,47,48,MOSES W,MOSES E,E,D,1,-1,1,0
+2,Moses South,released_if_map,19,-1,44,48,PORTER,MOSES E,E,D,1,-1,1,0
+2,Moses South,released_if_map,24,-1,46,49,COLTON,PLATTSBURGH,E,D,1,-1,1,0
+2,Moses South,semantic_zone_crossing,19,-1,44,48,PORTER,MOSES E,E,D,1,-1,1,0
+2,Moses South,semantic_zone_crossing,24,-1,46,49,COLTON,PLATTSBURGH,E,D,1,-1,1,0
+2,Moses South,semantic_zone_crossing,25,-1,47,48,MOSES W,MOSES E,E,D,1,-1,1,0
+2,Central East,literal_plot,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+2,Central East,literal_plot,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+2,Central East,literal_plot,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+2,Central East,literal_plot,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+2,Central East,released_if_map,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+2,Central East,released_if_map,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+2,Central East,released_if_map,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+2,Central East,released_if_map,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+2,Central East,semantic_zone_crossing,3,-1,37,38,NEW SEATHED,GILBOA,F,E,1,-1,1,0
+2,Central East,semantic_zone_crossing,6,-1,37,43,NEW SEATHED,EDIC,F,E,1,-1,1,0
+2,Central East,semantic_zone_crossing,12,-1,40,44,NEW SEATHED,PORTER,F,E,1,-1,1,0
+2,Central East,semantic_zone_crossing,14,-1,41,45,ROTTERDAM,PORTER,F,E,1,-1,1,0
+2,UpNY-Coned,literal_plot,65,1,71,72,BINGHAMTON,LAPEER,C,C,1,0,0,0
+2,UpNY-Coned,literal_plot,66,-1,73,74,PLEASANT VLY,MILLWOOD,G,H,1,1,0,0
+2,UpNY-Coned,released_if_map,66,1,73,74,PLEASANT VLY,MILLWOOD,G,H,1,1,1,0
+2,UpNY-Coned,released_if_map,67,-1,74,77,MILLWOOD,BUCHANAN,H,G,1,-1,1,0
+2,UpNY-Coned,semantic_zone_crossing,66,1,73,74,PLEASANT VLY,MILLWOOD,G,H,1,1,1,0
+2,UpNY-Coned,semantic_zone_crossing,67,-1,74,77,MILLWOOD,BUCHANAN,H,G,1,-1,1,0
+2,Dun/SPR-South,literal_plot,73,1,78,80,CE UG,NORTHPORT,I,K,1,0,0,0
+2,Dun/SPR-South,literal_plot,74,1,78,81,CE UG,GOETHALS,I,J,1,1,1,0
+2,Dun/SPR-South,released_if_map,74,1,78,81,CE UG,GOETHALS,I,J,1,1,1,0
+2,Dun/SPR-South,released_if_map,75,1,78,82,CE UG,AK-3,I,J,1,1,1,0
+2,Dun/SPR-South,semantic_zone_crossing,74,1,78,81,CE UG,GOETHALS,I,J,1,1,1,0
+2,Dun/SPR-South,semantic_zone_crossing,75,1,78,82,CE UG,AK-3,I,J,1,1,1,0

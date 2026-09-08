@@ -1,0 +1,26 @@
+function [manifest,runtime]=compact_partial_spc_dlr_code_manifest
+%COMPACT_PARTIAL_SPC_DLR_CODE_MANIFEST Specific replay and physics fingerprints.
+root=fileparts(fileparts(fileparts(mfilename('fullpath'))));h="System Matpower Format/NY_Lite/";
+names=["run_compact_partial_spc_dlr.m";"replay_compact_partial_spc_dlr.m"; ...
+    h+["compact_partial_spc_dlr_code_manifest.m";"compact_partial_spc_dlr_contract.m"; ...
+    "compact_partial_spc_dlr_selection.m";"test_compact_partial_spc_dlr.m";"test_replay_compact_partial_spc_dlr.m"; ...
+    "dlr_conductor_library.m";"dlr_heat_balance.m";"dlr_steady_ampacity.m"; ...
+    "build_dlr_corridor_realizations.m";"apply_dlr_temperature_resistance.m";"dlr_series_current_audit.m"; ...
+    "dlr_series_constraint.m";"add_dlr_series_current_constraints.m";"solve_dlr_steady_operating_point.m"; ...
+    "audit_ny_ac_reference.m";"ny_reference_file_sha256.m";"ny_lite_writetable_lf.m"; ...
+    "test_dlr_thermal_model.m";"test_dlr_electrical_consistency.m";"test_dlr_series_constraint.m"; ...
+    "test_dlr_operating_guards.m";"fixtures/dlr_nrel_reference.csv";"fixtures/dlr_nrel_reference_manifest.json"]];
+names=sort(names);hashes=strings(numel(names),1);
+for k=1:numel(names),hashes(k)=sha_lf(fullfile(root,names(k)));end
+manifest=table(names,hashes,'VariableNames',{'relative_path','sha256_lf_normalized'});
+fn=["runpf";"runopf";"mpoption";"makeYbus";"dSbr_dV";"ext2int";"int2ext";"mips"];
+hashes=strings(numel(fn),1);for k=1:numel(fn),hashes(k)=sha_lf(which(fn(k)));end
+runtime=table(fn,hashes,'VariableNames',{'function_name','sha256_lf_normalized'});
+end
+function h=sha_lf(path)
+fid=fopen(path,'rb');assert(fid>=0,'partial_spc_dlr:Code','Missing replay dependency %s.',path);
+guard=onCleanup(@()fclose(fid));b=fread(fid,Inf,'*uint8'); %#ok<NASGU>
+b=uint8(strrep(strrep(char(b'),sprintf('\r\n'),sprintf('\n')),sprintf('\r'),sprintf('\n')));
+md=java.security.MessageDigest.getInstance('SHA-256');md.update(b);
+h=string(lower(reshape(dec2hex(typecast(md.digest(),'uint8'),2)',1,[])));
+end

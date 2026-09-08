@@ -1,2 +1,23 @@
 # Evidence CSVs are serialized and validated byte-for-byte with canonical LF.
 *.csv text eol=lf
+# Original NYISO archive members retain their raw bytes and published-source
+# fingerprints. Generated evidence CSVs above still use canonical LF.
+"System Matpower Format/NY_Lite/contemporary_source_data/*.csv" -text !eol whitespace=cr-at-eol
+# These saved diagnostic JSON summaries are byte-fingerprinted outputs.
+# Preserve their original serializer bytes across operating systems.
+output/compact_ny_2025/generation_sources/epa/epa_generation_input_tests.json -text whitespace=cr-at-eol
+output/compact_ny_2025/generation_sources/nonfossil/nonfossil_input_summary.json -text whitespace=cr-at-eol
+# Paper-reproduction manifests and logs preserve serializer bytes for hashes.
+output/nygrid_2019/*.json -text whitespace=cr-at-eol
+output/nygrid_2019/*.md -text whitespace=cr-at-eol
+output/nygrid_2019/*.log -text whitespace=cr-at-eol
+# Exact patches include original upstream blank-line whitespace as evidence.
+output/nygrid_2019/*.patch -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+
+# Matched-comparison evidence and its code are fingerprinted as exact bytes.
+output/nygrid_compact_2019/** -text whitespace=cr-at-eol
+scripts/nygrid_compact_2019/** -text whitespace=cr-at-eol
+# Preserve the exact MATLAB table display captured by the independent replay.
+output/nygrid_compact_2019/verification/*.log whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Presentation evidence and source manifests preserve their exact hashed bytes.
+output/pdf/nygrid_interface_update_2026-09-08/** -text whitespace=cr-at-eol
