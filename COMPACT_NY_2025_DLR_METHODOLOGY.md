@@ -2,7 +2,9 @@
 
 The new preliminary model has **66 New York buses, 125 branch records (112 active), and 37 generator records**. It retains all 46 original NPCC New York bus IDs, stays below the 200-bus ceiling, and represents neighboring systems through ten fixed scheduled injection channels. External NPCC buses remain in the construction for provenance; the operating case contains only New York. The earlier 51-bus benchmark and larger Package A/B artifacts remain separate references.
 
-NYISO zonal demand shares now enter the case correctly, and four 2025 operating points closely fit seven interface proxies. Twenty-three explicitly assumed overhead-conductor realizations provide tested electrical/thermal consistency. Unseen-hour interface prediction and observed zonal generation remain incomplete. This is an approximate research baseline, not a validated NYISO planning case.
+NYISO zonal demand shares enter the case correctly, and four 2025 operating points closely fit seven interface proxies. Twenty-three explicitly assumed overhead-conductor realizations provide tested electrical/thermal consistency. A [separate independent generation reconstruction](COMPACT_NY_GENERATION_RECONSTRUCTION.md) now tests four new hours without fitting interface targets; mean errors are 134–185 benchmark MW. Complete observed zonal generation remains unavailable. This is an approximate research baseline, not a validated NYISO planning case.
+
+**Infrastructure evidence correction:** [Owner commissioning notices](output/compact_ny_2025/sources/INFRASTRUCTURE_2025_STATUS_AUDIT.md) establish partial Smart Path Connect energization in late 2025. The frozen northern 230-kV templates omit those additions; the earlier blanket post-2025 exclusion was too broad. The 66-bus case represents selected developments, not a complete year-end equipment reconstruction.
 
 ![Validation and limitations](output/compact_ny_2025/figures/compact_ny_2025_validation.png)
 
@@ -14,7 +16,7 @@ The former constant-total method inflated each light-load hour to 10.902 GW whil
 
 The input builder reads public P58C load and P32 interfaces/exchanges, retains actual and scaled values, verifies source hashes against archived ZIP members, and records row/timestamp provenance. Six selected hours per vintage cover summer, winter, spring, high NYC/LI load, and high/low Total East. Twelve hours are not annual statistical coverage.
 
-All active pairs use the same published hour label, but hourly load and a five-minute flow sample have unequal averaging intervals. The archived 2025 spring 14:00 load/14:03 flow pair is excluded and explicitly replaced by a common 13:00 pair. A documented hourly averaging convention would improve temporal comparability; it is not claimed as implemented.
+All active pairs in this preserved calibration campaign use the same published hour label, but hourly load and a five-minute flow sample have unequal averaging intervals. The archived 2025 spring 14:00 load/14:03 flow pair is excluded and explicitly replaced by a common 13:00 pair. The separate independent generation experiment now implements hourly averaging, explicit gap exclusions and timing sensitivity; it does not overwrite these earlier results.
 
 Within each zone, observed scaled gross load uses original positive-load bus weights. G/J previously had no positive demand and now use registered proxy weights. New transit stations add no copied load. Existing Q/P ratios are retained where defined; otherwise load power factor 0.97 is assumed. Gross load and external injections have separate ledgers before forming effective MATPOWER PD/QD.
 
@@ -30,10 +32,10 @@ The scenario cutoff is **2025-12-31**. Seasonal 2025 operating conditions are te
 |---|---|
 | Central East Energy Connect | Princetown/Gordon Road stations, six assumed 345-kV sections, transformer and registered split of the old 230-kV path. [Owner completion evidence](https://www.nypa.gov/news/press-releases/2023/20231213-transmission-line) is dated December 2023. |
 | New York Energy Solution | Churchtown inserted into the selected 345-kV corridor; two assumed sections replace an old equivalent. [Owner completion evidence](https://nytransco.com/wp-content/uploads/2023/08/NYES-News-Release.8.16.23_updated.pdf) is separate from parameter templates. |
-| Smart Path | Adirondack and four 230-kV historical-template circuits replace an NPCC equivalent. Rebuild resistance changes are assumptions; the later 345-kV Smart Path Connect upgrade is excluded. |
+| Smart Path | Adirondack and four 230-kV historical-template circuits replace an NPCC equivalent. Rebuild resistance changes are assumptions. The partial 345-kV Smart Path Connect additions energized in late 2025 remain an explicit model omission. |
 | NYC receiving network | Rainey, East Astoria, Corona, Gowanus, Greenwood and Fox Hills receiving/support paths. Predecessor replacements prevent silent duplication. Cable and transformer rows receive no overhead thermal model. |
-| Reliable Clean City | Queens uses completed-project evidence. Brooklyn/Staten Island service by year-end is an assumption based on the owner's May-2025 energization announcement, with an exclusion sensitivity. |
-| Later projects | CHPE, Smart Path Connect, RCC Long Island City and Propel NY are excluded at the 2025 cutoff. |
+| Reliable Clean City | Queens uses completed-project evidence. Brooklyn/Staten Island inclusion originally used the May-2025 announcement; the subsequent owner completion reports provide stronger support. Exact energization days and electrical parameters remain unverified. |
+| Later projects | CHPE, RCC Long Island City and Propel NY are excluded at the 2025 cutoff. Smart Path Connect requires component-specific dates; the frozen case omits its partial 2025 additions. |
 
 The overlay adds 15 buses and 33 branch records and retires eight prior records. Stable keys, predecessor dispositions, source templates and rating assumptions accompany every addition. Historical PERFORM workbook values provide parameter templates, not proof of commissioned-project R/X/B. [Eight prespecified S1 sensitivities](output/compact_ny_2025/sensitivities/SENSITIVITY_RESULTS.md) all pass bounded AC and independent PF, with interface MAE 1.970–2.051 MW. They vary impedance, charging, uncertain project status, retirement and wind availability without automatically selecting whichever fits best. These are calibration sensitivities, not new independent validation hours.
 
@@ -62,7 +64,7 @@ Four 2025 hours fit interface targets. Their mean normalized generation dispatch
 
 All twelve snapshots pass bounded AC and independent replay. Small calibration errors do not establish unseen-hour dispatch accuracy; [full results](output/compact_ny_2025/electrical_fixed_peak/ELECTRICAL_CALIBRATION_RESULTS.md) retain the prediction errors. Normalized errors flag near-zero targets and use an explicit 100-MW denominator floor.
 
-Public fuel mix is statewide, with no zone field. No complete observed eleven-zone generation series was found in the products checked. Zonal dispatch is therefore **estimated, not independently validated**. Inferring it from the same interfaces used for fitting would be circular. A stronger prior should join EPA/EIA/NYISO plant identities, reconcile gross/net and hourly/daily/monthly data, update fleet events and preserve missing coverage before aggregation. The present capacity/participation rule remains a transparent baseline for that comparison.
+Public fuel mix is statewide, with no zone field. No complete observed eleven-zone generation series was found in the products checked. Zonal dispatch is therefore **estimated, not independently validated**. Inferring it from the same interfaces used for fitting would be circular. The new [source-only variant](COMPACT_NY_GENERATION_RECONSTRUCTION.md) joins EPA/EIA/NYISO identities, NRC status, capped hydro and renewable estimates with explicit timing, coverage and gross/net reconciliation. The capacity/participation rule described here remains a preserved comparison baseline.
 
 ## Assumed conductor and thermal model
 

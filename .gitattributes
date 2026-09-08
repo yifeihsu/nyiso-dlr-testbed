@@ -3,3 +3,7 @@
 # Original NYISO archive members retain their raw bytes and published-source
 # fingerprints. Generated evidence CSVs above still use canonical LF.
 "System Matpower Format/NY_Lite/contemporary_source_data/*.csv" -text !eol whitespace=cr-at-eol
+# These saved diagnostic JSON summaries are byte-fingerprinted outputs.
+# Preserve their original serializer bytes across operating systems.
+output/compact_ny_2025/generation_sources/epa/epa_generation_input_tests.json -text whitespace=cr-at-eol
+output/compact_ny_2025/generation_sources/nonfossil/nonfossil_input_summary.json -text whitespace=cr-at-eol

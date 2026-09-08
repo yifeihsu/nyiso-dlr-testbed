@@ -9,3 +9,11 @@ Desktop.ini
 *.m~
 slprj/
 codegen/
+
+# Reproducible public-source downloads; selected provenance is committed.
+tmp/epa_generation_raw/
+tmp/nonfossil_sources/
+tmp/nyiso_time_audit/
+tmp/infrastructure_status_audit/
+tmp/compact_source_ci_*/
+__pycache__/

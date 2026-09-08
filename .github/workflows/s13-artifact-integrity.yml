@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
+      - "*compact*generation*.py"
+      - "*compact*generation*.m"
+      - "*compact*nyiso*.py"
       - ".gitattributes"
       - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
@@ -32,11 +35,15 @@ on:
       - "System Matpower Format/npcc_ny_compact_dlr_testbed.m"
       - "System Matpower Format/npcc_ny_2025_dlr_research.m"
       - "System Matpower Format/npcc_ny_2025_synthetic_dlr.m"
+      - "System Matpower Format/npcc_ny_2025_source_generation.m"
   push:
     branches:
       - main
       - "codex/**"
     paths:
+      - "*compact*generation*.py"
+      - "*compact*generation*.m"
+      - "*compact*nyiso*.py"
       - ".gitattributes"
       - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
@@ -65,6 +72,7 @@ on:
       - "System Matpower Format/npcc_ny_compact_dlr_testbed.m"
       - "System Matpower Format/npcc_ny_2025_dlr_research.m"
       - "System Matpower Format/npcc_ny_2025_synthetic_dlr.m"
+      - "System Matpower Format/npcc_ny_2025_source_generation.m"
 
 permissions:
   contents: read
@@ -375,3 +383,42 @@ jobs:
           path: ${{ runner.temp }}/compact_ny_2025_replay/
           if-no-files-found: warn
           retention-days: 14
+
+      - name: Replay independent generation predictions without targets or optimization
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(fullfile(getenv('RUNNER_TEMP'), 'matpower'));
+            assert(install_matpower(1, 0, 0, 1));
+            independent = replay_compact_generation_reconstruction;
+            assert(independent.passed && independent.eligible_scenarios==14 && independent.registered_scenarios==16);
+            assert(independent.code_manifest_verified && independent.source_manifest_verified && ~independent.optimizer_called && ~independent.internal_targets_used);
+            addpath(fullfile(pwd, 'System Matpower Format', 'NY_Lite'));
+            loader_tests = test_npcc_ny_2025_source_generation;
+            assert(height(loader_tests)==8 && all(loader_tests.passed));
+
+  independent-generation-sources:
+    name: Independent public generation source accounting and freeze
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up source analysis Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install verified source analysis dependencies
+        run: python -m pip install numpy==2.3.5 pandas==3.0.1 openpyxl==3.1.5
+
+      - name: Test temporal identity quantity coverage and generation accounting
+        run: >-
+          python -m unittest -v test_compact_nyiso_time_alignment
+          test_compact_nyiso_hourly_inputs test_build_compact_epa_generation_inputs
+          test_compact_nonfossil_generation_inputs test_compact_combined_generation_prior
+          test_compact_named_generation_priors
+
+      - name: Verify saved methods inputs and predictions were frozen before scoring
+        run: python freeze_compact_generation_methodology.py --verify
