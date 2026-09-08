@@ -1,21 +1,29 @@
 # S14-NYISO: NY-only electrical operating model
 
-**Target case:** `npcc_ny_lite_s14_nyiso_dlr_operating_model`
+**Preferred preliminary case:** `npcc_ny_compact_dlr_testbed`
 
-**Contract revision:** 2026-09-07, Packages A and B (Steps 1–5)
+**Contract revision:** 2026-09-07, compact NPCC NY scope after Packages A and B
 
 **Operating form:** New York network with explicit NY-side boundary injections
 
 **Electrical qualification:** determined by operating-result artifacts, never by this specification
 
-**Reproduction entry points:** `run_ny_only_foundation`, `run_ny_only_regional_candidate`
+**Current entry points:** `run_compact_npcc_ny_testbed`, `replay_compact_npcc_ny_testbed`
+
+The user's compact scope governs the preferred preliminary testbed: **51 NY
+buses**, retaining **all 46 original NPCC NY buses**, with a hard **200-bus
+ceiling**, **NPCC benchmark load scale**, and fixed NY-side boundary P/Q. See
+the root `COMPACT_NPCC_NY_TESTBED.md` and standalone
+`compact_npcc_model_contract.m`. The 878-bus Package B candidate remains an
+optional historical reference with its own evidence. Its broad regional
+replacement policy below does not authorize expanding the compact testbed.
 
 ## Model roles and scope
 
-S14-NYISO is qualified directly as a NY-only electrical research model. Neither
-qualification of neighboring NPCC systems, an external-network reduction, nor
-a particular bus count is a prerequisite. Historical source files and previous
-diagnostic outputs retain their original meaning.
+The compact case is qualified as a NY-only electrical benchmark. A bounded
+145-bus full construction prepares its matched boundary snapshot; the delivered
+operating case has 51 buses. The 200-bus limit is mandatory. Historical source
+files and previous diagnostic outputs retain their original meaning.
 
 | Model | Role |
 |---|---|
@@ -23,12 +31,15 @@ diagnostic outputs retain their original meaning.
 | Original PERFORM NY case | Pinned source of internal topology, devices, boundary records and historical reference conditions |
 | S12 PERFORM reduction | Optional comparison tool; its dense equivalent branches are not construction inputs |
 | Existing 86-bus S14 reduction diagnostic | Preserved external-reduction experiment; optional comparison evidence |
-| New S14-NYISO candidate | NY-only model with explicit boundary conditions and unrestricted internal refinement |
+| Compact NPCC NY testbed | Preferred NY-only NPCC benchmark; preserve original NY buses and enforce the 200-bus ceiling |
+| Package B regional candidate | Optional 878-bus historical electrical reference |
 
 The operating candidate may replace, deactivate, split or aggregate an
 inherited internal equivalent. Its original identity and electrical parameters
 remain in the provenance mapping; its contribution need not remain active.
-There is no requirement to retain every original NY bus or branch. Replacement
+The compact case must retain every original NPCC NY bus; five replaced branch
+records are preserved inactive for provenance. Historical Package B allowed
+broader regional replacement. Replacement
 packages account for boundary terminals, voltage levels, branches, gross load,
 native generation, shunts and controls together. Every old element receives an
 explicit disposition: fully replaced, partially replaced, nonoverlapping, or
@@ -44,7 +55,8 @@ region.
 
 ## Power scale, evidence and independent statuses
 
-`research_model_contract.m` provides these distinct modes:
+`compact_npcc_model_contract.m` governs the preferred NPCC benchmark. The
+historical `research_model_contract.m` retains these distinct modes:
 
 | Mode | Power convention |
 |---|---|

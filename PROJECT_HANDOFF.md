@@ -1,12 +1,25 @@
 # NPCC-NY Lite Calibration Project Handoff
 
 **Original handoff date:** 2026-07-12
-**Model-contract update:** 2026-09-07 (Package B: NY-only regional reconstruction)
+**Model-contract update:** 2026-09-07 (compact NPCC NY benchmark, hard 200-bus cap)
 **Structural provenance case:** `npcc_ny_lite_s7_seven_interface_perform_direct_candidate`
 **Construction and validation parent:** `npcc_ny_lite_s13_npcc_augmented_2019` (`S13-FULL`)
 **Promoted operating case:** pending `npcc_ny_lite_s14_nyiso_dlr_operating_model` (`S14-NYISO`)
 **Reference oracle:** `npcc_ny_lite_s12_perform_retention_core`
-**Current scope:** Package B establishes a bounded historical NY-only regional
+**Preferred preliminary testbed:** `npcc_ny_compact_dlr_testbed`, a **51-bus NY-only
+NPCC benchmark** with 87 active branches (92 records), 35 aggregate generator
+records, and ten fixed boundary P/Q records. All 46 original NPCC NY buses
+remain, with three inherited S7 terminals and two additional source terminals.
+Gross NY demand remains **10,902.2197987 MW**. The hard ceiling is **200 buses**;
+the model does not automatically expand to a large PERFORM region. Run
+`run_compact_npcc_ny_testbed` to rebuild and `replay_compact_npcc_ny_testbed` to
+verify the frozen case without optimization. The [compact specification](COMPACT_NPCC_NY_TESTBED.md)
+and [generated electrical results](output/compact_npcc_ny/COMPACT_NPCC_NY_RESULTS.md)
+describe the exact benchmark and qualification evidence. Inherited aggregate
+capability envelopes and reconstructed dispatch are assumptions, not verified
+physical plant capability or observed operations. Thermal/DLR readiness remains false.
+
+**Preserved larger reference:** Package B establishes a bounded historical NY-only regional
 candidate: 855 source D-K buses plus 23 retained NPCC A-C buses,1375 branches
 and595 generator records. `run_ny_only_regional_candidate` rebuilds its complete
 device replacement and bounded operating evidence; `replay_ny_only_regional_candidate`
@@ -30,12 +43,11 @@ assumptions, and the separate source-response comparison records their effect.
 ## 1. Executive Summary
 
 This project augments the public NPCC MATPOWER case with selected New York
-detail. S13-FULL preserves the full NPCC-derived network for provenance and
-historical comparisons. The new S14-NYISO operating candidate is NY-only with
-explicit NY-side boundary conditions and documented internal refinement.
-External-NPCC qualification, external reduction and any specific bus count are
-optional experiments. S11 remains a historical diagnostic reduction and S12 an
-optional PERFORM-derived comparison; neither is the operating model.
+detail. The preferred operating testbed preserves the original NPCC NY bus
+backbone with focused corridor replacements, fixed NY-side boundary conditions
+and at most 200 buses. S13-FULL and the 878-bus Package B case retain their
+historical comparison roles. S11 remains a diagnostic reduction and S12 an
+optional PERFORM-derived comparison; neither is the preferred operating model.
 
 The S7 structural provenance case, which remains the ancestor of S13-FULL, has:
 
@@ -63,7 +75,8 @@ diagnostic benchmark only.
 | S11 49-bus NY boundary equivalent | Diagnostic/reduced-model benchmark only |
 | S12 317-bus PERFORM reduction | Optional historical comparison tool; no dense branches copied into the operating candidate |
 | Existing 86-bus S14 diagnostic | Preserved external-reduction experiment; not a required construction stage |
-| New S14-NYISO candidate | NY-only operating model with explicit boundary conditions and unrestricted internal refinement |
+| Compact NPCC NY testbed | Preferred 51-bus NY-only benchmark with a hard 200-bus cap and fixed boundary P/Q |
+| Package B 878-bus regional candidate | Optional historical electrical reference; retains its own bounded qualification |
 | Full PERFORM 2019 case | Pinned source of topology, devices, boundary records and a historical benchmark |
 
 Historical inheritance remains original NPCC → S7 → Phase 0 corrections →
@@ -71,7 +84,9 @@ S13-FULL construction checkpoints. These immutable builders retain their
 existing preservation contracts. The new operating candidate may replace,
 deactivate, split or aggregate inherited NY internal equivalents. Original
 records remain traceable in provenance but need not stay electrically active.
-Replacement packages account for loads, generation, shunts, voltage levels,
+The compact testbed additionally requires all 46 original NY bus IDs and a
+hard 200-bus ceiling; the older broad replacement policy does not override
+these limits. Replacement packages account for loads, generation, shunts, voltage levels,
 controls and boundary terminals as well as branches. S12 dense equivalent
 branches cannot be construction inputs. The revised research contract permits both
 source-traceable overhead circuits and explicitly realized synthetic overhead

@@ -1,5 +1,10 @@
 # Package B: NY-only regional electrical candidate
 
+**Current role:** optional historical electrical reference. The preferred preliminary
+testbed is now the [compact NPCC NY benchmark](COMPACT_NPCC_NY_TESTBED.md): 51 NY
+buses, a hard 200-bus ceiling, benchmark load scale, and fixed boundary injections.
+The Package B construction and results below retain their original meaning.
+
 Package B replaces inherited regional network functions with a connected, explicitly mapped part of the original PERFORM NY model. The resulting historical electrical candidate contains **878 buses, 1,375 branch records, and 595 generator records**: 855 original-source buses in NY zones D–K and 23 retained NPCC buses in zones A–C. The construction follows the electrical boundary and device-accounting requirements; it does not force a predetermined reduced bus count.
 
 The accepted operating route is bounded AC reconstruction using **MATPOWER MIPS with its default initialization (`opf.start=0`)**, followed by a fresh power flow with fixed operating inputs and an independent physical-limit audit. This establishes one assumed historical operating candidate. It does not establish contemporary validation, thermal readiness, or completion of the later research packages.
