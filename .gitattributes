@@ -7,3 +7,9 @@
 # Preserve their original serializer bytes across operating systems.
 output/compact_ny_2025/generation_sources/epa/epa_generation_input_tests.json -text whitespace=cr-at-eol
 output/compact_ny_2025/generation_sources/nonfossil/nonfossil_input_summary.json -text whitespace=cr-at-eol
+# Paper-reproduction manifests and logs preserve serializer bytes for hashes.
+output/nygrid_2019/*.json -text whitespace=cr-at-eol
+output/nygrid_2019/*.md -text whitespace=cr-at-eol
+output/nygrid_2019/*.log -text whitespace=cr-at-eol
+# Exact patches include original upstream blank-line whitespace as evidence.
+output/nygrid_2019/*.patch -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

@@ -17,3 +17,9 @@ tmp/nyiso_time_audit/
 tmp/infrastructure_status_audit/
 tmp/compact_source_ci_*/
 __pycache__/
+
+# Pinned paper-reproduction downloads and regenerable duplicate input tables.
+tmp/nygrid_2019_reproduction/
+output/nygrid_2019/prepared_mat_interfaces.csv
+output/nygrid_2019/nyiso_source_audit_hourly_quality.csv
+output/nygrid_2019/nyiso_source_audit_hourly_reconstructed.csv
