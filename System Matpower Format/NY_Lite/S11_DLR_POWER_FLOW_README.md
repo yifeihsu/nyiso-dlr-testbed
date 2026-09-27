@@ -156,6 +156,25 @@ not passed through `imag(...)`.
 
 ## Build and validation
 
+### Hourly load inputs
+
+Bus-level hourly demand is available in
+[`output/s11_hourly_load_profiles`](../../output/s11_hourly_load_profiles/README.md).
+It covers all 49 S11 buses for January, April, and July of 2019 and 2025
+(4,416 hours). Each hour preserves raw NYISO zonal active-load totals using
+fixed within-zone shares from the saved nominal S11 case. Modeled signed Qd
+preserves the saved case's Q/P ratios; network GS/BS shunts remain unchanged.
+These are allocated load inputs, not measured bus-level demand or a validated
+chronological operating trajectory. See the linked methodology and validation
+files for coverage and assumptions.
+
+Generate with `scripts/s11_hourly_load_profiles/build_s11_hourly_load_profiles.m`
+and apply one hour with `apply_s11_hourly_load_profile.m`. This path uses the
+saved base case directly, avoiding the snapshot target-table scenario-ID
+mismatch described above.
+
+### Snapshot benchmark
+
 Run from the package root in MATLAB:
 
 ```matlab
