@@ -173,6 +173,14 @@ and apply one hour with `apply_s11_hourly_load_profile.m`. This path uses the
 saved base case directly, avoiding the snapshot target-table scenario-ID
 mismatch described above.
 
+An aligned modeled generation/interchange companion is documented in
+[`output/s11_hourly_generation`](../../output/s11_hourly_generation/README.md).
+Its hourly ledger distinguishes AC-verified operating points from unverified
+hours, and separately flags source-qualified versus gap-completed public
+interchange schedules. Use `apply_s11_hourly_operating_profile.m` to apply a
+validated hour by bus and generator/control identity. This companion does not
+turn S11 into a historical-dispatch reconstruction or a promoted operating model.
+
 ### Snapshot benchmark
 
 Run from the package root in MATLAB:

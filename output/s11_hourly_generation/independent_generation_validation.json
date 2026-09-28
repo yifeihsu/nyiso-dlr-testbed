@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "total_aligned_hours": 4416,
+  "valid_hours_checked": 4177,
+  "invalid_hours": 239,
+  "not_run_hours": 0,
+  "complete_all_hours_ac_valid": false,
+  "power_tolerance_mva": 0.001,
+  "voltage_tolerance_pu": 1e-06,
+  "network_matches_saved_case": true,
+  "all_timestamps_aligned": true,
+  "invalid_hour_ledger_explicit": true,
+  "generator_csv_roundtrip_maximum_errors": {
+    "gen_pg_mw.csv": 5.002220859751105e-12,
+    "gen_qg_mvar.csv": 5.002220859751105e-12,
+    "gen_vg_pu.csv": 5.10702591327572e-15,
+    "gen_status.csv": 0.0
+  },
+  "source_qualified_interchange_hours": 4287,
+  "gap_completed_interchange_hours": 129,
+  "dispatch_is_observed": false,
+  "chronological_ramps_checked": false,
+  "saved_peak_admittance_check": {
+    "case": "npcc_ny_lite_s11_dlr_pf_solution.m",
+    "maximum_nodal_residual_mva": 0.00014550005082584233,
+    "maximum_branch_shunt_identity_error_mva": 1.88803171688491e-11,
+    "passed": true
+  },
+  "physics_status": "independently_verified_on_valid_hours",
+  "maximum_ac_nodal_mismatch_mva": 1.220680824562537e-08,
+  "maximum_p_capability_or_offline_violation_mw": 0.00025098651440202957,
+  "maximum_q_capability_or_offline_violation_mvar": 4.967759480223322e-06,
+  "maximum_voltage_violation_pu": 9.537778173918099e-07,
+  "maximum_trusted_branch_violation_mva": 0.0,
+  "maximum_external_schedule_error_mw": 2.2737367544323206e-13,
+  "maximum_branch_shunt_identity_error_mva": 1.2415384772118862e-10,
+  "minimum_bus_voltage_pu": 0.8999997579726206,
+  "maximum_bus_voltage_pu": 1.1000009537778175,
+  "maximum_untrusted_branch_loading_ratio": 2.505941977799518,
+  "untrusted_branch_limits_are_diagnostic": true,
+  "hours_with_modeled_internal_shutdown": 77
+}
