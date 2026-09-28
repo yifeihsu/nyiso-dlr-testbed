@@ -1,0 +1,3 @@
+scenario_id,generator_key,zone,prior_public_mw,prior_benchmark_mw,coverage_qualified,source_method,observed_plant_net_generation,subset_of_zone_prior,inferred_offline_zero_prior_units,model_gen_row,model_key_found,bounded_prior_mw,assigned_online,unallocated_source_prior_mw,clipped_source_prior_mw,observed_generator_dispatch
+S3_2025_SHOULDER_LIGHT_LOAD_EXACT,NY2025:GEN:CRICKET_VALLEY:PV73,G,0,0,1,EPA_Cricket_three_clock_hour_units_times_statewide_fossil_total_reconciliation,False,True,3,36,1,0,1,0,0,0
+S3_2025_SHOULDER_LIGHT_LOAD_EXACT,NY2025:GEN:SOUTH_FORK:K9003,K,34.7704957074315,12.3699049641055,1,P63_statewide_wind_times_active_EIA_SouthFork_capacity_share,False,True,0,37,1,12.3699049641055,1,0,0,0

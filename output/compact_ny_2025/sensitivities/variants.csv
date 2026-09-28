@@ -1,0 +1,9 @@
+variant_id,impedance_scale,charging_scale,include_announced_2025_rcc,include_assumed_astoria_retirement,south_fork_available_fraction,selection_policy
+nominal,1,1,1,1,1,prespecified_one_assumption_at_a_time_no_model_selection
+impedance_075,0.75,1,1,1,1,prespecified_one_assumption_at_a_time_no_model_selection
+impedance_125,1.25,1,1,1,1,prespecified_one_assumption_at_a_time_no_model_selection
+charging_zero,1,0,1,1,1,prespecified_one_assumption_at_a_time_no_model_selection
+charging_150,1,1.5,1,1,1,prespecified_one_assumption_at_a_time_no_model_selection
+RCC_announced_paths_off,1,1,0,1,1,prespecified_one_assumption_at_a_time_no_model_selection
+Astoria_retirement_not_assumed,1,1,1,0,1,prespecified_one_assumption_at_a_time_no_model_selection
+South_Fork_zero_available,1,1,1,1,0,prespecified_one_assumption_at_a_time_no_model_selection

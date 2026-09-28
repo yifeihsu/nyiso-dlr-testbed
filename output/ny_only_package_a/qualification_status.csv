@@ -1,0 +1,10 @@
+gate,passed,evidence_scope
+immutable_source_inventory,1,"1576 buses / 2371 branches / 615 source generator records"
+source_snapshot_pf,1,"Historical source assumptions preserved; violations explicitly retained"
+original_source_within_limits,0,"Marcy RF source active bound is not silently enlarged"
+bounded_NY_only_reference,1,"Fixed gross loads, boundary PQ, network parameters and native capability bounds"
+independent_fixed_input_replay,1,"Frozen dispatch and voltage targets; finite limits and reference adjustment audited"
+foundation_electrical_baseline_qualified,1,"One assumed 2019 PERFORM source benchmark only"
+final_S14_operating_candidate_qualified,0,"Package B internal reconstruction remains future work"
+contemporary_validation,0,"Packages C/D contemporary scenarios and held-out validation remain future work"
+DLR_ready,0,"Thermal identity and physical parameters are not qualified by this reference"

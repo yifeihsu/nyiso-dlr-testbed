@@ -1,23 +1,59 @@
 # NPCC-NY Lite Calibration Project Handoff
 
+**Preferred preliminary model — 2026-09-08:** [71-bus year-end infrastructure and synthetic DLR baseline](COMPACT_NY_PARTIAL_SPC_BASELINE.md). Use `npcc_ny_2025_partial_spc` for the source-estimated electrical state and `npcc_ny_2025_partial_spc_dlr` for a separately qualified synthetic weather state. The case retains all46 original NPCC NY buses, with135 branch records/117 active and37 generators. All15 electrical operating/sensitivity cases and four thermal cases pass fresh replay; 25 explicitly assumed overhead realizations have121 physics/implementation checks. Two electrical hours require strict IPOPT fallback; no physical bounds or prior weights are relaxed. Zonal gross-load shares exactly match scaled NYISO inputs, but four revisited calendar hours have interface MAE133–185MW and maximum471MW. The fixed year-end topology applied to earlier demand/generation hours is a counterfactual stress study, not historical as-operated or new holdout validation. The former calibrated/source/thermal cases remain preserved.
+
+**Preserved independent generation experiment:** [Source reconstruction and originally reserved-hour results](COMPACT_NY_GENERATION_RECONSTRUCTION.md) provides the separate66-bus `npcc_ny_2025_source_generation` case. Its four reserved hours had interface MAE134–185MW;14/14 source-qualified snapshots pass bounded AC and fresh replay, with two hours skipped for boundary-data gaps. Generation is independently estimated, not observed zonal telemetry. Its commissioning audit motivated the implemented71-bus alternative above.
+
+**Preserved calibrated research baseline — 2026-09-08:** [Compact 2025 NY methodology and results](COMPACT_NY_2025_DLR_METHODOLOGY.md). This earlier case has66 NY buses,112 active branches and37 generators. Four2025 hours fit seven interface proxies; two originally unused hours retain material prediction errors. Twelve snapshots pass bounded AC checks. Twenty-three explicitly assumed overhead realizations pass synthetic thermal experiments. Its loaders are `npcc_ny_2025_dlr_research` and `npcc_ny_2025_synthetic_dlr`. The notes below describe preserved earlier milestones and their original qualification scope.
+
 **Original handoff date:** 2026-07-12
-**Model-hierarchy update:** 2026-08-05
+**Model-contract update:** 2026-09-07 (compact NPCC NY benchmark, hard 200-bus cap)
 **Structural provenance case:** `npcc_ny_lite_s7_seven_interface_perform_direct_candidate`
 **Construction and validation parent:** `npcc_ny_lite_s13_npcc_augmented_2019` (`S13-FULL`)
 **Promoted operating case:** pending `npcc_ny_lite_s14_nyiso_dlr_operating_model` (`S14-NYISO`)
 **Reference oracle:** `npcc_ny_lite_s12_perform_retention_core`
-**Current status:** S7 preserves structural provenance; S13-FULL preserves the
-full NPCC construction network; S11 is diagnostic only; S12 is an oracle only;
-and no S14 operating case has been built or promoted.
+**Preferred preliminary testbed:** `npcc_ny_compact_dlr_testbed`, a **51-bus NY-only
+NPCC benchmark** with 87 active branches (92 records), 35 aggregate generator
+records, and ten fixed boundary P/Q records. All 46 original NPCC NY buses
+remain, with three inherited S7 terminals and two additional source terminals.
+Gross NY demand remains **10,902.2197987 MW**. The hard ceiling is **200 buses**;
+the model does not automatically expand to a large PERFORM region. Run
+`run_compact_npcc_ny_testbed` to rebuild and `replay_compact_npcc_ny_testbed` to
+verify the frozen case without optimization. The [compact specification](COMPACT_NPCC_NY_TESTBED.md)
+and [generated electrical results](output/compact_npcc_ny/COMPACT_NPCC_NY_RESULTS.md)
+describe the exact benchmark and qualification evidence. Inherited aggregate
+capability envelopes and reconstructed dispatch are assumptions, not verified
+physical plant capability or observed operations. Thermal/DLR readiness remains false.
+
+**Preserved larger reference:** Package B establishes a bounded historical NY-only regional
+candidate: 855 source D-K buses plus 23 retained NPCC A-C buses,1375 branches
+and595 generator records. `run_ny_only_regional_candidate` rebuilds its complete
+device replacement and bounded operating evidence; `replay_ny_only_regional_candidate`
+independently verifies the frozen case. The [Package B implementation](NY_ONLY_PACKAGE_B_IMPLEMENTATION.md)
+and [generated results](output/ny_only_package_b/NY_ONLY_REGIONAL_RESULTS.md)
+describe its assumptions and exact scope. The historical Phase 1B wrapper,
+Phase 1C construction candidate, Package A source reference and 86-bus
+external-reduction experiment retain their original meaning. No final
+contemporary or DLR delivery case is promoted. The earlier
+[electrical implementation report](ELECTRICAL_MODEL_IMPLEMENTATION.md) and
+`run_electrical_model_reproduction` remain historical diagnostic references.
+
+Package A qualifies **one assumed 2019 historical source reference**; Package B
+qualifies **one assumed 2019 NPCC/PERFORM regional electrical candidate**.
+Both use bounded prior-only reconstruction and independent AC replay without
+relaxed balance or fictitious active injections. Source response equivalence,
+contemporary validation and DLR readiness remain unestablished. In particular,
+the retained NPCC A-C network and aggregated controls are declared functional
+assumptions, and the separate source-response comparison records their effect.
 
 ## 1. Executive Summary
 
 This project augments the public NPCC MATPOWER case with selected New York
-detail. S13-FULL preserves the full NPCC-derived network for provenance,
-construction, and validation. The eventual DLR delivery model is S14-NYISO:
-the retained NYISO subnetwork plus a validated AC multi-terminal equivalent of
-only the non-NY network. S11 remains a historical diagnostic reduction and S12
-remains a PERFORM-derived oracle; neither is the promoted operating model.
+detail. The preferred operating testbed preserves the original NPCC NY bus
+backbone with focused corridor replacements, fixed NY-side boundary conditions
+and at most 200 buses. S13-FULL and the 878-bus Package B case retain their
+historical comparison roles. S11 remains a diagnostic reduction and S12 an
+optional PERFORM-derived comparison; neither is the preferred operating model.
 
 The S7 structural provenance case, which remains the ancestor of S13-FULL, has:
 
@@ -41,27 +77,47 @@ diagnostic benchmark only.
 | Model | Repository role |
 |---|---|
 | Original NPCC / S7 full case | Structural provenance case |
-| S13-FULL NPCC-augmented case | Full-NPCC construction and validation parent |
+| S13-FULL NPCC-augmented checkpoints | Preserved full-NPCC construction and historical comparison cases |
 | S11 49-bus NY boundary equivalent | Diagnostic/reduced-model benchmark only |
-| S12 317-bus PERFORM reduction | Calibration and validation oracle only |
-| Pending S14-NYISO | Promoted NYISO DLR operating model after its own gates pass |
-| Full PERFORM 2019 case | Source dataset and highest-fidelity reference |
+| S12 317-bus PERFORM reduction | Optional historical comparison tool; no dense branches copied into the operating candidate |
+| Existing 86-bus S14 diagnostic | Preserved external-reduction experiment; not a required construction stage |
+| Compact NPCC NY testbed | Preferred 51-bus NY-only benchmark with a hard 200-bus cap and fixed boundary P/Q |
+| Package B 878-bus regional candidate | Optional historical electrical reference; retains its own bounded qualification |
+| Full PERFORM 2019 case | Pinned source of topology, devices, boundary records and a historical benchmark |
 
-The intended inheritance is original NPCC → S7 → Phase 0 source-backed
-corrections → S13-FULL selective physical NYISO augmentation and internal
-residualization → S14-NYISO external reduction and operating validation. All
-original NPCC bus IDs and branch records remain traceable in S13-FULL. No
-external NPCC area may be replaced inside S13-FULL, and no S12 Kron-equivalent
-branch may enter S13-FULL or S14. S14 may eliminate only non-NY detail after
-retaining the NYISO network, physical overlays, controls, DLR terminals, and
-registered boundary terminals. Added physical circuits may receive DLR
-conductor data; aggregate, residual, and boundary-equivalent branches may not.
+Historical inheritance remains original NPCC → S7 → Phase 0 corrections →
+S13-FULL construction checkpoints. These immutable builders retain their
+existing preservation contracts. The new operating candidate may replace,
+deactivate, split or aggregate inherited NY internal equivalents. Original
+records remain traceable in provenance but need not stay electrically active.
+The compact testbed additionally requires all 46 original NY bus IDs and a
+hard 200-bus ceiling; the older broad replacement policy does not override
+these limits. Replacement packages account for loads, generation, shunts, voltage levels,
+controls and boundary terminals as well as branches. S12 dense equivalent
+branches cannot be construction inputs. The revised research contract permits both
+source-traceable overhead circuits and explicitly realized synthetic overhead
+corridors to receive future thermal models after consistency checks. Arbitrary
+residual and boundary equivalents remain nonthermal. A synthetic realization
+does not establish physical provenance.
 
-Topology is append-only, but admittance is not blindly additive. When an
-original NPCC branch already embeds a newly explicit physical path, that
-original row remains in place and may be refit only as a registered passive
-residual equivalent. A nonpassive residual is rejected in favor of adding more
-physical internal detail.
+Append-only rules apply to the preserved construction checkpoints, not the new
+operating candidate. Fully replaced paths may be deactivated; partially
+replaced paths may receive registered passive residual equivalents. Uncertain
+correspondence remains an explicit alternative. Accepted regions cannot
+contain unresolved double counting or unexplained omitted injections.
+
+The first Package A milestone is one bounded, accounted and independently
+replayable historical NY-only reference. `historical_actual_mw` is a new mode;
+the existing `historical_2019` API and `historical_similarity_scaled` convention
+retain archived approximately 10.9-GW target semantics. Contemporary actual-MW
+inputs remain separate. Missing exact bus-level observations limits validation
+coverage and does not automatically prohibit a research baseline under
+declared assumptions.
+
+`electrical_baseline_qualified`, `contemporary_validation_coverage` and
+`dlr_ready` are independent statuses. Implementation tests and ordinary PF
+convergence establish none of these by themselves. The historical results
+below retain their original scopes and are not Package A prerequisites.
 
 Current 2019 public-hour S7 validation:
 
@@ -97,7 +153,7 @@ S10a seven-interface MAE                   224.95 MW
 S10a mean normalized control-group Q error 0.1870
 ```
 
-The current Phase 1A S13-FULL construction checkpoint adds four exact PERFORM terminals (Fraser,
+The immutable Phase 1A S13-FULL construction checkpoint adds four exact PERFORM terminals (Fraser,
 Coopers Corner, Marcy, and Rock Tavern) and seven direct physical source rows
 between matching EDIC and Ramapo attachments. It has 147 buses, 253 branches,
 and 62 generators. All 29 mandatory structural gates pass; the five
@@ -105,10 +161,29 @@ construction-validation gates remain fail-closed. Both
 S7/Phase 0 and S13-FULL converge in
 the inherited-snapshot standard-PF smoke test. Both fail that
 snapshot's Q-limit PF, so the smoke result is not an operating gate. S13-FULL
-is never the DLR delivery case; its remaining validation determines whether it
-is fit to supply the NYISO topology and external reduction source for S14.
-All seven canonical overlay registers and the structural ledger match fresh
+is never the DLR delivery case; its remaining validation concerns that
+historical construction and external-reduction experiment. It is not a
+prerequisite for the new NY-only historical reference.
+All seven canonical overlay registers and the structural ledger matched fresh
 in-memory tables, and all 20 adversarial mutations fail at their expected gate.
+
+The current cumulative Phase 1B checkpoint adds E. Fishkill and Ladentown plus
+nine exact PERFORM 345-kV physical/support circuits. It has 149 buses, 262
+branches, and 62 generators. Its six-circuit UPNY-ConEd 345-kV proxy is a
+graph-validated nonintersecting local cut: F36/F37, F30/F31, Y88, and Y94 are
+members; Ramapo–Ladentown and E. Fishkill–Wood Street are same-side support
+rows; Wood Street–Millwood is excluded. The proxy passes 24/24 mandatory
+operator gates, while RFK305 and independently identifiable BK1/BK2 remain
+three explicit public-completeness gaps. It is not an exact public operator.
+
+The two Phase 1B local subnetworks pass 33/33 no-fit identity gates. Maximum
+direct errors are 8.19e-12 MW and 2.88e-12 MVAr, and the omitted-network-
+injection solves recover the interior flows and voltages to machine precision.
+Rows 94 and 235 are registered but remain unfitted overlap candidates. No
+parent R/X/B, shunt, dispatch, or control is calibrated. The cumulative 149-
+bus case passes all 30 structural gates; four later construction-qualification
+gates remain fail-closed. S13-FULL remains permanently ineligible for DLR
+delivery. Its later external-reduction diagnostic is also unpromoted.
 
 The S13.1 no-fit local fixture now passes 20/20 mandatory gates. Direct
 seven-branch power recomputation differs from full PERFORM by at most
@@ -148,10 +223,19 @@ Windows / PowerShell host
 From the package root, run:
 
 ```matlab
+foundation = run_ny_only_foundation; % new Package A source and operating evidence
+% Preserved historical reproduction:
 outputs = run_handoff_reproduction;
 ```
 
-This command:
+The foundation runner keeps source-snapshot reproduction separate from the
+bounded, prior-only reference. Fixed boundary P/Q remain separate from gross
+load and native generation; accepted results require independent replay and
+declared P/Q, voltage, rating and angle limits. No external NPCC solve or
+reduction is required. Fast implementation checks and full operating
+experiments run separately in CI; the fast checks cannot qualify a baseline.
+
+The historical `run_handoff_reproduction` command:
 
 1. rebuilds the six public load and seven-interface target scenarios from the
    included local NYISO cache;
@@ -169,19 +253,24 @@ This command:
 8. verifies that the S12 oracle snapshot sidecar contains the complete
    eight-circuit Total East operator and matches a fresh recomputation;
 9. reruns the durable S13 adversarial mutation suite; and
-10. runs the exact S13.1 local physical-circuit identity fixture and the
-    fail-closed common-input representability audit, then compares all twelve
-    committed S13.1 evidence CSVs against canonical rebuilt tables; and
-11. runs the inherited-snapshot S7/S13 standard- and Q-limit-PF smoke
-    diagnostic, reporting its limitations without treating it as an S14 promotion
-    gate or a 2019 operating-point comparison.
+10. runs the exact immutable S13.1 local physical-circuit identity fixture and
+    the fail-closed common-input representability audit, then compares all
+    twelve committed S13.1 evidence CSVs against canonical rebuilt tables;
+11. runs the cumulative Phase 1B local-identity, nonintersecting UPNY proxy,
+    committed-artifact, and adversarial-mutation checks; and
+12. runs both inherited-snapshot smoke diagnostics: the immutable two-case
+    S7/Phase-1A check and the cumulative three-case S7/Phase-1A/Phase-1B check.
+    Their standard- and Q-limit-PF results are diagnostic only and are not an
+    S14 promotion gate or a 2019 operating-point comparison.
 
-The `s13-artifact-integrity` GitHub workflow repeats the structural, artifact,
-adversarial, S12-sidecar, S13.1 preflight, and inherited-snapshot smoke checks for pull requests,
-`main`/`codex/**` pushes, and manual dispatch. CI writes no smoke artifacts and
-asserts only `standard_pf_both_pass`; it reports but does not assert Q-limit PF
-success because the inherited snapshot's Q-limit failure is a known diagnostic,
-not an S13-FULL construction gate or an S14 promotion gate.
+The `s13-artifact-integrity` GitHub workflow repeats the cumulative structural,
+register, adversarial, S12-sidecar, immutable S13.1 preflight, Phase 1B local,
+UPNY-operator, evidence-artifact, and inherited-snapshot smoke checks for pull
+requests, `main`/`codex/**` pushes, and manual dispatch. CI writes no smoke
+artifacts. It requires all three standard PFs in the cumulative Phase 1B smoke,
+but reports rather than requires Q-limit PF success because the inherited
+snapshot remains diagnostic rather than an S13-FULL construction gate or an
+S14 promotion gate.
 
 The default remains an S7 provenance and S13-FULL construction-parent
 reproduction. It must report the promoted operating model as pending S14-NYISO
@@ -844,7 +933,7 @@ used for AC consistency scoring. The tie calibration has two held-out hours,
 but the zonal injection estimator itself is not independently validated against
 observed zonal generation. Avoid claiming independent NYISO dispatch recovery.
 
-### 11.8 Boundary-equivalent scope
+### 11.8 Historical boundary-equivalent scope
 
 Exact public external schedules are tested only after removing the external
 NPCC mesh. The result is a NY boundary-equivalent operating study, not a full
@@ -854,77 +943,54 @@ shifters, or another equivalent formulation.
 
 ### 11.9 S14-NYISO boundary policy
 
-The promoted DLR operating model no longer needs to carry the full external
-NPCC mesh. That mesh remains in S13-FULL for provenance, construction, and
-validation. S14-NYISO will retain the NYISO network and replace only the non-NY
-portion with a separately registered AC multi-terminal boundary equivalent.
-The fail-closed implementation contract is documented in
-`System Matpower Format/NY_Lite/S14_NYISO_DLR_OPERATING_MODEL.md`.
+The new candidate uses explicit delivered NY-side P schedules and declared
+fixed Q at registered source landing buses. Positive means import into NY;
+negative P is export. Each regional group or separately scheduled facility
+records status, vintage, original-source identity, evidence class and any
+multi-landing allocation. Boundary supply cannot also enter native generation.
+Gross load is allocated before fixed boundary injections are subtracted for
+the solver. A shared native-generator/landing bus does not turn a fixed
+boundary record into voltage support. Neighboring-system losses lie outside
+this delivered-power convention unless a connection is explicitly retained.
 
-At the current Phase 1A checkpoint, S13-FULL has 53 NYISO-side buses and ten
-active NY/external tie rows. Retaining the ten first external terminals gives a
-provisional 63-bus inventory. It would preserve 88 NY-internal branch rows plus
-the ten tie rows; all 155 external-external rows, including row 178 between
-external terminals 124 and 125, belong to the eventual external equivalent.
-This inventory is not final because Phase 1B/1C add NYISO terminals and the
-downstate landing detail needed by several public schedule groups.
-These figures come from a read-only design audit and are non-gating until the
-future retention builder reproduces them in a canonical register.
+The 86-bus reduction and its passive multiport, port retention, source loss
+mapping and frozen replay remain optional historical diagnostics under
+`run_electrical_model_reproduction`. Their validity does not qualify the new
+baseline and their failure does not prohibit it. The optional direct-reduction
+validator now aggregates required metrics by name, including interface flow;
+a missing operator is unavailable and fails the reduction aggregate.
 
-The present S13-FULL topology distinguishes four regional AC cuts: HQ, Ontario,
-ISONE, and PJM. It does not provide validated individual landing/control paths
-for NPX 1385, NPX CSC, HTP, Neptune, or VFT. Those schedules therefore remain
-fail-closed rather than being hidden in one regional slack. A preliminary
-admittance audit also shows that a simple unit-tap branch-plus-diagonal-shunt
-realization would require negative-conductance shunts even though the complete
-multi-port is passive. The final reducer must use a passive synthesis or retain
-more external buses; it must not copy the simple S12 realization blindly.
-The coupling/passivity observations are likewise preliminary design evidence,
-not a promotion artifact, until a committed reduction audit reproduces them.
+The current contract is
+`System Matpower Format/NY_Lite/S14_NYISO_DLR_OPERATING_MODEL.md`. It requires
+traceable operating inputs and model limits without imposing a full external
+NPCC solve, an external multiport, or preservation of every active NY element.
 
 ## 12. Recommended Next Work
 
-1. **Phase 1B — UPNY-ConEd physical cut.** Add East Fishkill and Ladentown and
-   preserve Pleasant Valley–East Fishkill, Ladentown–Buchanan, and Pleasant
-   Valley–Wood Street circuits. Replace the conceptual operator with a
-   nonintersecting physical cutset.
-2. **Phase 1C — downstate interface mesh.** Add separate Sprain Brook,
-   Dunwoodie, West 49th Street, Tremont/Academy, Jamaica, Lake Success, and
-   Valley Stream terminals. Diagnose H-J, K-J, and net Zone-J import separately.
-3. **Phase 1D — passive internal residual equivalents.** Freeze added physical circuits,
-   the five DLR circuits, and nonoverlapping original branches. Rows 34/36 are
-   physical-overlap residual candidates. Rows 40/42 are adjacent E-F
-   calibration candidates and remain frozen unless paired multi-snapshot
-   response evidence and strong regularization explicitly authorize them.
-   Reject negative-resistance or materially nonpassive residuals and add more
-   physical detail instead.
-4. **Define the cumulative S14 retention set.** Retain all Zones A-K buses,
-   every Phase 1A-1C physical addition, NYISO generators and Q-control buses,
-   DLR terminals, NY-side tie terminals, and only the first external terminals
-   needed to distinguish boundary facilities. Register every retention reason
-   and boundary group. A Phase 1A-only inventory is provisional and must not
-   freeze the final set.
-5. **Reduce only the non-NY external network.** Derive an AC multi-terminal
-   equivalent from S13-FULL after the internal topology is complete. Preserve
-   the scenario-specific equivalent injection vector, synthesize only passive
-   equivalent branches/shunts, and reject a realization requiring negative
-   resistance or materially nonpassive behavior. Do not reuse the historical
-   prune-and-inject S1/S11 formulation as the S14 builder.
-6. **Validate S13-FULL against S14.** Use the same solved operating point and
-   compare retained-bus voltage, NYISO interface flow, NY losses, boundary P/Q,
-   and DLR currents. The external equivalent must meet tighter direct-reduction
-   gates before S12 is used for independent NYISO behavior validation.
-7. **Build explicit interchange controls.** Preserve regional AC schedule sums
-   while allowing the multi-port equivalent to determine sharing. NPX 1385,
-   NPX CSC, HTP, Neptune, and VFT remain fail-closed until source-backed landing
-   buses or explicit HVDC devices are present; do not hide them inside a generic
-   regional slack.
-8. Only after topology, reduction, response, and control gates pass, reconstruct
-   the six similarity-scaled 2019 public hours with bounded dispatch closure.
-   Report movement explicitly and do not treat S12 closed dispatch as observed
-   history. Obtain scenario-specific unit availability and unsupported PAR/tap schedules
-   where possible; otherwise use fixed snapshot values or bounded variables
-   with documented uncertainty.
+1. **Package A — NY-only foundation (implemented).** Pin and normalize the
+   original PERFORM representation, classify source devices, reconcile the
+   boundary-record inventory and build explicit NY-side fixed P/Q injections.
+   Reproduce the source snapshot with its violations, then establish one
+   actual-MW bounded prior-only research reference or quantify remaining
+   repairs. Independently replay accepted results and report reference
+   adjustment. This is a source benchmark, not a decision to use the entire
+   PERFORM case as the final operating network.
+2. **Package B — internal reconstruction (implemented).** Exact Pleasant
+   Valley–Wood Street row235 overlap is resolved. Complete source D-K branch,
+   device and control replacement retains NPCC A-C with explicit aggregation.
+   Smaller G-K and D+G-K variants remain recorded unsuccessful attempts;
+   D-K passes bounded full-demand reconstruction and independent replay.
+   This establishes the declared historical electrical baseline, with
+   separate source-response differences and no contemporary/DLR claim.
+3. **Package C — contemporary model (later scope).** Realize dated assets with
+   explicit old-element dispositions and bounded parameter assumptions.
+   Assemble matched actual-MW scenarios, distinguish observed/reconstructed/
+   assumed inputs, and freeze development/holdout roles before calibration.
+4. **Package D — electrical qualification (later scope).** Validate matched
+   source behavior, internal transfers/outages and boundary sensitivities
+   across the declared study envelope; preserve every attempted result and
+   freeze the electrical release. Contemporary coverage and later DLR
+   readiness remain distinct from historical baseline qualification.
 
 ## 13. High-Value Files
 
@@ -947,7 +1013,26 @@ System Matpower Format/NY_Lite/run_s13_phase1a_oracle_comparison.m
 System Matpower Format/NY_Lite/test_s13_phase1a_oracle_comparison.m
 System Matpower Format/NY_Lite/validate_s13_phase1a_oracle_artifact_consistency.m
 System Matpower Format/NY_Lite/test_s13_phase1a_oracle_artifact_consistency.m
+System Matpower Format/NY_Lite/add_npcc_perform_upny_coned_detail.m
+System Matpower Format/NY_Lite/build_s13_phase1b_candidate.m
+System Matpower Format/NY_Lite/merge_s13_overlay_reports.m
+System Matpower Format/NY_Lite/run_s13_phase1b_local_identity.m
+System Matpower Format/NY_Lite/test_s13_phase1b_local_identity.m
+System Matpower Format/NY_Lite/validate_s13_phase1b_upny_operator.m
+System Matpower Format/NY_Lite/validate_s13_phase1b_artifact_consistency.m
+System Matpower Format/NY_Lite/test_s13_phase1b_validator_adversarial.m
+System Matpower Format/NY_Lite/validate_s13_phase1b_smoke.m
 System Matpower Format/NY_Lite/s13_structural_adversarial_results.csv
+System Matpower Format/NY_Lite/s13_phase1b_local_identity.csv
+System Matpower Format/NY_Lite/s13_phase1b_local_omitted_injections.csv
+System Matpower Format/NY_Lite/s13_phase1b_terminal_voltage_comparison.csv
+System Matpower Format/NY_Lite/s13_phase1b_operator_validation.csv
+System Matpower Format/NY_Lite/s13_phase1b_terminal_reuse_audit.csv
+System Matpower Format/NY_Lite/s13_phase1b_generation_audit.csv
+System Matpower Format/NY_Lite/s13_phase1b_gate_ledger.csv
+System Matpower Format/NY_Lite/s13_phase1b_artifact_consistency.csv
+System Matpower Format/NY_Lite/s13_phase1b_adversarial_results.csv
+System Matpower Format/NY_Lite/s13_phase1b_smoke_validation.csv
 System Matpower Format/NY_Lite/s12_generate_interface_snapshot_sums.m
 System Matpower Format/NY_Lite/test_s12_interface_snapshot_sums.m
 System Matpower Format/NY_Lite/s12_interface_snapshot_sums.csv
@@ -1089,9 +1174,11 @@ S7 remains the NPCC-derived structural provenance case and S13-FULL remains the
 full-network construction and validation parent. Their inherited capability and
 voltage-control states are not certified, and S8/S8.1/S9a/S9b/S10a/S11 are
 diagnostic operating-point or reduced-model experiments rather than promoted
-cases. S12 is a separate reference oracle. Only the future S14-NYISO retained
-network plus validated external AC multi-port equivalent can become the DLR
-operating model.
+cases. S12 is an optional reference tool. The future S14-NYISO operating
+candidate is NY-only with explicit boundary conditions and documented internal
+replacement; external-network qualification or reduction is not a prerequisite.
+Electrical qualification does not imply contemporary validation or thermal
+readiness.
 
 ## 15. Handoff Package and Integrity
 

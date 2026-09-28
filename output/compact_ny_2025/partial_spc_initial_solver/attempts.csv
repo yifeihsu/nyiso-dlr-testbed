@@ -1,0 +1,18 @@
+variant_id,scenario_id,attempt,solver,electrically_qualified,error,bounds_relaxed
+nominal,S1_2025_SUMMER_PEAK_PUBLIC,1,MIPS,1, | ,0
+nominal,S2_2025_WINTER_PEAK_PUBLIC,1,MIPS,1, | ,0
+nominal,S3_2025_SHOULDER_LIGHT_LOAD_EXACT,1,MIPS,0, | bounded_audit_failed,0
+nominal,S3_2025_SHOULDER_LIGHT_LOAD_EXACT,2,IPOPT,1, | ,0
+nominal,S4_2025_HIGH_NYC_LI_LOAD_PUBLIC,1,MIPS,1, | ,0
+nominal,S6_2025_LOW_TOTAL_EAST_PUBLIC,1,MIPS,1, | ,0
+nominal,V1_2025_JAN15_EVENING,1,MIPS,1, | ,0
+nominal,V2_2025_APR15_MIDDAY,1,MIPS,1, | ,0
+nominal,V3_2025_JUL15_EVENING,1,MIPS,1, | ,0
+nominal,V4_2025_JUL25_NIGHT,1,MIPS,0, | bounded_audit_failed,0
+nominal,V4_2025_JUL25_NIGHT,2,IPOPT,0, | bounded_audit_failed,0
+impedance_075,S1_2025_SUMMER_PEAK_PUBLIC,1,MIPS,1, | ,0
+impedance_125,S1_2025_SUMMER_PEAK_PUBLIC,1,MIPS,1, | ,0
+charging_000,S1_2025_SUMMER_PEAK_PUBLIC,1,MIPS,1, | ,0
+charging_150,S1_2025_SUMMER_PEAK_PUBLIC,1,MIPS,1, | ,0
+rating_080,S1_2025_SUMMER_PEAK_PUBLIC,1,MIPS,1, | ,0
+rating_120,S1_2025_SUMMER_PEAK_PUBLIC,1,MIPS,1, | ,0

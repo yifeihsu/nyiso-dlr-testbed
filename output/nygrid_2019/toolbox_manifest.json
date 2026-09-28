@@ -1,0 +1,543 @@
+{
+  "schema_version": 1,
+  "retrieved_utc": "2026-09-08T15:16:20.836863+00:00",
+  "purpose": "Faithful pinned NYgrid2019 model reproduction; local dependency only; no global installation",
+  "selected_implementation": "MATPOWER/mx-reduction historical2019 mirror",
+  "selected_path": "tmp/nygrid_2019_reproduction/reduction_toolbox/mirror",
+  "selected_commit": "cbd61ad03308c31faecffa3d8d3259121bdc1aa4",
+  "selected_commit_date": "2019-06-20T19:44:43Z",
+  "selection_reason": "Last mirror commit predates pinned NYgridJune2022; includes2016 radial-external fix and interp1 compatibility; exact toolbox version used bypaper is not declared",
+  "exact_paper_toolbox_version_known": false,
+  "numeric_equivalence_to_official_linked_archive_tested": true,
+  "upstream_reference": {
+    "nygrid_commit": "47698b6c7823ae7b1bc6935e5601d5b64b8f918e",
+    "nygrid_readme_lines": [
+      87,
+      88
+    ],
+    "acknowledgement_url": "https://e4st.com/network-reduction-toolbox/"
+  },
+  "official_archive": {
+    "url": "https://e4st.com/wp-content/uploads/2015/04/NetworkReduction2.zip",
+    "path": "tmp/nygrid_2019_reproduction/reduction_toolbox/official.zip",
+    "sha256": "d69b5c2ee4f862cd9edab3705ebe675f178db5dfbe929f9e691093624ec50197",
+    "selected_for_reference_comparison": true,
+    "extracted_path": "tmp/nygrid_2019_reproduction/reduction_toolbox/official/NetworkReduction2",
+    "files": [
+      {
+        "relative_path": "BuildYMat.m",
+        "bytes": 2273,
+        "sha256": "81e9f60e4dc98468fede7793256b78d28da6f6b733d60461d20bde144ad84a9c",
+        "sha256_lf_normalized": "2b9774b45257a5cbf4d9c8fa0e84b21cd3f4a6f878c5f6e7ec1063062053bc06"
+      },
+      {
+        "relative_path": "DefBoundary.m",
+        "bytes": 874,
+        "sha256": "933c5b2b476e51051498f396b4e69fef4879e83323644c7f8f965a22cc2b2f93",
+        "sha256_lf_normalized": "5d02a5a4950d956482f82861501f326ba82c2aaf0d6118a96d4925a6e8201a60"
+      },
+      {
+        "relative_path": "DoReduction.m",
+        "bytes": 1864,
+        "sha256": "f780f3e276f6981638fc5f81353d8ca51899926c17525114420867266fd58065",
+        "sha256_lf_normalized": "509da08ffbfb55ac72610393594ab0110ac6d48d375453475b88a1969eb2b3f6"
+      },
+      {
+        "relative_path": "EQRODAssignment.m",
+        "bytes": 4381,
+        "sha256": "2b9051c629f60a1636c502e3cde1e8fc15db4067ca355482f8d81e759d49fe4a",
+        "sha256_lf_normalized": "a628a8611a7fe8f8ca84262ab482bf54aeb8c41fabf8f3525c53f728683ad4e1"
+      },
+      {
+        "relative_path": "GenerateBCIRC.m",
+        "bytes": 690,
+        "sha256": "4b62eade499d91360958ad2abb9d7e507d51376714967b4ca07bd894d2815252",
+        "sha256_lf_normalized": "9015e6290fb5323dcadb18e9b80bf9093af1ceb4e2529e15194815a78df4eafe"
+      },
+      {
+        "relative_path": "Initiation.m",
+        "bytes": 2265,
+        "sha256": "91966fd62e18a84c87e49b53601fdfdeff4193007275c3894f3bacd8d00cce6e",
+        "sha256_lf_normalized": "a76e728b25aedc3010209f89eb39d437d470b8427aa3010d7aea2819d2d478f6"
+      },
+      {
+        "relative_path": "LoadRedistribution.m",
+        "bytes": 4668,
+        "sha256": "01f0de39817b6ae8ab370a6ce9e5e5fd38c8e9e7a028b5b1457de785c562edca",
+        "sha256_lf_normalized": "7bfbd9d8b9a646b51ca63f13d0d6251d91c18efe479c3c7f2545088f179753af"
+      },
+      {
+        "relative_path": "MakeMPCr.m",
+        "bytes": 4498,
+        "sha256": "7bb438ed31e5fa517a352b514416e088abd0b049459687bc77883726c62d69a0",
+        "sha256_lf_normalized": "4b25153f2a44c3c7bc8761ab0b79ff029df0878fef69c71acf090e1f6e8cdd53"
+      },
+      {
+        "relative_path": "MapBus.m",
+        "bytes": 1170,
+        "sha256": "14b6633306247ecaa75a16401f88f7cb38227aae1d56a5a16df1c8f33042bf5a",
+        "sha256_lf_normalized": "da77caa4866fa42798d073b80874ebd6c08c5ecd2b2fe2679994b59399fce34d"
+      },
+      {
+        "relative_path": "MoveExGen.m",
+        "bytes": 5716,
+        "sha256": "795fd57f8b2a073ff45edb54fb70fa2ad89298389c6e7546510cee7fc23c0d34",
+        "sha256_lf_normalized": "91d34b17e5d54acd4bda36b8a071faebbfbf1cb968d74474882d35a58243f929"
+      },
+      {
+        "relative_path": "MPReduction.m",
+        "bytes": 5059,
+        "sha256": "113686d81219435c10bc7658b77bb6a53e2ebb5ec4ca4200bc9306e6eea73c75",
+        "sha256_lf_normalized": "2fae0a11ae7f65251f7b8037ccb161da1be0bfb4920b59a6b0c155644fee6930"
+      },
+      {
+        "relative_path": "PartialNumLU.m",
+        "bytes": 5679,
+        "sha256": "625b0257db344d9a1d4ef1d1a146845c22d38e83073fdb4cfb24489257eb6e0c",
+        "sha256_lf_normalized": "dbd39378c3ffe3e0ba130c496fa4d174b3a6bf78057b026a7c6903274e84081e"
+      },
+      {
+        "relative_path": "PartialSymLU.m",
+        "bytes": 6210,
+        "sha256": "7509bbc894ff348609874c843756d9b9c51c1525a6394b365fd6ad6c2571825a",
+        "sha256_lf_normalized": "fdc8277f1f70683da688371458ddcb68ae2105ae431dfb3d5505e1f6223b2c07"
+      },
+      {
+        "relative_path": "PivotData.m",
+        "bytes": 2114,
+        "sha256": "2b1531d27cdee7c8c37aa34767f3ebd58299407b1a456fe09d08cf52e9a91c04",
+        "sha256_lf_normalized": "26b9f9bf50e148bcb5c2c0192fd83d9892d0d5596496a1b4c669ac2ad43047f4"
+      },
+      {
+        "relative_path": "PreProcessData.m",
+        "bytes": 1897,
+        "sha256": "3f0f81947c651463dae33d40b462b40dc8d5a006bbca3e1e4f38d71ba53d0809",
+        "sha256_lf_normalized": "2f080cd9a1a5acb662d90c30faba26f41dcd2beab3852734d2ad72b32fa1b9e5"
+      },
+      {
+        "relative_path": "RODAssignment.m",
+        "bytes": 3497,
+        "sha256": "a96672d2509daebac16b50f650c25a4985646cecaa9c88b9b67edb0ac7a693e2",
+        "sha256_lf_normalized": "6d51c046b6fb9aeff933d3b4379b74eba333d036ff8187e249cd56ab278afd55"
+      },
+      {
+        "relative_path": "SelfLink.m",
+        "bytes": 2057,
+        "sha256": "8a6fc75fcabd9b5988e7e906c95f87203ff2ab049f19e3278d19e1b02ae54b6f",
+        "sha256_lf_normalized": "c15d55788fec81383a3a3e3749cb7dab43758973b020b5428127051dbe060792"
+      },
+      {
+        "relative_path": "TinneyOne.m",
+        "bytes": 1322,
+        "sha256": "f8a3fec12a2c8c380fcf278e4b8bf7f7fdcafd89695fbbe085fe61b0f5d6945a",
+        "sha256_lf_normalized": "dcdaf715f483a38247b482ac27b3ffdb48f157cdcd479f213b4dedeaa72da830"
+      }
+    ]
+  },
+  "mirror": {
+    "url": "https://github.com/MATPOWER/mx-reduction/tree/cbd61ad03308c31faecffa3d8d3259121bdc1aa4",
+    "archive_url": "https://api.github.com/repos/MATPOWER/mx-reduction/zipball/cbd61ad03308c31faecffa3d8d3259121bdc1aa4",
+    "archive_sha256": "9437e55b081f92a395d0661721a91c56292a7ee6e902b3faf8a4974cf5eb366e",
+    "tree_url": "https://api.github.com/repos/MATPOWER/mx-reduction/git/trees/cbd61ad03308c31faecffa3d8d3259121bdc1aa4?recursive=1",
+    "all_git_blobs_verified": true,
+    "files": [
+      {
+        "relative_path": "BuildYMat.m",
+        "bytes": 2517,
+        "sha256": "4a6648170b0217edf56da6d13fedd72797a5b25f113051b6f4d24f67dab05b1b",
+        "git_blob_sha1": "18f7fa3becb72f4671e130ffd92eef0e55012cf9",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "DefBoundary.m",
+        "bytes": 1149,
+        "sha256": "24e1609ae16ad125a13ed9277d11046a55272be5f4d47a4728f59bb548ee7d47",
+        "git_blob_sha1": "6051dea18bac4d5b3675d3fb560d2ada086b94bd",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "DoReduction.m",
+        "bytes": 2137,
+        "sha256": "9e686afe80a0ad79a0027226004984cf6df36b255b07fd762948b4cc3f4a5a88",
+        "git_blob_sha1": "e1faddc69791b48b866a5229b774994ebef1d0bd",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "EQRODAssignment.m",
+        "bytes": 4606,
+        "sha256": "5419de2d1882466b7cdca93b511aef6ca43a1fca0016ce0178610ce0b0876bda",
+        "git_blob_sha1": "82569a12c11512dd36a5531b5d8a028121bdb50e",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "Example_9bus.m",
+        "bytes": 1809,
+        "sha256": "e4168d3ec04baeb6d9518ff2ecf7bb7eeda7b09fbed933b495640495e84c750c",
+        "git_blob_sha1": "6e418509853796bb307ef5228c74e8a0c09e103b",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "GenerateBCIRC.m",
+        "bytes": 976,
+        "sha256": "a20e6c172bad10211b6a03375f28ff246cec36f62a9fd0df5ae14f339b5470ef",
+        "git_blob_sha1": "3cd1935568b80c6bb500bb74c9fc81f606e5675a",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "Initiation.m",
+        "bytes": 2518,
+        "sha256": "1aadb1b8b8578e401874d9d424a5d8e78970b30dd871bc8edba161d7ec6b1bdc",
+        "git_blob_sha1": "4a90d11969430fc1ed90a9a378d1b1b2a703b6e3",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "LoadRedistribution.m",
+        "bytes": 4838,
+        "sha256": "f445e0b8d42a710e4b7e8443f0080d0fb46f425dba6c47d576311e8b597a01f4",
+        "git_blob_sha1": "e596759ac114e9059a7bc6a64717385b54f1e628",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "MPReduction.m",
+        "bytes": 5260,
+        "sha256": "e9465c0b85249d89feba1a4627d0cf26353d6e1a90c6342ba9f6245bcaa85ce7",
+        "git_blob_sha1": "ba4743666becd387b9db612275724db76893ea82",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "MakeMPCr.m",
+        "bytes": 4795,
+        "sha256": "573273b25b670a4ca4ea006684f3ea3b8d1ab90d15581dca4c747c0b5a03857a",
+        "git_blob_sha1": "b34cc370b7c336dd6abcd7dffd6d1f76563605eb",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "MapBus.m",
+        "bytes": 1444,
+        "sha256": "ed8be122ef07ea6384b59f8b51e13cc7c5c5eba6651017fc557f068bb13cedf2",
+        "git_blob_sha1": "f79b3891767a1b725bc254bd15b20118ee7c19e3",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "MoveExGen.m",
+        "bytes": 5834,
+        "sha256": "04ef97428d2f38ca5b5e870b07dceac3a1ed499936361b360f5733fbf37a8816",
+        "git_blob_sha1": "6d32d4d8167c4c661c7022739d404b2423baf9a7",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "Network_Reduction_Toolbox.pdf",
+        "bytes": 94274,
+        "sha256": "83f600fd0b9cc6be8a7121add5c0c2006f2e27a9c7fb21d24507a30f91eb6838",
+        "git_blob_sha1": "46ae206aa1dd9023082f2552bf61c103a6df9d50",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "PartialNumLU.m",
+        "bytes": 5850,
+        "sha256": "c5903b7345277b4ce4dc66a2a9c54ff4f4646b3605beb1f5e0d82b44e46666bd",
+        "git_blob_sha1": "905f9c30efe95469dccbab8bd1386fff38d44c67",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "PartialSymLU.m",
+        "bytes": 6567,
+        "sha256": "e86d5eb64403399dab74b5a3faf5857fb325035171f330f4f882154049d04576",
+        "git_blob_sha1": "778ea648fb6d05f267811887d89f75a43316135e",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "PivotData.m",
+        "bytes": 2363,
+        "sha256": "6b6aace31d722ed862ac8c66ffb8af1328e125cb77cc9107fefa7d07951a1f5f",
+        "git_blob_sha1": "053f621af41da19b6ef79edde5e30e185181281c",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "PreProcessData.m",
+        "bytes": 2155,
+        "sha256": "55e90af8e0ded230ef997988381192a187fd023ed52ff9533d4838a2d863592f",
+        "git_blob_sha1": "1a012c5fec09962af1ce3d5080432c17ed03861f",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "RODAssignment.m",
+        "bytes": 3743,
+        "sha256": "b56c7fd799b00ea94a9ad4a2165df998a255897e6da537897acea9041d7b8845",
+        "git_blob_sha1": "538ef3be53608633b5d5497ba479e6e1f1ea4b8d",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "SelfLink.m",
+        "bytes": 2321,
+        "sha256": "a904fdde329781625b6e0595221728737100d66a42e25b8eb9b525692e112efc",
+        "git_blob_sha1": "d5a822672c8ea5446e94716a4a52c9d58b9cc242",
+        "upstream_blob_verified": true
+      },
+      {
+        "relative_path": "TinneyOne.m",
+        "bytes": 1591,
+        "sha256": "6616b435445b53dba9ed6dafa57d1e72f80ffec2419b84df95d9786359f4e156",
+        "git_blob_sha1": "6a314b4cef8af4f8ecafbf1c428791e2d8fea99d",
+        "upstream_blob_verified": true
+      }
+    ]
+  },
+  "source_comparison": [
+    {
+      "file": "BuildYMat.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "DefBoundary.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "DoReduction.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "EQRODAssignment.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "GenerateBCIRC.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "Initiation.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": false,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "LoadRedistribution.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": false,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "MakeMPCr.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": false,
+      "equal_after_interp1q_to_interp1": false
+    },
+    {
+      "file": "MapBus.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": false,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "MoveExGen.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": false,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "MPReduction.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "PartialNumLU.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "PartialSymLU.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": false,
+      "equal_after_interp1q_to_interp1": false
+    },
+    {
+      "file": "PivotData.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "PreProcessData.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "RODAssignment.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "SelfLink.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    },
+    {
+      "file": "TinneyOne.m",
+      "executable_lines_equal_ignoring_comment_only_and_blank_lines": true,
+      "equal_after_interp1q_to_interp1": true
+    }
+  ],
+  "substantive_differences": [
+    "Initiation/LoadRedistribution/MapBus/MoveExGen/MakeMPCr replace interp1q byinterp1",
+    "MakeMPCr guards an empty equivalent-branch result",
+    "PartialSymLU changes radial-external symbolic traversal (2016fix)"
+  ],
+  "row_order_dependencies": [
+    "NYgridupdateOpCond deletes reducedbranch76 afterMPReduction",
+    "NYgridupdateOpCond hardcodes signed branchrows for11interfaces",
+    "Record actualF_BUS/T_BUS/device keys for those rows andcompare both toolkit results beforeclaiming paperexactbranchmapping"
+  ],
+  "dependencies": {
+    "matlab": "table,categorical,string,datetime,groupsummary support",
+    "matpower": "loadcase,define_constants,rundcpf,rundcopf,toggle_dcline,toggle_iflims; papercites7.1 butreleaseREADMEnotversionpinned",
+    "statistics_and_machine_learning_toolbox": "fitlm only if recomputingwriteGenParam; prepared2019data avoidthispath"
+  },
+  "raw_files_modified": false,
+  "files_hash_policy": "SHA256 raw extracted bytes; officialalsoLF-normalized hash; GitblobSHA1 verified for mirror",
+  "official_compatibility": {
+    "path": "tmp/nygrid_2019_reproduction/reduction_toolbox/official_compatibility",
+    "purpose": "Comparison against historical official code after runtime-only interpolation compatibility; leaves2016 radial-reductionalgorithmfix absent",
+    "patch_path": "tmp/nygrid_2019_reproduction/reduction_toolbox/official_interp1_compatibility.patch",
+    "patch_sha256": "779f5f4284b89857f810e0f9e9a8333b7d0ff7197067e38975d152fbe98eb38a",
+    "changed_files": [
+      "Initiation.m",
+      "LoadRedistribution.m",
+      "MakeMPCr.m",
+      "MapBus.m",
+      "MoveExGen.m"
+    ],
+    "change_rule": "literal interp1q( to interp1( only; no other bytes changed",
+    "files": [
+      {
+        "relative_path": "BuildYMat.m",
+        "sha256": "81e9f60e4dc98468fede7793256b78d28da6f6b733d60461d20bde144ad84a9c",
+        "original_sha256": "81e9f60e4dc98468fede7793256b78d28da6f6b733d60461d20bde144ad84a9c",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "DefBoundary.m",
+        "sha256": "933c5b2b476e51051498f396b4e69fef4879e83323644c7f8f965a22cc2b2f93",
+        "original_sha256": "933c5b2b476e51051498f396b4e69fef4879e83323644c7f8f965a22cc2b2f93",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "DoReduction.m",
+        "sha256": "f780f3e276f6981638fc5f81353d8ca51899926c17525114420867266fd58065",
+        "original_sha256": "f780f3e276f6981638fc5f81353d8ca51899926c17525114420867266fd58065",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "EQRODAssignment.m",
+        "sha256": "2b9051c629f60a1636c502e3cde1e8fc15db4067ca355482f8d81e759d49fe4a",
+        "original_sha256": "2b9051c629f60a1636c502e3cde1e8fc15db4067ca355482f8d81e759d49fe4a",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "GenerateBCIRC.m",
+        "sha256": "4b62eade499d91360958ad2abb9d7e507d51376714967b4ca07bd894d2815252",
+        "original_sha256": "4b62eade499d91360958ad2abb9d7e507d51376714967b4ca07bd894d2815252",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "Initiation.m",
+        "sha256": "fb6b4406105cd6768112a807940beeb501cf72244ee5e467b6c0c6c92612613c",
+        "original_sha256": "91966fd62e18a84c87e49b53601fdfdeff4193007275c3894f3bacd8d00cce6e",
+        "replacement_count": 4,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "LoadRedistribution.m",
+        "sha256": "d4d6266f0f3e67e8533e75c6818fbba02e1d9330ea8da830b4750039d3b2d8d9",
+        "original_sha256": "01f0de39817b6ae8ab370a6ce9e5e5fd38c8e9e7a028b5b1457de785c562edca",
+        "replacement_count": 6,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "MakeMPCr.m",
+        "sha256": "28ac5ee20aff04bb60aa22aaadb4bca444c1691c1aba33a89b7cdeb360b3fa50",
+        "original_sha256": "7bb438ed31e5fa517a352b514416e088abd0b049459687bc77883726c62d69a0",
+        "replacement_count": 5,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "MapBus.m",
+        "sha256": "1bf085eca347348d2fd4d740a3061e65dd3fc3daa9dfab2b1bbc57953bde2a00",
+        "original_sha256": "14b6633306247ecaa75a16401f88f7cb38227aae1d56a5a16df1c8f33042bf5a",
+        "replacement_count": 6,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "MoveExGen.m",
+        "sha256": "09c9a0303425fb615dba696be776de9db9f9dc9c9e8d7b209d5b9f0e98947fbd",
+        "original_sha256": "795fd57f8b2a073ff45edb54fb70fa2ad89298389c6e7546510cee7fc23c0d34",
+        "replacement_count": 6,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "MPReduction.m",
+        "sha256": "113686d81219435c10bc7658b77bb6a53e2ebb5ec4ca4200bc9306e6eea73c75",
+        "original_sha256": "113686d81219435c10bc7658b77bb6a53e2ebb5ec4ca4200bc9306e6eea73c75",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "PartialNumLU.m",
+        "sha256": "625b0257db344d9a1d4ef1d1a146845c22d38e83073fdb4cfb24489257eb6e0c",
+        "original_sha256": "625b0257db344d9a1d4ef1d1a146845c22d38e83073fdb4cfb24489257eb6e0c",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "PartialSymLU.m",
+        "sha256": "7509bbc894ff348609874c843756d9b9c51c1525a6394b365fd6ad6c2571825a",
+        "original_sha256": "7509bbc894ff348609874c843756d9b9c51c1525a6394b365fd6ad6c2571825a",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "PivotData.m",
+        "sha256": "2b1531d27cdee7c8c37aa34767f3ebd58299407b1a456fe09d08cf52e9a91c04",
+        "original_sha256": "2b1531d27cdee7c8c37aa34767f3ebd58299407b1a456fe09d08cf52e9a91c04",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "PreProcessData.m",
+        "sha256": "3f0f81947c651463dae33d40b462b40dc8d5a006bbca3e1e4f38d71ba53d0809",
+        "original_sha256": "3f0f81947c651463dae33d40b462b40dc8d5a006bbca3e1e4f38d71ba53d0809",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "RODAssignment.m",
+        "sha256": "a96672d2509daebac16b50f650c25a4985646cecaa9c88b9b67edb0ac7a693e2",
+        "original_sha256": "a96672d2509daebac16b50f650c25a4985646cecaa9c88b9b67edb0ac7a693e2",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "SelfLink.m",
+        "sha256": "8a6fc75fcabd9b5988e7e906c95f87203ff2ab049f19e3278d19e1b02ae54b6f",
+        "original_sha256": "8a6fc75fcabd9b5988e7e906c95f87203ff2ab049f19e3278d19e1b02ae54b6f",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      },
+      {
+        "relative_path": "TinneyOne.m",
+        "sha256": "f8a3fec12a2c8c380fcf278e4b8bf7f7fdcafd89695fbbe085fe61b0f5d6945a",
+        "original_sha256": "f8a3fec12a2c8c380fcf278e4b8bf7f7fdcafd89695fbbe085fe61b0f5d6945a",
+        "replacement_count": 0,
+        "only_literal_interp1q_call_replacement": true
+      }
+    ],
+    "numeric_comparison_pending": false
+  },
+  "numeric_equivalence_evidence": {
+    "cases": 2,
+    "max_bus_branch_gen_flow_difference": 0,
+    "log": "output/nygrid_2019/toolbox_numeric_comparison.log"
+  }
+}

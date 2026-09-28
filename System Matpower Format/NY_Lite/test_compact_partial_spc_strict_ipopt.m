@@ -1,0 +1,39 @@
+function tests=test_compact_partial_spc_strict_ipopt(source_file)
+%TEST_COMPACT_PARTIAL_SPC_STRICT_IPOPT Two affected target-free saved states.
+% Changes solver convergence controls only; the archived failed/accepted
+% states and every physical bound/objective term remain available for review.
+root=fileparts(fileparts(fileparts(mfilename('fullpath'))));
+if nargin<1,source_file=fullfile(root,'output','compact_ny_2025','partial_spc_initial_solver','campaign.mat');end
+assert(have_feature('ipopt'),'partial_spc_strict_test:IPOPT','This focused numerical regression requires IPOPT.');
+initial_sha=ny_reference_file_sha256(source_file);d=load(source_file,'out');initial=d.out;
+ids=["V4_2025_JUL25_NIGHT";"S3_2025_SHOULDER_LIGHT_LOAD_EXACT"];
+tests=table();cases=cell(2,1);initial_cases=cases;
+for k=1:2
+    j=find(initial.case_summary.variant_id=="nominal"&initial.case_summary.scenario_id==ids(k));assert(isscalar(j));
+    old=initial.cases{j};assert(~isempty(old)&&all(isnan(old.snapshot.interface_targets.target_flow_mw)));
+    f=fit_compact_partial_spc_operating_snapshot(old.snapshot,struct('solver','IPOPT','fit_interfaces',false, ...
+        'opf_start',0,'mips_cost_multiplier',1,'prior_weight',1));
+    cases{k}=f;initial_cases{k}=old;
+    assert(isequaln(f.input,old.input),'partial_spc_strict_test:ModelChanged','The objective, priors or physical inputs changed.');
+    assert(f.electrical_baseline_qualified&&f.bounded_audit.passed&&f.audit.passed ...
+        &&f.network_and_injections_frozen&&~f.bounds_relaxed&&~f.internal_interface_fit_used ...
+        &&all(isnan(f.residuals.target_flow_mw)), ...
+        'partial_spc_strict_test:Physics','Strict IPOPT did not satisfy unchanged physical qualification for %s.',ids(k));
+    assert(f.strict_ipopt_options.constr_viol_tol==1e-11&&f.strict_ipopt_options.acceptable_constr_viol_tol==1e-11 ...
+        &&f.strict_ipopt_options.acceptable_iter==0&&f.strict_ipopt_options.max_iter==1000);
+    row=table(ids(k),true,old.electrical_baseline_qualified, ...
+        old.bounded_audit.summary.max_nodal_p_mismatch_mw,old.bounded_audit.summary.max_nodal_q_mismatch_mvar, ...
+        f.bounded_audit.summary.max_nodal_p_mismatch_mw,f.bounded_audit.summary.max_nodal_q_mismatch_mvar, ...
+        f.audit.summary.max_nodal_p_mismatch_mw,f.audit.summary.max_nodal_q_mismatch_mvar, ...
+        f.independent_replay_dispatch_adjustment_mw,f.independent_replay_voltage_adjustment_pu, ...
+        'VariableNames',{'test','passed','initial_electrically_qualified','initial_bounded_p_mismatch_mw', ...
+        'initial_bounded_q_mismatch_mvar','strict_bounded_p_mismatch_mw','strict_bounded_q_mismatch_mvar', ...
+        'strict_replay_p_mismatch_mw','strict_replay_q_mismatch_mvar','replay_dispatch_adjustment_mw','replay_voltage_adjustment_pu'});
+    tests=[tests;row]; %#ok<AGROW>
+    disp(row);
+end
+assert(ny_reference_file_sha256(source_file)==initial_sha,'partial_spc_strict_test:SourceChanged','Archived original campaign changed.');
+folder=fullfile(root,'tmp','partial_spc_strict_ipopt');if ~isfolder(folder),mkdir(folder);end
+save(fullfile(folder,'focused_results.mat'),'tests','cases','initial_cases','source_file','initial_sha','-v7');
+ny_lite_writetable_lf(tests,fullfile(folder,'focused_tests.csv'));
+end

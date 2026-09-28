@@ -1,0 +1,23 @@
+function manifest=compact_ny_2025_code_manifest
+%COMPACT_NY_2025_CODE_MANIFEST Pinned executable electrical/replay definitions.
+% Hash raw UTF-8 file bytes after LF normalization; no checkout path in key.
+root=fileparts(fileparts(fileparts(mfilename('fullpath'))));
+helper=["build_compact_npcc_corridors";"apply_compact_2025_infrastructure";"apply_compact_2025_generation"; ...
+    "build_compact_nyiso_snapshot_inputs";"build_compact_nyiso_operating_snapshot"; ...
+    "compact_nyiso_interface_operators";"add_compact_interface_cost";"compact_interface_ac_cost"; ...
+    "fit_compact_nyiso_operating_snapshot";"audit_ny_ac_reference";"nyiso_bus_zone_map"; ...
+    "attach_nyiso_zone_metadata";"normalize_perform_ny_source";"compact_ny_2025_code_manifest"; ...
+    "test_compact_interface_ac_cost";"test_compact_nyiso_operating_snapshot"];
+files=["run_compact_ny_2025_calibration.m";"replay_compact_ny_2025_electrical.m"; ...
+    "System Matpower Format/npcc_ny_2025_dlr_research.m"; ...
+    "System Matpower Format/NY_Lite/"+helper+".m"];
+hash=strings(numel(files),1);
+for k=1:numel(files)
+    path=fullfile(root,files(k));assert(isfile(path),'compact_campaign:CodeFile','Missing electrical definition %s.',files(k));
+    fid=fopen(path,'rb');assert(fid>=0);bytes=fread(fid,Inf,'*uint8');fclose(fid);
+    text=char(bytes');text=strrep(text,sprintf('\r\n'),sprintf('\n'));text=strrep(text,sprintf('\r'),sprintf('\n'));
+    d=java.security.MessageDigest.getInstance('SHA-256');d.update(uint8(text));
+    hash(k)=string(lower(reshape(dec2hex(typecast(d.digest(),'uint8'),2).',1,[])));
+end
+manifest=table(files,hash,'VariableNames',{'relative_path','sha256_lf_normalized'});
+end

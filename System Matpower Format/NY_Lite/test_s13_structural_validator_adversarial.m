@@ -1,7 +1,7 @@
 function out = test_s13_structural_validator_adversarial(options)
 %TEST_S13_STRUCTURAL_VALIDATOR_ADVERSARIAL Challenge S13 structural gates.
 %   OUT = TEST_S13_STRUCTURAL_VALIDATOR_ADVERSARIAL() applies twenty isolated
-%   mutations to a fresh S13 Phase-1A candidate. The first nineteen exercise the
+%   mutations to a fresh cumulative S13 candidate. The first nineteen exercise the
 %   in-memory structural validator. The last truncates a copied CSV register
 %   and uses VALIDATE_S13_ARTIFACT_CONSISTENCY when that validator is present.
 %   Source cases and repository registers are never modified.
@@ -139,7 +139,7 @@ switch mutation_id
     case "s13_model_role_changed"
         candidate.userdata.s13.model_role = 'promoted_s13_candidate';
     case "s13_current_phase_mismatch"
-        candidate.userdata.s13.current_phase = 'phase1b';
+        candidate.userdata.s13.current_phase = 'phase1c';
     case "phase1b_placeholder_report"
         candidate.userdata.s13.current_phase = 'phase1b';
         candidate.userdata.npcc_perform_overlay.current_phase = 'phase1b';

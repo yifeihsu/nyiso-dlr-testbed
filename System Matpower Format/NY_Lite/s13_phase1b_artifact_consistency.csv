@@ -1,0 +1,14 @@
+check_id,check_class,pass,detail
+artifact:s13_phase1b_local_identity.csv,phase1b_committed_artifact,1,exact schema/type/order/value and canonical LF match
+artifact:s13_phase1b_local_omitted_injections.csv,phase1b_committed_artifact,1,exact schema/type/order/value and canonical LF match
+artifact:s13_phase1b_terminal_voltage_comparison.csv,phase1b_committed_artifact,1,exact schema/type/order/value and canonical LF match
+artifact:s13_phase1b_gate_ledger.csv,phase1b_committed_artifact,1,exact schema/type/order/value and canonical LF match
+artifact:s13_phase1b_operator_validation.csv,phase1b_committed_artifact,1,exact schema/type/order/value and canonical LF match
+artifact:s13_phase1b_generation_audit.csv,phase1b_committed_artifact,1,exact schema/type/order/value and canonical LF match
+artifact:s13_phase1b_terminal_reuse_audit.csv,phase1b_committed_artifact,1,exact schema/type/order/value and canonical LF match
+dependency:phase1b_local_identity_mandatory_gates,phase1b_validation,1,33/33 mandatory local-identity gates pass
+dependency:phase1b_operator_mandatory_proxy_gates,phase1b_validation,1,24/24 mandatory proxy gates pass
+dependency:cumulative_s13_artifacts_exact,cumulative_evidence,1,8/8 cumulative register/ledger artifacts match
+dependency:phase1a_oracle_artifacts_exact,immutable_phase1a_evidence,1,12/12 immutable Phase 1A oracle artifacts match
+dependency:phase1a_report_exact_rebuild,immutable_phase1a_evidence,1,candidate Phase 1A report equals a fresh rebuild
+dependency:phase1a_physical_rows_bit_identical,immutable_phase1a_evidence,1,candidate Phase 1A physical rows are bit-identical

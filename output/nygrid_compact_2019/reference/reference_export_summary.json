@@ -1,0 +1,152 @@
+{
+  "complete_2019_hours": 8760,
+  "original_NY_buses": 46,
+  "NY_internal_AC_branch_records": 67,
+  "native_generator_records": 243,
+  "HQ_boundary_generator_records": 1,
+  "AC_crossing_records": 8,
+  "DC_records": 4,
+  "annual_NY_only_exact_DC_replay_passed": true,
+  "tolerance_mw": 1e-07,
+  "max_branch_error_mw": 1.2278178473934531e-11,
+  "max_interface_error_mw": 1.864464138634503e-11,
+  "max_angle_error_deg": 5.258016244624741e-13,
+  "max_native_generation_error_mw": 1.7280399333685637e-11,
+  "units": "actual_2019_MW_unscaled",
+  "boundary_observed": false,
+  "boundary_policy": "nativePG plus ACcrossing plus DC plus HQ exactlyonce; allPGwithHQ is an alternativeaccount, neveraddHQagain",
+  "auxiliary_bus_policy": "21and132 remain in source57reference but are removed from NY-only after freezing all actual model terminal exchanges",
+  "result_scope": "DC algebraic preservation only; external response, AC voltages/Q/capability and operating-limit compliance not established",
+  "annual_source_manifests": [
+    {
+      "mat_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_1.mat",
+      "mat_sha256": "314d817570b4edfd60b0970f25aee8d126bffd46aa70ceba8ee3bde10b05f274",
+      "final_csv_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_1_cases.csv",
+      "final_csv_sha256": "975024f20abfadbb42af807e41bb1b3d900bb781ee79b380e66ca539f4ba1f4e",
+      "first_hour": 1,
+      "last_hour": 2190,
+      "hours": 2190
+    },
+    {
+      "mat_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_2.mat",
+      "mat_sha256": "e72ddd82be691ad4a46cd74c1316e450763944f259cce95e071b972b986383c6",
+      "final_csv_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_2_cases.csv",
+      "final_csv_sha256": "2ac37f02f919c6d20cf1fae95be25375868e21192d597e795ab823251a6fc734",
+      "first_hour": 2191,
+      "last_hour": 4380,
+      "hours": 2190
+    },
+    {
+      "mat_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_3.mat",
+      "mat_sha256": "47375d88c36e2a3af33a85eeed461396186404fe9c7486ff43ed4aaec2988aab",
+      "final_csv_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_3_cases.csv",
+      "final_csv_sha256": "2df225949e193760fb40ed8e7670d5fa0f4fa4963ffd86476d9365c769eeb1cb",
+      "first_hour": 4381,
+      "last_hour": 6570,
+      "hours": 2190
+    },
+    {
+      "mat_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_4.mat",
+      "mat_sha256": "795f57ce1ee3f483484da4f98461a9a47eaf15ca573a1dadca3bd3804a5f7431",
+      "final_csv_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_4_cases.csv",
+      "final_csv_sha256": "098405938b0f20d10bf969215961f8e79eb66d8188d8e56a649fc40b4cded863",
+      "first_hour": 6571,
+      "last_hour": 8760,
+      "hours": 2190
+    }
+  ],
+  "development_snapshot_components": {
+    "snapshot_mat_sha256": "e215993c164cd75e8f25224ff7587d6a0effa31d7cf3d109ea158b39dc977154",
+    "snapshot_exporter_sha256": "d360ea773b35857106896ce2ed6aba15c8a73c16174ac2ab835e5d191a6ee1fc",
+    "hours": [
+      184,
+      499,
+      2645,
+      4745,
+      4817,
+      4971
+    ],
+    "all_snapshots_are_previously_examined_development_examples": true,
+    "max_abs_Ward_NY_load_adjustment_mw": 4.18367562815547e-11
+  },
+  "exporter_sha256": "7d9e119d38dc103162a72f7fa90e828eda5748c1df2a670b8c12e297bf60c966",
+  "independent_solver_sha256": "bf48540453c4ab8191b6b8e2cb65d8248acaae425b154ab85f6d182be3e57434",
+  "outputs": [
+    {
+      "path": "output/nygrid_compact_2019/reference/annual_ny_only_replay.csv",
+      "sha256": "342cf78c58df9ce8be702befc9f60e6c67ad4c35127394bfaadfbd2e41e798bd"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/annual_reference.mat",
+      "sha256": "65e962ff1795dcf84ae65f9420bc5e9c9d0799d9c00048d64e67579c5a9967fc"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/annual_reference.npz",
+      "sha256": "3b60be84e5073933f0c0900519822a7a7b3d3953f8ccf3265fae5e537f02ff16"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/corrected_interface_coefficients.csv",
+      "sha256": "162dcac52ebd4075e4f4eeeeb70c0a610004373868d8cc03b6f7eb66c85a8355"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/jan08_AC_boundary_terminal_injections.csv",
+      "sha256": "2bbee391d8807b0de6c954c88a94431531ed08dc5cb54a1e72b4bdf8ebdb9344"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/jan08_bus_components.csv",
+      "sha256": "958d585ef22bb234268c2c7c9ac5d1b48e0677913406da44491f93f0e98762f2"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/jan08_DC_schedules.csv",
+      "sha256": "e55ef8c75bc1513d465718a8405f9ad97bed6e1e9800594e7d39bb36015e2665"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/jan08_generator_input_and_solution.csv",
+      "sha256": "b00001a2c3255661ff5eacb4303cf89ef860ea57a2f6b9dc20b30ed6090f6a40"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/matched_AC_boundary_terminal_injections.csv",
+      "sha256": "b3d4b6139100f702246ed029a5b200118f203268c0ab439e67851c1338c74879"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/matched_bus_components.csv",
+      "sha256": "5bde09b7fb9da9964cb68f90e77efe882fb76fe2f5bc4f303baa026038c593a3"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/matched_component_summary.csv",
+      "sha256": "fc9efd1a0ca21e2e520e12ec4f49e9775b9f84ba11461fe8be23eb0ad018344b"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/matched_components.mat",
+      "sha256": "4d4174f3910c872c9bd2e66bec04388cfc01e172f8ff760751335199615def4a"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/matched_components.npz",
+      "sha256": "cbeed164343dd87d48ac9a6d77c0e53cde5778b876247edbf5ecf28f0aebd24c"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/matched_DC_schedules.csv",
+      "sha256": "8e13595f6b0812b4908a96c69a03ec0ee881491f69409f47c4ff490393bdb860"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/matched_generator_input_and_solution.csv",
+      "sha256": "abe5f75b90253d27ee532b9fb6a913aa8992b6bf58a29580c77e79bc925fdb17"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/matched_snapshot_components.mat",
+      "sha256": "e215993c164cd75e8f25224ff7587d6a0effa31d7cf3d109ea158b39dc977154"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/source_branch_register.csv",
+      "sha256": "a2fc1c18abe09a380f44b9cb47f96457c19d7569a91f33751f593ab817a780ca"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/source_bus_role_register.csv",
+      "sha256": "99a17e4fdf9c7d88fd6599aee9d9779e67848305c99d2796179b1a1de4e93e18"
+    },
+    {
+      "path": "output/nygrid_compact_2019/reference/source_chain_manifest.csv",
+      "sha256": "16cf3f10496493d123dc004cd38a040c14f1a325ae99a3f4c290b6a59047bc11"
+    }
+  ]
+}

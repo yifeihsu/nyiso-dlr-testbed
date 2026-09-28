@@ -1,0 +1,29 @@
+{
+  "package": "S11_49bus_hourly_load_profiles",
+  "source_dataset_commit": "50a89db2ef7a1fc0911f1e8e6a5a7dea1aedb9f1",
+  "bus_count": 49,
+  "hour_count": 4416,
+  "months": [
+    "201901",
+    "201904",
+    "201907",
+    "202501",
+    "202504",
+    "202507"
+  ],
+  "raw_daily_source_files": 184,
+  "payload_file_count": 207,
+  "payload_bytes": 7423507,
+  "full_year_coverage": false,
+  "all_hours_power_flow_validated": false,
+  "profile_paths": {
+    "active_csv": "output/s11_hourly_load_profiles/pd_mw.csv",
+    "reactive_csv": "output/s11_hourly_load_profiles/qd_mvar.csv",
+    "matlab": "output/s11_hourly_load_profiles/s11_hourly_load_profiles.mat"
+  },
+  "zip_file": "S11_49bus_hourly_load_profiles.zip",
+  "zip_bytes": 2885812,
+  "zip_sha256": "5e9722b4cbd5699f8cbee9e1549182705b29fbaf1b5123eb1111ccaed0720f21",
+  "archive_file_count": 210,
+  "zip_crc_and_payload_equality_passed": true
+}

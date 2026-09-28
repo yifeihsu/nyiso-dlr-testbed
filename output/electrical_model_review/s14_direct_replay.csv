@@ -1,0 +1,17 @@
+metric,value,limit,passed,status
+retained_voltage_rmse_pu,3.38614848011353e-17,0.005,1,evaluated
+retained_voltage_max_error_pu,1.11022302462516e-16,0.015,1,evaluated
+ny_internal_branch_max_current_relative_error,1.86952992149714e-10,0.05,1,evaluated
+ny_active_loss_relative_error,5.87753312905626e-15,0.05,1,evaluated
+boundary_reactive_error_over_registered_band,4.70734562441066e-13,1,1,evaluated
+registered_interface_max_error_mw,1.12847231559243e-12,50,1,evaluated
+generator_capability_max_violation,5877.11073412557,1e-05,0,evaluated
+external_fixed_PQ_max_violation,0,1e-05,1,evaluated
+external_PV_or_REF_bus_count,0,0,1,evaluated
+source_generator_capability_max_violation,5877.11073412557,1e-05,0,evaluated
+source_voltage_bound_excess_pu,0,1e-05,1,evaluated
+candidate_voltage_bound_excess_pu,0,1e-05,1,evaluated
+source_branch_rating_excess_mva,850.833173639818,0.001,0,evaluated
+candidate_branch_rating_excess_mva,850.833173639818,0.001,0,evaluated
+source_angle_limit_excess_rad,0,1e-06,1,evaluated
+candidate_angle_limit_excess_rad,0,1e-06,1,evaluated

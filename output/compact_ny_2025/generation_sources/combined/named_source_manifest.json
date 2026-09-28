@@ -1,0 +1,24 @@
+{
+  "subsets_of_zonal_prior": true,
+  "additional_generation_added": false,
+  "plant_net_dispatch_observed": false,
+  "internal_interface_targets_used": false,
+  "sources": [
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_generation_hourly.csv",
+      "sha256": "7615ce98ed103214cf9e08d56917c42793f19eda5b3307a10efb41b625c2cc70"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/named_renewable_priors.csv",
+      "sha256": "9d9303efabeda1ce0a5cf76d71f72d645e0dae5bf87abc90abc292a8fd37df21"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/combined/zonal_generation_priors.csv",
+      "sha256": "2cb1bfe3e27c7ee9834c1564efd4e8cb9a69bd855dd1a4d44f78b81f093bc43a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/combined/statewide_reconciliation.csv",
+      "sha256": "fd6d2cec2c90956de3c01d4351843d4527fd1b46b6dc5ff811b147fc95e51d3a"
+    }
+  ]
+}

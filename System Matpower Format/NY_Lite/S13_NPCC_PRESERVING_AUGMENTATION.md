@@ -73,7 +73,7 @@ Validate E-F versus E-G flow split, Central East, Total East, physical-circuit
 currents, losses, voltages, and reactive balance. Re-derive dispatch for every
 changed topology before scoring it.
 
-The current Phase 1A S13-FULL construction checkpoint is built by
+The immutable Phase 1A S13-FULL construction checkpoint is built by
 `add_npcc_perform_eg_corridor.m`. It adds PERFORM buses 1228 Fraser, 1222
 Coopers Corner, 1567 Marcy, and 772 Rock Tavern and seven direct source branch
 rows (2137, 2131, 2154, 2133, 1567, 1568, and 1571). Existing S7 buses 43 EDIC
@@ -123,10 +123,35 @@ serialization of freshly rebuilt tables.
 
 ### Phase 1B — UPNY-ConEd
 
-Add East Fishkill and Ladentown and preserve the Pleasant Valley–East Fishkill,
-Ladentown–Buchanan, and Pleasant Valley–Wood Street circuit groups. Define the
-public interface as a nonintersecting cutset; do not sum series elements around
-Wood Street.
+The cumulative Phase 1B checkpoint is built by
+`add_npcc_perform_upny_coned_detail.m`. It appends source buses 858 E. Fishkill
+and 774 Ladentown as zero-injection 345-kV PQ terminals and nine exact PERFORM
+physical rows: F36/F37, F30/F31, both E. Fishkill–Wood Street support circuits,
+Ramapo–Ladentown, Y88, and Y94. Existing buses 73 Pleasant Valley, 9002 Wood
+Street, 77 Buchanan, and the Phase 1A Ramapo attachment are reused with their
+full-NPCC controls and injections unchanged. Millwood is audited but is not an
+interior node in either local Phase 1B solve. The cumulative case therefore has
+149 buses, 262 branches, and 62 generators.
+
+The Phase 1B operator is a six-circuit, source-realizable 345-kV proxy. Its
+upstream side contains Pleasant Valley, Ramapo, and Ladentown; its downstream
+side contains E. Fishkill, Wood Street, and Buchanan. F36/F37, F30/F31, Y88,
+and Y94 cross that local cut exactly once. Ramapo–Ladentown is upstream-only,
+and E. Fishkill–Wood Street is downstream-only. Wood Street–Millwood rows are
+excluded, so the F30/F31 path is not counted twice. RFK305 is absent from the
+PERFORM source and BK1/BK2 are not independently identifiable; consequently
+the operator remains `is_exact_public_operator=false` and three public-
+completeness gates fail closed.
+
+Both local subnetworks pass 33/33 mandatory no-fit identity gates. Maximum
+direct P/Q errors are 8.19e-12 MW and 2.88e-12 MVAr; the omitted-network-
+injection solves reproduce branch flows and interior voltages to machine
+precision. The zero-injection truncation remains diagnostic only, reaching
+0.002415 pu and 0.6221 degrees. The graph/operator validator passes 24/24
+mandatory proxy gates, while all nine adversarial mutations are rejected.
+Rows 94 and 235 are registered as unfitted physical-overlap residual candidates;
+no parent R/X/B or shunt is changed. The Buchanan/Indian Point audit records
+both source nuclear units as offline and does not transfer or activate them.
 
 ### Phase 1C — downstate mesh
 
@@ -163,6 +188,12 @@ residual, residual-shunt, path, physical-circuit, and interface-operator tables,
 plus the structural-gate ledger, against their committed CSVs.
 Any schema, row, column, type, or value mismatch fails closed.
 
+Phase 1B also commits local branch, omitted-injection, terminal-voltage,
+operator, generation/terminal audit, gate-ledger, and adversarial artifacts.
+`validate_s13_phase1b_artifact_consistency.m` rebuilds these tables and also
+rechecks the cumulative registers and the immutable twelve-file Phase 1A
+preflight record.
+
 `candidate.userdata.s13.overlay_report` is the cumulative register source of
 truth. `candidate.userdata.s13.phase_reports` stores per-phase evidence, and
 `phase1a_report` remains a compatibility alias that must exactly equal
@@ -184,12 +215,12 @@ or alias disagreement.
    buses, source-zero-injection evidence, append-only provenance, registered
    attachment paths, residual-candidate class policy, and no S12/Kron admittance.
    Passive residual fitting is a later construction-validation gate, not part
-   of the current Phase 1A structural pass.
+   of the current cumulative structural pass.
 2. **Local identity:** verify exact copied branch physics and the omitted-network
    injection fixture before any system comparison. The isolated zero-injection
    fixture is non-gating.
-3. **Cumulative NYISO topology:** complete and artifact-check Phase 1B
-   UPNY-ConEd detail and Phase 1C H-J/K-J detail.
+3. **Cumulative NYISO topology:** Phase 1B UPNY-ConEd detail is complete and
+   artifact-checked; Phase 1C H-J/K-J detail remains pending.
 4. **Passive internal residualization:** fit only registered overlapping
    NYISO aggregates after Phase 1A-1C and reject nonpassive residuals.
 5. **S14 reduction-source state:** freeze a reproducible solved S13-FULL state

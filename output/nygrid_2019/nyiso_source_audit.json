@@ -1,0 +1,76 @@
+{
+  "created_utc": "2026-09-08T15:21:36.719427+00:00",
+  "official_index": "https://mis.nyiso.com/public/P-32list.htm",
+  "year": 2019,
+  "scope": "source-preparation reproduction only; no electrical solution or dispatch validation",
+  "method": "Local-naive [hour,hour+1h) arithmetic sample means including duplicate timestamps; linear fillmissing with end extrapolation; no gap threshold; retain +/-9999 limits",
+  "unit_policy": "Original MWH column labels retained; no time integration or unit rescaling performed",
+  "external_policy": "All SCH channels preserved separately, including overlapping HQ measures; no additive boundary total claimed",
+  "runtime": {
+    "python": "3.12.14",
+    "pandas": "3.0.1",
+    "numpy": "2.3.5"
+  },
+  "archives": 12,
+  "daily_csv_members": 365,
+  "raw_rows": 1897236,
+  "channels": 18,
+  "internal_channels": 7,
+  "scheduled_external_channels": 11,
+  "raw_null_numeric_cells": 0,
+  "member_rows_outside_filename_date": 0,
+  "duplicate_timestamp_groups": 5094,
+  "conflicting_duplicate_timestamp_groups": 2732,
+  "duplicate_timestamp_excess_rows": 5094,
+  "exact_duplicate_excess_rows": 2362,
+  "imputed_flow_channel_hours": 36,
+  "empty_local_hour_channel_bins": 36,
+  "imputed_local_hours": [
+    "2019-03-10 02:00:00",
+    "2019-12-12 12:00:00"
+  ],
+  "comparison": {
+    "published_rows": 157680,
+    "reconstructed_rows": 157680,
+    "matched_keys": 157680,
+    "missing_published_keys": 0,
+    "missing_reconstructed_keys": 0,
+    "rows_above_tolerance_or_missing": 0,
+    "absolute_tolerance": 1e-08,
+    "numerically_reproduced": true,
+    "max_absolute_difference": 6.366462912410498e-12
+  },
+  "mat_comparison": {
+    "published_rows": 157680,
+    "reconstructed_rows": 157680,
+    "matched_keys": 157680,
+    "missing_published_keys": 0,
+    "missing_reconstructed_keys": 0,
+    "rows_above_tolerance_or_missing": 0,
+    "absolute_tolerance": 1e-08,
+    "numerically_reproduced": true,
+    "max_absolute_difference": 6.366462912410498e-12,
+    "available": true,
+    "scope": "MATLAB export of actual released interflowHourly_2019.mat, compared directly with independent raw reconstruction",
+    "direct_released_csv_vs_mat_export": {
+      "published_rows": 157680,
+      "reconstructed_rows": 157680,
+      "matched_keys": 157680,
+      "missing_published_keys": 0,
+      "missing_reconstructed_keys": 0,
+      "rows_above_tolerance_or_missing": 0,
+      "absolute_tolerance": 1e-08,
+      "numerically_reproduced": true,
+      "max_absolute_difference": 0.0
+    },
+    "export_bytes_identical_to_released_csv": false
+  },
+  "data_quality_limitations": [
+    "Arithmetic means weight each record equally, including duplicate records; they are not interval-energy averages.",
+    "Local timestamps have no timezone or DST fold: spring gaps are interpolated, and fall repeated hours are combined.",
+    "Linear imputation has no maximum gap guard in the upstream code. Audit flags all filled bins.",
+    "9999/-9999 are preserved sentinel-like limits; division by them is not evidence of a physical transfer rating.",
+    "SCH channels are scheduled interchange, not independently measured external flow; overlapping HQ channels cannot simply be summed.",
+    "Agreement with released inputs does not establish agreement of the NYgrid model's simulated flows with observations."
+  ]
+}

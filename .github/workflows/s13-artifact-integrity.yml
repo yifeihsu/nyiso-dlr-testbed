@@ -4,27 +4,81 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
+      - "*compact*generation*.py"
+      - "*compact*generation*.m"
+      - "*compact*nyiso*.py"
+      - "*compact*partial_spc*"
       - ".gitattributes"
       - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
+      - "run_electrical_model_reproduction.m"
+      - "run_ny_only_foundation.m"
+      - "run_ny_only_regional_candidate.m"
+      - "replay_ny_only_regional_candidate.m"
+      - "run_compact_npcc_ny_testbed.m"
+      - "replay_compact_npcc_ny_testbed.m"
+      - "run_compact_ny_2025_calibration.m"
+      - "replay_compact_ny_2025_electrical.m"
+      - "run_compact_ny_2025_sensitivities.m"
+      - "run_compact_ny_dlr_baseline.m"
+      - "replay_compact_ny_dlr_baseline.m"
+      - "output/compact_ny_2025/**"
+      - "output/compact_npcc_ny/**"
+      - "NY_ONLY_PACKAGE_B_IMPLEMENTATION.md"
+      - "output/ny_only_package_b/**"
+      - "PROJECT_HANDOFF.md"
       - "LATEST_MODEL_CONFIGURATION.csv"
       - "System Matpower Format/NY_Lite/**"
       - "System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m"
       - "System Matpower Format/npcc_ny_lite_s12_perform_retention_core.m"
       - "System Matpower Format/npcc_ny_lite_s13_npcc_augmented_2019.m"
+      - "System Matpower Format/npcc_ny_lite_s14_ny_only_regional_candidate.m"
+      - "System Matpower Format/npcc_ny_compact_dlr_testbed.m"
+      - "System Matpower Format/npcc_ny_2025_dlr_research.m"
+      - "System Matpower Format/npcc_ny_2025_synthetic_dlr.m"
+      - "System Matpower Format/npcc_ny_2025_source_generation.m"
+      - "System Matpower Format/npcc_ny_2025_partial_spc.m"
+      - "System Matpower Format/npcc_ny_2025_partial_spc_dlr.m"
   push:
     branches:
       - main
       - "codex/**"
     paths:
+      - "*compact*generation*.py"
+      - "*compact*generation*.m"
+      - "*compact*nyiso*.py"
+      - "*compact*partial_spc*"
       - ".gitattributes"
       - ".github/workflows/s13-artifact-integrity.yml"
       - "run_handoff_reproduction.m"
+      - "run_electrical_model_reproduction.m"
+      - "run_ny_only_foundation.m"
+      - "run_ny_only_regional_candidate.m"
+      - "replay_ny_only_regional_candidate.m"
+      - "run_compact_npcc_ny_testbed.m"
+      - "replay_compact_npcc_ny_testbed.m"
+      - "run_compact_ny_2025_calibration.m"
+      - "replay_compact_ny_2025_electrical.m"
+      - "run_compact_ny_2025_sensitivities.m"
+      - "run_compact_ny_dlr_baseline.m"
+      - "replay_compact_ny_dlr_baseline.m"
+      - "output/compact_ny_2025/**"
+      - "output/compact_npcc_ny/**"
+      - "NY_ONLY_PACKAGE_B_IMPLEMENTATION.md"
+      - "output/ny_only_package_b/**"
+      - "PROJECT_HANDOFF.md"
       - "LATEST_MODEL_CONFIGURATION.csv"
       - "System Matpower Format/NY_Lite/**"
       - "System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m"
       - "System Matpower Format/npcc_ny_lite_s12_perform_retention_core.m"
       - "System Matpower Format/npcc_ny_lite_s13_npcc_augmented_2019.m"
+      - "System Matpower Format/npcc_ny_lite_s14_ny_only_regional_candidate.m"
+      - "System Matpower Format/npcc_ny_compact_dlr_testbed.m"
+      - "System Matpower Format/npcc_ny_2025_dlr_research.m"
+      - "System Matpower Format/npcc_ny_2025_synthetic_dlr.m"
+      - "System Matpower Format/npcc_ny_2025_source_generation.m"
+      - "System Matpower Format/npcc_ny_2025_partial_spc.m"
+      - "System Matpower Format/npcc_ny_2025_partial_spc_dlr.m"
 
 permissions:
   contents: read
@@ -33,7 +87,7 @@ jobs:
   repository-integrity:
     name: S13 registers and structural mutations
     runs-on: windows-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -45,6 +99,7 @@ jobs:
         uses: matlab-actions/setup-matlab@v3
         with:
           release: R2026a
+          products: Optimization_Toolbox
 
       - name: Validate committed model artifacts
         uses: matlab-actions/run-command@v3
@@ -60,12 +115,24 @@ jobs:
             assert(nnz(strcmp(policy.setting, 'reference_oracle')) == 1 && nnz(strcmp(policy.setting, 'reference_oracle') & strcmp(policy.value, 'npcc_ny_lite_s12_perform_retention_core')) == 1);
             s14_promotion_scope = strcmp(policy.category, 's14_nyiso') & strcmp(policy.setting, 'promotion_eligible');
             assert(nnz(s14_promotion_scope) == 1 && nnz(s14_promotion_scope & strcmp(policy.value, 'false')) == 1);
+            s14_status_scope = strcmp(policy.category, 's14_nyiso') & strcmp(policy.setting, 'status');
+            assert(nnz(s14_status_scope) == 1 && nnz(s14_status_scope & strcmp(policy.value, 'compact_npcc_ny_2025_research_baseline')) == 1);
+            preferred_scope = strcmp(policy.setting, 'preferred_operating_candidate');
+            assert(nnz(preferred_scope) == 1 && nnz(preferred_scope & strcmp(policy.value, 'npcc_ny_2025_dlr_research')) == 1);
+            contract = research_model_contract('historical_actual_mw');
+            assert(contract.power_scale == "actual_mw" && ~contract.external_npcc_qualification_required && ~contract.external_reduction_required && ~contract.require_all_original_ny_elements_active && contract.preserve_historical_cases);
+            status_names = ["electrical_baseline_qualified", "contemporary_validation_coverage", "dlr_ready"];
+            for k = 1:numel(status_names), assert(nnz(strcmp(policy.category, 's14_nyiso') & strcmp(policy.setting, status_names(k))) == 1); end;
+            assert(isfile(fullfile(pwd, 'run_ny_only_foundation.m')));
+            compact_contract = compact_npcc_model_contract;
+            assert(compact_contract.max_operating_bus_count == 200 && compact_contract.operating_network == "NY_only_with_fixed_boundary_PQ" && compact_contract.power_scale == "NPCC_benchmark_MW" && ~compact_contract.allow_wholesale_PERFORM_operating_network_substitution && ~compact_contract.electrical_baseline_qualified && ~compact_contract.dlr_ready);
             s7 = loadcase('npcc_ny_lite_s7_seven_interface_perform_direct_candidate');
             assert(~s7.userdata.ny_lite.s7_seven_interface_calibration.promotion_eligible);
             s12 = loadcase('npcc_ny_lite_s12_perform_retention_core');
             assert(~s12.userdata.promotion_eligible);
             s13_full = loadcase('npcc_ny_lite_s13_npcc_augmented_2019');
-            assert(strcmp(s13_full.userdata.s13.governing_hierarchy_role, 's13_full_construction_validation_parent') && strcmp(s13_full.userdata.s13.downstream_operating_model, 'npcc_ny_lite_s14_nyiso_dlr_operating_model') && ~s13_full.userdata.s13.dlr_delivery_eligible && ~s13_full.userdata.s13.promotion_eligible);
+            assert(strcmp(s13_full.userdata.s13.current_phase, 'phase1b') && isequal([size(s13_full.bus, 1), size(s13_full.branch, 1), size(s13_full.gen, 1)], [149 262 62]));
+            assert(strcmp(s13_full.userdata.s13.governing_hierarchy_role, 's13_full_construction_validation_parent') && strcmp(s13_full.userdata.s13.downstream_operating_model, 'npcc_ny_lite_s14_nyiso_dlr_operating_model') && ~s13_full.userdata.s13.dlr_delivery_eligible && ~s13_full.userdata.s13.construction_source_qualified && ~s13_full.userdata.s13.promotion_eligible);
             structural = validate_s13_structural_preservation(struct('write_outputs', false, 'fail_on_structural', true));
             assert(structural.all_structural_gates_pass && ~structural.all_construction_gates_pass && ~structural.construction_source_qualified && ~structural.promotion_eligible);
             artifacts = validate_s13_artifact_consistency(struct('fail_on_mismatch', true));
@@ -80,3 +147,305 @@ jobs:
             assert(oracle_artifacts.all_artifacts_match && oracle_artifacts.artifact_count == 12);
             smoke = validate_s13_phase1a_smoke(struct('write_outputs', false));
             assert(smoke.standard_pf_both_pass);
+            phase1b_local = run_s13_phase1b_local_identity(struct('write_outputs', false, 'fail_on_gate', true, 'verbose', false));
+            assert(phase1b_local.pass && all(phase1b_local.gate_ledger.pass(phase1b_local.gate_ledger.mandatory)) && phase1b_local.phase1a_report_exact_match && phase1b_local.phase1a_physical_rows_bit_identical && phase1b_local.candidate_fail_closed);
+            phase1b_local_test = test_s13_phase1b_local_identity(struct('verbose', false));
+            assert(phase1b_local_test.pass && phase1b_local_test.operator_validator_available && phase1b_local_test.operator_mandatory_proxy_pass);
+            phase1b_operator = validate_s13_phase1b_upny_operator(struct('write_outputs', false, 'fail_on_gate', true, 'verbose', false));
+            phase1b_operator_mandatory = phase1b_operator.gate_ledger.mandatory_for_phase1b_proxy;
+            assert(phase1b_operator.pass && phase1b_operator.mandatory_proxy_pass && phase1b_operator.mandatory_proxy_pass_count == 24 && phase1b_operator.mandatory_proxy_gate_count == 24 && all(phase1b_operator.gate_ledger.pass(phase1b_operator_mandatory)) && phase1b_operator.public_gap_pass_count == 0 && phase1b_operator.public_gap_gate_count == 3 && ~phase1b_operator.exact_public_operator && ~phase1b_operator.promotion_eligible);
+            phase1b_artifacts = validate_s13_phase1b_artifact_consistency(struct('write_outputs', false, 'fail_on_mismatch', true, 'verbose', false));
+            assert(phase1b_artifacts.all_artifacts_match && phase1b_artifacts.matched_artifact_count == 7 && phase1b_artifacts.artifact_count == 7 && phase1b_artifacts.dependency_count == 6 && phase1b_artifacts.passed_dependency_count == 6 && ~phase1b_artifacts.promotion_eligible);
+            phase1b_adversarial = test_s13_phase1b_validator_adversarial(struct('output_file', fullfile(tempdir, 's13_phase1b_adversarial_results.csv'), 'write_outputs', true, 'fail_on_unrejected', true, 'verbose', false));
+            assert(phase1b_adversarial.all_expected_gates_observed && height(phase1b_adversarial.results) == 9 && nnz(phase1b_adversarial.results.pass) == 9);
+            phase1b_smoke = validate_s13_phase1b_smoke(struct('write_outputs', false, 'fail_on_standard_pf', true, 'verbose', false));
+            assert(phase1b_smoke.standard_pf_all_pass && height(phase1b_smoke.summary) == 3 && nnz(phase1b_smoke.summary.standard_pf_success) == 3 && ~phase1b_smoke.construction_source_qualified && ~phase1b_smoke.promotion_eligible);
+
+      - name: Preserve optional external-reduction diagnostic regression
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(genpath(fullfile(getenv('RUNNER_TEMP'), 'matpower')));
+            electrical = run_electrical_model_reproduction(struct('write_outputs', false, 'run_operating_diagnostic', false));
+            assert(all(electrical.tests.passed) && electrical.reduction.direct_passed && electrical.direct.reduction_metrics_passed && ~electrical.promotion_eligible);
+
+      - name: Validate NY-only foundation implementation without operating qualification
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(genpath(fullfile(getenv('RUNNER_TEMP'), 'matpower')));
+            addpath(fullfile(pwd, 'System Matpower Format', 'NY_Lite'));
+            policy_tests = test_research_model_contract;
+            assert(all(policy_tests.passed));
+            foundation = run_ny_only_foundation(struct('write_outputs', false, 'run_tests', true, 'run_operating', false));
+            assert(all(foundation.tests.passed) && ~foundation.electrical_baseline_qualified);
+
+  ny-only-operating-reference:
+    name: NY-only historical operating reference and independent replay
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Fetch MATPOWER 8.1
+        run: git clone --depth 1 --branch 8.1 https://github.com/MATPOWER/matpower.git "$env:RUNNER_TEMP\matpower"
+
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2026a
+          products: Optimization_Toolbox
+
+      - name: Run full Package A operating experiment
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(genpath(fullfile(getenv('RUNNER_TEMP'), 'matpower')));
+            evidence_dir = fullfile(getenv('RUNNER_TEMP'), 'ny_only_package_a');
+            foundation = run_ny_only_foundation(struct('output_dir', evidence_dir, 'write_outputs', true, 'run_tests', false, 'run_operating', true));
+            assert(isfield(foundation, 'source_snapshot') && isfield(foundation, 'reference'));
+            assert(islogical(foundation.electrical_baseline_qualified) && isscalar(foundation.electrical_baseline_qualified) && foundation.electrical_baseline_qualified);
+            independent_replay = replay_ny_only_foundation(evidence_dir);
+            assert(independent_replay.passed);
+            foundation_contract_test = test_ny_foundation_reference; assert(foundation_contract_test.pass);
+
+      - name: Preserve operating experiment evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ny-only-foundation-${{ github.run_id }}
+          path: ${{ runner.temp }}/ny_only_package_a/
+          if-no-files-found: warn
+          retention-days: 14
+
+  ny-only-regional-candidate:
+    name: Package B reconstruction and independent source-checked replay
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Fetch MATPOWER 8.1
+        run: git clone --depth 1 --branch 8.1 https://github.com/MATPOWER/matpower.git "$env:RUNNER_TEMP\matpower"
+
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2026a
+          products: Optimization_Toolbox
+
+      - name: Rebuild Package B and replay committed and fresh artifacts
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(genpath(fullfile(getenv('RUNNER_TEMP'), 'matpower')));
+            addpath(fullfile(pwd, 'System Matpower Format', 'NY_Lite'));
+            committed = replay_ny_only_regional_candidate;
+            assert(committed.passed && committed.source_accounting_verified && ~committed.reconstruction_performed);
+            guards = test_ny_regional_candidate_replay;
+            assert(guards.pass);
+            evidence_dir = fullfile(getenv('RUNNER_TEMP'), 'ny_only_package_b');
+            candidate = run_ny_only_regional_candidate(struct('output_dir', evidence_dir, 'write_outputs', true, 'run_tests', true, 'run_operating', true));
+            assert(candidate.electrical_baseline_qualified && all(candidate.tests.passed) && ~candidate.dlr_ready);
+            independent = replay_ny_only_regional_candidate(evidence_dir);
+            assert(independent.passed && independent.source_accounting_verified && ~independent.reconstruction_performed);
+            assert(isequal([size(candidate.build.candidate.bus,1),size(candidate.build.candidate.branch,1),size(candidate.build.candidate.gen,1)],[878 1375 595]));
+            assert(height(candidate.attempts)==3 && all(candidate.attempts.regional_mapping_passed) && ~any(candidate.attempts.relaxation_used));
+
+      - name: Preserve Package B operating evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ny-only-regional-candidate-${{ github.run_id }}
+          path: ${{ runner.temp }}/ny_only_package_b/
+          if-no-files-found: warn
+          retention-days: 14
+
+  compact-npcc-ny-testbed:
+    name: Preserved compact NPCC benchmark and independent replay
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Fetch MATPOWER 8.1
+        run: git clone --depth 1 --branch 8.1 https://github.com/MATPOWER/matpower.git "$env:RUNNER_TEMP\matpower"
+
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2026a
+          products: Optimization_Toolbox
+
+      - name: Verify committed compact artifact and rebuild with bounded MIPS
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(genpath(fullfile(getenv('RUNNER_TEMP'), 'matpower')));
+            addpath(fullfile(pwd, 'System Matpower Format'));
+            addpath(fullfile(pwd, 'System Matpower Format', 'NY_Lite'));
+            contract_tests = test_compact_npcc_model_contract;
+            assert(all(contract_tests.passed));
+            committed = replay_compact_npcc_ny_testbed;
+            assert(committed.passed && committed.source_accounting_verified && committed.frozen_hardware_verified && committed.boundary_accounting_verified && ~committed.optimizer_called && ~committed.package_a_dependency && ~committed.dlr_ready);
+            replay_guards = test_compact_npcc_ny_replay;
+            assert(replay_guards.pass && all(replay_guards.gates.passed) && ~replay_guards.optimizer_called);
+            saved_case = loadcase('npcc_ny_compact_dlr_testbed');
+            assert(isequal([size(saved_case.bus,1),size(saved_case.branch,1),size(saved_case.gen,1)],[51 92 35]) && nnz(saved_case.branch(:,11)>0)==87);
+            evidence_dir = fullfile(getenv('RUNNER_TEMP'), 'compact_npcc_ny');
+            compact = run_compact_npcc_ny_testbed(struct('output_dir', evidence_dir, 'write_outputs', true, 'run_tests', true, 'run_crosscheck', false));
+            assert(compact.electrical_baseline_qualified && all(compact.tests.passed) && compact.audit.passed && ~compact.contract.dlr_ready);
+            assert(height(compact.operating_attempts)==1 && compact.operating_attempts.solver=="MIPS" && compact.operating_attempts.opf_start==0 && compact.operating_attempts.primary_attempt && compact.operating_attempts.accepted_benchmark && compact.operating_attempts.hardware_frozen);
+            assert(isequal([size(compact.mpc.bus,1),size(compact.mpc.branch,1),size(compact.mpc.gen,1)],[51 92 35]) && nnz(compact.mpc.branch(:,11)>0)==87 && size(compact.mpc.bus,1)<=200);
+            independent = replay_compact_npcc_ny_testbed(evidence_dir);
+            assert(independent.passed && independent.source_accounting_verified && independent.frozen_hardware_verified && independent.boundary_accounting_verified && ~independent.optimizer_called && ~independent.package_a_dependency && ~independent.dlr_ready);
+
+      - name: Preserve compact benchmark evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: compact-npcc-ny-testbed-${{ github.run_id }}
+          path: ${{ runner.temp }}/compact_npcc_ny/
+          if-no-files-found: warn
+          retention-days: 14
+
+  compact-ny-2025-research:
+    name: Preferred 2025 electrical and synthetic thermal source replay
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Fetch MATPOWER 8.1
+        run: git clone --depth 1 --branch 8.1 https://github.com/MATPOWER/matpower.git "$env:RUNNER_TEMP\matpower"
+
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2026a
+          products: Optimization_Toolbox
+
+      - name: Verify public inputs infrastructure generation and thermal physics
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(fullfile(getenv('RUNNER_TEMP'), 'matpower'));
+            assert(install_matpower(1, 0, 0, 1));
+            addpath(fullfile(pwd, 'System Matpower Format'));
+            addpath(fullfile(pwd, 'System Matpower Format', 'NY_Lite'));
+            evidence_dir = fullfile(getenv('RUNNER_TEMP'), 'compact_ny_2025_replay');
+            if ~isfolder(evidence_dir), mkdir(evidence_dir); end;
+            inputs = test_compact_nyiso_snapshot_inputs;
+            infrastructure = test_compact_2025_infrastructure;
+            generation = test_compact_2025_generation;
+            assembly = test_compact_nyiso_operating_snapshot;
+            objective = test_compact_interface_ac_cost;
+            thermal_physics = [test_dlr_thermal_model; test_dlr_series_constraint; test_dlr_electrical_consistency; test_dlr_operating_guards];
+            assert(height(inputs)==22 && all(inputs.passed) && infrastructure.pass && generation.pass && all(assembly.passed) && all(objective.passed));
+            assert(height(thermal_physics)==35 && all(thermal_physics.passed));
+            ny_lite_writetable_lf(inputs, fullfile(evidence_dir, 'input_tests.csv'));
+            ny_lite_writetable_lf(infrastructure.gates, fullfile(evidence_dir, 'infrastructure_tests.csv'));
+            ny_lite_writetable_lf(generation.gates, fullfile(evidence_dir, 'generation_tests.csv'));
+            ny_lite_writetable_lf(thermal_physics, fullfile(evidence_dir, 'thermal_physics_tests.csv'));
+
+      - name: Replay saved electrical snapshots and synthetic thermal states without fitting
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(fullfile(getenv('RUNNER_TEMP'), 'matpower'));
+            assert(install_matpower(1, 0, 0, 1));
+            addpath(fullfile(pwd, 'System Matpower Format'));
+            addpath(fullfile(pwd, 'System Matpower Format', 'NY_Lite'));
+            evidence_dir = fullfile(getenv('RUNNER_TEMP'), 'compact_ny_2025_replay');
+            electrical = replay_compact_ny_2025_electrical;
+            assert(electrical.passed && electrical.source_accounting_verified && electrical.code_manifest_verified && electrical.frozen_training_rule_verified && ~electrical.heldout_targets_used && ~electrical.optimizer_called && ~electrical.dlr_ready);
+            assert(height(electrical.records)==12 && all(electrical.records.passed));
+            guards = test_compact_ny_2025_replay;
+            assert(height(guards)==14 && all(guards.passed));
+            nominal = npcc_ny_2025_dlr_research;
+            assert(isequal([size(nominal.bus,1),size(nominal.branch,1),size(nominal.gen,1)],[66 125 37]) && nnz(nominal.branch(:,11)>0)==112 && all(ismember((37:82)',nominal.bus(:,1))));
+            assert(nominal.userdata.ny2025_research.interface_calibrated && ~nominal.userdata.ny2025_research.exact_public_interface_operators && ~nominal.userdata.ny2025_research.observed_generator_dispatch_validated && ~nominal.userdata.ny2025_research.dlr_ready);
+            heldout = npcc_ny_2025_dlr_research('S5_2025_HIGH_TOTAL_EAST_PUBLIC');
+            assert(heldout.userdata.ny2025_research.heldout_prediction && ~heldout.userdata.ny2025_research.interface_calibrated);
+            [static_case, static_thermal] = npcc_ny_2025_synthetic_dlr('static_reference');
+            static_audit = audit_ny_ac_reference(static_case);
+            static_current = dlr_series_current_audit(static_case, static_thermal.realizations, static_thermal.temperature_c);
+            assert(static_audit.passed && height(static_thermal.realizations)==23 && max(static_current.heating_identity_error_mw)<1e-8 && ~static_thermal.contract.as_built_network_validated && ~static_thermal.contract.observed_zonal_generation_validated);
+            thermal = replay_compact_ny_dlr_baseline;
+            assert(thermal.passed && all(thermal.records.passed) && ~thermal.optimizer_called && ~thermal.physical_asset_validation);
+            ny_lite_writetable_lf(electrical.records, fullfile(evidence_dir, 'electrical_replay.csv'));
+            ny_lite_writetable_lf(guards, fullfile(evidence_dir, 'electrical_replay_guards.csv'));
+            ny_lite_writetable_lf(thermal.records, fullfile(evidence_dir, 'synthetic_thermal_replay.csv'));
+
+      - name: Preserve 2025 source and replay evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: compact-ny-2025-replay-${{ github.run_id }}
+          path: ${{ runner.temp }}/compact_ny_2025_replay/
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Replay independent generation predictions without targets or optimization
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(fullfile(getenv('RUNNER_TEMP'), 'matpower'));
+            assert(install_matpower(1, 0, 0, 1));
+            independent = replay_compact_generation_reconstruction;
+            assert(independent.passed && independent.eligible_scenarios==14 && independent.registered_scenarios==16);
+            assert(independent.code_manifest_verified && independent.source_manifest_verified && ~independent.optimizer_called && ~independent.internal_targets_used);
+            addpath(fullfile(pwd, 'System Matpower Format', 'NY_Lite'));
+            loader_tests = test_npcc_ny_2025_source_generation;
+            assert(height(loader_tests)==8 && all(loader_tests.passed));
+
+      - name: Rebuild and replay the separate partial-2025 infrastructure variant
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(fullfile(getenv('RUNNER_TEMP'), 'matpower'));
+            assert(install_matpower(1, 0, 0, 1));
+            addpath(fullfile(pwd, 'System Matpower Format'));
+            addpath(fullfile(pwd, 'System Matpower Format', 'NY_Lite'));
+            topology_tests = test_compact_2025_partial_spc;
+            assert(topology_tests.pass && all(topology_tests.gates.passed));
+            partial = replay_compact_2025_partial_spc;
+            assert(partial.passed && height(partial.records)==15 && ~partial.optimizer_called && ~partial.fresh_holdout_validation);
+            loader_tests = test_npcc_ny_2025_partial_spc;
+            assert(all(loader_tests.passed));
+            nominal = npcc_ny_2025_partial_spc;
+            assert(isequal([size(nominal.bus,1),size(nominal.branch,1),size(nominal.gen,1)],[71 135 37]) && nnz(nominal.branch(:,11)>0)==117);
+            thermal = replay_compact_partial_spc_dlr;
+            assert(thermal.passed && all(thermal.records.passed) && ~thermal.optimizer_called);
+            thermal_loader_tests = test_npcc_ny_2025_partial_spc_dlr;
+            assert(height(thermal_loader_tests)==7 && all(thermal_loader_tests.passed));
+
+  independent-generation-sources:
+    name: Independent public generation source accounting and freeze
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up source analysis Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install verified source analysis dependencies
+        run: python -m pip install numpy==2.3.5 pandas==3.0.1 openpyxl==3.1.5
+
+      - name: Test temporal identity quantity coverage and generation accounting
+        run: >-
+          python -m unittest -v test_compact_nyiso_time_alignment
+          test_compact_nyiso_hourly_inputs test_build_compact_epa_generation_inputs
+          test_compact_nonfossil_generation_inputs test_compact_combined_generation_prior
+          test_compact_named_generation_priors test_score_compact_2025_partial_spc
+
+      - name: Verify saved methods inputs and predictions were frozen before scoring
+        run: python freeze_compact_generation_methodology.py --verify

@@ -1,0 +1,142 @@
+--- upstream/Data/allocateLoad.m
++++ cached_upstream/Data/allocateLoad.m
+@@ -26,7 +26,7 @@
+ %% Read NYS bus table
+ 
+ % NYSBus = readtable("Data/bus_ny_type_zone_new.csv");
+-busInfo = importBusInfo(fullfile("Data","npcc_new.csv"));
++busInfo = nygrid_cached_import(@importBusInfo,fullfile("Data","npcc_new.csv"));
+ NYSBus = busInfo(busInfo.zone ~= 'NA', :);
+ % Subset bus with load connected, could be all types of bus
+ NYSBusWLoad = NYSBus(NYSBus.sumLoadP0 > 0, :);
+@@ -59,9 +59,9 @@
+ %% Read load data
+ 
+ if usemat
+-    load(fullfile('Data','loadHourly_'+string(year(timeStamp))+'.mat'),'loadHourly');
++    nygrid_cached_load(fullfile('Data','loadHourly_'+string(year(timeStamp))+'.mat'),'loadHourly',timeStamp);
+ else
+-    loadHourly = importLoad(fullfile('Data','loadHourly_'+string(year(timeStamp))+'.csv'));
++    loadHourly = nygrid_cached_import(@importLoad,fullfile('Data','loadHourly_'+string(year(timeStamp))+'.csv'),timeStamp);
+ end
+ 
+ sampleLoadZonal = loadHourly(loadHourly.TimeStamp == timeStamp, :);
+--- upstream/OPFtestcase.m
++++ cached_upstream/OPFtestcase.m
+@@ -40,7 +40,7 @@
+ %% Read operation condition for NYS
+ 
+ [fuelMix,interFlow,flowLimit,~,~,zonalPrice] = readOpCond(timeStamp);
+-busInfo = importBusInfo(fullfile("Data","npcc_new.csv"));
++busInfo = nygrid_cached_import(@importBusInfo,fullfile("Data","npcc_new.csv"));
+ 
+ define_constants;
+ 
+--- upstream/updateOpCond.m
++++ cached_upstream/updateOpCond.m
+@@ -49,8 +49,8 @@
+ genData = allocateGen(timeStamp,'lm',usemat);
+ 
+ % Read renewable generation capacity allocation table
+-renewableGen = importRenewableGen(fullfile("Data","RenewableGen.csv"));
+-busInfo = importBusInfo(fullfile("Data","npcc.csv"));
++renewableGen = nygrid_cached_import(@importRenewableGen,fullfile("Data","RenewableGen.csv"));
++busInfo = nygrid_cached_import(@importBusInfo,fullfile("Data","npcc.csv"));
+ 
+ % Define constants for MATPOWER
+ define_constants;
+--- upstream/Utility/allocateGen.m
++++ cached_upstream/Utility/allocateGen.m
+@@ -29,13 +29,13 @@
+ %% Generator allocation
+ 
+ % Read generator allocation table
+-genAllocation = importNearestBus(fullfile("Data","gen_bus_assignment.csv"));
++genAllocation = nygrid_cached_import(@importNearestBus,fullfile("Data","gen_bus_assignment.csv"));
+ 
+ % Read generator parameter table
+ if usemat
+-    load(fullfile("Data","genParamAll_newramp.mat"),'genParamAll_newramp');
++    nygrid_cached_load(fullfile("Data","genParamAll_newramp.mat"),'genParamAll_newramp',timeStamp);
+ else
+-    genParamAll_newramp = importGenParam(fullfile("Data","genParamAll_newramp.csv"));
++    genParamAll_newramp = nygrid_cached_import(@importGenParam,fullfile("Data","genParamAll_newramp.csv"));
+ end
+ 
+ % Allocate generator to the nearest PV bus
+@@ -46,9 +46,9 @@
+ 
+ % Read hourly generation and heat input data for large generators
+ if usemat
+-    load(fullfile('Data','thermalGenHourly_'+string(year(timeStamp))+'.mat'),'hourlyGenLarge');
++    nygrid_cached_load(fullfile('Data','thermalGenHourly_'+string(year(timeStamp))+'.mat'),'hourlyGenLarge',timeStamp);
+ else
+-    hourlyGenLarge = importThermalGen(fullfile('Data','thermalGenHourly_'+string(year(timeStamp))+'.csv'));
++    hourlyGenLarge = nygrid_cached_import(@importThermalGen,fullfile('Data','thermalGenHourly_'+string(year(timeStamp))+'.csv'),timeStamp);
+ end
+ 
+ % Hour specific value
+@@ -61,7 +61,7 @@
+ %% Sample hour generation cost curve
+ 
+ % Read weekly fuel price table in NYISO 2019
+-fuelPriceTable = importFuelPrice(fullfile('Data','fuelPriceWeekly_'+string(year(timeStamp))+'.csv'));
++fuelPriceTable = nygrid_cached_import(@importFuelPrice,fullfile('Data','fuelPriceWeekly_'+string(year(timeStamp))+'.csv'));
+ 
+ % Get fuel price for the sampled hour
+ sampleFuelPrice = fuelPriceTable(fuelPriceTable.TimeStamp <= timeStamp, :);
+--- upstream/Utility/allocateLoad.m
++++ cached_upstream/Utility/allocateLoad.m
+@@ -26,7 +26,7 @@
+ %% Read NYS bus table
+ 
+ % NYSBus = readtable("Data/bus_ny_type_zone_new.csv");
+-busInfo = importBusInfo(fullfile("Data","npcc_new.csv"));
++busInfo = nygrid_cached_import(@importBusInfo,fullfile("Data","npcc_new.csv"));
+ NYSBus = busInfo(busInfo.zone ~= 'NA', :);
+ % Subset bus with load connected, could be all types of bus
+ NYSBusWLoad = NYSBus(NYSBus.sumLoadP0 > 0, :);
+@@ -59,9 +59,9 @@
+ %% Read load data
+ 
+ if usemat
+-    load(fullfile('Data','loadHourly_'+string(year(timeStamp))+'.mat'),'loadHourly');
++    nygrid_cached_load(fullfile('Data','loadHourly_'+string(year(timeStamp))+'.mat'),'loadHourly',timeStamp);
+ else
+-    loadHourly = importLoad(fullfile('Data','loadHourly_'+string(year(timeStamp))+'.csv'));
++    loadHourly = nygrid_cached_import(@importLoad,fullfile('Data','loadHourly_'+string(year(timeStamp))+'.csv'),timeStamp);
+ end
+ 
+ sampleLoadZonal = loadHourly(loadHourly.TimeStamp == timeStamp, :);
+--- upstream/Utility/readOpCond.m
++++ cached_upstream/Utility/readOpCond.m
+@@ -28,19 +28,19 @@
+ 
+ if usemat % Read mat files
+     
+-    load(fullfile('Data','fuelmixHourly_'+string(year(timeStamp))+'.mat'),'fuelmixHourly');
+-    load(fullfile('Data','interflowHourly_'+string(year(timeStamp))+'.mat'),'interflowHourly');
+-    load(fullfile('Data','priceHourly_'+string(year(timeStamp))+'.mat'),'priceHourly');
+-    load(fullfile('Data','nuclearGenDaily_'+string(year(timeStamp))+'.mat'),'nuclearGenDaily');
+-    load(fullfile('Data','hydroGenMonthly_'+string(year(timeStamp))+'.mat'),'hydroGenMonthly');
++    nygrid_cached_load(fullfile('Data','fuelmixHourly_'+string(year(timeStamp))+'.mat'),'fuelmixHourly',timeStamp);
++    nygrid_cached_load(fullfile('Data','interflowHourly_'+string(year(timeStamp))+'.mat'),'interflowHourly',timeStamp);
++    nygrid_cached_load(fullfile('Data','priceHourly_'+string(year(timeStamp))+'.mat'),'priceHourly',timeStamp);
++    nygrid_cached_load(fullfile('Data','nuclearGenDaily_'+string(year(timeStamp))+'.mat'),'nuclearGenDaily',timeStamp);
++    nygrid_cached_load(fullfile('Data','hydroGenMonthly_'+string(year(timeStamp))+'.mat'),'hydroGenMonthly',timeStamp);
+     
+ else % Read csv files
+     
+-    fuelmixHourly = importFuelMix(fullfile('Data','fuelmixHourly_'+string(year(timeStamp))+'.csv'));
+-    interflowHourly = importInterFlow(fullfile('Data','interflowHourly_'+string(year(timeStamp))+'.csv'));
+-    priceHourly = importZonalPrice(fullfile('Data','priceHourly_'+string(year(timeStamp))+'.csv'));
+-    nuclearGenDaily = importNuclearGen(fullfile('Data','nuclearGenDaily_'+string(year(timeStamp))+'.csv'));
+-    hydroGenMonthly = importHydroGen(fullfile('Data','hydroGenMonthly_'+string(year(timeStamp))+'.csv'));
++    fuelmixHourly = nygrid_cached_import(@importFuelMix,fullfile('Data','fuelmixHourly_'+string(year(timeStamp))+'.csv'),timeStamp);
++    interflowHourly = nygrid_cached_import(@importInterFlow,fullfile('Data','interflowHourly_'+string(year(timeStamp))+'.csv'),timeStamp);
++    priceHourly = nygrid_cached_import(@importZonalPrice,fullfile('Data','priceHourly_'+string(year(timeStamp))+'.csv'),timeStamp);
++    nuclearGenDaily = nygrid_cached_import(@importNuclearGen,fullfile('Data','nuclearGenDaily_'+string(year(timeStamp))+'.csv'),timeStamp);
++    hydroGenMonthly = nygrid_cached_import(@importHydroGen,fullfile('Data','hydroGenMonthly_'+string(year(timeStamp))+'.csv'),timeStamp);
+     
+ end
+ 
