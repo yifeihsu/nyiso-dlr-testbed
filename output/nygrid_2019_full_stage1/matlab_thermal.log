@@ -1,0 +1,24 @@
+                        test                         passed    max_error 
+    _____________________________________________    ______    __________
+
+    "independent_NREL_21_case_fixture"               true      2.2737e-13
+    "steady_ampacity_zero_net_heat"                  true      1.4211e-14
+    "wind_ambient_solar_monotonicity"                true               0
+    "current_direction_does_not_change_heating"      true               0
+    "axis_180_degree_symmetry"                       true               0
+    "zero_current_overtemperature_is_infeasible"     true               0
+    "cold_wire_receives_ambient_heat"                true               0
+    "reject_kPa_used_as_Pa"                          true               0
+    "reject_temperature_kelvin_used_as_ambient_C"    true               0
+    "RK4_vs_adaptive_ode45"                          true      7.1046e-10
+    "RK4_step_refinement"                            true      1.2065e-11
+    "equilibrium_remains_stationary"                 true               0
+
+       scenario_id        screened_branches    hours    thermal_exceedance_branch_hours    hours_any_thermal_exceedance    max_thermal_proxy_utilization    combined_exceedance_branch_hours    hours_any_combined_exceedance    max_combined_proxy_utilization
+    __________________    _________________    _____    _______________________________    ____________________________    _____________________________    ________________________________    _____________________________    ______________________________
+
+    "static_reference"           39            8760               1.4454e+05                           8760                           17.004                           1.4454e+05                           8760                             17.004            
+    "windy_mild"                 39            8760                    89931                           8760                           9.6674                                89931                           8760                             9.6674            
+    "hot_low_wind"               39            8760               2.0981e+05                           8760                           25.803                           2.0981e+05                           8760                             25.803            
+    "cool_windy"                 39            8760                    84304                           8760                           9.2012                                84304                           8760                             9.2012            
+

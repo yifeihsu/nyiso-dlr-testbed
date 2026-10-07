@@ -23,3 +23,9 @@ scripts/nygrid_compact_2019/** -text whitespace=cr-at-eol
 output/nygrid_compact_2019/verification/*.log whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 # Presentation evidence and source manifests preserve their exact hashed bytes.
 output/pdf/nygrid_interface_update_2026-09-08/** -text whitespace=cr-at-eol
+# Full2019 source capture and derived DC screening use byte-fingerprinted code.
+scripts/nygrid_2019_full/** -text whitespace=cr-at-eol
+"System Matpower Format/npcc_nygrid_2019_full_dc.m" -text whitespace=cr-at-eol
+output/nygrid_2019_full_stage1/*.json -text whitespace=cr-at-eol
+output/nygrid_2019_full_stage1/*.log -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+output/nygrid_2019_full_stage1/*.patch -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

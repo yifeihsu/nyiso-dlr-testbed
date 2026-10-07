@@ -1,0 +1,238 @@
+{
+  "source_commit": "47698b6c7823ae7b1bc6935e5601d5b64b8f918e",
+  "verified_upstream_files": 73,
+  "verified_cached_files": 73,
+  "reduction_commit": "cbd61ad03308c31faecffa3d8d3259121bdc1aa4",
+  "verified_reduction_files": 20,
+  "cached_function_sha256": "7a1ebf0be5fe71e83d4002751d2b121fd26dd3d597d3db2ece959389ff655d5a",
+  "instrumented_function_sha256": "2a0ad5224190194abe528a824dfd508005aa2cdf23f5b4d8845ec80e3726154a",
+  "transformation_reverses_to_exact_cached_source": true,
+  "transformation": [
+    "rename function and add two outputs",
+    "copy full mpc immediately before MPReduction",
+    "copy reduced mpc immediately after MPReduction"
+  ],
+  "model_arithmetic_changed": false,
+  "source_or_existing_results_written": false,
+  "runtime": "output/nygrid_2019_full_stage1/capture_runtime",
+  "data_link_policy": "Only read by released import/load calls; never edit the linked files. Result writes remain in capture_runtime.",
+  "data_files": [
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/allocateLoad.m",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/allocateLoad.m",
+      "sha256": "20a14901339a60df08d501bf475fa4a04941af2286aba412bc69fc4b4958ae35",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/bus_ny_type_zone_new.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/bus_ny_type_zone_new.csv",
+      "sha256": "90600ccc873dec849af9a4f3d2dd11e2061f03d97d8dd091be4bd694a14543f9",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/bus_ny_type_zone_population.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/bus_ny_type_zone_population.csv",
+      "sha256": "8bdf2d282bdddb017f51f7db9e5f9d742f756b5d6af03c87c727deb717444d35",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/fuelmixHourly_2019.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/fuelmixHourly_2019.csv",
+      "sha256": "e5a742ed76a91bb81989bd85da01b3faba6ca8945d7bc391566a1e5cfc64386e",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/fuelmixHourly_2019.mat",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/fuelmixHourly_2019.mat",
+      "sha256": "c89fe36786595adca7c0c59920a6bd42b28e3457e092591fe8da52602130367a",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/fuelPriceWeekly_2019.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/fuelPriceWeekly_2019.csv",
+      "sha256": "bd0cffb62310188c1569f65bd0410f85aeaf157deb0b9a319667902281a6d696",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/fuelPriceWeekly_2019.mat",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/fuelPriceWeekly_2019.mat",
+      "sha256": "c8d498578f115ec0958654b94e153c8b69a06b84c83692391953346ecbeea268",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/gen_bus_assignment.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/gen_bus_assignment.csv",
+      "sha256": "997475693f94747e89f40702601324d2a9bca1f7584ccd15ee7c35c947376629",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/genParamAll.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/genParamAll.csv",
+      "sha256": "6ea7e699d22439b6cd40cf6c27fd9d24f7af5b2413a81263d7479d3adeada528",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/genParamAll.mat",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/genParamAll.mat",
+      "sha256": "5cb4f91da21cfa08d6f14b4aa644891de8ee0540bc84985276578591e64900a4",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/genParamAll_2019.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/genParamAll_2019.csv",
+      "sha256": "6ea7e699d22439b6cd40cf6c27fd9d24f7af5b2413a81263d7479d3adeada528",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/genParamAll_newramp.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/genParamAll_newramp.csv",
+      "sha256": "b9617960c80dca2c01817149c031807c9da2b14b797dd048b205111bdf8e706f",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/genParamAll_newramp.mat",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/genParamAll_newramp.mat",
+      "sha256": "cbbb0e130f77cdfb6d64b3b3c246fbb27d50b2d3bf75ce03b10ae9ce98e5e22f",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/hydroGenMonthly_2019.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/hydroGenMonthly_2019.csv",
+      "sha256": "a9797753476bcfc6133f3e0b2b714e61447c14f8c467df7d47f2ad747c49eb1f",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/hydroGenMonthly_2019.mat",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/hydroGenMonthly_2019.mat",
+      "sha256": "f03bc26e316d5800af10cacacf75ddd1a813a12ef666bbe28a767bf02174d280",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/interflowHourly2019.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/interflowHourly2019.csv",
+      "sha256": "2c0708ca318c6ff870ed1e398a966cbadd6004bfa712d55497ddcace380cddc3",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/interflowHourly_2019.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/interflowHourly_2019.csv",
+      "sha256": "b872530b5704a57a17928ca2949511958e4de6bb31063d197d55af3b21e52754",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/interflowHourly_2019.mat",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/interflowHourly_2019.mat",
+      "sha256": "18e9e0f5af35aaba7d1ce1773afdd352f051cb6c8d4d0da45562c919d5b2888d",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/loadHourly_2019.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/loadHourly_2019.csv",
+      "sha256": "677ce71d73fc800b3b938a75b9f7797e4a3f8a97e992518d0d1f8f5f3bf96f62",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/loadHourly_2019.mat",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/loadHourly_2019.mat",
+      "sha256": "eb27dd628f67ae4ef79ff7f2a7b790920a07b3c446e2393daa0121cc08e6f02a",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/npcc.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/npcc.mat",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/npcc.mat",
+      "sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/npcc_new.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/nuclearGenDaily_2019.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/nuclearGenDaily_2019.csv",
+      "sha256": "bfe80d073a2c8f4641a89738ff02b0c923efc4173242b6be9869b3728b9e64f5",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/nuclearGenDaily_2019.mat",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/nuclearGenDaily_2019.mat",
+      "sha256": "b701c1db718cc0497356d536cb5ee660eba1a1cbec8776e206c2754d8e58e8dd",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/priceHourly_2019.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/priceHourly_2019.csv",
+      "sha256": "acff3a50ce1be67f3614a8f8413a2730b0da356d738f0b559b7b4d579ca4016c",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/priceHourly_2019.mat",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/priceHourly_2019.mat",
+      "sha256": "f2d02689008a6b50e69749b65c4b727e89d493d47db6be2f8c3f440af18309b5",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/RenewableGen.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/RenewableGen.csv",
+      "sha256": "270e44f264b7e9b2132b5efab5cdcca0561724f82d8581e41a9305eaa293dc53",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/solar_example.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/solar_example.csv",
+      "sha256": "ade30995c7616b551874e4c580370e7d81a839edcbb2feb275ce5bee68a249d1",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/thermalGenHourly_2019.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/thermalGenHourly_2019.csv",
+      "sha256": "a6de40f9d9e9dba19302bfd0b1224f1a5617a18bfa03f257ab523f59d605116f",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/thermalGenHourly_2019.mat",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/thermalGenHourly_2019.mat",
+      "sha256": "328c9cb971c2af7f1827942f19be8338c84045deb1ae7b25fa4db8a31ba6d300",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/thermalGenMatched_2019.xlsx",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/thermalGenMatched_2019.xlsx",
+      "sha256": "dbf3542eea2250305ec3139a6d125e96dc4f6c67923fb87c027123812363296f",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/thermalGenMatched_2019_copy.xlsx",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/thermalGenMatched_2019_copy.xlsx",
+      "sha256": "dbf3542eea2250305ec3139a6d125e96dc4f6c67923fb87c027123812363296f",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/thermalGenNotMatched_2019.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/thermalGenNotMatched_2019.csv",
+      "sha256": "46824bfa90f5f91940955aacf6e9b8bcde1052532568f7c351dd1543ce2e11d3",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/thermalGenNotMatched_2019_copy.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/thermalGenNotMatched_2019_copy.csv",
+      "sha256": "3687903ee358c7eaac002ab6b3baf4201ff8c39c179f8645a20a27bf9c796e3a",
+      "hardlink": true
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_runtime/Data/wind_example.csv",
+      "source_path": "tmp/nygrid_2019_reproduction/cached_upstream/Data/wind_example.csv",
+      "sha256": "7e03be9c671f594d63b2631b4ea744df272732badf83b9c5c06bc0999bfd647b",
+      "hardlink": true
+    }
+  ],
+  "prepare_script_sha256": "33ff98b853bb8f27371daa1ad7e3b4a0eedf698fdb97e154f6fa26219b3c07f6"
+}

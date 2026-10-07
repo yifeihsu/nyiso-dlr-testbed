@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "fresh_matpower_hours": 13,
+  "invalid_index_guards": 8,
+  "tolerance_mw": 1E-7,
+  "tolerance_angle_deg": 1E-7,
+  "max_branch_error_mw": 4.1382008930668235E-11,
+  "max_generation_error_mw": 6.94626578479074E-11,
+  "max_angle_error_deg": 2.7284841053187847E-12,
+  "max_nodal_balance_residual_mw": 2.1948665107629495E-11,
+  "matlab_version": "26.1.0.3276743 (R2026a) Update 3",
+  "matpower_version": "8.1",
+  "validation_scope": "fresh MATPOWER full final-device solve agrees with independent annual DC reconstruction",
+  "released_reduced_model_equivalence_claimed": false,
+  "ac_or_equipment_feasibility_claimed": false
+}

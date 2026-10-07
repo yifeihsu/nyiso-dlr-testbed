@@ -1,0 +1,124 @@
+{
+  "status": "validated_source_full_pre_hvdc_plus_derived_full_final_devices_dc_baseline",
+  "hours": 8760,
+  "fresh_source_capture_hours": 13,
+  "created_utc": "2026-10-07T05:14:33.409783+00:00",
+  "tolerance_mw": 1e-06,
+  "stages": {
+    "full_pre_hvdc": {
+      "buses": 140,
+      "ac_branches": 226,
+      "generators": 271,
+      "dc_links": 0
+    },
+    "full_with_final_devices": {
+      "buses": 140,
+      "ac_branches": 225,
+      "generators": 271,
+      "dc_links": 4
+    },
+    "released_reduced_final": {
+      "buses": 57,
+      "ac_branches": 94,
+      "generators": 271,
+      "dc_links": 4
+    }
+  },
+  "removed_full_branch_row_1based": 96,
+  "removed_full_branch_endpoints": [
+    81,
+    125
+  ],
+  "preserved_physical_reduced_branches_verified": 78,
+  "max_source_ny_pd_error_mw": 7.003109203651547e-11,
+  "max_full_solution_pg_preservation_error_mw": 1.0845724318642169e-10,
+  "max_reduced_annual_replay_error_mw": 1.2050804798491299e-11,
+  "max_full_final_retained_branch_error_mw": 3.694820312376123,
+  "max_full_final_interface_error_mw": 1.747917536782552,
+  "reduced_final_equivalence": false,
+  "rms_full_final_retained_branch_difference_mw": 0.3347677908860075,
+  "rms_full_final_interface_difference_mw": 0.23792206466533403,
+  "reduction_discrepancy_explanation": {
+    "pure_dc_schur_vs_reduced_offdiagonal_max_mw_per_rad": 132.06623221147765,
+    "source_shunt_augmented_schur_vs_reduced_offdiagonal_max_mw_per_rad": 2.7284841053187847e-12,
+    "cause": "Initiation.m includes bus BS and branch B/2 in SelfB before elimination. DC PF ignores these shunts. LoadRedistribution.m matches the original solved state by adjusting reduced PD, but subsequent device changes need not match full-network responses.",
+    "source_files": [
+      "reduction_toolbox/mirror/Initiation.m",
+      "reduction_toolbox/mirror/LoadRedistribution.m"
+    ]
+  },
+  "full_final_vs_nyiso_pooled_wape_pct": 11.217216796373474,
+  "reduced_final_vs_nyiso_pooled_wape_pct": 11.218076930625285,
+  "observation_metric_scope": "Primary all8760 nominal local hours, including source imputation and DST ambiguity; seven interfaces overlap and pooled WAPE is not statewide balance error",
+  "max_full_pre_nodal_balance_residual_mw": 2.7966962079517543e-11,
+  "max_full_final_nodal_balance_residual_mw": 2.2438939595303964e-11,
+  "reference_input_restoration": {
+    "generator_row_1based": 232,
+    "bus": 74,
+    "source": "nuclearGenDaily_2019.csv:IndianPoint2Gen",
+    "reason": "LoadRedistribution overwrites PG with full solved PG"
+  },
+  "evidence_status": "Fresh 13-hour source/MATPOWER validation; annual independent replay using frozen saved annual PG and fresh raw CSV load allocation",
+  "model_scope": "DC research model; source full pre-HVDC reconstruction verified exactly within tolerance; separately derived full final-device transfer has quantified nonzero differences from released reduced network",
+  "limits": [
+    "Annual thermal generator PG reuses frozen validated 2019 allocation evidence; not a fresh annual RGGI allocation run",
+    "Full final-device expansion is derived here, not an unreduced file published by the paper",
+    "Full final-device variant is not claimed equivalent to released reduced model; the exact-equivalence gate fails and the measured differences are retained",
+    "DC convergence is not AC feasibility or thermal/rating certification",
+    "Inherited capacities and hourly dispatch can violate generator or branch limits",
+    "Source labels are 8760 nominal local hourly labels; DST source-quality qualifications remain applicable"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "1.26.4",
+    "scipy": "1.15.2"
+  },
+  "annual_input_receipts": [
+    {
+      "mat_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_1.mat",
+      "mat_sha256": "314d817570b4edfd60b0970f25aee8d126bffd46aa70ceba8ee3bde10b05f274",
+      "final_csv_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_1_cases.csv",
+      "final_csv_sha256": "975024f20abfadbb42af807e41bb1b3d900bb781ee79b380e66ca539f4ba1f4e",
+      "first_hour": 1,
+      "last_hour": 2190,
+      "hours": 2190
+    },
+    {
+      "mat_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_2.mat",
+      "mat_sha256": "e72ddd82be691ad4a46cd74c1316e450763944f259cce95e071b972b986383c6",
+      "final_csv_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_2_cases.csv",
+      "final_csv_sha256": "2ac37f02f919c6d20cf1fae95be25375868e21192d597e795ab823251a6fc734",
+      "first_hour": 2191,
+      "last_hour": 4380,
+      "hours": 2190
+    },
+    {
+      "mat_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_3.mat",
+      "mat_sha256": "47375d88c36e2a3af33a85eeed461396186404fe9c7486ff43ed4aaec2988aab",
+      "final_csv_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_3_cases.csv",
+      "final_csv_sha256": "2df225949e193760fb40ed8e7670d5fa0f4fa4963ffd86476d9365c769eeb1cb",
+      "first_hour": 4381,
+      "last_hour": 6570,
+      "hours": 2190
+    },
+    {
+      "mat_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_4.mat",
+      "mat_sha256": "795f57ce1ee3f483484da4f98461a9a47eaf15ca573a1dadca3bd3804a5f7431",
+      "final_csv_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\annual_4_cases.csv",
+      "final_csv_sha256": "098405938b0f20d10bf969215961f8e79eb66d8188d8e56a649fc40b4cded863",
+      "first_hour": 6571,
+      "last_hour": 8760,
+      "hours": 2190
+    }
+  ],
+  "full_year_mat_sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0",
+  "snapshot_metadata": {
+    "base_case_hour_index": 1,
+    "hourly_generator_pmax_available": true,
+    "hourly_generator_cost_available": false,
+    "hourly_ramp_metadata_available": false,
+    "hourly_interface_positive_limits_available": true,
+    "hourly_interface_negative_limits_available": false,
+    "note": "base_case gencost, ramp columns and if.lims are first-hour snapshot metadata; hourly DC diagnostic loaders must not silently reuse them"
+  }
+}
