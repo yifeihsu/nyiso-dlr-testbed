@@ -1,0 +1,686 @@
+{
+  "status": "verified_current_research_delivery",
+  "files": 135,
+  "total_bytes": 293834787,
+  "maximum_file_bytes": 34900766,
+  "baseline_files_modified": false,
+  "physical_2025_model_certification": false,
+  "local_intermediate_history_excluded": true,
+  "entries": [
+    {
+      "path": "NYGRID_2025_DOWNSTATE_REFINEMENT.md",
+      "bytes": 13423,
+      "sha256": "f7b44c9172745a90ab621a832a8118ad1fcd00fecabcbdbde46829efbf20862c"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/comparison/downstate_error_comparison.pdf",
+      "bytes": 21404,
+      "sha256": "98fdf22ed7f363c85216f220d8b54e6a8e994dcec71901ceb1b05c193b73f1b7"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/comparison/downstate_error_comparison.png",
+      "bytes": 104574,
+      "sha256": "fbbc40504807a7d3891fe1dae3ecd60132374d634abb97e362d0a9b3f4e0c67f"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/comparison/downstate_monthly_comparison.pdf",
+      "bytes": 30815,
+      "sha256": "46e65c21aaae358f448c9706fb6e9b4dcf8efea9f7c4b25b413788850be9fc39"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/comparison/downstate_monthly_comparison.png",
+      "bytes": 309070,
+      "sha256": "187e8b845b6f5fad02ace812b223080228cf57f863d46d8993199427018bea40"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/comparison/interface_hourly.csv.gz",
+      "bytes": 10283787,
+      "sha256": "e37df97ae259b7c1e7a0a7204c55bfb835acdadd587456c9fbc43ccdb340dcaa"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/comparison/interface_summary.csv",
+      "bytes": 11230,
+      "sha256": "cd6aedf69fcb97e629939dd03c155eb0a501ab3dfe776d8e3001f720f8e18aaf"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/comparison/monthly_interface_summary.csv",
+      "bytes": 99152,
+      "sha256": "ce4d5d4901964ca69be2bb7a4f4ffa7b4f44cae792fb644995cf55263e3ada90"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/comparison/scoring_receipt.json",
+      "bytes": 836,
+      "sha256": "39deda58a64d7c572a036b16a56b67866358d316c386331e385a57f0a4844a75"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/comparison/staged_flow_changes.csv",
+      "bytes": 6248,
+      "sha256": "9b24a1712f70d37e933c99435658d1d2d957c3170abfee16779ba09fb1d31d3d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/branch_register.csv",
+      "bytes": 83662,
+      "sha256": "6a574d53b40eb2bf08dba851757a5d56ab6b4d89377b2a33e5d6319d5cd2a18f"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "bytes": 16126,
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/construction_summary.json",
+      "bytes": 3253,
+      "sha256": "cc421bf1b1ab936c5ffbbafc98634dad9d0e2e0c1e4ca434d465358bdcd2e06f"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/generation_landing_register.csv",
+      "bytes": 8737,
+      "sha256": "1b73a02e140d27b09a467943061bca8343359049d550928b079c8699ef966d75"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/interface_metadata_repair_receipt.json",
+      "bytes": 1990,
+      "sha256": "d710b2fd99370f97148a16be27f418c5bd21a34e5143210613a9d75a46139867"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/interface_operator_register.csv",
+      "bytes": 20843,
+      "sha256": "127f0f8ece645f3f671ad6edcacb4bd79b3a8dc263c0e03b1b2c60b92d0df9d0"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/K_backbone_source_register.csv",
+      "bytes": 5280,
+      "sha256": "ae47252ed83b0817d33af50229cf851ec5acd6cc87b39cf00b0c14b1602582f2"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/load_allocation_register.csv",
+      "bytes": 5277,
+      "sha256": "59decfb9e1d356bd23428c3da991ddb14ec867214fe9f36afb01b5e128f7e3dd"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/load_coverage_register.csv",
+      "bytes": 740,
+      "sha256": "79e5684fdeb618e507b57189ae9292bdaab8533f892cc31474bedc35738851b3"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "bytes": 281282,
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/overlap_policy_audit.csv",
+      "bytes": 1746,
+      "sha256": "2e1f6e1b2e03c96aa9a480c31a83ba03d23a6618e67ce283670533abba4c57c6"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/overlap_policy_audit.json",
+      "bytes": 740,
+      "sha256": "4e7c25b96d62be37347ceda46562389ecafd24756f2a1a25d4ae0f7466109864"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/project_state_register.csv",
+      "bytes": 486,
+      "sha256": "aa039503b4f77ba8b45bf51800c824655f885c0de7e3843f29fb986c39bcca8a"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/rebuild_verification.json",
+      "bytes": 3154,
+      "sha256": "d855cce732e3c11d8828df40e52aa03fa9e4c1dee2b60cf324b6ab86eeef7d4a"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/replacement_register.csv",
+      "bytes": 69244,
+      "sha256": "4591b2c9b024f73f76c9028f91336423d926758dc9a6d234f1abe94b61b182e4"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/source_bus_map.csv",
+      "bytes": 2553,
+      "sha256": "56f9bad150c960236c0982a9076d681423f5558aad47c672ab432eaffc188c72"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/source_manifest.csv",
+      "bytes": 1525,
+      "sha256": "c852cd5ad6acd98940f63202bb102cf0ce8e89cc7368b758ff540cb915ca4c94"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/source_subset.mat",
+      "bytes": 5135,
+      "sha256": "8afe12ede90836e70ccc9fc853c97d192b5253b82509b4a373a4c2c32c6ebe7d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/assets_dated.mat",
+      "bytes": 34626016,
+      "sha256": "7501308c9ae2555819c795658caf10da1cdda00f53dd53ccaad474d040c148a4"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/assets_year_end.mat",
+      "bytes": 34780268,
+      "sha256": "5f376a07b90360f1807123d7350288a7e3bbcfcfa5ce699684020fa2657ca023"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/expanded_identity.mat",
+      "bytes": 29027216,
+      "sha256": "e62a4ec0e003bf0394a486d78a8d6398445004db6c01bbfc2ce19628a1f7f289"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/interface_definitions.json",
+      "bytes": 3242,
+      "sha256": "e96c7d938cedeb7a65383ea94b85ad7fec8a7c7f79867b87c5c31fb0295be4fd"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/interface_membership.csv",
+      "bytes": 30477,
+      "sha256": "810bd49179ef58fa277f45ab76c12ef8ee71dd28dbbdf92f308c3951532412b0"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/nyes_assumption_year_end.mat",
+      "bytes": 34900766,
+      "sha256": "e7d1aaa3dc0cc048c9a5c65c9acd397b859cb6d8e9b31cb7cbf7fb6157acf871"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/provenance.json",
+      "bytes": 6515,
+      "sha256": "e3483bafbae201fab4d2ce5c9ca3fe323ca7f98cea586a57484352d093667aee"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/replay_summary.csv",
+      "bytes": 1816,
+      "sha256": "5016855038b7b747c1abb0d674da1ce8cc8f17abd3937af3b4edd4308f2c5899"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/source_detail_2019.mat",
+      "bytes": 33319863,
+      "sha256": "8892b5d3ab9cfe31b3e64ca5020a15759d0d61b8ec2f5cdc3fbc1c4bc449e218"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/upgrades_dated.mat",
+      "bytes": 33834044,
+      "sha256": "c9da03615b3bcbff1eaa7ddf1031e1f5c26c82587774ba29dc964afac2bcaf5e"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/upgrades_year_end.mat",
+      "bytes": 34029819,
+      "sha256": "2c28b3331310eabf471f1981a0f0f8a386ae841cd0bf3b69e214880e9ce243bc"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/all_assumptions_x050.mat",
+      "bytes": 498544,
+      "sha256": "576213fb980135a0164bede27fed533789a9e8011e2c8c5e8ed7b936a8aa7aa3"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/all_assumptions_x200.mat",
+      "bytes": 498554,
+      "sha256": "f2684fee52c9ab94f9c726e2b13b88eaf0a127c98743e14d5b47bd075c41aeac"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/generation_only.mat",
+      "bytes": 498549,
+      "sha256": "6904fa54399d9950aa4e332d8e8804bfa019bc5822c736ac9aaa9508bc89ce07"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/injection_attribution_summary.csv",
+      "bytes": 8874,
+      "sha256": "a16e83dd3bf17d1d2e3b12be1f0d14814faa814c606562f11ea8f52125bd56a4"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/interface_scenario_summary.csv",
+      "bytes": 19691,
+      "sha256": "c2980d1850b679780c9747c9a20058b49cd85be1cac9a4836881691191c650dd"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/load_I_only.mat",
+      "bytes": 498538,
+      "sha256": "569f066297a877bf1651361cc5beeba7fefceadf69cd7f7882ac0268b48f4c05"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/load_J_only.mat",
+      "bytes": 498547,
+      "sha256": "f1d75203b3805a6061befc613dcbf9d3798585932dd7b6a2b6a25e4c95f6256a"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/load_K_only.mat",
+      "bytes": 498521,
+      "sha256": "d709e28b9e33be790cbc0bdb1190e4d43838a8a0ee90cd0902e8d7aa99822432"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/load_only.mat",
+      "bytes": 498566,
+      "sha256": "3e6e97df0c51e27a7db38d47a89e67533ccb0e71f2d59ab517d844b209320008"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/metadata_dependency_reconciliation.json",
+      "bytes": 2876,
+      "sha256": "c522ef87881afaf515fcc9dc6290fd7f9f7ba83b3806ddbb463e48f841cfb6c5"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/nominal.mat",
+      "bytes": 498583,
+      "sha256": "c24b5ddddb2c1973faf0c8923cb1a963830d3ac02fd39853c094a94ec1de3577"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/par_loop_eligibility.csv",
+      "bytes": 493,
+      "sha256": "ad03f8f6cf2f57bbbeef80add682de4a0a6719d4c67d766015b11a50fe253d3a"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/parameter_changes.json",
+      "bytes": 33819,
+      "sha256": "218e4632a70150411072338d14fbb6a82fcc01e0a3cc05b7aa2027679649ee00"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/project_electrical_assumption_x050.mat",
+      "bytes": 498618,
+      "sha256": "ffa4c6c26652c76ca99462168a12dd45186d74c0a27fab56dc47f1bf408398ba"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/project_electrical_assumption_x200.mat",
+      "bytes": 498595,
+      "sha256": "5ba91392ee341961a546ba49eb1a20615baafd9e999167a26bebac981ada6f46"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/proxy_attachment_assumption_x050.mat",
+      "bytes": 498643,
+      "sha256": "95aba5cc3f7bce30593027994da0c2b44de5b435a73cdb9b987598739f700687"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/proxy_attachment_assumption_x200.mat",
+      "bytes": 498591,
+      "sha256": "a079c218aae4160e1fd56707b0cac030e66c5ee84e0546cff1cb7875454b647b"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/rcc_par_goethals_phase_minus5.mat",
+      "bytes": 498626,
+      "sha256": "b2556de13b91284e799a851f75cce0aff6d0a1f10be41d29fbda7d84cf40b0b4"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/rcc_par_goethals_phase_plus5.mat",
+      "bytes": 498531,
+      "sha256": "bb2d6212459fb1e07122851f752892217d73700d7c23d1f0d623495f9bba199e"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/rcc_par_gowanus_phase_minus5.mat",
+      "bytes": 498559,
+      "sha256": "a5d7191a0d55455a5f83f656a7735b41c928c47071679c48ee1e965a5662d848"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/rcc_par_gowanus_phase_plus5.mat",
+      "bytes": 498611,
+      "sha256": "4d9daa4e989893b7863a5c7c97288d7b131ad8dcfbfb4e6fc64e85c094773b07"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/rcc_par_rainey_phase_minus5.mat",
+      "bytes": 498619,
+      "sha256": "1af3c0d0738a3b25c7f7414115d937408621caaee3530eaa9becaf73533dde5d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/rcc_par_rainey_phase_plus5.mat",
+      "bytes": 498544,
+      "sha256": "81993c7c00178b7c0aba7d9f6561927f9a68e14db34aa4036f5d471a8b84751f"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/scenario_envelope_summary.csv",
+      "bytes": 1809,
+      "sha256": "250d61e85331b6eaf5edce8f59e8992f035a0d1868fc87d643b51798ac31d94a"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/scenarios.csv",
+      "bytes": 5606,
+      "sha256": "35db07241eef4f360373f960fbbbccb83071211bacbbee534cf437001efd040b"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/sensitivity_manifest.json",
+      "bytes": 28108,
+      "sha256": "7361d14c8e7e1a4d1f309ac04f1c4a973f004a9b440995cf3fba1e5238d5f4ec"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sensitivity/topology_only_control.mat",
+      "bytes": 498516,
+      "sha256": "2e8218aacb707aa0a1ea280472a2e159f94d0b40e02b4d8ec58d0ffe9b1e5b19"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/asset_landing_crosswalk.csv",
+      "bytes": 29963,
+      "sha256": "b4b10f91587e2579bc0413383405bb2e296e9f20956a79e08f3c414e9d1af2ef"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/audit_dependencies.csv",
+      "bytes": 787,
+      "sha256": "b6c9072774e422160594e3c13be8896abb7deeaaa71a566941f45eb73c52455c"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/excluded_or_deferred_projects.csv",
+      "bytes": 418,
+      "sha256": "68658d4277513554b3ba9dc5e7504d6d2916c53a85b577303368705cb11d1f2c"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/historical_parameter_template_register.csv",
+      "bytes": 631,
+      "sha256": "6a5f4fd41edcae7a2207a9d771268e1ab98d31c54963038567498954f69d2e9d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/merchant_boundary_landing_crosswalk.csv",
+      "bytes": 1643,
+      "sha256": "d87b1ecbef364caac6105325adff9b08323f7d3922378fe73e701ef637080666"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/50BC9D9A-0000-CA11-81D7-A2EA72DF9164.pdf",
+      "bytes": 107411,
+      "sha256": "0c0aa3c5b97bdc8734b6f0b274a31ad91229ef553b194e529563c243fbe192d5"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/7068E499-0000-C447-80CF-7A033EE81A59.pdf",
+      "bytes": 444277,
+      "sha256": "383affbc77eb23294148efae52804270989c4f96985d7ec809c316574e7f90b7"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/8034269A-0000-C526-9C99-74AC5F0E7BDF.pdf",
+      "bytes": 444847,
+      "sha256": "d716a794036b1f4209165fb798d2df88de11e004d3f4401b4b5bf99e2a0253f8"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/804FE499-0000-C12E-8CA7-F547F681A4FA.pdf",
+      "bytes": 235986,
+      "sha256": "ca2ffc6d4f22c63b8a21090f9c3b7a896f1daacbb7b96b584edd3aa59669f1ea"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/8094B999-0000-C718-99E2-5B687BD30A50.pdf",
+      "bytes": 39178,
+      "sha256": "1b9a84062c2f4a51652d2f46e36d98404e1811b20eac41a16b918c78b567d456"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/ceec_completion2023.html",
+      "bytes": 63380,
+      "sha256": "19c4000d2adf3a2ab10ddc77d6f83f44996d2b2cd38f93692ed783697c2e2d52"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/coned_ltp_jan2025.pdf",
+      "bytes": 186687,
+      "sha256": "38f60d2bd2cdece1b0a456e5edfbca277f8f9af769ad8448f0c87f3244a2c648"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/coned_rainey_corona_2023.html",
+      "bytes": 109933,
+      "sha256": "de57bdfc628035b4ab36838786d875d17fe396b84eded5961c9ab0d7aad0c0e8"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/coned_rcc_may2025.html",
+      "bytes": 105606,
+      "sha256": "1bb7e2998876ecea0686a9ca46a47e2b6d2eedd2a2c1d0de98c17892ca013085"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/csc_nyiso2018.pdf",
+      "bytes": 575998,
+      "sha256": "46e68f67f1cb617e6abf56c348af2be70b413c08881698a33be534c25cd7a75a"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/E031C999-0000-C531-A4C4-16D562D34460.pdf",
+      "bytes": 71210,
+      "sha256": "8d881514f603a080c950d0234e94674ec1055c2e2bbc318272b2868c664bf6f5"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/htp_nyiso2013.pdf",
+      "bytes": 784450,
+      "sha256": "167c54ab2d390aff9ba5bf2fac9dd86d877afe58adcfd46ed3cc567ce94ae323"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/neptune_owner_cables.html",
+      "bytes": 44999,
+      "sha256": "c223ca29dbaf5ed151183b64027c3e95b3cf0be770874b1a073587dfc8e4e5dc"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyes_owner_news.html",
+      "bytes": 60868,
+      "sha256": "e3a23e39da3349b1e3913bf432ded702b6e7d9f3a31026f6fc0e8525e6d88e5a"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_20251107_ttcf.pdf",
+      "bytes": 641735,
+      "sha256": "cae8577c885272f2d9aa576d14d2ca2a9d45ad2fed19548c4c32beb7846c66f7"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_class2001.pdf",
+      "bytes": 308801,
+      "sha256": "8fdd278193625116a23952b0a7db0830531aee9c4ffa0a4f03e22aa3d82c59d5"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_crp2021_appendices.pdf",
+      "bytes": 5082112,
+      "sha256": "9bf661e44672413155086cf6eb96833ac1da76eb5d6da86d76946e8b99e52208"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_cv2020_stability.pdf",
+      "bytes": 512457,
+      "sha256": "35c16c20b10f0cc62fc2b7076d844632b63c1d353f87ea174e4cbef43a56ac2d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_dec2025_operations.pdf",
+      "bytes": 1781128,
+      "sha256": "e3e5d9eac2fad705455f3c75b8cf02e9a462cff16ebf579464fcf8e63526a372"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_goldbook2024.pdf",
+      "bytes": 4921089,
+      "sha256": "46a367fb91fd7225fb1b8ef432923c9b4b5c73e84d4aa9e6c76b003f06cb9839"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_goldbook2025.pdf",
+      "bytes": 2122546,
+      "sha256": "cc43665b9344a04b4c9355edd1dc7e31d42a6bb759ffe027ad867221556aea8e"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_linden_vft.html",
+      "bytes": 388699,
+      "sha256": "6f5abebc43b8ca5c6be7733b477769ac14e67611371be8796cd4d81d604c2b4b"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_may2025_operations.pdf",
+      "bytes": 1883188,
+      "sha256": "f0022bd03378836465e8d0085c92c83e02e7ed710179f02903d19e85acdcd2dd"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_oct2025_operations.pdf",
+      "bytes": 1858044,
+      "sha256": "07e1215b51e25e94b6ccf7ecb331a06df7bf48c707621e15bdedd3b4beee4f94"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_rna2012_terminals.pdf",
+      "bytes": 599960,
+      "sha256": "81725961c249d474d045b816c49fd8e2b5b02228f68f7ddb816268c91dbb96ce"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_summer2025_study.pdf",
+      "bytes": 727962,
+      "sha256": "077c8b7c6c4703a0987784dbffc72a2213f33eb3501c340a10eb208fdf6ee1be"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_winter2023_24.pdf",
+      "bytes": 587305,
+      "sha256": "028bf56d03b0c30fd0f6418e08f53eb54fcab93f3d76367994dc674671a8588d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/southfork_completion2024.html",
+      "bytes": 75326,
+      "sha256": "55bcc7ff182e000c89ec8f7350e740a330b999235a6f0ea591cd83656e04f0f2"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/raw/southfork_onshore_primary.pdf",
+      "bytes": 10871842,
+      "sha256": "b871eb373b8bc003357d18bbc86ff96cb9e01ae66c09a03e8825c1cc8ba832e3"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/scope_recommendation.json",
+      "bytes": 1869,
+      "sha256": "ee240a7728fa084b9606fa30d2f230aa78db28af34b5a02400f2abcdeb27d680"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/source_receipts.csv",
+      "bytes": 16659,
+      "sha256": "d90c77dad7b0e59f228d7e1f1265bd1016812b160c42670b725e0a34a93abb3d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/station_alias_cautions.csv",
+      "bytes": 303,
+      "sha256": "4c959f2d1c896b7b8ebfc77ac848f82c842d3c3a87616e81f3ecae8c4d350e73"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/upgrade_register.csv",
+      "bytes": 21718,
+      "sha256": "9481478f3e9436cd849b9d4f0efbd11a36dd7f54c0a5c8cdfc6d90b516c2fa47"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/vernon_historical_connection_register.csv",
+      "bytes": 3158,
+      "sha256": "9d41eb8caae6c6649e757899c0424604ae1e59d91865328f4ec77e48ed16c36d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/annual_state_hour_counts.csv",
+      "bytes": 736,
+      "sha256": "3e5666b162c6d61c75d8d49d0f7f7c7da9b9fc485892531138ad26d788d46660"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/annual_validation.json",
+      "bytes": 8224,
+      "sha256": "234bb0dce94abd83b73f439c99d2ec95f7f95cea987bbd5c42f20ab12ff73e27"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/annual_variant_checks.csv",
+      "bytes": 1424,
+      "sha256": "e6e8bdcc1c169df10372ffc78a95855603f21ed35966071ab54b76a59fbe7fde"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/baseline_reference.json",
+      "bytes": 1704,
+      "sha256": "a07bb49eded82f517c6eb4c0ce40ad089ee3c56df57d958ce082070e92be943c"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/common_interface_definition_reference.json",
+      "bytes": 3242,
+      "sha256": "e96c7d938cedeb7a65383ea94b85ad7fec8a7c7f79867b87c5c31fb0295be4fd"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/construction_validation.json",
+      "bytes": 11151,
+      "sha256": "a3a42e1607d5c897cab529115306dba131187e3732bebb87404ffa3f04df5c40"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/construction_variant_checks.csv",
+      "bytes": 1037,
+      "sha256": "f9d140ace1b14c54ab745b61207aa3c67ec237fa0a7bd26d30f1f80748834044"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/focused_tests.json",
+      "bytes": 2073,
+      "sha256": "83c2480629c7ee775196396d0e4e20156d3c61dea39985728fae5eb05cc28da3"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/focused_tests.txt",
+      "bytes": 4290,
+      "sha256": "097425808bf32c2208870b3510b9ffbcc60a87f5b53cf39c2382e8964c645864"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/independent_hourly_checks.csv.gz",
+      "bytes": 2323768,
+      "sha256": "0293c96c471175c3b99bd241defa469af5ee3780c24c9b9959e9c7d57cb23527"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/independent_paired_interface_scores.csv",
+      "bytes": 8446,
+      "sha256": "8b88e4ec0483ede2d93eec7a8426160b2cc63c8b68d2bfc1478c91f543c78f68"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/matlab_checks.csv",
+      "bytes": 16798,
+      "sha256": "9f1908726e5f75322ddf386f8dc90e1776b4b71c3670ff1b4a9875bd8478df6a"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/matlab_validation.json",
+      "bytes": 3645,
+      "sha256": "c7183644a99fd58c900ebb0b0a79a8e3ee3f8bc00171d2e80d79e5c04ba5211b"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/metadata_only_transition_validation.json",
+      "bytes": 915,
+      "sha256": "51f824094166ecee4921b5e2bdb061aee81eb3e9072edb3325efae1d37f69199"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/published_score_validation.json",
+      "bytes": 507,
+      "sha256": "86ee9ac812318a725a08fec0d13d3882b3fd391fece64e716424c3eedb0ef659"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/upny_cut_balance_diagnostic.json",
+      "bytes": 2199,
+      "sha256": "96b82f49c1a5b3b7df72bbe5d9584adcaa32de3eeda54ead6f7a114572f9d170"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/audit_upgrade_sources.py",
+      "bytes": 35562,
+      "sha256": "592f52d15602e2470bce82fd36b1bd0177b67873decc22b18815384f357192b4"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/build_network.py",
+      "bytes": 39422,
+      "sha256": "5b4626d91eeab7c0aa0be5e59a06db140502c8da715cbfc89295f2cc209115ec"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/finalize_refinement.py",
+      "bytes": 3811,
+      "sha256": "37dc558c1d8aa0059f5242503c09e8585723fd8e57ef6afa2fd64420888afd11"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/parameter_sensitivity.py",
+      "bytes": 20587,
+      "sha256": "e860fffa4b045e3dd30104f2f084053b8d60025d8279838c8535ce7df8039ed9"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/README.md",
+      "bytes": 5013,
+      "sha256": "edd7db6a514f96f26332d8157145a8bf4c4776ed9d387ef3d3bc143ea8bc8e73"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/replay_refinement.py",
+      "bytes": 8346,
+      "sha256": "3d68006e5d5583de88dd4bcf667d73e1568ad2ee654e02dbaea777de825a7207"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/run_checks.py",
+      "bytes": 1242,
+      "sha256": "f07c978c1119478e9165e3775335b137dc0d4aaeb601ba4e2206cb63b30b66da"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/score_refinement.py",
+      "bytes": 11259,
+      "sha256": "cafe8d916747efb5239185737bfce90bd8d4c28736a43a38730efc640a17d038"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/test_network.py",
+      "bytes": 10511,
+      "sha256": "da40b9dfd07c99e0a58dd54be99ef7e36be5dfec1a3a1caf0574dc33374b37de"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/test_replay.py",
+      "bytes": 1060,
+      "sha256": "2b73e9110e00e40b422e9760bedb96807d9728bbcbf1bc13e814893cc0a15a0a"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/test_validate_refinement.py",
+      "bytes": 8715,
+      "sha256": "cd0073167a2733fc4579e3ded5d6480309c3b627c276c1f3e611b780a75ecb87"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/validate_matlab_refinement.m",
+      "bytes": 5125,
+      "sha256": "623ee16cc4205cb844c5f1d264cc01a119be3a6bd6de5ff0e2607e90c4f8e97c"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/validate_refinement.py",
+      "bytes": 48845,
+      "sha256": "e56b89900a38e0f212fe3ef20be28012cc52ea7e4704a0c05e64750d83e78630"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_downstate_dc.m",
+      "bytes": 4472,
+      "sha256": "05274b555ef45351eaf05b3b7b7fa7316f684d115a5e0dd0583a6eb3e5893347"
+    }
+  ]
+}

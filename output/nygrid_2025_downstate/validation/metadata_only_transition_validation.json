@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "changed_payload_paths": [
+    "expanded_identity_case.if",
+    "refined_2019_case.if",
+    "refined_2025_pre_may_case.if",
+    "refined_2025_may21_case.if",
+    "refined_2025_may30_case.if",
+    "refined_2025_case.if",
+    "refined_2025_nyes_case.if"
+  ],
+  "equal_payload_fields": 77,
+  "all_electrical_and_injection_arrays_identical": true,
+  "candidate_if_maps_match_reconstructed_zone_operators": true,
+  "before_payload_source": "tmp/downstate_clean_rebuild_706f309d9a/network_cases.mat",
+  "before_file_sha256": "35f0139ddfe5336f2ef8e437e093edac4f7dde7309a1ecf50fdae4181bb03a6f",
+  "after_file": "output/nygrid_2025_downstate/network/network_cases.mat",
+  "after_file_sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+  "purpose": "Independent metadata-only transition verification; previously completed numerical replay remains valid."
+}

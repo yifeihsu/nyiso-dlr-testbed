@@ -51,3 +51,9 @@ output/nygrid_2025_dispatch/fleet/source_scope/** -diff whitespace=-blank-at-eol
 "System Matpower Format/npcc_nygrid_2025_full_dc.m" -text whitespace=cr-at-eol
 NYGRID_2025_BOUNDED_DISPATCH.md -text whitespace=cr-at-eol
 NYGRID_2025_OPERATING_INPUTS.md -text whitespace=cr-at-eol
+# Full-NPCC Downstate construction, paired replay and provenance retain bytes.
+scripts/nygrid_2025_downstate/** -text whitespace=cr-at-eol
+output/nygrid_2025_downstate/** -text whitespace=cr-at-eol
+output/nygrid_2025_downstate/sources/raw/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_downstate_dc.m" -text whitespace=cr-at-eol
+NYGRID_2025_DOWNSTATE_REFINEMENT.md -text whitespace=cr-at-eol

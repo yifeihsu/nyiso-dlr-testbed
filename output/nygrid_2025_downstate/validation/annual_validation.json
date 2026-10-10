@@ -1,0 +1,187 @@
+{
+  "passed": true,
+  "annual_hours_per_variant": 8760,
+  "qualified_hours_per_variant": 8663,
+  "variant_count": 7,
+  "independently_solved_variant_hours": 60641,
+  "physical_2025_flowgate_membership_verified": false,
+  "AC_or_storage_energy_qualification": false,
+  "reused_operator_definition": "same tested zone-crossing definition shared with replay; electrical solves and score recalculation independent",
+  "variants": [
+    {
+      "variant": "expanded_identity",
+      "passed": true,
+      "qualified_hours": 8663,
+      "missing_hours": 97,
+      "gross_zonal_P_and_Q_allocation_checked": true,
+      "generator_P_and_bounds_reused_unchanged": true,
+      "signed_DC_channels_unchanged": true,
+      "maximum_nodal_residual_mw": 1.3596945791505277e-10,
+      "maximum_global_balance_residual_mw": 2.091837814077735e-11,
+      "maximum_branch_angle_identity_error_mw": 5.661604518536478e-11,
+      "maximum_independent_branch_error_mw": 8.594724931754172e-11,
+      "maximum_independent_angle_error_deg": 5.506706202140776e-13
+    },
+    {
+      "variant": "source_detail_2019",
+      "passed": true,
+      "qualified_hours": 8663,
+      "missing_hours": 97,
+      "gross_zonal_P_and_Q_allocation_checked": true,
+      "generator_P_and_bounds_reused_unchanged": true,
+      "signed_DC_channels_unchanged": true,
+      "maximum_nodal_residual_mw": 1.966345988837894e-10,
+      "maximum_global_balance_residual_mw": 2.091837814077735e-11,
+      "maximum_branch_angle_identity_error_mw": 2.864553039216844e-11,
+      "maximum_independent_branch_error_mw": 1.4938450476620346e-10,
+      "maximum_independent_angle_error_deg": 7.23332505003782e-12
+    },
+    {
+      "variant": "upgrades_year_end",
+      "passed": true,
+      "qualified_hours": 8663,
+      "missing_hours": 97,
+      "gross_zonal_P_and_Q_allocation_checked": true,
+      "generator_P_and_bounds_reused_unchanged": true,
+      "signed_DC_channels_unchanged": true,
+      "maximum_nodal_residual_mw": 2.219167072325945e-10,
+      "maximum_global_balance_residual_mw": 2.091837814077735e-11,
+      "maximum_branch_angle_identity_error_mw": 3.091926714660076e-11,
+      "maximum_independent_branch_error_mw": 9.629275155020878e-11,
+      "maximum_independent_angle_error_deg": 4.206412995699793e-12
+    },
+    {
+      "variant": "upgrades_dated",
+      "passed": true,
+      "qualified_hours": 8663,
+      "missing_hours": 97,
+      "gross_zonal_P_and_Q_allocation_checked": true,
+      "generator_P_and_bounds_reused_unchanged": true,
+      "signed_DC_channels_unchanged": true,
+      "maximum_nodal_residual_mw": 2.1856294551980682e-10,
+      "maximum_global_balance_residual_mw": 2.091837814077735e-11,
+      "maximum_branch_angle_identity_error_mw": 2.4325902403532496e-11,
+      "maximum_independent_branch_error_mw": 1.0379608283983544e-10,
+      "maximum_independent_angle_error_deg": 4.75353090223507e-12
+    },
+    {
+      "variant": "assets_year_end",
+      "passed": true,
+      "qualified_hours": 8663,
+      "missing_hours": 97,
+      "gross_zonal_P_and_Q_allocation_checked": true,
+      "generator_P_and_bounds_reused_unchanged": true,
+      "signed_DC_channels_unchanged": true,
+      "maximum_nodal_residual_mw": 2.686135758267483e-10,
+      "maximum_global_balance_residual_mw": 2.1373125491663814e-11,
+      "maximum_branch_angle_identity_error_mw": 3.787192781601334e-11,
+      "maximum_independent_branch_error_mw": 1.1300471669528633e-10,
+      "maximum_independent_angle_error_deg": 4.89563944938709e-12
+    },
+    {
+      "variant": "assets_dated",
+      "passed": true,
+      "qualified_hours": 8663,
+      "missing_hours": 97,
+      "gross_zonal_P_and_Q_allocation_checked": true,
+      "generator_P_and_bounds_reused_unchanged": true,
+      "signed_DC_channels_unchanged": true,
+      "maximum_nodal_residual_mw": 2.973479240608867e-10,
+      "maximum_global_balance_residual_mw": 2.1373125491663814e-11,
+      "maximum_branch_angle_identity_error_mw": 4.0117242861015256e-11,
+      "maximum_independent_branch_error_mw": 1.1641532182693481e-10,
+      "maximum_independent_angle_error_deg": 5.094591415399918e-12
+    },
+    {
+      "variant": "nyes_assumption_year_end",
+      "passed": true,
+      "qualified_hours": 8663,
+      "missing_hours": 97,
+      "gross_zonal_P_and_Q_allocation_checked": true,
+      "generator_P_and_bounds_reused_unchanged": true,
+      "signed_DC_channels_unchanged": true,
+      "maximum_nodal_residual_mw": 2.814033450704301e-10,
+      "maximum_global_balance_residual_mw": 2.1373125491663814e-11,
+      "maximum_branch_angle_identity_error_mw": 3.4290792427782435e-11,
+      "maximum_independent_branch_error_mw": 9.890754881780595e-11,
+      "maximum_independent_angle_error_deg": 4.412470389070222e-12
+    }
+  ],
+  "files": [
+    {
+      "path": "output/nygrid_2025_downstate/replay/expanded_identity.mat",
+      "sha256": "e62a4ec0e003bf0394a486d78a8d6398445004db6c01bbfc2ce19628a1f7f289"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/source_detail_2019.mat",
+      "sha256": "8892b5d3ab9cfe31b3e64ca5020a15759d0d61b8ec2f5cdc3fbc1c4bc449e218"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/upgrades_year_end.mat",
+      "sha256": "2c28b3331310eabf471f1981a0f0f8a386ae841cd0bf3b69e214880e9ce243bc"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/upgrades_dated.mat",
+      "sha256": "c9da03615b3bcbff1eaa7ddf1031e1f5c26c82587774ba29dc964afac2bcaf5e"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/assets_year_end.mat",
+      "sha256": "5f376a07b90360f1807123d7350288a7e3bbcfcfa5ce699684020fa2657ca023"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/assets_dated.mat",
+      "sha256": "7501308c9ae2555819c795658caf10da1cdda00f53dd53ccaad474d040c148a4"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/nyes_assumption_year_end.mat",
+      "sha256": "e7d1aaa3dc0cc048c9a5c65c9acd397b859cb6d8e9b31cb7cbf7fb6157acf871"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/provenance.json",
+      "sha256": "e3483bafbae201fab4d2ce5c9ca3fe323ca7f98cea586a57484352d093667aee"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/upgrade_register.csv",
+      "sha256": "9481478f3e9436cd849b9d4f0efbd11a36dd7f54c0a5c8cdfc6d90b516c2fa47"
+    },
+    {
+      "path": "scripts/nygrid_2025_dispatch/validate_dispatch.py",
+      "sha256": "56423685b3aa54a939160ffb62f2826ab228f8032f5c46b44e936d83b55d333d"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/validate_refinement.py",
+      "sha256": "e56b89900a38e0f212fe3ef20be28012cc52ea7e4704a0c05e64750d83e78630"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/metadata_only_transition_validation.json",
+      "sha256": "51f824094166ecee4921b5e2bdb061aee81eb3e9072edb3325efae1d37f69199"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/comparison/interface_summary.csv",
+      "sha256": "cd6aedf69fcb97e629939dd03c155eb0a501ab3dfe776d8e3001f720f8e18aaf"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/comparison/scoring_receipt.json",
+      "sha256": "39deda58a64d7c572a036b16a56b67866358d316c386331e385a57f0a4844a75"
+    }
+  ],
+  "verified_metadata_only_dependency_updates": [
+    {
+      "path": "output/nygrid_2025_downstate/replay/provenance.json",
+      "numerical_run_sha256": "0f8dea8d4c3689a41026f1bccfc0dc3d3c64f6a70d00d1b1dd4fe9ff8e80f2d9",
+      "current_sha256": "e3483bafbae201fab4d2ce5c9ca3fe323ca7f98cea586a57484352d093667aee"
+    }
+  ],
+  "published_posthoc_scores_independently_verified": true,
+  "posthoc_score_rows_checked": 56,
+  "maximum_published_WAPE_difference_percentage_points": 0.0,
+  "maximum_published_MAE_difference_public_mw": 0.0
+}
