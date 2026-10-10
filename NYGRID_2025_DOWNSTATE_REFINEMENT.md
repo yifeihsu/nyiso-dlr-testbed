@@ -18,6 +18,11 @@ for hourly cases. Its default, `upgrades_dated`, retains the baseline injection
 landings. The [workflow README](scripts/nygrid_2025_downstate/README.md) gives
 exact loading, rebuilding and validation commands.
 
+[Labeled network diagrams](output/nygrid_2025_downstate/diagrams/README.md)
+show all 51 added buses with names and voltage levels, added source/assumed
+connections, and the nine replaced original branches. Full-NPCC and three
+regional views are available as SVG, PDF and PNG.
+
 ## What was constructed
 
 The parent is commit `c7874aa90fec1d4e883814297e91bfcd3567bdf2`: the modified-2019

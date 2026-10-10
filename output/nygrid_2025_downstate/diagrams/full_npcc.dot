@@ -1,0 +1,685 @@
+graph full_npcc {
+	bgcolor=white dpi=115 fontcolor="#223246" fontname=Arial fontsize=22 label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="2"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="22">Full NPCC backbone with all 51 added buses</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">51 added buses / 191 shown  |  all active AC branches, four DC equivalents and nine retired aggregate rows</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12">Blue square boxes: ADDED buses; gray rounded boxes: ORIGINAL buses. Labels = name / model ID / nominal kV.</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12" COLOR="#226AA5">Blue lines: added historical source circuits</FONT>  |  <FONT POINT-SIZE="12" COLOR="#B87518">Gold dashed: added assumed connections</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12" COLOR="#C04754">Red dashed: replaced original branches (inactive)</FONT>  |  <FONT POINT-SIZE="12" COLOR="#73508E">Purple: unchanged DC equivalents</FONT>  |  <FONT POINT-SIZE="12" COLOR="#7E8791">Gray: retained; gray dotted: idle scaffold</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12">xN = parallel branch count. Schematic, not geographic. Cross-voltage proxies are not certified physical transformers.</FONT></TD></TR></TABLE>> labeljust=l labelloc=t margin=0 outputorder=edgesfirst overlap=false pad=0.35 sep="+16" splines=true start=17
+	node [color="#8E99A6" fillcolor="#F1F3F5" fontcolor="#293648" fontname=Arial fontsize=12 margin="0.10,0.08" penwidth=1.0 shape=box style="rounded,filled"]
+	1 [label="MILLSTONE PT
+#1  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-1" penwidth=1.0 style="rounded,filled" tooltip="Bus 1: MILLSTONE PT; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	2 [label="MONTVILLE
+#2  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-2" penwidth=1.0 style="rounded,filled" tooltip="Bus 2: MONTVILLE; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	3 [label="MONTVILLE
+#3  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-3" penwidth=1.0 style="rounded,filled" tooltip="Bus 3: MONTVILLE; 115 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	4 [label="MONTVILLE
+#4  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-4" penwidth=1.0 style="rounded,filled" tooltip="Bus 4: MONTVILLE; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	5 [label="CARD ST
+#5  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-5" penwidth=1.0 style="rounded,filled" tooltip="Bus 5: CARD ST; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	6 [label="SHERMAN RD
+#6  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-6" penwidth=1.0 style="rounded,filled" tooltip="Bus 6: SHERMAN RD; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	7 [label="MEDWAY
+#7  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-7" penwidth=1.0 style="rounded,filled" tooltip="Bus 7: MEDWAY; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	8 [label="MILLBURY
+#8  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-8" penwidth=1.0 style="rounded,filled" tooltip="Bus 8: MILLBURY; 115 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	9 [label="CARPENTER HL
+#9  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-9" penwidth=1.0 style="rounded,filled" tooltip="Bus 9: CARPENTER HL; 115 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	10 [label="BRAYTON PT
+#10  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-10" penwidth=1.0 style="rounded,filled" tooltip="Bus 10: BRAYTON PT; 115 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	11 [label="BRAYTON PT
+#11  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-11" penwidth=1.0 style="rounded,filled" tooltip="Bus 11: BRAYTON PT; 115 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	12 [label="BRIDGEWATER
+#12  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-12" penwidth=1.0 style="rounded,filled" tooltip="Bus 12: BRIDGEWATER; 115 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	13 [label="PILGRIM
+#13  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-13" penwidth=1.0 style="rounded,filled" tooltip="Bus 13: PILGRIM; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	14 [label="CANAL
+#14  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-14" penwidth=1.0 style="rounded,filled" tooltip="Bus 14: CANAL; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	15 [label="WALPOLA
+#15  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-15" penwidth=1.0 style="rounded,filled" tooltip="Bus 15: WALPOLA; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	16 [label="VERMONT YNK
+#16  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-16" penwidth=1.0 style="rounded,filled" tooltip="Bus 16: VERMONT YNK; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	17 [label="SCOBIE
+#17  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-17" penwidth=1.0 style="rounded,filled" tooltip="Bus 17: SCOBIE; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	18 [label="SANDY POND
+#18  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-18" penwidth=1.0 style="rounded,filled" tooltip="Bus 18: SANDY POND; 115 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	19 [label="POWNAL
+#19  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-19" penwidth=1.0 style="rounded,filled" tooltip="Bus 19: POWNAL; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	20 [label="MAINE YANKEE
+#20  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-20" penwidth=1.0 style="rounded,filled" tooltip="Bus 20: MAINE YANKEE; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	21 [label="MILLSTONE PT
+#21  |  24 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-21" penwidth=1.0 style="rounded,filled" tooltip="Bus 21: MILLSTONE PT; 24 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	22 [label="BRAYTON PT
+#22  |  18 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-22" penwidth=1.0 style="rounded,filled" tooltip="Bus 22: BRAYTON PT; 18 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	23 [label="BRAYTON PT
+#23  |  20 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-23" penwidth=1.0 style="rounded,filled" tooltip="Bus 23: BRAYTON PT; 20 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	24 [label="PILGRIM
+#24  |  22.8 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-24" penwidth=1.0 style="rounded,filled" tooltip="Bus 24: PILGRIM; 22.8 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	25 [label="CANAL
+#25  |  20 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-25" penwidth=1.0 style="rounded,filled" tooltip="Bus 25: CANAL; 20 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	26 [label="MAINE YANKEE
+#26  |  20 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-26" penwidth=1.0 style="rounded,filled" tooltip="Bus 26: MAINE YANKEE; 20 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	27 [label="VERMONT YNK
+#27  |  22 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-27" penwidth=1.0 style="rounded,filled" tooltip="Bus 27: VERMONT YNK; 22 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	28 [label="NORTHFIELD
+#28  |  13.8 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-28" penwidth=1.0 style="rounded,filled" tooltip="Bus 28: NORTHFIELD; 13.8 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	29 [label="NORTHFIELD
+#29  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-29" penwidth=1.0 style="rounded,filled" tooltip="Bus 29: NORTHFIELD; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	30 [label="LUDLOW
+#30  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-30" penwidth=1.0 style="rounded,filled" tooltip="Bus 30: LUDLOW; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	31 [label="MANCHESTER
+#31  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-31" penwidth=1.0 style="rounded,filled" tooltip="Bus 31: MANCHESTER; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	32 [label="SCOVILL ROCK
+#32  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-32" penwidth=1.0 style="rounded,filled" tooltip="Bus 32: SCOVILL ROCK; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	33 [label="HADDAM NECK
+#33  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-33" penwidth=1.0 style="rounded,filled" tooltip="Bus 33: HADDAM NECK; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	34 [label="BLACK POND
+#34  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-34" penwidth=1.0 style="rounded,filled" tooltip="Bus 34: BLACK POND; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	35 [label="SOUTHINGTEN
+#35  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-35" penwidth=1.0 style="rounded,filled" tooltip="Bus 35: SOUTHINGTEN; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	36 [label="CONN YANKEE
+#36  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-36" penwidth=1.0 style="rounded,filled" tooltip="Bus 36: CONN YANKEE; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	37 [label="NEW SEATHED
+#37  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-37" penwidth=1.0 style="rounded,filled" tooltip="Bus 37: NEW SEATHED; 345 kV; accounting zone F; ORIGINAL; original_parent; source bus 0"]
+	38 [label="GILBOA
+#38  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-38" penwidth=1.0 style="rounded,filled" tooltip="Bus 38: GILBOA; 345 kV; accounting zone E; ORIGINAL; original_parent; source bus 0"]
+	39 [label="LEEDS
+#39  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-39" penwidth=1.0 style="rounded,filled" tooltip="Bus 39: LEEDS; 345 kV; accounting zone G; ORIGINAL; original_parent; source bus 0"]
+	40 [label="NEW SEATHED
+#40  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-40" penwidth=1.0 style="rounded,filled" tooltip="Bus 40: NEW SEATHED; 230 kV; accounting zone F; ORIGINAL; original_parent; source bus 0"]
+	41 [label="ROTTERDAM
+#41  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-41" penwidth=1.0 style="rounded,filled" tooltip="Bus 41: ROTTERDAM; 115 kV; accounting zone F; ORIGINAL; original_parent; source bus 0"]
+	42 [label="ALBANY
+#42  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-42" penwidth=1.0 style="rounded,filled" tooltip="Bus 42: ALBANY; 115 kV; accounting zone F; ORIGINAL; original_parent; source bus 0"]
+	43 [label="EDIC
+#43  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-43" penwidth=1.0 style="rounded,filled" tooltip="Bus 43: EDIC; 345 kV; accounting zone E; ORIGINAL; original_parent; source bus 0"]
+	44 [label="PORTER
+#44  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-44" penwidth=1.0 style="rounded,filled" tooltip="Bus 44: PORTER; 230 kV; accounting zone E; ORIGINAL; original_parent; source bus 0"]
+	45 [label="PORTER
+#45  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-45" penwidth=1.0 style="rounded,filled" tooltip="Bus 45: PORTER; 115 kV; accounting zone E; ORIGINAL; original_parent; source bus 0"]
+	46 [label="COLTON
+#46  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-46" penwidth=1.0 style="rounded,filled" tooltip="Bus 46: COLTON; 115 kV; accounting zone E; ORIGINAL; original_parent; source bus 0"]
+	47 [label="MOSES W
+#47  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-47" penwidth=1.0 style="rounded,filled" tooltip="Bus 47: MOSES W; 230 kV; accounting zone E; ORIGINAL; original_parent; source bus 0"]
+	48 [label="MOSES E
+#48  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-48" penwidth=1.0 style="rounded,filled" tooltip="Bus 48: MOSES E; 230 kV; accounting zone D; ORIGINAL; original_parent; source bus 0"]
+	49 [label="PLATTSBURGH
+#49  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-49" penwidth=1.0 style="rounded,filled" tooltip="Bus 49: PLATTSBURGH; 115 kV; accounting zone D; ORIGINAL; original_parent; source bus 0"]
+	50 [label="CLAY
+#50  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-50" penwidth=1.0 style="rounded,filled" tooltip="Bus 50: CLAY; 345 kV; accounting zone C; ORIGINAL; original_parent; source bus 0"]
+	51 [label="CLAY
+#51  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-51" penwidth=1.0 style="rounded,filled" tooltip="Bus 51: CLAY; 115 kV; accounting zone C; ORIGINAL; original_parent; source bus 0"]
+	52 [label="ROCHESTER
+#52  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-52" penwidth=1.0 style="rounded,filled" tooltip="Bus 52: ROCHESTER; 345 kV; accounting zone B; ORIGINAL; original_parent; source bus 0"]
+	53 [label="ROCHESTER
+#53  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-53" penwidth=1.0 style="rounded,filled" tooltip="Bus 53: ROCHESTER; 115 kV; accounting zone B; ORIGINAL; original_parent; source bus 0"]
+	54 [label="NIAGARA W
+#54  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-54" penwidth=1.0 style="rounded,filled" tooltip="Bus 54: NIAGARA W; 230 kV; accounting zone A; ORIGINAL; original_parent; source bus 0"]
+	55 [label="NIAGARA E
+#55  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-55" penwidth=1.0 style="rounded,filled" tooltip="Bus 55: NIAGARA E; 230 kV; accounting zone A; ORIGINAL; original_parent; source bus 0"]
+	56 [label="HUNTLEY
+#56  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-56" penwidth=1.0 style="rounded,filled" tooltip="Bus 56: HUNTLEY; 230 kV; accounting zone A; ORIGINAL; original_parent; source bus 0"]
+	57 [label="HUNTLEY
+#57  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-57" penwidth=1.0 style="rounded,filled" tooltip="Bus 57: HUNTLEY; 115 kV; accounting zone A; ORIGINAL; original_parent; source bus 0"]
+	58 [label="GARDENVILLE
+#58  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-58" penwidth=1.0 style="rounded,filled" tooltip="Bus 58: GARDENVILLE; 230 kV; accounting zone A; ORIGINAL; original_parent; source bus 0"]
+	59 [label="GARDENVILLE
+#59  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-59" penwidth=1.0 style="rounded,filled" tooltip="Bus 59: GARDENVILLE; 115 kV; accounting zone A; ORIGINAL; original_parent; source bus 0"]
+	60 [label="DUNKIRK
+#60  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-60" penwidth=1.0 style="rounded,filled" tooltip="Bus 60: DUNKIRK; 230 kV; accounting zone A; ORIGINAL; original_parent; source bus 0"]
+	61 [label="DUNKIRK
+#61  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-61" penwidth=1.0 style="rounded,filled" tooltip="Bus 61: DUNKIRK; 115 kV; accounting zone A; ORIGINAL; original_parent; source bus 0"]
+	62 [label="STOLLE RD
+#62  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-62" penwidth=1.0 style="rounded,filled" tooltip="Bus 62: STOLLE RD; 230 kV; accounting zone B; ORIGINAL; original_parent; source bus 0"]
+	63 [label="MEYER
+#63  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-63" penwidth=1.0 style="rounded,filled" tooltip="Bus 63: MEYER; 230 kV; accounting zone C; ORIGINAL; original_parent; source bus 0"]
+	64 [label="MEYER
+#64  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-64" penwidth=1.0 style="rounded,filled" tooltip="Bus 64: MEYER; 115 kV; accounting zone C; ORIGINAL; original_parent; source bus 0"]
+	65 [label="GESONIDGE
+#65  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-65" penwidth=1.0 style="rounded,filled" tooltip="Bus 65: GESONIDGE; 115 kV; accounting zone C; ORIGINAL; original_parent; source bus 0"]
+	66 [label="WATERCURE
+#66  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-66" penwidth=1.0 style="rounded,filled" tooltip="Bus 66: WATERCURE; 345 kV; accounting zone C; ORIGINAL; original_parent; source bus 0"]
+	67 [label="WRHL
+#67  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-67" penwidth=1.0 style="rounded,filled" tooltip="Bus 67: WRHL; 230 kV; accounting zone C; ORIGINAL; original_parent; source bus 0"]
+	68 [label="HILLSIDE
+#68  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-68" penwidth=1.0 style="rounded,filled" tooltip="Bus 68: HILLSIDE; 115 kV; accounting zone C; ORIGINAL; original_parent; source bus 0"]
+	69 [label="BINGHAMTON
+#69  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-69" penwidth=1.0 style="rounded,filled" tooltip="Bus 69: BINGHAMTON; 345 kV; accounting zone E; ORIGINAL; original_parent; source bus 0"]
+	70 [label="BINGHAMTON
+#70  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-70" penwidth=1.0 style="rounded,filled" tooltip="Bus 70: BINGHAMTON; 230 kV; accounting zone C; ORIGINAL; original_parent; source bus 0"]
+	71 [label="BINGHAMTON
+#71  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-71" penwidth=1.0 style="rounded,filled" tooltip="Bus 71: BINGHAMTON; 115 kV; accounting zone C; ORIGINAL; original_parent; source bus 0"]
+	72 [label="LAPEER
+#72  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-72" penwidth=1.0 style="rounded,filled" tooltip="Bus 72: LAPEER; 115 kV; accounting zone C; ORIGINAL; original_parent; source bus 0"]
+	73 [label="PLEASANT VLY
+#73  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-73" penwidth=1.0 style="rounded,filled" tooltip="Bus 73: PLEASANT VLY; 345 kV; accounting zone G; ORIGINAL; original_parent; source bus 0"]
+	74 [label="MILLWOOD
+#74  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-74" penwidth=1.0 style="rounded,filled" tooltip="Bus 74: MILLWOOD; 345 kV; accounting zone H; ORIGINAL; original_parent; source bus 0"]
+	75 [label="RAMAPO
+#75  |  138 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-75" penwidth=1.0 style="rounded,filled" tooltip="Bus 75: RAMAPO; 138 kV; accounting zone G; ORIGINAL; original_parent; source bus 0"]
+	76 [label="RAMAPO
+#76  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-76" penwidth=1.0 style="rounded,filled" tooltip="Bus 76: RAMAPO; 345 kV; accounting zone G; ORIGINAL; original_parent; source bus 0"]
+	77 [label="BUCHANAN
+#77  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-77" penwidth=1.0 style="rounded,filled" tooltip="Bus 77: BUCHANAN; 345 kV; accounting zone G; ORIGINAL; original_parent; source bus 0"]
+	78 [label="CE UG
+#78  |  345 kV
+inherited aggregate proxy" color="#8E99A6" fillcolor="#F1F3F5" id="bus-78" penwidth=1.0 style="rounded,filled" tooltip="Bus 78: CE UG; 345 kV; accounting zone I; ORIGINAL; original_parent; source bus 0"]
+	79 [label="RAV A-3
+#79  |  22 kV
+inherited aggregate proxy" color="#8E99A6" fillcolor="#F1F3F5" id="bus-79" penwidth=1.0 style="rounded,filled" tooltip="Bus 79: RAV A-3; 22 kV; accounting zone K; ORIGINAL; original_parent; source bus 0"]
+	80 [label="NORTHPORT
+#80  |  138 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-80" penwidth=1.0 style="rounded,filled" tooltip="Bus 80: NORTHPORT; 138 kV; accounting zone K; ORIGINAL; original_parent; source bus 0"]
+	81 [label="GOETHALS
+#81  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-81" penwidth=1.0 style="rounded,filled" tooltip="Bus 81: GOETHALS; 345 kV; accounting zone J; ORIGINAL; original_parent; source bus 0"]
+	82 [label="AK-3
+#82  |  22 kV
+inherited aggregate proxy" color="#8E99A6" fillcolor="#F1F3F5" id="bus-82" penwidth=1.0 style="rounded,filled" tooltip="Bus 82: AK-3; 22 kV; accounting zone J; ORIGINAL; original_parent; source bus 0"]
+	83 [label="KEITH
+#83  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-83" penwidth=1.0 style="rounded,filled" tooltip="Bus 83: KEITH; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	84 [label="KEITH JCT
+#84  |  118.1 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-84" penwidth=1.0 style="rounded,filled" tooltip="Bus 84: KEITH JCT; 118.1 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	85 [label="LAMBTON
+#85  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-85" penwidth=1.0 style="rounded,filled" tooltip="Bus 85: LAMBTON; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	86 [label="LAMBTON
+#86  |  24 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-86" penwidth=1.0 style="rounded,filled" tooltip="Bus 86: LAMBTON; 24 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	87 [label="LAMBTON
+#87  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-87" penwidth=1.0 style="rounded,filled" tooltip="Bus 87: LAMBTON; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	88 [label="SCOTT
+#88  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-88" penwidth=1.0 style="rounded,filled" tooltip="Bus 88: SCOTT; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	89 [label="SCOTT
+#89  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-89" penwidth=1.0 style="rounded,filled" tooltip="Bus 89: SCOTT; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	90 [label="VIDA
+#90  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-90" penwidth=1.0 style="rounded,filled" tooltip="Bus 90: VIDA; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	91 [label="RICHVIEW
+#91  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-91" penwidth=1.0 style="rounded,filled" tooltip="Bus 91: RICHVIEW; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	92 [label="HANMER
+#92  |  500 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-92" penwidth=1.0 style="rounded,filled" tooltip="Bus 92: HANMER; 500 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	93 [label="ESSA
+#93  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-93" penwidth=1.0 style="rounded,filled" tooltip="Bus 93: ESSA; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	94 [label="ORANGEVILLE
+#94  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-94" penwidth=1.0 style="rounded,filled" tooltip="Bus 94: ORANGEVILLE; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	95 [label="DES JOAC
+#95  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-95" penwidth=1.0 style="rounded,filled" tooltip="Bus 95: DES JOAC; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	96 [label="HOLDEN
+#96  |  13.8 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-96" penwidth=1.0 style="rounded,filled" tooltip="Bus 96: HOLDEN; 13.8 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	97 [label="MARTINDELE
+#97  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-97" penwidth=1.0 style="rounded,filled" tooltip="Bus 97: MARTINDELE; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	98 [label="STLA
+#98  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-98" penwidth=1.0 style="rounded,filled" tooltip="Bus 98: STLA; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	99 [label="PVR
+#99  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-99" penwidth=1.0 style="rounded,filled" tooltip="Bus 99: PVR; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	100 [label="PHAS
+#100  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-100" penwidth=1.0 style="rounded,filled" tooltip="Bus 100: PHAS; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	101 [label="SAB 2
+#101  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-101" penwidth=1.0 style="rounded,filled" tooltip="Bus 101: SAB 2; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	102 [label="BP 76
+#102  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-102" penwidth=1.0 style="rounded,filled" tooltip="Bus 102: BP 76; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	103 [label="PA 27
+#103  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-103" penwidth=1.0 style="rounded,filled" tooltip="Bus 103: PA 27; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	104 [label="BEACH
+#104  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-104" penwidth=1.0 style="rounded,filled" tooltip="Bus 104: BEACH; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	105 [label="BUCHANAN
+#105  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-105" penwidth=1.0 style="rounded,filled" tooltip="Bus 105: BUCHANAN; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	106 [label="NEALE
+#106  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-106" penwidth=1.0 style="rounded,filled" tooltip="Bus 106: NEALE; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	107 [label="NEALE
+#107  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-107" penwidth=1.0 style="rounded,filled" tooltip="Bus 107: NEALE; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	108 [label="S CT
+#108  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-108" penwidth=1.0 style="rounded,filled" tooltip="Bus 108: S CT; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	109 [label="SLT
+#109  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-109" penwidth=1.0 style="rounded,filled" tooltip="Bus 109: SLT; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	110 [label="BURLINGTON
+#110  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-110" penwidth=1.0 style="rounded,filled" tooltip="Bus 110: BURLINGTON; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	111 [label="DETWIERER
+#111  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-111" penwidth=1.0 style="rounded,filled" tooltip="Bus 111: DETWIERER; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	112 [label="CHATHAM
+#112  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-112" penwidth=1.0 style="rounded,filled" tooltip="Bus 112: CHATHAM; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	113 [label="LAUZON
+#113  |  118.1 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-113" penwidth=1.0 style="rounded,filled" tooltip="Bus 113: LAUZON; 118.1 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	114 [label="MARYSVILLE
+#114  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-114" penwidth=1.0 style="rounded,filled" tooltip="Bus 114: MARYSVILLE; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	115 [label="ST CLAIR
+#115  |  500 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-115" penwidth=1.0 style="rounded,filled" tooltip="Bus 115: ST CLAIR; 500 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	116 [label="WATERMAN
+#116  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-116" penwidth=1.0 style="rounded,filled" tooltip="Bus 116: WATERMAN; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	117 [label="PONTIAC
+#117  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-117" penwidth=1.0 style="rounded,filled" tooltip="Bus 117: PONTIAC; 230 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	118 [label="WAYNE
+#118  |  115 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-118" penwidth=1.0 style="rounded,filled" tooltip="Bus 118: WAYNE; 115 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	119 [label="THETFORD
+#119  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-119" penwidth=1.0 style="rounded,filled" tooltip="Bus 119: THETFORD; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	120 [label="ARGENTA
+#120  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-120" penwidth=1.0 style="rounded,filled" tooltip="Bus 120: ARGENTA; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	121 [label="SC415
+#121  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-121" penwidth=1.0 style="rounded,filled" tooltip="Bus 121: SC415; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	122 [label="WATERMAN
+#122  |  220 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-122" penwidth=1.0 style="rounded,filled" tooltip="Bus 122: WATERMAN; 220 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	123 [label="MONROE
+#123  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-123" penwidth=1.0 style="rounded,filled" tooltip="Bus 123: MONROE; 230 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	124 [label="BRANCHBURG
+#124  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-124" penwidth=1.0 style="rounded,filled" tooltip="Bus 124: BRANCHBURG; 230 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	125 [label="LINDON
+#125  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-125" penwidth=1.0 style="rounded,filled" tooltip="Bus 125: LINDON; 230 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	126 [label="HUDSON
+#126  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-126" penwidth=1.0 style="rounded,filled" tooltip="Bus 126: HUDSON; 230 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	127 [label="ALBURTIS
+#127  |  500 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-127" penwidth=1.0 style="rounded,filled" tooltip="Bus 127: ALBURTIS; 500 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	128 [label="WHITPAIN
+#128  |  500 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-128" penwidth=1.0 style="rounded,filled" tooltip="Bus 128: WHITPAIN; 500 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	129 [label="KEENEY
+#129  |  500 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-129" penwidth=1.0 style="rounded,filled" tooltip="Bus 129: KEENEY; 500 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	130 [label="PEACH BOTTOM
+#130  |  500 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-130" penwidth=1.0 style="rounded,filled" tooltip="Bus 130: PEACH BOTTOM; 500 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	131 [label="CONASTONE
+#131  |  500 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-131" penwidth=1.0 style="rounded,filled" tooltip="Bus 131: CONASTONE; 500 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	132 [label="JUNIATA
+#132  |  500 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-132" penwidth=1.0 style="rounded,filled" tooltip="Bus 132: JUNIATA; 500 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	133 [label="CONEMAUGH
+#133  |  500 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-133" penwidth=1.0 style="rounded,filled" tooltip="Bus 133: CONEMAUGH; 500 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	134 [label="HOMER CITY
+#134  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-134" penwidth=1.0 style="rounded,filled" tooltip="Bus 134: HOMER CITY; 230 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	135 [label="KEYSTONE
+#135  |  500 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-135" penwidth=1.0 style="rounded,filled" tooltip="Bus 135: KEYSTONE; 500 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	136 [label="ERIE W
+#136  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-136" penwidth=1.0 style="rounded,filled" tooltip="Bus 136: ERIE W; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	137 [label="ERIE S
+#137  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-137" penwidth=1.0 style="rounded,filled" tooltip="Bus 137: ERIE S; 230 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	138 [label="E TOMANO
+#138  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-138" penwidth=1.0 style="rounded,filled" tooltip="Bus 138: E TOMANO; 230 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	139 [label="KYGER
+#139  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-139" penwidth=1.0 style="rounded,filled" tooltip="Bus 139: KYGER; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	140 [label="TE
+#140  |  230 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-140" penwidth=1.0 style="rounded,filled" tooltip="Bus 140: TE; 230 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	10079 [label="EAST 13TH STREET
+#10079  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10079" penwidth=2.1 style=filled tooltip="Bus 10079: EAST 13TH STREET; 345 kV; accounting zone J; ADDED; source_named_station; source bus 79"]
+	10547 [label="UNKNOWN129188
+#10547  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10547" penwidth=2.1 style=filled tooltip="Bus 10547: UNKNOWN129188; 345 kV; accounting zone I; ADDED; source_named_station; source bus 547"]
+	10557 [label="EAST ASTORIA
+#10557  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10557" penwidth=2.1 style=filled tooltip="Bus 10557: EAST ASTORIA; 345 kV; accounting zone J; ADDED; source_named_station; source bus 557"]
+	10560 [label="SHORE RD
+#10560  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10560" penwidth=2.1 style=filled tooltip="Bus 10560: SHORE RD; 345 kV; accounting zone K; ADDED; source_named_station; source bus 560"]
+	10561 [label="UNKNOWN129558
+#10561  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10561" penwidth=2.1 style=filled tooltip="Bus 10561: UNKNOWN129558; 69 kV; accounting zone K; ADDED; source_named_station; source bus 561"]
+	10567 [label="UNKNOWN129899
+#10567  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10567" penwidth=2.1 style=filled tooltip="Bus 10567: UNKNOWN129899; 69 kV; accounting zone K; ADDED; source_named_station; source bus 567"]
+	10588 [label="WEST HEMPSTEAD
+#10588  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10588" penwidth=2.1 style=filled tooltip="Bus 10588: WEST HEMPSTEAD; 69 kV; accounting zone K; ADDED; source_named_station; source bus 588"]
+	10589 [label="EAST GARDEN CITY
+#10589  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10589" penwidth=2.1 style=filled tooltip="Bus 10589: EAST GARDEN CITY; 345 kV; accounting zone K; ADDED; source_named_station; source bus 589"]
+	10593 [label="DUNWOODIE
+#10593  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10593" penwidth=2.1 style=filled tooltip="Bus 10593: DUNWOODIE; 345 kV; accounting zone I; ADDED; source_named_station; source bus 593"]
+	10594 [label="SPRAIN BROOK
+#10594  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10594" penwidth=2.1 style=filled tooltip="Bus 10594: SPRAIN BROOK; 345 kV; accounting zone I; ADDED; source_named_station; source bus 594"]
+	10595 [label="BRUCKNER
+#10595  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10595" penwidth=2.1 style=filled tooltip="Bus 10595: BRUCKNER; 138 kV; accounting zone J; ADDED; source_named_station; source bus 595"]
+	10596 [label="TREMONT
+#10596  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10596" penwidth=2.1 style=filled tooltip="Bus 10596: TREMONT; 138 kV; accounting zone J; ADDED; source_named_station; source bus 596"]
+	10597 [label="NORTH QUEENS
+#10597  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10597" penwidth=2.1 style=filled tooltip="Bus 10597: NORTH QUEENS; 138 kV; accounting zone J; ADDED; source_named_station; source bus 597"]
+	10598 [label="GREAT NECK
+#10598  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10598" penwidth=2.1 style=filled tooltip="Bus 10598: GREAT NECK; 69 kV; accounting zone K; ADDED; source_named_station; source bus 598"]
+	10600 [label="EAST 179TH STREET
+#10600  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10600" penwidth=2.1 style=filled tooltip="Bus 10600: EAST 179TH STREET; 138 kV; accounting zone J; ADDED; source_named_station; source bus 600"]
+	10601 [label="CORONA
+#10601  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10601" penwidth=2.1 style=filled tooltip="Bus 10601: CORONA; 138 kV; accounting zone J; ADDED; source_named_station; source bus 601"]
+	10620 [label="TAP135490
+#10620  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10620" penwidth=2.1 style=filled tooltip="Bus 10620: TAP135490; 69 kV; accounting zone K; ADDED; source_named_station; source bus 620"]
+	10626 [label="VALLEY STREAM
+#10626  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10626" penwidth=2.1 style=filled tooltip="Bus 10626: VALLEY STREAM; 69 kV; accounting zone K; ADDED; source_named_station; source bus 626"]
+	10628 [label="JAMAICA
+#10628  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10628" penwidth=2.1 style=filled tooltip="Bus 10628: JAMAICA; 138 kV; accounting zone J; ADDED; source_named_station; source bus 628"]
+	10774 [label="LADENTOWN
+#10774  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10774" penwidth=2.1 style=filled tooltip="Bus 10774: LADENTOWN; 345 kV; accounting zone G; ADDED; source_named_station; source bus 774"]
+	10858 [label="E. FISHKILL
+#10858  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10858" penwidth=2.1 style=filled tooltip="Bus 10858: E. FISHKILL; 345 kV; accounting zone G; ADDED; source_named_station; source bus 858"]
+	10902 [label="WOOD STREET
+#10902  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10902" penwidth=2.1 style=filled tooltip="Bus 10902: WOOD STREET; 345 kV; accounting zone G; ADDED; source_named_station; source bus 902"]
+	10995 [label="TAP140036
+#10995  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10995" penwidth=2.1 style=filled tooltip="Bus 10995: TAP140036; 69 kV; accounting zone K; ADDED; source_named_station; source bus 995"]
+	10996 [label="TAP140037
+#10996  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10996" penwidth=2.1 style=filled tooltip="Bus 10996: TAP140037; 69 kV; accounting zone K; ADDED; source_named_station; source bus 996"]
+	11129 [label="GOWANUS
+#11129  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11129" penwidth=2.1 style=filled tooltip="Bus 11129: GOWANUS; 345 kV; accounting zone J; ADDED; source_named_station; source bus 1129"]
+	11130 [label="RAINEY
+#11130  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11130" penwidth=2.1 style=filled tooltip="Bus 11130: RAINEY; 345 kV; accounting zone J; ADDED; source_named_station; source bus 1130"]
+	11132 [label="FARRAGUT
+#11132  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11132" penwidth=2.1 style=filled tooltip="Bus 11132: FARRAGUT; 345 kV; accounting zone J; ADDED; source_named_station; source bus 1132"]
+	11134 [label="LEONARD STREET
+#11134  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11134" penwidth=2.1 style=filled tooltip="Bus 11134: LEONARD STREET; 345 kV; accounting zone J; ADDED; source_named_station; source bus 1134"]
+	11136 [label="WEST 49TH STREET
+#11136  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11136" penwidth=2.1 style=filled tooltip="Bus 11136: WEST 49TH STREET; 345 kV; accounting zone J; ADDED; source_named_station; source bus 1136"]
+	11493 [label="EAST ASTORIA
+#11493  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11493" penwidth=2.1 style=filled tooltip="Bus 11493: EAST ASTORIA; 138 kV; accounting zone J; ADDED; source_named_station; source bus 1493"]
+	11497 [label="EAST GARDEN CITY
+#11497  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11497" penwidth=2.1 style=filled tooltip="Bus 11497: EAST GARDEN CITY; 69 kV; accounting zone K; ADDED; source_named_station; source bus 1497"]
+	11501 [label="DUNWOODIE
+#11501  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11501" penwidth=2.1 style=filled tooltip="Bus 11501: DUNWOODIE; 138 kV; accounting zone I; ADDED; source_named_station; source bus 1501"]
+	11502 [label="SPRAIN BROOK
+#11502  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11502" penwidth=2.1 style=filled tooltip="Bus 11502: SPRAIN BROOK; 138 kV; accounting zone I; ADDED; source_named_station; source bus 1502"]
+	11503 [label="TREMONT
+#11503  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11503" penwidth=2.1 style=filled tooltip="Bus 11503: TREMONT; 69 kV; accounting zone J; ADDED; source_named_station; source bus 1503"]
+	11506 [label="JAMAICA
+#11506  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11506" penwidth=2.1 style=filled tooltip="Bus 11506: JAMAICA; 69 kV; accounting zone J; ADDED; source_named_station; source bus 1506"]
+	11529 [label="RAINEY
+#11529  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11529" penwidth=2.1 style=filled tooltip="Bus 11529: RAINEY; 138 kV; accounting zone J; ADDED; source_named_station; source bus 1529"]
+	11532 [label="WEST 49TH STREET
+#11532  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11532" penwidth=2.1 style=filled tooltip="Bus 11532: WEST 49TH STREET; 138 kV; accounting zone J; ADDED; source_named_station; source bus 1532"]
+	20001 [label="CRICKET VALLEY
+#20001  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20001" penwidth=2.1 style=filled tooltip="Bus 20001: CRICKET VALLEY 345; 345 kV; accounting zone G; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20002 [label="LONG MOUNTAIN
+#20002  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20002" penwidth=2.1 style=filled tooltip="Bus 20002: LONG MOUNTAIN 345; 345 kV; accounting zone NA; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20003 [label="DOVER
+#20003  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20003" penwidth=2.1 style=filled tooltip="Bus 20003: DOVER 345; 345 kV; accounting zone G; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20004 [label="KNICKERBOCKER
+#20004  |  345 kV
+NYES idle placeholder" color="#226AA5" fillcolor="#DBEEF9" id="bus-20004" penwidth=2.1 style=filled tooltip="Bus 20004: KNICKERBOCKER 345; 345 kV; accounting zone G; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20005 [label="NYPA ANNEX
+#20005  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20005" penwidth=2.1 style=filled tooltip="Bus 20005: NYPA ANNEX 345; 345 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20006 [label="EAST HAMPTON
+#20006  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20006" penwidth=2.1 style=filled tooltip="Bus 20006: EAST HAMPTON 69; 69 kV; accounting zone K; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20007 [label="GREENWOOD
+#20007  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20007" penwidth=2.1 style=filled tooltip="Bus 20007: GREENWOOD 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20008 [label="FOX HILLS
+#20008  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20008" penwidth=2.1 style=filled tooltip="Bus 20008: FOX HILLS 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20009 [label="GOWANUS RCC PAR
+#20009  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20009" penwidth=2.1 style=filled tooltip="Bus 20009: GOWANUS RCC PAR 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20010 [label="GOETHALS RCC PAR
+#20010  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20010" penwidth=2.1 style=filled tooltip="Bus 20010: GOETHALS RCC PAR 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20011 [label="VERNON
+#20011  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20011" penwidth=2.1 style=filled tooltip="Bus 20011: VERNON 138; 138 kV; accounting zone J; ADDED; source_named_station; source bus 1133"]
+	20012 [label="FRESH KILLS
+#20012  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20012" penwidth=2.1 style=filled tooltip="Bus 20012: FRESH KILLS 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20013 [label="FRESH KILLS
+#20013  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20013" penwidth=2.1 style=filled tooltip="Bus 20013: FRESH KILLS 345; 345 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20014 [label="RAINEY RCC PAR
+#20014  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20014" penwidth=2.1 style=filled tooltip="Bus 20014: RAINEY RCC PAR 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	1 -- 2 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-1-2-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:1 (model row 1; frozen_modified2019_parent)" weight=1]
+	1 -- 4 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-1-4-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:2 (model row 2; frozen_modified2019_parent)" weight=1]
+	2 -- 33 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-2-33-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:3 (model row 3; frozen_modified2019_parent)" weight=1]
+	4 -- 5 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-4-5-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:4 (model row 4; frozen_modified2019_parent)" weight=1]
+	5 -- 6 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-5-6-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:5 (model row 5; frozen_modified2019_parent)" weight=1]
+	5 -- 31 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-5-31-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:6 (model row 6; frozen_modified2019_parent)" weight=1]
+	6 -- 7 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-6-7-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:7 (model row 7; frozen_modified2019_parent)" weight=1]
+	7 -- 8 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-7-8-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:8 (model row 8; frozen_modified2019_parent)" weight=1]
+	7 -- 10 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-7-10-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:9 (model row 9; frozen_modified2019_parent)" weight=1]
+	7 -- 12 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-7-12-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:10 (model row 10; frozen_modified2019_parent)" weight=1]
+	7 -- 15 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-7-15-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:11 (model row 11; frozen_modified2019_parent)" weight=1]
+	8 -- 9 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-8-9-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:12 (model row 12; frozen_modified2019_parent)" weight=1]
+	8 -- 18 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-8-18-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:13 (model row 13; frozen_modified2019_parent)" weight=1]
+	9 -- 30 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-9-30-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:14 (model row 14; frozen_modified2019_parent)" weight=1]
+	12 -- 13 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-12-13-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:15 (model row 15; frozen_modified2019_parent)" weight=1]
+	13 -- 14 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-13-14-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:16 (model row 16; frozen_modified2019_parent)" weight=1]
+	14 -- 15 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-14-15-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:17 (model row 17; frozen_modified2019_parent)" weight=1]
+	16 -- 17 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-16-17-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:18 (model row 18; frozen_modified2019_parent)" weight=1]
+	16 -- 29 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-16-29-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:19 (model row 19; frozen_modified2019_parent)" weight=1]
+	17 -- 18 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-17-18-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:20 (model row 20; frozen_modified2019_parent)" weight=1]
+	17 -- 19 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-17-19-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:21 (model row 21; frozen_modified2019_parent)" weight=1]
+	17 -- 20 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-17-20-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:22 (model row 22; frozen_modified2019_parent)" weight=1]
+	19 -- 20 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-19-20-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:23 (model row 23; frozen_modified2019_parent)" weight=1]
+	29 -- 30 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-29-30-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:24 (model row 24; frozen_modified2019_parent)" weight=1]
+	29 -- 37 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-29-37-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:25 (model row 25; frozen_modified2019_parent)" weight=1]
+	30 -- 31 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-30-31-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:26 (model row 26; frozen_modified2019_parent)" weight=1]
+	31 -- 32 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-31-32-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:27 (model row 27; frozen_modified2019_parent)" weight=1]
+	32 -- 33 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-32-33-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:28 (model row 28; frozen_modified2019_parent)" weight=1]
+	32 -- 35 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-32-35-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:29 (model row 29; frozen_modified2019_parent)" weight=1]
+	33 -- 34 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-33-34-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:30 (model row 30; frozen_modified2019_parent)" weight=1]
+	34 -- 35 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-34-35-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:31 (model row 31; frozen_modified2019_parent)" weight=1]
+	35 -- 73 [label="replaced P32" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-35-73-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:32 (model row 32; frozen_modified2019_parent)" weight=0.05]
+	37 -- 38 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-37-38-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:33 (model row 33; frozen_modified2019_parent)" weight=1]
+	37 -- 39 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-37-39-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:34 (model row 34; frozen_modified2019_parent)" weight=1]
+	37 -- 40 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-37-40-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:35 (model row 35; frozen_modified2019_parent)" weight=1]
+	37 -- 43 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-37-43-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:36 (model row 36; frozen_modified2019_parent)" weight=1]
+	38 -- 69 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-38-69-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:37 (model row 37; frozen_modified2019_parent)" weight=1]
+	39 -- 73 [label=x2 color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-39-73-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:38 (model row 38; frozen_modified2019_parent); PARENT:39 (model row 39; frozen_modified2019_parent)" weight=1]
+	40 -- 44 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-40-44-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:40 (model row 40; frozen_modified2019_parent)" weight=1]
+	41 -- 42 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-41-42-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:41 (model row 41; frozen_modified2019_parent)" weight=1]
+	41 -- 45 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-41-45-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:42 (model row 42; frozen_modified2019_parent)" weight=1]
+	43 -- 44 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-43-44-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:43 (model row 43; frozen_modified2019_parent)" weight=1]
+	43 -- 50 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-43-50-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:44 (model row 44; frozen_modified2019_parent)" weight=1]
+	44 -- 45 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-44-45-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:45 (model row 45; frozen_modified2019_parent)" weight=1]
+	44 -- 48 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-44-48-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:46 (model row 46; frozen_modified2019_parent)" weight=1]
+	45 -- 46 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-45-46-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:47 (model row 47; frozen_modified2019_parent)" weight=1]
+	45 -- 51 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-45-51-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:48 (model row 48; frozen_modified2019_parent)" weight=1]
+	45 -- 71 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-45-71-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:49 (model row 49; frozen_modified2019_parent)" weight=1]
+	46 -- 47 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-46-47-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:50 (model row 50; frozen_modified2019_parent)" weight=1]
+	46 -- 49 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-46-49-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:51 (model row 51; frozen_modified2019_parent)" weight=1]
+	47 -- 48 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-47-48-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:52 (model row 52; frozen_modified2019_parent)" weight=1]
+	50 -- 51 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-50-51-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:53 (model row 53; frozen_modified2019_parent)" weight=1]
+	50 -- 52 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-50-52-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:54 (model row 54; frozen_modified2019_parent)" weight=1]
+	51 -- 53 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-51-53-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:55 (model row 55; frozen_modified2019_parent)" weight=1]
+	51 -- 72 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-51-72-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:56 (model row 56; frozen_modified2019_parent)" weight=1]
+	52 -- 53 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-52-53-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:57 (model row 57; frozen_modified2019_parent)" weight=1]
+	53 -- 55 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-53-55-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:58 (model row 58; frozen_modified2019_parent)" weight=1]
+	53 -- 65 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-53-65-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:59 (model row 59; frozen_modified2019_parent)" weight=1]
+	54 -- 56 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-54-56-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:60 (model row 60; frozen_modified2019_parent)" weight=1]
+	54 -- 62 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-54-62-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:61 (model row 61; frozen_modified2019_parent)" weight=1]
+	54 -- 102 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-54-102-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:62 (model row 62; frozen_modified2019_parent)" weight=1]
+	54 -- 103 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-54-103-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:63 (model row 63; frozen_modified2019_parent)" weight=1]
+	55 -- 57 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-55-57-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:64 (model row 64; frozen_modified2019_parent)" weight=1]
+	55 -- 59 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-55-59-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:65 (model row 65; frozen_modified2019_parent)" weight=1]
+	56 -- 58 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-56-58-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:66 (model row 66; frozen_modified2019_parent)" weight=1]
+	57 -- 59 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-57-59-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:67 (model row 67; frozen_modified2019_parent)" weight=1]
+	58 -- 60 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-58-60-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:68 (model row 68; frozen_modified2019_parent)" weight=1]
+	58 -- 62 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-58-62-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:69 (model row 69; frozen_modified2019_parent)" weight=1]
+	59 -- 61 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-59-61-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:70 (model row 70; frozen_modified2019_parent)" weight=1]
+	60 -- 140 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-60-140-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:71 (model row 71; frozen_modified2019_parent)" weight=1]
+	62 -- 63 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-62-63-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:72 (model row 72; frozen_modified2019_parent)" weight=1]
+	63 -- 64 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-63-64-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:73 (model row 73; frozen_modified2019_parent)" weight=1]
+	63 -- 67 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-63-67-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:74 (model row 74; frozen_modified2019_parent)" weight=1]
+	64 -- 65 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-64-65-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:75 (model row 75; frozen_modified2019_parent)" weight=1]
+	64 -- 68 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-64-68-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:76 (model row 76; frozen_modified2019_parent)" weight=1]
+	66 -- 67 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-66-67-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:77 (model row 77; frozen_modified2019_parent)" weight=1]
+	66 -- 69 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-66-69-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:78 (model row 78; frozen_modified2019_parent)" weight=1]
+	66 -- 134 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-66-134-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:79 (model row 79; frozen_modified2019_parent)" weight=1]
+	67 -- 68 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-67-68-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:80 (model row 80; frozen_modified2019_parent)" weight=1]
+	67 -- 70 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-67-70-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:81 (model row 81; frozen_modified2019_parent)" weight=1]
+	67 -- 138 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-67-138-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:82 (model row 82; frozen_modified2019_parent)" weight=1]
+	68 -- 71 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-68-71-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:83 (model row 83; frozen_modified2019_parent)" weight=1]
+	69 -- 71 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-69-71-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:84 (model row 84; frozen_modified2019_parent)" weight=1]
+	70 -- 71 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-70-71-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:85 (model row 85; frozen_modified2019_parent)" weight=1]
+	71 -- 72 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-71-72-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:86 (model row 86; frozen_modified2019_parent)" weight=1]
+	73 -- 74 [label="replaced P87" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-73-74-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:87 (model row 87; frozen_modified2019_parent)" weight=0.05]
+	74 -- 77 [label="replaced P88" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-74-77-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:88 (model row 88; frozen_modified2019_parent)" weight=0.05]
+	74 -- 78 [label="replaced P89" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-74-78-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:89 (model row 89; frozen_modified2019_parent)" weight=0.05]
+	75 -- 124 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-75-124-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:90 (model row 90; frozen_modified2019_parent)" weight=1]
+	76 -- 77 [label="replaced P91" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-76-77-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:91 (model row 91; frozen_modified2019_parent)" weight=0.05]
+	78 -- 79 [label="replaced P92" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-78-79-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:92 (model row 92; frozen_modified2019_parent)" weight=0.05]
+	78 -- 80 [label="replaced P93" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-78-80-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:93 (model row 93; frozen_modified2019_parent)" weight=0.05]
+	78 -- 81 [label="replaced P94" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-78-81-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:94 (model row 94; frozen_modified2019_parent)" weight=0.05]
+	78 -- 82 [label="replaced P95" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-78-82-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:95 (model row 95; frozen_modified2019_parent)" weight=0.05]
+	83 -- 112 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-83-112-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:96 (model row 96; frozen_modified2019_parent)" weight=1]
+	83 -- 113 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-83-113-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:97 (model row 97; frozen_modified2019_parent)" weight=1]
+	85 -- 88 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-85-88-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:98 (model row 98; frozen_modified2019_parent)" weight=1]
+	85 -- 105 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-85-105-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:99 (model row 99; frozen_modified2019_parent)" weight=1]
+	85 -- 112 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-85-112-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:100 (model row 100; frozen_modified2019_parent)" weight=1]
+	88 -- 89 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-88-89-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:101 (model row 101; frozen_modified2019_parent)" weight=1]
+	88 -- 105 [label=x2 color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-88-105-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:102 (model row 102; frozen_modified2019_parent); PARENT:103 (model row 103; frozen_modified2019_parent)" weight=1]
+	89 -- 90 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-89-90-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:104 (model row 104; frozen_modified2019_parent)" weight=1]
+	89 -- 105 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-89-105-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:105 (model row 105; frozen_modified2019_parent)" weight=1]
+	89 -- 113 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-89-113-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:106 (model row 106; frozen_modified2019_parent)" weight=1]
+	91 -- 92 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-91-92-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:107 (model row 107; frozen_modified2019_parent)" weight=1]
+	91 -- 93 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-91-93-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:108 (model row 108; frozen_modified2019_parent)" weight=1]
+	91 -- 95 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-91-95-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:109 (model row 109; frozen_modified2019_parent)" weight=1]
+	91 -- 98 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-91-98-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:110 (model row 110; frozen_modified2019_parent)" weight=1]
+	91 -- 110 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-91-110-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:111 (model row 111; frozen_modified2019_parent)" weight=1]
+	92 -- 97 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-92-97-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:112 (model row 112; frozen_modified2019_parent)" weight=1]
+	93 -- 94 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-93-94-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:113 (model row 113; frozen_modified2019_parent)" weight=1]
+	93 -- 95 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-93-95-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:114 (model row 114; frozen_modified2019_parent)" weight=1]
+	94 -- 111 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-94-111-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:115 (model row 115; frozen_modified2019_parent)" weight=1]
+	95 -- 96 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-95-96-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:116 (model row 116; frozen_modified2019_parent)" weight=1]
+	96 -- 97 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-96-97-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:117 (model row 117; frozen_modified2019_parent)" weight=1]
+	98 -- 99 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-98-99-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:118 (model row 118; frozen_modified2019_parent)" weight=1]
+	99 -- 100 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-99-100-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:119 (model row 119; frozen_modified2019_parent)" weight=1]
+	101 -- 104 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-101-104-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:120 (model row 120; frozen_modified2019_parent)" weight=1]
+	101 -- 105 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-101-105-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:121 (model row 121; frozen_modified2019_parent)" weight=1]
+	101 -- 107 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-101-107-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:122 (model row 122; frozen_modified2019_parent)" weight=1]
+	101 -- 108 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-101-108-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:123 (model row 123; frozen_modified2019_parent)" weight=1]
+	101 -- 109 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-101-109-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:124 (model row 124; frozen_modified2019_parent)" weight=1]
+	101 -- 110 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-101-110-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:125 (model row 125; frozen_modified2019_parent)" weight=1]
+	104 -- 106 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-104-106-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:126 (model row 126; frozen_modified2019_parent)" weight=1]
+	104 -- 110 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-104-110-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:127 (model row 127; frozen_modified2019_parent)" weight=1]
+	105 -- 106 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-105-106-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:128 (model row 128; frozen_modified2019_parent)" weight=1]
+	105 -- 107 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-105-107-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:129 (model row 129; frozen_modified2019_parent)" weight=1]
+	105 -- 111 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-105-111-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:130 (model row 130; frozen_modified2019_parent)" weight=1]
+	105 -- 112 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-105-112-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:131 (model row 131; frozen_modified2019_parent)" weight=1]
+	105 -- 113 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-105-113-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:132 (model row 132; frozen_modified2019_parent)" weight=1]
+	107 -- 110 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-107-110-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:133 (model row 133; frozen_modified2019_parent)" weight=1]
+	108 -- 110 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-108-110-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:134 (model row 134; frozen_modified2019_parent)" weight=1]
+	108 -- 111 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-108-111-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:135 (model row 135; frozen_modified2019_parent)" weight=1]
+	109 -- 110 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-109-110-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:136 (model row 136; frozen_modified2019_parent)" weight=1]
+	109 -- 111 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-109-111-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:137 (model row 137; frozen_modified2019_parent)" weight=1]
+	112 -- 113 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-112-113-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:138 (model row 138; frozen_modified2019_parent)" weight=1]
+	114 -- 117 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-114-117-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:139 (model row 139; frozen_modified2019_parent)" weight=1]
+	114 -- 119 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-114-119-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:140 (model row 140; frozen_modified2019_parent)" weight=1]
+	114 -- 121 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-114-121-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:141 (model row 141; frozen_modified2019_parent)" weight=1]
+	115 -- 116 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-115-116-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:142 (model row 142; frozen_modified2019_parent)" weight=1]
+	115 -- 117 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-115-117-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:143 (model row 143; frozen_modified2019_parent)" weight=1]
+	115 -- 118 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-115-118-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:144 (model row 144; frozen_modified2019_parent)" weight=1]
+	115 -- 119 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-115-119-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:145 (model row 145; frozen_modified2019_parent)" weight=1]
+	115 -- 121 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-115-121-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:146 (model row 146; frozen_modified2019_parent)" weight=1]
+	115 -- 135 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-115-135-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:147 (model row 147; frozen_modified2019_parent)" weight=1]
+	115 -- 139 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-115-139-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:148 (model row 148; frozen_modified2019_parent)" weight=1]
+	116 -- 117 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-116-117-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:149 (model row 149; frozen_modified2019_parent)" weight=1]
+	116 -- 118 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-116-118-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:150 (model row 150; frozen_modified2019_parent)" weight=1]
+	116 -- 120 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-116-120-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:151 (model row 151; frozen_modified2019_parent)" weight=1]
+	116 -- 121 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-116-121-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:152 (model row 152; frozen_modified2019_parent)" weight=1]
+	116 -- 122 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-116-122-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:153 (model row 153; frozen_modified2019_parent)" weight=1]
+	117 -- 118 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-117-118-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:154 (model row 154; frozen_modified2019_parent)" weight=1]
+	117 -- 119 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-117-119-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:155 (model row 155; frozen_modified2019_parent)" weight=1]
+	117 -- 120 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-117-120-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:156 (model row 156; frozen_modified2019_parent)" weight=1]
+	117 -- 121 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-117-121-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:157 (model row 157; frozen_modified2019_parent)" weight=1]
+	117 -- 122 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-117-122-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:158 (model row 158; frozen_modified2019_parent)" weight=1]
+	118 -- 120 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-118-120-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:159 (model row 159; frozen_modified2019_parent)" weight=1]
+	118 -- 121 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-118-121-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:160 (model row 160; frozen_modified2019_parent)" weight=1]
+	118 -- 122 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-118-122-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:161 (model row 161; frozen_modified2019_parent)" weight=1]
+	118 -- 123 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-118-123-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:162 (model row 162; frozen_modified2019_parent)" weight=1]
+	119 -- 120 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-119-120-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:163 (model row 163; frozen_modified2019_parent)" weight=1]
+	119 -- 121 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-119-121-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:164 (model row 164; frozen_modified2019_parent)" weight=1]
+	121 -- 122 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-121-122-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:165 (model row 165; frozen_modified2019_parent)" weight=1]
+	122 -- 135 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-122-135-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:166 (model row 166; frozen_modified2019_parent)" weight=1]
+	122 -- 139 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-122-139-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:167 (model row 167; frozen_modified2019_parent)" weight=1]
+	124 -- 125 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-124-125-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:168 (model row 168; frozen_modified2019_parent)" weight=1]
+	124 -- 126 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-124-126-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:169 (model row 169; frozen_modified2019_parent)" weight=1]
+	124 -- 127 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-124-127-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:170 (model row 170; frozen_modified2019_parent)" weight=1]
+	124 -- 128 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-124-128-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:171 (model row 171; frozen_modified2019_parent)" weight=1]
+	125 -- 126 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-125-126-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:172 (model row 172; frozen_modified2019_parent)" weight=1]
+	125 -- 128 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-125-128-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:173 (model row 173; frozen_modified2019_parent)" weight=1]
+	126 -- 127 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-126-127-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:174 (model row 174; frozen_modified2019_parent)" weight=1]
+	126 -- 128 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-126-128-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:175 (model row 175; frozen_modified2019_parent)" weight=1]
+	126 -- 138 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-126-138-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:176 (model row 176; frozen_modified2019_parent)" weight=1]
+	127 -- 128 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-127-128-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:177 (model row 177; frozen_modified2019_parent)" weight=1]
+	127 -- 132 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-127-132-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:178 (model row 178; frozen_modified2019_parent)" weight=1]
+	128 -- 129 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-128-129-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:179 (model row 179; frozen_modified2019_parent)" weight=1]
+	128 -- 130 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-128-130-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:180 (model row 180; frozen_modified2019_parent)" weight=1]
+	129 -- 130 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-129-130-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:181 (model row 181; frozen_modified2019_parent)" weight=1]
+	130 -- 131 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-130-131-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:182 (model row 182; frozen_modified2019_parent)" weight=1]
+	130 -- 132 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-130-132-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:183 (model row 183; frozen_modified2019_parent)" weight=1]
+	131 -- 133 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-131-133-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:184 (model row 184; frozen_modified2019_parent)" weight=1]
+	131 -- 135 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-131-135-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:185 (model row 185; frozen_modified2019_parent)" weight=1]
+	131 -- 139 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-131-139-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:186 (model row 186; frozen_modified2019_parent)" weight=1]
+	132 -- 133 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-132-133-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:187 (model row 187; frozen_modified2019_parent)" weight=1]
+	132 -- 134 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-132-134-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:188 (model row 188; frozen_modified2019_parent)" weight=1]
+	132 -- 135 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-132-135-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:189 (model row 189; frozen_modified2019_parent)" weight=1]
+	132 -- 138 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-132-138-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:190 (model row 190; frozen_modified2019_parent)" weight=1]
+	133 -- 135 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-133-135-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:191 (model row 191; frozen_modified2019_parent)" weight=1]
+	134 -- 135 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-134-135-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:192 (model row 192; frozen_modified2019_parent)" weight=1]
+	134 -- 136 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-134-136-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:193 (model row 193; frozen_modified2019_parent)" weight=1]
+	135 -- 139 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-135-139-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:194 (model row 194; frozen_modified2019_parent)" weight=1]
+	136 -- 139 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-136-139-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:195 (model row 195; frozen_modified2019_parent)" weight=1]
+	137 -- 138 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-137-138-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:196 (model row 196; frozen_modified2019_parent)" weight=1]
+	1 -- 21 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-1-21-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:197 (model row 197; frozen_modified2019_parent)" weight=1]
+	2 -- 3 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-2-3-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:198 (model row 198; frozen_modified2019_parent)" weight=1]
+	3 -- 4 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-3-4-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:199 (model row 199; frozen_modified2019_parent)" weight=1]
+	10 -- 11 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-10-11-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:200 (model row 200; frozen_modified2019_parent)" weight=1]
+	10 -- 22 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-10-22-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:201 (model row 201; frozen_modified2019_parent)" weight=1]
+	11 -- 23 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-11-23-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:202 (model row 202; frozen_modified2019_parent)" weight=1]
+	13 -- 24 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-13-24-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:203 (model row 203; frozen_modified2019_parent)" weight=1]
+	14 -- 25 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-14-25-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:204 (model row 204; frozen_modified2019_parent)" weight=1]
+	16 -- 27 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-16-27-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:205 (model row 205; frozen_modified2019_parent)" weight=1]
+	20 -- 26 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-20-26-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:206 (model row 206; frozen_modified2019_parent)" weight=1]
+	28 -- 29 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-28-29-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:207 (model row 207; frozen_modified2019_parent)" weight=1]
+	33 -- 36 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-33-36-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:208 (model row 208; frozen_modified2019_parent)" weight=1]
+	40 -- 41 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-40-41-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:209 (model row 209; frozen_modified2019_parent)" weight=1]
+	48 -- 49 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-48-49-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:210 (model row 210; frozen_modified2019_parent)" weight=1]
+	48 -- 100 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-48-100-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:211 (model row 211; frozen_modified2019_parent)" weight=1]
+	52 -- 54 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-52-54-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:212 (model row 212; frozen_modified2019_parent)" weight=1]
+	54 -- 55 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-54-55-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:213 (model row 213; frozen_modified2019_parent)" weight=1]
+	56 -- 57 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-56-57-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:214 (model row 214; frozen_modified2019_parent)" weight=1]
+	58 -- 59 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-58-59-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:215 (model row 215; frozen_modified2019_parent)" weight=1]
+	60 -- 61 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-60-61-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:216 (model row 216; frozen_modified2019_parent)" weight=1]
+	75 -- 76 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-75-76-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:217 (model row 217; frozen_modified2019_parent)" weight=1]
+	83 -- 84 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-83-84-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:218 (model row 218; frozen_modified2019_parent)" weight=1]
+	85 -- 86 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-85-86-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:219 (model row 219; frozen_modified2019_parent)" weight=1]
+	85 -- 87 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-85-87-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:220 (model row 220; frozen_modified2019_parent)" weight=1]
+	101 -- 102 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-101-102-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:221 (model row 221; frozen_modified2019_parent)" weight=1]
+	101 -- 103 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-101-103-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:222 (model row 222; frozen_modified2019_parent)" weight=1]
+	136 -- 137 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-136-137-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:223 (model row 223; frozen_modified2019_parent)" weight=1]
+	38 -- 77 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-38-77-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:224 (model row 224; frozen_modified2019_parent)" weight=1]
+	38 -- 43 [label="" color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-38-43-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:225 (model row 225; frozen_modified2019_parent)" weight=1]
+	10079 -- 10557 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10079-10557-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:210 (model row 286; pinned_PERFORM_2019_electrical_row); PERFORM:211 (model row 287; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10079 -- 11136 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10079-11136-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:212 (model row 288; pinned_PERFORM_2019_electrical_row); PERFORM:213 (model row 289; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10547 -- 10594 [label=x4 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10547-10594-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1107 (model row 290; pinned_PERFORM_2019_electrical_row); PERFORM:1108 (model row 291; pinned_PERFORM_2019_electrical_row); PERFORM:1109 (model row 292; pinned_PERFORM_2019_electrical_row); PERFORM:1110 (model row 293; pinned_PERFORM_2019_electrical_row)" weight=1]
+	74 -- 10547 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-74-10547-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1111 (model row 294; pinned_PERFORM_2019_electrical_row); PERFORM:1112 (model row 295; pinned_PERFORM_2019_electrical_row); PERFORM:1113 (model row 296; pinned_PERFORM_2019_electrical_row)" weight=1]
+	77 -- 10547 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-77-10547-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1114 (model row 297; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10557 -- 11493 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10557-11493-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1152 (model row 298; pinned_PERFORM_2019_electrical_row); PERFORM:1153 (model row 299; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10560 -- 10593 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10560-10593-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1159 (model row 300; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10561 -- 10567 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10561-10567-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1162 (model row 301; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10561 -- 10598 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10561-10598-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1164 (model row 302; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10567 -- 10588 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10567-10588-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1172 (model row 303; pinned_PERFORM_2019_electrical_row); PERFORM:1173 (model row 304; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10567 -- 11497 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10567-11497-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1174 (model row 305; pinned_PERFORM_2019_electrical_row); PERFORM:1175 (model row 306; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10588 -- 10996 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10588-10996-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1212 (model row 307; pinned_PERFORM_2019_electrical_row); PERFORM:1213 (model row 308; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10589 -- 10594 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10589-10594-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1214 (model row 309; pinned_PERFORM_2019_electrical_row); PERFORM:1215 (model row 310; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10589 -- 11497 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10589-11497-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1216 (model row 311; pinned_PERFORM_2019_electrical_row); PERFORM:1217 (model row 312; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10593 -- 10594 [label=x4 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10593-10594-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1226 (model row 313; pinned_PERFORM_2019_electrical_row); PERFORM:1227 (model row 314; pinned_PERFORM_2019_electrical_row); PERFORM:1228 (model row 315; pinned_PERFORM_2019_electrical_row); PERFORM:1229 (model row 316; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10593 -- 11501 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10593-11501-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1234 (model row 317; pinned_PERFORM_2019_electrical_row); PERFORM:1235 (model row 318; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10594 -- 11136 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10594-11136-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1236 (model row 319; pinned_PERFORM_2019_electrical_row); PERFORM:1237 (model row 320; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10594 -- 11502 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10594-11502-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1238 (model row 321; pinned_PERFORM_2019_electrical_row); PERFORM:1239 (model row 322; pinned_PERFORM_2019_electrical_row); PERFORM:1240 (model row 323; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10595 -- 10600 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10595-10600-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1241 (model row 324; pinned_PERFORM_2019_electrical_row); PERFORM:1242 (model row 325; pinned_PERFORM_2019_electrical_row); PERFORM:1243 (model row 326; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10595 -- 11493 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10595-11493-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1245 (model row 327; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10596 -- 11502 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10596-11502-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1248 (model row 328; pinned_PERFORM_2019_electrical_row); PERFORM:1249 (model row 329; pinned_PERFORM_2019_electrical_row); PERFORM:1250 (model row 330; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10596 -- 11503 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10596-11503-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1251 (model row 331; pinned_PERFORM_2019_electrical_row); PERFORM:1252 (model row 332; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10597 -- 11493 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10597-11493-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1257 (model row 333; pinned_PERFORM_2019_electrical_row); PERFORM:1258 (model row 334; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10598 -- 11503 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10598-11503-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1260 (model row 335; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10600 -- 11501 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10600-11501-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1262 (model row 336; pinned_PERFORM_2019_electrical_row); PERFORM:1263 (model row 337; pinned_PERFORM_2019_electrical_row); PERFORM:1264 (model row 338; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10601 -- 10628 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10601-10628-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1265 (model row 339; pinned_PERFORM_2019_electrical_row); PERFORM:1266 (model row 340; pinned_PERFORM_2019_electrical_row); PERFORM:1267 (model row 341; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10601 -- 11493 [label=x4 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10601-11493-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1269 (model row 342; pinned_PERFORM_2019_electrical_row); PERFORM:1270 (model row 343; pinned_PERFORM_2019_electrical_row); PERFORM:1271 (model row 344; pinned_PERFORM_2019_electrical_row); PERFORM:1272 (model row 345; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10620 -- 10626 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10620-10626-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1320 (model row 346; pinned_PERFORM_2019_electrical_row); PERFORM:1321 (model row 347; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10620 -- 10995 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10620-10995-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1322 (model row 348; pinned_PERFORM_2019_electrical_row); PERFORM:1323 (model row 349; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10626 -- 11506 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10626-11506-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1336 (model row 350; pinned_PERFORM_2019_electrical_row); PERFORM:1337 (model row 351; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10628 -- 11506 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10628-11506-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1340 (model row 352; pinned_PERFORM_2019_electrical_row)" weight=1]
+	73 -- 10858 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-73-10858-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1389 (model row 353; pinned_PERFORM_2019_electrical_row); PERFORM:1390 (model row 354; pinned_PERFORM_2019_electrical_row)" weight=1]
+	73 -- 10902 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-73-10902-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1391 (model row 355; pinned_PERFORM_2019_electrical_row); PERFORM:1392 (model row 356; pinned_PERFORM_2019_electrical_row)" weight=1]
+	77 -- 10774 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-77-10774-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1576 (model row 357; pinned_PERFORM_2019_electrical_row)" weight=1]
+	76 -- 10774 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-76-10774-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1577 (model row 358; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10858 -- 10902 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10858-10902-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1689 (model row 359; pinned_PERFORM_2019_electrical_row); PERFORM:1690 (model row 360; pinned_PERFORM_2019_electrical_row)" weight=1]
+	74 -- 77 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-74-77-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1731 (model row 361; pinned_PERFORM_2019_electrical_row); PERFORM:1732 (model row 362; pinned_PERFORM_2019_electrical_row); PERFORM:1733 (model row 363; pinned_PERFORM_2019_electrical_row)" weight=1]
+	74 -- 10902 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-74-10902-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1734 (model row 364; pinned_PERFORM_2019_electrical_row); PERFORM:1735 (model row 365; pinned_PERFORM_2019_electrical_row)" weight=1]
+	76 -- 77 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-76-77-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1738 (model row 366; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10995 -- 10996 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10995-10996-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1843 (model row 367; pinned_PERFORM_2019_electrical_row); PERFORM:1844 (model row 368; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11129 -- 11132 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11129-11132-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1984 (model row 369; pinned_PERFORM_2019_electrical_row); PERFORM:1985 (model row 370; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11130 -- 11132 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11130-11132-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1988 (model row 371; pinned_PERFORM_2019_electrical_row); PERFORM:1989 (model row 372; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11130 -- 11529 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11130-11529-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1990 (model row 373; pinned_PERFORM_2019_electrical_row); PERFORM:1991 (model row 374; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11132 -- 11134 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11132-11134-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1994 (model row 375; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11529 -- 20011 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11529-20011-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1997 (model row 376; pinned_PERFORM_2019_electrical_row); PERFORM:1998 (model row 377; pinned_PERFORM_2019_electrical_row); PERFORM:1999 (model row 378; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11134 -- 11136 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11134-11136-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:2000 (model row 379; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11136 -- 11532 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11136-11532-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:2007 (model row 380; pinned_PERFORM_2019_electrical_row); PERFORM:2008 (model row 381; pinned_PERFORM_2019_electrical_row); PERFORM:2009 (model row 382; pinned_PERFORM_2019_electrical_row)" weight=1]
+	78 -- 10593 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-78-10593-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ATTACH:CEUG_DUNWOODIE (model row 383; inherited_parent_budget)" weight=1]
+	79 -- 10589 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-79-10589-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ATTACH:RAVA3_EGC (model row 384; inherited_parent_budget)" weight=1]
+	80 -- 10560 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-80-10560-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ATTACH:NORTHPORT_SHORERD (model row 385; inherited_parent_budget)" weight=1]
+	81 -- 11129 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-81-11129-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ATTACH:GOETHALS_GOWANUS (model row 386; inherited_parent_budget)" weight=1]
+	82 -- 11493 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-82-11493-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ATTACH:AK3_ASTORIA138 (model row 387; inherited_parent_budget)" weight=1]
+	35 -- 20002 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-35-20002-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | CV:BOUNDARY_SOUTHINGTON_LM (model row 388; parent_external_tie_positive_series_budget)" weight=1]
+	73 -- 20001 [label=x2 color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-73-20001-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | CV:PV_CV_F83_PROXY (model row 389; parent_external_tie_positive_series_budget); CV:PV_CV_F84 (model row 391; assumed_equal_existing_F83_proxy)" weight=1]
+	20001 -- 20003 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20001-20003-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | DOVER:CV_DOVER_Y17 (model row 393; positive_split_of_replaced_CV_LM_series_budget)" weight=1]
+	20002 -- 20003 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20002-20003-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | DOVER:DOVER_LM_398 (model row 394; positive_split_of_replaced_CV_LM_series_budget)" weight=1]
+	39 -- 20004 [label=idle color="#7E8791" fontcolor="#7E8791" fontname=Arial fontsize=10 id="edge-39-20004-scaffold" len=2.8 penwidth=2.0 style=dotted tooltip="Algebraic idle connection (not physical) | NYES:KNICKER_IDLE_LEAF (model row 398; optional_NYES_station_scaffold)" weight=1]
+	10601 -- 20007 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-10601-20007-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RECEIVING:GREENWOOD_CORONA (model row 399; declared_omitted_receiving_network_proxy)" weight=1]
+	20007 -- 20008 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20007-20008-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RECEIVING:FOXHILLS_GREENWOOD (model row 400; declared_omitted_receiving_network_proxy)" weight=1]
+	10079 -- 20005 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-10079-20005-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ASSET:ANNEX_E13_Q35_PROXY (model row 401; historical_EastAstoria_East13_two_circuit_template)" weight=1]
+	11497 -- 20006 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-11497-20006-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ASSET:EASTHAMPTON_K_PROXY (model row 402; declared_omitted_LongIsland69_network_proxy)" weight=1]
+	20008 -- 20012 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20008-20012-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ASSET:FRESHKILLS138_FOXHILLS (model row 403; positive_inherited_local_attachment_budget)" weight=1]
+	81 -- 20013 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-81-20013-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ASSET:FRESHKILLS345_GOETHALS (model row 404; positive_inherited_local_attachment_budget)" weight=1]
+	11129 -- 20009 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-11129-20009-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:PAR:GOWANUS (model row 405; explicit_fixed_transformer_assumption)" weight=1]
+	81 -- 20010 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-81-20010-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:PAR:GOETHALS (model row 406; explicit_fixed_transformer_assumption)" weight=1]
+	11130 -- 20014 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-11130-20014-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:PAR:RAINEY (model row 407; explicit_fixed_transformer_assumption)" weight=1]
+	10601 -- 20014 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-10601-20014-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:CABLE:QUEENS (model row 408; 2019_EastAstoria_Corona_cable_per_mile_template_assumption)" weight=1]
+	20007 -- 20009 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20007-20009-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:CABLE:BROOKLYN (model row 409; 2019_EastAstoria_Corona_cable_per_mile_template_assumption)" weight=1]
+	20008 -- 20010 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20008-20010-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:CABLE:STATEN (model row 410; 2019_EastAstoria_Corona_cable_per_mile_template_assumption)" weight=1]
+	21 -- 80 [label="DC:1" color="#73508E" fontcolor="#73508E" fontname=Arial fontsize=10 id="edge-21-80-dc" len=2.8 penwidth=2.0 style=solid tooltip="Unchanged scheduled DC equivalent | DC:1 (model row 0; unchanged inherited scheduled-transfer equivalent)" weight=1]
+	79 -- 124 [label="DC:2" color="#73508E" fontcolor="#73508E" fontname=Arial fontsize=10 id="edge-79-124-dc" len=2.8 penwidth=2.0 style=solid tooltip="Unchanged scheduled DC equivalent | DC:2 (model row 0; unchanged inherited scheduled-transfer equivalent)" weight=1]
+	81 -- 125 [label="DC:3/DC:4" color="#73508E" fontcolor="#73508E" fontname=Arial fontsize=10 id="edge-81-125-dc" len=2.8 penwidth=2.0 style=solid tooltip="Unchanged scheduled DC equivalent | DC:3 (model row 0; unchanged inherited scheduled-transfer equivalent); DC:4 (model row 0; unchanged inherited scheduled-transfer equivalent)" weight=1]
+}

@@ -11,6 +11,11 @@ for results, scope and remaining physical uncertainties. Raw network templates
 are construction inputs; use `npcc_nygrid_2025_downstate_dc` for hourly MATPOWER
 cases with the correct generator bounds, load, DC schedules and reference bus.
 
+[Network diagrams](../../output/nygrid_2025_downstate/diagrams/README.md) label
+all 51 additions and replaced aggregate branches. Rebuild the five SVG/PNG/PDF
+views with `build_network_diagrams.py`; this requires Graphviz on PATH and the
+Python `graphviz` package, and does not rerun or change operating cases.
+
 ## Load an existing qualified hour
 
 From MATLAB with MATPOWER on the path:
