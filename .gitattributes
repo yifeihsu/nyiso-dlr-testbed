@@ -41,3 +41,13 @@ scripts/nygrid_2025_inputs/** -text whitespace=cr-at-eol
 output/nygrid_2025_inputs/** -text whitespace=cr-at-eol
 output/nygrid_2025_inputs/**/*.log whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 "System Matpower Format/npcc_nygrid_2025_operating_inputs.m" -text whitespace=cr-at-eol
+# Frozen fleet/dispatch evidence and code retain exact fingerprinted bytes.
+scripts/nygrid_2025_dispatch/** -text whitespace=cr-at-eol
+output/nygrid_2025_dispatch/** -text whitespace=cr-at-eol
+output/nygrid_2025_dispatch/**/*.log whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Raw primary documents and pinned parent-source copies retain publisher bytes.
+output/nygrid_2025_dispatch/fleet/source_parent/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_dispatch/fleet/source_scope/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_full_dc.m" -text whitespace=cr-at-eol
+NYGRID_2025_BOUNDED_DISPATCH.md -text whitespace=cr-at-eol
+NYGRID_2025_OPERATING_INPUTS.md -text whitespace=cr-at-eol

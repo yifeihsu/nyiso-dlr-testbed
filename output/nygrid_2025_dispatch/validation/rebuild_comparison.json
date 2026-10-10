@@ -1,0 +1,308 @@
+{
+  "passed": true,
+  "all_saved_fields_exact": true,
+  "fields": 33,
+  "numeric_fields": 30,
+  "compared_fields": [
+    {
+      "field": "base_case.baseMVA",
+      "shape": [],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.branch",
+      "shape": [
+        225,
+        13
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.bus",
+      "shape": [
+        140,
+        13
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.dcline",
+      "shape": [
+        4,
+        17
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.gen",
+      "shape": [
+        1464,
+        21
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.genfuel",
+      "shape": [
+        1464
+      ],
+      "numeric": false,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.if.map",
+      "shape": [
+        29,
+        2
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.version",
+      "shape": [],
+      "numeric": false,
+      "exact_match": true
+    },
+    {
+      "field": "branch_pf",
+      "shape": [
+        8760,
+        225
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "bus_pd",
+      "shape": [
+        8760,
+        140
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "bus_qd",
+      "shape": [
+        8760,
+        140
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "bus_va",
+      "shape": [
+        8760,
+        140
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "dc_pf",
+      "shape": [
+        8760,
+        4
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "dc_slack_change_mw",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "dispatch_qualified",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "dual_lambda",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "gamma",
+      "shape": [],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "gen_pg",
+      "shape": [
+        8760,
+        1464
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "gen_pmax",
+      "shape": [
+        8760,
+        1464
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "gen_pmin",
+      "shape": [
+        8760,
+        1464
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "hour_index",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "inherited_interface_pf",
+      "shape": [
+        8760,
+        7
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "native_fleet_ids",
+      "shape": [
+        1436
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "native_physical_pmax",
+      "shape": [
+        8760,
+        1436
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "native_required_pg",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "nodal_residual_mw",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "objective_value",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "objective_weights",
+      "shape": [
+        8760,
+        1436
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "prior_pg",
+      "shape": [
+        8760,
+        1464
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "reference_bus",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "source_qualified",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "status_code",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "timestamp_utc",
+      "shape": [
+        8760
+      ],
+      "numeric": false,
+      "exact_match": true
+    }
+  ],
+  "text_files": [
+    {
+      "file": "model_generator_register.csv",
+      "sha256": "7c613350f8cb397dc80fbfffd78d1a5e6e8e956e46cccdb6fc3a238af0615dda",
+      "byte_identical": true
+    },
+    {
+      "file": "hour_status.csv",
+      "sha256": "295922124599aed8e249a2cd7aaca7bac2a5f24d4f7cf31be8a20728d77540ed",
+      "byte_identical": true
+    },
+    {
+      "file": "fuel_adjustments.csv",
+      "sha256": "6d3fc02744fa2899cc03ae7f36c58ae8a954b9d46718fb94b7f415795a57b37d",
+      "byte_identical": true
+    },
+    {
+      "file": "contract.json",
+      "sha256": "a31e1427567f525a78cea58ad8a90e51b1dd8a7856b5ba63abb1cbaa0342207d",
+      "byte_identical": true
+    }
+  ],
+  "reference": "output/nygrid_2025_dispatch/dispatch",
+  "rebuilt": "tmp/nygrid_2025_dispatch_rebuild_nyiso_market_scope",
+  "excluded_metadata": "MAT creation timestamp headers; all saved scientific fields compared"
+}

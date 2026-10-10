@@ -1,0 +1,79 @@
+{
+  "model_year": 2025,
+  "parent": "modified2019_full_NPCC",
+  "buses": 140,
+  "branches": 225,
+  "dc_links": 4,
+  "hourly_scope": "independent_capacity_bounded_DC_snapshots",
+  "gamma": 0.30012075175285535,
+  "objective": "0.5 sum(kappa_fuel / physical_model_Pmax * (PG-prior)^2); exact native sum and box bounds",
+  "penalties": {
+    "Combined Fossil": 1.0,
+    "Nuclear": 100.0,
+    "Hydro": 25.0,
+    "Wind": 100.0,
+    "Other Renewables": 100.0
+  },
+  "pumped_hydro_penalty": 100,
+  "weight_zero_capacity_policy": "denominator1 only for a fixed zero-capacity variable",
+  "penalty_interpretation": "declared research preference; not estimated uncertainty or economic cost",
+  "status_codes": {
+    "0": "missing_source",
+    "1": "bounded_dc_qualified",
+    "2": "infeasible_native_capacity"
+  },
+  "native_pmin_policy": "zero; continuous on/off and within-hour output relaxation",
+  "external_p_bounds": "equal to prescribed hourly equivalent generation and HQ injection",
+  "dcline_p_bounds": "equal to prescribed hourly schedules; not certified physical ratings",
+  "reference_policy": "bus50 if it has positive admitted native capacity, otherwise bus of largest dispatched native generator",
+  "reference_is_free_balancing_generator": false,
+  "load_shedding_allowed": false,
+  "bounds_relaxed": false,
+  "topology_changed": false,
+  "internal_interface_observations_read": false,
+  "interface_calibration_performed": false,
+  "ac_feasibility_validated": false,
+  "reactive_capabilities_available": false,
+  "reactive_case_fields": "zero DC placeholders only; not physical Q capability bounds",
+  "physical_branch_thermal_feasibility_validated": false,
+  "unit_commitment_validated": false,
+  "ramping_validated": false,
+  "reserve_feasibility_validated": false,
+  "storage_energy_feasibility_validated": false,
+  "pumped_hydro_policy": "generation ceiling at frozen estimated hourly prior; no extra balancing output, pumping or SOC model",
+  "battery_dispatch_enabled": false,
+  "source_gap_policy": "retain all8760 rows; incomplete source hours have no solved state",
+  "generation_ledger": "all renewables are generators; gross loads not netted again",
+  "array_files": {
+    "dispatch.mat": "case and solved states",
+    "dispatch_bounds.mat": "generator active-power bounds",
+    "dispatch_priors.mat": "generation priors and objective weights",
+    "dispatch_network.mat": "solved branch flows and bus angles"
+  },
+  "provenance": [
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_register.csv",
+      "sha256": "6d27fc788fd90454c8b92d29115fe059783979b0063992ffe29d313bec405d45"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_bounds.npz",
+      "sha256": "7fdc0f26448d6333ba427f7d10535cff2eef993de21fae0794eba99b549e9c52"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/priors/dispatch_priors.npz",
+      "sha256": "6a99bee7ea8be1e63a6349b6a0e6fa781932525fab17dd3548ac1e11a304c66f"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "scripts/nygrid_2025_dispatch/build_dispatch.py",
+      "sha256": "3250a8f4b5052d97ebe9eee11129570c12b9fe5260b2181ad3add79a418d3f54"
+    }
+  ]
+}
