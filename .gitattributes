@@ -29,3 +29,10 @@ scripts/nygrid_2019_full/** -text whitespace=cr-at-eol
 output/nygrid_2019_full_stage1/*.json -text whitespace=cr-at-eol
 output/nygrid_2019_full_stage1/*.log -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 output/nygrid_2019_full_stage1/*.patch -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Fingerprinted load-source and western-interface research diagnostics.
+scripts/nygrid_2019_diagnostics/** -text whitespace=cr-at-eol
+NYGRID_2019_LOAD_AND_WESTERN_DIAGNOSTICS.md -text whitespace=cr-at-eol
+output/nygrid_2019_diagnostics/*.json -text whitespace=cr-at-eol
+output/nygrid_2019_diagnostics/*.ipynb -text whitespace=cr-at-eol
+output/nygrid_2019_diagnostics/raw_archives/*.json -text whitespace=cr-at-eol
+output/nygrid_2019_diagnostics/*.log -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
