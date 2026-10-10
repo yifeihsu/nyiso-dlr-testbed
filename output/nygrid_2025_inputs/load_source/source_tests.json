@@ -1,0 +1,19 @@
+{
+  "completed_utc": "2026-10-10T06:04:05.823882+00:00",
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "test_cases": [
+    "__main__.TestPhysicalSources.test_catalog_has_8760_physical_hours_and_both_fall_folds",
+    "__main__.TestPhysicalSources.test_conflicting_or_missing_load_keys_stay_unqualified",
+    "__main__.TestPhysicalSources.test_end_of_hour_requires_future_bracket_not_extrapolation",
+    "__main__.TestPhysicalSources.test_explicit_load_timezone_keeps_folds_and_rejects_wrong_season",
+    "__main__.TestPhysicalSources.test_forward_mean_uses_durations_and_duplicate_timestamp_mean",
+    "__main__.TestPhysicalSources.test_long_gap_remains_nan_and_full_interval_is_disqualified",
+    "__main__.TestPhysicalSources.test_mixed_sentinel_duplicate_is_flagged_before_averaging",
+    "__main__.TestPhysicalSources.test_p32_fold_uses_raw_clock_rewind_and_does_not_merge_two_hours",
+    "__main__.TestPhysicalSources.test_p32_spring_nonexistent_hour_is_not_imputed"
+  ],
+  "test_script_sha256": "e73f467a81b845c6202a24d68113b81ea68aa04eaf9c8ef829b73e1768982a9e"
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "stage": "actual_MW_generation_source_priors",
+  "year": 2025,
+  "created_utc": "2026-10-10T06:17:41.367503+00:00",
+  "hours": 8760,
+  "utc_start": "2025-01-01T05:00:00Z",
+  "utc_last_hour": "2026-01-01T04:00:00Z",
+  "state_fuel_categories": [
+    "Dual Fuel",
+    "Natural Gas",
+    "Other Fossil Fuels",
+    "Nuclear",
+    "Hydro",
+    "Wind",
+    "Other Renewables"
+  ],
+  "prior_fuel_categories": [
+    "Combined Fossil",
+    "Nuclear",
+    "Hydro",
+    "Wind",
+    "Other Renewables"
+  ],
+  "p63": {
+    "Dual Fuel": {
+      "qualified_hours": 8750,
+      "missing_hours": 10,
+      "identical_duplicate_samples_removed": 0
+    },
+    "Natural Gas": {
+      "qualified_hours": 8750,
+      "missing_hours": 10,
+      "identical_duplicate_samples_removed": 0
+    },
+    "Other Fossil Fuels": {
+      "qualified_hours": 8750,
+      "missing_hours": 10,
+      "identical_duplicate_samples_removed": 0
+    },
+    "Nuclear": {
+      "qualified_hours": 8750,
+      "missing_hours": 10,
+      "identical_duplicate_samples_removed": 0
+    },
+    "Hydro": {
+      "qualified_hours": 8750,
+      "missing_hours": 10,
+      "identical_duplicate_samples_removed": 0
+    },
+    "Wind": {
+      "qualified_hours": 8750,
+      "missing_hours": 10,
+      "identical_duplicate_samples_removed": 0
+    },
+    "Other Renewables": {
+      "qualified_hours": 8750,
+      "missing_hours": 10,
+      "identical_duplicate_samples_removed": 0
+    }
+  },
+  "epa": {
+    "source_records": 2010528,
+    "reporting_unit_count": 234,
+    "partial_operating_hours": 19981,
+    "unknown_active_gross_rows": 78036,
+    "gross_blank_rows": 1574211,
+    "positive_unmapped_eligible_hours": 7,
+    "reported_gross_is_net": false,
+    "reporting_scope_complete_NY_generation": false
+  },
+  "allocation": {
+    "Combined Fossil": {
+      "qualified_hours": 8743,
+      "unqualified_hours": 17
+    },
+    "Nuclear": {
+      "qualified_hours": 8750,
+      "unqualified_hours": 10
+    },
+    "Hydro": {
+      "qualified_hours": 8750,
+      "unqualified_hours": 10
+    },
+    "Wind": {
+      "qualified_hours": 8750,
+      "unqualified_hours": 10
+    },
+    "Other Renewables": {
+      "qualified_hours": 8750,
+      "unqualified_hours": 10
+    }
+  },
+  "legacy_mapping": {
+    "legacy_rows": 271,
+    "thermal_rows_order_and_bus_assignment_verified": 227,
+    "complete_2025_unit_dispatch_mapping": false,
+    "full_source_bus_verified_from_base_case": true,
+    "parameter_csv_position_differences": 23,
+    "thermal_identity_join": "exact_NYISO_name_and_PTID_preserving_captured_constructor_row_order",
+    "source_57_bus_is_separate_reduced_reference": true
+  },
+  "gamma_applied": false,
+  "internal_interface_targets_used": false,
+  "compact_dispatch_used": false,
+  "ready_for_dc_power_flow": false,
+  "dispatch_feasibility_established": false,
+  "policies": {
+    "p63": "sample_at_t_represents_preceding_interval; UTC_hour_beginning; gaps_over600s_uncovered",
+    "epa": "gross_rate_times_operating_fraction_once; unique_ORIS_unit_hour; blank_is_not_observed_zero",
+    "fossil": "P63 combined fossil normalized by available eligible EPA gross zone shares; gross shares do not measure net zonal generation",
+    "mapping": "2019 crosswalk continuity and explicit2025 facility zones; many-to-many identifiers annotate, never duplicate MW",
+    "nuclear": "NRC daily availability times seasonal EIA capability, normalized to P63; previous report before08:00 Eastern",
+    "hydro": "monthly conventional baseline and finite HY/PS headroom; no reservoir or pumping schedule; EIA annual-respondent months are estimates",
+    "wind": "EIA active capacities, identical statewide capacity factor assumption; SouthFork is a subset of K, never additional",
+    "other": "EIA active capacity with geometric daylight for solar; category/BTM coverage remains approximate",
+    "inventory": "2025 early release; OP/SB eligible, OA/OS excluded; start-month excluded until next month, retirement-month excluded",
+    "qualification": "time/source/share arithmetic only; qualified prior is not a solved or capability-qualified dispatch"
+  },
+  "limitations": [
+    "Missing or unqualified P63/prior values remain NaN; no silent fill",
+    "EPA absent and blank reports do not establish zero observed electricity",
+    "EPA gross/CHP coverage differs from NYISO net generation; Riverbay excluded from grid shares but retained in gross ledger",
+    "Plant geography includes explicit site zones plus labeled county proxies",
+    "Cricket Valley and South Fork have no qualified full2019 electrical landing",
+    "Many-to-many thermal mapping, nonfossil aggregation, storage energy and hourly capability remain unresolved",
+    "Indian Point2/3 are excluded; absence from EPA alone is not used as a retirement proof",
+    "No 37-generator compact dispatch or scaling was read"
+  ],
+  "unmapped_positive_EPA_units": [
+    {
+      "facility_id": "2504",
+      "unit_id": "CT0002",
+      "facility_name": "74th Street",
+      "county": "New York County",
+      "positive_reported_gross_hours": 7
+    }
+  ],
+  "metadata_finalization_utc": "2026-10-10T06:20:53.600167+00:00",
+  "numerical_build_code_sha256": "aaa62a82b0cd086dd16c7178cfc385b4ecb799a060d1b44ecba953caaf6a9325",
+  "metadata_code_sha256": "5f92ac838610def5ca0335c5dc990f5f529e46a08f1041d0832b530ac230925c",
+  "metadata_only_revision_note": "After successful full numerical build, added explicit CricketValley commissioning citation and extra identity-input/code receipts; no numerical source or prior values changed."
+}

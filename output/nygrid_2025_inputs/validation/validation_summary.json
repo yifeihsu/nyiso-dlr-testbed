@@ -1,0 +1,1880 @@
+{
+  "passed": true,
+  "scope": "independent_input_accounting_validation_not_operating_case_qualification",
+  "hours": 8760,
+  "buses": 140,
+  "NY_buses": 46,
+  "external_buses": 94,
+  "reference_NY_snapshot_mw": 9561.0,
+  "actual_2025_NY_peak_mw": 31857.177300000003,
+  "gamma": 0.30012075175285535,
+  "fallback_zones": [
+    "J"
+  ],
+  "boundary_complete_hours": 8673,
+  "boundary_incomplete_hours": 87,
+  "generation": {
+    "statewide_fuel_hour_rows": 61320,
+    "zonal_prior_rows": 481800,
+    "qualified_zonal_prior_rows": 481173,
+    "qualified_hour_category_groups": 43743,
+    "unqualified_hour_category_groups": 57,
+    "EPA_hour_zone_rows": 105120,
+    "EPA_gross_is_not_reconciled_to_net_generation": true,
+    "observed_zonal_generation": false,
+    "complete_native_dispatch_available": false
+  },
+  "all_generation_priors_qualified_hours": 8743,
+  "boundary_and_generation_priors_qualified_hours": 8656,
+  "ready_for_dc_power_flow": false,
+  "ac_feasibility_validated": false,
+  "check_count": 289,
+  "checks": [
+    {
+      "check": "pinned_source:npcc.mat",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "pinned_source:npcc_new.csv",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "pinned_source:npcc.csv",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "operating_artifact_fingerprint",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "frozen_parent:bus",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "frozen_parent:gen",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "frozen_parent:branch",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "frozen_parent:dcline",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "frozen_parent_baseMVA",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "frozen_generator_categories",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "original_140_bus_IDs",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "annual_hour_indices",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "preserved_model_inventory",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "MAT_unqualified:ny_generation_dispatch_available",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "MAT_unqualified:ready_for_dc_power_flow",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "manifest_unqualified:topology_modified",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "manifest_unqualified:reference_is_measured_peak",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "manifest_unqualified:ny_generation_dispatch_available",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "manifest_unqualified:ready_for_dc_power_flow",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "manifest_unqualified:ac_feasibility_validated",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "manifest_unqualified:interface_calibration_performed",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "source_exact_physical_year_axis",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "MAT_exact_UTC_axis",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "hour_catalog_preserved",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "source_local_labels",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "source_time_zones",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "source_UTC_offsets_minutes",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "source_DST_folds",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "one_repeated_fall_label",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "no_nonexistent_spring_label",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_wide_UTC_order",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interfaces_wide_UTC_order",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "complete_finite_positive_load_source",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "NY_original_identity_count",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "source_mat_snapshot_anchor_9561",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "one_annual_scale_factor",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-14"
+    },
+    {
+      "check": "manifest_scale_factor",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-14"
+    },
+    {
+      "check": "manifest_reference_anchor",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "manifest_annual_peak",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "public_load_preserved",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "model_zonal_load_common_gamma",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "model_peak_equals_snapshot_anchor",
+      "passed": true,
+      "maximum_absolute_error": 1.8189894035458565e-12,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "all_NY_allocation_records_once",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "allocation_weights:A",
+      "passed": true,
+      "maximum_absolute_error": 9.71445146547012e-17,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "allocation_policy:A",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "bus_gross_allocation:A",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zone_gross_conservation:A",
+      "passed": true,
+      "maximum_absolute_error": 2.2737367544323206e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "allocation_weights:B",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "allocation_policy:B",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "bus_gross_allocation:B",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zone_gross_conservation:B",
+      "passed": true,
+      "maximum_absolute_error": 1.1368683772161603e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "allocation_weights:C",
+      "passed": true,
+      "maximum_absolute_error": 6.938893903907228e-17,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "allocation_policy:C",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "bus_gross_allocation:C",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zone_gross_conservation:C",
+      "passed": true,
+      "maximum_absolute_error": 1.1368683772161603e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "allocation_weights:D",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "allocation_policy:D",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "bus_gross_allocation:D",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zone_gross_conservation:D",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "allocation_weights:E",
+      "passed": true,
+      "maximum_absolute_error": 9.367506770274758e-17,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "allocation_policy:E",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "bus_gross_allocation:E",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zone_gross_conservation:E",
+      "passed": true,
+      "maximum_absolute_error": 5.684341886080802e-14,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "allocation_weights:F",
+      "passed": true,
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "allocation_policy:F",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "bus_gross_allocation:F",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zone_gross_conservation:F",
+      "passed": true,
+      "maximum_absolute_error": 1.1368683772161603e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "allocation_weights:G",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "allocation_policy:G",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "bus_gross_allocation:G",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zone_gross_conservation:G",
+      "passed": true,
+      "maximum_absolute_error": 1.1368683772161603e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "allocation_weights:H",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "allocation_policy:H",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "bus_gross_allocation:H",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zone_gross_conservation:H",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "allocation_weights:I",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "allocation_policy:I",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "bus_gross_allocation:I",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zone_gross_conservation:I",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "allocation_weights:J",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "allocation_policy:J",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "bus_gross_allocation:J",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zone_gross_conservation:J",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "allocation_weights:K",
+      "passed": true,
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "allocation_policy:K",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "bus_gross_allocation:K",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zone_gross_conservation:K",
+      "passed": true,
+      "maximum_absolute_error": 2.2737367544323206e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "only_J_uniform_fallback",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "NY_reactive_assumption",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "external_shape_ratio",
+      "passed": true,
+      "maximum_absolute_error": 3.3306690738754696e-16,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "external_gross_PD",
+      "passed": true,
+      "maximum_absolute_error": 6.821210263296962e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "external_QD_constant_snapshot_power_factor",
+      "passed": true,
+      "maximum_absolute_error": 1.7053025658242404e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "full_gross_peak_at_modified_NPCC_snapshot",
+      "passed": true,
+      "maximum_absolute_error": 3.637978807091713e-12,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "nonnegative_gross_PD",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "boundary_public_preserved",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "boundary_common_gamma",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "regional_schedule_accounting",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "four_DC_schedules_order_and_scale",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "four_DC_endpoint_identity",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "boundary_validity_mask",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "boundary_validity_count",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "243_NY_native_generation_rows_pending",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "external_generator_bus_lineage:ISONE",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "external_generator_allocation:ISONE",
+      "passed": true,
+      "maximum_absolute_error": 3.410605131648481e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "external_region_net_export:ISONE",
+      "passed": true,
+      "maximum_absolute_error": 2.2737367544323206e-12,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "external_generator_share_register:ISONE",
+      "passed": true,
+      "maximum_absolute_error": 8.326672684688674e-17,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "external_generator_bus_lineage:ONTARIO",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "external_generator_allocation:ONTARIO",
+      "passed": true,
+      "maximum_absolute_error": 6.821210263296962e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "external_region_net_export:ONTARIO",
+      "passed": true,
+      "maximum_absolute_error": 2.2737367544323206e-12,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "external_generator_share_register:ONTARIO",
+      "passed": true,
+      "maximum_absolute_error": 8.326672684688674e-17,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "external_generator_bus_lineage:PJM",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "external_generator_allocation:PJM",
+      "passed": true,
+      "maximum_absolute_error": 9.094947017729282e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "external_region_net_export:PJM",
+      "passed": true,
+      "maximum_absolute_error": 3.865352482534945e-12,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "external_generator_share_register:PJM",
+      "passed": true,
+      "maximum_absolute_error": 8.326672684688674e-17,
+      "detail": "tolerance 1e-12"
+    },
+    {
+      "check": "single_HQ_proxy",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "HQ_Cedars_not_double_counted",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "28_external_and_HQ_rows_once",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "external_generator_register_coverage",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_hourly_row_count_preserved",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_hourly_source_columns_preserved",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_hourly_source_UTC_indices",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_hourly_model_UTC_indices",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_hourly:source:timestamp_utc",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_hourly:source:zone",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_hourly:source:load_mw",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "load_hourly:scaled:load_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "load_hourly:source:minimum_source_load_mw",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "load_hourly:scaled:minimum_source_load_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "load_hourly:source:maximum_source_load_mw",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "load_hourly:scaled:maximum_source_load_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "load_hourly:source:source_rows",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "load_hourly:source:coverage_qualified",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_hourly:source:zone_name",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_hourly:source:hour_index",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "load_hourly:source:local_timestamp",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_hourly:source:time_zone",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "load_hourly:source:utc_offset_minutes",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "load_hourly:source:dst_fold",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "load_hourly_gamma",
+      "passed": true,
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "detail": "tolerance 1e-14"
+    },
+    {
+      "check": "load_long_complete_hour_zone_grid",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "all_load_hours_source_qualified",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "source_long_wide_load_agreement",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly_row_count_preserved",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly_source_columns_preserved",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly_source_UTC_indices",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly_model_UTC_indices",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:timestamp_utc",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:coverage_qualified",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:coverage_seconds",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:bracketed_seconds",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:maximum_bracketing_gap_seconds",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:interval_pieces_touching_duplicate_timestamp",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:maximum_duplicate_spread_mw",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:scaled:maximum_duplicate_spread_mw",
+      "passed": true,
+      "maximum_absolute_error": 5.684341886080802e-14,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:positive_limit_contains_sentinel",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:negative_limit_contains_sentinel",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:flow_mw",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:scaled:flow_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:flow_mw_covered_seconds",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:positive_limit_mw",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:positive_limit_model_usable",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:scaled:positive_limit_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:positive_limit_mw_covered_seconds",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:negative_limit_mw",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:negative_limit_model_usable",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:scaled:negative_limit_mw",
+      "passed": true,
+      "maximum_absolute_error": 5.684341886080802e-14,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:negative_limit_mw_covered_seconds",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:positive_limit_usable",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:negative_limit_usable",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:paper_arithmetic_mean_flow_mw",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:scaled:paper_arithmetic_mean_flow_mw",
+      "passed": true,
+      "maximum_absolute_error": 2.2737367544323206e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:raw_samples_in_hour",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:distinct_source_timestamps_in_hour",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:coverage_failure",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:channel",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:point_id",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:channel_kind",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:hour_index",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:local_timestamp",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:time_zone",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "interface_hourly:source:utc_offset_minutes",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly:source:dst_fold",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "interface_hourly_gamma",
+      "passed": true,
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "detail": "tolerance 1e-14"
+    },
+    {
+      "check": "P32_long_hour_channel_keys_unique",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "P32_long_complete_hour_channel_grid",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "source_long_wide_P32_agreement",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "P32_primary_missingness_follows_coverage",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "statewide_fuelmix_hourly_row_count_preserved",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "statewide_fuelmix_hourly_source_columns_preserved",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "statewide_fuelmix_hourly_source_UTC_indices",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "statewide_fuelmix_hourly_model_UTC_indices",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:hour_index",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:timestamp_utc",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:timestamp_local",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:time_zone",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:fuel_category",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:generation_mw",
+      "passed": true,
+      "maximum_absolute_error": 9.094947017729282e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "statewide_fuelmix_hourly:scaled:generation_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:coverage_seconds",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:coverage_qualified",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:max_gap_seconds",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:interval_count",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:covered_portion_mean_mw",
+      "passed": true,
+      "maximum_absolute_error": 9.094947017729282e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "statewide_fuelmix_hourly:scaled:covered_portion_mean_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:quantity_role",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "statewide_fuelmix_hourly:source:interval_policy",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "statewide_fuelmix_hourly_gamma",
+      "passed": true,
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "detail": "tolerance 1e-14"
+    },
+    {
+      "check": "zonal_generation_priors_row_count_preserved",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "zonal_generation_priors_source_columns_preserved",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "zonal_generation_priors_source_UTC_indices",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "zonal_generation_priors_model_UTC_indices",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "zonal_generation_priors:source:hour_index",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zonal_generation_priors:source:timestamp_utc",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "zonal_generation_priors:source:timestamp_local",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "zonal_generation_priors:source:time_zone",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "zonal_generation_priors:source:zone",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "zonal_generation_priors:source:fuel_category",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "zonal_generation_priors:source:prior_actual_mw",
+      "passed": true,
+      "maximum_absolute_error": 9.094947017729282e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zonal_generation_priors:scaled:prior_actual_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zonal_generation_priors:source:statewide_actual_mw",
+      "passed": true,
+      "maximum_absolute_error": 9.094947017729282e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zonal_generation_priors:scaled:statewide_actual_mw",
+      "passed": true,
+      "maximum_absolute_error": 9.094947017729282e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zonal_generation_priors:source:allocation_share",
+      "passed": true,
+      "maximum_absolute_error": 3.3881317890172014e-21,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zonal_generation_priors:source:allocation_qualified",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zonal_generation_priors:source:source_coverage_qualified",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zonal_generation_priors:source:allocation_method",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "zonal_generation_priors:source:observed_zonal_generation",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "zonal_generation_priors_gamma",
+      "passed": true,
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "detail": "tolerance 1e-14"
+    },
+    {
+      "check": "epa_zonal_hourly_row_count_preserved",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "epa_zonal_hourly_source_columns_preserved",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "epa_zonal_hourly_source_UTC_indices",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "epa_zonal_hourly_model_UTC_indices",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "epa_zonal_hourly:source:hour_index",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly:source:timestamp_utc",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "epa_zonal_hourly:source:timestamp_local",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "epa_zonal_hourly:source:time_zone",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "epa_zonal_hourly:source:zone",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "epa_zonal_hourly:source:all_reported_gross_clock_hour_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly:scaled:all_reported_gross_clock_hour_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly:source:grid_eligible_gross_clock_hour_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly:scaled:grid_eligible_gross_clock_hour_mw",
+      "passed": true,
+      "maximum_absolute_error": 4.547473508864641e-13,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly:source:source_unit_rows",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly:source:gross_present_rows",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly:source:gross_missing_rows",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly:source:reported_offline_gross_blank_rows",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly:source:active_unknown_gross_rows",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly:source:fuel_category",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "epa_zonal_hourly:source:observed_net_generation",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly:source:complete_grid_generation_coverage",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "epa_zonal_hourly_gamma",
+      "passed": true,
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "detail": "tolerance 1e-14"
+    },
+    {
+      "check": "fuelmix_category_inventory",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "fuelmix_complete_hour_category_grid",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "fuelmix_primary_missingness_follows_coverage",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "fuelmix_qualified_coverage_seconds",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "prior_zone_category_inventory",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "prior_complete_hour_zone_category_grid",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "no_observed_zonal_generation_claim",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "unqualified_priors_remain_missing",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "qualified_priors_finite",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "MAT_prior_fuel_order",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "MAT_statewide_fuel_inventory",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "MAT_source_zonal_generation_priors",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "MAT_scaled_zonal_generation_priors",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "MAT_generation_qualification_masks",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "MAT_source_statewide_generation",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "MAT_scaled_statewide_generation",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "prior_statewide_source_identity:Combined Fossil",
+      "passed": true,
+      "maximum_absolute_error": 3.637978807091713e-12,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "prior_coverage_identity:Combined Fossil",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "prior_statewide_source_identity:Nuclear",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "prior_coverage_identity:Nuclear",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "prior_statewide_source_identity:Hydro",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "prior_coverage_identity:Hydro",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "prior_statewide_source_identity:Wind",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "prior_coverage_identity:Wind",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "prior_statewide_source_identity:Other Renewables",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "prior_coverage_identity:Other Renewables",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "qualified_prior_sums_match_statewide_source",
+      "passed": true,
+      "maximum_absolute_error": 3.637978807091713e-12,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "qualified_allocation_shares_sum_to_one",
+      "passed": true,
+      "maximum_absolute_error": 8.881784197001252e-16,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "allocation_shares_nonnegative",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "allocation_shares_at_most_one",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "EPA_hour_zone_rows_unique",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "EPA_zone_inventory",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "EPA_gross_not_claimed_as_observed_net",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "EPA_panel_not_claimed_as_complete_grid_generation",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "EPA_nonnegative_counts:source_unit_rows",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "EPA_nonnegative_counts:gross_present_rows",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "EPA_nonnegative_counts:gross_missing_rows",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "EPA_nonnegative_counts:reported_offline_gross_blank_rows",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "EPA_nonnegative_counts:active_unknown_gross_rows",
+      "passed": true,
+      "maximum_absolute_error": null,
+      "detail": ""
+    },
+    {
+      "check": "EPA_present_missing_count_identity",
+      "passed": true,
+      "maximum_absolute_error": 0.0,
+      "detail": "tolerance 0"
+    }
+  ],
+  "files": [
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.mat",
+      "sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d",
+      "role": "pinned_source"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/load_hourly.csv",
+      "sha256": "63990e2c524bcf9bd98accb7f40fd777040a9912a7a36cfa4a47ff77ceb657b0",
+      "role": "source_table"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/load_hourly.csv",
+      "sha256": "8e164df86fa6bb6975ebbe31fa185950aa276c0907c63f0d2b4aefe10b4dd49f",
+      "role": "scaled_table"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_hourly.csv",
+      "sha256": "5188878f04e4743edd9c95416fe94240bd281a1acf8757f25a8aa911e5345631",
+      "role": "source_table"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/interface_hourly.csv",
+      "sha256": "f13f7cf053c648f717cebc76877c73909668fb900f2f089981438b3cb5a6c59d",
+      "role": "scaled_table"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/statewide_fuelmix_hourly.csv",
+      "sha256": "489638be51300391d808a39b829a85d09eb9a1997423fe2f24e684b024764ec8",
+      "role": "source_table"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/statewide_fuelmix_hourly.csv",
+      "sha256": "1eaa0a5480be79e2bfc8d1f9366e843e959512389c606a706190b79fdda5391f",
+      "role": "scaled_table"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/zonal_generation_priors.csv.gz",
+      "sha256": "aca0ba0b5bb866bfdc3b3d3a57ef15138ff7bc1324af975a7dcb76c970f7d450",
+      "role": "source_table"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/zonal_generation_priors.csv.gz",
+      "sha256": "9bc01498012677887e12dd7ca23276584654771ed9c734b70ed83865a82d4989",
+      "role": "scaled_table"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/epa_zonal_hourly.csv.gz",
+      "sha256": "e5a4e07fa7bf82f72d4c3a33313a56fe9eb90c787de1aacb6be59a7c0df39dd8",
+      "role": "source_table"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/epa_zonal_hourly.csv.gz",
+      "sha256": "e9669bf8fa0416946eeab9d31ca738bd53bcace316ee3b014deed74b2dba794f",
+      "role": "scaled_table"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b",
+      "role": "input_or_validation_code"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/scaling_manifest.json",
+      "sha256": "7782acce9d5c8d6c64a3805161de16c89d1b1ae007f81fe3a7f3dad169058158",
+      "role": "input_or_validation_code"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/bus_allocation.csv",
+      "sha256": "757fbe115e4ee517014dcda313d99005619cffa492cfb49f9c5e4226579489f1",
+      "role": "input_or_validation_code"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/external_generator_allocation.csv",
+      "sha256": "471ea55dc77808137342df764e89be6e4cededefdaad798e8687ebbe9ea42615",
+      "role": "input_or_validation_code"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/hour_catalog.csv",
+      "sha256": "96d4a0db424cbe1062b7c6b51d5f244a4de699679ad89428a8db3a992980f86a",
+      "role": "input_or_validation_code"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/load_wide.csv",
+      "sha256": "442435c39c3e1ca6ffdb867f5bbee34ba28d7ae764cf1777e83a84859d43c300",
+      "role": "input_or_validation_code"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f",
+      "role": "input_or_validation_code"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0",
+      "role": "input_or_validation_code"
+    },
+    {
+      "path": "scripts/nygrid_2025_inputs/validate_inputs.py",
+      "sha256": "07fc1aeb8ca194daa64c566e29acba848293b80bf2e0dd17039db2cf3c5387f7",
+      "role": "input_or_validation_code"
+    }
+  ]
+}

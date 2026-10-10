@@ -36,3 +36,8 @@ output/nygrid_2019_diagnostics/*.json -text whitespace=cr-at-eol
 output/nygrid_2019_diagnostics/*.ipynb -text whitespace=cr-at-eol
 output/nygrid_2019_diagnostics/raw_archives/*.json -text whitespace=cr-at-eol
 output/nygrid_2019_diagnostics/*.log -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# 2025 source/input manifests fingerprint exact bytes across platforms.
+scripts/nygrid_2025_inputs/** -text whitespace=cr-at-eol
+output/nygrid_2025_inputs/** -text whitespace=cr-at-eol
+output/nygrid_2025_inputs/**/*.log whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_operating_inputs.m" -text whitespace=cr-at-eol

@@ -1,0 +1,123 @@
+{
+  "model_year": 2025,
+  "hours": 8760,
+  "buses": 140,
+  "topology_modified": false,
+  "gamma": 0.30012075175285535,
+  "reference_ny_load_mw": 9561.0,
+  "annual_peak_public_mw": 31857.177300000003,
+  "annual_peak_timestamp_utc": "2025-06-24T22:00:00Z",
+  "scaling_policy": "single fixed annual gamma: original source NY snapshot / 2025 observed annual peak",
+  "reference_is_measured_peak": false,
+  "load_interval_assumption": "P58C labels treated as hour beginnings following prior empirical repository timing audit; not a provider integration specification",
+  "within_zone_policy": "pinned npcc_new positive shares; zero-load zone J uniform fallback",
+  "ny_q_policy": "gross load at assumed 0.98 lagging power factor; not observed",
+  "external_q_policy": "original signed QD times external load ratio; preserves snapshot Q/P",
+  "external_load_policy": "original abs(PD) times scaled NY gross total / 9561; regional proxy, not 2025 observations",
+  "generation_files": [
+    "statewide_fuelmix_hourly.csv",
+    "zonal_generation_priors.csv.gz",
+    "epa_zonal_hourly.csv.gz"
+  ],
+  "boundary_qualified_hours": 8673,
+  "missing_boundary_policy": "NaN retained; no interpolation or fill at compiler stage",
+  "generation_policy": "source priors only; 2025 fleet landing and bounded balanced dispatch pending",
+  "renewable_policy": "gross loads retained; no renewable subtraction until mapped exactly once",
+  "boundary_policy": "ten disjoint paper schedule channels; full external networks retained; DC transfers draw on same regional totals",
+  "reference_case_role": "frozen 2019 topology and generator row identities only, not a 2025 operating case",
+  "ny_generation_dispatch_available": false,
+  "ready_for_dc_power_flow": false,
+  "ac_feasibility_validated": false,
+  "interface_calibration_performed": false,
+  "provenance": [
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.mat",
+      "sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/channels.csv",
+      "sha256": "d151c3999afe8e73cf564a72936ecbeb4356a2483a93249780889cb480da8ee1"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/code_manifest.csv",
+      "sha256": "0f69c033563aaf6e5baaadf0066d0e720186201092808da397374f4314800ae5"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/hour_catalog.csv",
+      "sha256": "96d4a0db424cbe1062b7c6b51d5f244a4de699679ad89428a8db3a992980f86a"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_hourly.csv",
+      "sha256": "5188878f04e4743edd9c95416fe94240bd281a1acf8757f25a8aa911e5345631"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_quality_wide.csv",
+      "sha256": "4deee20774691c3193a5ecab239fc3d25878dec34c143ca90f1eb9d6ed158262"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/load_hourly.csv",
+      "sha256": "63990e2c524bcf9bd98accb7f40fd777040a9912a7a36cfa4a47ff77ceb657b0"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/load_wide.csv",
+      "sha256": "442435c39c3e1ca6ffdb867f5bbee34ba28d7ae764cf1777e83a84859d43c300"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/output_manifest.csv",
+      "sha256": "4b9c274aa0dcd0fa525c410103a270f22ec3d4b6219cd3b9080a4145f12f9c8f"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/p32_channel_quality.csv",
+      "sha256": "aebde98b156f3a6bf4706159670318d8caac558167f8655e23c56b0502d3a0f1"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/p32_duplicate_groups.csv",
+      "sha256": "1f8060a7eaf6c2eedb795a07eb870d82f53dd81c36db85fe14e5baf02643af44"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/p32_monthly_quality.csv",
+      "sha256": "1e7c12d45be986894332f1c8c62f3d59e937b41cbbd5ce75c389cd808dea0632"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/p32_timezone_resolution.csv",
+      "sha256": "2dca3a049cff9098402bf2199d933f7909e71d8f25a3a39265e3cd99f6a34e88"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/source_members.csv",
+      "sha256": "606667a7e416561249f9d2a6f30ba36a76f492e33f69afe3cc3fdca76b56f22d"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/source_receipts.csv",
+      "sha256": "2c6e28a7743c49bd8ee540a8ca7eac7ce4dd37f9a3af928540ac0b676b87fad9"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/unqualified_interface_hours.csv",
+      "sha256": "3c5c4afa4af6582108af154b56f347172c2480b793f7f4c8844ac572248cdbec"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/statewide_fuelmix_hourly.csv",
+      "sha256": "489638be51300391d808a39b829a85d09eb9a1997423fe2f24e684b024764ec8"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/zonal_generation_priors.csv.gz",
+      "sha256": "aca0ba0b5bb866bfdc3b3d3a57ef15138ff7bc1324af975a7dcb76c970f7d450"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/epa_zonal_hourly.csv.gz",
+      "sha256": "e5a4e07fa7bf82f72d4c3a33313a56fe9eb90c787de1aacb6be59a7c0df39dd8"
+    }
+  ],
+  "operating_inputs_sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b"
+}

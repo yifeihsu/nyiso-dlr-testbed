@@ -1,0 +1,413 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-10",
+  "upstream_commit": "47698b6c7823ae7b1bc6935e5601d5b64b8f918e",
+  "source_raw_case": {
+    "path": "tmp\\nygrid_2019_reproduction\\upstream\\Data\\npcc.mat",
+    "sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb",
+    "buses": 140,
+    "branches": 227,
+    "generators": 48,
+    "base_mva": 100,
+    "ny_buses": 46,
+    "external_buses": 94,
+    "ny_bus_ids": [
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82
+    ],
+    "ny_snapshot_load_anchor_mw": 9561.0,
+    "all_signed_pd_mw": 27689.0,
+    "all_absolute_pd_mw": 27969.0,
+    "external_signed_pd_mw": 18128.0,
+    "external_absolute_pd_mw": 18408.0,
+    "external_qd_mvar": 2350.0,
+    "ny_qd_mvar": 1716.5,
+    "negative_raw_loads": [
+      {
+        "bus_id": 95,
+        "pd_mw": -100.0,
+        "qd_mvar": 87.0
+      },
+      {
+        "bus_id": 96,
+        "pd_mw": -40.0,
+        "qd_mvar": -25.0
+      }
+    ],
+    "anchor_is_independently_observed_system_peak": false
+  },
+  "source_2019_annual_reference": {
+    "gross_NY": {
+      "minimum_mw": 11853.8,
+      "maximum_mw": 30396.9,
+      "mean_mw": 17789.1697716895,
+      "maximum_prepared_local_label": "2019-07-20 16:00:00",
+      "annual_nominal_mwh_sum": 155833127.20000002
+    },
+    "net_NY_after_wind_other": {
+      "minimum_mw": 10587.050000000003,
+      "maximum_mw": 29866.98333333333,
+      "mean_mw": 17025.985994316034,
+      "maximum_prepared_local_label": "2019-07-29 16:00:00",
+      "annual_nominal_mwh_sum": 149147637.31020844
+    },
+    "full_net_PD": {
+      "minimum_mw": 33474.177408220894,
+      "maximum_mw": 88364.8002144127,
+      "mean_mw": 51275.859141189816,
+      "maximum_prepared_local_label": "2019-07-29 16:00:00",
+      "annual_nominal_mwh_sum": 449176526.07682276
+    },
+    "gamma_if_2019_peak_normalized_to_source_anchor": 0.3145386536127039,
+    "time_scope": "released_8760_naive_local_labels_with_source_DST_processing"
+  },
+  "legacy_scale_not_transferred": {
+    "legacy_npcc_233_source_NY_snapshot_mw": 10902.2197987,
+    "legacy_source_path": "System Matpower Format/npcc_original.m",
+    "legacy_NY_total_over_source_mat_NY_total": 1.140280284353101,
+    "legacy_selected_2025_July_hour_load_mw": 30644.9878,
+    "legacy_compact_gamma": 0.355758660106238,
+    "selected_July_hour_not_assumed_annual_2025_peak": true
+  },
+  "selected_contract": {
+    "name": "one_constant_year_peak_factor_source_mat_NY_snapshot_anchor",
+    "gamma_formula": "9561 / max_t(sum_z(public_2025_hourly_gross_load_mw[t,z]))",
+    "annual_2025_peak_and_gamma_to_be_resolved_from_complete_validated_source": false,
+    "NY_model_gross_load": "gamma * public_zone_load, then fixed within-zone weights",
+    "source_and_model_units_retained_separately": true,
+    "per_zone_independent_normalization": false,
+    "per_hour_constant_total_normalization": false,
+    "generation_import_interface_scales": "use the same gamma exactly once for future 2025 generation and capability, external scheduled imports, DC schedules, and observed interface targets",
+    "external_pd_formula": "abs(raw_npcc_pd_i) * NY_model_gross_total_t / 9561",
+    "external_qd_formula": "raw_npcc_qd_i * NY_model_gross_total_t / 9561",
+    "external_qd_policy_change": "constant source Q/P within each external bus; differs from the paper code which kept external QD fixed",
+    "NY_qd_formula": "NY_model_bus_gross_pd * tan(acos(0.98))",
+    "renewable_netting": "not applied in this load-input stage; gross demand kept separate; future wind/other injections must use gamma once",
+    "external_generation_suggestion": "original 27 external generator participation within each external area times area_model_PD + gamma*nonoverlapping_public_regional_schedule, with HQ proxy and DC schedules separately counted as in released topology",
+    "NY_native_generation_status": "unpopulated; no 2025 complete dispatch or operating feasibility inferred",
+    "ready_for_dc_power_flow": false,
+    "topology_impedance_transform": "none in load preparation; baseMVA100 and original branch R/X/B remain reference data",
+    "bound_and_thermal_scope": "future benchmark capability and finite rating conventions require explicit consistent policy; scaled MW currents are not installed-conductor current validation",
+    "resolved_gamma_2025": 0.30012075175285535
+  },
+  "within_zone_allocation": [
+    {
+      "zone": "A",
+      "bus_ids": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "source_raw_snapshot_pd_mw": 2397.0,
+      "positive_weight_sum": 23.97,
+      "allocation_policy": "positive_npcc_new_weights_normalized",
+      "allocation_weights": {
+        "54": 0.008343763037129744,
+        "55": 0.39173967459324155,
+        "56": 0.0717563621193158,
+        "57": 0.10012515644555693,
+        "58": 0.03504380475594493,
+        "59": 0.2941176470588235,
+        "61": 0.09887359198998748
+      }
+    },
+    {
+      "zone": "B",
+      "bus_ids": [
+        52,
+        53,
+        62
+      ],
+      "source_raw_snapshot_pd_mw": 923.0,
+      "positive_weight_sum": 9.23,
+      "allocation_policy": "positive_npcc_new_weights_normalized",
+      "allocation_weights": {
+        "52": 0.2112676056338028,
+        "53": 0.7887323943661971
+      }
+    },
+    {
+      "zone": "C",
+      "bus_ids": [
+        50,
+        51,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        70,
+        71,
+        72
+      ],
+      "source_raw_snapshot_pd_mw": 1547.0,
+      "positive_weight_sum": 15.469999999999999,
+      "allocation_policy": "positive_npcc_new_weights_normalized",
+      "allocation_weights": {
+        "51": 0.4725274725274725,
+        "64": 0.09243697478991597,
+        "65": 0.05882352941176471,
+        "68": 0.13639301874595994,
+        "71": 0.2398190045248869
+      }
+    },
+    {
+      "zone": "D",
+      "bus_ids": [
+        48,
+        49
+      ],
+      "source_raw_snapshot_pd_mw": 208.0,
+      "positive_weight_sum": 2.08,
+      "allocation_policy": "positive_npcc_new_weights_normalized",
+      "allocation_weights": {
+        "49": 1.0
+      }
+    },
+    {
+      "zone": "E",
+      "bus_ids": [
+        38,
+        43,
+        44,
+        45,
+        46,
+        47,
+        69
+      ],
+      "source_raw_snapshot_pd_mw": 807.0,
+      "positive_weight_sum": 8.07,
+      "allocation_policy": "positive_npcc_new_weights_normalized",
+      "allocation_weights": {
+        "45": 0.31722428748451054,
+        "46": 0.028500619578686492,
+        "47": 0.654275092936803
+      }
+    },
+    {
+      "zone": "F",
+      "bus_ids": [
+        37,
+        40,
+        41,
+        42
+      ],
+      "source_raw_snapshot_pd_mw": 877.0,
+      "positive_weight_sum": 8.77,
+      "allocation_policy": "positive_npcc_new_weights_normalized",
+      "allocation_weights": {
+        "41": 0.798175598631699,
+        "42": 0.20182440136830104
+      }
+    },
+    {
+      "zone": "G",
+      "bus_ids": [
+        39,
+        73,
+        75,
+        76,
+        77
+      ],
+      "source_raw_snapshot_pd_mw": 0.0,
+      "positive_weight_sum": 5.0,
+      "allocation_policy": "positive_npcc_new_weights_normalized",
+      "allocation_weights": {
+        "39": 0.2,
+        "73": 0.2,
+        "75": 0.1,
+        "76": 0.1,
+        "77": 0.4
+      }
+    },
+    {
+      "zone": "H",
+      "bus_ids": [
+        74
+      ],
+      "source_raw_snapshot_pd_mw": 102.0,
+      "positive_weight_sum": 1.02,
+      "allocation_policy": "positive_npcc_new_weights_normalized",
+      "allocation_weights": {
+        "74": 1.0
+      }
+    },
+    {
+      "zone": "I",
+      "bus_ids": [
+        78
+      ],
+      "source_raw_snapshot_pd_mw": 2000.0,
+      "positive_weight_sum": 20.0,
+      "allocation_policy": "positive_npcc_new_weights_normalized",
+      "allocation_weights": {
+        "78": 1.0
+      }
+    },
+    {
+      "zone": "J",
+      "bus_ids": [
+        81,
+        82
+      ],
+      "source_raw_snapshot_pd_mw": 0.0,
+      "positive_weight_sum": 0,
+      "allocation_policy": "equal_within_zone_zero_reference_weight_fallback",
+      "allocation_weights": {
+        "81": 0.5,
+        "82": 0.5
+      }
+    },
+    {
+      "zone": "K",
+      "bus_ids": [
+        79,
+        80
+      ],
+      "source_raw_snapshot_pd_mw": 700.0,
+      "positive_weight_sum": 7.0,
+      "allocation_policy": "positive_npcc_new_weights_normalized",
+      "allocation_weights": {
+        "79": 0.42857142857142855,
+        "80": 0.5714285714285714
+      }
+    }
+  ],
+  "full_2019_fleet_reference": {
+    "NY_native": {
+      "records": 243,
+      "source_2019_first_hour_pmax_mw": 36763.899999999994,
+      "source_2019_first_hour_pmin_mw": 5190.200000000001,
+      "records_with_9999_reactive_placeholders": 243
+    },
+    "NY_HQ_proxy": {
+      "records": 1,
+      "source_2019_first_hour_pmax_mw": 1500.0,
+      "source_2019_first_hour_pmin_mw": -1100.0,
+      "records_with_9999_reactive_placeholders": 1
+    },
+    "external_generators": {
+      "records": 27,
+      "source_2019_first_hour_pmax_mw": 45792.82228609013,
+      "source_2019_first_hour_pmin_mw": 0.0,
+      "records_with_9999_reactive_placeholders": 2
+    },
+    "NY_nuclear": {
+      "records": 6,
+      "source_2019_first_hour_pmax_mw": 5430.0,
+      "source_2019_first_hour_pmin_mw": 0.0,
+      "records_with_9999_reactive_placeholders": 6
+    },
+    "NY_hydro": {
+      "records": 10,
+      "source_2019_first_hour_pmax_mw": 4269.700000000001,
+      "source_2019_first_hour_pmin_mw": 0.0,
+      "records_with_9999_reactive_placeholders": 10
+    },
+    "NY_thermal": {
+      "records": 227,
+      "source_2019_first_hour_pmax_mw": 27064.199999999997,
+      "source_2019_first_hour_pmin_mw": 5190.200000000001,
+      "records_with_9999_reactive_placeholders": 227
+    }
+  },
+  "raw_48_generator_capability_warning": {
+    "all_pmax_total_mw": 479952.0,
+    "all_records_pmax_equal_9999": true,
+    "use_as_physical_capacity_anchor": false
+  },
+  "growth_comparison_note": "normalizing each vintage to9561 preserves within-year shapes but removes interannual peak growth; use a single common reference-year gamma across vintages if preserving absolute load growth is an objective",
+  "sources": [
+    {
+      "path": "tmp\\nygrid_2019_reproduction\\upstream\\Data\\npcc.mat",
+      "sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb"
+    },
+    {
+      "path": "tmp\\nygrid_2019_reproduction\\upstream\\Data\\npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "tmp\\nygrid_2019_reproduction\\upstream\\Data\\npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042"
+    },
+    {
+      "path": "tmp\\nygrid_2019_reproduction\\upstream\\Data\\loadHourly_2019.csv",
+      "sha256": "677ce71d73fc800b3b938a75b9f7797e4a3f8a97e992518d0d1f8f5f3bf96f62"
+    },
+    {
+      "path": "tmp\\nygrid_2019_reproduction\\upstream\\modifyMPC.m",
+      "sha256": "a81ead508d7c9c3a7fa807236da2ee897357c92e8af0bb97d0c2c0125ffe3bbf"
+    },
+    {
+      "path": "tmp\\nygrid_2019_reproduction\\upstream\\Utility\\allocateLoad.m",
+      "sha256": "6eda67f10f47561dab120f18796a91b0477facc9732296be2a80ecfe7f2dbd29"
+    },
+    {
+      "path": "output\\nygrid_2019_full_stage1\\full_year.mat",
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0"
+    }
+  ],
+  "source_2025_annual_reference": {
+    "unscaled_peak_gross_NY_mw": 31857.177300000003,
+    "peak_timestamp_utc": "2025-06-24T22:00:00Z",
+    "peak_local_timestamp": "2025-06-24T18:00:00",
+    "peak_time_zone": "EDT",
+    "unscaled_mean_gross_NY_mw": 17305.22220035388,
+    "unscaled_minimum_gross_NY_mw": 11060.559000000001,
+    "unscaled_physical_hour_energy_sum_mwh": 151593746.47509998,
+    "gamma_2025": 0.30012075175285535,
+    "complete_physical_hours": 8760,
+    "source_path": "output\\nygrid_2025_inputs\\load_source\\load_wide.csv",
+    "source_sha256": "442435c39c3e1ca6ffdb867f5bbee34ba28d7ae764cf1777e83a84859d43c300"
+  }
+}

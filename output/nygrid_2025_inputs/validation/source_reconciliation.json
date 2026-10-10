@@ -1,0 +1,17 @@
+{
+  "meaning": "Source reconciliation: statewide reported generation + ten scheduled import channels - gross NYISO load; not a power-flow balance",
+  "finite_reconciliation_hours": 8663,
+  "joint_prior_and_boundary_qualified_hours": 8656,
+  "mean_public_mw": 92.93124956648273,
+  "mean_absolute_public_mw": 121.97696267715816,
+  "minimum_public_mw": -760.8839555555587,
+  "maximum_public_mw": 2440.609833333332,
+  "gamma": 0.30012075175285535,
+  "residual_assigned_to_generator": false,
+  "possible_sources": [
+    "scheduled rather than actual interchange",
+    "system loss and reporting scope differences",
+    "declared timing/aggregation conventions"
+  ],
+  "causal_attribution_established": false
+}
