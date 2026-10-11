@@ -1,0 +1,78 @@
+{
+  "status": "complete_fixed_dispatch_slim_replay",
+  "original_buses": 140,
+  "added_buses": 8,
+  "total_buses": 148,
+  "original_NY_buses": 46,
+  "result_NY_buses": 54,
+  "external_buses": 94,
+  "qualified_hours": 8663,
+  "missing_source_hours": 97,
+  "inputs_redispatched_or_relocated": false,
+  "observations_used_for_construction": false,
+  "interface_definition": "recovered191buslegacyzonefunctionals;not_naive_reduced_graph_cut",
+  "variants": [
+    {
+      "variant": "topology_dated",
+      "qualified_hours": 8663,
+      "missing_source_hours": 97,
+      "buses": 148,
+      "added_buses": 8,
+      "branch_records": 274,
+      "reference_variant": "upgrades_dated",
+      "file": "output/nygrid_2025_slim/replay/topology_dated.mat",
+      "sha256": "7d86bea37e48f392a61b52b291e3e46638c56f50202d7fccf3688bb75a4b47b9",
+      "reference_file": "output/nygrid_2025_downstate/replay/upgrades_dated.mat",
+      "reference_sha256": "c9da03615b3bcbff1eaa7ddf1031e1f5c26c82587774ba29dc964afac2bcaf5e",
+      "maximum_nodal_residual_mw": 2.688693712116219e-11,
+      "maximum_slack_change_mw": 3.433342499192804e-11,
+      "maximum_reference_interface_error_mw": 2.4203927750932053e-10,
+      "maximum_reference_recovered_branch_error_mw": 1.1874590200022794e-10,
+      "maximum_reference_angle_error_deg": 5.172751116333529e-12
+    },
+    {
+      "variant": "topology_year_end",
+      "qualified_hours": 8663,
+      "missing_source_hours": 97,
+      "buses": 148,
+      "added_buses": 8,
+      "branch_records": 274,
+      "reference_variant": "upgrades_year_end",
+      "file": "output/nygrid_2025_slim/replay/topology_year_end.mat",
+      "sha256": "fcfaa0158711b1e0318ac24b3d19250c481bbf142dbe57ba30f426d41ec23baa",
+      "reference_file": "output/nygrid_2025_downstate/replay/upgrades_year_end.mat",
+      "reference_sha256": "2c28b3331310eabf471f1981a0f0f8a386ae841cd0bf3b69e214880e9ce243bc",
+      "maximum_nodal_residual_mw": 2.5266899683629163e-11,
+      "maximum_slack_change_mw": 2.4556356947869062e-11,
+      "maximum_reference_interface_error_mw": 2.9456259653670713e-10,
+      "maximum_reference_recovered_branch_error_mw": 1.4267698134062812e-10,
+      "maximum_reference_angle_error_deg": 6.487255177489715e-12
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/provenance.json",
+      "sha256": "e3483bafbae201fab4d2ce5c9ca3fe323ca7f98cea586a57484352d093667aee"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "scripts/nygrid_2025_slim/replay_slim.py",
+      "sha256": "dc663e734549945f93d73993bceaa5d3163cb991e63bc3c73f27bc9dc318d025"
+    },
+    {
+      "path": "scripts/nygrid_2019/replay_dc.py",
+      "sha256": "bf48540453c4ab8191b6b8e2cb65d8248acaae425b154ab85f6d182be3e57434"
+    }
+  ]
+}

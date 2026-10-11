@@ -59,3 +59,9 @@ output/nygrid_2025_downstate/sources/raw/** -diff whitespace=-blank-at-eol,-blan
 NYGRID_2025_DOWNSTATE_REFINEMENT.md -text whitespace=cr-at-eol
 # Preserve native matplotlib SVG path whitespace and audited render bytes.
 output/nygrid_2025_downstate/geography/figures/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Separate small-bus DC alternative and its exact-byte validation evidence.
+scripts/nygrid_2025_slim/** -text whitespace=cr-at-eol
+output/nygrid_2025_slim/** -text whitespace=cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_slim_dc.m" -text whitespace=cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_slim_interfaces.m" -text whitespace=cr-at-eol
+NYGRID_2025_SLIM_DOWNSTATE.md -text whitespace=cr-at-eol
