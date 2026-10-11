@@ -1,7 +1,7 @@
 {
   "status": "verified_current_research_delivery",
-  "files": 166,
-  "total_bytes": 297730743,
+  "files": 223,
+  "total_bytes": 307053885,
   "maximum_file_bytes": 34900766,
   "baseline_files_modified": false,
   "physical_2025_model_certification": false,
@@ -9,8 +9,8 @@
   "entries": [
     {
       "path": "NYGRID_2025_DOWNSTATE_REFINEMENT.md",
-      "bytes": 13700,
-      "sha256": "88439b8f111bef39803b5875e4b114e38e34f67d169a8f2984b68d7c61af3761"
+      "bytes": 14069,
+      "sha256": "264048ab280acf41dda8326b193f08a1774b8e9d52a473d3644b923295dcd526"
     },
     {
       "path": "output/nygrid_2025_downstate/comparison/downstate_error_comparison.pdf",
@@ -206,6 +206,271 @@
       "path": "output/nygrid_2025_downstate/diagrams/README.md",
       "bytes": 3502,
       "sha256": "c20819933e2aa2fe07b73c30bc04758e4e9d3446d2f8d9d1f7273111b5407059"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/basemap_receipt.json",
+      "bytes": 2356,
+      "sha256": "d12a48b550b44db1c5968697b6e6f98f32a35a56818d685be22aefbe876fb38b"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_admin_1_states_provinces_lines_npcc.geojson",
+      "bytes": 64837,
+      "sha256": "908078a62f09080b9100423639245459e0e91880a316a50399b8d5f38cb8e6f6"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_lakes_npcc.geojson",
+      "bytes": 143548,
+      "sha256": "5647268771afe6b49e8de6620bd7aa4cca6b5976492090a7bcc1bceacf4c4737"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_land_npcc.geojson",
+      "bytes": 112161,
+      "sha256": "149ff4f15aa36650d87726349c14e8eac5246638554e46ce86fd672b8c2a5bbe"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/bus_geographic_register.csv",
+      "bytes": 72924,
+      "sha256": "7aaedd8f68e6c1a9d2c13cf19158abe604a57c669ef1c3aa7e07df2e33476973"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_downstate_atlas.pdf",
+      "bytes": 51080,
+      "sha256": "16dc996e4a4dbf2ae49af56976cc67c5967edb7b79fe8086d2d114c03892e413"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_downstate_atlas.png",
+      "bytes": 1114953,
+      "sha256": "1047b45052db60dd6e12dedb0f261994ac90633b73f9fc7fc6c93cc95df30649"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_downstate_atlas.svg",
+      "bytes": 150624,
+      "sha256": "2e61706c53369d109ba8c6e822d263aba06e4c667a9ff75d0b66a5d76fee55df"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_full_npcc.pdf",
+      "bytes": 172570,
+      "sha256": "678c485d77377fd445b7910870a1d1ca674424908a12fb9c0cbe113ddcf654d5"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_full_npcc.png",
+      "bytes": 1734983,
+      "sha256": "795ebb3eb60541cf4c3553a3e725a055316699976758f56d58192894f557b96c"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_full_npcc.svg",
+      "bytes": 580816,
+      "sha256": "8496fe4c5411154d7c210c68718e8cd930cb1df5f182be54fa327e608692eff8"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_nyc_detail.pdf",
+      "bytes": 31061,
+      "sha256": "92947afe90ce8359b3ffa1e1a7f3412bacb2ea81c8c7090099a07a726ac4fd1f"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_nyc_detail.png",
+      "bytes": 745815,
+      "sha256": "373419c882f353827c5b68a2e362c4a1aa93f2aa4f7838e40c3f3f77cbd63d96"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_nyc_detail.svg",
+      "bytes": 69203,
+      "sha256": "11be9606d8d732efd057a3838f5779d9223045ea0845efc6a9fbfcaf36193909"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/geographic_connections.geojson",
+      "bytes": 267563,
+      "sha256": "878a7a6ab4e07fd816c8b6e23b2e7bdea9863aca08a706163009f0e3c9bcd2dc"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/geographic_nodes.geojson",
+      "bytes": 136050,
+      "sha256": "f8a151d77f2eabc548e9c9783a01096c41854b344d4d085b841a7b5d88c6b189"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/geographic_validation.json",
+      "bytes": 19354,
+      "sha256": "99f057075c32eea20f510e58101539219eb4a9d82a91ae39bec1fa05df66bed5"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/independent_geographic_validation.json",
+      "bytes": 7538,
+      "sha256": "13cae468a23390e569790b2b8bfde2b23e268b7374f93a42d4e4d40adb191497"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/README.md",
+      "bytes": 7256,
+      "sha256": "ae5fd0a6d485632fa6f2d28f04a24fc2f8e08ead72232eea2681b77bfb192a90"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_historical/coordinate_receipt.json",
+      "bytes": 2088,
+      "sha256": "ef77880c5162a9e481e29b14434ae25687dcca159ff0b0763a47d02d5d4fee8e"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_historical/historical_station_coordinates.csv",
+      "bytes": 20390,
+      "sha256": "b817e5649175b75e33af3d707bd25508b1527d34611e07f534a58d8afce80892"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_historical/original_anchor_coordinates.csv",
+      "bytes": 5932,
+      "sha256": "52216df9432a3d685239de6d760404a3258e940c644f5b3b26222d4a8c65d5c6"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_historical/original_anchor_receipt.json",
+      "bytes": 2489,
+      "sha256": "b150b8a3e41bf749221f31163a8d47f2651ea8ab6437af85bd9580bba78febbb"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_historical/raw_receipts/eversource_southington.json",
+      "bytes": 1207,
+      "sha256": "d7fe3ee646cd796aaeab484e4216ee3c470247410354c66201efae82387d7e00"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_historical/raw_receipts/eversource_southington_receipt.json",
+      "bytes": 738,
+      "sha256": "fce6c92f81172b50fc4e70d819a4d0fa904c4f7412bcf78de9654f296b045e2a"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_historical/zone_metadata_conflicts.csv",
+      "bytes": 380,
+      "sha256": "b4349bc8f234d4f41d2c5d4ecc44b89b3eae3e552ff69bc845dc10f6be33b3bb"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/coordinate_source_receipts.csv",
+      "bytes": 4796,
+      "sha256": "f5795b2b6d7a708e9ef339528fe42f5a52c21ab7c3f99d25eb9da2ef1ced0e85"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/coordinate_summary.json",
+      "bytes": 20616,
+      "sha256": "19fea8eaa9ba1221a50e734b9f2787763c8f489c65272b6a1192911849aa1207"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/cv_dover_bbox.json",
+      "bytes": 497874,
+      "sha256": "c465e021ad3161eba71e966b9d2bfbc895733aa0367bec60ee65261ec8086c16"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/dover_address_census.json",
+      "bytes": 655,
+      "sha256": "a417ae4f672b62225129817d4229db1d2e98b55bcb1c26e1826b9f469270281b"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/dover_address_nominatim.json",
+      "bytes": 748,
+      "sha256": "f728f9011f2b436809efef64c76c9b5a2f5ef4a4de4f126681b3a3130c352afe"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/east_hampton_bbox.json",
+      "bytes": 923045,
+      "sha256": "5689bc2be6c5ad8ff6552dbaaa22586cc2930d9dbc5916dee3242eeb0628fdab"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/knicker_osm_way.json",
+      "bytes": 1631,
+      "sha256": "409b4e60cb79dda47b9a3ea8a45abd12ea9dd0b3076edd33bbf5277ae1809f30"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/local_coordinate_crosscheck.csv",
+      "bytes": 1076,
+      "sha256": "5b71052a8f1be5bdc3d653fda589791cc4d81b967ae42248fdaabd26eaa30ea6"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/long_mountain_bbox.json",
+      "bytes": 697088,
+      "sha256": "be44e2dd09dbaacffe5c1a57128258d6a84ccd608e987a6fadc550683eb0b5b3"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/long_mountain_geocode.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/northport_bbox.json",
+      "bytes": 1541739,
+      "sha256": "1f876e75a02e9532804ece9c890531a00b3abda7fdeaadecb5fa799ef7e3077b"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_nyc_overpass.json",
+      "bytes": 2965,
+      "sha256": "444409ed4afb351a349db33e3a461b1dad700649774d7958dc0208da6c73ff21"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_nyc_query.txt",
+      "bytes": 155,
+      "sha256": "958c94b65dc8e40938bea56ac4ee16cb9933b9e1589f72385e49b631868542c7"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_1075629718.json",
+      "bytes": 2344,
+      "sha256": "9dddb6670e752a9351b439e005451a4b05836f2ed76764150c5b2782ab38027b"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_108298302.json",
+      "bytes": 2965,
+      "sha256": "95241448bfc43c75dd3539e8651bc57e978cc6b439d6f0c973c97e81eb8b7bd2"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_1221667976.json",
+      "bytes": 1628,
+      "sha256": "1b8ba389e0f805059b6f4f4bd8b6b9e580f9a60b6c8c3da62d8b0305dfc1a443"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_139896636.json",
+      "bytes": 2167,
+      "sha256": "9e4fb3afd961628be3f0c786a07b6b26913e3c73ca5f5db8fe5b502d5186ddcf"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_374846762.json",
+      "bytes": 2055,
+      "sha256": "a2bf734f2fa41e85eceeddee5b5a3ad4dfd7cda2a80e2b1ea06f1b71c2265f5d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_383102699.json",
+      "bytes": 3255,
+      "sha256": "5ad293f5497a9497e3949e2ea83d5b30cbf975c2c2cdb77c65517b192cea4ad5"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_383102712.json",
+      "bytes": 3303,
+      "sha256": "828723cc24168b0578a5c843869a0a72d810e4336993d92aea0389f512084e8f"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_383102717.json",
+      "bytes": 3713,
+      "sha256": "979344cdce383668e9424902918a080bc3c04fcbb87e49a780880ffa193dfdb7"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_383102723.json",
+      "bytes": 3750,
+      "sha256": "c358b6f2f19f994183296ef48634530cd35e8524b55c9b09a96a009b1dd620a6"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_588777274.json",
+      "bytes": 1638,
+      "sha256": "fd6992c02ed5545a719698007e4c086fbf615250225bbdbd98ea91bd07ba1691"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_83199928.json",
+      "bytes": 1655,
+      "sha256": "0d91dfba31219170c7f7fddbeab9e04438dbf71eb4b10fd264f4a036fa81b4dd"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/project_station_coordinates.csv",
+      "bytes": 10521,
+      "sha256": "c8e143d16b261ef8e348d7b3168bc475a301c96352d623ca26331276d8729659"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/rejected_coordinate_candidates.csv",
+      "bytes": 277,
+      "sha256": "c0d581759d0a7a5aec6805f18ebdbca34dd5a55a52090123dfe41d6cbb4ec9f5"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/station_footprints.geojson",
+      "bytes": 16567,
+      "sha256": "4f3a504548fc53f8bcdf03c1d2703c9dac9a3955ef303ba38ad3e9725cee7c0c"
     },
     {
       "path": "output/nygrid_2025_downstate/network/branch_register.csv",
@@ -768,6 +1033,16 @@
       "sha256": "592f52d15602e2470bce82fd36b1bd0177b67873decc22b18815384f357192b4"
     },
     {
+      "path": "scripts/nygrid_2025_downstate/build_geographic_diagrams.py",
+      "bytes": 24190,
+      "sha256": "b345e787d938b808f44b7fbe3b252a69a9de657e949b09ca9515af18c62615b3"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/build_historical_geography.py",
+      "bytes": 15574,
+      "sha256": "c4f4082c092db19721242453030eb1a69404126bd4316049d29e532ada55ed40"
+    },
+    {
       "path": "scripts/nygrid_2025_downstate/build_network.py",
       "bytes": 39422,
       "sha256": "5b4626d91eeab7c0aa0be5e59a06db140502c8da715cbfc89295f2cc209115ec"
@@ -783,14 +1058,24 @@
       "sha256": "37dc558c1d8aa0059f5242503c09e8585723fd8e57ef6afa2fd64420888afd11"
     },
     {
+      "path": "scripts/nygrid_2025_downstate/geo_source_projects.py",
+      "bytes": 12991,
+      "sha256": "8eaf204eaecd6b5987dc8a0b8be35b002348dee70f8fd7d3d6c6fc13575b55d6"
+    },
+    {
       "path": "scripts/nygrid_2025_downstate/parameter_sensitivity.py",
       "bytes": 20587,
       "sha256": "e860fffa4b045e3dd30104f2f084053b8d60025d8279838c8535ce7df8039ed9"
     },
     {
+      "path": "scripts/nygrid_2025_downstate/prepare_geographic_basemap.py",
+      "bytes": 3583,
+      "sha256": "fcb066f6d7a39f3c481636097e876535195b9f2a9d70f3164ad694e00b2d4811"
+    },
+    {
       "path": "scripts/nygrid_2025_downstate/README.md",
-      "bytes": 5325,
-      "sha256": "7aee8e4d4b92aec30a786fd05e099fd69402d2f7890e6623997f5014cfbbb12a"
+      "bytes": 5616,
+      "sha256": "a09b6ea0c4859580ec6f842eb0a4f27ff38f48a8e27caa15c1bcaa8f558b8b4c"
     },
     {
       "path": "scripts/nygrid_2025_downstate/replay_refinement.py",

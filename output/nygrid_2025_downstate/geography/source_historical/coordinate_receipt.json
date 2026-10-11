@@ -1,0 +1,47 @@
+{
+  "status": "complete_source_coordinate_extraction",
+  "source_terminal_rows": 38,
+  "distinct_geographic_points": 30,
+  "directly_recorded_coordinates": 38,
+  "imputed_coordinates": 0,
+  "unnamed_or_tap_identity_rows": 6,
+  "source_zone_conflicts": 5,
+  "zone_policy": "electrical_source_zones_preserved;GIS_H_vs_I_error_not_propagated",
+  "coordinates_match_both_local_workbooks": true,
+  "coordinate_formulas": 0,
+  "network_sha256_before": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+  "network_sha256_after": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+  "original_parent_coordinates_modified": false,
+  "limitations": [
+    "Coordinates are the historical PERFORM GIS points, not newly surveyed 2025 station coordinates",
+    "Worksheet does not declare CRS, positional accuracy or GIS update vintage",
+    "UNKNOWN/TAP labels remain unresolved physical identities despite recorded GIS positions"
+  ],
+  "source_receipts": [
+    {
+      "role": "primary_GIS_source_workbook",
+      "path": "PERFORM/Auxilliary_Perform_NY/NYISO_MOD2MAP.xlsx",
+      "sha256": "4fe4e89009f70e8a31ea73dd14b9f22ef97121d92b99ab8a1f59aec29eef33ec"
+    },
+    {
+      "role": "independent_existing_workbook_copy",
+      "path": "PERFORM/Auxilliary_Perform_NY/internal_NYISO_MOD2MAP.xlsx",
+      "sha256": "f249faa5ed369f8a2fa7b94b7746e245b3a9dda56d983fad9c75a52d26ae92be"
+    },
+    {
+      "role": "frozen_electrical_bus_identity",
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27"
+    },
+    {
+      "role": "frozen_network_unchanged",
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "role": "extractor",
+      "path": "scripts/nygrid_2025_downstate/build_historical_geography.py",
+      "sha256": "c4f4082c092db19721242453030eb1a69404126bd4316049d29e532ada55ed40"
+    }
+  ]
+}

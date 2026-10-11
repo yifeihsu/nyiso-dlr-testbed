@@ -23,6 +23,12 @@ show all 51 added buses with names and voltage levels, added source/assumed
 connections, and the nine replaced original branches. Full-NPCC and three
 regional views are available as SVG, PDF and PNG.
 
+The [geographic atlas](output/nygrid_2025_downstate/geography/README.md) adds
+source-backed positions for all 51 additions, coastal/state context, and an
+enlarged NYC view. It distinguishes historical GIS points, station-footprint
+centroids and Dover's address-level approximation. Three unlocated original
+aggregate buses remain in a clearly labeled schematic inset.
+
 ## What was constructed
 
 The parent is commit `c7874aa90fec1d4e883814297e91bfcd3567bdf2`: the modified-2019

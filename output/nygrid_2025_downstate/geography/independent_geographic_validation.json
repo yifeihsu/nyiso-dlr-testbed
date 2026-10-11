@@ -1,0 +1,210 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-11T01:15:55.669141+00:00",
+  "method": "Independent source workbook XML, CSV identity joins, pyproj transform and rendered SVG pixel-anchor audit; renderer not imported or rerun",
+  "total_buses": 191,
+  "added_coordinates": 51,
+  "historical_exact_workbook_coordinates": 38,
+  "project_csv_coordinates": 13,
+  "parent_anchor_overrides": [
+    35,
+    39,
+    73,
+    74,
+    76,
+    77,
+    80,
+    81
+  ],
+  "canonical_Goethals81_equals_project20010": true,
+  "nongeographic_proxies": [
+    78,
+    79,
+    82
+  ],
+  "PAR_host_overrides_raw_coordinates_preserved": true,
+  "maximum_projection_error_km": 0,
+  "maximum_svg_marker_error_points": 1.0297825567222691e-06,
+  "all_51_added_ids_names_kV_labeled_across_atlas_geographic_panels": true,
+  "replaced_branches_total": 9,
+  "replaced_geographic_map": 4,
+  "replaced_nongeographic_inset": 5,
+  "svg_audit": [
+    {
+      "file": "geographic_downstate_atlas.svg",
+      "maps": [
+        {
+          "axis": "axes_1",
+          "point_count": 59,
+          "labeled_count": 15,
+          "individual_branch_records": 123,
+          "replaced_parent_keys": [
+            "PARENT:32",
+            "PARENT:87",
+            "PARENT:88",
+            "PARENT:91"
+          ]
+        },
+        {
+          "axis": "axes_2",
+          "point_count": 44,
+          "labeled_count": 44,
+          "individual_branch_records": 91,
+          "replaced_parent_keys": []
+        }
+      ]
+    },
+    {
+      "file": "geographic_nyc_detail.svg",
+      "maps": [
+        {
+          "axis": "axes_1",
+          "point_count": 44,
+          "labeled_count": 44,
+          "individual_branch_records": 91,
+          "replaced_parent_keys": []
+        }
+      ]
+    },
+    {
+      "file": "geographic_full_npcc.svg",
+      "maps": [
+        {
+          "axis": "axes_1",
+          "point_count": 188,
+          "labeled_count": 137,
+          "individual_branch_records": 340,
+          "replaced_parent_keys": [
+            "PARENT:32",
+            "PARENT:87",
+            "PARENT:88",
+            "PARENT:91"
+          ]
+        }
+      ]
+    }
+  ],
+  "frozen_arrays_and_metadata_match_committed_blobs": [
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/source_subset.mat",
+      "sha256": "8afe12ede90836e70ccc9fc853c97d192b5253b82509b4a373a4c2c32c6ebe7d",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/branch_register.csv",
+      "sha256": "6a574d53b40eb2bf08dba851757a5d56ab6b4d89377b2a33e5d6319d5cd2a18f",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/model_generator_register.csv",
+      "sha256": "7c613350f8cb397dc80fbfffd78d1a5e6e8e956e46cccdb6fc3a238af0615dda",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d",
+      "equals_git_HEAD_blob": true
+    }
+  ],
+  "inputs": [
+    {
+      "path": "PERFORM/Auxilliary_Perform_NY/NYISO_MOD2MAP.xlsx",
+      "sha256": "4fe4e89009f70e8a31ea73dd14b9f22ef97121d92b99ab8a1f59aec29eef33ec"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/bus_geographic_register.csv",
+      "sha256": "7aaedd8f68e6c1a9d2c13cf19158abe604a57c669ef1c3aa7e07df2e33476973"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_historical/historical_station_coordinates.csv",
+      "sha256": "b817e5649175b75e33af3d707bd25508b1527d34611e07f534a58d8afce80892"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/project_station_coordinates.csv",
+      "sha256": "c8e143d16b261ef8e348d7b3168bc475a301c96352d623ca26331276d8729659"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_historical/original_anchor_coordinates.csv",
+      "sha256": "52216df9432a3d685239de6d760404a3258e940c644f5b3b26222d4a8c65d5c6"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/geographic_validation.json",
+      "sha256": "99f057075c32eea20f510e58101539219eb4a9d82a91ae39bec1fa05df66bed5"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/build_geographic_diagrams.py",
+      "sha256": "b345e787d938b808f44b7fbe3b252a69a9de657e949b09ca9515af18c62615b3"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_downstate_atlas.svg",
+      "sha256": "2e61706c53369d109ba8c6e822d263aba06e4c667a9ff75d0b66a5d76fee55df"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_full_npcc.svg",
+      "sha256": "8496fe4c5411154d7c210c68718e8cd930cb1df5f182be54fa327e608692eff8"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/figures/geographic_nyc_detail.svg",
+      "sha256": "11be9606d8d732efd057a3838f5779d9223045ea0845efc6a9fbfcaf36193909"
+    }
+  ],
+  "limitations": [
+    "Independent audit verifies coordinate provenance and rendered locations, not geodetic survey accuracy or physical circuit routing.",
+    "Historical workbook geographic datum assumed WGS84; original approximate NPCC model points retained except eight documented anchor updates."
+  ],
+  "git_HEAD_verified": "42cdb619179bd6cb8a1ae4ddb30c3dc39e3ed615",
+  "replaced_coincident_branch_display_audit": [
+    {
+      "file": "geographic_downstate_atlas.svg",
+      "axis": "axes_1",
+      "parent_branch": "branch-PARENT:88",
+      "source_group": "branch-PERFORM:1731-PERFORM:1732-PERFORM:1733",
+      "endpoints_identical": true,
+      "red_dashed_curve_drawn_after_blue_source": true,
+      "control_point_separation_points": 3.746706340456716
+    },
+    {
+      "file": "geographic_downstate_atlas.svg",
+      "axis": "axes_1",
+      "parent_branch": "branch-PARENT:91",
+      "source_group": "branch-PERFORM:1738",
+      "endpoints_identical": true,
+      "red_dashed_curve_drawn_after_blue_source": true,
+      "control_point_separation_points": 5.522312835834325
+    },
+    {
+      "file": "geographic_full_npcc.svg",
+      "axis": "axes_1",
+      "parent_branch": "branch-PARENT:88",
+      "source_group": "branch-PERFORM:1731-PERFORM:1732-PERFORM:1733",
+      "endpoints_identical": true,
+      "red_dashed_curve_drawn_after_blue_source": true,
+      "control_point_separation_points": 1.1115667221703172
+    },
+    {
+      "file": "geographic_full_npcc.svg",
+      "axis": "axes_1",
+      "parent_branch": "branch-PARENT:91",
+      "source_group": "branch-PERFORM:1738",
+      "endpoints_identical": true,
+      "red_dashed_curve_drawn_after_blue_source": true,
+      "control_point_separation_points": 1.638351681782133
+    }
+  ],
+  "refreshed_after_final_display_only_arc_style": true
+}

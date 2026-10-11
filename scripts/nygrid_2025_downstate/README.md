@@ -16,6 +16,11 @@ all 51 additions and replaced aggregate branches. Rebuild the five SVG/PNG/PDF
 views with `build_network_diagrams.py`; this requires Graphviz on PATH and the
 Python `graphviz` package, and does not rerun or change operating cases.
 
+The [geographic version](../../output/nygrid_2025_downstate/geography/README.md)
+uses verified source-coordinate joins and explicit location-quality flags.
+`build_geographic_diagrams.py` renders its atlas, NYC detail and full-NPCC
+context without changing the network or operating results.
+
 ## Load an existing qualified hour
 
 From MATLAB with MATPOWER on the path:
