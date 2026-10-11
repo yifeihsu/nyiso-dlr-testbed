@@ -1,0 +1,88 @@
+{
+  "status": "positive_P34_StLawrence_orientation_not_established",
+  "captured_utc": "2026-10-11T06:12:13.272542+00:00",
+  "ptids": [
+    25118,
+    25119
+  ],
+  "circuits": [
+    "PS33/L33P",
+    "PS34/L34P"
+  ],
+  "orientation_ontario_to_ny_multiplier": null,
+  "sign_selected_using_moses_error": false,
+  "sign_inferred_from_endpoint_name_order": false,
+  "annual_P34_download_performed": false,
+  "source_independent_control_regime_evidence": "IESO2024 APO documents PAR replacement in2022/2023 after2018 failure.",
+  "required_before_promotion": "Read the arrows in an official or authenticated copy of NYISO Parflow Diagrams page6 with its page20 legend, or independently match P34 to a StLawrence-specific directional physical meter with a documented convention.",
+  "allowed_diagnostic": "Run both source-fixed sign orientations and label them unpromoted directional diagnostics. Never select the sign by the resulting Moses South fit.",
+  "search_scope": [
+    "NYISO P-34 sign/direction/report specifications",
+    "NYISO PTIDs25118/25119 equipment identity",
+    "NYISO DAM PAR Schedule Diagrams",
+    "IESO StLawrence intertie flows and documented report sign conventions"
+  ],
+  "sources": [
+    {
+      "id": "nyiso-p34-index",
+      "title": "NYISO P-34 PAR Flows index",
+      "url": "https://mis.nyiso.com/public/P-34list.htm",
+      "access": "live public page opened successfully",
+      "location": "Index title and monthly archive list",
+      "finding": "Official index identifies this report as Phase Angle Regulator (PAR) Flows and provides the 2025 monthly archives. The index does not define numeric positive-flow direction.",
+      "proves_par_identity": true,
+      "proves_numeric_sign": false
+    },
+    {
+      "id": "nyiso-mpug-554",
+      "title": "NYISO Market Participants User Guide",
+      "url": "https://www.nyiso.com/documents/20142/3625950/mpug.pdf",
+      "access": "official-domain indexed search excerpt; direct PDF returned JavaScript verification page",
+      "location": "Section5.5.4, page54",
+      "finding": "Describes PAR data as external/internal tie-PAR flows and schedules identified by PTID, and identifies DAM PAR Schedule Diagrams as visual representations of those data. This establishes the relevant documentary reference but contains no PS33/PS34 direction in the accessible excerpt.",
+      "proves_par_identity": true,
+      "proves_numeric_sign": false
+    },
+    {
+      "id": "nyiso-winter2016-appendix",
+      "title": "NYISO Winter2016-17 Operating Study Appendices",
+      "url": "https://www.nyiso.com/documents/20142/3691300/Winter2016-17_Operating_Study_Approved_OC_12-15-2016_Appendices.pdf/abf1af25-5b11-8303-4a42-273c60867fef",
+      "access": "official-domain indexed search excerpt",
+      "location": "Page57 equipment table",
+      "finding": "PTIDs25118/25119 identify STLAWRNC230A-230C PS33 and230B-230D PS34. Separate line PTIDs25026/25037 identify StLawrence-Moses L33P/L34P. Equipment identity and name ordering do not prove the public telemetry sign.",
+      "proves_par_identity": true,
+      "proves_numeric_sign": false
+    },
+    {
+      "id": "ieso-2024-apo-stlawrence",
+      "title": "IESO2024 Annual Planning Outlook: Ontario Transmission Interfaces and Interties",
+      "url": "https://www.ieso.ca/-/media/Files/IESO/Document-Library/planning-forecasts/apo/Mar2024/Ontario-Transmission-Interfaces-and-Interties-Overview.ashx",
+      "access": "official-domain indexed search excerpt; direct open not accessible through web tool",
+      "location": "Section2.2.5,page7",
+      "finding": "Identifies the two230kV StLawrence interconnection circuits as PAR-controlled. Reports the2018 L33P PAR failure and replacement of the PARs in2022/2023, restoring import capability and flow control. This supports a changed control-regime hypothesis without proving P34 sign.",
+      "proves_par_identity": true,
+      "proves_numeric_sign": false
+    },
+    {
+      "id": "nyiso-diagram-mirror-lead",
+      "title": "NYISO Parflow Diagrams, published12/16/2014; mirrored as DAM PAR Schedule Diagram",
+      "url": "https://expydoc.com/doc/3418519/dam-par-schedule-diagram",
+      "access": "search-indexed transcription readable; download link returned403 and page retrieval via urllib returned403; no bypass attempted",
+      "location": "Page6 StLawrence; page20 legend",
+      "finding": "The transcription identifies StLawrence PTIDs25118/25119, a convention effective12/10/2014, and a legend that positive flow follows an arrow. Arrow geometry is absent from the transcription, so neither orientation can be established. Treat this mirror as a discovery lead, not verified direction evidence.",
+      "proves_par_identity": false,
+      "proves_numeric_sign": false
+    },
+    {
+      "id": "ieso-report-specific-sign",
+      "title": "IESO Monthly Day-Ahead Historical Interface Schedules and TTC help",
+      "url": "https://reports-public.ieso.ca/docrefs/helpfile/TRAPreauctionInterfaceHistoryMonthly2_h1.pdf",
+      "access": "official-domain indexed search excerpt",
+      "location": "Page2, Scheduled field",
+      "finding": "This particular IESO report defines positive values as Ontario exports and negative values as Ontario imports. That report-specific convention cannot be transferred to NYISO P34 without a matched independent StLawrence measurement. No such matched measurement was established in this audit.",
+      "proves_par_identity": false,
+      "proves_numeric_sign": false
+    }
+  ],
+  "first_audit_manifest_sha256": "2aaf31a83f70bbae5da5cdbee774592476ef666cdadefc8b99efd1632ca234cf"
+}

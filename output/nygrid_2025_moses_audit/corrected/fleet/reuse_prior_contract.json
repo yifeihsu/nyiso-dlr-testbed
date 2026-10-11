@@ -1,0 +1,7 @@
+{
+  "prior_npz_path": "output/nygrid_2025_dispatch/priors/dispatch_priors.npz",
+  "prior_npz_sha256": "6a99bee7ea8be1e63a6349b6a0e6fa781932525fab17dd3548ac1e11a304c66f",
+  "prior_values_copied_or_modified": false,
+  "reuse_basis": "hydro priors are per-plant/prime-mover split among unchanged EIA units; zone and bus do not enter those values",
+  "caveat": "Original zonal-prior diagnostic tables remain frozen; any corrected zonal summaries must regroup unchanged unit values using this corrected fleet"
+}

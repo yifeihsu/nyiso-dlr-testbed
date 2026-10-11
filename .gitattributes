@@ -66,3 +66,13 @@ output/nygrid_2025_slim/** -text whitespace=cr-at-eol
 "System Matpower Format/npcc_nygrid_2025_slim_interfaces.m" -text whitespace=cr-at-eol
 NYGRID_2025_SLIM_DOWNSTATE.md -text whitespace=cr-at-eol
 output/nygrid_2025_slim/geography/figures/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Versioned Moses South diagnosis preserves audited source and result bytes.
+scripts/nygrid_2025_moses_audit/** -text whitespace=cr-at-eol
+output/nygrid_2025_moses_audit/** -text whitespace=cr-at-eol
+output/nygrid_2025_moses_audit/exchanges/raw/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_moses_audit/generation/goldbook2025_layout.txt -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_moses_audit/figures/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+output/nygrid_2025_moses_audit/corrected/fleet/source_parent/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_moses_audit/validation/*.log -diff whitespace=-blank-at-eof,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_moses_corrected_dc.m" -text whitespace=cr-at-eol
+NYGRID_2025_MOSES_SOUTH_DIAGNOSIS.md -text whitespace=cr-at-eol
