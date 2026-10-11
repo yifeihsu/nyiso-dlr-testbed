@@ -8,6 +8,11 @@ frozen detailed reference.
 Read [the report](../../NYGRID_2025_SLIM_DOWNSTATE.md) for the station choices,
 branch classes, validation and remaining limitations.
 
+[Geographic figures](../../output/nygrid_2025_slim/geography/README.md) now
+match the148-bus model. The [interactive map](../../output/nygrid_2025_slim/interactive/network_map.html)
+is a self-contained offline HTML file with pan/zoom, bus/branch details, and
+connection-category toggles. [Map instructions and validation scope](../../output/nygrid_2025_slim/interactive/README.md).
+
 ## Load and solve
 
 ```matlab

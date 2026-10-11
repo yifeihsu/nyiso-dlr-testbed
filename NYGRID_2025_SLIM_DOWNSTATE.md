@@ -16,6 +16,13 @@ Use [npcc_nygrid_2025_slim_dc.m](System%20Matpower%20Format/npcc_nygrid_2025_sli
 for the small-bus model. The [workflow README](scripts/nygrid_2025_slim/README.md)
 contains complete commands and the output contract.
 
+The [updated geographic atlas](output/nygrid_2025_slim/geography/README.md)
+shows the eight retained additions and the equivalent branch network. The
+[interactive offline map](output/nygrid_2025_slim/interactive/network_map.html)
+adds pan/zoom, bus and branch details, and separate layer controls. Its
+[verification record](output/nygrid_2025_slim/interactive/README.md) distinguishes
+passed DOM behavior checks from unverified browser visual rendering.
+
 ## Eight retained additions
 
 Every retained addition is **345 kV**. Stations already present in NPCC,
