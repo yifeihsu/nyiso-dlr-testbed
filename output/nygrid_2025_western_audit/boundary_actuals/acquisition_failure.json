@@ -1,0 +1,26 @@
+{
+  "status": "source_acquisition_incomplete",
+  "http_status": 429,
+  "failed_file": "NYIS_interchange_2025_25000.json",
+  "url": "https://api.eia.gov/v2/electricity/rto/interchange-data/data/?api_key=DEMO_KEY&frequency=hourly&data%5B0%5D=value&start=2025-01-01T06&end=2026-01-01T05&length=5000&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc&facets%5Bfromba%5D%5B%5D=NYIS&sort%5B1%5D%5Bcolumn%5D=toba&sort%5B1%5D%5Bdirection%5D=asc&offset=25000",
+  "observed_utc": "2026-10-11T15:50:41.260274+00:00",
+  "response_body": "{\n  \"error\": {\n    \"code\": \"OVER_RATE_LIMIT\",\n    \"message\": \"You have exceeded your rate limit. Try again later or contact us for assistance: https://api.eia.gov:443\"\n  }\n}",
+  "response_headers": {
+    "Date": "Sun, 11 Oct 2026 15:50:40 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization, X-Params",
+    "Access-Control-Allow-Origin": "*",
+    "Retry-After": "29360",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "X-Api-Umbrella-Request-Id": "d15ekbomvo03qlagblm0",
+    "X-Cache": "MISS",
+    "X-Content-Type-Options": "nosniff",
+    "X-Ratelimit-Limit": "10",
+    "X-Ratelimit-Remaining": "0",
+    "X-Vcap-Request-Id": "813ba511-c9f0-4964-5a9f-032559c9fef8",
+    "X-Frame-Options": "DENY"
+  },
+  "cached_successful_pages_preserved": true
+}

@@ -1,0 +1,48 @@
+{
+  "primary_Niagara_groups_source": "https://www.nyiso.com/documents/20142/2181113/Enhancements%20to%20the%20Niagara%20Model%20vJuly24_2018vFINAL.pdf/9340e3b7-26a6-813a-0998-e1252622d1d1",
+  "primary_Niagara_groups_pdf_page": 3,
+  "visually_verified_pages": [
+    "Niagara_Model_page3",
+    "GoldBook2025_page86"
+  ],
+  "physical_groups": [
+    {
+      "bus": "Niagara230",
+      "main_units": 6,
+      "Lewiston_units": 12
+    },
+    {
+      "bus": "Niagara115East",
+      "main_units": 4
+    },
+    {
+      "bus": "Niagara115West",
+      "main_units": 3
+    }
+  ],
+  "physical_group_unit_ID_crosswalk_and_hourly_dispatch_available": false,
+  "presentation_historical_capacity_numbers_not_used_as_2025_limits": true,
+  "PERFORM_limitation": "Historical case assigns all RobertMoses units to a345kV deadend and Lewiston to115kV; it does not resolve the officially described physical groups.",
+  "GoldBook_energy_values_are_2024_not_2025": true,
+  "Lewiston_mapping_rule": "Move EIA2692 inventory from Huntley115 proxy57 to existing explicit Niagara230 project proxy55; retain all quantities. No exact physical terminal claim.",
+  "within_A_relocation_changes_internal_loading_but_not_A_boundary_net_flow_at_fixed_other_injections": true,
+  "monthly_generation_recommendation": "Preserve frozen declared hydro projection; no confirmed numerical or unit-duplication defect found. No monthly-energy hard constraint or gross-PS substitution promoted.",
+  "EIA923_final_verified_release": "2026-09-14",
+  "EIA923_final_catalog": "https://www.eia.gov/electricity/data/eia923/",
+  "EIA923_final_download_receipt": "sources/f923_2025_final.receipt.json",
+  "monthly_scope_warning": "P63 hourly Hydro net-versus-positive-storage and load pumping boundary have not been independently reconciled. Source gross, net and pumping are distinct quantities.",
+  "contract_shares": "No customer entitlement multiplier is applied. EIA records identify NYPA and NYIS for both plants. Commercial sales allocation does not establish physical unit dispatch.",
+  "public_hourly_search": {
+    "plant_electrical_dispatch_located": false,
+    "searched_primary_domains": [
+      "nypa.gov",
+      "ijc.org",
+      "eia.gov",
+      "nyiso.com"
+    ],
+    "NIAGARA_project_source": "https://www.nypa.gov/power/generation/niagara-power-project",
+    "storage_operation_source": "https://www.nypa.gov/news/press-releases/2018/20181101-lewiston",
+    "hydrology_scope": "Public water-level/diversion information and historical reports do not identify2025 hourly electrical output, pumping, unit availability or physical three-bus dispatch; no conversion to MW performed.",
+    "no_claim_that_unlocated_data_do_not_exist": true
+  }
+}

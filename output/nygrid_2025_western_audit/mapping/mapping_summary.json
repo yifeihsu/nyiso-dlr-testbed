@@ -1,0 +1,330 @@
+{
+  "status": "complete_numerical_and_P32_audit_with_source_confirmed_site_zone_proposals",
+  "started_utc": "2026-10-11T15:15:07.607888+00:00",
+  "completed_utc": "2026-10-11T15:15:22.343587+00:00",
+  "head": "bf79058da00853c4b2743739989c26cd71c0a457",
+  "checks": 1246,
+  "failed_checks": 0,
+  "paired_hours": 8663,
+  "confirmed_operator_or_channel_bugs": [],
+  "source_confirmed_site_zone_proposals": [
+    {
+      "plant_id": 2568,
+      "station": "Glenwood",
+      "new_zone": "B",
+      "source_ptid": 24046,
+      "old_zones": "A",
+      "units": 3,
+      "nameplate_mw": 1.5,
+      "dispatch_eligible_units": 3,
+      "generator_register_rows": 3,
+      "current_public_mean_mw": 0.7338690490421484,
+      "current_public_peak_mw": 1.4315132722926371,
+      "pdf_page": 86,
+      "printed_page": 82,
+      "source_line": "Erie Blvd. Hydro - Oak Orchard              Glenwood 1                          B     24046         Medina     073    36    1950-01-01                 0.5         0.5              0.5         0.5             0.5            HY    WAT                         1.9 | Erie Blvd. Hydro - Oak Orchard              Glenwood 2                          B     24046         Medina     073    36    1950-01-01                 0.5         0.5              0.5         0.5             0.5            HY    WAT                         2.0 | Erie Blvd. Hydro - Oak Orchard              Glenwood 3                          B     24046         Medina     073    36    1950-01-01                 0.5         0.5              0.5         0.5             0.5            HY    WAT                          2.2",
+      "identity_evidence": "Glenwood Hydro name, Erie Boulevard owner, Medina town and three0.5MW units match. Do not confuse with LongIsland GlenwoodGT in zoneK.",
+      "policy": "explicit_GoldBook2025_site_zone_only_preserve_capacity_admission_and_dispatch",
+      "terminal_policy": "same_zone_proxy_to_be_selected_by_existing_landing_policy; not_physical_terminal_confirmation"
+    },
+    {
+      "plant_id": 2623,
+      "station": "Waterport",
+      "new_zone": "B",
+      "source_ptid": 24046,
+      "old_zones": "A",
+      "units": 2,
+      "nameplate_mw": 4.0,
+      "dispatch_eligible_units": 2,
+      "generator_register_rows": 2,
+      "current_public_mean_mw": 1.613651003927789,
+      "current_public_peak_mw": 3.321357888480706,
+      "pdf_page": 87,
+      "printed_page": 83,
+      "source_line": "Erie Blvd. Hydro - Oak Orchard               Waterport 1                 B     24046        Waterport     073    36    1941-01-01                 2.3         1.6              1.6         2.3             2.3            HY    WAT                         8.7 | Erie Blvd. Hydro - Oak Orchard               Waterport 2                 B     24046        Waterport     073    36    1968-01-01                 2.5         1.8              1.8         2.5             2.5            HY    WAT                         3.7",
+      "identity_evidence": "Waterport name, Erie Boulevard owner, Waterport town and two units match. EIA4.0MW versus GoldBook4.8MW nameplate difference is retained; no capacity adjustment.",
+      "policy": "explicit_GoldBook2025_site_zone_only_preserve_capacity_admission_and_dispatch",
+      "terminal_policy": "same_zone_proxy_to_be_selected_by_existing_landing_policy; not_physical_terminal_confirmation"
+    },
+    {
+      "plant_id": 61012,
+      "station": "Mill Seat",
+      "new_zone": "B",
+      "source_ptid": 323607,
+      "old_zones": "A",
+      "units": 8,
+      "nameplate_mw": 6.4,
+      "dispatch_eligible_units": 8,
+      "generator_register_rows": 8,
+      "current_public_mean_mw": 2.6897293919724543,
+      "current_public_peak_mw": 4.371383779976902,
+      "pdf_page": 87,
+      "printed_page": 83,
+      "source_line": "WM Renewable Energy,LLC                      Mill Seat                   B     323607             Riga    055    36    2007-07-20                 6.4         6.4              6.4         6.4             6.4            IC    MTE                         3.2",
+      "identity_evidence": "Name, WM Renewable Energy owner, 6.4 MW match; EIA mailing town Bergen/Genesee differs from Gold Book Riga/Monroe, so county is not used as the zone authority.",
+      "policy": "explicit_GoldBook2025_site_zone_only_preserve_capacity_admission_and_dispatch",
+      "terminal_policy": "same_zone_proxy_to_be_selected_by_existing_landing_policy; not_physical_terminal_confirmation"
+    },
+    {
+      "plant_id": 56987,
+      "station": "Hyland LFGE",
+      "new_zone": "B",
+      "source_ptid": 323620,
+      "old_zones": "A",
+      "units": 4,
+      "nameplate_mw": 6.4,
+      "dispatch_eligible_units": 3,
+      "generator_register_rows": 3,
+      "current_public_mean_mw": 0.8128754937155009,
+      "current_public_peak_mw": 3.2340814005376552,
+      "pdf_page": 87,
+      "printed_page": 83,
+      "source_line": "Innovative Energy Systems, Inc.              Hyland LFGE                 B     323620         Angelica    003    36    2008-09-08                 4.8         4.8              4.8         4.8             4.8            IC    MTE                        20.9",
+      "identity_evidence": "Distinctive Hyland name and Angelica location; 3 active 1.6 MW units match 4.8 MW Gold Book. Fourth 1.6 MW EIA unit remains excluded by existing admission policy.",
+      "policy": "explicit_GoldBook2025_site_zone_only_preserve_capacity_admission_and_dispatch",
+      "terminal_policy": "same_zone_proxy_to_be_selected_by_existing_landing_policy; not_physical_terminal_confirmation"
+    },
+    {
+      "plant_id": 50203,
+      "station": "United States Gypsum",
+      "new_zone": "B",
+      "source_ptid": 23774,
+      "old_zones": "A",
+      "units": 1,
+      "nameplate_mw": 5.8,
+      "dispatch_eligible_units": 0,
+      "generator_register_rows": 0,
+      "current_public_mean_mw": 0.0,
+      "current_public_peak_mw": 0.0,
+      "pdf_page": 100,
+      "printed_page": 96,
+      "source_line": "Niagara Mohawk Power Corp.         United States Gypsum                  B     23774          Batavia      037    36    2009-11-01                 5.8         0.0            0.0         0.0            0.0          CG     NG                          0.1",
+      "identity_evidence": "US Gypsum name, Niagara Mohawk connection and 5.8 MW nameplate match; Gold Book nonmarket table. Preserve excluded native-dispatch status.",
+      "policy": "explicit_GoldBook2025_site_zone_only_preserve_capacity_admission_and_dispatch",
+      "terminal_policy": "same_zone_proxy_to_be_selected_by_existing_landing_policy; not_physical_terminal_confirmation"
+    },
+    {
+      "plant_id": 54593,
+      "station": "Batavia",
+      "new_zone": "B",
+      "source_ptid": 24024,
+      "old_zones": "A;B",
+      "units": 3,
+      "nameplate_mw": 67.3,
+      "dispatch_eligible_units": 3,
+      "generator_register_rows": 3,
+      "current_public_mean_mw": 2.4653813531695494,
+      "current_public_peak_mw": 46.16403662792992,
+      "pdf_page": 86,
+      "printed_page": 82,
+      "source_line": "Seneca Power Partners, L.P.                 Batavia                             B     24024         Batavia    037    36    1992-06-01             67.3        57.1               71.7       47.5              58.4            CC     NG                         3.4",
+      "identity_evidence": "Batavia town, Seneca Power Partners owner and 67.3 MW total match exactly; GEN1/2 already B, only 1.1 MW GEN3 has erroneous A metadata while already on B bus62.",
+      "policy": "explicit_GoldBook2025_site_zone_only_preserve_capacity_admission_and_dispatch",
+      "terminal_policy": "same_zone_proxy_to_be_selected_by_existing_landing_policy; not_physical_terminal_confirmation"
+    },
+    {
+      "plant_id": 50568,
+      "station": "High Acres",
+      "new_zone": "C",
+      "source_ptid": 23767,
+      "old_zones": "B",
+      "units": 8,
+      "nameplate_mw": 9.600000000000001,
+      "dispatch_eligible_units": 8,
+      "generator_register_rows": 8,
+      "current_public_mean_mw": 4.034594087958682,
+      "current_public_peak_mw": 6.557075669965354,
+      "pdf_page": 87,
+      "printed_page": 83,
+      "source_line": "WM Renewable Energy,LLC                      High Acres                  C     23767          Fairport    117    36    1991-06-01                 9.6         9.6              9.6         9.6             9.6            IC    MTE                         2.0",
+      "identity_evidence": "Distinctive High Acres name, WM Renewable Energy owner, Fairport town and 9.6 MW total match; EIA Monroe versus Gold Book Wayne county does not override explicit C electrical zone.",
+      "policy": "explicit_GoldBook2025_site_zone_only_preserve_capacity_admission_and_dispatch",
+      "terminal_policy": "same_zone_proxy_to_be_selected_by_existing_landing_policy; not_physical_terminal_confirmation"
+    },
+    {
+      "plant_id": 58399,
+      "station": "Synergy Biogas",
+      "new_zone": "B",
+      "source_ptid": 323694,
+      "old_zones": "A",
+      "units": 1,
+      "nameplate_mw": 1.4,
+      "dispatch_eligible_units": 0,
+      "generator_register_rows": 0,
+      "current_public_mean_mw": 0.0,
+      "current_public_peak_mw": 0.0,
+      "pdf_page": 87,
+      "printed_page": 83,
+      "source_line": "Galt Power Inc.                              Synergy Biogas              B     323694        Wyoming      121    36    2012-09-01                 2.0         0.0              0.0         0.0             0.0            IC    MTE                         3.9",
+      "identity_evidence": "Exact distinctive name and Wyoming town match; EIA nameplate1.4 versus Gold Book2.0 MW is recorded, not overwritten. Existing excluded dispatch remains excluded.",
+      "policy": "explicit_GoldBook2025_site_zone_only_preserve_capacity_admission_and_dispatch",
+      "terminal_policy": "same_zone_proxy_to_be_selected_by_existing_landing_policy; not_physical_terminal_confirmation"
+    }
+  ],
+  "physical2025_meter_membership_verified": false,
+  "raw_source_units": "P32 headerFlow(MWH); existing numeric power convention preserved without fitted scale",
+  "observations_used_for_corrections": false,
+  "dependencies": [
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/replay/dated_verified_PAR_flows.mat",
+      "sha256": "4f034589dc10418d391d99cacf5c062b30c5d82308f0c9b73c06e4ae9c8fe6d1"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/corrected/model_generator_register.csv",
+      "sha256": "1211d0f632df2ccd6306ce299de5d24644d4d28d0d987af8421c8b7559a01e21"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/hour_catalog.csv",
+      "sha256": "96d4a0db424cbe1062b7c6b51d5f244a4de699679ad89428a8db3a992980f86a"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_hourly.csv",
+      "sha256": "5188878f04e4743edd9c95416fe94240bd281a1acf8757f25a8aa911e5345631"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/source_receipts.csv",
+      "sha256": "2c6e28a7743c49bd8ee540a8ca7eac7ce4dd37f9a3af928540ac0b676b87fad9"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250101ExternalLimitsFlows_csv.zip",
+      "sha256": "86b0f3533e6e0ed07dfddd2998be68e33776a6ed1dbc7e00b11153b9950be0cf"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250201ExternalLimitsFlows_csv.zip",
+      "sha256": "dc676b83fa4baa0d33603535d7f6c77b1f9227ebec316a3d830da638f52ee151"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250301ExternalLimitsFlows_csv.zip",
+      "sha256": "4802e5bf90313b5db161ed3692ffe0fa8a3c9a74391aff148ad492c6464b5747"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250401ExternalLimitsFlows_csv.zip",
+      "sha256": "e3225d222e609d5bc7473e1220456c9d3a45c51935209da8f9542319b27d90a9"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250501ExternalLimitsFlows_csv.zip",
+      "sha256": "f563313fb641483fb9df78841ade9e63944ff25fca72debe9bc68f4ce535d430"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250601ExternalLimitsFlows_csv.zip",
+      "sha256": "edb385f3784caedf2a33a62f51ed2a99435ffb4b3367f63e3135a407d1bd8847"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250701ExternalLimitsFlows_csv.zip",
+      "sha256": "d737f34b9435b28a4400ee29965f80f9ee39e3f79217130af5b0e944a20c93b9"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250801ExternalLimitsFlows_csv.zip",
+      "sha256": "b4ba0f3fb6d4a624bd80649e19fdddeb9c1b0d61c930964cf865b0996f49e470"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250901ExternalLimitsFlows_csv.zip",
+      "sha256": "24039120618f0b25e75f27c0af7239f087be7bf0a1e05fde9ad27c78c74635b9"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20251001ExternalLimitsFlows_csv.zip",
+      "sha256": "15ec712d61d478085009f8c984e1365e80904db3137b4e2e9ad540c88f42568f"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20251101ExternalLimitsFlows_csv.zip",
+      "sha256": "2cb7b745ffebb7622316980ce2696e46e190123f9d1ed2a3e358eb0504107703"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20251201ExternalLimitsFlows_csv.zip",
+      "sha256": "07d65e331241b50c9f2b53227fb56b6ae9101d33458b5db65d29c165b2e59e7a"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20260101ExternalLimitsFlows_csv.zip",
+      "sha256": "c6e9af1a0ea301d103d84ee94c19ec8627f44560ca668162c4fcdcc9ce2b3634"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/comparison/interface_summary.csv",
+      "sha256": "a955e2d2d0c6a6cf6b6f8f5b91d84443d9ab90a10a0c59a84147a14436b4aabb"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/corrected/fleet/fleet_register.csv",
+      "sha256": "f7266a08faac3d65442482f8e5c3f2facfbf0c25960419820c7f2eb514710d13"
+    },
+    {
+      "path": "tmp/nonfossil_sources/eia860_2025/2___Plant_Y2025_Early_Release.xlsx",
+      "sha256": "c0a083b67635d786e204be977b2e4bf56ff505732696eb1cac3169f4b7b046c4"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_scope/2025_Gold_Book.pdf",
+      "sha256": "cc43665b9344a04b4c9355edd1dc7e31d42a6bb759ffe027ad867221556aea8e"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/generation/goldbook2025_layout.txt",
+      "sha256": "dfbdb515dfae819f7ffcd3b5ccca660dbd292ffd72159437cb0fd9c87f17a525"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "PERFORM/Auxilliary_Perform_NY/Branch_changes_2019_to_2030.xlsx",
+      "sha256": "31d519c74f75a06a77ed11fabf535e4579fbc5c94cbb7e0a6be14cec38a054b8"
+    },
+    {
+      "path": "output/ny_only_package_a/source_inventory/perform_ny_bus_inventory.csv",
+      "sha256": "1389fef08bd6a75db5aabd7958a3a735b0dd4483181eb1c93ae31ed2fffd405f"
+    },
+    {
+      "path": "output/nygrid_2019_diagnostics/western_source_evidence.json",
+      "sha256": "88e49b85b3e93ab7d64f099d6c89a5554adcd0977c0e3ad53fdfb6d06baa4c1f"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.pdf",
+      "sha256": "5a08d0c8501df096806506df79fb1b8ded77e6da8c4fe9c82ef405a71c3cf140"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.txt",
+      "sha256": "731da35565c15b1d460a48cf8331782b9c3e2d5d797668587370a72b9906175f"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.pdf",
+      "sha256": "87cf3ecaa2b80c8851b79951437e190a0e0eb2aba542cc028ce5351831bdc5f7"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.txt",
+      "sha256": "52ce521985529b7a2cd569634eba1ee05e925e3bc8c57b8d645f1d91fd4e52ae"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.pdf",
+      "sha256": "094f26c8b268b432567cf5a4b62f3b8699f53d3220e7180971dc595b6ad5d7be"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.txt",
+      "sha256": "8734cd72ee75d70328e0bf5229834beca3719c8a2466e599d05d2189411590d6"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/mapping_audit.py",
+      "sha256": "bd314856ba63bab7a38b7e8a356dcaf44e9a6e173cd58f5bfca1eb10347a00b4"
+    }
+  ],
+  "all_frozen_inputs_unchanged": true
+}

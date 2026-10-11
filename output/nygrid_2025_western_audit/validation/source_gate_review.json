@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-11T16:14:10.380478+00:00",
+  "tests": 52,
+  "failures": 0,
+  "errors": 0,
+  "source_gate_and_saved_accounting_passed": true,
+  "saved_dispatch_generated_by_current_code": true,
+  "all_recorded_inputs_and_code_unchanged": true,
+  "no_frozen_source_writes_or_solver_builds": true,
+  "test_output": "test_reject_PAR_clock (__main__.DispatchSourceGateTests.test_reject_PAR_clock) ... ok\ntest_reject_bad_Ontario_share_sum (__main__.DispatchSourceGateTests.test_reject_bad_Ontario_share_sum) ... ok\ntest_reject_bound_hour_axis (__main__.DispatchSourceGateTests.test_reject_bound_hour_axis) ... ok\ntest_reject_duplicate_Ontario_row (__main__.DispatchSourceGateTests.test_reject_duplicate_Ontario_row) ... ok\ntest_reject_model_fleet_axis (__main__.DispatchSourceGateTests.test_reject_model_fleet_axis) ... ok\ntest_reject_negative_Ontario_share (__main__.DispatchSourceGateTests.test_reject_negative_Ontario_share) ... ok\ntest_reject_nonfinite_P0 (__main__.DispatchSourceGateTests.test_reject_nonfinite_P0) ... ok\ntest_reject_nonpositive_weight (__main__.DispatchSourceGateTests.test_reject_nonpositive_weight) ... ok\ntest_reject_prior_fleet_axis (__main__.DispatchSourceGateTests.test_reject_prior_fleet_axis) ... ok\ntest_reject_reversed_PAR_sign (__main__.DispatchSourceGateTests.test_reject_reversed_PAR_sign) ... ok\ntest_reject_reversed_bounds (__main__.DispatchSourceGateTests.test_reject_reversed_bounds) ... ok\ntest_reject_unverified_PAR_sign (__main__.DispatchSourceGateTests.test_reject_unverified_PAR_sign) ... ok\ntest_reject_wrong_PAR_scale (__main__.DispatchSourceGateTests.test_reject_wrong_PAR_scale) ... ok\ntest_reject_wrong_gamma (__main__.DispatchSourceGateTests.test_reject_wrong_gamma) ... ok\ntest_valid_small_array_fixture (__main__.DispatchSourceGateTests.test_valid_small_array_fixture) ... ok\ntest_reject_changed_prior_hash (__main__.FrozenDependencyGateTests.test_reject_changed_prior_hash) ... ok\ntest_reject_changed_solver_code_hash (__main__.FrozenDependencyGateTests.test_reject_changed_solver_code_hash) ... ok\ntest_reject_dropped_Ontario_allocation_proof (__main__.FrozenDependencyGateTests.test_reject_dropped_Ontario_allocation_proof) ... ok\ntest_reject_dropped_numeric_bound_proof (__main__.FrozenDependencyGateTests.test_reject_dropped_numeric_bound_proof) ... ok\ntest_valid_frozen_delivery_manifests (__main__.FrozenDependencyGateTests.test_valid_frozen_delivery_manifests) ... ok\ntest_accounting_invalid_hours_are_not_promoted (__main__.SavedAccountingTests.test_accounting_invalid_hours_are_not_promoted) ... ok\ntest_accounting_new_native_target_and_global_balance (__main__.SavedAccountingTests.test_accounting_new_native_target_and_global_balance) ... ok\ntest_accounting_only_six_Ontario_equivalents_changed (__main__.SavedAccountingTests.test_accounting_only_six_Ontario_equivalents_changed) ... ok\ntest_accounting_original_prior_weight_bounds_KKT (__main__.SavedAccountingTests.test_accounting_original_prior_weight_bounds_KKT) ... ok\ntest_accounting_same_source_screened_cohort (__main__.SavedAccountingTests.test_accounting_same_source_screened_cohort) ... ok\ntest_reject_UTC_axis_offset (__main__.SourceGateTests.test_reject_UTC_axis_offset) ... ok\ntest_reject_changed_independent_proof_hash (__main__.SourceGateTests.test_reject_changed_independent_proof_hash) ... ok\ntest_reject_changed_source_hash (__main__.SourceGateTests.test_reject_changed_source_hash) ... ok\ntest_reject_dropped_DOE_sign_proof (__main__.SourceGateTests.test_reject_dropped_DOE_sign_proof) ... ok\ntest_reject_dropped_annual_raw_proof (__main__.SourceGateTests.test_reject_dropped_annual_raw_proof) ... ok\ntest_reject_dropped_frozen_dependencies (__main__.SourceGateTests.test_reject_dropped_frozen_dependencies) ... ok\ntest_reject_dropped_quality_raw_proof (__main__.SourceGateTests.test_reject_dropped_quality_raw_proof) ... ok\ntest_reject_duplicate_manifest (__main__.SourceGateTests.test_reject_duplicate_manifest) ... ok\ntest_reject_empty_manifest (__main__.SourceGateTests.test_reject_empty_manifest) ... ok\ntest_reject_excluding_ordinary_NY_zero_hours (__main__.SourceGateTests.test_reject_excluding_ordinary_NY_zero_hours) ... ok\ntest_reject_incomplete_manifest (__main__.SourceGateTests.test_reject_incomplete_manifest) ... ok\ntest_reject_internal_fit (__main__.SourceGateTests.test_reject_internal_fit) ... ok\ntest_reject_missing_quality_receipt (__main__.SourceGateTests.test_reject_missing_quality_receipt) ... ok\ntest_reject_omission_of_all_six_suspect_hours (__main__.SourceGateTests.test_reject_omission_of_all_six_suspect_hours) ... ok\ntest_reject_quality_chosen_from_internal_residuals (__main__.SourceGateTests.test_reject_quality_chosen_from_internal_residuals) ... ok\ntest_reject_schedule_as_actual_field (__main__.SourceGateTests.test_reject_schedule_as_actual_field) ... ok\ntest_reject_shifted_actual_values_with_unchanged_time_labels (__main__.SourceGateTests.test_reject_shifted_actual_values_with_unchanged_time_labels) ... ok\ntest_reject_unqualified_independent_review (__main__.SourceGateTests.test_reject_unqualified_independent_review) ... ok\ntest_reject_unqualified_source_status (__main__.SourceGateTests.test_reject_unqualified_source_status) ... ok\ntest_reject_wrong_actual_scale_even_with_resealed_child (__main__.SourceGateTests.test_reject_wrong_actual_scale_even_with_resealed_child) ... ok\ntest_reject_wrong_actual_sign_even_with_resealed_child (__main__.SourceGateTests.test_reject_wrong_actual_sign_even_with_resealed_child) ... ok\ntest_reject_wrong_border (__main__.SourceGateTests.test_reject_wrong_border) ... ok\ntest_reject_wrong_clock (__main__.SourceGateTests.test_reject_wrong_clock) ... ok\ntest_reject_wrong_direction (__main__.SourceGateTests.test_reject_wrong_direction) ... ok\ntest_reject_wrong_units (__main__.SourceGateTests.test_reject_wrong_units) ... ok\ntest_reject_wrong_year (__main__.SourceGateTests.test_reject_wrong_year) ... ok\ntest_valid_source_gate_preserves_six_exclusions (__main__.SourceGateTests.test_valid_source_gate_preserves_six_exclusions) ... ok\n\n----------------------------------------------------------------------\nRan 52 tests in 6.094s\n\nOK\n",
+  "failure_tests": [],
+  "error_tests": [],
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_western_audit/test_western_sources.py",
+      "sha256": "dd078b3704f7e0c41b98d2b164709f4435dd38f39e9561258e876e2030a5cceb"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/reconstruct_dispatch.py",
+      "sha256": "2e470d756ca9ab09a111fa875901be3cdf4b2abcc8e29335409648b9d8381b2e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/dispatch_receipt.json",
+      "sha256": "9e89cb608c2227e41624bb1cee3b6576cfda8a7fa3a9da8c51fb8b806195d78b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/actual_Ontario_dispatch.mat",
+      "sha256": "29d5adb7db188e395e9b4b177107088e3e23a27ece8cb986309307e26e620566"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/review/pre_promotion_review.json",
+      "sha256": "67c6e8666e57676fdc3cf7625c66cf7adc9ec4b1d3c7eaa8fe1e641907d495c7"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/external_generator_allocation.csv",
+      "sha256": "471ea55dc77808137342df764e89be6e4cededefdaad798e8687ebbe9ea42615"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/hourly_actual_exchange.csv",
+      "sha256": "e59408bf1296bd92eb6c562395d98d629c6b9784d50767c9a94956c8400aa6b4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/hourly_exchange_quality.csv",
+      "sha256": "ae23b9a130773fece232c8bb84583a3fb2d16fe9c2533a13b525ab64ba788cde"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/source_quality_receipt.json",
+      "sha256": "0959c383d82ae34a413e9ecc97465843467d3e2e543ac7de8306a45d05710eaa"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/ontario_audit_summary.json",
+      "sha256": "773ff7f90a655079e223c4177f2da0f57cd04a5a9f4629b323d5cbb64a244246"
+    },
+    {
+      "path": "scripts/nygrid_2025_dispatch/build_dispatch.py",
+      "sha256": "3250a8f4b5052d97ebe9eee11129570c12b9fe5260b2181ad3add79a418d3f54"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/source_manifest.csv",
+      "sha256": "59e41c8e1082fa06fc84d692c14af05890c622b3c598851f9e856cc349eecb14"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "primary_cached_references": [
+    {
+      "filename": "NYISO_Summer2019_Operating_Study_Appendices.pdf",
+      "url": "https://www.nyiso.com/documents/20142/3691300/Summer2019-Operating-Study-Appendices-OC-Approved.pdf/7923fe3b-579b-a48d-bda8-8063b309dc08",
+      "final_url": "https://www.nyiso.com/documents/20142/3691300/Summer2019-Operating-Study-Appendices-OC-Approved.pdf/7923fe3b-579b-a48d-bda8-8063b309dc08",
+      "sha256": "5a08d0c8501df096806506df79fb1b8ded77e6da8c4fe9c82ef405a71c3cf140",
+      "bytes": 3429697,
+      "pdf_pages": 62,
+      "source_period": "Summer 2019 operating study",
+      "verified_pdf_pages": [
+        44
+      ],
+      "printed_pages": [
+        72
+      ],
+      "use": "Contemporaneous Dysinger East physical circuit membership and mixed metering terminals; Appendix E does not list West Central",
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.pdf",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.txt",
+      "text_sha256": "731da35565c15b1d460a48cf8331782b9c3e2d5d797668587370a72b9906175f"
+    },
+    {
+      "filename": "NYISO_CRPP_Appendix5_1_Interface_Definitions.pdf",
+      "url": "https://www.nyiso.com/documents/20142/1410707/CRPP_Appendix_5.1_Interface_Definitions.pdf/6bd50d60-bfd2-4572-31bf-634fbb6c8ddf",
+      "final_url": "https://www.nyiso.com/documents/20142/1410707/CRPP_Appendix_5.1_Interface_Definitions.pdf/6bd50d60-bfd2-4572-31bf-634fbb6c8ddf",
+      "sha256": "87cf3ecaa2b80c8851b79951437e190a0e0eb2aba542cc028ce5351831bdc5f7",
+      "bytes": 13872,
+      "pdf_pages": 6,
+      "source_period": "Undated retrieved public planning appendix; not certified as 2019 operator",
+      "verified_pdf_pages": [
+        2
+      ],
+      "use": "Supplementary PSS/E branch IDs and metering F/T; 19 West Central entries, includes lower-voltage paths",
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.pdf",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.txt",
+      "text_sha256": "52ce521985529b7a2cd569634eba1ee05e925e3bc8c57b8d645f1d91fd4e52ae"
+    },
+    {
+      "filename": "NYISO_DE_WC_Stability_2014.pdf",
+      "url": "https://www.nyiso.com/documents/20142/1394656/DE_WC_Stability_Limit_Report_final-3.pdf/b461b192-f51d-7bf7-340e-d424b60c84fa",
+      "sha256": "094f26c8b268b432567cf5a4b62f3b8699f53d3220e7180971dc595b6ad5d7be",
+      "bytes": 1986221,
+      "pdf_pages": 28,
+      "source_period": "November 2014, final OC-approved",
+      "verified_pdf_pages": [
+        4,
+        6,
+        9
+      ],
+      "use": "Dated West Central and Dysinger member tables; 9999 stability-limit placeholder rationale; Genesee load-pocket transfer relationship",
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.pdf",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.txt",
+      "text_sha256": "8734cd72ee75d70328e0bf5229834beca3719c8a2466e599d05d2189411590d6"
+    }
+  ],
+  "physical2025_membership_verified": false,
+  "historical_scope": "2019 Dysinger has ten physical circuits, including eight A-B and two A-C paths. Dated2014 WestCentral member table shares two A-C paths; undated CRPP lists19 signed terminal measurements. Neither is a certified2025 P32 definition.",
+  "semantic_warning": "NPCC bus62 STOLLE_RD230 is an accounting-B aggregate holding Allegany/Batavia plants. Physical PERFORM StolleRoad230 is A. Relabeling bus62 wholesale would move valid B generation and is unsupported.",
+  "new2025_source": {
+    "title": "NYISO Summer2025 Operating Study",
+    "url": "https://www.nyiso.com/documents/20142/3691300/Summer2025-OperatingStudy-APPROVED.pdf/3aaa5eb6-9fa4-53b5-181a-189e3ac52fcb",
+    "access": "official-domain indexed text retrieved during2026-10-11 audit",
+    "printed_page": 9,
+    "finding": "Study includes Dysinger-EastStolleRoad PAR scheduled400MW and Niagara generation50/50 across230/115kV at2100MW total. These are study assumptions, not measured hourly schedules."
+  },
+  "winter_source": {
+    "title": "NYISO Winter2024-25 Operating Study",
+    "url": "https://www.nyiso.com/documents/20142/3691300/Winter2024-25%20Operating-Study-Report-APPROVED.pdf/43473858-276f-dcf9-ee2e-5ff519a76639",
+    "printed_page": 22,
+    "finding": "Dysinger-EastStolle PAR controller schedule directly affects DysingerEast transfer limit."
+  },
+  "planning_parameters": {
+    "path": "PERFORM/Auxilliary_Perform_NY/Branch_changes_2019_to_2030.xlsx",
+    "sha256": "31d519c74f75a06a77ed11fabf535e4579fbc5c94cbb7e0a6be14cec38a054b8",
+    "row_id": "1299_1248_1",
+    "sheet": "New in 2030",
+    "from_bus1299": "DYSINGER345",
+    "to_bus1248": "STOLLE_ROAD345",
+    "r_pu": 0.00101,
+    "x_pu": 0.012,
+    "b_pu": 0.18,
+    "tap": 1.0,
+    "phase_degree": 0.0,
+    "rated_MVA_A": 1216.0,
+    "rated_MVA_B": 2454.0,
+    "rated_MVA_C": 1804.0,
+    "scope": "2030 planning line row, not proof of2025 PAR impedance/rating/tap limits. The workbook2019 sheet already contains Dysinger bus1299 with fivecircuits but omits this new line.",
+    "missing_before_model_promotion": [
+      "2025 in-service circuit/node crosswalk to retained NPCC western equivalents",
+      "separate PAR physical impedance, rating, phase range and sign",
+      "definition of new EastStolle345 versus existingStolle345 and Stolle230 terminals",
+      "complete2025 metered interface member/terminal definition",
+      "external-only or independently scheduled control policy; do not fit this internal PAR to P32"
+    ]
+  },
+  "omitted_plant_proposals": [
+    {
+      "plant_id": 55368,
+      "reason": "Historical WesternNYWindPower6.6MW appears B, but current2025 operating-table corroboration not established; do not confuse with126MW Wethersfield plant56902 in C."
+    },
+    {
+      "plant_id": 63866,
+      "reason": "ProposedHighviewSolar C listing alone is insufficient to certify active2025 plant/EIA mapping."
+    },
+    {
+      "plant_id": 66675,
+      "reason": "No currentGoldBook electrical zone found."
+    }
+  ],
+  "recommendation": "Apply only explicit station-zone corrections in a new child replay. Keep capacities and admission frozen. Preserve inherited interface operators as proxies until full2025 physical membership and detailed western-terminal crosswalk are sourced."
+}
