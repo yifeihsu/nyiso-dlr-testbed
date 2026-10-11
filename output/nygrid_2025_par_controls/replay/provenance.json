@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "status": "source_direction_verified_external_PAR_flow_conditioned_DC_replay",
+  "internal_interface_observations_used": false,
+  "observed_PAR_flows_are_external_inputs": true,
+  "PAR_flow_forecast_or_physical_tap_simulation": false,
+  "full_physical_operating_limits_verified": false,
+  "source_noload_phase_range_applied_to_aggregate_equivalent": false,
+  "physical_HVDC_devices_added": 0,
+  "native_PG_PD_QD_bounds_and_total_external_exchanges_preserved": true,
+  "variants": [
+    {
+      "variant": "dated_verified_PAR_flows",
+      "topology": "dated",
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "original_buses": 140,
+      "added_buses": 8,
+      "original_DC_records_preserved": 4,
+      "ideal_PAR_equivalents": 2,
+      "added_physical_HVDC": 0,
+      "maximum_nodal_residual_model_mw": 2.850697455869522e-11,
+      "maximum_generation_change_model_mw": 3.069544618483633e-11,
+      "maximum_other_ac_representation_error_model_mw": 1.602984411874786e-11,
+      "file": "output/nygrid_2025_par_controls/replay/dated_verified_PAR_flows.mat",
+      "sha256": "4f034589dc10418d391d99cacf5c062b30c5d82308f0c9b73c06e4ae9c8fe6d1"
+    },
+    {
+      "variant": "year_end_verified_PAR_flows",
+      "topology": "year_end",
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "original_buses": 140,
+      "added_buses": 8,
+      "original_DC_records_preserved": 4,
+      "ideal_PAR_equivalents": 2,
+      "added_physical_HVDC": 0,
+      "maximum_nodal_residual_model_mw": 2.927436071331613e-11,
+      "maximum_generation_change_model_mw": 3.069544618483633e-11,
+      "maximum_other_ac_representation_error_model_mw": 1.4807710613240488e-11,
+      "file": "output/nygrid_2025_par_controls/replay/year_end_verified_PAR_flows.mat",
+      "sha256": "9ed9c74d74f9a21ac45017262f76bf030fcfac9aec0483be07f9ead1a6e2b559"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/corrected/model_generator_register.csv",
+      "sha256": "1211d0f632df2ccd6306ce299de5d24644d4d28d0d987af8421c8b7559a01e21"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/input_receipt.json",
+      "sha256": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/direction_verification_receipt.json",
+      "sha256": "70591310ccf0ef85058cb7e92a385594c103a6c717a477db807def1601d4a55e"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/limits/limits.json",
+      "sha256": "80f1f5f97e4dd5d5bb1f74211394fcea358ea5cbbff130d432f3103d5a1e01d8"
+    },
+    {
+      "path": "scripts/nygrid_2025_par_controls/replay_controls.py",
+      "sha256": "385626125e848a616921a2840fcf07b84980721a84d556223175188f76314b69"
+    },
+    {
+      "path": "scripts/nygrid_2025_par_controls/controlled_equivalent.py",
+      "sha256": "ee43b19d7b5e5fc2936a38bb9228b703456ce242d0be7ccae5ea8a78d9d6fcbf"
+    },
+    {
+      "path": "scripts/nygrid_2019/replay_dc.py",
+      "sha256": "bf48540453c4ab8191b6b8e2cb65d8248acaae425b154ab85f6d182be3e57434"
+    }
+  ]
+}

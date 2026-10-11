@@ -1,0 +1,34 @@
+{
+  "status": "passed_independent_control_input_comparison",
+  "checked_utc": "2026-10-11T14:04:54.350109+00:00",
+  "source_internal_interfaces_read": false,
+  "hourly_observed_values_exact_frozen_source": true,
+  "schedule_values_exact_rebuilt_365_daily_files": true,
+  "schedule_hour_device_rows": 17520,
+  "physical_UTC_hours": 8760,
+  "spring_day_hours": 23,
+  "fall_day_hours": 25,
+  "NPZ_and_MAT_values_match_exactly": true,
+  "schedule_remains_diagnostic": true,
+  "physical_feasibility_not_overclaimed": true,
+  "native_dispatch_cohort": 8663,
+  "observed_qualified_hours": 8673,
+  "observed_replay_hours": 8663,
+  "schedule_statistics": {
+    "25118": {
+      "minimum_raw_mw": -25.0,
+      "maximum_raw_mw": 25.0,
+      "mean_raw_mw": -2.3781963470319636,
+      "nonzero_hours": 2700
+    },
+    "25119": {
+      "minimum_raw_mw": -25.0,
+      "maximum_raw_mw": 25.0,
+      "mean_raw_mw": -2.3781963470319636,
+      "nonzero_hours": 2700
+    }
+  },
+  "inputs_npz_sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9",
+  "inputs_mat_sha256": "585bf12987d319aab802705da5d4b917b9e695e16ee24acf5f093a7a872ebc43",
+  "compiler_receipt_sha256": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747"
+}

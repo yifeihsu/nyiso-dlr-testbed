@@ -1,0 +1,67 @@
+{
+  "status": "verified_official_direction_for_2025",
+  "captured_utc": "2026-10-11T13:47:50.753929+00:00",
+  "source_title": "Par Flow Direction Diagrams",
+  "source_document": "ParFlowDiagrams27.pdf",
+  "source_url": "https://www.nyiso.com/documents/20142/2268519/ParFlowDiagrams27.pdf/7bd78df8-311c-0b29-fa3f-ba0c8a51d123",
+  "official_catalog_page": "https://www.nyiso.com/power-grid-data",
+  "discovery_method": "Ordinary Chrome navigation to official NYISO site; Search; All time; keywordParflow; one official result linked to this PDF. Download through the displayed link. No login/CAPTCHA/challenge solving or bypass used.",
+  "catalog_result_title": "Par Flow Direction Diagrams",
+  "catalog_posted_date": "2026-07-17",
+  "document_title_page_publication_date": "2026-07-17",
+  "sign_convention_effective_date": "2024-12-03",
+  "effective_date_source": "Explicit red note on page7, not inferred from publication date.",
+  "direction_proof": "Page7 depicts both cyan plus-marked arrows from left St.Lawrence230kV IESO to right Moses230kV NYISO. Page26 legend explicitly defines that cyan plus-marked arrow as positive flow direction.",
+  "visual_inspection_complete": true,
+  "inspected_pdf_pages": [
+    7,
+    26
+  ],
+  "ptid_directions": [
+    {
+      "ptid": 25118,
+      "par": "PS33",
+      "line": "L33P",
+      "positive_from_station": "St. Lawrence",
+      "positive_from_control_area": "IESO",
+      "positive_to_station": "Moses",
+      "positive_to_control_area": "NYISO",
+      "nominal_voltage_kv": 230,
+      "sign_convention_effective_date": "2024-12-03",
+      "raw_to_ontario_to_new_york_multiplier": 1,
+      "raw_to_model_branch211_multiplier": -1,
+      "direction_page": 7,
+      "legend_page": 26
+    },
+    {
+      "ptid": 25119,
+      "par": "PS34",
+      "line": "L34P",
+      "positive_from_station": "St. Lawrence",
+      "positive_from_control_area": "IESO",
+      "positive_to_station": "Moses",
+      "positive_to_control_area": "NYISO",
+      "nominal_voltage_kv": 230,
+      "sign_convention_effective_date": "2024-12-03",
+      "raw_to_ontario_to_new_york_multiplier": 1,
+      "raw_to_model_branch211_multiplier": -1,
+      "direction_page": 7,
+      "legend_page": 26
+    }
+  ],
+  "2025_applicability": "Explicit convention effective2024-12-03 predates every2025 measurement. The retrieved current official document is published2026-07-17 and labels the earlier effective date.",
+  "raw_sum_definition": "Ontario_to_NY_public_mw = raw_P34_PTID25118 + raw_P34_PTID25119",
+  "model_mapping": {
+    "branch_row_1based": 211,
+    "from_bus": 48,
+    "from_bus_name": "MOSES E",
+    "to_bus": 100,
+    "to_bus_name": "PHAS",
+    "orientation": "NewYork_to_Ontario",
+    "lossless_equivalent_target_model_mw": "-gamma*(raw_PTID25118_mw + raw_PTID25119_mw)",
+    "scope": "Coarse existing model exchange branch; this is not a claim that modelbus100 is the physical StLawrence station or that equivalent phase equals physical PAR tap."
+  },
+  "sign_selected_using_internal_interface_fit": false,
+  "internal_Moses_observations_used": false,
+  "remaining_scope": "Direction is established; physical angle/tap/rating capability and the mapping to a coarse equivalent require separate source-backed validation."
+}

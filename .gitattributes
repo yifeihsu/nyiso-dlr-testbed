@@ -76,3 +76,11 @@ output/nygrid_2025_moses_audit/corrected/fleet/source_parent/** -diff whitespace
 output/nygrid_2025_moses_audit/validation/*.log -diff whitespace=-blank-at-eof,cr-at-eol
 "System Matpower Format/npcc_nygrid_2025_moses_corrected_dc.m" -text whitespace=cr-at-eol
 NYGRID_2025_MOSES_SOUTH_DIAGNOSIS.md -text whitespace=cr-at-eol
+# Official PAR source receipts, controlled-transfer cases and exact replay bytes.
+scripts/nygrid_2025_par_controls/** -text whitespace=cr-at-eol
+output/nygrid_2025_par_controls/** -text whitespace=cr-at-eol
+output/nygrid_2025_par_controls/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_par_controls/figures/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+output/nygrid_2025_par_controls/validation/*.log -diff whitespace=-blank-at-eof,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_par_controlled_dc.m" -text whitespace=cr-at-eol
+NYGRID_2025_VERIFIED_PAR_CONTROLS.md -text whitespace=cr-at-eol
