@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "scenarios": 8,
+  "total_rows": 784,
+  "internal_observations_posthoc_only": true,
+  "source_parameters_frozen_before_scoring": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/replay_receipt.json",
+      "sha256": "c5b0c9a4168525ded1eadfd4a4493c02a67a3eeae7a77b0a5a7f1964a5602931"
+    },
+    {
+      "path": "scripts/nygrid_2025_dover_parameters/run_dover_replay.py",
+      "sha256": "022dc62e6a09a7c2dfda80318a3a2233c87717a6bff0d005ca67af471214edb2"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/prior_line_parameters.npz",
+      "sha256": "d0558af16b34f3e49469eddd353307da242fba508b5ba36deb4daa4f6f031ffc"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/neutral_x_nominal.npz",
+      "sha256": "08bdf65631e3818dc74df2c0c452ecbe556e38f1b303da6474ad9d7fb71929e7"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/neutral_x_low.npz",
+      "sha256": "b115ae2011fdded5cd80158ec36ecaf533c4e385ae23f862a61d0ee93e9725ff"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/neutral_x_high.npz",
+      "sha256": "cbb1f13fa0a589859f3de4c77e0e033d8cb27fc3c7edee6552da9c0542e5e947"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/bounded_x_nominal.npz",
+      "sha256": "0b1c2075989ba715fe356eaef24a008a2d4196e11034dbc44fb193dc469b85f9"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/bounded_x_low.npz",
+      "sha256": "a178a8c9d2494fa2cf77e72cedbb1820af05c77d4ec1c0aee460c71d690c5a44"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/bounded_x_high.npz",
+      "sha256": "1ef0603102d111a26a70bd1dff36d5a41b8b315af4d75429269444b98fb2bdce"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/exact_tracking_x_nominal.npz",
+      "sha256": "185749ba307acfd5d13478c83eaaeda86333c76c9ba6ac7287e8bef7da199394"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_dover_parameters/comparison/annual_metrics.csv",
+      "sha256": "b6b9ae7e7c11794b54a5ac9c8904d9334df746d1e98a563b7c8a8bc5048abdf0"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/comparison/monthly_metrics.csv",
+      "sha256": "376d0156d8d7fe9e35237ae2915b38530eabd47072d0a3846d9559f748a87308"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/comparison/post_cutover_metrics.csv",
+      "sha256": "e4aa45c53a2516bae7c3280f473bc3cd62d0bf0075c7e95d16fa37cd928f8b06"
+    }
+  ]
+}

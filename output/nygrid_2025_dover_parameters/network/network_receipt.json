@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "internal_interface_observations_read": false,
+  "conditional_PAR_impedance_applied": true,
+  "new_line_parameters_applied": true,
+  "original_six_transfer_runtime_contract_preserved": true,
+  "physical_full_AC_or_hardware_certification": false,
+  "scenarios": [
+    {
+      "scenario": "x_low",
+      "path": "output/nygrid_2025_dover_parameters/network/x_low.mat",
+      "sha256": "1c8534d7dd57214ba357ed5f349a685fac8808ba0597ac1b0ef28a56916d88cd",
+      "per_bank_x_pu_100MVA": 0.012492518640212573,
+      "full_buses": 192,
+      "full_branches": 413,
+      "slim_buses": 148,
+      "slim_branches": 274,
+      "phase_basis_error": 1.1368683772161603e-13,
+      "original_97_circuits_and_inputs_preserved": true
+    },
+    {
+      "scenario": "x_nominal",
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1",
+      "per_bank_x_pu_100MVA": 0.01873877796031886,
+      "full_buses": 192,
+      "full_branches": 413,
+      "slim_buses": 148,
+      "slim_branches": 274,
+      "phase_basis_error": 5.684341886080802e-14,
+      "original_97_circuits_and_inputs_preserved": true
+    },
+    {
+      "scenario": "x_high",
+      "path": "output/nygrid_2025_dover_parameters/network/x_high.mat",
+      "sha256": "c003b2dec47b5f0914e7347129f4efb2767d4d698cfed7e0004c270018c363d0",
+      "per_bank_x_pu_100MVA": 0.02810816694047829,
+      "full_buses": 192,
+      "full_branches": 413,
+      "slim_buses": 148,
+      "slim_branches": 274,
+      "phase_basis_error": 5.684341886080802e-14,
+      "original_97_circuits_and_inputs_preserved": true
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/network_cases.mat",
+      "sha256": "5fb84104d527b2e26d22f3a772ebd4e56ff981325ea7490d349fa53758646320"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/Dover_line_only_estimates_not_applied.csv",
+      "sha256": "f2b64d1fd3734daa3a2a078f1cdef97bf4e16281a6203661fa61de352e484dee"
+    },
+    {
+      "path": "scripts/nygrid_2025_slim/build_slim_network.py",
+      "sha256": "574d8d6eaac69fe2002fba8fa88e24ed0f179c8b78f66ebcdfffffdeea70d9bc"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/sources/dover_source_register.csv",
+      "sha256": "f0f5d3109fce3395ebbdf76de246a12af2546b53e97c9dca4e885bf99fca8213"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/sources/dover_source_evidence_receipt.json",
+      "sha256": "c17bfa8b619cc55f92fa9ea66c6bf98f4fb916a1164eb5d59551cf7ea642f53c"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/engineering/conditional_impedance_basis.json",
+      "sha256": "574677e7571b1a2adb5611c07e45108f2fc5cebd86df1c1097fc0012e1aee0f3"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/engineering/PST_parameter_scenarios.csv",
+      "sha256": "b951849bddca9699d6e33d2a2326f029a7b79f30358eaf4c21e887fb58acb514"
+    },
+    {
+      "path": "scripts/nygrid_2025_dover_parameters/build_dover_network.py",
+      "sha256": "fc2bc7cd373a6e6674da7ff1e7680dea96d4171f54e1e7b30e026c3fad43b8e9"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/branch_register.csv",
+      "sha256": "6a574d53b40eb2bf08dba851757a5d56ab6b4d89377b2a33e5d6319d5cd2a18f"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/branch_register.csv",
+      "sha256": "547c40ce859c358ded212f1755b879ee508a2d56c1354e7d40782b11e0bfb82d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27"
+    }
+  ],
+  "applied_register": {
+    "path": "output/nygrid_2025_dover_parameters/network/Dover_applied_branch_register.csv",
+    "sha256": "ae6a10fded4635162e77c37516b77eb71caee445b516268144f1857555be6883"
+  }
+}

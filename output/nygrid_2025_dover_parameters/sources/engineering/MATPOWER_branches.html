@@ -1,0 +1,164 @@
+<!DOCTYPE html> 
+<html  lang="en"> 
+<head><title>Branches</title> 
+<meta  charset="UTF-8" /> 
+<meta  name="viewport" content="width=device-width,initial-scale=1.0" /> 
+<link  rel="stylesheet" type="text/css" href="MATPOWER.css" /> 
+</head><body  
+>
+   <!--l. 830--><div  class="crosslinks"><p  class="noindent">[<a  
+href="ExtendingtheOPF.html" >next</a>] [<a  
+href="DataFormats.html" >prev</a>] [<a  
+href="DataFormats.html#tailDataFormats.html" >prev-tail</a>] [<a  
+href="GettingStarted.html#tailBranches.html">tail</a>] [<a  
+href="StandardDCOPF.html#StandardExtensions.html" >up</a>] </p></div>
+   <h4  class="subsectionHead"><span  class="titlemark">3.2   </span> <a  
+ id="sec:branch"></a>Branches</h4>
+<!--l. 833--><p  class="noindent" >All transmission lines<span  class="footnote-mark"><a  
+href="MATPOWER43.html#fn24x0"><sup  class="textsuperscript">24</sup></a></span><a  
+ id="x42-29001f24"></a> ,
+transformers and phase shifters are modeled with a common branch model, consisting of a
+standard <img  
+src="MATPOWER16x.svg" alt="π  "  class="math"  /> transmission line model, with series impedance <img  
+src="MATPOWER17x.svg" alt="zs = rs + jxs  "  class="math"  /> and total
+charging susceptance <img  
+src="MATPOWER18x.svg" alt="b
+c  "  class="math"  />, in series with an ideal phase shifting transformer. The
+transformer, whose tap ratio has magnitude <img  
+src="MATPOWER19x.svg" alt="τ  "  class="math"  /> and phase shift angle <img  
+src="MATPOWER20x.svg" alt="𝜃shift   "  class="math"  />, is located at
+the <span  
+class="cmti-12">from </span>end of the branch, as shown in Figure <a  
+href="#fig:branch_model">3-1<!--tex4ht:ref: fig:branch_model --></a>. The parameters <img  
+src="MATPOWER21x.svg" alt="rs  "  class="math"  />, <img  
+src="MATPOWER22x.svg" alt="xs  "  class="math"  />,
+<img  
+src="MATPOWER23x.svg" alt="bc  "  class="math"  />, <img  
+src="MATPOWER24x.svg" alt="τ  "  class="math"  /> and <img  
+src="MATPOWER25x.svg" alt="𝜃shift   "  class="math"  /> are speciﬁed directly in columns <span  
+class="cmtt-10x-x-109">BR</span><span  
+class="cmtt-10x-x-109">_R </span>(3), <span  
+class="cmtt-10x-x-109">BR</span><span  
+class="cmtt-10x-x-109">_X </span>(4), <span  
+class="cmtt-10x-x-109">BR</span><span  
+class="cmtt-10x-x-109">_B </span>(5),
+<span  
+class="cmtt-10x-x-109">TAP </span>(9) and <span  
+class="cmtt-10x-x-109">SHIFT </span>(10), respectively, of the corresponding row of the <span  
+class="cmtt-10x-x-109">branch</span>
+matrix.<span  class="footnote-mark"><a  
+href="MATPOWER44.html#fn25x0"><sup  class="textsuperscript">25</sup></a></span><a  
+ id="x42-29002f25"></a> 
+</p><!--l. 835--><p  class="indent" >   The complex current injections <img  
+src="MATPOWER26x.svg" alt="if  "  class="math"  /> and <img  
+src="MATPOWER27x.svg" alt="it  "  class="math"  /> at the <span  
+class="cmti-12">from </span>and <span  
+class="cmti-12">to </span>ends of the branch,
+respectively, can be expressed in terms of the <img  
+src="MATPOWER28x.svg" alt="2 × 2  "  class="math"  /> branch admittance matrix <img  
+src="MATPOWER29x.svg" alt="Ybr  "  class="math"  /> and
+the respective terminal voltages <img  
+src="MATPOWER30x.svg" alt="vf  "  class="math"  /> and <img  
+src="MATPOWER31x.svg" alt="vt  "  class="math"  />
+</p>
+   <table  
+class="equation"><tr><td><a  
+ id="eq:if_it"></a>
+   <center  class="math-display" >
+<img  
+src="MATPOWER32x.svg" alt="[    ]      [     ]
+  if   = Y    vf   .
+  it      br   vt
+" class="math-display"  /></center></td><td  class="equation-label">(3.1)</td></tr></table>
+<!--l. 838--><p  class="nopar" >
+With the series admittance element in the <img  
+src="MATPOWER33x.svg" alt="π  "  class="math"  /> model denoted by <img  
+src="MATPOWER34x.svg" alt="ys = 1∕zs  "  class="math"  />, the branch
+admittance matrix can be written
+</p>
+   <table  
+class="equation"><tr><td><a  
+ id="eq:Ybr"></a>
+   <center  class="math-display" >
+<img  
+src="MATPOWER35x.svg" alt="     [  (ys + j bc) 12 − ys-−j1𝜃--- ]
+Ybr =        --21--τ       τe bshcift  .
+         − ys τej𝜃shift    ys + j 2
+" class="math-display"  /></center></td><td  class="equation-label">(3.2)</td></tr></table>
+<!--l. 848--><p  class="nopar" >
+</p>
+   <figure  class="figure"> 
+
+                                                                                  
+                                                                                  
+<a  
+ id="fig:branch_model"></a>
+                                                                                  
+                                                                                  
+<!--l. 852--><p  class="noindent" ><object  type="image/svg+xml" data="./figures/pi-model.svg" name="picture ./figures/pi-model" class="graphics"></object><!--tex4ht:graphics -->
+</p>
+<figcaption  class="caption" ><span  class="id">Figure 3-1:</span><span   
+class="content">Branch Model</span></figcaption><!--tex4ht:label?: x42-290051 -->
+                                                                                  
+                                                                                  
+   </figure>
+<!--l. 857--><p  class="indent" >   If the four elements of this matrix for branch <img  
+src="MATPOWER36x.svg" alt="i  "  class="math"  /> are labeled as follows:
+</p>
+   <table  
+class="equation"><tr><td><a  
+ id="eq:Ybri"></a>
+   <center  class="math-display" >
+<img  
+src="MATPOWER37x.svg" alt="      [ yi   yi  ]
+Ybir =    fif   fit
+        ytf  ytt
+" class="math-display"  /></center></td><td  class="equation-label">(3.3)</td></tr></table>
+<!--l. 864--><p  class="nopar" >
+then four <img  
+src="MATPOWER38x.svg" alt="n ×  1
+ l  "  class="math"  /> vectors <img  
+src="MATPOWER39x.svg" alt="Y
+ ff  "  class="math"  />, <img  
+src="MATPOWER40x.svg" alt="Y
+ ft  "  class="math"  />, <img  
+src="MATPOWER41x.svg" alt="Y
+  tf  "  class="math"  /> and <img  
+src="MATPOWER42x.svg" alt="Y
+ tt  "  class="math"  /> can be constructed, where the <img  
+src="MATPOWER43x.svg" alt="i  "  class="math"  />-th
+element of each comes from the corresponding element of <img  
+src="MATPOWER44x.svg" alt="  i
+Ybr  "  class="math"  />. Furthermore, the <img  
+src="MATPOWER45x.svg" alt="nl × nb  "  class="math"  />
+sparse connection matrices <img  
+src="MATPOWER46x.svg" alt="Cf  "  class="math"  /> and <img  
+src="MATPOWER47x.svg" alt="Ct  "  class="math"  /> used in building the system admittance matrices
+can be deﬁned as follows. The <img  
+src="MATPOWER48x.svg" alt="(i,j)th   "  class="math"  /> element of <img  
+src="MATPOWER49x.svg" alt="Cf  "  class="math"  /> and the <img  
+src="MATPOWER50x.svg" alt="(i,k)th   "  class="math"  /> element of <img  
+src="MATPOWER51x.svg" alt="Ct  "  class="math"  /> are
+equal to 1 for each branch <img  
+src="MATPOWER52x.svg" alt="i  "  class="math"  />, where branch <img  
+src="MATPOWER53x.svg" alt="i  "  class="math"  /> connects from bus <img  
+src="MATPOWER54x.svg" alt="j  "  class="math"  /> to bus <img  
+src="MATPOWER55x.svg" alt="k  "  class="math"  />. All
+other elements of <img  
+src="MATPOWER56x.svg" alt="C
+ f  "  class="math"  /> and <img  
+src="MATPOWER57x.svg" alt="C
+  t  "  class="math"  /> are zero.
+                                                                                  
+                                                                                  
+</p>
+   <!--l. 868--><div  class="crosslinks"><p  class="noindent">[<a  
+href="ExtendingtheOPF.html" >next</a>] [<a  
+href="DataFormats.html" >prev</a>] [<a  
+href="DataFormats.html#tailDataFormats.html" >prev-tail</a>] [<a  
+href="Branches.html" >front</a>] [<a  
+href="StandardDCOPF.html#StandardExtensions.html" >up</a>] </p></div>
+<!--l. 868--><p  class="indent" >   <a  
+ id="tailBranches.html"></a> </p> 
+</body> 
+</html>

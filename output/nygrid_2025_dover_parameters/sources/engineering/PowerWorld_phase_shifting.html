@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-toc-path="View Case Data|Properties of Simulator Objects|Run Mode Properties and Information|Line/Transformer Properties" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Transformer Phase Shifting Information</title>
+        <!--<meta http-equiv="refresh" content="600" />-->
+        <!--<script type="text/javascript" src="Revision.js?$Rev$">
+        </script>-->
+        <!--<script type="text/javascript" src="/site-script.js?<?php echo time(); ?>"></script>-->
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <style>
+        </style>
+        <link href="../PowerWorld_Aug2015.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript">/* <![CDATA[ */		
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-26738028-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();/* ]]> */</script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#MainDocumentation_HTML/Transformer_Phase_Shifting_Information.htm">Open topic with navigation</a>
+        </p>
+        <div class="TopicContent">
+            <div class="nocontent">
+                <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="10" data-mc-toc="True">
+                </div>
+            </div>
+            <div role="main" id="mc-main-content">
+                <h1>Transformer Phase Shifting Dialog</h1>
+                <p style="margin-top: 0;margin-bottom: 0;">&#160;</p>
+                <p>The Transformer Phase Shifting Dialog is used to view the control parameters of phase-shifting transformers. To view this dialog, click on the <span style="font-weight: bold;">Change Automatic Control Options</span> button  found with the <a href="Transmission_Line_Transformer_Options_Transformer_Control.htm">Transformer Control options</a>, provided that the <span style="font-style: italic;">Phase Shift Control</span> option is chosen from the <span style="font-style: normal; font-weight: bold;">Automatic Control Type</span> group.</p>
+                <p class="Topic-Section" style="margin-top: 0;margin-bottom: 0;">&#160;</p>
+                <p>The <b>Common Options</b> tab of this dialog has the following fields:</p>
+                <p class="Topic-Section-Indent">Automatic Control Type</p>
+                <p class="Topic-Text-Indent-II">This section is only visible on the dialog in edit mode. The control type of the transformer can be changed between no control, voltage regulation, reactive power control, or phase shifter control. Changing the control type will update the dialog to reflect the type of control that is selected.</p>
+                <p class="Topic-Section-Indent">Regulated Bus Number</p>
+                <p class="Topic-Text-Indent-II">Regulated Bus number is not used for a phase shifting transformer. A phase shifting transformer regulates the MW flow going in the direction of From Bus towards To Bus of itself. </p>
+                <p class="Topic-Section-Indent">Current MW Flow </p>
+                <p class="Topic-Text-Indent-II">Current MW flow through the transformer measured at the regulated bus terminal.  </p>
+                <p class="Topic-Section-Indent">MW Error</p>
+                <p class="Topic-Text-Indent-II">If the current MW flow falls outside the minimum/maximum MW flow limits, the <span style="font-style: normal; font-weight: bold;">MW Error</span> field indicates by how much the flow violates the regulating range.</p>
+                <p class="Topic-Section-Indent">Regulation Minimum MW Flow, Regulation Maximum MW Flow</p>
+                <p class="Topic-Text-Indent-II">Minimum and maximum allowable MW flow through the phase shifter.</p>
+                <p class="Topic-Text-Indent-II">When solving the DC power flow, phase shifters will always control to the middle of this regulation range regardless of the Regulation Target Type.</p>
+                <p class="Topic-Section-Indent">Regulation Target Type</p>
+                <p class="Topic-Text-Indent-II">As long as the regulated MW flow is inside the regulation minimum and maximum, the transformer will not change its phase angle. When the regulated MW flow moves outside of this regulation range, Simulator will calculate a new phase angle in an attempt to bring the regulated MW flow back inside of its range. The <span style="font-weight: bold;">Regulation Target Type</span> determines what value is used as a target when calculating this change in phase angle.  <span style="font-weight: bold;">Middle</span> is the default and means that the target is the average of the regulation minimum and maximum regardless of whether the MW flow is high or low.  <span style="font-weight: bold;">Max/Min</span> means that the regulation maximum is used as the target when the regulated MW flow is above the maximum, and regulation minimum is used as the target value when the regulated MW flow is below the minimum.</p>
+                <p class="Topic-Text-Indent-II">When solving the DC power flow, phase shifters will always control to the middle of the regulation range regardless of the specified target type. </p>
+                <p class="Topic-Section-Indent">Present Phase Angle (Degrees)</p>
+                <p class="Topic-Text-Indent-II">The phase angle of the transformer for the current solved system state.  </p>
+                <p class="Topic-Section-Indent">Minimum Phase Angle, Maximum Phase Angle</p>
+                <p class="Topic-Text-Indent-II">Minimum and maximum allowable phase shift in degrees. </p>
+                <p class="Topic-Section-Indent">Step Size (Degrees)</p>
+                <p class="Topic-Text-Indent-II">Phase shift change per step in degrees.</p>
+                <p class="Topic-Section-Indent">MW Flow to Phase Sensitivity</p>
+                <p class="Topic-Text-Indent-II">The sensitivity of the controlled MW flow to changes in the transformer's phase. This sensitivity indicates the transformer's ability to regulate its MW flow.</p>
+                <p class="Topic-Section-Indent">Impedance Correction Table</p>
+                <p class="Topic-Text-Indent-II">Specifies the number of the transformer's corresponding transformer impedance correction table. Transformer impedance correction tables are used to specify how the impedance of the transformer should change with the phase angle. If this number is 0, no impedance correction table is associated with the transformer, and the impedance of the transformer will thus remain fixed as the phase angle changes. Valid impedance correction table numbers range from 1 to 63. To assign an existing impedance correction table to the transformer, enter the existing table's number. To view the existing impedance correction tables, click the <span style="font-style: normal; font-weight: bold;">Insert/View Impedance Correction Table</span> button, which brings up the <a href="Transformer_Impedance_Correction_Tables_Dialog.htm">Transformer Impedance Correction Dialog</a>. To define a brand new impedance correction table for the transformer, enter an unused table number and then click <span style="font-style: normal; font-weight: bold;">Insert/View Impedance Correction Table</span> to prescribe the correction table. Note that the association between a transformer and an impedance correction table is not finalized until you select either <span style="font-style: normal; font-weight: bold;">OK</span> or <span style="font-style: normal; font-weight: bold;">Save</span> on the <a href="Line_Transformer_Information_Run_Mode.htm">Branch Information Dialog</a> or <a href="Transmission_Line_Transformer_Options_Edit_Mode.htm">Branch&#160;Options dialog</a>.</p>
+                <p class="Topic-Section-Indent">View Transformer Correction Table <span style="font-weight: normal;">or</span> Insert Transformer Correction Table</p>
+                <p class="Topic-Text-Indent-II">Click on this button either to view or to insert transformer correction tables. Clicking on this button displays the <a href="Transformer_Impedance_Correction_Tables_Dialog.htm">Transformer Impedance Correction Dialog</a>. Note that a table must contain at least two points in order to be defined.</p>
+                <p class="Topic-Text-Indent">&#160;</p>
+                <p>The <a href="Transformer_Time_Step_Options.htm" style="font-weight: bold;">Time Step Options</a> tab contains control options specific for the Time Step Simulation tool.</p>
+            </div>
+        </div>
+        <p class="footer" style="text-align:center">© <span class="mc-variable Primary.BuildYear variable">2026</span> PowerWorld Corporation</p>
+        <p style="font-size: 6pt;margin-top: 0;margin-bottom: 0;">&#160;</p>
+        <script type="text/javascript">
+			/*<![CDATA[*/
+			var button = document.querySelector('button.TSPdfButton');
+			button.addEventListener('click', fullscreen);
+			// when you are in fullscreen, ESC and F11 may not be trigger by keydown listener. 
+			// so don't use it to detect exit fullscreen
+			document.addEventListener('keydown', function (e) {
+			console.log('key press' + e.keyCode);
+			});
+
+			function fullscreen() {
+			// check if fullscreen mode is available
+			if (document.fullscreenEnabled || 
+			document.webkitFullscreenEnabled || 
+			document.mozFullScreenEnabled ||
+			document.msFullscreenEnabled) {
+    
+			// which element will be fullscreen
+			var iframe = document.querySelector('div.TSPdfDiv');
+			// Do fullscreen
+			if (iframe.requestFullscreen) {
+			iframe.requestFullscreen();
+			} else if (iframe.webkitRequestFullscreen) {
+			iframe.webkitRequestFullscreen();
+			} else if (iframe.mozRequestFullScreen) {
+			iframe.mozRequestFullScreen();
+			} else if (iframe.msRequestFullscreen) {
+			iframe.msRequestFullscreen();
+			}
+			}
+			else {
+			document.querySelector('.error').innerHTML = 'Your browser is not supported';
+			}
+			}
+			/*]]>*/
+		</script>
+    </body>
+</html>

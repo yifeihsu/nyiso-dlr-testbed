@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "scenarios": 3,
+  "network_PF_run": false,
+  "source_observations_used_for_impedance_or_phase_math": false,
+  "physical_factory_impedance_or_measured_taps_claimed": false,
+  "results": [
+    {
+      "scenario": "x_low",
+      "passed": true,
+      "original_buses_retained": 140,
+      "slim_buses": 148,
+      "full_buses": 192,
+      "eliminated_added_buses": 44,
+      "historical_circuits_unchanged": 97,
+      "parallel_banks": 2,
+      "model_bank_X_pu100": 0.012492518640212573,
+      "parallel_pair_X_pu100": 0.006246259320106287,
+      "maximum_Schur_B_error": 7.639755494892597e-11,
+      "maximum_Schur_phase_error": 0.0,
+      "maximum_analytic_phase_basis_error": 1.546140993013978e-11,
+      "maximum_unequal_phase_recovery_error": 4.547473508864641e-13,
+      "controller_response_rank": 2,
+      "controller_response_condition": 18.748991963110388,
+      "differential_bank_circulation_preserved": true,
+      "original_six_transfer_substitution_respected_in_control_derivative": true
+    },
+    {
+      "scenario": "x_nominal",
+      "passed": true,
+      "original_buses_retained": 140,
+      "slim_buses": 148,
+      "full_buses": 192,
+      "eliminated_added_buses": 44,
+      "historical_circuits_unchanged": 97,
+      "parallel_banks": 2,
+      "model_bank_X_pu100": 0.01873877796031886,
+      "parallel_pair_X_pu100": 0.00936938898015943,
+      "maximum_Schur_B_error": 7.275957614183426e-11,
+      "maximum_Schur_phase_error": 0.0,
+      "maximum_analytic_phase_basis_error": 9.549694368615746e-12,
+      "maximum_unequal_phase_recovery_error": 3.5438318946034997e-13,
+      "controller_response_rank": 2,
+      "controller_response_condition": 12.832661308740263,
+      "differential_bank_circulation_preserved": true,
+      "original_six_transfer_substitution_respected_in_control_derivative": true
+    },
+    {
+      "scenario": "x_high",
+      "passed": true,
+      "original_buses_retained": 140,
+      "slim_buses": 148,
+      "full_buses": 192,
+      "eliminated_added_buses": 44,
+      "historical_circuits_unchanged": 97,
+      "parallel_banks": 2,
+      "model_bank_X_pu100": 0.02810816694047829,
+      "parallel_pair_X_pu100": 0.014054083470239145,
+      "maximum_Schur_B_error": 1.7462298274040222e-10,
+      "maximum_Schur_phase_error": 0.0,
+      "maximum_analytic_phase_basis_error": 6.275513442233205e-11,
+      "maximum_unequal_phase_recovery_error": 4.263256414560601e-13,
+      "controller_response_rank": 2,
+      "controller_response_condition": 8.88844087249347,
+      "differential_bank_circulation_preserved": true,
+      "original_six_transfer_substitution_respected_in_control_derivative": true
+    }
+  ],
+  "files": [
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_low.mat",
+      "sha256": "1c8534d7dd57214ba357ed5f349a685fac8808ba0597ac1b0ef28a56916d88cd"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_high.mat",
+      "sha256": "c003b2dec47b5f0914e7347129f4efb2767d4d698cfed7e0004c270018c363d0"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/network_receipt.json",
+      "sha256": "c65358dc54875b6a945bf5ed194bb450be40be93924e6910555ee732a77e3d85"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/Dover_applied_branch_register.csv",
+      "sha256": "ae6a10fded4635162e77c37516b77eb71caee445b516268144f1857555be6883"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/engineering/PAR_estimates.json",
+      "sha256": "d574e40964934d1f1375c9e56ce14d5dfc5348f420a4c27d11d15df832eea6bf"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/network_cases.mat",
+      "sha256": "5fb84104d527b2e26d22f3a772ebd4e56ff981325ea7490d349fa53758646320"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/Dover_line_only_estimates_not_applied.csv",
+      "sha256": "f2b64d1fd3734daa3a2a078f1cdef97bf4e16281a6203661fa61de352e484dee"
+    },
+    {
+      "path": "scripts/nygrid_2025_slim/validate_slim.py",
+      "sha256": "3df8f0c787d8838bf5eb5aae8a7447aa6dc27f7a5fe227a5bba7d413ddfe9905"
+    },
+    {
+      "path": "scripts/nygrid_2025_dover_parameters/engineering/validate_network.py",
+      "sha256": "1680b3a345a6ea7b60eb0934f28733198ba033db24d868798190765d44bd5da3"
+    }
+  ]
+}

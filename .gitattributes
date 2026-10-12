@@ -112,3 +112,10 @@ output/nygrid_2025_line_parameters/sources/** -diff whitespace=-blank-at-eol,-bl
 output/nygrid_2025_line_parameters/conductors/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
 "System Matpower Format/npcc_nygrid_2025_line_estimated_dc.m" -text !eol whitespace=cr-at-eol
 NYGRID_2025_LINE_PARAMETER_ESTIMATION.md -text !eol whitespace=cr-at-eol
+# Applied Dover line/PAR source evidence and phase-affine DC reconstruction.
+scripts/nygrid_2025_dover_parameters/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_dover_parameters/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_dover_parameters/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_dover_parameters/engineering/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_dover_dc.m" -text !eol whitespace=cr-at-eol
+NYGRID_2025_DOVER_PARAMETERS_APPLIED.md -text !eol whitespace=cr-at-eol

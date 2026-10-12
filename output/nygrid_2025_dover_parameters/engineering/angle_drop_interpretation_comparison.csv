@@ -1,0 +1,5 @@
+method,x_pu_750,receiving_v_pu,internal_v_pu,caveat
+receiving_V1_I1_unityPF,0.14054083470239145,1.0,1.009827572518618,nominal conditional model;source magnitude can be sec8 under unity ideal tap
+internal_E1_I1_unityPF,0.13917310096006544,0.9902680687415704,1.0,"different voltage/loading condition;receiving apparent power is cos8 pu,not1pu"
+both_terminal_magnitudes1_I1,0.1395129474882506,1.0,1.0,load power factor cos4 leading;notunityPF
+small_angle_DC_approximation,0.13962634015954636,1.0,1.0,linearizedangle approximation;notexactACphasorcalibration
