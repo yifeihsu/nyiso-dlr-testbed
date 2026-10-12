@@ -1,0 +1,33 @@
+{
+  "status": "bounded_targeted_search_did_not_establish_requested_P32_expression",
+  "reviewed_utc": "2026-10-12T03:09:05.764788+00:00",
+  "scope": "Seven internal NYISO interfaces; certified P32 signed terminal-flow expression and effective timestamps",
+  "queries": [
+    "NYISO actual flows positive",
+    "NYISO interface sum metered",
+    "NYISO P-32 flow",
+    "NYISO interface algebraic sum",
+    "NYISO Actual Flows direction",
+    "NYISO Dysinger positive",
+    "NYISO interface flows sign",
+    "NYISO Dysinger East West Central P-32"
+  ],
+  "domains": [
+    "nyiso.com",
+    "mis.nyiso.com"
+  ],
+  "local_sources_keyword_reviewed": [
+    "NYISO_Emergency_Operations_Manual_current.txt",
+    "NYISO_Summer2025_OperatingStudy_APPROVED.txt",
+    "NYISO_TE23_20230915.txt",
+    "NYISO_MS24_20240718.txt",
+    "NYISO_CEVC24_2024.txt"
+  ],
+  "related_findings_not_transferred": [
+    "Summer 2025 study explicitly describes QFW as an algebraic sum, but QFW is not one of the seven requested interfaces.",
+    "Summer 2025 study gives NNC flow direction language; this does not establish direction of an internal P32 interface.",
+    "Appendix E identifies circuit membership, regional headings and starred meter ends; it does not state a P32 expression or operational effective timestamp."
+  ],
+  "conclusion": "Preserve source-table orientation as a declared local convention. Do not certify it as numerical P32 weights/algebra.",
+  "limitation": "This is a bounded search result, not proof that no such authoritative documentation exists."
+}

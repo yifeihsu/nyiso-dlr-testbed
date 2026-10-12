@@ -1,0 +1,180 @@
+{
+  "status": "passed_source_only_western_seasonal_comparison",
+  "passed": true,
+  "created_utc": "2026-10-12T02:49:55.644624+00:00",
+  "summer_catalog_posted": "2025-06-20",
+  "winter_catalog_posted": "2025-10-17",
+  "compared_terms": 24,
+  "checks": [
+    {
+      "term_id": "dysinger_east_summer2025_01",
+      "winter_pdf_page": 35,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "dysinger_east_summer2025_02",
+      "winter_pdf_page": 35,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "dysinger_east_summer2025_03",
+      "winter_pdf_page": 35,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "dysinger_east_summer2025_04",
+      "winter_pdf_page": 35,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "dysinger_east_summer2025_05",
+      "winter_pdf_page": 35,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "dysinger_east_summer2025_06",
+      "winter_pdf_page": 35,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "dysinger_east_summer2025_07",
+      "winter_pdf_page": 35,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "dysinger_east_summer2025_08",
+      "winter_pdf_page": 35,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "dysinger_east_summer2025_09",
+      "winter_pdf_page": 35,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "dysinger_east_summer2025_10",
+      "winter_pdf_page": 35,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "interface": "Dysinger East",
+      "winter_pdf_page": 35,
+      "same_number_of_terms": true,
+      "winter_term_count": 10
+    },
+    {
+      "term_id": "west_central_summer2025_01",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_02",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_03",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_04",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_05",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_06",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_07",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_08",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_09",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_10",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_11",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_12",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_13",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "term_id": "west_central_summer2025_14",
+      "winter_pdf_page": 41,
+      "same_term_circuit_voltage_meter_marker": true
+    },
+    {
+      "interface": "West Central",
+      "winter_pdf_page": 41,
+      "same_number_of_terms": true,
+      "winter_term_count": 14
+    }
+  ],
+  "visual_review": "Winter PDF pages 35 and 41 rendered with Poppler and inspected directly",
+  "conclusion": "Dysinger East 10 entries and West Central 14 entries have unchanged names, circuit IDs, voltages and asterisk positions between the two seasonal publications.",
+  "limitations": [
+    "Publication dates are not asserted to be exact P32 effective timestamps.",
+    "Four West Central transformer entries remain without marked meter ends.",
+    "Winter 2024-25 is not included in this two-source comparison.",
+    "No reduced-model circuit mapping, observed-flow calibration, or numerical sign inference is performed."
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/western_2025.csv",
+      "sha256": "382667ec1989f126558381171227824ae3fbfcae523f7264f100c029902aab22"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/western_2025.receipt.json",
+      "sha256": "575d433b9e436a91d82cf9583d545bc1b9f83b5d8c35e1cefe4be70af76de1b3"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.pdf",
+      "sha256": "bcf26e7ac908f43a29f34230067b5b1afc6e587845b26246d7ca39a41ef9f072"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.receipt.json",
+      "sha256": "623fe65c20581a825d48b1453a728f15df8f9ad0099810068122a469d82f6732"
+    },
+    {
+      "path": "scripts/nygrid_2025_flowgate_definitions/compare_western_seasons.py",
+      "sha256": "9bed34c7be85e191c1387bd71ee45bb2bf15a6ea567ca67dde505bd6e94597f9"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/Winter2025_26_Appendix_page035.png",
+      "sha256": "3c97e6a55f3aa31fd18e6e73c573c570afa54eebef861f41c1a222b4d5331cd4"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/Winter2025_26_Appendix_page041.png",
+      "sha256": "e170aca42814b10dad4135ca7a2f6b3d0791b02bb830ee521719644151a5f1e1"
+    }
+  ]
+}

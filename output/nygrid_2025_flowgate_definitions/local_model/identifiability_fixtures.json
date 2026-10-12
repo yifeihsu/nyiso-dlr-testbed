@@ -1,0 +1,55 @@
+{
+  "parallel_bundle_sum_identifiable": {
+    "identifiable": true,
+    "nullity": 1,
+    "nullspace_target_residual": 1.1102230246251565e-16,
+    "rowspace_reconstruction_error": 2.220446049250313e-16,
+    "tolerance": 1e-10,
+    "measurement_weights": [
+      0.9999999999999998
+    ],
+    "constraint_weights": [],
+    "affine_offset": 0.0
+  },
+  "parallel_individual_unidentifiable": {
+    "identifiable": false,
+    "nullity": 1,
+    "nullspace_target_residual": 0.7071067811865475,
+    "rowspace_reconstruction_error": 0.5000000000000002,
+    "tolerance": 1e-10,
+    "unobservable_perturbation": [
+      -0.7071067811865475,
+      0.7071067811865476
+    ],
+    "measurement_and_constraint_change": 1.1102230246251565e-16,
+    "target_change": -0.7071067811865475
+  },
+  "individual_with_source_known_equal_sharing_constraint": {
+    "identifiable": true,
+    "nullity": 0,
+    "nullspace_target_residual": 0.0,
+    "rowspace_reconstruction_error": 2.220446049250313e-16,
+    "tolerance": 1e-10,
+    "measurement_weights": [
+      0.4999999999999998
+    ],
+    "constraint_weights": [
+      0.5
+    ],
+    "affine_offset": 0.0
+  },
+  "serial_difference_known_side_injection": {
+    "identifiable": true,
+    "nullity": 0,
+    "nullspace_target_residual": 0.0,
+    "rowspace_reconstruction_error": 2.220446049250313e-16,
+    "tolerance": 1e-10,
+    "measurement_weights": [
+      1.0000000000000002
+    ],
+    "constraint_weights": [
+      -1.0
+    ],
+    "affine_offset": -5.0
+  }
+}

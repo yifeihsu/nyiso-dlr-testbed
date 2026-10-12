@@ -1,0 +1,532 @@
+--- PDF PAGE 1 ---
+2025-                                                                     26                                                                                                                                       Locality      Bulk Power
+Transmission Capability Report
+
+For Use in Establishing                                                                                                                                                                                the   Transmission
+Security Limit                                                                (TSL)   for    NYISO Locational
+Capacity Requirements (           LCRs )
+
+
+
+
+
+A Report by the
+New York Independent                          System   Operator
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- PDF PAGE 2 ---
+Table of Contents
+
+INTRODUCTION..................................................................................................................................................                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               3
+SYSTEM REPRESENTATION AND BASE STUDY ASSUMPTIONS                                           ..............................................................................                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      4
+                                               Analysis Tool and System Representation .........................................................................................                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               4
+
+                                               Base Case Study Modeling Assumptions                ...........................................................................................                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      4
+
+SUMMARY OF RESULTS –  THERMAL TRANSFER LIMIT ANALYSIS                   .........................................................................                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          6
+                                               TABLE 1 –                Zone K Locality Limit .........................................................................................................                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                7
+
+                                               TABLE 2 –                G-J Locality Limit                              .................................................................                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Error! Bookmark not defined.
+
+                                               TABLE 3 –                Zone J Locality Limit ..........................................................................................................                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           7
+
+                                               TABLE 4 –                Comparison of 2025-26 & 2024-25 Locality Limits .......................................................                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        7
+
+                                               Discussion ............................................................................................................................................                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  8
+
+APPENDIX A –  TSL INTERFACE DEFINITIONS ........................................................................................................                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          NYISO 2025-2026                                                                 Locality Bulk Power Transmission Capability         Report   |                           2
+
+
+--- PDF PAGE 3 ---
+      Introduction
+
+       In support of the NYISO’s administration                                                       of its Installed Capacity (ICAP) market and pursuant
+to Section 5.11.4 of the Market Services Tariff, the NYISO annually determines Transmission
+Security Limit                               Floors (TSL Floor) that are used to establish Locational                                                       Minimum Installed Capacity
+Requirements (LCRs). The                    TSL Floor are used in the determination of the Capability Year LCRs for
+the ICAP Localities (i.e., G-J Locality,                          Zone J, and Zone K).  1 They act as hard limits when establishing
+the LCRs for each Locality. This report documents the bulk power transmission capability inputs
+that the NYISO will use to determine the TSL Floor.
+
+        The transmission interfaces for each of the three Localities are defined for the purposes of
+determining the bulk power transmission capabilities. Each           transmission interface is represented
+by specific transmission elements as shown                            in Appendix A.
+
+        The bulk power transmission capability determinations for the G-J and Zone K Locality
+interfaces utilize NYS Reliability Council Planning Criteria. For the interfaces for each of these
+Localities, generation and phase angle regulator schedules for the N-                                   1 outage case are developed to
+maximize the respective Locality import capabilities while maintaining all bulk power system
+transmission element power flows related to the respective interfaces within Normal ratings (i.e                   .,
+N-1-0). The NYISO then evaluated NPCC criteria contingencies for the N-1 outage case so that all
+bulk power system transmission element power flows related to the respective interfaces are
+within applicable Long Term Emergency (LTE) ratings (i.e                   ., N-1-1).
+
+        For the Zone J Locality limit, the bulk power transmission capability                         determination uses NYS
+Reliability Council Local Reliability Rule G.1-R1. The G.1-R1 Rule states that “Certain areas of the
+Con                                                       Edison system are designed and operated for the occurrence of a second contingency.”
+Consistent with the G.1-R1 Rule, generation                                                       and phase angle regulator schedules for the N-                                   2 outage
+cases are developed to                           maximize the Locality import capability while maintaining all bulk power
+system transmission element power flows related to the Zone J interface within Normal ratings                      (i.e                   .,
+N-1-1-0).
+
+
+
+
+
+
+1 On October 5, 2018, FERC issued an Order accepting revisions to the NYISO’s Market Services Tariff that became
+effective October 9, 2018.  These changes establish                     the methodology used to determine LCRs. This method is based
+upon an economic optimization algorithm to minimize the total cost of capacity for the NYCA at the capacity markets
+design condition, New York Independent System Operator, Inc., 154 FERC ¶ 61,001 (2018).
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         NYISO 2025-2026                                                                 Locality Bulk Power Transmission Capability         Report   |                           3
+
+
+--- PDF PAGE 4 ---
+     SYSTEM REPRESENTATION AND BASE STUDY ASSUMPTIONS
+
+       The following section discusses  evaluations preformed to identify the transmission capability
+inputs for the G-J, Zone J, and Zone K Locality interfaces.
+
+       The bulk power transmission capabilities provided in this report are based on the forecasted
+load and generation and phase angle regulator schedule            assumptions.
+
+       Analysis Tool and System Representation
+       The Siemens PTI PSS®E and PowerGEM’s Transmission Adequacy and Reliability Assessment
+“TARA” software packages were used to calculate the  bulk power transmission capability thermal
+limits based on Normal Transfer Criteria defined in the “NYSRC Reliability Rules for Planning and
+Operating the New York State Power System.                                         "
+
+       The NYISO developed the base case with the system representation from the 2024 FERC 715
+filing, 2025 NY Summer 50/50 Peak case.                       The primary difference between the Summer 2024 case
+and the system representation in this base case is the inclusion of all the projects that are deemed
+Firm with an in-service date falling                         between 06/02/2024 to 06/01/2025.  The NYISO Firm project
+definition for base case development and Goldbook Table VII is: “Firm projects are those which
+have been reported by TOs as being sufficiently firm, and either (i) have an Operating Committee
+approved System Impact Study (if applicable) and, for projects subject to Article VII, have a
+determination from New York Public Service Commission that the Article VII application is in
+compliance with Public Service Law § 122, or (ii) is under construction and is scheduled to be in-
+service prior to June 1 of the current year.”
+
+
+         The base case includes the modeling of series compensation on Knickerbocker –    Pleasant
+Valley Y57 345 kV line                         modeled at 50% Compensation. The Y57 line is included in the definition of
+Zone G-J locality accounting for the increment in the limit. The Dover PAR is modeled in-                            service
+holding 0 MW of flow.
+
+
+
+       Base Case Study Modeling Assumptions
+       There are two transmission facilities that are included in the ICAP Locality interface definitions
+controlled by phase angle regulators.  For both the Zone J and Zone K Localities, the Jamaica-Lake
+Success and the Jamaica-                         Valley Stream 138 kV transmission facilities assume a net flow of 300 MW
+from the Zone K Locality to the Zone J Locality. Therefore, the Locality Limit for Zone K represents
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    NYISO 2025-2026                                                                 Locality Bulk Power Transmission Capability         Report   |                           4
+
+
+--- PDF PAGE 5 ---
+the MW flow from G-J, but this portion will not contribute to the G-J Locality Limit. As a result, for
+the purposes of establishing the Locational Capacity Requirements, the Zone K Locality Limit from
+this Bulk Power Transmission Capability Study will need                              to be accounted for in the G-J Locality in
+the TSL Floor calculation.
+
+        The phase angle regulator schedules used in the base case power flow for this analysis
+assumed a net flow                                               of 0 MW from Public Service Electric & Gas (PSE&G) to Con Edison via the PAR
+transformer controlling the Linden                            –    Goethals interconnection                            and 0 MW on the South Mahwah –
+Waldwick circuits from Consolidated Edison to PSE&G, controlled by the PARs at Waldwick.   For the
+2025–                                                          26 Capability Period used in the base case, the NYISO included           a 330 MW schedule for the
+Hopatcong –    Ramapo 500 kV (5018) tie from PJM to New York.
+
+        The four Ontario –    Michigan PARs are modeled in-                           service and scheduled to a 0 MW transfer.
+These phase angle regulator schedules are consistent with the scenarios developed in the RFC          -
+NPCC Inter-Regional Reliability Assessment power flow base cases.
+
+        The series reactors on the Dunwoodie –    Mott Haven (71 and 72), the Sprain Brook –    W. 49th St.
+(M51 and M52) 345 kV cables                        , are in-service in the base case. The series reactors on the Sprain
+Brook –    East Garden City (Y49) 345 kV and the Farragut –    Gowanus (41 and 42) 345 kV cables are
+by-                                                    passed. The series reactor on the E. 179th St. –    Hell Gate (15055) 138 kV feeder are in-service.
+The series capacitors on the Marcy –    Coopers Corners (UCC2-41) 345 kV, the Edic –    Fraser (EF24-
+40) 345 kV and the Fraser –    Coopers Corners (33) 345 kV cables are in-                           service in the base case. The
+Leeds –    Hurley Ave. 345 kV static synchronous series compensator is modeled in-                            service in the
+base case.
+
+        Consistent with NYS Reliability Council Transmission Planning criteria, the TSL base case
+model utilizes MVA ratings for the transmission elements identified in Appendix A.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         NYISO 2025-2026                                                                 Locality Bulk Power Transmission Capability         Report   |                           5
+
+
+--- PDF PAGE 6 ---
+SUMMARY OF RESULTS –                                                           THERMAL TRANSFER LIMIT ANALYSIS
+
+
+                                •                                              Table 1 –    Zone K Locality Limit
+                                •                                              Table 2 –    G-J Locality Limit
+                                •                                              Table 3 –    Zone J Locality Limit
+                                •                                              Table 4 –    Comparison of 2025-26 & 2024-                                                           25 Locality Limits
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      NYISO 2025-2026                                                                 Locality Bulk Power Transmission Capability         Report   |                           6
+
+
+--- PDF PAGE 7 ---
+                                                                                                                                                                                                                                                                                                                      TABLE 1 –     Zone K Locality Limit
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Locality Limit
+
+    N-1 Outage applied (Neptune HVDC (660MW))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        275 MW (1)(2)
+
+                                                                                                                                                                                                                            LIMITING ELEMENT                                                                                                                                                                                                                                                                                                RATING                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 LIMITING CONTINGENCY
+
+     (1)                                              Dunwoodie –Shore Road (Y50) 345 kV                                                                                                                                        @LTE                                                                     964 MVA        1                                                  L/O                                                 Sprain Brook –                              East Garden City (Y49) 345 kV
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Sprain Brook –                              Academy (M29) 345 kV
+                                       Note:
+                                       1: LIPA rating for Y50 circuit is based on 70 % loss factor and rapid oil circulation.
+                                       2: The true N-                                                        1-1 Transmission Security Limit is 940 in this scenario, the Bulk Transfer Limit accounts for the loss   -of-source
+                                      of 660 MW.
+
+                                                                                                                                                                                                                                                                                                                                    TABLE 2 –     G-                                     J Locality Limit
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Locality Limit
+
+N-1 Outage applied (Knickerbocker –   Pleasant Valley
+(Y57) 345 kV)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            4500 MW (1)
+                                                                                                                                                                                                                 LIMITING ELEMENT                                                                                                                                                                                                                                                                              RATING                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            LIMITING CONTINGENCY
+
+(1)                                              Leeds –Van Wagner(92) 345 kV                                                                                                                                                                                                                                   @LTE                                                     1538 MVA                                                                 L/O                                                          Athens –Pleasant Valley (91) 345 kV
+
+
+                                                                                                                                                                                                                                                                                                                        TABLE 3 –     Zone J Locality Limit
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Locality Limit
+
+    N-2 Outages applied (Dunwoodie - Mott Haven (72) 345 kV
+    & Ravenswood 3(980MW))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    2875 MW (1)
+                                                                                                                                                                                                                         LIMITING ELEMENT                                                                                                                                                                                                                                                                                             RATING                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    LIMITING CONTINGENCY
+
+     (1)                                              Dunwoodie –Mott Haven                                                           (        71) 345 kV                                                              @NORM                                                      785 MVA                                                                                                                                                                                       Pre-                                                            Contingency Loading
+
+
+
+                                                                                                                                                                                                      TABLE 4 –     Comparison of 2025-                                                                                                                                   26                                                                  & 2024-                                                                                                  25                                                                  Locality Limits
+
+                                                Locality                                                                                                                                                                                                                                       2025-26 Limit                                                                                                                                                                                    2024-25 Limit                                                                                                                                                                                                  Difference
+                                                Zone K Locality                                                                                                                                                                                                                                                      275 MW                                                                                                                                                                                           275 MW                                                                                                                                                                                                    0 MW
+                                                G-J Locality                                                                                                                                                                                                                                                     4500 MW                                                                                                                                                                                          4350 MW                                                                                                                                                                                           +150 MW
+                                                Zone J Locality                                                                                                                                                                                                                                                  2875 MW                                                                                                                                                                                          2875 MW                                                                                                                                                                                                       0 MW
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   NYISO 2025-2026                                                                 Locality Bulk Power Transmission Capability         Report   |                           7
+
+
+--- PDF PAGE 8 ---
+Discussion
+
+
+
+                     The change in the G-J locality limit is due to the modeling of the Dover PAR as in-service.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        NYISO 2025-2026                                                                 Locality Bulk Power Transmission Capability         Report   |                           8
+
+
+--- PDF PAGE 9 ---
+Appendix                                       A                                       –      TSL INTERFACE DEFINITIONS
+
+
+                   G-J Locality
+                   Mohawk (Zone E) – Hudson Valley (Zone G)
+
+                                                                                                                                                                                                                                                                                                                     Name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Line ID                                                                                                                                                                                                                                                                                                                                Voltage (kV)
+
+                                                                                                                                                                                                                                                                                                                   Coopers Corners‐Dolson Ave*                                                                                                                                                                                                                                                                                                                                       CCDA42                                                                                                                                                                                                                                                                                                                                                                                                        345
+                                                          Middletown‐Rock Tavern*                                                                                                                                     CCRT34                                                                                          345
+                                                          Middletown 345/138                                                                                                                                           BK 114                                                                                 345/138
+                                                          West Woodbourne 115/69                                                                                                                                          T152                                                                                  115/69
+           Capital (Zone F) – Hudson Valley (Zone G)
+                                                          *Athens‐Van Wagner                                                                                                                                                  91                                                                                      345
+                                                          *Leeds‐Van Wagner                                                                                                                                                   92                                                                                      345
+                                                          *Leeds‐Hurley Ave.                                                                                                                                                301                                                                                       345
+                                                          Blue Stores E‐Milan*                                                                                                                                                T7                                                                                      115
+                                                          *Churchtown‐North Catskill                                                                                                                                            5                                                                                     115
+                                                          *Feura Bush/Flint Mine‐North Catskill                                                                                                                                 2                                                                                     115
+                                                          *Knickerbocker‐Pleasant Valley                                                                                                                                    Y57                                                                                       345
+
+
+                    Zone J Locality
+                   Dunwoodie (Zone I) – NYC (Zone J)
+                                                               Name                                                                                                                                               Line ID                                                                          Voltage (kV)
+                                                               *Dunwoodie‐Mott Haven                                                                                                                                          71                                                                                 345
+                                                               *Dunwoodie‐Mott Haven                                                                                                                                          72                                                                                 345
+                                                               Sprain Brook‐Tremont*                                                                                                                                      X28                                                                                    345
+                                                               *Sprain Brook‐West 49th Street                                                                                                                           M51                                                                                      345
+                                                               *Sprain Brook‐West 49th Street                                                                                                                           M52                                                                                      345
+                                                               *Sprain Brook‐Academy                                                                                                                                    M29                                                                                      345
+                                                               *Dunwoodie‐Sherman Creek                                                                                                                           99031                                                                                          138
+                                                               *Dunwoodie‐Sherman Creek                                                                                                                           99032                                                                                          138
+                                                               *Dunwoodie‐East 179th Street                                                                                                                       99153                                                                                          138
+                   Long Island (Zone K) – NYC (Zone J)
+                                                               *Lake Success‐Jamaica                                                                                                                                      903                                                                                    138
+                                                               *Valley Stream‐Jamaica                                                                                                                       901L_M                                                                                               138
+
+                    Zone K Locality
+                   Dunwoodie (Zone I) – Long Island (Zone K)
+                                                               Name                                                                                                                                               Line ID                                                                          Voltage (kV)
+                                                               *Dunwoodie‐Shore Road                                                                                                                                      Y50                                                                                    345
+                                                               *Sprain Brook‐East Garden City                                                                                                                             Y49                                                                                    345
+                   NYC (Zone J) – Long Island (Zone K)
+                                                               Jamaica‐Valley Stream*                                                                                                                       901L_M                                                                                               138
+                                                               Jamaica‐Lake Success*                                                                                                                                      903                                                                                    138
+                                                                                                                     * indicates the metered end of the circuit
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  NYISO 2025-2026                                                                 Locality Bulk Power Transmission Capability         Report   |                           9
+

@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T02:43:55.717141+00:00",
+  "scope": "historical_source_to_current_model_lineage_no_2025_flowgate_promotion",
+  "source_rows": 2371,
+  "full191_exact_historical_rows": 97,
+  "slim148_direct_historical_rows": 14,
+  "recovered_historical_rows": 83,
+  "unmapped_historical_rows": 2274,
+  "mapped_RAW_individually_resolved": 36,
+  "mapped_RAW_ambiguous": 61,
+  "parent_aggregate_rows_without_physical_source_identity": 225,
+  "physical_2025_gate_membership_established": false,
+  "internal_interface_observations_read": false,
+  "observational_fit_used": false,
+  "source_hashes_unchanged": true,
+  "dependencies": {
+    "PERFORM/On Peak 2019 v23_Perform_NY/On Peak 2019 v23/nyiso_On_Peak_v23_shunts_as_z_load.m": "36e86cea63f1dea0872d1c2ec57f09e20d5c5ce99dad20d9977a1b014b20edb5",
+    "PERFORM/Auxilliary_Perform_NY/Branch_changes_2019_to_2030.xlsx": "31d519c74f75a06a77ed11fabf535e4579fbc5c94cbb7e0a6be14cec38a054b8",
+    "output/nygrid_2025_downstate/network/network_cases.mat": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+    "output/nygrid_2025_slim/network/network_cases.mat": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58",
+    "output/nygrid_2025_downstate/network/branch_register.csv": "6a574d53b40eb2bf08dba851757a5d56ab6b4d89377b2a33e5d6319d5cd2a18f",
+    "output/nygrid_2025_downstate/network/bus_register.csv": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27",
+    "output/nygrid_2025_downstate/network/source_bus_map.csv": "56f9bad150c960236c0982a9076d681423f5558aad47c672ab432eaffc188c72",
+    "output/nygrid_2025_slim/network/branch_register.csv": "547c40ce859c358ded212f1755b879ee508a2d56c1354e7d40782b11e0bfb82d",
+    "output/ny_only_package_a/source_inventory/perform_ny_branch_inventory.csv": "09898f0857ca417c99ad19516578b9b7b15adef565529fe066ae7f5df6ecd97b",
+    "output/ny_only_package_a/source_inventory/perform_ny_bus_inventory.csv": "1389fef08bd6a75db5aabd7958a3a735b0dd4483181eb1c93ae31ed2fffd405f"
+  },
+  "script_sha256": "2b68ba803ab2f601ea386772eb7562e79bf07772468bc42e0e41ab53009df792",
+  "validation": [
+    {
+      "variant": "refined_2019",
+      "recoverable_historical_rows": 97,
+      "all410_operator_error_MW_per_rad": 0.0,
+      "all410_offset_error_model_MW": 0.0,
+      "eliminated_KCL_operator_error_MW_per_rad": 9.208633855450898e-11,
+      "eliminated_KCL_offset_error_model_MW": 0.0,
+      "PAR211_substitution_mapped97_error_MW_per_rad": 0.0,
+      "units": "radians_in_model_MW_out",
+      "physical_2025_validation": false
+    },
+    {
+      "variant": "refined_2025_pre_may",
+      "recoverable_historical_rows": 97,
+      "all410_operator_error_MW_per_rad": 0.0,
+      "all410_offset_error_model_MW": 0.0,
+      "eliminated_KCL_operator_error_MW_per_rad": 8.003553375601768e-11,
+      "eliminated_KCL_offset_error_model_MW": 0.0,
+      "PAR211_substitution_mapped97_error_MW_per_rad": 0.0,
+      "units": "radians_in_model_MW_out",
+      "physical_2025_validation": false
+    },
+    {
+      "variant": "refined_2025_may21",
+      "recoverable_historical_rows": 97,
+      "all410_operator_error_MW_per_rad": 0.0,
+      "all410_offset_error_model_MW": 0.0,
+      "eliminated_KCL_operator_error_MW_per_rad": 9.549694368615746e-11,
+      "eliminated_KCL_offset_error_model_MW": 0.0,
+      "PAR211_substitution_mapped97_error_MW_per_rad": 0.0,
+      "units": "radians_in_model_MW_out",
+      "physical_2025_validation": false
+    },
+    {
+      "variant": "refined_2025_may30",
+      "recoverable_historical_rows": 97,
+      "all410_operator_error_MW_per_rad": 0.0,
+      "all410_offset_error_model_MW": 0.0,
+      "eliminated_KCL_operator_error_MW_per_rad": 5.6843418860808015e-11,
+      "eliminated_KCL_offset_error_model_MW": 0.0,
+      "PAR211_substitution_mapped97_error_MW_per_rad": 0.0,
+      "units": "radians_in_model_MW_out",
+      "physical_2025_validation": false
+    },
+    {
+      "variant": "refined_2025",
+      "recoverable_historical_rows": 97,
+      "all410_operator_error_MW_per_rad": 0.0,
+      "all410_offset_error_model_MW": 0.0,
+      "eliminated_KCL_operator_error_MW_per_rad": 5.6843418860808015e-11,
+      "eliminated_KCL_offset_error_model_MW": 0.0,
+      "PAR211_substitution_mapped97_error_MW_per_rad": 0.0,
+      "units": "radians_in_model_MW_out",
+      "physical_2025_validation": false
+    }
+  ],
+  "operator_contract": {
+    "formula": "H=c F_full L; h=c(F_full d+phase); flow_model_MW=H theta_retained_rad+h",
+    "scope": "only source-backed complete term c on full191; zero eliminated PD/QD/GS/BS/no generator/DC terminal",
+    "physical_unknowns": "2019/2030 planning source is not 2025 membership, outage, metering, line-resection or equipment data",
+    "unknown_term": "fail_closed_for_full_gate; partial_sum_is_separately_labelled_and_must_not_be_scored_as_complete_gate",
+    "aggregate_identifiability": "c annihilates null([M;A]); M,A,b require independent physical source evidence; absent such constraints do not solve by curve fitting",
+    "metering": "from/to sign is opposite in lossless DC; actual metering terminal must still be sourced; AC terminal loss differences unrecoverable"
+  },
+  "outputs": {
+    "affine_recovery_checks.csv": "6906aef6a6524218c2ca1c44db8213c89942ea8d891c3270a0dc883ca4572c19",
+    "full191_physical_identity_boundaries.csv": "5360be032d10a11977e2d282d177dee17a5b0156f089320415007903004d5ea0",
+    "historical_2019_planning_2030_workbook_rows.csv": "89237141731f718dd0428acd869f5da1ccc084ba10a374ec4babaaec512e6f7f",
+    "historical_workbook_sheet_inventory.csv": "0b33d4f607d47e3f821f21c74573b472d858cb00c7294e9e45b63c8d67dea0d8",
+    "identifiability_fixtures.json": "6afd2e7b04fc7dce28824123b662e071d76a1d8d67ebd6416e6bd8cf6653d189",
+    "PERFORM_source_to_model.csv": "718a8ebe99223678faf23238c8d74f500be985e7767dbdaec75623bf5be6096d"
+  }
+}

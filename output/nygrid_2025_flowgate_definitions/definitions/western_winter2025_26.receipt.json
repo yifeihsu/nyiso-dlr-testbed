@@ -1,0 +1,147 @@
+{
+  "passed": true,
+  "status": "passed_literal_transcription_source_ambiguities_preserved",
+  "created_utc": "2026-10-12T03:03:12.673685+00:00",
+  "row_counts": {
+    "Dysinger East": 10,
+    "West Central": 14
+  },
+  "checks": [
+    {
+      "term_id": "dysinger_east_winter2025_26_01",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2025_26_02",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2025_26_03",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2025_26_04",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2025_26_05",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2025_26_06",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2025_26_07",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2025_26_08",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2025_26_09",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2025_26_10",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_01",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_02",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_03",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_04",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_05",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_06",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_07",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_08",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_09",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_10",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_11",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_12",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_13",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2025_26_14",
+      "exact_own_pdf_row": true
+    }
+  ],
+  "source_issues": [],
+  "unmarked_meter_entries": 4,
+  "visual_review": "Winter 2025_26 PDF pages 35 and 41 inspected; printed pages 35 and 41",
+  "physical_definition_ready_for_numerical_compilation": false,
+  "limitations": [
+    "Publication date is not the effective timestamp of an hourly P32 definition.",
+    "All literal entries are preserved; apparent duplicate identities and inconsistent voltage labels are not silently corrected.",
+    "Changes across seasonal publications may include editing and physical resection; the source alone does not distinguish them.",
+    "No historical-to-2025 circuit alias, positive P32 sign, physical meter loss, or reduced-model coefficient is inferred."
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/western_2025.csv",
+      "sha256": "382667ec1989f126558381171227824ae3fbfcae523f7264f100c029902aab22"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.pdf",
+      "sha256": "bcf26e7ac908f43a29f34230067b5b1afc6e587845b26246d7ca39a41ef9f072"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.receipt.json",
+      "sha256": "623fe65c20581a825d48b1453a728f15df8f9ad0099810068122a469d82f6732"
+    },
+    {
+      "path": "scripts/nygrid_2025_flowgate_definitions/build_western_winter_ledgers.py",
+      "sha256": "ec313c826af0278a6bb3629720087d09ab3af28a7324d71043bf087a419ab960"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/Winter2025_26_Appendix_page035.png",
+      "sha256": "3c97e6a55f3aa31fd18e6e73c573c570afa54eebef861f41c1a222b4d5331cd4"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/Winter2025_26_Appendix_page041.png",
+      "sha256": "e170aca42814b10dad4135ca7a2f6b3d0791b02bb830ee521719644151a5f1e1"
+    }
+  ],
+  "output": {
+    "path": "output/nygrid_2025_flowgate_definitions/definitions/western_winter2025_26.csv",
+    "sha256": "a9a4d409ba1833c68de4796a39617a1f1930225fd7904a8bd020cef0f4daf95b"
+  }
+}

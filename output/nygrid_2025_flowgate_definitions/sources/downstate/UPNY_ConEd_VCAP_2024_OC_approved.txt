@@ -1,0 +1,1007 @@
+--- PDF PAGE 1 ---
+UPNY-ConEd Voltage Collapse
+  Transfer Limits
+
+
+A Report by the Operations Engineering Staff
+New York Independent System Operator
+
+
+
+October 2024
+--- PDF PAGE 2 ---
+Executive Summary
+
+      In light of the new Lovett 345 kV station, the NYIS O deemed it appropriate to conduct a study of area
+voltage performance, including the investigation of voltage collapse tr ansfer limits, for the UPNY-ConEd
+operating interface. This report presents the methodology, analysis and results of this study.
+
+      The voltage collapse limits curre ntly in use for the UPNY-ConEd interface were developed and
+approved in 2023. This study re-evaluates these limits to maintain reliable operation of the bulk power
+system. New derates were  developed to account for new transmissi on related to Lovett 345 kV station.
+
+      This study shows no change in voltage collapse limits   except for a slight decreas e in the Y88 limits as a
+result of the new station bisecting the line. Analysis also shows that no adjustments to pre-contingency
+low voltage limits are necessary.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                            UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   2
+--- PDF PAGE 3 ---
+Table of Contents
+
+EXECUTIVE SUMMARY .................................................................................................................................................... 2
+TABLE OF CONTENTS ...................................................................................................................................................... 3
+LIST OF FIGURES ............................................................................................................................................................. 4
+INTRODUCTION ................................................................................................................................................................ 5
+RECOMMENDATIONS ...................................................................................................................................................... 5
+DISCUSSION ..................................................................................................................................................................... 9
+                    System Representation and Base Study Assumptions ............................................................................ 9
+
+                    Study Criteria ................................................................................................................                                                     ............................ 10
+
+                    Study Methodology .............................................................................................................                                                     ...................... 11
+
+                    UPNY-ConEd Interface Definition ...............................................................................................                                              ............. 12
+
+                    Transfer Case Development .....................................................................................................                                                   ............... 13
+
+                    Voltage Contingency Evaluation ................................................................................................                                             .............. 14
+
+                    Configuration Modeling ........................................................................................................                                                    .................... 15
+
+                    Monitored Buses ...............................................................................................................                                                     ....................... 16
+
+                    Results .......................................................................................................................                                                       ............................... 17
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                            UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   3
+--- PDF PAGE 4 ---
+         List of Figures
+
+Figure 1: UPNY-ConEd Voltage Collapse Limits for 2024 .........................................................................               ..................................... 6
+Figure 2: Comparison of 2023 and 2024 Limits (SB/Dun SR Bypassed and SB-EGC/Gow SR I/S) .......................................        ........ 7
+Figure 3: Comparison of 2023 and 2024 Limits (SB-EGC/Gow SR Bypassed and SB/Dun SR I/S) .......................................         ........ 8
+Figure 4: Status of ConEd Series Reactors .....................................................................................                   .................................................. 9
+Figure 5: UPNY-ConEd Interface Definition .....................................................................................                  ............................................ 12
+Figure 6: NYISO Transmission System ...........................................................................................                   ............................................... 12
+Figure 7: Contingencies Studied ...............................................................................................                     ...................................................... 14
+Figure 8: Configuration Modeling ..............................................................................................                    .................................................... 15
+Figure 9: Sample Post-Contingency Flows Chart .................................................................................                     .......................................... 17
+Figure 10: Sample Pre-Contingency Flows by Post Contingency Voltages ..........................................................            ......................... 18
+Figure 11: Sample Tabular Voltage Collapse Limits .............................................................................                ......................................... 18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                    UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   4
+--- PDF PAGE 5 ---
+Introduction
+
+     The purpose of this study is to evaluate the UPNY  -ConEd Voltage Collapse Transfer Limits for all-lines-
+in-service and significant equipment outage conditi ons expected for the system configuration for the
+Winter 2024 season and beyond. This analysis wa s conducted using the NYIS O Summer 2024 Operating
+Study base case. Details of  base case development are included in this report.
+
+     This report documents the results of the anal ysis and provides recommendations based on the
+simulation results for operating  criteria contingencies. Tables of  the recommended derates, the
+contingencies evaluated, examples of power-voltage (P V) plots and summaries of the transfer base case
+conditions are included.
+
+     “FAC-011-4_Methodology for Establishing SOL for the Operations Horizon_20240401”, documented
+the methodology employed to develop System Operating Limits (SOLs) within the NYISO Reliability
+Coordinator Area. NYSRC Reliability Rules require compliance with all North American Electric Reliability
+Corporation (NERC) Standards and Northeast Power Coordinating Council (NPCC) Standards and Criteria.
+NYSRC Rule C.1, Establishing Operating Transfer Capabilities, addresses the contingencies to be evaluated
+and the performance requirements to be applied. Rule C.1 also references NYISO Bus Voltage Limits as
+found in Tables A.2 and A.3 of the NYISO Emergency Operations Manual. The applicable process for
+establishing voltage collapse limits is established by  the “Guideline for Voltage Analysis and Determination
+of Voltage-Based Transfer Limits” found in th e NYISO “Transmission Expansion and Interconnection
+Manual” Attachment G.
+
+Recommendations
+
+     It is recommended that the limits  presented in Figure 1 below be em ployed to secure the bulk power
+system for the applicable system conditions identified   in this study. Figure 1 shows the breakdown of the
+UPNY-ConEd Voltage Collapse Transfer Limit components. Tables showing the changes in limits can be
+found in the Discussion section. Figures 2 and 3 belo w show the changes between the new proposed limits
+and those approved in 2023.
+
+     The results of the study also showed that no ch  anges are needed for pre-contingency low voltage
+limits, given the recommended establishment of the UPNY-ConEd interface voltage collapse limits.
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                            UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   5
+--- PDF PAGE 6 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                Figure 1: UPNY-ConEd Voltage Collapse Limits for 2024
+
+                                                                                                                                                                                                                                                                                               UPNY‐ConEd Voltage Collapse Transfer Limits*
+
+
+Equipment Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Voltage (kV)                                                                                                                                                                                                                                                                                                                                                                                                               Limit (MW)
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     w/ SB/Dun SR                                                                                                                                   w/ SB/Dun SR I/S and
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Bypassed and SB‐                                                                                                                                                                                                                                                                                  SB‐EGC/Gow SR
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           EGC/Gow SR I/S                                                                                                                                                                                                                                                                                                                 Bypassed
+All Equipment I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        8050                                                                                                                                                                                                                                                                                                                                                             7700
+
+1 Bowline I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ‐                                                                                                                                                                                                                                                                        7715                                                                                                                                                                                                                                                                                                                                                             7365
+0 Bowline I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ‐                                                                                                                                                                                                                                                                        7355                                                                                                                                                                                                                                                                                                                                                             7005
+1 Roseton I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ‐                                                                                                                                                                                                                                                                        7830                                                                                                                                                                                                                                                                                                                                                             7480
+0 Roseton I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ‐                                                                                                                                                                                                                                                                        7460                                                                                                                                                                                                                                                                                                                                                             7110
+0 Danskammer I/S                                                                                                                                                                                                                                                                                                                                                                                                                                 ‐                                                                                                                                                                                                                                                                        7820                                                                                                                                                                                                                                                                                                                                                             7470
+2 Cricket Valley I/S                                                                                                                                                                                                                                                                                                                                                                                                                               ‐                                                                                                                                                                                                                                                                        7860                                                                                                                                                                                                                                                                                                                                                             7510
+1 Cricket Valley I/S                                                                                                                                                                                                                                                                                                                                                                                                                               ‐                                                                                                                                                                                                                                                                        7795                                                                                                                                                                                                                                                                                                                                                             7445
+0 Cricket Valley I/S                                                                                                                                                                                                                                                                                                                                                                                                                               ‐                                                                                                                                                                                                                                                                        7630                                                                                                                                                                                                                                                                                                                                                             7280
+
+Millwood Caps (2 O/S)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    345                                                                                                                                                                                                                                              7960                                                                                                                                                                                                                                                                                                                                                             7610
+E. Fishkill Caps (2 O/S)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          345                                                                                                                                                                                                                                              8050                                                                                                                                                                                                                                                                                                                                                             7700
+Van Wagner Caps (2 O/S)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 345                                                                                                                                                                                                                                              8050                                                                                                                                                                                                                                                                                                                                                             7700
+
+Hopatcong‐Ramapo 5018 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  500                                                                                                                                                                                                                                              7795                                                                                                                                                                                                                                                                                                                                                             7445
+Knickerbocker‐Pleasant Valley Y57 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                      345                                                                                                                                                                                                                                              7885                                                                                                                                                                                                                                                                                                                                                             7535
+Knickerbocker Series Compensation @ 0%, 17%, 33%                                                                                                                                                                                         345                                                                                                                                                                                                                                              8050                                                                                                                                                                                                                                                                                                                                                             7700
+Leeds‐Hurley 301 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                345                                                                                                                                                                                                                                              8050                                                                                                                                                                                                                                                                                                                                                             7700
+Leeds‐Hurley Smart Wire Bypassed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      345                                                                                                                                                                                                                                              8050                                                                                                                                                                                                                                                                                                                                                             7700
+Ladentown‐Lovett Y66 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      345                                                                                                                                                                                                                                   7665*                                                                                                                                                                                                                                                                                                                                        7320*
+Lovett‐Buchanan S. Y88 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    345                                                                                                                                                                                                                                  7575*                                                                                                                                                                                                                                                                                                                                      7200*
+Lovett 345/138 XFRM O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          345/138                                                                                                                                                                                          8050*                                                                                                                                                                                                                                                                                                                                        7695*
+Y66 & Y88 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               345                                                                                                                                                                                                                                   7525*                                                                                                                                                                                                                                                                                                                                        7175*
+Ramapo‐Buchanan N. Y94 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          345                                                                                                                                                                                                                                              7755                                                                                                                                                                                                                                                                                                                                                             7195
+Roseton‐E.Fishkill RFK‐305 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  345                                                                                                                                                                                                                                              7215                                                                                                                                                                                                                                                                                                                                                             6865
+Millwood W.‐Eastview W99 (or W85 or W82) O/S                                                                                                                                                                                                                                                         345                                                                                                                                                                                                                                              7810                                                                                                                                                                                                                                                                                                                                                             7460
+Buchanan S.‐Millwood W. W97 (or W98) O/S                                                                                                                                                                                                                                                                                                                                          345                                                                                                                                                                                                                                              8015                                                                                                                                                                                                                                                                                                                                                             7665
+Wood St.‐Pleasantville Y86 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           345                                                                                                                                                                                                                                              7475                                                                                                                                                                                                                                                                                                                                                             7125
+Wood St.‐Pleasantville Y87 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           345                                                                                                                                                                                                                                              7470                                                                                                                                                                                                                                                                                                                                                             7120
+
+                                                                                                *Some Limits were additionally reduced to a ccommodate implementation in the NYISO Energy
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                               UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   6
+--- PDF PAGE 7 ---
+Management System.
+
+                                                                                                 Figure 2: Comparison of 2023 and 2024 Limits  (SB/Dun SR Bypassed and SB-EGC/Gow SR I/S)
+                                                                     Comparison of 2023 and 2024 UPNY‐ConEd Voltage Collapse Limits
+                                                                                                                                                                                  (SB/Dun SR Bypassed and SB‐EGC/Gow SR In‐Service)
+
+Equipment Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            2023 Limit (MW)                                                       2024 Limit (MW)                                                    Difference
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  (MW)
+All Equipment I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       8050                                                                                                                                                                                                                                                                             8050                                                                                                                                                                                                                                                  0
+
+1 Bowline I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  7715                                                                                                                                                                                                                                                                             7715                                                                                                                                                                                                                                                  0
+0 Bowline I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  7355                                                                                                                                                                                                                                                                             7355                                                                                                                                                                                                                                                  0
+1 Roseton I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              7830                                                                                                                                                                                                                                                                             7830                                                                                                                                                                                                                                                  0
+0 Roseton I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              7460                                                                                                                                                                                                                                                                             7460                                                                                                                                                                                                                                                  0
+0 Danskammer I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      7820                                                                                                                                                                                                                                                                             7820                                                                                                                                                                                                                                                  0
+2 Cricket Valley I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 7860                                                                                                                                                                                                                                                                             7860                                                                                                                                                                                                                                                  0
+1 Cricket Valley I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 7795                                                                                                                                                                                                                                                                             7795                                                                                                                                                                                                                                                  0
+0 Cricket Valley I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 7630                                                                                                                                                                                                                                                                             7630                                                                                                                                                                                                                                                  0
+
+Millwood Caps (2 O/S)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                7960                                                                                                                                                                                                                                                                             7960                                                                                                                                                                                                                                                  0
+E. Fishkill Caps (2 O/S)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     8050                                                                                                                                                                                                                                                                             8050                                                                                                                                                                                                                                                  0
+Van Wagner Caps (2 O/S)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             8050                                                                                                                                                                                                                                                                             8050                                                                                                                                                                                                                                                  0
+
+Hopatcong‐Ramapo 5018 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             7795                                                                                                                                                                                                                                                                             7795                                                                                                                                                                                                                                                  0
+Knickerbocker‐Pleasant Valley Y57 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 7885                                                                                                                                                                                                                                                                             7885                                                                                                                                                                                                                                                  0
+Knickerbocker Series Compensation @ 0%, 17%, 33%                                                                                                                                                                                                                    8050                                                                                                                                                                                                                                                                             8050                                                                                                                                                                                                                                                  0
+Leeds‐Hurley 301 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           8050                                                                                                                                                                                                                                                                             8050                                                                                                                                                                                                                                                  0
+Leeds‐Hurley Smart Wire Bypassed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  8050                                                                                                                                                                                                                                                                             8050                                                                                                                                                                                                                                                  0
+Ladentown‐Lovett Y66 O/S ‐                                                                                                                                                                                                                                                                                                                  7665                                                                                                                                                                    New Limit
+Lovett‐Buchanan S. Y88 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               7695                                                                                                                                                                                                                                                                             7575 ‐120
+Lovett 345/138 XFRM O/S ‐                                                                                                                                                                                                                                                                                                                  8050                                                                                                                                                                    New Limit
+Y66 & Y88 O/S ‐                                                                                                                                                                                                                                                                                                                  7525                                                                                                                                                                    New Limit
+Ramapo‐Buchanan N. Y94 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     7755                                                                                                                                                                                                                                                                             7755                                                                                                                                                                                                                                                  0
+Roseton‐E.Fishkill RFK‐305 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             7215                                                                                                                                                                                                                                                                             7215                                                                                                                                                                                                                                                  0
+Millwood W.‐Eastview W99 (or W85 or W82) O/S                                                                                                                                                                                                                                                                                     7810                                                                                                                                                                                                                                                                             7810                                                                                                                                                                                                                                                  0
+Buchanan S.‐Millwood W. W97 (or W98) O/S                                                                                                                                                                                                                                                                                                                                                                     8015                                                                                                                                                                                                                                                                             8015                                                                                                                                                                                                                                                  0
+Wood St.‐Pleasantville Y86 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       7475                                                                                                                                                                                                                                                                             7475                                                                                                                                                                                                                                                  0
+Wood St.‐Pleasantville Y87 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       7470                                                                                                                                                                                                                                                                             7470                                                                                                                                                                                                                                                  0
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                            UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   7
+--- PDF PAGE 8 ---
+                                                                                                        Figure 3: Comparison of 2023 and 2024 Limits  (SB/Dun SR I/S and SB-EGC/Gow SR Bypassed)
+                                                                         Comparison of 2023 and 2024 UPNY‐ConEd Voltage Collapse Limits
+                                                                                                                                                                                                                                                             (SB/Dun SR I/S and SB‐EGC/Gow SR Bypassed)
+Equipment Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             2023 Limit                                                                                                        2024 Limit                                                                                                                                                                                              Difference
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     (MW)                                                                                                                                                                                  (MW)                                                                                                                                                                                                    (MW)
+All Equipment I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                7700                                                                                                                                                                              7700                                                                                                                                                                                                                                            0
+
+1 Bowline I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          7365                                                                                                                                                                              7365                                                                                                                                                                                                                                            0
+0 Bowline I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          7005                                                                                                                                                                              7005                                                                                                                                                                                                                                            0
+1 Roseton I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      7480                                                                                                                                                                              7480                                                                                                                                                                                                                                            0
+0 Roseton I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      7110                                                                                                                                                                              7110                                                                                                                                                                                                                                            0
+0 Danskammer I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              7470                                                                                                                                                                              7470                                                                                                                                                                                                                                            0
+2 Cricket Valley I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         7510                                                                                                                                                                              7510                                                                                                                                                                                                                                            0
+1 Cricket Valley I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         7445                                                                                                                                                                              7445                                                                                                                                                                                                                                            0
+0 Cricket Valley I/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         7280                                                                                                                                                                              7280                                                                                                                                                                                                                                            0
+
+Millwood Caps (2 O/S)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        7610                                                                                                                                                                              7610                                                                                                                                                                                                                                            0
+E. Fishkill Caps (2 O/S)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             7700                                                                                                                                                                              7700                                                                                                                                                                                                                                            0
+Van Wagner Caps (2 O/S)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     7700                                                                                                                                                                              7700                                                                                                                                                                                                                                            0
+
+Hopatcong‐Ramapo 5018 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     7445                                                                                                                                                                              7445                                                                                                                                                                                                                                            0
+Knickerbocker‐Pleasant Valley Y57 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          7535                                                                                                                                                                              7535                                                                                                                                                                                                                                            0
+Knickerbocker Series Compensation @ 0%, 17%, 33%                                                                                                                                                                                                                                                                            7700                                                                                                                                                                              7700                                                                                                                                                                                                                                            0
+Leeds‐Hurley 301 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   7700                                                                                                                                                                              7700                                                                                                                                                                                                                                            0
+Leeds‐Hurley Smart Wire Bypassed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          7700                                                                                                                                                                              7700                                                                                                                                                                                                                                            0
+Ladentown‐Lovett Y66 O/S                                                                                                                                                                                                                                                                                                                                                                                                      ‐                                                                                                                                                                                                                    7320                                                                                                                                                              New Limit
+Lovett‐Buchanan S. Y88 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       7250                                                                                                                                                                              7200 ‐50
+Lovett 345/138 XFRM O/S                                                                                                                                                                                                                                                                                                                                                                                                             ‐                                                                                                                                                                                                                    7695                                                                                                                                                              New Limit
+Y66 & Y88 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ‐                                                                                                                                                                                                                    7175                                                                                                                                                              New Limit
+Ramapo‐Buchanan N. Y94 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             7195                                                                                                                                                                              7195                                                                                                                                                                                                                                            0
+Roseton‐E.Fishkill RFK‐305 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     6865                                                                                                                                                                              6865                                                                                                                                                                                                                                            0
+Millwood W.‐Eastview W99 (or W85 or W82) O/S                                                                                                                                                                                                                                                                                                                                             7460                                                                                                                                                                              7460                                                                                                                                                                                                                                            0
+Buchanan S.‐Millwood W. W97 (or W98) O/S                                                                                                                                                                                                                                                                                                                                                                                                                             7665                                                                                                                                                                              7665                                                                                                                                                                                                                                            0
+Wood St.‐Pleasantville Y86 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               7125                                                                                                                                                                              7125                                                                                                                                                                                                                                            0
+Wood St.‐Pleasantville Y87 O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               7120                                                                                                                                                                              7120                                                                                                                                                                                                                                            0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                            UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   8
+--- PDF PAGE 9 ---
+Discussion
+
+              System Representation and Base Study Assumptions
+              The study was conducted using the 2024 NYISO Su mmer Peak Operating Study Base Case with a
+NYISO forecasted summer coincident  peak load of 31,541 MW, and a GHIJ load of 15,008 MW. This base
+case was selected as the most recently reviewed case available.
+
+              The initial base case is modeled as an all-lines-in-service representation with all generation in-service,
+with both the new Knickerbocker Series Compensation at full 50% compensation, and the new Leeds-
+Hurley Smart Wire Smart Valve at full 100% series compensation mode.
+
+              To create transfers to stress the UPNY-ConEd interfac e, significant generation in the NYC zone needed
+to be shut off. As is typical dispatch, oil fueled unit  s were shutoff before gas fueled units. The Ravenswood
+3 generating station was modeled in-service as this    is tested as the largest single source generating
+contingency.
+
+              Two versions of the base case were created, representing the Sprain Brook/Dunwoodie Series
+Reactors in- and out-of- service. The Sprain Brook/ Dunwoodie Series Reactors refer to the M51 and M52
+series reactors at Sprain Brook and the 71 and 72 series reactors at Dunwoodie. When these series
+reactors are bypassed, the Y49 series reactor at Sp rain Brook and the 41 and 42 series reactors at
+Gowanus must be in-service. Conversely, the Y49, 41 and 42 reactors must be bypassed when the
+M51/M52/71/72 reactors are in-service. Figure 4 below shows the status of the series reactors in each
+scenario.
+
+                                                                                                                                                 Figure 4: Status of ConEd Series Reactors
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Sprain Brook / Dunwoodie Base Case
+                             Equipment Name                                                                                                                                                                                                                                                 Series Reactors Bypassed                                                                                                                                                                 Series Reactors In‐Service
+                   Sprain Brook M51 &M52                                                                                                                                                                                                                                                                                                                                                                        Bypassed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               In‐Service
+                            Dunwoodie 71 & 72                                                                                                                                                                                                                                                                                                                                                                                                                   Bypassed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               In‐Service
+                                 Sprain Brook Y49                                                                                                                                                                                                                                                                                                                                                                                                                                            In‐Service                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Bypassed
+                                Gowanus 41 & 42                                                                                                                                                                                                                                                                                                                                                                                                                                      In‐Service                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Bypassed
+
+
+                                                                           The initial base case dispatch real power tr ansfers were adjusted to stress conditions
+                                           through:Ontario generation set to attain an import of ~1530 MW
+
+                                                                          7040 flow set to 1,300 MW import from Hydro-Québec
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                            UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   9
+--- PDF PAGE 10 ---
+                                                           0 MW import on Cedars-Dennison
+
+                                                           Sandbar PAR set to achieve 100 MW flow on PV20
+
+                                                           Ontario-Michigan PARS set to maintain Lake Erie circulation near zero
+
+                                                           Flows across Dysinger-East, Moses-South, and Cent  ral East interfaces stressed to 930, 1,790,
+                   and 2860 MW respectively.
+
+      To ensure utilization of available reactive resources, the following actions were taken:
+
+                                                           All capacitors in-service were switched in.
+
+                                                           All generator terminal voltages were set  to local control, between .95 and 1.05.
+
+                                                           Assorted Generator and LTC control parameters were adjusted to maintain all bulk power
+                   buses within historic operating voltage ranges.
+
+                                                           Oswego area 345 kV stations (Fitzpatrick, Scriba, Oswego 5 and 6) modeled to typical voltages
+                   which can exceed 1.06 p.u.
+
+                                                           Marcy-South Series Capacitors  were modeled in-service
+
+      Updates to the base case include d the new Lovett 345 kV station,  and the new connected lines:
+
+                                                           Lovett 345 kV station bisects the existing Ladentown – Buchanan South (Y88) 345 kV line
+
+                                                           Lovett 345/138 kV transformer
+
+                                                           Ladentown – Lovett (Y66) 345 kV line
+
+                                                           Lovett – Buchanan S. (Y88) 345 kV line
+
+                   Study Criteria
+
+      This analysis was conducted in accordance with th e “FAC-011-4_Methodology for Establishing SOL for
+the Operations Horizon_20240401” which encompasses the “NYSRC Reliability Rules, Standards for
+Planning and Operation the New York ISO Bulk Power System” and "NPCC Regional Reliability Reference
+Directory # 1 Design and Operation of the Bulk Power System".
+
+      The NYISO Transmission Expansion and Interconnection Manual, Attachment G: NYISO Transmission
+Planning Guideline #2-1 "Guideline for Voltage Analysis and Determination of Voltage-Based Transfer
+Limits" describes the methodology employed   to determine voltage transfer limits.
+
+      A pre-contingency kV limit is determined when th e post-contingency voltages falls below the post-
+
+
+
+
+
+                                                                                                                                                                                                                                                                                         UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   10
+--- PDF PAGE 11 ---
+contingency low voltage limit. In this analysis the   pre-contingency low voltages were recorded at the
+highest transfer at which the post-contingency low solved voltage reached the defined post-contingency
+low limit. The NYISO post-contingency low voltages   employed in the analysis are found in the NYSO
+Emergency Operations Manual, Attachment A, Table A-2 "NYISO Voltage Limits".
+
+     Study Methodology
+     The Voltage Contingency Analysis Procedure (VCAP) is used to evaluate the steady state voltage
+performance of the power system for  a series of power flow transfer conditions. A transmission interface
+in the vicinity of the area of the system to be studie d is tested by preparing a series of power flow base
+cases with increasing MW transfer levels across th  at interface. The pre-contingency cases are then
+subjected to the most severe voltage contingencies for the area involved. The post-contingency cases are
+then reviewed for voltage performance at each of the monitored buses to best determine reactive
+conditions and develop guidelines for the operation of the system.
+
+     The basic principle employed is to develop a set of   power transfer vs. voltage (PV) curves through the
+VCAP application. These PV curves are developed by progressively increasing transfers across UPNY-
+ConEd interface and recording the post contingency volt  age for severe contingencie s. Two potential limits
+are obtained through examination of the PV curves. A post-contingency voltage transfer limit is defined
+when the post contingency voltage crosses the predefined post contingency low voltage limit. A voltage
+collapse transfer limit is defined by identifying the   highest transfer where post contingency power flow
+stopped increasing, also called the “knee” of the post contingent flow curve, and then applying a 5%
+margin. The voltage collapse transfer limit is then compar ed to that transfer level obtained by applying the
+applicable post-contingency low voltage limit. To ensure   that a voltage-based transfer limit is determined
+with a safe margin, the lower of th e two power transfer levels from  the foregoing comparison is to be
+selected as the interface transfer limit.
+
+     A key level of conservatism in the  development of voltage transfer limits developed for operations is
+all analysis is conducted under peak load conditions. Th is is conservative for two reasons. First, it is the
+highest end user reactive load condition, and thereby consumes the greatest amount of innate and
+controllable reactive resources at the  point of delivery to the end user.  Secondly, the delivery of power to
+the end user under peak load results in the highes t-level reactive transmissi on losses across the system.
+Under anything less than peak load conditions, additional reactive resources are  available to the system.
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                         UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   11
+--- PDF PAGE 12 ---
+                                            UPNY-ConEd Interface Definition
+                                            The UPNY-ConEd interface definition is given belo w in Figure 5 and illustrated in Figure 6.
+
+                                                                                                  Figure 5: UPNY-ConEd Interface Definition
+              UPNY‐ConEd
+
+              Hudson Valley (Zone G) ‐ Millwood (Zone H)
+
+                                                               Name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Line ID                                                                                                                                                               Voltage (kV)
+                                                               *Lovett‐Buchanan South                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Y88                                                                                                                                                                                                                                                                                                                 345
+                                                               *Pleasant Valley‐Wood S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         F30                                                                                                                                                                                                                                                                                                                  345
+                                                               *Pleasant Valley‐Wood St                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           F31                                                                                                                                                                                                                                                                                                                  345
+                                                               *Pleasant Valley‐East Fishkill                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        F36                                                                                                                                                                                                                                                                                                                  345
+                                                               *Pleasant Valley‐East Fishkill                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        F37                                                                                                                                                                                                                                                                                                                  345
+                                                               *Ramapo‐Buchanan North                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Y94                                                                                                                                                                                                                                                                                                                 345
+                                                               Roseton‐East Fishkill*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  RFK305                                                                                                                                                                                                                                                                                345
+                                                               *Fishkill Plains–Sylvan Lake                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   FP/990                                                                                                                                                                                                                                                                                   115
+                                                               East Fishkill 115/345*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              BK1                                                                                                                                                                                                                                                                     115/345
+                                                               East Fishkill 115/345*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              BK2                                                                                                                                                                                                                                                                     115/345
+
+
+
+                                                                                                                                                                                                                                                                 Figure 6: NYISO
+                                                                                                                                                                                                                                                                                                              Transmission
+                                                                                                                                                                                                                                                                                                              System
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                         UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   12
+--- PDF PAGE 13 ---
+      Transfer Case Development
+      Transfer cases were developed by  sourcing major generation on th e 345 kV backbone in Western,
+Central, Capital and Hudson Valley  zones of New York. Power was sinked to major generation on the 345
+kV network in the NYC zone. This wa s sourced by scaling New England ge neration as a whole. Central East
+Voltage Collapse limits were respected to avoid in  fluencing results on UPNY-ConEd. For base transfer
+conditions the bulk power system voltages were main tained in the .95-1.05 p.u. range.To ensure full
+utilization of available reactive resources, the following actions were taken:
+
+                                                           All switched shunt capacitors were switched in  so long as it did not cause excessively high
+                   voltage
+
+                                                           All ConEd category 1 switched shunt reactors were kept in-service.
+
+                                                           ConEd category 2 switched shunt reactors were ut ilized as necessary to keep voltages within
+                   operating limits.
+
+                                                           Generator and LTC voltage control  parameters were adjusted to maintain adequate voltages. In
+                   some cases, where generator step up transformer ratios warranted, plant voltage settings
+                   were set higher than 1.05 p.u.
+
+                                                           0 MW flow on the A2253 PAR
+
+                                                           The B3402 & C3403 Lines are assumed out-of-service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                         UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   13
+--- PDF PAGE 14 ---
+               Voltage Contingency Evaluation
+               Figure 7 below lists the contingencies that were evaluated for each configuration studied.
+
+                                                                                                                                                                               Figure 7: Contingencies Studied
+    ID                                                  Description
+    log09                                                                                                                            LOG09 L/O RAVENSWOOD 3
+    uc02                                                                                                                                          UC02 TWR Y86/Y87
+    uc04a                                                                                                                       UC04a SBK BUCHANAN 345
+    uc18a                                                                                                                       UC18a TWR Y66/Y94
+    uc18b                                                                                                                    UC18b TWR Y88/Y94
+    uc20                                                                                                                                          UC20 TWR W89/W90
+    uc21                                                                                                                                          UC21 TWR 30/31
+    uc25                                                                                                                                          UC27 SBK ROCK TAV 345 (44 & 76)
+    uc27a                                                                                                                       UC27a SBK ROCK TAV 345 (77 & CCRT-42)
+    uc28                                                                                                                                          UC28 TWR 76/77 new
+    uc31                                                                                                                                          UC31 TWR 34/42
+    uc32                                                                                                                                          UC32 TWR 34/44
+    uc33                                                                                                                                          UC33 TWR W97/W98
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                         UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   14
+--- PDF PAGE 15 ---
+                    Configuration Modeling
+                    Figure 8 below lists the equipment outages that were  modeled and studied. For all configurations the
+Sprain Brook-Dunwoodie Series Reactors were modeled in-service and bypassed.
+
+                                                                                                                                                                                                                           Figure 8: Configuration Modeling
+                                         Equipment Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ID                                                                                                                                                                                 Voltage
+
+                                         1 Bowline I/S ‐‐
+                                         0 Bowline I/S ‐‐
+                                         1 Roseton I/S ‐‐
+                                         0 Roseton I/S ‐‐
+                                         0 Danskammer I/S ‐‐
+                                         2 Cricket Valley I/S ‐‐
+                                         1 Cricket Valley I/S ‐‐
+                                         0 Cricket Valley I/S ‐‐
+                                         Millwood Caps (2 O/S) ‐                                                                                                                                                                                                                                 345
+                                         E. Fishkill Caps (2 O/S) ‐                                                                                                                                                                                                                                 345
+                                         Van Wagner Caps (2 O/S) ‐                                                                                                                                                                                                                                 345
+                                         Hopatcong‐Ramapo O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                5018                                                                                                                                                                                           500
+                                         Knickerbocker‐Pleasant Valley O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Y57                                                                                                                                                                                                       345
+                                         Knickerbocker Series Compensation @ 0% (both SC bypassed)                                                                          RY5714 & RY5715                                                                          345
+                                         Knickerbocker Series Compensation @ 17% (single SC bypassed)                                                                                                                             RY5714                                                                                                                                                                     345
+                                         Knickerbocker Series Compensation @ 33% (single SC bypassed)                                                                                                                             RY5715                                                                                                                                                                     345
+                                         Leeds‐Hurley O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    301                                                                                                                                                                                                      345
+                                         Leeds‐Hurley Smart Wire @ 0%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   301501 & 301505                                                                           345
+                                         Ladentown‐Lovett O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Y66                                                                                                                                                                                                       345
+                                         Lovett‐Buchanan S. O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Y88                                                                                                                                                                                                       345
+                                         Lovett 345/138 kV transformer ‐                                                                                                                                                                                        345/138
+                                         Ramapo‐Buchanan N. O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Y94                                                                                                                                                                                                       345
+                                         Roseton‐E.Fishkill O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    RFK‐305                                                                                                                                                               345
+                                         Millwood W.‐Eastview O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    W99/W85/W82                                                                                           345
+                                         Buchanan S.‐Millwood W. O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          W97/W98                                                                                                                                            345
+                                         Wood St.‐Pleasantville O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Y86                                                                                                                                                                                                       345
+                                         Wood St.‐Pleasantville O/S                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Y87                                                                                                                                                                                                       345
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                         UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   15
+--- PDF PAGE 16 ---
+        Monitored Buses
+        All buses in the Emergency Operations Manual A2  Bus List were monitored for pre-contingency and
+post-contingency low voltage limits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                         UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   16
+--- PDF PAGE 17 ---
+     Results
+     The Appendices contain all the tabular results fr om the 2023 study and 2024 review. Due to the
+volume of material, the Appendices are a separate document. As an example, the results of the new Lovett-
+Buchanan S. Y88 O/S with Con Ed Series Reactors  bypassed base case analysis are presented here.
+
+     Figure 9 below shows the post-contingency flows for the most limiting contingencies for the Lovett-
+Buchanan S. Y88 O/S with Con Ed Series Reactors bypassed. From this graph the knees of the curves are
+identified. In this case the most limiting contingenc  y is the loss of Tower W89/W90 (uc20), identified with
+a black arrow.
+                                                     Figure 9: Sample Post-Contingency Flows Chart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Figure 10 below shows the pre-contingency base flow   with respect to the post contingency voltage for
+each of the most limiting contingencies. The graph is marked with at the MW level corresponding to the
+knee of the curve from the previous post-contingency plot. It is also  marked at the MW level of the 5%
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                         UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   17
+--- PDF PAGE 18 ---
+margin of this knee. From the graph it is clear that the 5% margin on the knee of the most limiting
+contingency is more limiting than the post-continge ncy low voltage limit at Millwood 345kV station.
+
+                                                     Figure 10: Sample Pre-Contingency Flows by Post Contingency Voltages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 11 below shows the limits in tabular form, li  sting limiting elements in order of increasing pre-
+contingency UPNY-ConEd flow. The result of every single scenario shows that flows may be limited in real-
+time operations by pre-contingency low voltage limits.
+
+                                                                          Figure 11: Sample Tabular Voltage Collapse Limits
+
+
+Limit <---------FACILITY----------> <---CONTINGENCY--->
+7578                                                                    limit with 5% margin                                                                                     TWR W89/W90
+7726                                                                                                                                                                                                                         limit with 5% margin                                                                                                                                                                                                               TWR Y86/Y87
+7859                                                                    Millwood 345kV Voltage                                                                                   TWR W89/W90
+7861                                                                                                                                                                                                                         Buchanan South 345kV Voltage                                                                                                                                               TWR W89/W90
+7929                                                                    limit with 5% margin                                                                                     Ravenswood 3
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                         UPNY-ConEd Voltage Collapse Transfer Limits 2024   |   18

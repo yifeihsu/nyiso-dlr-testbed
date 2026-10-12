@@ -1,0 +1,146 @@
+{
+  "status": "passed_source_transcription_only",
+  "passed": true,
+  "created_utc": "2026-10-12T02:47:35.250698+00:00",
+  "definition_row_counts": {
+    "Dysinger East": 10,
+    "West Central": 14
+  },
+  "unstarred_meter_terms": 4,
+  "visual_inspection": "PDF pages 36 and 42 rendered with Poppler and inspected directly",
+  "checks": [
+    {
+      "check": "dysinger_east_summer2025_01_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "dysinger_east_summer2025_02_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "dysinger_east_summer2025_03_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "dysinger_east_summer2025_04_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "dysinger_east_summer2025_05_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "dysinger_east_summer2025_06_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "dysinger_east_summer2025_07_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "dysinger_east_summer2025_08_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "dysinger_east_summer2025_09_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "dysinger_east_summer2025_10_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_01_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_02_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_03_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_04_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_05_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_06_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_07_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_08_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_09_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_10_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_11_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_12_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_13_exact_pdf_row",
+      "passed": true
+    },
+    {
+      "check": "west_central_summer2025_14_exact_pdf_row",
+      "passed": true
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.pdf",
+      "sha256": "32e4fb86cc8397ab458fdf790ab52decfcaa9e9686de7aa9bec7527eaf04b901"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.txt",
+      "sha256": "649f35825d207a2d30f89b7272b00610937e75a4421e5decb9d9204e83efd428"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.receipt.json",
+      "sha256": "aaf4e2fdd6a3ff4cb1b050af718473f6223704948933d959703125658aa913c2"
+    },
+    {
+      "path": "scripts/nygrid_2025_flowgate_definitions/build_western_source_ledger.py",
+      "sha256": "a6794578b05b849a53c7ddd8038e8d9fdf34894571b89ce830fc3522203301bd"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/Summer2025_Appendix_page036.png",
+      "sha256": "cbcf5711f2eaa3be69bc2d04e511799eadf04f73f2f8bdb6b97dba2b6e1b5adb"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/Summer2025_Appendix_page042.png",
+      "sha256": "762df2ec7be45c3fb90d25c6d82616e40fe13a8e337ba734a7a57d2b173a95ac"
+    }
+  ],
+  "output": {
+    "path": "output/nygrid_2025_flowgate_definitions/definitions/western_2025.csv",
+    "sha256": "382667ec1989f126558381171227824ae3fbfcae523f7264f100c029902aab22"
+  },
+  "limitations": [
+    "14 West Central entries include compound paths and transformer entries, not 14 certified single circuits.",
+    "Farmtington spelling is preserved from the source; no source identity repair is implied.",
+    "Source table order and asterisk position are transcribed; P32 numeric sign and exact validity dates need separate evidence.",
+    "No circuit-to-NPCC/PERFORM mapping, circuit parameters, measured flows, fitting, or model updates occur in this script.",
+    "Summer 2025 publication is a dated operating-study definition and does not itself prove annual hourly P32 membership."
+  ]
+}

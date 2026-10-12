@@ -1,0 +1,1130 @@
+
+===== PDF PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+NYISO Operating Study Winter 2024-
+2025 
+A Report by the  
+New York Independent System Operator 
+October  2024  
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PDF PAGE 2 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+2 
+ 
+Table of Contents 
+EXECUTIVE SUMMARY ....................................................................................................................................... 4 
+INTRODUCTION.................................................................................................................................................. 5 
+PURPOSE ........................................................................................................................................................... 5 
+SYSTEM OPERATING LIMIT (SOL) METHODOLOGY .............................................................................................. 5 
+STUDY PARTICIPANTS ........................................................................................................................................ 6 
+SYSTEM REPRESENTATION AND BASE STUDY ASSUMPTIONS .............................................................................. 7 
+System Representation ...................................................................................................................................... 7 
+Generation Resource Changes .............................................................................................................................. 8 
+Transmission Facilities Changes ............................................................................................................................ 9 
+System Representation ...................................................................................................................................... 9 
+DISCUSSION ...................................................................................................................................................... 11 
+Resource Assessment ...................................................................................................................................... 11 
+Load and Capacity Assessment ....................................................................................................................... 11 
+Cross-State Interfaces ...................................................................................................................................... 11 
+Transfer Limit Analysis ..................................................................................................................................... 11 
+West Woodbourne Transformer ....................................................................................................................... 13 
+ConEd – LIPA Transfer Analysis ....................................................................................................................... 13 
+Transfer Limits for Outage Conditions ............................................................................................................. 14 
+Transient Stability and Voltage transfer Limits ............................................................................................... 14 
+Thermal Transfer Capabilities with Adjacent Balancing Areas ....................................................................... 15 
+New York – New England Analysis ................................................................................................................ 16 
+New York - PJM Analysis ................................................................................................................................ 17 
+Ontario – New York Analysis ......................................................................................................................... 18 
+TransÉnergie–New York Interface ................................................................................................................. 19 
+SUMMARY OF RESULTS – THERMAL TRANSFER LIMIT ANALYSIS ........................................................................ 21 
+TABLE 1.a – NYISO CROSS-STATE INTERFACE THERMAL drftTRANSFER LIMITS - WINTER 2024-25 ......... 22 
+TABLE 1.b – NYISO CROSS-STATE INTERFACE THERMAL TRANSFER LIMITS - WINTER 2024-25............... 23 
+TABLE 2.a – NYISO to ISO-NE INTERFACE THERMAL TRANSFER LIMITS - WINTER 2024-25 ...................... 24 
+TABLE 2.b – ISO-NE to NYISO INTERFACE THERMAL LIMITS - WINTER 2024-25 ......................................... 25 
+TABLE 3.a – NYISO to PJM INTERFACE THERMAL TRANSFER LIMITS - WINTER 2024-25 .......................... 26 
+
+===== PDF PAGE 3 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+3 
+ 
+TABLE 3.b – PJM to NYISO INTERFACE THERMAL TRANSFER LIMITS – Winter 2024-25 ............................ 27 
+TABLE 4 – IESO to NYISO INTERFACE THERMAL TRANSFER LIMITS - WINTER 2024-25 ............................. 28 
+TABLE 5 – NYISO to IESO INTERFACE THERMAL TRANSFER LIMITS – WINTER 2024-25 ........................... 29 
+ 
+
+===== PDF PAGE 4 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+4 
+ 
+Executive Summary 
+This study is conducted as a seasonal review of the projected thermal transfer capability for 
+the Winter 2024-25 period. The study evaluates the projected internal and external thermal 
+transfer capabilities for the forecasted load and dispatch conditions studied.  The evaluated limits 
+are shown in Tables 1 through 5. Differences in the evaluated internal interface limits from Winter 
+2023-24 to Winter 2024-25 are shown in Figure 1 on page 11. Internal limits have changed due to 
+network alterations in the New York Control Area (NYCA) and modeling assumptions. 
+•  Dysinger East interface thermal transfer limit decreased by 125 MW due to redistribution 
+of flows from change in load pattern in West and Genessee areas.  
+• West Central Reverse interface thermal transfer limit increased by 50 MW mainly due to 
+redistribution of flows from change in load pattern in West and Genesee areas.  
+• UPNY-ConEd interface thermal transfer limit increased by 1,025 MW due to Pleasant 
+Valley– Wood St. (F31) 345 kV line & Wood St. – Millwood (W81) 345 kV line coming back 
+in-service.  
+• UPNY-SENY interface thermal transfer limit increased by 550 MW mainly due to Pleasant 
+Valley– Wood St. (F31) 345 kV line & Wood St. – Millwood (W81) 345 kV line coming back 
+in-service.  
+• Sprain Brook Dunwoodie S. interface thermal transfer limit increased by 125 MW due to 
+Pleasant Valley – Wood St. (F31) 345 kV line & Wood St. – Millwood (W81) 345 kV line 
+coming back in-service.  
+• Total East interface thermal transfer limit decreased by 75 MW mainly due to changes in 
+external area dispatch.  
+• Moses South interface thermal transfer limit increased by 50 MW mainly due to modeling 
+of St. Lawrence – Moses (L34P) 230 kV PAR in-service.  
+Differences in the evaluated external interface limits from Winter 2023-2024 to Winter 2024-
+2025 are shown in Figure 2 on page 14.  
+ 
+ 
+
+===== PDF PAGE 5 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+5 
+ 
+ 
+INTRODUCTION 
+The following report, prepared by the Operating Studies Task Force (OSTF) at the direction 
+and with the guidance of the System Operations Advisory Subcommittee (SOAS), highlights the 
+thermal transfer analysis evaluation for the Winter 2024-2025 capability period. This analysis 
+indicates that, for the Winter 2024-2025 capability period, the New York interconnected bulk 
+power system can be operated reliably in accordance with the New York State Reliability Council 
+Reliability Rules and the NYISO System Operating Procedures. 
+Thermal transfer limits cited in this report are based on the forecasted load and dispatch 
+assumptions and are intended as a guide to system operation. Changes in generation dispatch or 
+load patterns that significantly change pre-contingency line loadings may change limiting 
+contingencies or limiting facilities, resulting in higher or lower interface transfer capabilities. 
+System Operators should monitor the critical facilities noted in the included tables along with 
+other limiting conditions while maintaining bulk power system transfers within secure operating 
+limits. 
+ 
+PURPOSE  
+The purpose of the study is to determine: 
+• The total transfer capabilities (TTC) between NYISO and adjacent areas including IESO, 
+PJM and ISO-NE for normal conditions in the summer/winter periods. The TTC is 
+calculated based on NERC TPL-001-4 Category P1 and P2 contingencies and a set of 
+selected Category P4, P5 and P7 contingencies. 
+• The TTC between NYISO and adjacent areas including IESO, PJM and ISO-NE for 
+emergency conditions in the summer/winter periods. The TTC is calculated based on 
+NERC TPL-001-4 Category P1 and P2 contingencies. 
+System Operating Limit (SOL) Methodology 
+ As identified in “FAC-011-4_Methodology for Establishing SOL for the Operations 
+Horizon_20240401”, the NYSRC Reliability Rules  provide the documented methodology for use in 
+developing System Operating Limits (SOLs) within the NYISO Reliability Coordinator Area. NYSRC 
+Reliability Rules require compliance with all North American Electric Reliability Corporation 
+
+===== PDF PAGE 6 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+6 
+ 
+(NERC) Standards and Northeast Power Coordinating Council (NPCC) Standards and Criteria. 
+NYSRC Rule C.1, Tables C-1 and C-2  address the contingencies to be evaluated and the performance 
+requirements to be applied. Rule C.1 also incorporates by reference Attachment H, NYISO 
+Transmission Planning Guideline #3-1, “Guideline for Stability Analysis and Determination of 
+Stability-Based Transfer Limits” of the NYISO Transmission Expansion and Interconnection Manual.  
+STUDY PARTICIPANTS 
+First Name Last Name Company Name First Name Last Name Company 
+ Hao Fu PSEG Long Island* Raj Dontireddy NYISO 
+John Koziatek PSEG Long Island* Declan Cahill NYISO 
+Daniel Head ConEd David  Zhang NYISO 
+Mohammed Rahman ConEd Francisco Sandoval NYISO 
+Brent Blanchard NYPA Elvin  D’Souza IESO 
+Frank Grimaldi NYPA Sasa  Mizdrak IESO 
+John Hastings National Grid Robert Dropkin PJM 
+Jeffery Maher National Grid Nicole Scott PJM 
+Phil  Nichols National Grid Mark Dettrey PJM 
+Eric Remolona O&R Gabriel Dion Marcotte HQ 
+Caroline Kucher Central Hudson Jonathan Landry-Leclerc HQ 
+Leen Almadani Central Hudson    
+Robert Gollogly NYSEG    
+Brian Gordon NYSEG    
+Jin Hao NYSEG    
+John McDonald NextEra Energy    
+Jeffrey Mullen NextEra Energy    
+Jason  Kampschaefer LS Power    
+Matthew Senus LS Power    
+Phil Tatro Transco    
+Jim McCloskey Transco    
+Alex  Parsell ISO-NE    
+Joseph Koltz ISO-NE    
+      
+      
+*Agent for LIPA 
+ 
+     
+ 
+ 
+ 
+
+===== PDF PAGE 7 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+7 
+ 
+SYSTEM REPRESENTATION AND BASE STUDY ASSUMPTIONS 
+System Representation 
+The representation was developed from the NYISO Data Bank and assumes the forecast winter 
+coincident peak load of 23,800 MW. The other NPCC Balancing Areas and adjacent Regional 
+representations were obtained from the RFC-NPCC Winter 2024-2025 Reliability Assessment 
+power flow base case and have been updated to reflect the Winter 2024-2025 capability period. 
+The base case model includes: 
+• The NYISO Transmission Operator area 
+• All Transmission Operator areas contiguous with NYISO 
+• All system elements modeled as in-service 
+• All generation represented 
+• Phase shifters in the regulating mode in accordance with the NYISO Available Transfer 
+Capability Implementation Document (ATCID) 
+• The NYISO Load Forecast 
+• Transmission Facility additions and retirements 
+• Generation Facility additions and retirements 
+• Remedial Action Scheme (RAS) models where currently existing or projected for 
+implementation within the studied time horizon  
+• Series compensation for each line at the expected operating level unless specified 
+otherwise in the ATCID. 
+• Facility Ratings as provided by the Transmission Owner and Generator Owner 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PDF PAGE 8 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+8 
+ 
+Generation Resource Changes 
+The status and dispatch level of generation represented in this analysis is a reasonable 
+expectation based on the information available at the time of the study. Those modeling 
+assumptions incorporate known unit outage status. The inter-Area schedules represented in the 
+study base case are summarized in Appendix A. The following table shows generation deactivations 
+and additions since the Winter 2023-24 capability period: 
+ 
+ 
+Deactivations  
+Freeport 1-4 -6 MW 
+ Northport GT -16 MW 
+Port Jefferson GT 01 -16 MW 
+Coxsackie GT -21.6 MW 
+Total Retirements -60 MW 
+Additions  
+Pattersonville Solar 20 MW 
+Rock District Solar 20 MW 
+Mohawk Solar 91 MW 
+Morris Ridge Solar EC 177 MW 
+SunEast Scipio Solar 18 MW 
+North Side Solar 180 MW 
+Watkins Glen Solar 50 MW 
+Trelinia Solar EC 80 MW 
+KCE NY 6 20 MW 
+Ball Hill Wind 107 MW 
+BlueStone Wind 112 MW 
+Stillwater Solar 20 MW 
+Albany County Solar 1 20 MW 
+Total Additions  935 MW 
+ 
+ 
+ 
+
+===== PDF PAGE 9 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+9 
+ 
+Transmission Facilities Changes 
+Significant facility changes since the Winter 2023-24 capability period include: 
+• Lovett 345 kV Addition 
+• Pleasant Valley – Wood Street (F31) 345 kV returned in-service 
+• Wood Street – Millwood (W81) 345 kV returned in-service 
+• West 49th Street (TR4) 345/138 kV Transformer returned in-service 
+• East 13th Street (TR4) 138/69 kV transformer returned in-service 
+• East 13th Street (BK17) 345/69 kV transformer returned in-service 
+• St. Lawrence – Moses (L34P) 230 kV PAR modeled in-service 
+• Moses – Reynold (MR3) 115 kV modeled out-of-service 
+• Marcy STATCOM (CSC) modeled out-of-service 
+• Edic (BK3) 345/115 kV transformer modeled out-of-service 
+• Gowanus – Greenwood (42G24 & 42G51) 138 kV modeled out-of-service 
+• West 49th Street (TR2) 345/115 kV transformer modeled out-of-service 
+• West 49th Street (38M44 & 38M75) 345/138 kV transformer modeled out-of-service 
+• E13th St (BK 14) 345/138 kV transformer modeled out-of-service 
+• E13th – East River (37041) 138 kV modeled out-of-service 
+• East River (BK 111) 138/69 kV modeled out-of-service 
+• Hellgate – Astoria West (24054) 138 kV modeled out-of-service 
+ 
+Lovett station 345 kV addition includes a new 345 kV station that taps on the previous 
+Ladentown – Buchanan (Y88) 345 kV line. The line is now split into Ladentown – Lovett (Y66) 
+345kV & Lovett – Buchanan (Y88) 345kV. There is a new 345/138 kV transformer connecting 
+Lovett 345 kV station to the existing 138 kV station. 
+System Representation 
+The Siemens PTI PSS™ E and PowerGEM’s Transmission Adequacy and Reliability Assessment 
+“TARA” software packages were used to calculate the thermal limits based on Normal and 
+Emergency Transfer Criteria as defined in the NYSRC Reliability Rules. The thermal transfer limits 
+presented have been determined for all transmission facilities scheduled in-service during the 
+Winter 2024-2025 period. 
+ 
+ 
+
+===== PDF PAGE 10 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+10 
+ 
+The schedules used in the base case power flow for this analysis assumed a net flow of 0 MW 
+from Public Service Electric & Gas (PSE&G) to Consolidated Edison via the PAR transformers 
+controlling the Hudson – Farragut and Linden – Goethals interconnections, and 0 MW on the South 
+Mahwah – Waldwick circuits from Consolidated Edison to PSE&G, controlled by the PARs at 
+Waldwick. The Hopatcong – Ramapo (5018) 500 kV circuit is scheduled to 202 MW from PJM to 
+New York. The four Ontario – Michigan PARs are modeled in-service and scheduled to a 0 MW 
+transfer. These schedules are consistent with the scenarios developed in the RFC-NPCC Inter-
+Regional Reliability Assessment for Winter 2024-2025, and the MMWG Winter 2024-2025 power 
+flow base cases. The Dysinger – East Stolle Rd. PAR is scheduled to 400 MW from Dysinger to East 
+Stolle Rd. The series reactors on the Sprain Brook – East Garden City (Y49) 345 kV cable, Farragut – 
+Gowanus (41 and 42) 345 kV cables, Packard – Sawyer (77 and 78) 230 kV feeders, as well as the E. 
+179th St. – Hell Gate (15055) 138 kV feeder are in-service in the base case. The series reactors on 
+the Dunwoodie – Mott Haven (71 and 72) and the Sprain Brook – W. 49th St. (M51 and M52) 345 
+kV are by-passed. The series capacitors on the Marcy – Coopers Corners (UCC2-41) 345 kV, the Edic 
+– Fraser (EF24-40) 345 kV, and the Fraser – Coopers Corners (33) 345 kV and the Knickerbocker to 
+Pleasant Valley (Y57) 345 kV lines are by-passed in the base case.  
+Smart Wire SmartValve, a modular static synchronous series compensator is installed at the 
+Hurley 345 kV substation on the Leeds – Hurley (301) 345 kV line. This device injects voltage in 
+quadrature with the line current to synthesize a capacitive or inductive reactance. The device is 
+expected to be operated in capacitive reactance mode and will be changed as deemed necessary by 
+the NYISO. 
+The NYISO Niagara generation was modeled using a 50-50 split on the 230 kV and 115 kV 
+generators. The total output for the Niagara facility was modeled at 2,100 MW. The Ontario Beck 
+generation was modeled at an output of 1,300 MW. 
+ 
+ 
+
+===== PDF PAGE 11 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+11 
+ 
+DISCUSSION 
+Resource Assessment 
+Load and Capacity Assessment 
+The forecast peak demand for the Winter 2024-2025 capability period is 23,800 MW1. This 
+forecast is approximately 420 MW (1.73%)  lower than the forecast of 24,220 MW for the Winter 
+2023-24 capability period, and 1,938 MW (7.53%) lower than the all-time New York Control Area 
+(NYCA) seasonal peak of 25,738 MW, which occurred on January 7, 2014. 
+The Installed Capacity (ICAP) requirement for the Winter capability period is 38,480 MW 
+based on the NYSRC 22.0% Installed Reserve Margin (IRM) requirement for the 2024 Capability 
+Year. NYCA generation capacity for Winter 2024-2025 is 40,562 MW, and net external capacity 
+purchases of 759 MW have been secured for the Winter period. The combined capacity resources 
+represent a 73.6% margin above the forecast peak demand of 23,800 MW. These values were taken 
+from the 2024 Load & Capacity Data report produced by the NYISO and updated with known 
+changes at the time of this writing. 
+The equivalent forced outage rate is 3.21%, and includes forced outages and de-ratings based 
+on historical performance of all generation in the NYCA. For Winter 2023-24, the equivalent forced 
+outage rate assumed was 3.79%. 
+Cross-State Interfaces 
+Transfer Limit Analysis 
+This report summarizes the results of thermal transfer limit analyses performed on power 
+system representation modeling the forecast peak load conditions for Winter 2024-2025. Normal 
+and emergency thermal limits were calculated according to Normal and Emergency Transfer 
+Criteria definitions in the NYSRC Reliability Rules. For this assessment period the most severe 
+single generation contingency is Nine Mile Point 2 at 1,310 MW. Facility ratings applied in the 
+analysis were from the online MW ratings in the EMS, and are detailed in Appendix D.  
+Figure 1 presents a comparison of the Winter 2024-2025 thermal transfer limits to Winter 
+2023-24 thermal transfer limits. Changes in these limits from previous years are due to changes in 
+the base case load flow generation and load patterns that result in different pre-contingency line 
+ 
+1 Forecast Coincident Peak Demand (50th percentile baseline forecast) 
+
+===== PDF PAGE 12 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+12 
+ 
+loadings, changes in limiting contingencies, changes in circuit ratings, or line status. Appendix H 
+presents a summary comparison of Cross-State thermal transfer limits between Winter 2024-2025 
+and 2023-2024, with limiting element/contingency descriptions. Significant differences in these 
+thermal transfer limits are discussed below. 
+ 
+ 
+  
+Figure 1 – Cross-State Thermal Transfer Limits 
+Dysinger East interface thermal transfer limit decreased by 125 MW mainly due to 
+redistribution of flows from change in load pattern in West and Genessee areas. 
+West Central Reverse interface thermal transfer limit increased by 50 MW mainly due to 
+redistribution of flows from change in load pattern in West and Genesee areas. 
+UPNY-ConEd interface thermal transfer limit increased by 1,025 MW mainly due to Pleasant 
+Valley– Wood St. (F31) 345 kV & Wood St. – Millwood (W81) 345 kV coming back in-service. 
+UPNY-SENY interface thermal transfer limit increased by 550 MW mainly due to Pleasant 
+Valley– Wood St. (F31) 345 kV & Wood St. – Millwood (W81) 345 kV coming back in-service. 
+Sprain Brook Dunwoodie S. interface thermal transfer limit increased by 125 MW due to 
+Pleasant Valley – Wood St. (F31) 345 kV & Wood St. – Millwood (W81) 345 kV coming back in-
+
+
+===== PDF PAGE 13 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+13 
+ 
+service. 
+Total East interface thermal transfer limit decreased by 75 MW mainly due to changes in 
+external area dispatch. 
+Moses South Moses South interface thermal transfer limit increased by 50 MW mainly due to 
+modeling of St. Lawrence – Moses (L34P) 230 kV PAR in-service.  
+ 
+West Woodbourne Transformer 
+The Total-East interface may be limited at significantly lower transfer levels for certain 
+contingencies that result in overloading of the West Woodbourne 115/69 kV transformer. Should 
+the West Woodbourne tie be the limiting facility, it may be removed from service to allow higher 
+Total-East transfers. Over-current relays are installed at West Woodbourne and Honk Falls to 
+protect for contingency overloads. 
+ConEd – LIPA Transfer Analysis 
+Normal transfer capabilities were determined using the base case generation dispatch and PAR 
+settings as described in Appendix B. Emergency limits are dispatch dependent, and can vary based 
+on generation and load patterns in the LIPA system. 
+For emergency transfer capability analysis, the PARs controlling the LIPA import were 
+adjusted to allow for maximum transfer capability into LIPA: 
+ 
+ConEd – LIPA PAR Settings 
+ Normal Emergency 
+Jamaica – Lake Success 138 kV -200 MW 190 MW 
+Jamaica – Valley Stream 138 kV -100 MW 108 MW 
+Sprain Brook – E. Garden City 345 kV 637 MW 637 MW 
+   ISO-NE – LIPA PAR Settings 
+Norwalk Harbor – Northport 138 kV 100 MW 286 MW 
+ 
+ 
+ 
+ 
+
+===== PDF PAGE 14 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+14 
+ 
+The PAR schedules referenced above and the ConEd - LIPA transfer assessment assume the 
+following loss factors and oil circulation modes in determination of the facility ratings for the 345 
+kV cables: 
+• Y49 has a 70% loss factor in slow oil circulation mode. 
+• Y50 has a 70% loss factor in rapid circulation mode. 
+Emergency Transfer via the 138 kV PAR-controlled Jamaica ties between Con Edison and LIPA 
+Con Edison and LIPA have determined possible emergency transfer levels via the Jamaica - 
+Valley Stream (901) 138 kV and Jamaica - Lake Success (903) 138 kV PAR-controlled ties that could 
+be used to transfer emergency power between the two entities during peak conditions. The 
+emergency transfer levels were calculated in both directions, for system peak load conditions with 
+all transmission lines in-service and all generation available at full capacity. 
+ConEd to LIPA emergency assistance 
+Based on load flow analysis performed by Con Edison, Con Edison anticipates being able to 
+supply a total flow up to 320 MW of emergency transfer from Con Edison to Long Island, if 
+requested, via the ties for the coming Winter season. 
+LIPA to ConEd emergency assistance 
+LIPA anticipates being able to supply a total flow up to 497 MW of emergency transfer from 
+Long Island to Con Edison, if requested, via the ties under ideal conditions (i.e. all lines and 
+generation in-service, imports via Neptune, Norwalk Harbor to Northport Cable - NNC and Cross 
+Sound Cable - CSC). 
+Transfer Limits for Outage Conditions 
+Transfer limits for scheduled outage conditions are determined by the NYISO Scheduling and 
+Market Operations groups. The NYISO Real-Time Dispatch system monitors the EHV transmission 
+continuously to maintain the secure operation of the interconnected EHV system. 
+Transient Stability and Voltage transfer Limits 
+The interface transfer limits shown in “SUMMARY OF RESULTS – THERMAL TRANSFER LIMIT 
+ANALYSIS” section are the results of a thermal transfer limit analysis only. Transient stability and 
+voltage interface transfer limits for all lines in-service and line outage conditions are summarized 
+and available through the NYISO website located under “Interface Limits & Op Studies” at the 
+following link:   https://www.nyiso.com/reports-information
+ 
+
+===== PDF PAGE 15 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+15 
+ 
+Thermal Transfer Capabilities with Adjacent Balancing Areas 
+ 
+Figure 2 – Inter-Area Thermal Transfer Capabilities2   
+Thermal transfer limits between New York and adjacent Balancing Areas also are determined 
+in this analysis. These transfer limits supplement, but do not change, existing internal operating 
+limits. There may be facilities internal to each system that may reduce the transfer limits between 
+Balancing Areas. Reductions due to these situations are considered to be the responsibility of the 
+respective reliability authority. Some of these potential limitations are indicated in the summary 
+tables by “Reliability Coordinating Facility” limits, which supplement the “Direct Tie” limits 
+between the Balancing Areas. Transfer conditions within and between neighboring Balancing Areas 
+can have a significant effect on inter- and intra-Area transfer limits. Coordination between 
+Balancing Areas is necessary to provide optimal transfer while maintaining the reliability and 
+security of the interconnected systems. 
+ 
+2 TE-NY transfer capabilities shown in Figure 2 are not thermal transfer limits; for more information see page 18 
+
+
+===== PDF PAGE 16 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+16 
+ 
+New York – New England Analysis 
+New England Transmission/Capacity Additions 
+Transmission 
+For the Winter 2024-2025 (October through May) study period, there are no major transmission 
+projects coming into service that will significantly impact the New York – New England transmission 
+capability.  
+Capacity 
+In the New England Control Area, for the Winter 2024-2025 study period, five major generation projects 
+are expected to become commercial. This includes Vineyard Wind (800 MW Offshore Wind), Downeast Wind 
+(126 MW Onshore Wind), Western Maine Renewables (58.8 MW Onshore Wind), Carver Energy Storage (150 
+MW Battery Energy Storage System), and Gravel Pit Solar (125 MW Solar Photovoltaic). 
+Approximately 219 MW of Solar Photovoltaic, 800 MW of Offshore Wind, 185 MW of Onshore Wind, and 
+239 MW of Battery Energy Storage Systems are anticipated to become commercial during this period. 
+There are no planned retirements anticipated during this period. 
+Thermal Transfer Limit Analysis 
+The transfer limits between the NYISO and ISO New England for normal and emergency transfer criteria 
+are summarized in Tables 2.a and 2.b. 
+Cross-Sound Cable 
+The Cross-Sound Cable (CSC) is an HVDC merchant transmission facility connecting the New Haven 
+Harbor 345 kV (United Illuminating, ISO-NE) station and Shoreham 138 kV (LIPA, NYISO) station. It has a 
+design capacity of 330 MW. This facility is not metered as part of the NYISO – ISO-NE interface, and HVDC 
+transfers are independent of transfers between the NYISO and ISO-NE. 
+Smithfield –  Salisbury 69 kV 
+CHG&E and Eversource will normally operate the Smithfield - Salisbury 69 kV (FV/690) line closed. The 
+maximum allowable flow on this line is 31 MVA based on limitations in the Eversource 69 kV system. When 
+the ISO-NE to NYISO transfer is greater than approximately 400 MW, the line will be opened due to post 
+contingency limits within the Eversource system. The FV/690 line has directional over-current protection 
+that will trip the FV/690 line in the event of an overload when the flow is into ISO-NE. No protection exists to 
+trip the FV/690 line in the event of an overload when the flow is into NYISO. 
+Northport –  Norwalk Harbor Cable Flow 
+Flow on the NNC Norwalk Harbor to Northport facility is controlled by PAR transformer at Northport. As 
+system conditions vary, the scheduled flow on the NNC may be used to optimize transfer capability between 
+
+===== PDF PAGE 17 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+17 
+ 
+the Balancing Areas. The thermal transfer limits are presented in Table 2 for different PAR schedule 
+assumptions on the Northport – Norwalk Harbor interconnection.  
+Whitehall –  Blissville 115 kV 
+The PAR transformer on the K7 line at the VELCO Blissville substation will control pre-contingency flow 
+between the respective stations. For the analyses, the pre-contingency schedule is 25 MW from Blissville 
+(ISO-NE) to Whitehall (NYISO). The scheduled flow may be adjusted to protect the National Grid local 115 kV 
+transmission south of Whitehall for 345 kV contingency events in southern Vermont pursuant to joint 
+operating procedure developed by VELCO, National Grid, ISO-NE and NYISO. 
+Plattsburgh –  Sand Bar 115 kV (i.e. PV20) 
+The PAR transformer on the PV20 line at the VELCO Sand Bar substation was modeled holding a pre-
+contingency flow of approximately 100 MW on the PV20 tie. This modeling assumption was premised upon 
+common operating understandings between ISO-NE and the NYISO given local operating practice on the 
+Moses – Willis – Plattsburgh 230 kV transmission corridor. ISO-NE’s analysis examined and considered New 
+England system limitations given this modeling assumption and did not examine generation dispatch or 
+system performance on the New York side of the PV20 tie. 
+ 
+ 
+ 
+New York - PJM Analysis 
+Thermal Transfer Limit Analysis 
+The transfer limits for the NYISO – PJM and PJM – NYISO interfaces are summarized in Tables 
+3a and 3b respectively of the “SUMMARY OF RESULTS – THERMAL TRANSFER LIMIT ANALYSIS” 
+section of this report. The Marion-Farragut 345 kV B and C cables are expected to remain open and 
+the Waldwick E, F, O and Goethals A paths are expected to deliver a percentage of the scheduled 
+interchange as referenced in the NYISO-PJM JOA. The Hopatcong – Ramapo 500 kV (5018) circuit is 
+scheduled in accordance with the "TCC Market PJM -NYISO Interconnection Scheduling Protocol", 
+February 28th, 2020. 
+Opening of PJM - New York 115 kV Ties as Required 
+The normal criteria thermal transfer limits presented in “SUMMARY OF RESULTS – THERMAL 
+TRANSFER LIMIT ANALYSIS” section were determined for an all lines in-service condition. The 115 
+kV interconnections between First Energy East and New York (Warren – Falconer, North Waverly – 
+East Sayre, and Laurel Lake – Westover) may be opened in accordance with NYISO and PJM 
+
+===== PDF PAGE 18 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+18 
+ 
+Operating Procedures provided that this action does not cause unacceptable impact on local 
+reliability in either system. Over-current protection is installed on the Warren - Falconer and the 
+North Waverly – East Sayre 115 kV circuits; either of these circuits would trip by relay action for an 
+actual overload condition. This North Waverly-East Sayre scheme is expected to be designated as a 
+RAS in the future and hence the line could be expected to be operated as in-service more often. 
+There is no overload protection on the Laurel Lake - Westover circuit, but it may be opened by 
+operator action if there is an actual or post-contingency overload condition. However, opening the 
+Laurel Lake – Westover tie could potentially cause local thermal and pre- and post-contingency 
+voltage violations for the 34.5 kV distribution system within First Energy East transmission zone. 
+Sensitivity analysis performed indicated that the thermal and voltage conditions were exacerbated 
+for conditions that modeled high simultaneous interface flows from NY to PJM and NY to Ontario. 
+DC Ties 
+Neptune DC tie is expected to be available. Hudson Transmission Project (HTP) DC tie is 
+expected to be available. 
+Variable Frequency Transformer (VFT) Tie 
+The Variable Frequency Transformer Tie is a transmission facility connecting the Linden 230 
+kV (PSEG, PJM) to Linden 345 kV (ConEd, NYISO). For the Winter 2024-2025, Linden VFT will have 
+330 MW non-firm withdrawal right and 300 MW firm injection rights into PJM market.  
+ 
+ 
+Ontario – New York Analysis 
+Thermal Transfer Limit Analysis 
+The thermal transfer limits between the NYISO and Ontario’s Independent Electricity System 
+Operator (IESO) Balancing Areas for normal and emergency transfer criteria are presented in tables 
+4 and 5. The NYISO Niagara generation was modeled at an output of 2,100 MW. 
+The Ontario – New York ties at St. Lawrence, L33P and L34P PARs were controlling to 0 MW in 
+all four scenarios. The interconnection flow limit across these ties is 300 MW, as presented in Table 
+B3 “Interconnection Flow Limits” from the document “Reliability Outlook Tables” available at: 
+ https://www.ieso.ca/-/media/Files/IESO/Document-Library/planning-forecasts/reliability-
+outlook/ReliabilityOutlookTables_2024Jun.xlsx 
+
+===== PDF PAGE 19 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+19 
+ 
+Transient Stability Limitations 
+Transient stability limits for the NYISO -  IESO interconnection are reported in "NYPP -OH 
+TRANSIENT STABILITY TESTING REPORT on DIRECT TIE TRANSFER CAPABILITY - OCTOBER 1993" 
+available at: 
+https://www.nyiso.com/documents/20142/3694079/NYPP-OH_1993-2.pdf/2e21484a-22cf-
+739a-7a10-69dfd69f5d58 
+Ontario –  Michigan PARs 
+All of the PARs on the four transmission lines interconnecting Ontario and Michigan are in-
+service and regulating. For this study, the PARs were scheduled to regulate at 0 MW. 
+Impact of the Queenston Flow West (QFW) Interface on the New York to Ontario Transfer Limit 
+The QFW interface is defined as the sum of the power flows through the 230 kV circuits out of 
+Beck. QFW is the algebraic sum of the following: 
+• Total generation in the Niagara zone of Ontario including the units at the Beck #1, #2 & 
+Pump Generating Stations, Thorold CGS and Decew Falls GS 
+• The total load in the Niagara zone 
+• The import from New York through the Niagara Interties. 
+For a given QFW limit, the import capability from New York depends on the generation dispatch 
+and the load in the Niagara zone. The Ontario Niagara generation is set to 1, 300 MW. The import 
+capability from New York can be increased by decreasing generation in the Ontario Niagara zone  
+contingent on water and tourism regulations, and increasing demand in the Ontario Niagara zone, or 
+both. 
+ 
+ 
+ 
+TransÉnergie–New York Interface 
+Thermal transfer limits between TransÉnergie (Hydro-Quebec) and New York are not analyzed 
+as part of this study. Respecting the NYSRC and NYISO operating reserve requirements, the 
+maximum allowable delivery into the NYCA from TransÉnergie on the Chateauguay – Massena 
+(MSC-7040) 765 kV tie is 1310 MW. However in real-time the total flow is limited to 1800 MW; the 
+additional flow is a “wheel-through” transaction to another Balancing Authority Area. Maximum 
+delivery from NYCA to Quebec on the 7040 line is 1000 MW. 
+
+===== PDF PAGE 20 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+20 
+ 
+The Dennison Scheduled Line represents a 115 kV dual-circuit transmission line that 
+interconnects the New York Control Area to the Hydro-Quebec Control Area at the Dennison 
+Substation, near Massena, NY. The Dennison Line has a nominal north to south capacity of 279 MW 
+in winter, into New York, and a nominal south to north capacity of 200 MW into Quebec. The south 
+to north capacity will be limited to 100 MW into Quebec until such time as the HQ-Cedars Export 
+Study report is approved by the Operating Committee and conditions outline in the report are 
+satisfied. 
+
+===== PDF PAGE 21 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+21 
+ 
+SUMMARY OF RESULTS – THERMAL TRANSFER LIMIT ANALYSIS 
+Table 1 – NYISO CROSS STATE INTERFACE THERMAL TRANSFER LIMITS 
+• Table 1.a 
+• Dysinger East 
+• West Central Reverse 
+• UPNY – SENY  
+• UPNY – ConEd 
+• Sprain Brook – Dunwoodie So. 
+• ConEd – LIPA Transfer Capability 
+• Table 1.b – MSC-7040 Flow Sensitivity 
+• Central East 
+• Total East 
+• Moses South 
+Table 2.a – NYISO to ISO-NE INTERFACE THERMAL TRANSFER LIMITS 
+• Northport-Norwalk Flow Sensitivity 
+• Cricket Valley Energy Center I/S and O/S 
+Table 2.b – ISO-NE to NYISO INTERFACE THERMAL TRANSFER LIMITS 
+• Northport-Norwalk Flow Sensitivity 
+• Cricket Valley Energy Center I/S and O/S 
+Table 3.a – NYISO to PJM INTERFACE THERMAL TRANSFER LIMITS 
+• 3-115 kV Ties I/S and O/S  
+• Hudson – Farragut (B3402) 345 kV and Marion – Farragut (C3403) 345 kV lines and 
+associated PARs I/S and O/S 
+Table 3.b – PJM to NYISO INTERFACE THERMAL TRANSFER LIMITS 
+• 3-115 kV Ties I/S and O/S  
+• Hudson – Farragut (B3402) 345 kV and Marion – Farragut (C3403) 345 kV lines and 
+associated PARs I/S and O/S 
+Table 4 – IESO to NYISO INTERFACE THERMAL TRANSFER LIMITS 
+Table 5 – NYISO to IESO INTERFACE THERMAL TRANSFER LIMITS 
+  
+
+===== PDF PAGE 22 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+22 
+ 
+TABLE 1.a – NYISO CROSS-STATE INTERFACE THERMAL TRANSFER LIMITS - WINTER 2024-25 
+ALL LINES IN-SERVICE 
+ 
+ 
+Dysinger East 
+West Central 
+Reverse UPNY - ConEd UPNY - SENY 
+Sprain Brook 
+Dunwoodie - 
+So. 
+ConEd – LIPA 
+NORMAL 2100 MW (1) 1850 MW (3) 7275 MW (5) 4750 MW (5) 3975 MW (7) 1000 MW (9) 
+EMERGENCY 2175 MW (2) 2525 MW (4) 8575 MW (6) 5950 MW (6)  4125 MW (8) 1425 MW (10) 
+ 
+Note 
+1: The rating used for cable circuits during SCUC reliability analysis is the average of the LTE and STE rating (MTE Rating).  
+2: LIPA rating for Y50 circuit is based on 70 % loss factor and rapid oil circulation. 
+3: The Dysinger – E. Stolle PAR controller schedule has direct impact on the Dysinger East limit.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LIMITING ELEMENT RATING  LIMITING CONTINGENCY 
+(1) Niagara – Dysinger (ND1) 345 kV  @LTE3 1745 MW L/O Niagara – Dysinger (ND2) 345 kV  
+(2) Niagara – Dysinger (ND1) 345 kV @STE 1793 MW L/O Niagara – Dysinger (ND2) 345 kV 
+(3) Clay – Pannell (1) 345 kV @LTE 1315 MW L/O 
+Clay – Pannell (2) 345 kV 
+Clay – Edic (2-15) 345 kV 
+(4) Clay – Pannell (2) 345 kV @STE 1673 MW L/O Pannell – Clay (1) 345 kV 
+(5) Lovett – Buchanan (Y88) 345 kV @LTE 2015 MW L/O Buchanan – Ramapo (Y94) 345 kV 
+(6) 
+Coopers Corner –Middletown Tap 
+(CCRT34) 345 kV 
+@STE 1792 MW L/O Dolson Ave – Rock Tavern (DART44) 345 kV 
+(7) Dunwoodie – Mott Haven (71) 345 kV @MTE1 1083 MW L/O Dunwoodie – Mott Haven (72) 345 kV 
+(8) Dunwoodie – Mott Haven (71) 345 kV @NORM 741 MW  Pre-Contingency Loading 
+(9) Dunwoodie – Shore Rd. (Y50) 345 kV @LTE 977 MW2 L/O 
+Sprainbrook – East Garden City (Y49) 345kV 
+Sprainbrook – Academy (M29) 345 kV 
+(10) Newbridge – Locust Grove (558) 138 kV @NORM 354 MW  Pre-Contingency Loading 
+
+===== PDF PAGE 23 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+23 
+ 
+TABLE 1.b – NYISO CROSS-STATE INTERFACE THERMAL TRANSFER LIMITS - WINTER 2024-25 
+ALL LINES IN-SERVICE 
+ 7040 FLOW 
+HQ->NY 600 MW 
+7040 FLOW 
+0 MW 
+7040 FLOW 
+NY->HQ 600 MW 
+Central East 
+NORMAL 4200 MW (1) 4200 MW (1) 4175 MW (1)  
+EMERGENCY 4700 MW (2) 4700 MW (2) 4700 MW (2) 
+Total East 
+NORMAL 5350 MW (3) 5325 MW (3) 5325 MW (3) 
+EMERGENCY 6100 MW (4) 6075 MW (4) 6000 MW (4) 
+Moses South 
+NORMAL 1450 MW (5) 1025 MW (6) 525 MW (6) 
+EMERGENCY 2375 MW (7) 1325 MW (8) 825 MW (8) 
+ 
+ID LIMITING ELEMENT RATING LIMITING CONTINGENCY 
+(1) 
+New Scotland – Leeds (93) 345 
+kV 
+@LTE 
+1692 
+MW 
+L/O New Scotland – Leeds (94) 345 kV 
+(2) 
+New Scotland – Leeds (93) 345 
+kV 
+@STE 
+1912 
+MW 
+L/O New Scotland – Leeds (94) 345 kV 
+(3) Roseton – East Fishkill (RFK305) @LTE 
+2772 
+MW 
+L/O 
+Lovett – Buchanan (Y88) 345 kV  
+Ramapo – Buchanan (Y94) 345 kV  
+(4) 
+Coopers Corners – Middletown 
+TAP  
+(CCRT34) 345 kV 
+@STE 
+1792 
+MW 
+L/O Dolson Ave – Rock Tavern (DART44) 345 kV 
+(5) Chases Lake – Porter (11) 230 kV @LTE 
+564 
+MW 
+L/O 
+Chateauguay – Massena (7040) 765 kV 
+Massena – Marcy (MSU1) 765 kV  
+and TransÉnergie delivery 
+(6) Chases Lake – Porter (11) 230 kV @LTE 
+564 
+MW 
+L/O Moses – Massena (MMS1 & MMS2) 345 kV 
+(7) Willis – Malone (1-910) 115 kV @STE 
+173 
+MW 
+L/O Alcoa PA – Alcoa (R8105) 115 kV 
+(8) Willis – Malone (1-910) 115 kV @STE 
+173 
+MW 
+L/O Sandbar – Plattsburgh (PV-20) 115 kV 
+Note 
+1: Moses South limit used the NYSRC Rules Exception No. 10 – Post Contingency Flows on Marcy AT1 Transformer 
+2: Moses South limit used the NYSRC Rules Exception No. 12 – Post Contingency Flows on Marcy AT2 Transformer 
+  
+
+===== PDF PAGE 24 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+24 
+ 
+TABLE 2.a – NYISO to ISO-NE INTERFACE THERMAL TRANSFER LIMITS - WINTER 2024-25  
+ALL LINES IN-SERVICE 
+ DIRECT TIE NYISO  
+FACILITY 
+ISO-NE 
+FACILITY DIRECT TIE NYISO 
+FACILITY 
+ISO-NE 
+FACILITY 
+                              Cricket Valley Energy Center Out of Service Cricket Valley Energy Center in Service           
+(1105 MW) 
+                             Northport –Norwalk 0MW 
+NORMAL 2375 MW (1) 5825 MW (3) 3050 MW (5) 2275 MW (1) 6050 MW (3) 2900 MW (5) 
+EMERGENCY 2875 MW (2) 6100 MW (4) 3750 MW (6) 2700 MW (2) 6350 MW (4) 2550 MW (6) 
+                                  Northport –Norwalk 100MW 
+NORMAL 2400 MW (1) 5775 MW (3) 3100 MW (5) 2250 MW (2) 5500 MW (3) 2950 MW (5) 
+EMERGENCY 2450 MW (2) 6050 MW (4) 3850 MW (6) 2250 MW (2) 5825 MW (4) 3650 MW (6) 
+                                  Northport –Norwalk 200 MW 
+NORMAL 2000 MW (2) 5725 MW (3) 3100 MW (5) 1800 MW (2) 5950 MW (3) 3000 MW (5) 
+EMERGENCY 2000 MW (2) 6000 MW (4) 3950 MW (6) 1800 MW (2) 6250 MW (4) 3750 MW (6) 
+ 
+NOTE 
+1: The Northport – Norwalk Harbor (NNC) flow is positive in the direction of transfer 
+2: The Northport – Norwalk Harbor (NNC) line is no longer part of the New York – New England Interface Definition  
+ 
+ 
+ 
+ 
+ 
+ LIMITING ELEMENT RATING  LIMITING CONTINGENCY 
+(1) 
+Long Mountain – Cricket Valley (398) 345 
+kV 
+@LTE 1935 MW L/O 
+Northfield Mount – Berkshire (312) 345 kV 
+Berkshire – Alps (393) 345 kV 
+Northfield 345/13.8/13.8 kV Transformer 
+(2) Northport – Norwalk Harbor (NNC) 138 kV @STE 569 MW L/O Long Mountain – Cricket Valley (398) 345 kV 
+(3) North Troy – Hoosick (5) 115 kV @STE  317 MW L/O 
+Northfield Mount – Berkshire (312) 345 kV 
+Berkshire – Alps (393) 345 kV 
+Northfield 345/13.8/13.8 kV Transformer 
+(4) North Troy – Hoosick (5) 115 kV @STE 317 MW  L/O Berkshire – Alps (393) 345 kV 
+(5) 
+Norwalk Junction – Archers Lane (3403D) 
+345 kV 
+@LTE 922 MW L/O Long Mountain – Frost Bridge (352) 345 kV 
+(6) 
+Norwalk Junction – Archers Lane (3403D) 
+345 kV 
+@NORM 1823 MW  Pre-Contingency Loading 
+
+===== PDF PAGE 25 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+25 
+ 
+ 
+TABLE 2.b – ISO-NE to NYISO INTERFACE THERMAL LIMITS - WINTER 2024-25 
+ ALL LINES IN-SERVICE 
+ DIRECT TIE NYISO 
+FACILITY 
+ISO-NE 
+FACILITY DIRECT TIE NYISO 
+FACILITY 
+ISO-NE 
+FACILITY 
+                              Cricket Valley Energy Center Out of Service Cricket Valley Energy Center in Service         
+(1105 MW) 
+                                        Norwalk –Northport @ 0 MW 
+NORMAL 2250 MW (1) 2225 MW (3) 1550 MW (6) 2425 MW (1) 1850 MW (3) 1950 MW (6) 
+EMERGENCY 2475 MW (2) 2225 MW (3) 2875 MW (7) 2850 MW (4) 1850 MW (3) 3250 MW (7) 
+                                             Norwalk –Northport @ 100 MW 
+NORMAL 1950 MW (2) 2175 MW (3) 1600 MW (6) 2350 MW (5) 1775 MW (3) 2000 MW (6) 
+EMERGENCY 1950 MW (2) 2175 MW (3) 2875 MW (8) 2350 MW (2) 1775 MW (3) 3250 MW (8) 
+                                               Norwalk–Northport @ 200 MW 
+NORMAL 1425 MW (2) 2100 MW (3) 1650 MW (6) 1825 MW (2) 1725 MW (3) 2050 MW (6) 
+EMERGENCY 1425 MW (2) 2100 MW (3) 2750 MW (8) 1825 MW (2) 1725 MW (3) 3100 MW (8) 
+ 
+NOTE 
+1: The Northport – Norwalk Harbor (NNC) flow is positive in the direction of transfer 
+2: The Northport – Norwalk Harbor (NNC) line is no longer part of the New England – New York Interface Definition  
+ 
+ 
+ LIMITING ELEMENT RATING  LIMITING CONTINGENCY 
+(1) 
+Cricket Valley – Long Mountain (398) 
+345 kV 
+@LTE 1935 MW L/O 
+Northfield Mountain – Berkshire 345 kV 
+Berkshire – Alps (393) 345 kV 
+Berkshire 115/345 kV 
+(2) 
+Northport – Norwalk Harbor (NNC) 138 
+kV 
+@STE 569 MW L/O Long Mountain – Cricket Valley (398) 345 kV 
+(3) Reynolds Road 345/115 kV Transformer @STE 699 MW L/O Knickerbocker – Alps (6) 345 kV 
+(4) 
+Cricket Valley – Long Mountain (398) 
+345 kV 
+@NORM 1533 MW  Pre-Contingency Loading 
+(5) 
+Northport – Norwalk Harbor (NNC) 138 
+kV 
+@STE 569 MW L/O 
+Long Mountain – Cricket Valley (398) 345 kV 
+Cricket Valley GT3&ST3 
+(6) 
+Norwalk Junction – Archers Lane 
+(3403D) 345 kV 
+@LTE 922 MW L/O Long Mountain – Frost Bridge (352) 345 kV 
+(7) 
+Norwalk Junction – Archers Lane 
+(3403D) 345 kV 
+@NORM 1823 MW  Pre-Contingency Loading 
+(8) 
+Norwalk – Singer (3290) 345kV 
+Norwalk – Singer (3921) 345kV 
+@NORM 1392 MW  Pre-Contingency Loading 
+
+===== PDF PAGE 26 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+26 
+ 
+ 
+ 
+TABLE 3.a – NYISO to PJM INTERFACE THERMAL TRANSFER LIMITS - WINTER 2024-25  
+ALL LINES IN-SERVICE 
+ 
+ DIRECT 
+TIE 
+NYISO 
+FACILITY 
+PJM 
+FACILITY 
+DIRECT 
+TIE 
+NYISO 
+FACILITY 
+PJM 
+FACILITY 
+                             B&C PARs In-Service B&C PARs Out-Of-Service  
+NORMAL 2125 MW (1) 2525 MW (4)3 3350 MW (8) 1825 MW (1) 2175 MW (2)3 2900 MW (8) 
+3-115-O/S 2725 MW (3) 2725 MW (2)3 3700 MW (9) 2425 MW (3) 2450 MW (2)3 3425 MW (9) 
+EMERGENCY 2150 MW (7) 2525 MW (4)3 3350 MW (8) 1875 MW (7) 2250 MW (2)3 2900 MW (8) 
+3-115-O/S 2900 MW (6) 2975 MW (5)3 3700 MW (9) 2625 MW (6) 2900 MW (5)3 3425 MW (9) 
+ 
+ LIMITING ELEMENT RATING  LIMITING CONTINGENCY 
+(1) East Sayre – North Waverly (956) 115 kV @STE 127 MW L/O 
+East Towanda – Hillside (70) 230 kV 
+Hillside 115/69 kV 
+(2) Oakdale Transformer (BK2) 345kV/115kV  @LTE 557 MW L/O 
+Oakdale – Watercure (31) 345kV 
+Oakdale 3-Winding (BK3) 
+345/115/34.5kV 
+(3) East Towanda – Hillside (70) 230 kV @LTE 594 MW L/O Mainesburg – Watercure (30) 345 kV 
+(4) Oakdale – Goudey (939) 115 kV @STE 292 MW  Pre-Contingency Loading 
+(5) S. Oswego – Goudey (961) 115 kV @STE 167 MW L/O Oakdale – Watercure (31) 345kV 
+(6) East Towanda – Hillside (70) 230 kV @STE 670 MW L/O Mainesburg – Watercure (30) 345 kV 
+(7) East Sayre – North Waverly (956) 115 kV @STE 127 MW L/O East Towanda – Hillside (70) 230 kV 
+(8) Tiffany – Laurel Lake 115 kV @STE 151 MW  Pre-Contingency Loading 
+(9) S. Troy – Evert Drive 115 kV @STE 310 MW L/O Hillside – East Towanda (70) 230 kV 
+NOTE 
+1: Emergency Transfer Capability Limits may have required line outages as described in the New York - PJM Analysis 
+section. 
+2: PAR schedules have been adjusted in the direction of transfer. 
+3: Internal Non-Secured Limit: Limit to secure internal transmission elements that are not secured with pricing in the 
+NYISO markets (typically 115 kV) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PDF PAGE 27 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+27 
+ 
+ 
+ 
+TABLE 3.b – PJM to NYISO INTERFACE THERMAL TRANSFER LIMITS – Winter 2024-25  
+ALL LINES IN-SERVICE 
+ DIRECT 
+TIE 
+NYISO 
+FACILITY 
+PJM 
+FACILITY 
+DIRECT 
+TIE 
+NYISO 
+FACILITY 
+PJM 
+FACILITY 
+                           B&C PARs In-Service B&C PARs Out-Of-Service 
+NORMAL 1925 MW (1) 2350 MW (2)3 2600 MW (3) 1925 MW (1) 2300 MW (2)3 2600 MW (4) 
+3-115-O/S 2600 MW (5) 2600 MW (6)3 3250 MW (8) 2400 MW (5) 2600 MW (7)3 3500 MW (8) 
+EMERGENCY 1950 MW (9) 2925 MW (10)3 2600 MW (3) 1950 MW (9) 2750 MW (10)3 2825 MW (11) 
+3-115-O/S 2600 MW (12) 2925 MW (13)3 3450 MW (14) 2575 MW (12) 2925 MW (13)3 3700 MW (14)   
+ 
+ LIMITING ELEMENT RATING  LIMITING CONTINGENCY 
+(1) North Waverly – East Sayre (956) 115 kV  @STE 127 MW L/O 
+Hillside – East Towanda (70) 230 kV 
+Hillside – Watercure (69) 230 kV 
+Hillside 230/115 kV Transformer 
+(2) North Waverly – Lounsberry 115 kV @STE 167 MW L/O Watercure – Oakdale (31) 345 kV 
+Clarks Corners – Oakdale (36) 345kV 
+(3) Lenox – Tiffany 115 kV @NORM 151 MW  Pre-Contingency Loading 
+(4) Lenox – Tiffany 115 kV @LTE 190 MW L/O 
+Oakdale – Clarks Corners (36) 345 kV 
+Watercure – Oakdale (31) 345 kV 
+(5) Hillside – East Towanda (70) 230 kV @LTE 594 MW L/O Watercure – Mainseburg (30) 345 kV 
+(6) Chemung – Hillside (962) 115 kV @STE 155 MW L/O Watercure – Oakdale (31) 345 kV 
+Clarks Corners – Oakdale (36) 345kV 
+(7) Oakdale 230/115 kV (BK1) @LTE 398 MW L/O 
+Oakdale – Clarks Corners (36) 345 kV 
+Watercure – Oakdale (31) 345 kV 
+(8) Everett Drive – Mainesburg 115 kV  @LTE 286 MW L/O 
+Hillside – East Towanda (70) 230 kV 
+Hillside – Stoney Ridge (72) 230 kV 
+(9) North Waverly – East Sayre (956) 115 kV @STE 127 MW L/O Hillside – East Towanda (70) 230 kV 
+(10) Gridle Rd. – Stolle Rd. (706) 115 kV @STE 239 MW L/O Five Mile (BK1) 345/115kV Transformer 
+(11) Lenox – Tiffany 115 kV @STE 205 MW L/O Hillside – East Towanda (70) 230 kV 
+(12) Hillside – East Towanda (70) 230 kV @STE 670 MW L/O Watercure – Mainseburg (30) 115kV 
+(13) Oakdale – Watercure (31) 345 kV @STE 717 MW L/O Oakdale – Watercure (71) 345 kV 
+(14) Everett Drive – Mainesburg 115 kV  @STE 307 MW L/O Hillside – East Towanda (70) 230 kV 
+NOTE 
+1: Emergency Transfer Capability Limits may have required line outages as described in New York – PJM Analysis Section. 
+2: PAR schedules have been adjusted in the direction of transfer. 
+3: Internal Non-Secured Limit: Limit to secure internal transmission elements that are not secured with pricing in the 
+NYISO markets. 
+
+===== PDF PAGE 28 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+28 
+ 
+ 
+TABLE 4 – IESO to NYISO INTERFACE THERMAL TRANSFER LIMITS - WINTER 2024-25 
+ALL LINES IN-SERVICE 
+ 
+ DIRECT TIE NYISO FACILITY IESO FACILITY1 
+NORMAL 2500 MW (1) 3150 MW (3)1, 2, 4275 MW (5) 
+EMERGENCY 3100 MW (2) 3175 MW (4)1, 2, 4450 MW (6) 
+ 
+ 
+ 
+ 
+ 
+LIMITING ELEMENT RATING  LIMITING CONTINGENCY 
+(1) Beck - Niagara (PA27) 230 kV @LTE        540 MW L/O Beck - Niagara (PA301) 345 kV 
+(2) Beck - Niagara (PA27) 230 kV @STE       685 MW L/O Beck - Niagara (PA301) 345 kV 
+(3) Lockport – Hinman (100) 115 kV @STE   317 MW L/O 
+Robinson Road – Stolle Road (65) 230 kV 
+Gardenville – Stolle Road (66) 230 kV Stolle 
+Road – High Sheldon (67) 230 kV 
+(4) Lockport – Hinman (100) 115 kV @STE 371 MW L/O Robinson – Stolle Road (65) 230 kV 
+(5) Mt Hope – Allanburg (Q30M) 230kV @LTE        426 MW L/O 
+Beck – Middleport (Q26M) 230 kV 
+Beck – Middleport (Q35M) 230 kV 
+(6) Mt Hope – Allanburg (Q30M) 230kV @STE       450 MW L/O Beck – Middleport (Q26M) 230 kV 
+Note 
+1: Ontario - NYISO limit used the NYSRC Rules Exception No. 13 – Post Contingency Flows on Niagara Project Facilities 
+2: Internal Non-Secured Limit: Limit to secure internal transmission elements that are not secured with pricing in the 
+NYISO markets 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PDF PAGE 29 =====
+   
+                                                                                                                                                       NYISO Operating Study Winter 202 4-2025   |   
+29 
+ 
+TABLE 5 – NYISO to IESO INTERFACE THERMAL TRANSFER LIMITS – WINTER 2024-25 
+ ALL LINES IN-SERVICE 
+ 
+ 
+ DIRECT TIE NYISO FACILITY IESO FACILITY1 
+NORMAL 1875 MW (1) 4575 MW (2) 2,3 1100 MW (5) 
+EMERGENCY 2250 MW (4) 4750 MW (3) 2,3 1750 MW (6) 
+ 
+ LIMITING ELEMENT RATING  LIMITING CONTINGENCY 
+(1) Beck – Niagara (PA27) 230 kV  @LTE 540 MW L/O Beck - Niagara (PA301) 345 kV 
+(2) Hamilton – Farmington (7-983) 115 kV @STE  209 MW L/O 
+Clay – Pannell (2) 345 kV 
+Rochester – Pannell (RP2) 345 kV 
+(3) Hamilton – Farmington (7-983) 115 kV @STE  209 MW L/O Pannell – Clay (2) 345 kV 
+(4) Beck – Niagara (PA27) 230 kV @NORM 480 MW   Pre-Contingency loading 
+(5) Beck – Hannon (Q24) 220 kV @LTE 561 MW L/O 
+Beck – Middleport (Q25M) 230 kV 
+Beck – Middleport (Q29HM) 230 kV 
+(6) Beck – Hannon (Q24) 220 kV @NORM 501 MW  Pre-Contingency Loading 
+ 
+Note 
+1: This limit can be increased by reducing generation or increasing demand in the Niagara zone of Ontario contingent on 
+water and tourism regulations. See Ontario – New York Analysis for discussion.  
+2: Internal Non-Secured Limit: Limit to secure internal transmission elements that are not secured with pricing in the  
+NYISO markets. 
+3: This limit can be increased by adjusting the PAR schedule on the Dysinger – East Stolle Rd (DES-1) 345 kV line,  
+reducing the flows into East Stolle Rd. 345 kV substation. 
