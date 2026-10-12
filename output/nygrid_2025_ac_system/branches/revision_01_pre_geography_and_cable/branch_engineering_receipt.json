@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "construction_math_checked": true,
+  "whole_system_AC_or_thermal_validation": false,
+  "provisional_cable_mapping_pending": true,
+  "independent_review_pending": true,
+  "created_utc": "2026-10-12T20:55:58.328118+00:00",
+  "total_branch_records": 413,
+  "ever_active_records": 339,
+  "OH_branch_count": 186,
+  "thermal_segment_count": 187,
+  "classification_counts": {
+    "PAR": 5,
+    "accounting_station_link": 2,
+    "cable_compatible_source_equivalent": 22,
+    "design_based_overhead": 3,
+    "documented_underground_cable": 3,
+    "inactive_provenance": 74,
+    "station_reactance_equivalent": 3,
+    "synthetic_cable_network_equivalent": 3,
+    "synthetic_overhead_corridor": 183,
+    "transformer_equivalent": 103,
+    "urban_non_OH_network_equivalent": 12
+  },
+  "active_classification_counts": {
+    "PAR": 5,
+    "accounting_station_link": 2,
+    "cable_compatible_source_equivalent": 22,
+    "design_based_overhead": 3,
+    "documented_underground_cable": 3,
+    "station_reactance_equivalent": 3,
+    "synthetic_cable_network_equivalent": 3,
+    "synthetic_overhead_corridor": 183,
+    "transformer_equivalent": 103,
+    "urban_non_OH_network_equivalent": 12
+  },
+  "overhead_exact_R_X_preserved": 141,
+  "overhead_R_X_redesigned": 45,
+  "source_record_identities_preserved": 97,
+  "max_segment_R_error_pu": 0.0,
+  "max_segment_X_error_pu": 0.0,
+  "max_segment_B_error_pu": 0.0,
+  "rating_role_policy": "source_static_ratings_separate_from_synthetic_hardware_ceilings;F84_1323MVA_is_conductor_design_not_hardware",
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/geometry_defaults.csv",
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/synthetic_equipment_defaults.json",
+      "sha256": "4548de603528d5652d813bf0cb59f891ea6faa46cbf1908da051099733cf9180"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/engineering_defaults.json",
+      "sha256": "dbbd8e71b0895825b3e825b3a15134092db0bb9d42b13a85d33542f76f2d8193"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/branch_register.csv",
+      "sha256": "6a574d53b40eb2bf08dba851757a5d56ab6b4d89377b2a33e5d6319d5cd2a18f"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/engineering_basis.json",
+      "sha256": "fa9861415d123b9933f20c0af87ae6a6655000714c3741e2a86719c5767de871"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/Dover_line_only_estimates_not_applied.csv",
+      "sha256": "f2b64d1fd3734daa3a2a078f1cdef97bf4e16281a6203661fa61de352e484dee"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/build_assignments.py",
+      "sha256": "8f96d5823f8b9466058cae3efe9bb608c3af763dfa63876774ce3528956e8546"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/line_equivalents.py",
+      "sha256": "2f1cbddf5b4e828ae73881faf9d803cbfb8f9b8bf4d3b6b308d8d918c8a37c88"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "6eabe810a76eecc6d8a879d836ab161ef1164ccbf848c4e0437d993724f88f0f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/thermal_segments.csv",
+      "sha256": "51f3ba8dd47077ed4307e3356e773ba8b6baf9df9f89c9dbb4ec70657e4ce477"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/inverse_candidates.csv",
+      "sha256": "f3042ef3877bcedf759e7e34bc9cd680ab472b4aa5b5cdb18343dc5778b74b5a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/explicit_R_X_replacements.csv",
+      "sha256": "8e674579f3e257808e20a295e3ef5c92a367bd2517546a751c51ede2523891d0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/engineering_overlay.mat",
+      "sha256": "d226cc2df7fd1d7aeaa35cf36b2089b242cba9572fe20bf777b14b38f51b23dc"
+    }
+  ]
+}

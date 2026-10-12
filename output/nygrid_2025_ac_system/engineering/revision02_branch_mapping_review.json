@@ -1,0 +1,176 @@
+{
+  "passed": true,
+  "scope": "historical frozen revision2 arithmetic and classification; current revision3 is separately checked by composite_revision_independent_review.json",
+  "created_utc": "2026-10-12T21:47:20.653292+00:00",
+  "branch_records": 413,
+  "ever_active": 339,
+  "inactive_provenance": 74,
+  "overhead_branches": 186,
+  "overhead_segments": 187,
+  "cable_realizations": 40,
+  "non_overhead_equipment": 113,
+  "max_independent_formula_error_pu": 4.440892098500626e-16,
+  "max_composition_error_pu": 4.440892098500626e-16,
+  "max_three_phase_joule_identity_error_w": 2.9802322387695312e-08,
+  "equipment_own_base_exceptions": [
+    132,
+    142,
+    161,
+    166
+  ],
+  "terminal_ampere_limits_bound_to_all_226_line_rows": true,
+  "F84_source_conductor_rating_separated": true,
+  "current_gamma_lift": false,
+  "impedance_gamma_transform": false,
+  "full_system_buses_pre_post": [
+    191,
+    192
+  ],
+  "limitations": [
+    "Synthetic realizations are not installed-asset identification.",
+    "The pi branch uses total route R/X/B; distributed-parameter or cascaded-pi correction is not validated for long corridors.",
+    "Cable static current ceilings are declared study values; burial, sheath and soil thermal ratings remain unvalidated.",
+    "Four equipment rows exceed the declared own-base impedance window and remain explicitly nonliteral equivalents.",
+    "Conductor/reference resistance consistency does not establish coupled temperature equilibrium or AC feasibility."
+  ],
+  "overhead_corridors_over_120_miles": [
+    {
+      "branch_row": 22,
+      "branch_key": "PARENT:22",
+      "route_length_m": 211961.1254612616,
+      "applied_b_pu": 1.1567896901773602
+    },
+    {
+      "branch_row": 96,
+      "branch_key": "PARENT:96",
+      "route_length_m": 210747.42857142852,
+      "applied_b_pu": 0.466913139591008
+    },
+    {
+      "branch_row": 108,
+      "branch_key": "PARENT:108",
+      "route_length_m": 289805.01927029964,
+      "applied_b_pu": 0.4685490940719168
+    },
+    {
+      "branch_row": 109,
+      "branch_key": "PARENT:109",
+      "route_length_m": 263110.2583025917,
+      "applied_b_pu": 0.6100844873666356
+    },
+    {
+      "branch_row": 110,
+      "branch_key": "PARENT:110",
+      "route_length_m": 241940.467404682,
+      "applied_b_pu": 1.113646826335273
+    },
+    {
+      "branch_row": 121,
+      "branch_key": "PARENT:121",
+      "route_length_m": 205470.15557863063,
+      "applied_b_pu": 0.4569388019411378
+    },
+    {
+      "branch_row": 147,
+      "branch_key": "PARENT:147",
+      "route_length_m": 432835.6322273303,
+      "applied_b_pu": 5.519017487075498
+    },
+    {
+      "branch_row": 151,
+      "branch_key": "PARENT:151",
+      "route_length_m": 313712.2062469196,
+      "applied_b_pu": 0.5072016019819177
+    },
+    {
+      "branch_row": 163,
+      "branch_key": "PARENT:163",
+      "route_length_m": 345749.6444091092,
+      "applied_b_pu": 0.5589988850830713
+    },
+    {
+      "branch_row": 176,
+      "branch_key": "PARENT:176",
+      "route_length_m": 258385.9472482502,
+      "applied_b_pu": 0.4565921074394747
+    },
+    {
+      "branch_row": 184,
+      "branch_key": "PARENT:184",
+      "route_length_m": 310371.9044942792,
+      "applied_b_pu": 3.957502203749235
+    },
+    {
+      "branch_row": 185,
+      "branch_key": "PARENT:185",
+      "route_length_m": 593603.9360393799,
+      "applied_b_pu": 8.097059575517385
+    },
+    {
+      "branch_row": 187,
+      "branch_key": "PARENT:187",
+      "route_length_m": 233176.841068779,
+      "applied_b_pu": 2.973200373585964
+    },
+    {
+      "branch_row": 189,
+      "branch_key": "PARENT:189",
+      "route_length_m": 229197.7140880831,
+      "applied_b_pu": 2.922463165845589
+    },
+    {
+      "branch_row": 195,
+      "branch_key": "PARENT:195",
+      "route_length_m": 657552.7685590063,
+      "applied_b_pu": 3.3975624010672747
+    },
+    {
+      "branch_row": 196,
+      "branch_key": "PARENT:196",
+      "route_length_m": 385662.7876199008,
+      "applied_b_pu": 0.6815021746951665
+    }
+  ],
+  "checked_files": [
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/branch_assignments.csv",
+      "sha256": "d0297d8b706505bee6c31f1c1416bf41c99aa8d1118284b1584dde0e424b63b0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/thermal_segments.csv",
+      "sha256": "3be6298e619f6b2680f7d2dccc69bea75783d26a172e40b8993366042eae0b1e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/cable_segments.csv",
+      "sha256": "1673ea1dba11ac057af2af18873971cc024c7de2a104a0172ed8ed5d776c52cd"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/engineering_overlay.mat",
+      "sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/branch_engineering_receipt.json",
+      "sha256": "6eb68714e4cdddf3e1a3cc33f9a0c5cd9a55a7f5b1bcc145191cd856832e44d5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/cable_candidates.csv",
+      "sha256": "2a9aea8fd233e42d0a4a3c7c0a3677e06715ab3aa7ae92a00bd8c341e6d4774c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/geometry_defaults.csv",
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/synthetic_equipment_defaults.json",
+      "sha256": "4548de603528d5652d813bf0cb59f891ea6faa46cbf1908da051099733cf9180"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/engineering/review_branch_mapping.py",
+      "sha256": "84d083cbfab88463c3fa224b349eacf9a531d5fa49904667b1b8b01ae97ba705"
+    }
+  ]
+}

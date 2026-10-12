@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "status": "evidence_classification_and_independent_capacity_prior_review;implementation_validation_separate",
+  "created_utc": "2026-10-12T21:38:17.231150+00:00",
+  "voltage_changing_equivalents": 103,
+  "unresolved_composite_count": 65,
+  "station_transformer_compatible_count": 38,
+  "source_station_GIS_correlated_transformer_compatible_count": 17,
+  "composite_branch_rows": [
+    8,
+    9,
+    10,
+    14,
+    15,
+    20,
+    35,
+    43,
+    50,
+    58,
+    62,
+    63,
+    64,
+    65,
+    77,
+    79,
+    80,
+    90,
+    97,
+    106,
+    107,
+    112,
+    116,
+    117,
+    132,
+    138,
+    139,
+    142,
+    143,
+    144,
+    145,
+    146,
+    148,
+    149,
+    150,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    166,
+    167,
+    170,
+    171,
+    173,
+    174,
+    175,
+    186,
+    188,
+    190,
+    192,
+    193,
+    194,
+    209,
+    210,
+    212,
+    218,
+    223,
+    384,
+    385,
+    387
+  ],
+  "composite_low_voltage_reflection_rows": [
+    116,
+    117,
+    384,
+    387
+  ],
+  "key_corrections": [
+    {
+      "branch_row": 173,
+      "from_name": "LINDON",
+      "to_name": "WHITPAIN",
+      "prior_own_X_selected_equipment_mva": 50.0,
+      "recommended_composite_nominal_mva_proxy": 1195.1150572225254,
+      "recommended_composite_from_A": 3000.0,
+      "recommended_composite_to_A": 1380.0
+    },
+    {
+      "branch_row": 186,
+      "from_name": "CONASTONE",
+      "to_name": "KYGER",
+      "prior_own_X_selected_equipment_mva": 100.0,
+      "recommended_composite_nominal_mva_proxy": 2390.2301144450507,
+      "recommended_composite_from_A": 2760.0,
+      "recommended_composite_to_A": 4000.0
+    }
+  ],
+  "source_basis": "station labels plus positive inherited charging; parent coordinates explicitly approximate and not a stand-alone type certificate",
+  "limits_basis": "existing finite voltage-class terminal current assumptions; independent of total X, operating flow and OPF residual",
+  "claim_boundary": "Every explicitly modeled OH corridor has a thermal realization. Unknown line interiors inside composite equivalents remain undecomposed and are not certified by this model.",
+  "bus130": {
+    "source_BS_mvar": 0.0,
+    "predicted_BS_under_existing_length_rule_mvar": 0.0,
+    "incident_OH_rows": [
+      180,
+      181,
+      182,
+      183
+    ],
+    "all_below_old_120mile_reactor_selector": true,
+    "nominal_total_line_charging_mvar": 514.6805776658224,
+    "lumped_nominal_endpoint_half_charging_mvar": 257.3402888329112,
+    "finding": "The declared length-based reactor selector excludes these shorter 500kV corridors. This is a policy boundary, not a source-shunt sign error or proof that further compensation is required.",
+    "additional_EHV_charging_selector_applied": false,
+    "no_reactor_value_fitted_to_failure_residual": true
+  },
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/branch_assignments.csv",
+      "sha256": "d0297d8b706505bee6c31f1c1416bf41c99aa8d1118284b1584dde0e424b63b0"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/bus_geographic_register.csv",
+      "sha256": "7aaedd8f68e6c1a9d2c13cf19158abe604a57c669ef1c3aa7e07df2e33476973"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/synthetic_equipment_defaults.json",
+      "sha256": "4548de603528d5652d813bf0cb59f891ea6faa46cbf1908da051099733cf9180"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/engineering/review_voltage_changing_classes.py",
+      "sha256": "772870af8e53f360bc523d106972fe46fa073977c69d483d32e50f26fa0cda10"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/voltage_changing_classification_review.csv",
+      "sha256": "c76f5684062a870dc9f72687c2cbc6ff9bf42a6f1a5ca88a2cfdea9aa05fff39"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/bus130_charging_source_review.csv",
+      "sha256": "b73cb5fdb3f58b45c355e19c4ab8432ce5bdfc585c3beebdfcf0b59c9278724a"
+    }
+  ]
+}

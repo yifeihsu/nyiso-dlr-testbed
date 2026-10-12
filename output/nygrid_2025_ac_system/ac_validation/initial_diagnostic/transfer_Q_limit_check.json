@@ -1,0 +1,30 @@
+{
+  "physical_PQ_feasibility_established": false,
+  "source": "saved fresh unchanged-case NR results; no new solve",
+  "checks": [
+    {
+      "case": "current148_h4000_PF_NR",
+      "PF_converged": true,
+      "max_transfer_Q_bound_violation_MVAr": 68.32777119924393,
+      "input_result_sha256": "78d2abe9e138399918ac6d2cf6b5acb5c627316a84718c74cc72c8362699c336"
+    },
+    {
+      "case": "current148_h8508_PF_NR",
+      "PF_converged": true,
+      "max_transfer_Q_bound_violation_MVAr": 47.22060618125534,
+      "input_result_sha256": "0b0559860b191bb54dcff56bc459d858ecf406703d4e4e1750d72a8e4ae1324d"
+    },
+    {
+      "case": "full191_h4000_PF_NR",
+      "PF_converged": true,
+      "max_transfer_Q_bound_violation_MVAr": 68.20130727409268,
+      "input_result_sha256": "a36ab56812f785696a6b2d71ca079487856724a22eaeb986fc69c8db944780a7"
+    },
+    {
+      "case": "full192_h8508_PF_NR",
+      "PF_converged": true,
+      "max_transfer_Q_bound_violation_MVAr": 46.96370692438564,
+      "input_result_sha256": "b3c3c3ff114c0778badabe636bbfd954d729b49bbb680fd56b067e8c3d7d0b6f"
+    }
+  ]
+}
