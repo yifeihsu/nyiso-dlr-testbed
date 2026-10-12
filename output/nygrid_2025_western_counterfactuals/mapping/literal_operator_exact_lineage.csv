@@ -1,0 +1,9 @@
+interface,released57_signed_row,full191_signed_row,from_bus,to_bus,from_name,to_name,from_zone,to_zone,from_kv,to_kv,unique_full_DC_row_match,reduced_BR_B,source_full_BR_B,charging_scope,classification
+DYSINGER EAST,-32,-57,52,53,ROCHESTER,ROCHESTER,B,B,345.0,115.0,True,0.0,0.0,BR_B is omitted from DC laws; released reduction clears charging on some retained branches,known_wrong_plot_operator_not_candidate_fix
+DYSINGER EAST,34,59,53,65,ROCHESTER,GESONIDGE,B,C,115.0,115.0,True,0.0,0.05,BR_B is omitted from DC laws; released reduction clears charging on some retained branches,known_wrong_plot_operator_not_candidate_fix
+DYSINGER EAST,37,60,54,56,NIAGARA W,HUNTLEY,A,A,230.0,230.0,True,0.0,0.07,BR_B is omitted from DC laws; released reduction clears charging on some retained branches,known_wrong_plot_operator_not_candidate_fix
+DYSINGER EAST,47,68,58,60,GARDENVILLE,DUNKIRK,A,A,230.0,230.0,True,0.0,0.27,BR_B is omitted from DC laws; released reduction clears charging on some retained branches,known_wrong_plot_operator_not_candidate_fix
+WEST CENTRAL,-28,-53,50,51,CLAY,CLAY,C,C,345.0,115.0,True,0.0,0.0,BR_B is omitted from DC laws; released reduction clears charging on some retained branches,known_wrong_plot_operator_not_candidate_fix
+WEST CENTRAL,-29,-54,50,52,CLAY,ROCHESTER,C,B,345.0,345.0,True,0.0,1.28,BR_B is omitted from DC laws; released reduction clears charging on some retained branches,known_wrong_plot_operator_not_candidate_fix
+WEST CENTRAL,33,58,53,55,ROCHESTER,NIAGARA E,B,A,115.0,230.0,True,0.0,0.3,BR_B is omitted from DC laws; released reduction clears charging on some retained branches,known_wrong_plot_operator_not_candidate_fix
+WEST CENTRAL,50,216,60,61,DUNKIRK,DUNKIRK,A,A,230.0,115.0,True,0.0,0.0,BR_B is omitted from DC laws; released reduction clears charging on some retained branches,known_wrong_plot_operator_not_candidate_fix

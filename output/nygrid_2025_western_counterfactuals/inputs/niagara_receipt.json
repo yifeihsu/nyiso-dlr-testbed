@@ -1,0 +1,543 @@
+{
+  "passed": true,
+  "datasettype": "generation",
+  "status": "source_only_counterfactual_inputs_ready_for_independent_review",
+  "started_utc": "2026-10-12T02:07:12.431354+00:00",
+  "completed_utc": "2026-10-12T02:07:26.561703+00:00",
+  "baseline_dispatch_path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+  "baseline_dispatch_sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c",
+  "current_git_head": "8290ced50354c81eb572a87f0f90eb87278c3cfe",
+  "fixed_experiment_mask_sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4",
+  "fixed_experiment_hours": 8651,
+  "layout": "compact_changed_generator_rows",
+  "compact_fields": [
+    "gen_rows_1based",
+    "gen_pg_changed"
+  ],
+  "unchanged_rows_policy": "Every row outside gen_rows_1based is copied exactly from the sealed all-boundary baseline. Every PG row outside scenario qualified is unavailable.",
+  "source_only": true,
+  "internal_interface_observations_read": false,
+  "interface_score_based_selection": false,
+  "power_flow_run": false,
+  "scenarios": [
+    {
+      "name": "niagara_legacy_literal_outside_ab",
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/niagara_legacy_literal_outside_ab.npz",
+      "sha256": "ea5e0759aeb05b7b425ad35dda9acfb457da3e7185ce5bc7d8f8ea8470c15f53",
+      "qualified_hours": 8374,
+      "scope": "restricted_feasibility_diagnostic_not_annual",
+      "full_fixed_cohort": false,
+      "donor_policy": "outside_ab",
+      "target_policy": "legacy_literal",
+      "donor_generator_count": 314,
+      "changed_generator_count": 327,
+      "infeasible_requested_hour_count": 277,
+      "applied_hypothesis_adjusted_hour_count": 0,
+      "maximum_hypothesis_adjustment_public_mw": 0.0,
+      "mean_absolute_hypothesis_adjustment_public_mw": 0.0,
+      "raw_source_values_clipped_or_overwritten": false,
+      "native_bound_violation_model_mw": 0.0,
+      "hourly_total_Hydro_and_global_PG_change_model_mw": 8.668621376273222e-13,
+      "held_fixed_generator_rows_not_saved_or_changed": true,
+      "monthly_sum_constraints": []
+    },
+    {
+      "name": "niagara_legacy_bounded_outside_ab",
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/niagara_legacy_bounded_outside_ab.npz",
+      "sha256": "ac44a93250c8f720877b372fd762f6e1d9c039be03dbcc1b6924cc833017c4aa",
+      "qualified_hours": 8651,
+      "scope": "full_fixed_8651_cohort",
+      "full_fixed_cohort": true,
+      "donor_policy": "outside_ab",
+      "target_policy": "legacy_bounded",
+      "donor_generator_count": 314,
+      "changed_generator_count": 327,
+      "infeasible_requested_hour_count": 277,
+      "applied_hypothesis_adjusted_hour_count": 277,
+      "maximum_hypothesis_adjustment_public_mw": 739.6346666666655,
+      "mean_absolute_hypothesis_adjustment_public_mw": 5.648258126073537,
+      "raw_source_values_clipped_or_overwritten": false,
+      "native_bound_violation_model_mw": 0.0,
+      "hourly_total_Hydro_and_global_PG_change_model_mw": 8.668621376273222e-13,
+      "held_fixed_generator_rows_not_saved_or_changed": true,
+      "monthly_sum_constraints": []
+    },
+    {
+      "name": "niagara_month_shape_literal_outside_ab",
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_literal_outside_ab.npz",
+      "sha256": "9f987010b3fb3aeb4694e06ed9247acc515872640fa92a2e001932ab36224eed",
+      "qualified_hours": 8651,
+      "scope": "full_fixed_8651_cohort",
+      "full_fixed_cohort": true,
+      "donor_policy": "outside_ab",
+      "target_policy": "month_shape_literal",
+      "donor_generator_count": 314,
+      "changed_generator_count": 327,
+      "infeasible_requested_hour_count": 0,
+      "applied_hypothesis_adjusted_hour_count": 0,
+      "maximum_hypothesis_adjustment_public_mw": 0.0,
+      "mean_absolute_hypothesis_adjustment_public_mw": 0.0,
+      "raw_source_values_clipped_or_overwritten": false,
+      "native_bound_violation_model_mw": 0.0,
+      "hourly_total_Hydro_and_global_PG_change_model_mw": 8.277822871605167e-13,
+      "held_fixed_generator_rows_not_saved_or_changed": true,
+      "monthly_sum_constraints": []
+    },
+    {
+      "name": "niagara_month_shape_constrained_outside_ab",
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_constrained_outside_ab.npz",
+      "sha256": "8ffc27b42fadc811b8c99ba7c25b12a8f9d45aee4f9d7ddfbfd52e674ad9bece",
+      "qualified_hours": 8651,
+      "scope": "full_fixed_8651_cohort",
+      "full_fixed_cohort": true,
+      "donor_policy": "outside_ab",
+      "target_policy": "month_shape_constrained",
+      "donor_generator_count": 314,
+      "changed_generator_count": 327,
+      "infeasible_requested_hour_count": 0,
+      "applied_hypothesis_adjusted_hour_count": 0,
+      "maximum_hypothesis_adjustment_public_mw": 3.7880365505426736e-13,
+      "mean_absolute_hypothesis_adjustment_public_mw": 1.75981029899792e-13,
+      "raw_source_values_clipped_or_overwritten": false,
+      "native_bound_violation_model_mw": 0.0,
+      "hourly_total_Hydro_and_global_PG_change_model_mw": 8.277822871605167e-13,
+      "held_fixed_generator_rows_not_saved_or_changed": true,
+      "monthly_sum_constraints": [
+        {
+          "month": 1,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 380908.8821705372,
+          "lower_feasible_cohort_energy_model_mwh": 227008.27788080485,
+          "upper_feasible_cohort_energy_model_mwh": 469447.98950379837
+        },
+        {
+          "month": 2,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 317182.7585114324,
+          "lower_feasible_cohort_energy_model_mwh": 143354.8131248607,
+          "upper_feasible_cohort_energy_model_mwh": 366435.62282901304
+        },
+        {
+          "month": 3,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 391865.676203404,
+          "lower_feasible_cohort_energy_model_mwh": 246532.40950819346,
+          "upper_feasible_cohort_energy_model_mwh": 484987.67004163534
+        },
+        {
+          "month": 4,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 338598.1153852887,
+          "lower_feasible_cohort_energy_model_mwh": 224883.3175520777,
+          "upper_feasible_cohort_energy_model_mwh": 457251.1094544309
+        },
+        {
+          "month": 5,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 377572.2630893097,
+          "lower_feasible_cohort_energy_model_mwh": 264648.49436716473,
+          "upper_feasible_cohort_energy_model_mwh": 490850.7327149003
+        },
+        {
+          "month": 6,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 354828.29216453107,
+          "lower_feasible_cohort_energy_model_mwh": 200191.0842048627,
+          "upper_feasible_cohort_energy_model_mwh": 429175.8867213091
+        },
+        {
+          "month": 7,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 353327.07955865026,
+          "lower_feasible_cohort_energy_model_mwh": 165736.42694722748,
+          "upper_feasible_cohort_energy_model_mwh": 400706.5501811767
+        },
+        {
+          "month": 8,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 342877.474013955,
+          "lower_feasible_cohort_energy_model_mwh": 130514.53149299495,
+          "upper_feasible_cohort_energy_model_mwh": 370630.44314384507
+        },
+        {
+          "month": 9,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 314725.094387652,
+          "lower_feasible_cohort_energy_model_mwh": 103937.33965748805,
+          "upper_feasible_cohort_energy_model_mwh": 337528.9435380356
+        },
+        {
+          "month": 10,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 313727.4844032125,
+          "lower_feasible_cohort_energy_model_mwh": 101290.89194550083,
+          "upper_feasible_cohort_energy_model_mwh": 340572.90659760206
+        },
+        {
+          "month": 11,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 376445.9461659142,
+          "lower_feasible_cohort_energy_model_mwh": 201101.0025592572,
+          "upper_feasible_cohort_energy_model_mwh": 434509.4710475473
+        },
+        {
+          "month": 12,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 381145.79886349046,
+          "lower_feasible_cohort_energy_model_mwh": 203630.39915720688,
+          "upper_feasible_cohort_energy_model_mwh": 444543.0267604273
+        }
+      ]
+    },
+    {
+      "name": "niagara_legacy_literal_all_other",
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/niagara_legacy_literal_all_other.npz",
+      "sha256": "32d5be84d1a801ed497016605b051d6b9546809ceb5b490682da34123b0a7b58",
+      "qualified_hours": 8374,
+      "scope": "restricted_feasibility_diagnostic_not_annual",
+      "full_fixed_cohort": false,
+      "donor_policy": "all_other",
+      "target_policy": "legacy_literal",
+      "donor_generator_count": 320,
+      "changed_generator_count": 333,
+      "infeasible_requested_hour_count": 277,
+      "applied_hypothesis_adjusted_hour_count": 0,
+      "maximum_hypothesis_adjustment_public_mw": 0.0,
+      "mean_absolute_hypothesis_adjustment_public_mw": 0.0,
+      "raw_source_values_clipped_or_overwritten": false,
+      "native_bound_violation_model_mw": 0.0,
+      "hourly_total_Hydro_and_global_PG_change_model_mw": 8.100187187665142e-13,
+      "held_fixed_generator_rows_not_saved_or_changed": true,
+      "monthly_sum_constraints": []
+    },
+    {
+      "name": "niagara_legacy_bounded_all_other",
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/niagara_legacy_bounded_all_other.npz",
+      "sha256": "73a718a7a4c793b1816802b336d1f1b3995981151c15ffa6a1b3bbe223b8dfa5",
+      "qualified_hours": 8651,
+      "scope": "full_fixed_8651_cohort",
+      "full_fixed_cohort": true,
+      "donor_policy": "all_other",
+      "target_policy": "legacy_bounded",
+      "donor_generator_count": 320,
+      "changed_generator_count": 333,
+      "infeasible_requested_hour_count": 277,
+      "applied_hypothesis_adjusted_hour_count": 277,
+      "maximum_hypothesis_adjustment_public_mw": 739.6346666666655,
+      "mean_absolute_hypothesis_adjustment_public_mw": 5.648258126073537,
+      "raw_source_values_clipped_or_overwritten": false,
+      "native_bound_violation_model_mw": 0.0,
+      "hourly_total_Hydro_and_global_PG_change_model_mw": 8.100187187665142e-13,
+      "held_fixed_generator_rows_not_saved_or_changed": true,
+      "monthly_sum_constraints": []
+    },
+    {
+      "name": "niagara_month_shape_literal_all_other",
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_literal_all_other.npz",
+      "sha256": "e2871b2f94b8b2a6fed19fe258c6c711a622962a8567d09f81200981787a5ff9",
+      "qualified_hours": 8651,
+      "scope": "full_fixed_8651_cohort",
+      "full_fixed_cohort": true,
+      "donor_policy": "all_other",
+      "target_policy": "month_shape_literal",
+      "donor_generator_count": 320,
+      "changed_generator_count": 333,
+      "infeasible_requested_hour_count": 0,
+      "applied_hypothesis_adjusted_hour_count": 0,
+      "maximum_hypothesis_adjustment_public_mw": 0.0,
+      "mean_absolute_hypothesis_adjustment_public_mw": 0.0,
+      "raw_source_values_clipped_or_overwritten": false,
+      "native_bound_violation_model_mw": 0.0,
+      "hourly_total_Hydro_and_global_PG_change_model_mw": 7.958078640513122e-13,
+      "held_fixed_generator_rows_not_saved_or_changed": true,
+      "monthly_sum_constraints": []
+    },
+    {
+      "name": "niagara_month_shape_constrained_all_other",
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_constrained_all_other.npz",
+      "sha256": "a5e05a598eb57744f75a7adfcfac2120422ec32c429603169e0b3969b6225f58",
+      "qualified_hours": 8651,
+      "scope": "full_fixed_8651_cohort",
+      "full_fixed_cohort": true,
+      "donor_policy": "all_other",
+      "target_policy": "month_shape_constrained",
+      "donor_generator_count": 320,
+      "changed_generator_count": 333,
+      "infeasible_requested_hour_count": 0,
+      "applied_hypothesis_adjusted_hour_count": 0,
+      "maximum_hypothesis_adjustment_public_mw": 3.7880365505426736e-13,
+      "mean_absolute_hypothesis_adjustment_public_mw": 2.371737368629568e-13,
+      "raw_source_values_clipped_or_overwritten": false,
+      "native_bound_violation_model_mw": 0.0,
+      "hourly_total_Hydro_and_global_PG_change_model_mw": 8.313350008393172e-13,
+      "held_fixed_generator_rows_not_saved_or_changed": true,
+      "monthly_sum_constraints": [
+        {
+          "month": 1,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 380908.8821705372,
+          "lower_feasible_cohort_energy_model_mwh": 225546.9295078556,
+          "upper_feasible_cohort_energy_model_mwh": 469596.60646159097
+        },
+        {
+          "month": 2,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 317182.7585114324,
+          "lower_feasible_cohort_energy_model_mwh": 142054.16370483837,
+          "upper_feasible_cohort_energy_model_mwh": 366672.22695687466
+        },
+        {
+          "month": 3,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 391865.676203404,
+          "lower_feasible_cohort_energy_model_mwh": 245485.5655875722,
+          "upper_feasible_cohort_energy_model_mwh": 485403.8493792759
+        },
+        {
+          "month": 4,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 338598.1153852887,
+          "lower_feasible_cohort_energy_model_mwh": 223646.4634954058,
+          "upper_feasible_cohort_energy_model_mwh": 457635.9025372036
+        },
+        {
+          "month": 5,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 377572.2630893097,
+          "lower_feasible_cohort_energy_model_mwh": 263807.7251665292,
+          "upper_feasible_cohort_energy_model_mwh": 491332.43619870185
+        },
+        {
+          "month": 6,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 354828.29216453107,
+          "lower_feasible_cohort_energy_model_mwh": 199388.81455842353,
+          "upper_feasible_cohort_energy_model_mwh": 429907.2151084866
+        },
+        {
+          "month": 7,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 353327.07955865026,
+          "lower_feasible_cohort_energy_model_mwh": 164716.5410921069,
+          "upper_feasible_cohort_energy_model_mwh": 401215.58308351605
+        },
+        {
+          "month": 8,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 342877.474013955,
+          "lower_feasible_cohort_energy_model_mwh": 129459.16827902819,
+          "upper_feasible_cohort_energy_model_mwh": 371157.90370191634
+        },
+        {
+          "month": 9,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 314725.094387652,
+          "lower_feasible_cohort_energy_model_mwh": 102987.94173896949,
+          "upper_feasible_cohort_energy_model_mwh": 337971.73204266746
+        },
+        {
+          "month": 10,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 313727.4844032125,
+          "lower_feasible_cohort_energy_model_mwh": 100395.65360072821,
+          "upper_feasible_cohort_energy_model_mwh": 341116.15661661624
+        },
+        {
+          "month": 11,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 376445.9461659142,
+          "lower_feasible_cohort_energy_model_mwh": 200043.43073438213,
+          "upper_feasible_cohort_energy_model_mwh": 434970.14067107765
+        },
+        {
+          "month": 12,
+          "feasible": true,
+          "requested_cohort_energy_model_mwh": 381145.79886349046,
+          "lower_feasible_cohort_energy_model_mwh": 202472.89727319637,
+          "upper_feasible_cohort_energy_model_mwh": 444902.92477736756
+        }
+      ]
+    }
+  ],
+  "primary_donor_policy": "outside_ab",
+  "full_fixed_cohort_scenarios": [
+    "niagara_legacy_bounded_outside_ab",
+    "niagara_month_shape_literal_outside_ab",
+    "niagara_month_shape_constrained_outside_ab",
+    "niagara_legacy_bounded_all_other",
+    "niagara_month_shape_literal_all_other",
+    "niagara_month_shape_constrained_all_other"
+  ],
+  "fixed_groups": {
+    "StLawrence_rows_1based": [
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323
+    ],
+    "PS_rows_1based": [
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295
+    ],
+    "external_rows_1based": [
+      1437,
+      1438,
+      1439,
+      1440,
+      1441,
+      1442,
+      1443,
+      1444,
+      1445,
+      1446,
+      1447,
+      1448,
+      1449,
+      1450,
+      1451,
+      1452,
+      1453,
+      1454,
+      1455,
+      1456,
+      1457,
+      1458,
+      1459,
+      1460,
+      1461,
+      1462,
+      1463,
+      1464
+    ]
+  },
+  "identity_compensation_control_max_model_mw": 2.6645352591003757e-14,
+  "all_old_dependency_hashes_unchanged": true,
+  "user_modified_old_report_preserved": true,
+  "user_modified_old_report_sha256": "e21175a942b85519688708eaba22b2100ad06281b256a5d1dd66b17371b3d4cb",
+  "source_month_policy": "America/New_York physical calendar hours (March743, November721). Source EIA monthly energy is rescaled to the fixed eligible-hour count by a representative-missing-hours assumption. No full-month or full-year energy claim for incomplete cohorts.",
+  "P63_Hydro_and_preserved_baseline_Hydro_distinction": "Current baseline hourly statewide Hydro PG, including fixed PS; the P63 Hydro source is separately exposed and is not substituted for this preserved total.",
+  "output_evidence": [
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_generator_scope.csv",
+      "sha256": "e8e3850aa8de74cdda78b2a3b4f5bbbded1a8a3aa8215e5a260dcd81485d8e2c"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_hourly_changes.csv.gz",
+      "sha256": "8de4dc42bcd6a7ff6feeeaf4539c3cd6f0e46ff88b63855becd073350f5ae00c"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_monthly_scope.csv",
+      "sha256": "e7c52fffd859465dadb066469c4c29f75350e2d1c479d103bc1290fe4c39b9d8"
+    }
+  ],
+  "documentation_preservation_is_not_a_numerical_input": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+      "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/fleet_register.csv",
+      "sha256": "d025a1994c9a1c19cb62c6b4ae61a1e0bb62ae2060158592c61f6ecf19546d89"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/hour_catalog.csv",
+      "sha256": "96d4a0db424cbe1062b7c6b51d5f244a4de699679ad89428a8db3a992980f86a"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/statewide_fuelmix_hourly.csv",
+      "sha256": "489638be51300391d808a39b829a85d09eb9a1997423fe2f24e684b024764ec8"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/target_EIA923_final_monthly.csv",
+      "sha256": "271369eb6ba82dc55ffd892f67180e0a14e4f8f50411d28f6f238b9866f46e5d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/sources/f923_2025_final.receipt.json",
+      "sha256": "52644ceadf8052481a55a92e3c8bc4ac087d99be689fe494db7e47a366d176a1"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_dispatch_receipt.json",
+      "sha256": "1ec2caef4fd0324d8b9aeceeed96f26aaf295d2b7ae3a0ffb6c5fbdade01a623"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/generation_audit.json",
+      "sha256": "e5e6efe02980d4bf77a7fbfdb7426e20d0bf131c43f5b18d118ce6d40f13b477"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/source_manifest.csv",
+      "sha256": "29929852057a593b2af784e387df39570ffb2dea8b092ef44fab16b4bce8a611"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "scripts/nygrid_2025_dispatch/build_dispatch.py",
+      "sha256": "3250a8f4b5052d97ebe9eee11129570c12b9fe5260b2181ad3add79a418d3f54"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/sources/EIA923_Schedules_2_3_4_5_M_12_2025_Final.xlsx",
+      "sha256": "95684212d89ac688a355a5c8b51935111247e6f60716eba250464b28d14cfd2c"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/niagara_plan.json",
+      "sha256": "334e0bb97a574c8b8671fef69e858ebd4276d2042810ab38d76f59a5020a12bd"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/build_niagara.py",
+      "sha256": "5a6460a717d683aea66af991fac7011d04c3e0fa5da7eee35ebcfb36fe313d53"
+    }
+  ],
+  "limitations": [
+    "Controlled allocation hypotheses, not observed hourly Niagara dispatch or validated reservoir/commitment operations.",
+    "Monthly means on incomplete cohorts require representative missing-hour allocation; no full-month/year energy assertion.",
+    "The bounded legacy scenario changes the hypothesis target at its feasibility boundary; the literal scenario remains separately inspectable.",
+    "Compensation placement changes western zone-injection attribution. Outside-A/B donors are primary; all-other-HY donors are an explicit balancing sensitivity.",
+    "All reported feasibility comes only from original active-power boxes and accounting constraints. No power flow, thermal or AC verification is performed here."
+  ]
+}

@@ -1,0 +1,822 @@
+{
+  "created_utc": "2026-10-12T01:37:09.569944+00:00",
+  "preserved_parent_files": [
+    {
+      "path": "NYGRID_2025_WESTERN_SOURCE_AUDIT.md",
+      "sha256": "e21175a942b85519688708eaba22b2100ad06281b256a5d1dd66b17371b3d4cb"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/balance/balance_validation.json",
+      "sha256": "d47204108811bc179b0a63eee5f69590c07991d23c1ec58edce9c3271def5ef8"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/balance/western_cut_members.csv",
+      "sha256": "cdc8f57184471eb649663a6f2db332a82d8f04f7109934c009262270d322a786"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/balance/western_hourly.csv.gz",
+      "sha256": "3339784e9f3ed7eb9e324f9f1b80f747687c496b831a4921f9703eabd6a5d29a"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/balance/western_monthly_summary.csv",
+      "sha256": "a497a83a2884221ecbfc3fbe4db2dde8465bba695c3b64320f99a7b67d6c6b61"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/acquisition_failure.json",
+      "sha256": "75682f7534c83ce50e37945060c199d2fb2475744f75479e4594de775c96316a"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/annual_external_difference_summary.csv",
+      "sha256": "fe8f4d8fb9df4988062547c455c2e9a5fae34869740ddb4e14957b6469d96e80"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/counterparty_actual_comparison.csv",
+      "sha256": "0405cd5e63a556dde5c3a0c09af98b09f4097f29651df93b79f7bf6f8e726a20"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/external_schedule_actual_comparison.csv",
+      "sha256": "13cde6dc4621ff4599be788eef2d4e3c93660c03ad0f0cd717ac1c0fce89b76a"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/frozen_report_runs.csv",
+      "sha256": "fa7afab96750eb7f2f40b405d42934b3e09a03c19dd3b48fc0f63eb986796b46"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/hourly_regional_actuals.csv",
+      "sha256": "eadd202b2a4a4f397215ab7a47d3abae25500008059d4879f14a9ab7829b3f50"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/hourly_regional_actuals_initial_finite_only.csv",
+      "sha256": "70d52293f50838e212db4c7cf26558e9e95a94324fe81ce6c243c4b93f0a4810"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/hourly_source_quality.csv",
+      "sha256": "aa78d148dd0d4d3d7659f4b7955cb86d47c9644d68c73330e236931d8b32fecc"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_BALANCE_2025_Jan_Jun.csv.gz",
+      "sha256": "42722ae7ac095467a9a2ab8ec230455622ed0f62d53448f1ebcb6584a951c7ce"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_BALANCE_2025_Jan_Jun.csv.gz.receipt.json",
+      "sha256": "2907c8a187082bd4245f2f931a713d14a197fb9bc3c4bfaa853b9775d202eb17"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_BALANCE_2025_Jul_Dec.csv.gz",
+      "sha256": "2aa0cc3a9812068c890333b6a867620552088071371f5804f6b43c8c932e71ca"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_BALANCE_2025_Jul_Dec.csv.gz.receipt.json",
+      "sha256": "4a4c980060f2515f7ad7bea183436d8b7a6a66239fd5c2d3d663717811ef6ea9"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_File_List_Meta.csv",
+      "sha256": "16ed88ba43dd8c013e319f27e9fad3dc64f634f2eb5c822206e51cbfab296965"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_File_List_Meta.csv.receipt.json",
+      "sha256": "b2656a9a694ba619bb2ec513df894fdd51f91d77e57618894ec4bb480ad139fc"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_instructions.pdf",
+      "sha256": "321ee0a8d93b15ca2fe206720615bb721c1b6eaf9d9fb06e9c11837ca5004d58"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_instructions.pdf.receipt.json",
+      "sha256": "b751b3e9985349e04a5fe602bb934ebf062be9b7dd9a3c9409ab57fe21de56de"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_INTERCHANGE_2025_Jan_Jun.csv.gz",
+      "sha256": "d015f28d9e62ed9d38c6d83e1da37f7ff0582f09f240b2f4e58c72840235222c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_INTERCHANGE_2025_Jan_Jun.csv.gz.receipt.json",
+      "sha256": "e0adbd0711dad122134fbb41a24aa216dacc877dbf5268894796ee210552c836"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_INTERCHANGE_2025_Jul_Dec.csv.gz",
+      "sha256": "c685e94b35a08a11c3ea4caca4eb9c067ad433c82b8fc642853965bfd23d24b1"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_INTERCHANGE_2025_Jul_Dec.csv.gz.receipt.json",
+      "sha256": "e01ec5723e92283fa47dcf5586ad5998f5c54bd3bbc90540bd2fca35daa08eb9"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/interchange_route_metadata.json",
+      "sha256": "cb02032c9fe4e3ac8e66b8b02798873481e0d8cf73a9933740c520f2a67646a2"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/interchange_route_metadata.json.receipt.json",
+      "sha256": "7cdb3f1980c4988c8ec4ea6ee8e5224cac47c88ed7d707080087052286c0aa7b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/NYIS_interchange_2025_00000.json",
+      "sha256": "7ffd5bb2f5120c7ff479820431144236d8ed1e1b98feefd1b8c72b6bb8515da9"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/NYIS_interchange_2025_00000.json.receipt.json",
+      "sha256": "7d40e0eb7d863a1391321fb6dd7f5161dd6fab94a356127a442eb2adb19652c0"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/NYIS_interchange_2025_05000.json",
+      "sha256": "aaacbf3e92b17129fa1c06324166b45f19640da977530476ac697221032d8c32"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/NYIS_interchange_2025_05000.json.receipt.json",
+      "sha256": "cfb130b84c8526de295386cb34472694056e63941596894caf0d8e7f0cda0327"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/NYIS_interchange_2025_10000.json",
+      "sha256": "07925e5af5d28790cb9a3cc77f6286955b275c115cd4800834a21e75bcd0978e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/NYIS_interchange_2025_10000.json.receipt.json",
+      "sha256": "a48d7202a80310394d5e9bc910c9d76344f94669b7d8f21154d5f22c63b9c752"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/NYIS_interchange_2025_15000.json",
+      "sha256": "20f3f7c3ee132008cff40f9714efd9397b2c1accd648f9f6f31d8162cbac1c45"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/NYIS_interchange_2025_15000.json.receipt.json",
+      "sha256": "1390d670fc78c510e85531d2352879077fa72d32f615d48aa9107b00165002f0"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/NYIS_interchange_2025_20000.json",
+      "sha256": "43af65b4a9b46c58972bf3991400976481e12ff4602a6d78e56c52a8bbb7968c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/NYIS_interchange_2025_20000.json.receipt.json",
+      "sha256": "23272d113df92481576a909379fd8452f9fac6954fc1bfdf68390088030f5051"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/reported_total_sum_check.csv",
+      "sha256": "b400dff917c17d3bcac2c861b738d33fd79695271cfe12bb67d7bb161a5bf92c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/source_audit_receipt.json",
+      "sha256": "b880cb7e40a6707ec59958c624816243d78e921cb0bed0ce4eb356f48c7b95bf"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/source_audit_receipt_initial_finite_only.json",
+      "sha256": "8ee0317e645fe786b516696ed3c5055e418465d81c2f8fad58a8276545581ce0"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/source_manifest.csv",
+      "sha256": "e7aacf074e4915ec334163fcdab6fc3d5fb3ef3d23a295b8361ec64ff349263b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_source_review/EIA930_instructions.pdf",
+      "sha256": "321ee0a8d93b15ca2fe206720615bb721c1b6eaf9d9fb06e9c11837ca5004d58"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_source_review/EIA930_instructions.pdf.receipt.json",
+      "sha256": "25db97e119018dfb785681208c7371292f384c3688ee35d641932b71abc8f41d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_source_review/independent_boundary_review.json",
+      "sha256": "385e232729fbed7786280887467a772e600452be5033ed309704f27ed347e52f"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_source_review/independent_frozen_vector_runs.csv",
+      "sha256": "1d5dc861f0a1add4f9292a5532056e05e6bd020607ce794c7bf90ac566053767"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_source_review/quality_protocol.json",
+      "sha256": "7974c2cbff734a6f6d6d4d7353b6a76228cdeb0ee7d55f8ba9ed5539f9a89023"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_source_review/region_metadata.json",
+      "sha256": "6b145d678beb98217e2e39378713eb93b27bc2f6cbdf199efb5a283a035f5b34"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_source_review/region_metadata.json.receipt.json",
+      "sha256": "397066ac227730af39c2cec00308948bde0fa8372a0de9b918fa3f2bce65d92c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_source_review/total_series_discrepancy_hours.csv",
+      "sha256": "577d4e444a98aa740cc7629216a8bd06f71e13141aa61d4563eccb443b5b992c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/comparison/interface_monthly.csv",
+      "sha256": "1a51a761d1d50bdaeb0d4b706f8b1096b33aba23bc9fff3c53acbce47d3ca5e1"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/comparison/interface_summary.csv",
+      "sha256": "dfdd37edbd179284762511f45ad813dff116e24b419f982075e25c598aba4409"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/comparison/scoring_receipt.json",
+      "sha256": "969c231b12a0e626cc29bb64cf3bc6ed46fdcfc5a58f91b1b6fb9b35f6d10949"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/changed_fleet_fields.csv",
+      "sha256": "990d649aec7616477ebe14d27e98b05021114c128cb1550153c61682f9dc27dc"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/changed_model_fields.csv",
+      "sha256": "c7caf79abd32408d253556fcfc28cda902b7d131e9cc9f1c44f059d39a32695e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/corrected_bus_landings.csv",
+      "sha256": "72a7c59143a7abcf904a910b40b7c639e359617ee7c87acd034545e59e46239d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/fleet_register.csv",
+      "sha256": "d025a1994c9a1c19cb62c6b4ae61a1e0bb62ae2060158592c61f6ecf19546d89"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/immutable_site_legacy_crosswalk.json",
+      "sha256": "705c67259415cac2c0cedf8d53b0dc4e464979d746de3fde4cc2a756cbee099c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/numeric_reuse_contract.json",
+      "sha256": "e24205b543ff12e60e221885e2ec64754def48dbebb099200653610c571b9604"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/repair_receipt.json",
+      "sha256": "446a1430568a967b16a28063ce2af9c8c4790f09e511fd6480b38278c6763819"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/source_manifest.csv",
+      "sha256": "c3faf729cbf0133adcaec85d92371a468ef63f09dac6b1b309cec4afbb40968e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/actual_Ontario_dispatch.mat",
+      "sha256": "29d5adb7db188e395e9b4b177107088e3e23a27ece8cb986309307e26e620566"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_dispatch_receipt.json",
+      "sha256": "1ec2caef4fd0324d8b9aeceeed96f26aaf295d2b7ae3a0ffb6c5fbdade01a623"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_external_generator_shares.csv",
+      "sha256": "e0bef3a5c7c95fec628fb86410eb64f4ee5c3e3fd2a89e8eb5d42fa19289af7a"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_generator_adjustments.csv",
+      "sha256": "ca9d1a7e86f1b50b1141eb37dcf42b187c624c9acd3989a8fe58224a2fad3c2c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_guard_test_receipt.json",
+      "sha256": "0dc7bfd9afd57348c40cbdac48782900302c9b97eb3a6daf855854fb7ba6e452"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_hour_status.csv",
+      "sha256": "3145f44528b519960681e2aca9088dd89253209830037071ee0cacf78daf5cc2"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/dispatch_receipt.json",
+      "sha256": "9e89cb608c2227e41624bb1cee3b6576cfda8a7fa3a9da8c51fb8b806195d78b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/generator_adjustments.csv",
+      "sha256": "37da67fb433bb49fcaa8f1181e24691f43ca04fcff66ed3bf5a99d81b7f57e3b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/hour_status.csv",
+      "sha256": "7eab29973a5ff49138ef2c85fd41d2cfe795fd62c6928e599db662c449886fd1"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/effects/effects_validation.json",
+      "sha256": "6af1ff0c7e65eac52ff444b9deb9e1492bcf569c0a2f0f975a5ceba706bd7635"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/effects/western_component_summary.csv",
+      "sha256": "4b06b2ca74d5733141bb94d3f89962d827977b079c2fcb97c248800d3f42a2ba"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/effects/western_hourly_decomposition.csv.gz",
+      "sha256": "27f8371a107523599f3b76cc574b7d681a15331593cfd126095715553a47718b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/figures/figure_validation.json",
+      "sha256": "3bb45137fca7b6c530a897c14502d121b92b466662775b551f1c154a68e8f8ab"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/figures/plotted_paired_scores.csv",
+      "sha256": "16b07328dfb0d4e2a4f3cab19bf79983dabde43dff221ba21f1cb9eb0cc6f94c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/figures/western_source_comparison.pdf",
+      "sha256": "bcb93c8c26b26f9f5fd8bb506d12794d97211fc2772f187903953e0af470d14f"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/figures/western_source_comparison.png",
+      "sha256": "a31009d2eb6c83dab58b029d3b61994b97190562199b341139b656a633c7470d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/figures/western_source_comparison.svg",
+      "sha256": "94b8c3417ebf26322ebc1dee206c888ff5756f49a13291776445e6439b1cfd9c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/EIA923_target_vintage_comparison.csv",
+      "sha256": "99a39613955615d0966751e8cbdc411b79e539f08ed7c195856f0c8285bb586f"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/final_eia923_NY_hydro_diagnostic.csv",
+      "sha256": "eef038435aa191271cb2b710ad585d3647ebe43e24756d7c2bf145df0cc4e65e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/final_EIA923_NY_hydro_scope.csv",
+      "sha256": "36a93312fe0ebba12b84e437026599247011873c8515b16437ddfc4b848cd0cf"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/generation_audit.json",
+      "sha256": "e5e6efe02980d4bf77a7fbfdb7426e20d0bf131c43f5b18d118ce6d40f13b477"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/GoldBook_station_evidence.csv",
+      "sha256": "d6a8c0df754fed7d2ff1c86291e70e10d37df9e37cc59233cb122a675363e76d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/Lewiston_candidate_landing_correction.csv",
+      "sha256": "d5730bb89e45bcea2795f2c8ef21aad26324616c13b7c7e57d60de80dea83838"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/monthly_P63_EIA_projection_reconciliation.csv",
+      "sha256": "c6858422da29f717953cfb5d1bf708b8389e8d16124a1f6fdb9cb9671222d945"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/Niagara_and_Gilboa_unit_inventory.csv",
+      "sha256": "df03741198ce887d5707ef3aa34fae2545f2dae2a39e38aa12bbf329e54d69b6"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/Niagara_Gilboa_monthly_prior_dispatch.csv",
+      "sha256": "06f45d5b955da4e5d0b9c9be326133a2c9fd404fd928891e05c6db8d338c5a8d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/plant_summary.csv",
+      "sha256": "d44d69336efaf40b437af438d345921e10f5c9bfa3bc750fcb77660285edeb8e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/projection_reproduction_checks.csv",
+      "sha256": "122c74908963ecc09a561599384eddba034dcdb4dab263b2372844d8e6cb207c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/pumped_storage_gross_pumping_net_monthly.csv",
+      "sha256": "5fd3e7d86f8ce03b6c3743ac7bb4ad2fff57c857ad30638477760d6f3e19a0ec"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/source_interpretation.json",
+      "sha256": "7bacb38e2e9f704044cc348cac199707446c1e63ebbbbf0b4a484c97a7bca8a0"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/source_manifest.csv",
+      "sha256": "29929852057a593b2af784e387df39570ffb2dea8b092ef44fab16b4bce8a611"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/sources/EIA923_Schedules_2_3_4_5_M_12_2025_Final.xlsx",
+      "sha256": "95684212d89ac688a355a5c8b51935111247e6f60716eba250464b28d14cfd2c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/sources/f923_2025_final.receipt.json",
+      "sha256": "52644ceadf8052481a55a92e3c8bc4ac087d99be689fe494db7e47a366d176a1"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/sources/f923_2025_final.zip",
+      "sha256": "1bff7092a86f6678c069c986829da5a23104048fc1aafb65b0776e3c904284de"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/sources/GoldBook2025_page86.png",
+      "sha256": "591ff2d3334e4d1b7307586d491d8f92aad7fbab05b200addf4e51e27a1760a8"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/sources/Niagara_model_page3.png",
+      "sha256": "d3194be579cbe3c35881ac1a3e88f84225b4888c18aba697297ea092d2da710b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/sources/NYISO_Niagara_Model_20180724.pdf",
+      "sha256": "7ace05f9231540b218add162fbe70398b649bd4089fc350f062d81e067178396"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/target_EIA923_early_monthly.csv",
+      "sha256": "81c020503557925e696ab945fb3bb47a60a61bbcf2de16f97de7364f00deb472"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/target_EIA923_final_monthly.csv",
+      "sha256": "271369eb6ba82dc55ffd892f67180e0a14e4f8f50411d28f6f238b9866f46e5d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/target_plant_hourly_audit.npz",
+      "sha256": "dd35edf7a7edcaee68013e302012ac9a2e0e7bb7c1b79855d5074268b8f6c5ad"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/checks.csv",
+      "sha256": "fdecf22733a0de41376290da1580606403858abd74c479ec2bd5be4f2096188b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/EIA_site_identity.csv",
+      "sha256": "29d9b4c5245d34f247014e78fdced50c6eb9d26ddbd987be31d39c86bd5ae60c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/goldbook_pdfpage100.png",
+      "sha256": "406e31000b412ab3c1e6713c40692f28678176c51a803f853d12e757c052fda5"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/goldbook_pdfpage86.png",
+      "sha256": "b159dbc323b504e04d34800524e81cb01737adf0a98dfc33eef2e93869136b47"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/goldbook_pdfpage87.png",
+      "sha256": "0d957c50dff6f3f4ff0877493d3aea410942fcfdb11cc61bfd02c990d3551734"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/mapping_summary.json",
+      "sha256": "bb30be1c3918fc39790c17241e8aff673ef734a0ea0b93f7387c3354e112bfd8"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/model_operator_terms.csv",
+      "sha256": "80dc7abaf4ca6bf68f596f2f3963079bf22f02e6e09b983c0644c790c4d67797"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/observations_rebuilt.csv",
+      "sha256": "306757e165a1ace7e79e37c5a00c3f6b946e46e8289bfe2dcd293c26fdef0add"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/PERFORM_Dysinger_planning_branches.csv",
+      "sha256": "0c19d78be208d10da66982864dec4dbd5b399ca93a4a322fc6acdb8a69145ed0"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/PERFORM_western_station_buses.csv",
+      "sha256": "a2795c59f9bbdc58892dbb5dbab4f0831d8cdafed88b92e64b48c78f8b6d1177"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/physical_source_scope.json",
+      "sha256": "481395751d2b0d36272ad72026ebdf5090f0417af0364398571b128a2e71991e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/raw_channel_identity.csv",
+      "sha256": "28434c5be05bd2920f66dd75deed68cf4d8c5d4084471c9a8a9f597e179d23bb"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/scores_rebuilt.csv",
+      "sha256": "2e1852b04e57c7371720bbd7906eb5e2a337c407dbae465a6d127dfcc7551dbc"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/source_confirmed_site_zone_proposals.csv",
+      "sha256": "7adec9c2193d181275dd5f2c0fef93c5ea833a552b9e11f6cf11eabc6f18ba98"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/source_confirmed_unit_zone_proposals.csv",
+      "sha256": "f78041d1a85458023bce6769effb910d9462160d8b910a9ccf2cc8621c41bc32"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/mapping/zone_B_identity.csv",
+      "sha256": "7079d8df0b5e1c2efc74f489ccf69bc94e4b75971e09ffc1f9ad9179076f22e9"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/annual_external_summary.csv",
+      "sha256": "ce9b8019ff22edd3c17e13af78c5cee411858ceb666c3b5a717e3a0202936438"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/cross_format_probe_20261010.csv",
+      "sha256": "c14285e2a4bed1637d8df45b9b1c1a3c61d5d57b3ddbff0be068337b061efd07"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/external_quantity_comparison.csv",
+      "sha256": "d6bfec400e5377cff2348522836a11f2c53c328e62dbbf14156d21581df91b1e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/external_schedule_timing_sanity.csv",
+      "sha256": "faf487098940b0c12ac94319750937b99ebf823eb73e2351c5b7d853a7f984dc"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/external_source_comparison_2025.csv",
+      "sha256": "f48de49e7a1cc8697db6b5e7db178327ced033dc5ff270e4e5abfb66a3cf3c6a"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/hourly_actual_exchange.csv",
+      "sha256": "e59408bf1296bd92eb6c562395d98d629c6b9784d50767c9a94956c8400aa6b4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/hourly_exchange_quality.csv",
+      "sha256": "ae23b9a130773fece232c8bb84583a3fb2d16fe9c2533a13b525ab64ba788cde"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/ieso_new_york_hourly_2019.csv",
+      "sha256": "a03dd7d4fedd649d302f49a2dbd4fb18fd0ed39ff9757267a382f0476156aa57"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/ieso_new_york_hourly_2025.csv",
+      "sha256": "229774d88786315ff5138f5009a6bc63806c09f31dc77143e9442a0092c45501"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/ontario_audit_summary.json",
+      "sha256": "773ff7f90a655079e223c4177f2da0f57cd04a5a9f4629b323d5cbb64a244246"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_intertie_sign_source.pdf",
+      "sha256": "f9744dcaa0b1e35b7e8e31f04b086b391d47425ceaa09bf21c859a8679082f76"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_intertie_sign_source.pdf.receipt.json",
+      "sha256": "15404987b7f08074f059e2289b776a6ba1dd9384a1f3ec9e56d2e8317ec69801"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_intertie_sign_source.txt",
+      "sha256": "e97345ef42eb1846f24c615cc224e5d1ff2ea2c6a63a2184a47a56620396e920"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_TableB2_sign.pdf",
+      "sha256": "3d007c882969913a464a7f435b43adb2c7d6a5e80e1bdc0ff6a2d3160ec78484"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_TableB2_sign.png",
+      "sha256": "6fa9a62e41e4d98c9b49eb084bc6ecac168a3bb0fde3df0fd02a5a62b8f944f2"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_TableB2_sign.txt",
+      "sha256": "d7d12fd3315b4f8d716393bea76e5a7335607ae81cef28daa5b9c43fedbfa81e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IESO2019_headers.txt",
+      "sha256": "dddb650cd52abbc4c4c585c44e5784f0876a1163ae964d8bd4950116b4a10c98"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IESO2025_headers.txt",
+      "sha256": "7eb6a8c51e92a075c659119a885935427ab0036f81bf95be670786c721363173"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IESO2025_v394_headers.txt",
+      "sha256": "2f5a2a59e4f9c3872710f6cdb33e25e3deb9802dea89b0fed00d6a59b7e466a7"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IESO2026_headers.txt",
+      "sha256": "6eecd57944d6c94c999f9aa8e2f9d61dcd049a9ac1d702c013f220107cacba3e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_20261010.xml",
+      "sha256": "20934c240a81e687e997c4a83e533b4f3eaf83da08e8975ec749abbab51eacbc"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_20261010.xml.receipt.json",
+      "sha256": "128d29c0a4655e12ca5b59f3c8e9c20bee608cecb951c0790fabec9b0c656cb2"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_h1.pdf",
+      "sha256": "d945c5c55b105c5f375707a6f96b6e5bf689ac0ff1cfc68e6f1ffce40fdf7931"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_h1.pdf.receipt.json",
+      "sha256": "51523468a6143dadb43cdff232e319a71f3cee46ac207bc6c96fc90e2664eb78"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_HTML_t1-2.xsl",
+      "sha256": "4ccefe0481f1b9efc2c636e73119d79b1a669c5418083f40a035f04a53d591ad"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_HTML_t1-2.xsl.receipt.json",
+      "sha256": "beb874f6d9ff7ca05c7dadef90fdbe4760f5fdb9c9be34a187ad6d63966a327b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_r2.xsd",
+      "sha256": "230ddc6af589f3a1dba542ce499005dc0b17c18789fb904f71f5db3c6b09f307"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_r2.xsd.receipt.json",
+      "sha256": "6d37923ebc525cf23b1f8757f989fa7294e6a2fe70649593d1284b482c1d529c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2019.csv",
+      "sha256": "9b18b5c3fed8c9677399f32f76a788544d91f55c14b6fa6936ac17d16423acf2"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2019.csv.receipt.json",
+      "sha256": "3447103a8ac25ea2d79b28d92f81e439ad4ea0cc7a2dcb50abe4d118e3d0232a"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025.csv",
+      "sha256": "b4aa6a2a3fe142124115bd9f4710ea3bb46ac2635b47be08b729aaf405671b4d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025.csv.receipt.json",
+      "sha256": "abfecc4d1da84d03dcf1428373c679f2e91e910fe3a657ed891dbf97cc831535"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025_v394.csv",
+      "sha256": "b4aa6a2a3fe142124115bd9f4710ea3bb46ac2635b47be08b729aaf405671b4d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025_v394.csv.receipt.json",
+      "sha256": "fca84bb60537b94ce61391f2581335052e4df3d16414561917438f3ea29f9026"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2026.csv",
+      "sha256": "96ff644435c24886391747484968f9dbccfd2d6650033afd93c2c46c22d309f3"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2026.csv.receipt.json",
+      "sha256": "5d0354dd57ca53714b1994f37b1b3316c7778fbe1d6c504d7e2976ad45f4556a"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/source_manifest.csv",
+      "sha256": "59e41c8e1082fa06fc84d692c14af05890c622b3c598851f9e856cc349eecb14"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/source_quality_receipt.json",
+      "sha256": "0959c383d82ae34a413e9ecc97465843467d3e2e543ac7de8306a45d05710eaa"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/source_quality_suspect_hours.csv",
+      "sha256": "f7a4fd549c8bdea35879d0b84f23ed46d7fbb9d7073a70575a51100b7249c30c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/baseline_replay_checks.csv",
+      "sha256": "a9d0258ef3cc0437634ee3f9cfbf51777a48b7b0954e097b86f4caddf76dd17b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_all_boundary_actual_only.mat",
+      "sha256": "254302a067d7f89490be2bb23d1168a6b2ec667ac565800654ba7731665ff7e8"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_mapping_only.mat",
+      "sha256": "cdb87e1fe32f266083fe9edf74b1c87fc55ad797a7e03e866834c123e9255a4a"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_Ontario_actual_and_mapping.mat",
+      "sha256": "204d3fef233d9965f8fe9f51be37f8160b370d58a5c004b2c857292dcdccbaca"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_Ontario_actual_only.mat",
+      "sha256": "c88fece5c0a6ca03c94d8799739843db120ecd6bf586df9c4ac24e4f0da8751e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+      "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/provenance.json",
+      "sha256": "781b83d403e017c0dbc531a04989ba256afa4e696c752c582ec133bf37e1ba2b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/year_end_all_boundary_actual_only.mat",
+      "sha256": "8a966d29d6c5581425fcefbb7d1662cfe435a0bf32c737e2b8526d7099326559"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/year_end_combined.mat",
+      "sha256": "e574f5a4b049bd7a78fc3106f2db8130264b40438c358d31fec0ea2641e4920e"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/year_end_mapping_only.mat",
+      "sha256": "5d3b9766b54714c94a7e142dbf22a752b908217f5d8fbc326655b7ed7a342e41"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/year_end_Ontario_actual_and_mapping.mat",
+      "sha256": "786a962dfe14ec119cf2a7e1ffcf6682bb0e8f88b5232e1ab5142c1838978d3f"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/year_end_Ontario_actual_only.mat",
+      "sha256": "c3165b5af1e5430e1f48c5b290a0899e9c9eda5d401d3d48f57ab991dc350448"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/review/pre_promotion_review.json",
+      "sha256": "67c6e8666e57676fdc3cf7625c66cf7adc9ec4b1d3c7eaa8fe1e641907d495c7"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/review/source_pre_promotion_review.json",
+      "sha256": "448df3bd263d4cbb179bc5e7c748433071b422cc5e10c086fc91e2dc4b9a65e3"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/review/suspect_report_zero_hours.csv",
+      "sha256": "9fd364f93bd1a4f27b3fb8de986eaed84043d5cc756dc6a8f6438b3381bb3f28"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/validation/all_hour_equation_checks.csv",
+      "sha256": "388838b165cb03b455a4c80dd2d5b1f4b2fb609ef499f9f13e400087954d34db"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/validation/independent_all_scores.csv",
+      "sha256": "29745d4640b1bb5867c16b75153d82f0b7a51dacd99b2102cddd87cd87a6ce34"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/validation/independent_dispatch_checks.csv",
+      "sha256": "64628bd69276462c375e08feee44fab220a5ca08ef2dfde3bb13f40937c499ff"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/validation/independent_validation.json",
+      "sha256": "47200a898ab850a21dd5e8ebbd0656964a101d46d71d66a9f86ab65d56062c44"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/validation/matlab_checks.csv",
+      "sha256": "23fb349a6d9b712274d562efaaeae3273d38a0ec47a82772593279447d38770c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/validation/matlab_validation.json",
+      "sha256": "a8e37467549a83f8bcd4de0a678cf01f173a93677cbfdf84b3c40e4836c30042"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/validation/matlab_validation.log",
+      "sha256": "3a5e372099c400a2d67c5324daa410129a92b6e3db853350cd652cac644f070c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/validation/source_gate_initial_review.json",
+      "sha256": "ce251c0fc7ff63d564e0a5ea1758972175d1870f39cf58a52dcfb6f4e036bd77"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/validation/source_gate_review.json",
+      "sha256": "df71e185a0fc660e0a9c5db674a4831c9f8cfa4cfff1e41479bb1ae4cc97486e"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/analyze_effects.py",
+      "sha256": "ab1ded12aa569e8346d782ba1b8883e3eb27a18f2830c59f47229683e15398e6"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/audit_balance.py",
+      "sha256": "8a3ad26e1026035d1224a56f4854c7899a603783d2bee2a00a6b99655d71867a"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/boundary_actuals_audit.py",
+      "sha256": "15f7d2049e23fe3571f753f474ed40a2fbbbfcb8b0d7298b15c2fbe466e936d4"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/build_figures.py",
+      "sha256": "dec76afcab80fc7390cda709ebc8773581aaed24a9f822c68e5126efba1442a5"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/build_report.py",
+      "sha256": "5ae09d5b8e637dd68d9f23eee6057f23c0ef6c21b3498367b6cc8ae78cc9cd51"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/finalize_western.py",
+      "sha256": "a5b327f7a4918b7c9e11eb9b25fb45a4ddbcb61eb1ac3c9349d34c962021dcc0"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/generation_audit.py",
+      "sha256": "58606180c094e6a5bd54ed5e20cbe60e4bcccd6e94ef95c237ed504c7d2d3f3d"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/mapping_audit.py",
+      "sha256": "bd314856ba63bab7a38b7e8a356dcaf44e9a6e173cd58f5bfca1eb10347a00b4"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/ontario_audit.py",
+      "sha256": "5bb0de95f1fc08b5bba9b27c69cbd7292d1e2e2d86f8ccf660acaa9e9a4e7abc"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/reconstruct_all_boundaries.py",
+      "sha256": "55e87a810608fe642b721748392acc0c292381c11c8e0a8df305c4912c938ed8"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/reconstruct_dispatch.py",
+      "sha256": "2e470d756ca9ab09a111fa875901be3cdf4b2abcc8e29335409648b9d8381b2e"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/repair_western_mapping.py",
+      "sha256": "636748168092aa6f899f50eea583ce56d28feedca4c463aecc486555e6afaa7a"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/replay_western.py",
+      "sha256": "a3710803da31f2301a5d5c793961f86b43628df3a4191adb2ebd30963a675b7a"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/review_boundary_sources.py",
+      "sha256": "1e63561d281c68de7133e9fa32c5b0af0fa57f7d578572f29a456e782c5d74b1"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/review_inputs.py",
+      "sha256": "7baabd419d8109e1d1967383108cfa8a26668cb0917f4381aa9ac278a7e7e8c0"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/test_all_boundary_reconstruction.py",
+      "sha256": "76dde65ff0b4edc24b902a1549eb09e17682c6b07de02c40dac88723ec61b5cd"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/test_western_sources.py",
+      "sha256": "dd078b3704f7e0c41b98d2b164709f4435dd38f39e9561258e876e2030a5cceb"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/validate_matlab_western.m",
+      "sha256": "ec614061ded270545c7ff7d9e2127b307e8dd4e6aba0f9ee0a1eedf7ed856faa"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/validate_western.py",
+      "sha256": "06ecdcf947fe00cde920797d2d80fcb5ee08c1c78e4482095db1791ca8ba5255"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_western_corrected_dc.m",
+      "sha256": "6cf89f6076f2fa9e9c81e0d4da92d4a6bd930f99b644c2690c4ba9b63491ce01"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/delivery_manifest.json",
+      "sha256": "c4005272c77b3b5820eba8266a7da6da3ed3bb47c5324a85efbf9283e5641f36"
+    }
+  ],
+  "preexisting_parent_manifest_difference": [
+    "NYGRID_2025_WESTERN_SOURCE_AUDIT.md"
+  ],
+  "preexisting_report_note": "User annotation CENTRAL EAST ? - VC is preserved; prior report is not regenerated.",
+  "gitattributes_may_receive_only_new_scope_rules": true
+}

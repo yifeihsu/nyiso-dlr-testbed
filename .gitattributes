@@ -94,3 +94,9 @@ output/nygrid_2025_western_audit/figures/*.svg -diff whitespace=-blank-at-eol,-b
 output/nygrid_2025_western_audit/validation/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 "System Matpower Format/npcc_nygrid_2025_western_corrected_dc.m" -text !eol whitespace=cr-at-eol
 NYGRID_2025_WESTERN_SOURCE_AUDIT.md -text !eol whitespace=cr-at-eol
+# Matched 2025 western counterfactuals retain sealed source and numeric bytes.
+scripts/nygrid_2025_western_counterfactuals/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_western_counterfactuals/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_western_counterfactuals/figures/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+output/nygrid_2025_western_counterfactuals/replay/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+NYGRID_2025_WESTERN_CONTROLLED_TESTS.md -text !eol whitespace=cr-at-eol
