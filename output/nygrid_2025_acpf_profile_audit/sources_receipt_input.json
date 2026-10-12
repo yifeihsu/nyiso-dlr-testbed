@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "acpf",
+      "title": "Does profile-driven ACPF provide qualified operating points?",
+      "queries": [
+        {
+          "id": "acpf-evidence",
+          "source": {
+            "label": "2025 AC model verification",
+            "files": [
+              {
+                "label": "annual_profile_PF_receipt.json"
+              },
+              {
+                "label": "annual_hour_quality.csv"
+              },
+              {
+                "label": "Q_limit_sensitivity_receipt.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Does profile-driven ACPF provide qualified operating points?",
+                "definition": "Numerical convergence, profile preservation, and operating-capability qualification are checked separately."
+              }
+            ],
+            "caveats": [
+              "No OPF was used. The baseline annual run uses ordinary Q-unlimited PV control.",
+              "The 157 failed annual hours also remained unresolved after 314 flat/previous-voltage retries; this is not an infeasibility proof.",
+              "Generator capability bounds are assumptions. Thermal overloads are excluded from the convergence gate.",
+              "The single slack generator supplies losses; non-slack real-power profiles and loads are preserved."
+            ]
+          },
+          "reportingPeriod": "2025 hourly profiles; verification performed October 12, 2026",
+          "columns": [
+            "check",
+            "hours"
+          ],
+          "rows": [
+            {
+              "check": "Source-qualified attempts",
+              "hours": 8651
+            },
+            {
+              "check": "Default NR converged",
+              "hours": 8494
+            },
+            {
+              "check": "Equation/profile qualified",
+              "hours": 8494
+            },
+            {
+              "check": "All V/Q/generator/converter gates",
+              "hours": 0
+            },
+            {
+              "check": "Separate Q-limit sensitivity converged, out of 7",
+              "hours": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "load",
+      "title": "How closely do loads match NYISO?",
+      "queries": [
+        {
+          "id": "load-evidence",
+          "source": {
+            "label": "2025 AC model verification",
+            "files": [
+              {
+                "label": "profile_alignment_summary.json"
+              },
+              {
+                "label": "load_zone_allocation_audit.csv"
+              },
+              {
+                "label": "load_source_semantics.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "How closely do loads match NYISO?",
+                "definition": "The 11 zonal totals are preserved after the declared synthetic power scaling; within-zone bus shares remain fixed."
+              }
+            ],
+            "caveats": [
+              "Zonal agreement is a construction identity. Substation-level allocation is not observed for 2025.",
+              "NYISO grid load is net of behind-the-meter solar and demand response.",
+              "External regional loads follow the NY load shape; generator profiles are source-informed reconstructions."
+            ]
+          },
+          "reportingPeriod": "2025 hourly profiles; verification performed October 12, 2026",
+          "columns": [
+            "measure",
+            "value"
+          ],
+          "rows": [
+            {
+              "measure": "Hour-zone values checked",
+              "value": 96360
+            },
+            {
+              "measure": "Largest zonal reaggregation difference, public MW",
+              "value": 9.094947017729282e-13
+            },
+            {
+              "measure": "Original NY bus records",
+              "value": 46
+            },
+            {
+              "measure": "Positive load weights",
+              "value": 31
+            }
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "For each hour and zone: sum(model bus PD) / gamma - public zonal load. gamma = 0.30012075175285535."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interfaces",
+      "title": "How closely do the interface diagnostics match?",
+      "queries": [
+        {
+          "id": "interfaces-evidence",
+          "source": {
+            "label": "2025 AC model verification",
+            "files": [
+              {
+                "label": "interface_metrics.csv"
+              },
+              {
+                "label": "scoring_receipt.json"
+              },
+              {
+                "label": "interface_operator_contract.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "How closely do the interface diagnostics match?",
+                "definition": "Seven inherited zone cuts compared on 8494 equation/profile-qualified hours."
+              }
+            ],
+            "caveats": [
+              "Exact physical P-32 membership, meter terminals, and the inherited numeric-as-MW convention remain unestablished.",
+              "These are diagnostic errors, not certified physical flow accuracy. The case is synthetic.",
+              "The AC/DC comparison also changes engineering parameters and charging/reactors; it does not isolate AC-loss effects."
+            ]
+          },
+          "reportingPeriod": "2025 hourly profiles; verification performed October 12, 2026",
+          "columns": [
+            "interface",
+            "MAE_public_MW",
+            "WAPE_percent"
+          ],
+          "rows": [
+            {
+              "interface": "DYSINGER EAST",
+              "MAE_public_MW": 328.951,
+              "WAPE_percent": 38.858
+            },
+            {
+              "interface": "WEST CENTRAL",
+              "MAE_public_MW": 330.462,
+              "WAPE_percent": 59.859
+            },
+            {
+              "interface": "TOTAL EAST",
+              "MAE_public_MW": 496.302,
+              "WAPE_percent": 15.692
+            },
+            {
+              "interface": "MOSES SOUTH",
+              "MAE_public_MW": 120.701,
+              "WAPE_percent": 22.586
+            },
+            {
+              "interface": "CENTRAL EAST - VC",
+              "MAE_public_MW": 754.962,
+              "WAPE_percent": 45.036
+            },
+            {
+              "interface": "UPNY CONED",
+              "MAE_public_MW": 228.524,
+              "WAPE_percent": 7.654
+            },
+            {
+              "interface": "SPR/DUN-SOUTH",
+              "MAE_public_MW": 167.237,
+              "WAPE_percent": 9.063
+            }
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "MAE = mean(abs(predicted - observed)). WAPE = 100 * sum(abs(predicted - observed)) / sum(abs(observed)). Only aggregate model MW is divided by gamma."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cables",
+      "title": "Which cable classifications are established?",
+      "queries": [
+        {
+          "id": "cables-evidence",
+          "source": {
+            "label": "2025 AC model verification",
+            "files": [
+              {
+                "label": "cable_evidence_tiers.csv"
+              },
+              {
+                "label": "overhead_cable_classification_conflicts.csv"
+              },
+              {
+                "label": "source_receipts.csv"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Which cable classifications are established?",
+                "definition": "The current 40 cable-like AC rows have different evidence levels; four overhead-classified rows conflict with cable-corridor evidence."
+              }
+            ],
+            "caveats": [
+              "The 40 rows are network equivalents, not a certified count of physical cables.",
+              "Historical utility and project evidence does not establish every circuit identity or burial ampacity.",
+              "Y49-associated rows 309 and 310 do not prove two physical Y49 circuits."
+            ]
+          },
+          "reportingPeriod": "2025 hourly profiles; verification performed October 12, 2026",
+          "columns": [
+            "evidence_tier",
+            "rows"
+          ],
+          "rows": [
+            {
+              "evidence_tier": "Documented project underground identity",
+              "rows": 3
+            },
+            {
+              "evidence_tier": "Historical matching underground corridor",
+              "rows": 11
+            },
+            {
+              "evidence_tier": "Related corridor; terminal aliases unresolved",
+              "rows": 7
+            },
+            {
+              "evidence_tier": "Electrical or urban assumption",
+              "rows": 16
+            },
+            {
+              "evidence_tier": "Synthetic proxy",
+              "rows": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "buses",
+      "title": "Why is the AC bus count larger?",
+      "queries": [
+        {
+          "id": "buses-evidence",
+          "source": {
+            "label": "2025 AC model verification",
+            "files": [
+              {
+                "label": "bus_lineage_all267.csv"
+              },
+              {
+                "label": "restored_43_buses.csv"
+              },
+              {
+                "label": "numerical_75_buses.csv"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Why is the AC bus count larger?",
+                "definition": "The full AC model restores reduced-out terminals and adds numerical line sections, without adding demand or generation."
+              }
+            ],
+            "caveats": [
+              "Electrical node count is not physical substation count.",
+              "The Dover device node is present only after its dated change."
+            ]
+          },
+          "reportingPeriod": "2025 hourly profiles; verification performed October 12, 2026",
+          "columns": [
+            "stage",
+            "buses"
+          ],
+          "rows": [
+            {
+              "stage": "Previous reduced case",
+              "buses": 148
+            },
+            {
+              "stage": "Restored full reference",
+              "buses": 191
+            },
+            {
+              "stage": "Full reference after Dover",
+              "buses": 192
+            },
+            {
+              "stage": "AC before Dover",
+              "buses": 266
+            },
+            {
+              "stage": "AC after Dover",
+              "buses": 267
+            }
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "148 + 43 restored nodes + 1 dated Dover node + 75 numerical nodes = 267; the 75 comprise 73 overhead-section nodes and 2 cable-section nodes."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

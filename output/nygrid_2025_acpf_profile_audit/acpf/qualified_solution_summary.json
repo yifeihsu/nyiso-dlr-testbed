@@ -1,0 +1,74 @@
+{
+  "completed": true,
+  "statistics_cohort": "AC_equation_gate AND P_profile_preservation_gate; failed iterates excluded",
+  "source_qualified_hours": 8651,
+  "equation_and_profile_qualified_hours": 8494,
+  "unresolved_after_three_initializations": 157,
+  "VQ_and_generator_assumption_qualified_hours": 0,
+  "qualified_hour_gate_counts": {
+    "normal_voltage_gate": 0,
+    "generator_active_bound_gate": 0,
+    "generator_reactive_bound_gate": 0,
+    "generator_S_proxy_gate": 0,
+    "six_transfer_reactive_contract_gate": 0,
+    "VQ_and_generator_assumption_gate": 0
+  },
+  "qualified_hour_extrema": {
+    "min_voltage_pu": {
+      "min": 0.854424248978636,
+      "max": 0.965230000000001
+    },
+    "max_voltage_pu": {
+      "min": 1.10098416378987,
+      "max": 1.12005979032328
+    },
+    "reference_PG_change_MW": {
+      "min": 143.984008602451,
+      "max": 869.314308860955
+    },
+    "max_P_bound_violation_mw": {
+      "min": 141.606360116416,
+      "max": 867.918145242049
+    },
+    "max_Q_bound_violation_mvar": {
+      "min": 547.591905964304,
+      "max": 864.408641419158
+    },
+    "max_transfer_Q_bound_violation_mvar": {
+      "min": 608.708039502295,
+      "max": 821.917309785059
+    },
+    "maximum_non_slack_PG_change_MW": {
+      "min": 0.0,
+      "max": 0.0
+    },
+    "slack_change_minus_required_loss_balance_MW": {
+      "min": -5.540357506106371e-09,
+      "max": 7.18614501238335e-10
+    },
+    "max_nodal_P_residual_mw": {
+      "min": 2.3987922759261002e-11,
+      "max": 9.296996950070021e-09
+    },
+    "max_nodal_Q_residual_mvar": {
+      "min": 5.9657168094418e-11,
+      "max": 9.994508332056281e-09
+    }
+  },
+  "Q_limit_seven_hour_diagnostic": {
+    "converged_and_equation_qualified": 5,
+    "total": 7,
+    "generator_Q_and_DC_Q_pass_count": 5,
+    "normal_voltage_pass_count": 0,
+    "generator_P_pass_count": 0,
+    "solved_only_VM_min": 0.8476201140608757,
+    "solved_only_VM_max": 1.120069687481285,
+    "reference_bus_changes": 0
+  },
+  "overload_is_not_a_convergence_gate": true,
+  "global_infeasibility_proved": false,
+  "physically_meaningful_conditions_confirmed_for_all_source_profiles": false,
+  "generator_Q_capabilities_are_model_assumptions_not_observed": true,
+  "annual_core_numerical_run_seconds": 460.3272464,
+  "annual_core_was_not_rerun": true
+}

@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T22:38:34.915678+00:00",
+  "scope": "seven_representative_saved_outputs",
+  "evaluated_hours": 7,
+  "matched_cohort_hours": 7,
+  "VQ_and_generator_qualified_hours": 0,
+  "all_488_canonical_keys_parent_rows_endpoints_verified": true,
+  "all_dated_active_branch_masks_verified": true,
+  "state_cohort_hours": {
+    "pre_may": 2,
+    "may21": 0,
+    "may30": 3,
+    "post_dover": 2
+  },
+  "metric_rows_independently_recomputed": 28,
+  "maximum_flow_reconstruction_error_public_MW": 9.094947017729282e-13,
+  "maximum_terminal_loss_identity_error_public_MW": 5.2585491516765615e-11,
+  "maximum_metric_reconstruction_error": 3.694822225952521e-13,
+  "MAE_RMSE_bias_WAPE_and_paired_DC_delta_verified": true,
+  "observation_and_model_UTC_axes_identical": true,
+  "monthly_bins_use_America_New_York": true,
+  "frozen_DC_column_order_and_full8651_metrics_verified": true,
+  "gamma_applied_only_to_aggregate_MW_comparison": true,
+  "no_fit_or_model_changes_in_scorer": true,
+  "no_unresolved_scoring_findings": true,
+  "interpretation_limits": [
+    "These are inherited seven-zone-cut diagnostics, not certified physical NYISO meter memberships.",
+    "V/Q and generation-assumption gates exclude branch thermal and security qualification; computed flows can fail those operating assumptions.",
+    "Terminal conventions are predeclared alternatives, not statistical uncertainty intervals or selected best fits.",
+    "The AC engineering model also differs in R/X, charging and compensation from the frozen DC case; this is not an isolated AC-versus-DC physics ablation."
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/representative_state_arrays.mat",
+      "sha256": "b2511e386e3c23ac184b55299fe79d1a494e781d30f30392851c687ce4c6be61"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/representative_comparison/scoring_receipt.json",
+      "sha256": "fc3ef03d5421060a51e692ab6232b2c7ee402bd234fbc47b8575372f09e66d30"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/representative_comparison/interface_metrics.csv",
+      "sha256": "d9cc7820999ab33f1f3321cf8ef368b04c5d15b442c9ee5b32a70765c9b00199"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/representative_comparison/comparison_arrays.npz",
+      "sha256": "80e089d8a12406f092a0152f09905da7a5b288a35d6716a23f6b51629fe14b11"
+    },
+    {
+      "path": "scripts/nygrid_2025_acpf_profile_audit/score_interfaces.py",
+      "sha256": "91795a5497b5603d8c178cc68239c366681cb014df4e41cdc6fc31eb73cc7835"
+    },
+    {
+      "path": "scripts/nygrid_2025_acpf_profile_audit/alignment/interface_operator.py",
+      "sha256": "944e63f827f46fd161e0a8da67473a2bb59cfdf3107f34ab984510cc0319a308"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/comparison/annual_metrics.csv",
+      "sha256": "b6b9ae7e7c11794b54a5ac9c8904d9334df746d1e98a563b7c8a8bc5048abdf0"
+    },
+    {
+      "path": "scripts/nygrid_2025_acpf_profile_audit/structure/review_scoring.py",
+      "sha256": "2111917b2dd944ff57070b3341ec598cf43f927b4541faafd3acca2c6e539222"
+    }
+  ]
+}
