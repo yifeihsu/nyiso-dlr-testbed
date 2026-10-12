@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "independent_saved_parameter_rows": 40,
+  "maximum_pu_difference": 1.0408340855860843e-16,
+  "method": "independent3x3logarithmicinductance_and_potential_matrices_projected_onto_balanced_sequence",
+  "line_only_Dover_not_applied": true,
+  "network_power_flow_run": false,
+  "physical_installation_and_facility_thermal_rating_certified": false,
+  "files": [
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/conductor_catalog.csv",
+      "sha256": "f55a0d0a8e8857117b0e708eb50bc377ad07e209257438ff0851b3c5d3de3bd4"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/engineering_basis.json",
+      "sha256": "fa9861415d123b9933f20c0af87ae6a6655000714c3741e2a86719c5767de871"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/parameter_estimates.csv",
+      "sha256": "594f1deb04b74f2a6ab9de026e5f3862f18179b9e1c9137cca16a77bbe315411"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/Dover_line_only_estimates_not_applied.csv",
+      "sha256": "f2b64d1fd3734daa3a2a078f1cdef97bf4e16281a6203661fa61de352e484dee"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/project_source_register.csv",
+      "sha256": "aedbe40ae145412e4815a641d11c8c5960835eb0a87fadf9c5f091150ab76d4b"
+    },
+    {
+      "path": "scripts/nygrid_2025_line_parameters/conductors/validate_estimate_values.py",
+      "sha256": "53c4c86dcb2a8bdb80d63f2a2a30e3a4ea288fdf450244ff5bd7a35fe6750185"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "reviewer": "independent_project_source_review",
+  "tests_run": 8,
+  "failures": [],
+  "errors": [],
+  "scope": "source interpretation, unit conversions, bundle arithmetic, frozen-model change boundary, declared uncertainty and commissioning year",
+  "physical_validation_of_installed_equipment": false,
+  "actual_2025_operating_temperature_or_PAR_state_established": false,
+  "independent_observations_used": false,
+  "resolved_findings": [
+    "Ground-image height changed from unsupported38ft source label to sourced30ft minimum-clearance sensitivity.",
+    "Dover composite bundle metadata made section-specific instead of inheriting CT single-conductor count."
+  ],
+  "remaining_limitations": [
+    "F84 uses95C design-temperature resistance, not an observed annual operating temperature.",
+    "F84 route-average geometry, installed manufacturer/core grade and terminal facility rating remain unverified.",
+    "Dover line-only estimates exclude unresolved PAR series impedances and operating taps and are not applied.",
+    "RCC electrical parameters remain historical analogs; Staten length update does not certify its conductor."
+  ],
+  "checked_files": [
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/engineering_basis.json",
+      "sha256": "fa9861415d123b9933f20c0af87ae6a6655000714c3741e2a86719c5767de871"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/parameter_estimates.csv",
+      "sha256": "594f1deb04b74f2a6ab9de026e5f3862f18179b9e1c9137cca16a77bbe315411"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/Dover_line_only_estimates_not_applied.csv",
+      "sha256": "f2b64d1fd3734daa3a2a078f1cdef97bf4e16281a6203661fa61de352e484dee"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/circuit_conductor_matches.csv",
+      "sha256": "62af10d3c2b13a49f6d61a38345c45e2dfeffcdb3658c7146b5533e9656c4598"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/project_source_register.csv",
+      "sha256": "aedbe40ae145412e4815a641d11c8c5960835eb0a87fadf9c5f091150ab76d4b"
+    },
+    {
+      "path": "scripts/nygrid_2025_line_parameters/test_estimates.py",
+      "sha256": "0c76284fa750b68b18b1a5be07bc547f04b28c2933db76d10ca37a4e638fe843"
+    },
+    {
+      "path": "scripts/nygrid_2025_line_parameters/build_estimates.py",
+      "sha256": "dbb6a736196ec5637f34c8b67115cc90e34708c2e13878483d6b344006386056"
+    },
+    {
+      "path": "scripts/nygrid_2025_line_parameters/line_physics.py",
+      "sha256": "fd200cd43d715522d0da0a26f21263e878d1019b5d84d849a55eabf14f26d27f"
+    }
+  ]
+}

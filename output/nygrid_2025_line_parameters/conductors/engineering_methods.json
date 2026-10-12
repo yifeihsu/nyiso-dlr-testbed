@@ -1,0 +1,53 @@
+{
+  "scope": "Conductor-based positive-sequence engineering estimates for documented added overhead circuits; no fitting to observed interface flows.",
+  "source_identity_levels": {
+    "F84": "Project design names bundled Mallard 795 ACSS. The catalog provides the same code word, size and family (30/19 stranding). Installed manufacturer, exact core grade/coating, tested resistance and final as-built geometry are not independently certified.",
+    "CT_398": "Project evidence identifies single 2156 ACSS per phase. Bluebird/ACSS 84/19 is a compatible manufacturer family/size; the NY design's Bluebird transition description corroborates the code family but does not identify the installed manufacturer.",
+    "Dover_NY_section": "Documented twin 795 ACSS and the adjacent reconductored Mallard section support a section-specific candidate. Do not extend the NY twin conductor across the CT single-2156 section.",
+    "old_Hawk_Drake_Cardinal_ACSR": "Existing compact-model templates explicitly identify themselves as synthetic surrogates. R-matched effective length does not prove surveyed route length or installed conductor."
+  },
+  "resistance": {
+    "formula": "R_phase(T) = r_AC_subconductor(T) * conductor_length_m / number_of_parallel_subconductors_per_phase",
+    "temperature": "Use the same-family manufacturer AC values and piecewise-linear interpolation within their temperature range. Mallard ACSS 95 C and 180 C are interpolated between catalog 75 C and 200 C values; they are not manufacturer test points.",
+    "units": "ohm/kft divided by 304.8 gives ohm/m. A mile is 1609.344 m. Do not treat ohm/kft as ohm/km or DC20 as AC operating resistance.",
+    "uncertainties": ["catalog rounding and manufacturing tolerance", "conductor path length versus plan-view route", "temperature and current-dependent magnetic losses", "connectors and terminal equipment", "core material and coating variant"]
+  },
+  "inductive_reactance": {
+    "formula": "X1 = 2*pi*f * 2e-7 * ln(GMD/GMR_bundle) * length_m; GMD=(Dab*Dbc*Dca)^(1/3)",
+    "single": "GMR_bundle = catalog GMR",
+    "twin": "GMR_bundle = sqrt(catalog GMR * bundle_spacing_m)",
+    "reference_warning": "The catalog's one-foot inductive-reactance value is only a reference-spacing term. Multiplying that entry by route length does not incorporate actual phase spacing or bundling.",
+    "source": "PowerWorld TransLineCalc Version 2, printed pages 13-14 (PDF pages 15-16).",
+    "limitations": ["transposed positive-sequence approximation", "no zero-sequence or earth-return-loss calculation", "no mutual coupling to adjacent circuits", "PAR/transformer leakage and series compensation require separate devices and source data"]
+  },
+  "capacitance_and_B": {
+    "no_ground_images": "C1_per_m = 2*pi*epsilon0 / ln(GMD/r_cap_bundle); r_cap_bundle = diameter/2 for single or sqrt((diameter/2)*bundle_spacing) for twin.",
+    "ground_images": "Pii=ln(2*hi/r_cap_bundle)/(2*pi*epsilon0); Pij=ln(Dimage_ij/Dij)/(2*pi*epsilon0). The estimator averages potential coefficients under transposition and uses their positive-sequence mode. Detailed untransposed capacitance and grounded shield wires are outside this approximation.",
+    "unit_mapping": "B_total_siemens=2*pi*f*C1_per_m*length_m. MATPOWER B_pu=B_total_siemens*Zbase and is the TOTAL charging; divide by two only when constructing each nominal-pi terminal shunt.",
+    "radius_warning": "Capacitance uses physical conductor radius, not the inductive GMR.",
+    "sources": ["PowerWorld TransLineCalc printed page 14 (PDF page 16)", "EPRI OpenDSS-C General/LineConstants.cpp lines 107-127 for image-potential geometry"]
+  },
+  "base_and_current": {
+    "Zbase_ohm": "line_to_line_kV^2 / three_phase_MVA",
+    "R_X_per_unit": "series_ohm / Zbase_ohm",
+    "rating_conversion": "MVA=sqrt(3)*line_to_line_kV*total_phase_bundle_current_A/1000. Do not multiply by the bundle count again.",
+    "rating_limit": "A catalog ampacity under reference weather is not a project operating limit; conductor, sag, clearance, connectors, terminal equipment and operating duration can constrain the actual circuit."
+  },
+  "circuit_and_section_accounting": {
+    "bundle_is_not_parallel_circuit_count": true,
+    "explicit_circuit_rows": "Preserve one physical circuit per source row unless independent evidence establishes a different aggregation. Do not infer multiplicity from R alone.",
+    "mixed_sections": "Retain different NY/CT conductor sections and their own lengths/geometries. Summing sectional R/X/B is a stated nominal-pi approximation; a distributed ABCD cascade is needed when its approximation error matters.",
+    "R_only_matching": "Length, temperature, bundle count, circuit count and conductor family can compensate for one another. Ranking candidates by resistance is inferential and cannot certify identity."
+  },
+  "exclusions": {
+    "underground_RCC": "Do not assign ACSR/ACSS or apply overhead IEEE-738-style cooling. Need cable conductor/insulation geometry, AC resistance, capacitance, metallic screen/sheath, bonding, installation and soil/duct thermal information.",
+    "transformers_PAR": "Voltage-changing or transformer/PAR records are equipment, not overhead conductors. Never convert a current on one voltage side with the other side's nominal voltage.",
+    "Schur_equivalents": "Reduced equivalent edges are not literal routes or conductors and cannot acquire a physical ampacity from equivalent R/X."
+  },
+  "validation": {
+    "no_network_power_flow_run_by_catalog_builder": true,
+    "no_existing_case_modified": true,
+    "independent_tests": "test_line_physics.py checks asymmetric potential-matrix mode, phase permutation, infinite-height limit, physical-radius versus GMR separation, single/twin resistance, temperature interpolation, length/frequency/base scaling, total-B terminal splitting and real-power loss closure.",
+    "scientific_limit": "Passing engineering identities establishes implementation consistency for the declared assumptions, not as-built circuit certification."
+  }
+}
