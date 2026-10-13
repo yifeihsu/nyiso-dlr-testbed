@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T20:22:04.049Z",
+  "scope": "Execute actual map-source power/format/direction helpers and arrow expressions against independent numeric fixtures",
+  "test_count": 11,
+  "tests": [
+    {
+      "name": "actual_JS_default_model_value",
+      "passed": true,
+      "details": {
+        "hour": 8508,
+        "interface": "MOSES SOUTH",
+        "value": -175.03950986688506
+      }
+    },
+    {
+      "name": "actual_JS_public_scale_value",
+      "passed": true,
+      "details": {
+        "value": -583.2302792944731,
+        "gamma": 0.30012075175285535
+      }
+    },
+    {
+      "name": "public_scale_preserves_negative_direction",
+      "passed": true,
+      "details": {
+        "Moses": "reverse",
+        "TotalEast": "positive"
+      }
+    },
+    {
+      "name": "failed_hour_helpers_return_unavailable_not_zero",
+      "passed": true,
+      "details": {
+        "hour": 2349
+      }
+    },
+    {
+      "name": "source_excluded_helpers_return_unavailable_not_zero",
+      "passed": true,
+      "details": {
+        "hour": 154
+      }
+    },
+    {
+      "name": "null_and_zero_have_distinct_numeric_semantics",
+      "passed": true,
+      "details": {
+        "zero": "0",
+        "null": "—"
+      }
+    },
+    {
+      "name": "actual_JS_negative_arrow_swaps_endpoints",
+      "passed": true,
+      "details": {
+        "positive": "M1,2 Q2,3 3,4",
+        "negative": "M3,4 Q2,3 1,2"
+      }
+    },
+    {
+      "name": "actual_JS_zero_and_null_do_not_draw_arrows",
+      "passed": true,
+      "details": {
+        "positive": "",
+        "negative": "",
+        "zero": "none",
+        "null": "none"
+      }
+    },
+    {
+      "name": "UTC_hour_widget_is_explicit",
+      "passed": true,
+      "details": "The datetime-local input is explicitly labeled UTC and indexes supplied UTC timestamps"
+    },
+    {
+      "name": "chart_breaks_at_unavailable_values",
+      "passed": true,
+      "details": "The actual chart loop starts a new path after each null gap"
+    },
+    {
+      "name": "zero_total_and_net_native_labels_are_explicit",
+      "passed": true,
+      "details": "Zero interface totals are not labeled unavailable; native generation is a net quantity"
+    }
+  ],
+  "real_browser_rendering_test": false,
+  "simulation_run": false,
+  "sources": [
+    {
+      "path": "scripts/nygrid_2025_latest_map/map.js",
+      "sha256": "daea00c64aaeba3f9c77eac33f4e5c72c08fcccb027410f69855234dd30cecca"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/annual_data.json",
+      "sha256": "786b4d5a585c374fc681289b4a28afc9fa0cc8a596b147e611d2ade781c69601"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/interface_definitions.json",
+      "sha256": "1e84dd46e8120688b5d866457c97d51673ad721a38f7d91ae1b7c26c87dc64ed"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/independent_annual_data_review.json",
+      "sha256": "c3fb6c674c464de04fa7c7c0cf1c596cd078c51964d32f9f9166ed9f2a5611ba"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/audit_ui_flow_math.js",
+      "sha256": "0359269e9ebb0f900451985ed323c5a590a38b90c440ec0196c9e35a01b8eb08"
+    }
+  ]
+}

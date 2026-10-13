@@ -1,0 +1,373 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T19:37:51.583117+00:00",
+  "scope": "Independent current member/zone/terminal identity and saved annual flow reconstruction; no new electrical experiment",
+  "interface_count": 7,
+  "terms_per_state": 34,
+  "unique_parent_members": 30,
+  "located_endpoint_buses": 31,
+  "zone_count": 11,
+  "source_qualified_hours": 8651,
+  "flow_qualified_hours": 8170,
+  "source_excluded_hours": 109,
+  "source_eligible_failed_hours": 481,
+  "operating_qualified_hours": 0,
+  "maximum_public_scale_error_against_frozen_comparison_MW": {
+    "legacy_signed_literal_from": 0.0,
+    "oriented_source_side": 1.8189894035458565e-12,
+    "oriented_target_side": 9.094947017729282e-13
+  },
+  "maximum_oriented_source_target_loss_identity_error_model_MW": 6.306066779870889e-13,
+  "failure_rows_are_NaN_not_zero": true,
+  "negative_qualified_values_per_interface": {
+    "dysinger_east": 626,
+    "west_central": 2033,
+    "total_east": 0,
+    "moses_south": 5575,
+    "central_east_vc": 31,
+    "upny_coned": 0,
+    "spr_dun_south": 9
+  },
+  "structural_checks": [
+    {
+      "state": "pre_may",
+      "interface": "DYSINGER EAST",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may21",
+      "interface": "DYSINGER EAST",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may30",
+      "interface": "DYSINGER EAST",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "post_dover",
+      "interface": "DYSINGER EAST",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "pre_may",
+      "interface": "WEST CENTRAL",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may21",
+      "interface": "WEST CENTRAL",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may30",
+      "interface": "WEST CENTRAL",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "post_dover",
+      "interface": "WEST CENTRAL",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "pre_may",
+      "interface": "TOTAL EAST",
+      "members": 5,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may21",
+      "interface": "TOTAL EAST",
+      "members": 5,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may30",
+      "interface": "TOTAL EAST",
+      "members": 5,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "post_dover",
+      "interface": "TOTAL EAST",
+      "members": 5,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "pre_may",
+      "interface": "MOSES SOUTH",
+      "members": 3,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may21",
+      "interface": "MOSES SOUTH",
+      "members": 3,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may30",
+      "interface": "MOSES SOUTH",
+      "members": 3,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "post_dover",
+      "interface": "MOSES SOUTH",
+      "members": 3,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "pre_may",
+      "interface": "CENTRAL EAST - VC",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may21",
+      "interface": "CENTRAL EAST - VC",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may30",
+      "interface": "CENTRAL EAST - VC",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "post_dover",
+      "interface": "CENTRAL EAST - VC",
+      "members": 4,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "pre_may",
+      "interface": "UPNY CONED",
+      "members": 6,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may21",
+      "interface": "UPNY CONED",
+      "members": 6,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may30",
+      "interface": "UPNY CONED",
+      "members": 6,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "post_dover",
+      "interface": "UPNY CONED",
+      "members": 6,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "pre_may",
+      "interface": "SPR/DUN-SOUTH",
+      "members": 8,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may21",
+      "interface": "SPR/DUN-SOUTH",
+      "members": 8,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "may30",
+      "interface": "SPR/DUN-SOUTH",
+      "members": 8,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    },
+    {
+      "state": "post_dover",
+      "interface": "SPR/DUN-SOUTH",
+      "members": 8,
+      "current_parent_and_physical_terminal_mapping_passed": true,
+      "zone_orientation_passed": true
+    }
+  ],
+  "annual_source_files": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_01.mat",
+      "bytes": 21070594,
+      "sha256": "c7de8f9f2d060a3ba91cf3f1a2ba8e0d7d7dd85abd8315ec4dbd2d28fe5a74e5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_02.mat",
+      "bytes": 18823036,
+      "sha256": "115158dc8dc00e1930e88ca446a03a038f584e379add3791e6065c8d598b813d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_03.mat",
+      "bytes": 21034773,
+      "sha256": "c259bce5e604773fe4b8d7c6364181ae346fb7803cebf95f1dca472a93bf690b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_04.mat",
+      "bytes": 20351354,
+      "sha256": "cee22944247e1ad1892461f83ca0053a99de9ceada64639064dd436a7b06119e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_05.mat",
+      "bytes": 20946244,
+      "sha256": "7f4c08f15f2363b8298ef90fd416f53ba42ee5522f54f9c341a5081be6672748"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_06.mat",
+      "bytes": 20534863,
+      "sha256": "55110d8509e12b2bd3a0fd6ed27f7e41d8f952066c56d638091ac17f99bd5ab1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_07.mat",
+      "bytes": 21258323,
+      "sha256": "b1fe05126664dab9a76c119a2573ec4317755144d361d00bf29f7a35346a4132"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_08.mat",
+      "bytes": 21265221,
+      "sha256": "6c43c4fa55e3bef47c576b9981a7dec232cc6590653e8f91dfe55b2e8d0d077e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_09.mat",
+      "bytes": 20577629,
+      "sha256": "a0faa5b5bffeb9847c00c7fdcbf5219b21ec7371c46ed40595d6cf87b340e82d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_10.mat",
+      "bytes": 21323964,
+      "sha256": "1cb54774324953bb500fe895f10bc40c20d026719e54dc8b7976f01b16b20849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_11.mat",
+      "bytes": 20432501,
+      "sha256": "0d44e45a44e464c04ac14c33eb90057e8efdf66523ca40e87a54d3b57aa784db"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_12.mat",
+      "bytes": 21304960,
+      "sha256": "f7102fdad75d7508ec922b66da3e9841035b9af286dfc01d840bc43d6abd0d8b"
+    }
+  ],
+  "prepared_sources": [
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "bytes": 12874,
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_contract.json",
+      "bytes": 4872,
+      "sha256": "bb909130ecd61253819c2876f8d35347ca6bd3a9f4ce9507e82b79c7aee8b553"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/interface_definitions.json",
+      "bytes": 3242,
+      "sha256": "e96c7d938cedeb7a65383ea94b85ad7fec8a7c7f79867b87c5c31fb0295be4fd"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure/runtime_branch_map.csv",
+      "bytes": 365239,
+      "sha256": "f6d85aeacb799a4aec2f89965f09ebe970c27d1e3567aad2f2a30c673df4bf24"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure/detailed_bus_map.csv",
+      "bytes": 132019,
+      "sha256": "f94800e2703017530e7ef136ed005be1a97cd14cbb11b3023c191e3ae01939f9"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure/retained_bus_map.csv",
+      "bytes": 6714,
+      "sha256": "cf7421d7ed88b2328e51f1273ae9690e782a50048e36d5e03758b7d4e78962f0"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/bus_geographic_register.csv",
+      "bytes": 72924,
+      "sha256": "7aaedd8f68e6c1a9d2c13cf19158abe604a57c669ef1c3aa7e07df2e33476973"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "bytes": 6349492,
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/annual_loss_policy_receipt.json",
+      "bytes": 45740,
+      "sha256": "7e7ff61c77b430b113d2e4cd70c27ac211ef555f0715c8ba7dd8f4cc4cbcfd2f"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/build_interface_definitions.py",
+      "bytes": 18868,
+      "sha256": "eedb65366f478ec34efa0e1f33f008e239b421b155ed1a4d32b6c363240081dc"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250101palIntegrated_csv.zip",
+      "bytes": 78666,
+      "sha256": "f77f56ccb24a2395ddf9bc967b5ab372380a1791448ba228d95cfe1a0a43e28e"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250101palIntegrated_csv.zip.provenance.json",
+      "bytes": 815,
+      "sha256": "1a3946250354c231b99ee5de54cc5c88586a83a974f22912b9a8ac92ed4ee014"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/nyiso_public_zone_map.m",
+      "bytes": 325,
+      "sha256": "f4138671c1fdadafb3fb7bc03cce64aef77957a5f5eeba718e4ee06e57666a78"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_latest_map/interface_definitions.json",
+      "bytes": 96784,
+      "sha256": "1e84dd46e8120688b5d866457c97d51673ad721a38f7d91ae1b7c26c87dc64ed"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/interface_flow_reference.npz",
+      "bytes": 1350648,
+      "sha256": "aade792da8b17889b938318636205e68bc4064cbe1cb600f617933c5d45774d7"
+    }
+  ],
+  "PF_OPF_or_annual_solution_run": false,
+  "old_artifacts_modified": false,
+  "physical_P32_membership_or_numeric_unit_convention_newly_certified": false
+}

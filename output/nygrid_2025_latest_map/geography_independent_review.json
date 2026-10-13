@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "completed": true,
+  "created_utc": "2026-10-13T19:50:59.790103+00:00",
+  "scope": "Independent current-map coordinate/topology/Yred support and interface geometry readback; no HTML or solver work",
+  "geography_payload_sha256": "aa846b69795fa42b8e4f870527fade4a49d1cf3bd6860d009c62070ce34e453c",
+  "canonical_nodes": 267,
+  "parent_corridors": 413,
+  "controlled_transfers": 6,
+  "union_Yred_couplings": 253,
+  "state_checks": [
+    {
+      "state": "pre_may",
+      "bus_count": 266,
+      "parent_records": 410,
+      "active_parent_records": 333,
+      "runtime_branch_rows": 485,
+      "complex_couplings": 247,
+      "passed": true
+    },
+    {
+      "state": "may21",
+      "bus_count": 266,
+      "parent_records": 410,
+      "active_parent_records": 334,
+      "runtime_branch_rows": 485,
+      "complex_couplings": 247,
+      "passed": true
+    },
+    {
+      "state": "may30",
+      "bus_count": 266,
+      "parent_records": 410,
+      "active_parent_records": 335,
+      "runtime_branch_rows": 485,
+      "complex_couplings": 253,
+      "passed": true
+    },
+    {
+      "state": "post_dover",
+      "bus_count": 267,
+      "parent_records": 413,
+      "active_parent_records": 337,
+      "runtime_branch_rows": 488,
+      "complex_couplings": 253,
+      "passed": true
+    }
+  ],
+  "all_145_retained_geographic_coordinates_unchanged": true,
+  "basemap_paths_unchanged": true,
+  "aggregate_proxies_without_coordinates": [
+    78,
+    79,
+    82
+  ],
+  "numerical_nodes_without_coordinates": 75,
+  "auxiliary21001_is_display_anchor_only": true,
+  "known_cable_conflicts_qualified_in_display": true,
+  "maximum_parent_parameter_error_pu": 0.0,
+  "maximum_representative_Yred_coefficient_error_pu": 0.0,
+  "interface_state_member_bindings_checked": 136,
+  "maximum_interface_anchor_rounding_difference_km": 6.666666791943499e-07,
+  "zone_names_and_PTIDs_match_primary_source_definition": true,
+  "zone_anchors_are_declared_schematic_medians": true,
+  "physical_routes_official_zone_polygons_or_flows_on_Yred_couplings_claimed": false,
+  "old_map_archive_and_source_changes": false,
+  "remaining_actionable_findings": [],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_latest_map/geography_data.json",
+      "sha256": "aa846b69795fa42b8e4f870527fade4a49d1cf3bd6860d009c62070ce34e453c"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/geography_validation.json",
+      "sha256": "621b0e67848f25d3a7e10b484748169bbce3ace7e20602ebba0ea5da9d5c8e47"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/interface_definitions.json",
+      "sha256": "1e84dd46e8120688b5d866457c97d51673ad721a38f7d91ae1b7c26c87dc64ed"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/audit_geography_data.py",
+      "sha256": "3ad8458874c3d497ed5dae8036abf24ab5895a0bfd46c02fd4952a11f5cbd146"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/pre_may.mat",
+      "sha256": "880ffad8b03c081520bcf71b6e16240c729ec8736fb03f28ff90195a03353c0c"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/may21.mat",
+      "sha256": "d31119f8f46d84c86290c63d2633907158c5911b20e098a8a924478e22024b81"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/may30.mat",
+      "sha256": "ba2d58e1c1767636c75c4e6587c3d8643442b05b85a60120941e1a62f821a799"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/post_dover.mat",
+      "sha256": "be60ffc8a1b61949bfb0716ff4c73d857791889b00c0e1782b9bed24ecc939e5"
+    }
+  ]
+}

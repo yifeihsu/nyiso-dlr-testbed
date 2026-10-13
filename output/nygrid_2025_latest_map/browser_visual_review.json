@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "scope": "Actual native browser interactions and final visual layout review",
+  "HTML_sha256": "077d297471ff17655f01bd9a163466c522817dae7df16cc90a95453e1f01fa51",
+  "JS_sha256": "daea00c64aaeba3f9c77eac33f4e5c72c08fcccb027410f69855234dd30cecca",
+  "CSS_sha256": "53ab0e73b771dabfe36cd7c5b6159829b3f920c53c39eb08aaa9935c8574157a",
+  "native_browser_checks": 13,
+  "native_pointer_hit_testing": true,
+  "desktop_visual_review": true,
+  "mobile_visual_review": true,
+  "viewport_override_reset": true,
+  "browser_console_errors": [],
+  "final_screenshots": [
+    {
+      "path": "output/nygrid_2025_latest_map/qa/default_map_preview.jpg",
+      "sha256": "ca8fad4082cd62c1bc85ffd3ee8ffffe4118297f2184054cbfca911f1c4316cd",
+      "pixels": [
+        1185,
+        839
+      ]
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/qa/mobile_map_preview.jpg",
+      "sha256": "3bdfe9d2b62729d504e9056029d704d0a1d24c659eacc0dc6737dcb0ef7759c0",
+      "pixels": [
+        345,
+        767
+      ]
+    }
+  ],
+  "observations": {
+    "path": "output/nygrid_2025_latest_map/qa/native_browser_observations.json",
+    "sha256": "75e1f8eea990c9725a2f9da5bec15d5c3999bbbada6e4aa90805562e6d6fc89a"
+  },
+  "preview_protocol": "http_on_127.0.0.1_only",
+  "direct_file_protocol_browser_test_completed": false,
+  "direct_file_protocol_rejection": "Browser URL security policy allows only http and https",
+  "blocked_file_navigation_not_bypassed": true,
+  "external_runtime_requests": false,
+  "failed_preliminary_cases_resolved": "interactive pointer capture, input commit, detail wrapping, compact mobile letters"
+}
