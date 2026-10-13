@@ -1,0 +1,12 @@
+{Unrecognized function or variable 'ac_terminal_current_audit'.
+
+Error in audit_ac_solution (line 82)
+    alternate=ac_terminal_current_audit(r,lim);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in audit_profile_pf (line 5)
+[legacy,detail]=audit_ac_solution(m,r);
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_X_only_ablations (line 16)
+        t=tic;rac=runpf(m,b.acopt);ac_seconds=toc(t);[aa,detail]=audit_profile_pf(m,rac);
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

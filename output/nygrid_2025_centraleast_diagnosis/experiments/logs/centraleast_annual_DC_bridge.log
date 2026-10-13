@@ -1,0 +1,7 @@
+{Error using .*
+Integers can only be combined with integers of the same class, or scalar doubles.
+
+Error in run_annual_DC_bridge (line 41)
+        CE_member_model_MW(h,:,k)=member_sign{s}.*r.branch(member_rows{s},14);
+                                                ^
+} 

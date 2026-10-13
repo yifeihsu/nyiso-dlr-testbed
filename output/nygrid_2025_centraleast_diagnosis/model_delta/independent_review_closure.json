@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T01:52:18.475891+00:00",
+  "scope": "Final read-only closure of seven independent model-delta/experiment reviews",
+  "review_count": 7,
+  "failed_R0_published_prediction_fields_masked": true,
+  "baseline_files_changed": false,
+  "source_and_output_files": [
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/build_model_delta.py",
+      "sha256": "3765575f64315433d0352044176b4bcd7950bb1b7f0c1dcf0f72a172d572dc1e"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/review_annual_DC_outputs.py",
+      "sha256": "d0cc3f7e01d2347f073e39002869905499241de9a763a4837e8a0d4839f7b130"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/review_annual_loss_outputs.py",
+      "sha256": "a793eb66ae61660aec350fb309ef106f4048c5a3bf2205843e81cbd69ce2f912"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/review_bridge_outputs.py",
+      "sha256": "c0c99c9c86e734ba695b7f0f3f4aa01d97de08936935ab9a6148bee4248a7ab3"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/review_fallback_provenance.py",
+      "sha256": "e18d886e22510fefb4428195853b7458d337b4786d84f8c80bdcb141b87fc1d2"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/review_loss_parent_outputs.py",
+      "sha256": "d48b087d17e51526495bc18e3dfbee8eab8fa8c02e95f908c69666d228b88f6f"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/review_X_only_outputs.py",
+      "sha256": "ae3028e6bf753da08c067e4f5de6864dac9e94462da055559a0524821e7aa056"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/annual_DC_independent_summary.csv",
+      "sha256": "d7ebbc8eed5d8ca2947bde5a033491b11f8daa8ad96cc4bc5eff92c61cfda707"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/annual_loss_independent_summary.csv",
+      "sha256": "7ff3d58fd2875ee40b952c7d397740991879f1c235f514a48d2892b6454b4135"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/branch_parameter_deltas.csv",
+      "sha256": "9fb79d89c3cae115b27cc4bea652852e18c8d9a040c89c3ccecc0dfea99ea358"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/bus_shunt_and_injection_locations.csv",
+      "sha256": "3da7aee6b365eccc4dad71cbf25cd6a554f0c114b62ba13d89e14c44240215c6"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/CENTRAL_EAST_member_deltas.csv",
+      "sha256": "fe190cb977a5a98c5eb9b19eb8e7a0dba798e5f4ba63510111e868f60a7397fb"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/fallback_design_provenance.csv",
+      "sha256": "5ee00e60ce1e9dd2a3a5ed68a3a5b39eb672f79afec90bbcd81f2c33df068b54"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/loss_parent_independent_checks.csv",
+      "sha256": "eefa545cf57586dbe73191790b75319bc5c07a8f30e4a999179a83fac664c57b"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/representative_bridge_independent_checks.csv",
+      "sha256": "4490456211f759bc768d34c4fbbd95aba32f7fa5d65157afa21449d6e93f484d"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/x_changed_corridors.csv",
+      "sha256": "08000fd8071a0fea919547cafafbf06b65f4f0d063faac31ee12cc3d1181b71c"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/X_only_independent_checks.csv",
+      "sha256": "255e71d82feeb0e43eb9536943ac5c7a6b653d274f01b73466e3382b30747084"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/zone_E_F_boundary_branches.csv",
+      "sha256": "72ce9327c5d08f16e9feca3fd6face3a02fcca7fe66fbc79d9695642864f1edd"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/zone_input_summary.csv",
+      "sha256": "ba4b66721fcf285ed9d4783c9e6526d50c0249a71c8148081ced578502915e93"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/annual_DC_independent_review.json",
+      "sha256": "e6e951ae311c89d1efff9794f8950cf362807f2d5ce69f87569bd63346c5bb95"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/annual_loss_independent_review.json",
+      "sha256": "cce147537a677ac977c7f99dd01ccc8bbd6bbd9b3716727530f2040951700f9f"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/bridge_independent_review.json",
+      "sha256": "7a622044814cd603dc24ad50c6fee704d78b6d539277389625ef0d440f2d75f3"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/fallback_provenance_review.json",
+      "sha256": "12e517c400111a68d9fc9e97ae112660e0829ee411b1298274e83d3a42901214"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/loss_parent_independent_review.json",
+      "sha256": "8a216dc09ebf243ceb3a7b836a88deffb3091fb5b61a04712893958c6a10eb0c"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/model_delta_review.json",
+      "sha256": "814950cc1e3843e3d73d4158d6ae39ca55af5e2a4411e2731d1580e4def83b5d"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/X_only_independent_review.json",
+      "sha256": "be5baa2bf118643418182968eb206d84cce6a01f88ee6cb4e6ea99e9929315f2"
+    }
+  ],
+  "additional_checked_file": {
+    "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_validity_filtered.csv",
+    "sha256": "754256c2431a0379e6ef8a6bba5c835495bd9e9503a219fd01e1cbdf88b6b9b1"
+  }
+}

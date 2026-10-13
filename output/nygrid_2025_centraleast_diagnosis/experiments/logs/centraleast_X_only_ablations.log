@@ -1,0 +1,10 @@
+{Error using assert
+Unexpected engineering X-change cohort.
+
+Error in restore_parent_X_only (line 7)
+assert(numel(changed)==33,'ceDiagnosis:XCount','Unexpected engineering X-change cohort.');
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_X_only_ablations (line 13)
+        [m,ledger]=restore_parent_X_only(b.detailed,b.full,selections{k});
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

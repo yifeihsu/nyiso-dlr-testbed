@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T01:42:27.456720+00:00",
+  "scope": "Read-only algorithm/source provenance for rows224 and41",
+  "actual_preferred_length_behavior_independently_reconstructed": true,
+  "fallback_docstring_nearest_boundary_description_matches_actual_behavior": false,
+  "baseline_code_or_parameter_change_made": false,
+  "any_actual_route_or_impedance_claim": false,
+  "lower_public_WAPE_not_evidence_of_physical_parameter_truth": true,
+  "rows": [
+    {
+      "branch_row": 224,
+      "branch_key": "PARENT:224",
+      "from_name": "GILBOA",
+      "to_name": "BUCHANAN",
+      "source_R_pu": 0.02,
+      "source_X_pu": 0.0147,
+      "AC_R_pu": 0.0066055636188178,
+      "AC_X_pu": 0.0554579021639292,
+      "source_X_implied_length_m": 47059.52141099027,
+      "geographic_chord_m": 142031.1474444642,
+      "declared_length_min_m": 71015.5737222321,
+      "declared_length_max_m": 436093.4423333926,
+      "preferred_1p25_chord_m": 177538.93430558027,
+      "chosen_length_m": 177538.93430558027,
+      "nearest_lower_boundary_not_selected_m": 71015.5737222321,
+      "X_if_nearest_lower_boundary_had_been_selected_pu": 0.022183160865571677,
+      "chosen_X_over_original_X": 3.7726464057094695,
+      "exact_inverse_candidates": 0,
+      "catalog_id": "PRYSMIAN_ACSS_MALLARD_795_0_30_19",
+      "circuits": 1,
+      "bundle_count": 2,
+      "phase_GMD_m": 10.2,
+      "bundle_spacing_m": 0.4572,
+      "conductor_reference_temperature_C": 95.0,
+      "actual_algorithm": "If exact inverse fails and original-X-implied length is outside interval, choose preferred1.25chord, then clip to interval.",
+      "installed_asset_or_route_identified": false,
+      "as_built_impedance_qualified": false
+    },
+    {
+      "branch_row": 41,
+      "branch_key": "PARENT:41",
+      "from_name": "ROTTERDAM",
+      "to_name": "ALBANY",
+      "source_R_pu": 0.0018,
+      "source_X_pu": 0.0089,
+      "AC_R_pu": 0.0598327463184317,
+      "AC_X_pu": 0.2040452503006289,
+      "source_X_implied_length_m": 2423.94838613809,
+      "geographic_chord_m": 44457.99147553726,
+      "declared_length_min_m": 22228.99573776863,
+      "declared_length_max_m": 143373.9744266118,
+      "preferred_1p25_chord_m": 55572.48934442157,
+      "chosen_length_m": 55572.48934442157,
+      "nearest_lower_boundary_not_selected_m": 22228.99573776863,
+      "X_if_nearest_lower_boundary_had_been_selected_pu": 0.08161810012025157,
+      "chosen_X_over_original_X": 22.926432618048192,
+      "exact_inverse_candidates": 0,
+      "catalog_id": "PRYSMIAN_ACSR_HAWK_477_0_26_7",
+      "circuits": 1,
+      "bundle_count": 1,
+      "phase_GMD_m": 5.5,
+      "bundle_spacing_m": 0.4572,
+      "conductor_reference_temperature_C": 75.0,
+      "actual_algorithm": "If exact inverse fails and original-X-implied length is outside interval, choose preferred1.25chord, then clip to interval.",
+      "installed_asset_or_route_identified": false,
+      "as_built_impedance_qualified": false
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/explicit_R_X_replacements.csv",
+      "sha256": "8b905237d40e38a9e63a4692a80acc990882051705419f1d4ac35aa91d91670c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/thermal_segments.csv",
+      "sha256": "3be6298e619f6b2680f7d2dccc69bea75783d26a172e40b8993366042eae0b1e"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/review_fallback_provenance.py",
+      "sha256": "e18d886e22510fefb4428195853b7458d337b4786d84f8c80bdcb141b87fc1d2"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/review_bridge_outputs.py",
+      "sha256": "c0c99c9c86e734ba695b7f0f3f4aa01d97de08936935ab9a6148bee4248a7ab3"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/line_equivalents.py",
+      "sha256": "f55c9c499f8ee8d7bf925a5a97c3c06c2be55f813d3a256796480cb5201183e6"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/build_assignments.py",
+      "sha256": "4da333c789719e8dc1a17304a458cf0aab40aa075de4c4d2aef038d82f1f70ea"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/fallback_design_provenance.csv",
+      "sha256": "5ee00e60ce1e9dd2a3a5ed68a3a5b39eb672f79afec90bbcd81f2c33df068b54"
+    }
+  ]
+}

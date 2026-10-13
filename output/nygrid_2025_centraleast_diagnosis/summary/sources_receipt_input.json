@@ -1,0 +1,680 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "central-east-regression",
+      "title": "Why CENTRAL EAST\u2013VC WAPE increased",
+      "queries": [
+        {
+          "id": "matched-stages",
+          "source": {
+            "label": "Matched DC/AC stages",
+            "files": [
+              {
+                "label": "summary/stage_metrics.csv"
+              },
+              {
+                "label": "summary/hourly_stage_comparison.csv"
+              },
+              {
+                "label": "measurement/raw_source_check.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Matched DC/AC stages",
+                "definition": "WAPE compares absolute prediction errors with the sum of absolute observed flow on identical hours; mean signed error distinguishes underprediction from overprediction."
+              }
+            ],
+            "filters": [
+              "Interface: CENTRAL EAST\u2013VC",
+              "Cohort: 8,494 unchanged matched hours",
+              "Terminal convention: inherited receiving side"
+            ],
+            "caveats": [
+              "The model is synthetic. Physical P32 meter membership and the inherited numeric-as-MW interpretation remain uncertified.",
+              "The loss-loaded intermediate uses losses already calculated by the AC solver.",
+              "The 157 failed AC hours and 109 source-excluded hours are outside this matched comparison."
+            ]
+          },
+          "reportingPeriod": "2025 hourly profiles",
+          "rows": [
+            {
+              "period": "annual",
+              "stage": "Original DC",
+              "hours": 8494,
+              "mean_flow_public_MW": 1384.2828985351316,
+              "bias_public_MW": -291.6985571198404,
+              "mae_public_MW": 310.5754274236555,
+              "wape_percent": 18.52682996933629
+            },
+            {
+              "period": "annual",
+              "stage": "DC on AC network",
+              "hours": 8494,
+              "mean_flow_public_MW": 1984.6046954215933,
+              "bias_public_MW": 308.6232397666212,
+              "mae_public_MW": 332.9766896334476,
+              "wape_percent": 19.863137801227968
+            },
+            {
+              "period": "annual",
+              "stage": "DC plus solved AC losses",
+              "hours": 8494,
+              "mean_flow_public_MW": 2427.1780483771863,
+              "bias_public_MW": 751.1965927222142,
+              "mae_public_MW": 751.2078233091702,
+              "wape_percent": 44.81197926550504
+            },
+            {
+              "period": "annual",
+              "stage": "Current AC",
+              "hours": 8494,
+              "mean_flow_public_MW": 2430.9327452459943,
+              "bias_public_MW": 754.9512895910221,
+              "mae_public_MW": 754.961839862796,
+              "wape_percent": 45.0359185094048
+            },
+            {
+              "period": "month_01",
+              "stage": "Original DC",
+              "hours": 738,
+              "mean_flow_public_MW": 2558.2001924624437,
+              "bias_public_MW": -249.96207187811652,
+              "mae_public_MW": 254.33565882735616,
+              "wape_percent": 9.057014334856524
+            },
+            {
+              "period": "month_01",
+              "stage": "DC on AC network",
+              "hours": 738,
+              "mean_flow_public_MW": 3277.464011135776,
+              "bias_public_MW": 469.3017467952161,
+              "mae_public_MW": 469.3017467952161,
+              "wape_percent": 16.712059440248268
+            },
+            {
+              "period": "month_01",
+              "stage": "DC plus solved AC losses",
+              "hours": 738,
+              "mean_flow_public_MW": 3618.126629315771,
+              "bias_public_MW": 809.9643649752106,
+              "mae_public_MW": 809.9643649752106,
+              "wape_percent": 28.843218045500457
+            },
+            {
+              "period": "month_01",
+              "stage": "Current AC",
+              "hours": 738,
+              "mean_flow_public_MW": 3622.5637286118217,
+              "bias_public_MW": 814.4014642712617,
+              "mae_public_MW": 814.4014642712617,
+              "wape_percent": 29.00122527152138
+            },
+            {
+              "period": "month_02",
+              "stage": "Original DC",
+              "hours": 661,
+              "mean_flow_public_MW": 2315.481239894136,
+              "bias_public_MW": -114.2076197881634,
+              "mae_public_MW": 188.1825226518764,
+              "wape_percent": 7.745128430826437
+            },
+            {
+              "period": "month_02",
+              "stage": "DC on AC network",
+              "hours": 661,
+              "mean_flow_public_MW": 2867.7437159185483,
+              "bias_public_MW": 438.0548562362485,
+              "mae_public_MW": 440.4335303861637,
+              "wape_percent": 18.12715766593068
+            },
+            {
+              "period": "month_02",
+              "stage": "DC plus solved AC losses",
+              "hours": 661,
+              "mean_flow_public_MW": 3171.989220007056,
+              "bias_public_MW": 742.3003603247563,
+              "mae_public_MW": 742.3003603247563,
+              "wape_percent": 30.551251752531712
+            },
+            {
+              "period": "month_02",
+              "stage": "Current AC",
+              "hours": 661,
+              "mean_flow_public_MW": 3173.9333509389417,
+              "bias_public_MW": 744.244491256642,
+              "mae_public_MW": 744.244491256642,
+              "wape_percent": 30.631267385979527
+            },
+            {
+              "period": "month_03",
+              "stage": "Original DC",
+              "hours": 735,
+              "mean_flow_public_MW": 1528.2021158669163,
+              "bias_public_MW": -109.13807290859368,
+              "mae_public_MW": 168.74798159885984,
+              "wape_percent": 10.30622608274573
+            },
+            {
+              "period": "month_03",
+              "stage": "DC on AC network",
+              "hours": 735,
+              "mean_flow_public_MW": 2049.646842971265,
+              "bias_public_MW": 412.3066541957545,
+              "mae_public_MW": 413.4848424628656,
+              "wape_percent": 25.253447346949415
+            },
+            {
+              "period": "month_03",
+              "stage": "DC plus solved AC losses",
+              "hours": 735,
+              "mean_flow_public_MW": 2326.054181738323,
+              "bias_public_MW": 688.7139929628128,
+              "mae_public_MW": 688.7139929628128,
+              "wape_percent": 42.06297492018867
+            },
+            {
+              "period": "month_03",
+              "stage": "Current AC",
+              "hours": 735,
+              "mean_flow_public_MW": 2327.9422456401453,
+              "bias_public_MW": 690.6020568646347,
+              "mae_public_MW": 690.6020568646347,
+              "wape_percent": 42.178287786431454
+            },
+            {
+              "period": "month_04",
+              "stage": "Original DC",
+              "hours": 714,
+              "mean_flow_public_MW": 1320.1189702306576,
+              "bias_public_MW": -137.2731251241509,
+              "mae_public_MW": 168.2728804023358,
+              "wape_percent": 11.546163927928331
+            },
+            {
+              "period": "month_04",
+              "stage": "DC on AC network",
+              "hours": 714,
+              "mean_flow_public_MW": 1992.4694884877692,
+              "bias_public_MW": 535.0773931329608,
+              "mae_public_MW": 535.0773931329608,
+              "wape_percent": 36.71471766852789
+            },
+            {
+              "period": "month_04",
+              "stage": "DC plus solved AC losses",
+              "hours": 714,
+              "mean_flow_public_MW": 2389.34513505424,
+              "bias_public_MW": 931.9530396994312,
+              "mae_public_MW": 931.9530396994312,
+              "wape_percent": 63.94662374455539
+            },
+            {
+              "period": "month_04",
+              "stage": "Current AC",
+              "hours": 714,
+              "mean_flow_public_MW": 2395.1401869684146,
+              "bias_public_MW": 937.748091613606,
+              "mae_public_MW": 937.748091613606,
+              "wape_percent": 64.34425537249172
+            },
+            {
+              "period": "month_05",
+              "stage": "Original DC",
+              "hours": 729,
+              "mean_flow_public_MW": 1291.879260956376,
+              "bias_public_MW": -266.2601208451792,
+              "mae_public_MW": 273.62998596314617,
+              "wape_percent": 17.561329182679998
+            },
+            {
+              "period": "month_05",
+              "stage": "DC on AC network",
+              "hours": 729,
+              "mean_flow_public_MW": 2018.0859479658363,
+              "bias_public_MW": 459.9465661642814,
+              "mae_public_MW": 462.57721514298805,
+              "wape_percent": 29.687794336354308
+            },
+            {
+              "period": "month_05",
+              "stage": "DC plus solved AC losses",
+              "hours": 729,
+              "mean_flow_public_MW": 2459.6578496476104,
+              "bias_public_MW": 901.518467846056,
+              "mae_public_MW": 901.518467846056,
+              "wape_percent": 57.85865362081412
+            },
+            {
+              "period": "month_05",
+              "stage": "Current AC",
+              "hours": 729,
+              "mean_flow_public_MW": 2466.261272582746,
+              "bias_public_MW": 908.1218907811918,
+              "mae_public_MW": 908.1218907811918,
+              "wape_percent": 58.28245543291521
+            },
+            {
+              "period": "month_06",
+              "stage": "Original DC",
+              "hours": 710,
+              "mean_flow_public_MW": 1083.762693154521,
+              "bias_public_MW": -469.9940404135539,
+              "mae_public_MW": 470.4590268317976,
+              "wape_percent": 30.278808559138277
+            },
+            {
+              "period": "month_06",
+              "stage": "DC on AC network",
+              "hours": 710,
+              "mean_flow_public_MW": 1790.071929587864,
+              "bias_public_MW": 236.31519601978928,
+              "mae_public_MW": 278.0624840953794,
+              "wape_percent": 17.89614024435033
+            },
+            {
+              "period": "month_06",
+              "stage": "DC plus solved AC losses",
+              "hours": 710,
+              "mean_flow_public_MW": 2358.665105343637,
+              "bias_public_MW": 804.9083717755623,
+              "mae_public_MW": 804.9083717755623,
+              "wape_percent": 51.80401502924825
+            },
+            {
+              "period": "month_06",
+              "stage": "Current AC",
+              "hours": 710,
+              "mean_flow_public_MW": 2364.594677718213,
+              "bias_public_MW": 810.8379441501381,
+              "mae_public_MW": 810.8379441501381,
+              "wape_percent": 52.1856431339876
+            },
+            {
+              "period": "month_07",
+              "stage": "Original DC",
+              "hours": 653,
+              "mean_flow_public_MW": 957.8630541442772,
+              "bias_public_MW": -454.4495506285662,
+              "mae_public_MW": 455.23304427743807,
+              "wape_percent": 32.23091144801332
+            },
+            {
+              "period": "month_07",
+              "stage": "DC on AC network",
+              "hours": 653,
+              "mean_flow_public_MW": 1620.7089370394056,
+              "bias_public_MW": 208.39633226656204,
+              "mae_public_MW": 227.85636642449484,
+              "wape_percent": 16.132436916460346
+            },
+            {
+              "period": "month_07",
+              "stage": "DC plus solved AC losses",
+              "hours": 653,
+              "mean_flow_public_MW": 2457.4173437559866,
+              "bias_public_MW": 1045.1047389831433,
+              "mae_public_MW": 1045.1047389831433,
+              "wape_percent": 73.99436117281486
+            },
+            {
+              "period": "month_07",
+              "stage": "Current AC",
+              "hours": 653,
+              "mean_flow_public_MW": 2463.120298771009,
+              "bias_public_MW": 1050.8076939981656,
+              "mae_public_MW": 1050.8076939981656,
+              "wape_percent": 74.39813554814155
+            },
+            {
+              "period": "month_08",
+              "stage": "Original DC",
+              "hours": 651,
+              "mean_flow_public_MW": 604.5561872024207,
+              "bias_public_MW": -380.5850091621466,
+              "mae_public_MW": 388.3905238176904,
+              "wape_percent": 39.23473026705305
+            },
+            {
+              "period": "month_08",
+              "stage": "DC on AC network",
+              "hours": 651,
+              "mean_flow_public_MW": 1130.3033692174135,
+              "bias_public_MW": 145.16217285284645,
+              "mae_public_MW": 182.62714732948305,
+              "wape_percent": 18.44876850877292
+            },
+            {
+              "period": "month_08",
+              "stage": "DC plus solved AC losses",
+              "hours": 651,
+              "mean_flow_public_MW": 1785.6315163566255,
+              "bias_public_MW": 800.4903199920582,
+              "mae_public_MW": 800.4903199920582,
+              "wape_percent": 80.86454189860147
+            },
+            {
+              "period": "month_08",
+              "stage": "Current AC",
+              "hours": 651,
+              "mean_flow_public_MW": 1787.2389874269527,
+              "bias_public_MW": 802.0977910623855,
+              "mae_public_MW": 802.0977910623855,
+              "wape_percent": 81.0269266376431
+            },
+            {
+              "period": "month_09",
+              "stage": "Original DC",
+              "hours": 716,
+              "mean_flow_public_MW": 804.7798447612084,
+              "bias_public_MW": -365.9125004436334,
+              "mae_public_MW": 371.84886437861473,
+              "wape_percent": 31.76315843370023
+            },
+            {
+              "period": "month_09",
+              "stage": "DC on AC network",
+              "hours": 716,
+              "mean_flow_public_MW": 1356.2455567408483,
+              "bias_public_MW": 185.5532115360068,
+              "mae_public_MW": 253.69866588297668,
+              "wape_percent": 21.67082298967162
+            },
+            {
+              "period": "month_09",
+              "stage": "DC plus solved AC losses",
+              "hours": 716,
+              "mean_flow_public_MW": 1842.6152839835888,
+              "bias_public_MW": 671.9229387787469,
+              "mae_public_MW": 671.9229387787469,
+              "wape_percent": 57.39534742248419
+            },
+            {
+              "period": "month_09",
+              "stage": "Current AC",
+              "hours": 716,
+              "mean_flow_public_MW": 1844.6390516628592,
+              "bias_public_MW": 673.9467064580175,
+              "mae_public_MW": 673.9467064580175,
+              "wape_percent": 57.56821672393302
+            },
+            {
+              "period": "month_10",
+              "stage": "Original DC",
+              "hours": 740,
+              "mean_flow_public_MW": 900.5518457282499,
+              "bias_public_MW": -294.3546092267051,
+              "mae_public_MW": 299.7509985882016,
+              "wape_percent": 25.085729292465945
+            },
+            {
+              "period": "month_10",
+              "stage": "DC on AC network",
+              "hours": 740,
+              "mean_flow_public_MW": 1426.534227251963,
+              "bias_public_MW": 231.62777229700808,
+              "mae_public_MW": 244.55487784050823,
+              "wape_percent": 20.46644545490612
+            },
+            {
+              "period": "month_10",
+              "stage": "DC plus solved AC losses",
+              "hours": 740,
+              "mean_flow_public_MW": 1735.060923892593,
+              "bias_public_MW": 540.154468937638,
+              "mae_public_MW": 540.154468937638,
+              "wape_percent": 45.2047494343815
+            },
+            {
+              "period": "month_10",
+              "stage": "Current AC",
+              "hours": 740,
+              "mean_flow_public_MW": 1736.2361000270876,
+              "bias_public_MW": 541.3296450721323,
+              "mae_public_MW": 541.3296450721323,
+              "wape_percent": 45.303098232282885
+            },
+            {
+              "period": "month_11",
+              "stage": "Original DC",
+              "hours": 710,
+              "mean_flow_public_MW": 1235.357295130982,
+              "bias_public_MW": -430.8757082727737,
+              "mae_public_MW": 431.1941842143624,
+              "wape_percent": 25.87838455567291
+            },
+            {
+              "period": "month_11",
+              "stage": "DC on AC network",
+              "hours": 710,
+              "mean_flow_public_MW": 1841.0413369830424,
+              "bias_public_MW": 174.8083335792867,
+              "mae_public_MW": 217.52218021152592,
+              "wape_percent": 13.05472762615882
+            },
+            {
+              "period": "month_11",
+              "stage": "DC plus solved AC losses",
+              "hours": 710,
+              "mean_flow_public_MW": 2241.7607989300477,
+              "bias_public_MW": 575.5277955262914,
+              "mae_public_MW": 575.5277955262914,
+              "wape_percent": 34.54065513950401
+            },
+            {
+              "period": "month_11",
+              "stage": "Current AC",
+              "hours": 710,
+              "mean_flow_public_MW": 2244.5175584414783,
+              "bias_public_MW": 578.2845550377225,
+              "mae_public_MW": 578.2845550377225,
+              "wape_percent": 34.70610375958294
+            },
+            {
+              "period": "month_12",
+              "stage": "Original DC",
+              "hours": 737,
+              "mean_flow_public_MW": 1931.864367449666,
+              "bias_public_MW": -246.1892743413788,
+              "mae_public_MW": 276.7214917067482,
+              "wape_percent": 12.704989739334252
+            },
+            {
+              "period": "month_12",
+              "stage": "DC on AC network",
+              "hours": 737,
+              "mean_flow_public_MW": 2365.8601773865635,
+              "bias_public_MW": 187.8065355955183,
+              "mae_public_MW": 251.686424777779,
+              "wape_percent": 11.555565939634691
+            },
+            {
+              "period": "month_12",
+              "stage": "DC plus solved AC losses",
+              "hours": 737,
+              "mean_flow_public_MW": 2719.3426485599834,
+              "bias_public_MW": 541.2890067689387,
+              "mae_public_MW": 541.4184404264751,
+              "wape_percent": 24.857902029504604
+            },
+            {
+              "period": "month_12",
+              "stage": "Current AC",
+              "hours": 737,
+              "mean_flow_public_MW": 2724.4132307775926,
+              "bias_public_MW": 546.3595889865479,
+              "mae_public_MW": 546.4811819423792,
+              "wape_percent": 25.09034541008824
+            }
+          ],
+          "columns": [
+            "period",
+            "stage",
+            "hours",
+            "mean_flow_public_MW",
+            "bias_public_MW",
+            "mae_public_MW",
+            "wape_percent"
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "WAPE = 100 \u00d7 sum(abs(predicted \u2212 observed)) / sum(abs(observed)). Mean signed error = mean(predicted \u2212 observed). Only aggregate model MW is divided by gamma."
+            }
+          ],
+          "preview": {
+            "kind": "aggregate",
+            "note": "Annual and monthly summaries for the four plotted stages.",
+            "totalRows": 52
+          }
+        },
+        {
+          "id": "reactance-intervention",
+          "source": {
+            "label": "Gilboa\u2013Buchanan reactance diagnostic",
+            "files": [
+              {
+                "label": "model_delta/fallback_provenance_review.json"
+              },
+              {
+                "label": "model_delta/annual_DC_independent_review.json"
+              },
+              {
+                "label": "experiments/annual_DC_bridge/variant_summary.csv"
+              },
+              {
+                "label": "branches/branch_assignments.csv"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Gilboa\u2013Buchanan reactance diagnostic",
+                "definition": "The row-224 intervention changes only its reactance, leaving other network parameters and prescribed injections fixed; the reported share concerns mean construction-related flow displacement."
+              }
+            ],
+            "filters": [
+              "Interface: CENTRAL EAST\u2013VC",
+              "Cohort: 8,494 unchanged matched hours",
+              "Terminal convention: inherited receiving side"
+            ],
+            "caveats": [
+              "The reactance values and preferred route describe model assumptions, not verified installed equipment.",
+              "A lower WAPE does not establish physical impedance correctness.",
+              "96.88 percent refers to mean construction-induced flow displacement, not the total WAPE increase."
+            ]
+          },
+          "reportingPeriod": "2025 hourly profiles",
+          "rows": [
+            {
+              "quantity": "Original reactance",
+              "value": 0.0147,
+              "unit": "pu on 100 MVA"
+            },
+            {
+              "quantity": "Applied reactance",
+              "value": 0.0554579021639292,
+              "unit": "pu on 100 MVA"
+            },
+            {
+              "quantity": "Synthetic preferred route",
+              "value": 177.53893430558028,
+              "unit": "km"
+            },
+            {
+              "quantity": "Mean displacement removed by restoring only X224",
+              "value": 581.5740760932441,
+              "unit": "public MW"
+            },
+            {
+              "quantity": "Share of mean construction displacement removed",
+              "value": 96.87705479120505,
+              "unit": "percent"
+            }
+          ],
+          "columns": [
+            "quantity",
+            "value",
+            "unit"
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "Mean construction displacement = mean(AC-network DC \u2212 archived DC). Row-224 effect = mean(AC-network DC \u2212 row224-X-restored DC); share = effect / construction displacement."
+            }
+          ]
+        },
+        {
+          "id": "loss-reconstruction",
+          "source": {
+            "label": "Solved-loss reconstruction",
+            "files": [
+              {
+                "label": "experiments/annual_loss_loaded_DCF/allocation_summary.csv"
+              },
+              {
+                "label": "model_delta/annual_loss_independent_review.json"
+              },
+              {
+                "label": "summary/diagnosis_summary.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Solved-loss reconstruction",
+                "definition": "Solved AC branch losses are added as diagnostic withdrawals and supplied by the existing Clay reference generator; the resulting DC solution reconstructs most of the same-network AC flow increase."
+              }
+            ],
+            "filters": [
+              "Interface: CENTRAL EAST\u2013VC",
+              "Cohort: 8,494 unchanged matched hours",
+              "Terminal convention: inherited receiving side"
+            ],
+            "caveats": [
+              "This is an after-the-fact reconstruction from solved AC losses, not an independent forecast or unique causal decomposition.",
+              "Half-end, original-from-end and original-to-end allocation are sensitivity conventions, not confidence intervals.",
+              "The production model, profiles and prior results remain unchanged."
+            ]
+          },
+          "reportingPeriod": "2025 hourly profiles",
+          "rows": [
+            {
+              "allocation": "half_each_runtime_branch_end",
+              "hours": 8494,
+              "mean_loss_allocation_delta_public_MW": 442.573352955593,
+              "mean_remaining_AC_minus_loss_loaded_public_MW": 3.754696868808,
+              "mean_absolute_remaining_public_MW": 4.22001253923993
+            },
+            {
+              "allocation": "all_at_runtime_from_end",
+              "hours": 8494,
+              "mean_loss_allocation_delta_public_MW": 445.190270159896,
+              "mean_remaining_AC_minus_loss_loaded_public_MW": 1.13777966450499,
+              "mean_absolute_remaining_public_MW": 3.22598845586864
+            },
+            {
+              "allocation": "all_at_runtime_to_end",
+              "hours": 8494,
+              "mean_loss_allocation_delta_public_MW": 439.95643575129,
+              "mean_remaining_AC_minus_loss_loaded_public_MW": 6.37161407311101,
+              "mean_absolute_remaining_public_MW": 6.62465208585997
+            }
+          ],
+          "columns": [
+            "allocation",
+            "hours",
+            "mean_loss_allocation_delta_public_MW",
+            "mean_remaining_AC_minus_loss_loaded_public_MW",
+            "mean_absolute_remaining_public_MW"
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "For each runtime branch, loss = PF + PT. Allocate loss to its endpoints, add those withdrawals to the diagnostic DC case, and retain non-slack PG and all six transfer targets. The reference increment must equal total baseline AC loss."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
