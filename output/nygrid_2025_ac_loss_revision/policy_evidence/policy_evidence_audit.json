@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T02:51:22.483935+00:00",
+  "checkout_branch": "codex/s13-phase1b-upny-coned",
+  "checkout_HEAD": "a7c90215b22f688acea9ee8a08a08fc4385be494",
+  "primary_source_files_verified": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_Market_Participants_User_Guide.pdf",
+      "sha256": "83a76f2e51762798feb53b342266457991b153cde9489a52834c0fb148c80897",
+      "publisher": "NYISO",
+      "version": "18.0",
+      "effective_date": "2026-09-18",
+      "source_url": "https://www.nyiso.com/documents/20142/3625950/mpug.pdf",
+      "retrieved_utc": "2026-10-13T02:24:12.327750+00:00",
+      "definition_signature_checked": true,
+      "historical_2025_manual_vintage_verified": false,
+      "extracted_text": {
+        "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_Market_Participants_User_Guide.txt",
+        "sha256": "974806620beb222dab9ea924abf9581cfb617a1d9b36842e4e75f81aedbc1a7e"
+      }
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_Transmission_and_Dispatch_Operations_Manual.pdf",
+      "sha256": "c046239640a87e86961117c306edb7b50cc27d2a94c7d5c8218c601b47b160e2",
+      "publisher": "NYISO",
+      "version": "11.0",
+      "effective_date": "2026-07-31",
+      "source_url": "https://www.nyiso.com/documents/20142/2923301/trans_disp.pdf/9d91ad95-0281-2b17-5573-f054f7169551",
+      "retrieved_utc": "2026-10-13T02:24:12.789085+00:00",
+      "definition_signature_checked": true,
+      "historical_2025_manual_vintage_verified": false,
+      "extracted_text": {
+        "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_Transmission_and_Dispatch_Operations_Manual.txt",
+        "sha256": "8b39ee6e4b36cc75f4f88b6fe3f96012bd8dfa31c032062741978c873a9d52c8"
+      }
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/EIA930_current_instructions.pdf",
+      "sha256": "321ee0a8d93b15ca2fe206720615bb721c1b6eaf9d9fb06e9c11837ca5004d58",
+      "publisher": "EIA",
+      "version": "OMB expiration 2029-07-31",
+      "effective_date": null,
+      "source_url": "https://www.eia.gov/survey/form/eia_930/instructions.pdf",
+      "retrieved_utc": "2026-10-13T02:24:13.180409+00:00",
+      "definition_signature_checked": true,
+      "historical_2025_manual_vintage_verified": false,
+      "extracted_text": {
+        "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/EIA930_current_instructions.txt",
+        "sha256": "f406fcd86b0ccba4e4dd3356c122bb66386be5ffc83fbabc8757f9bacb709e46"
+      }
+    }
+  ],
+  "source_qualified_hours": 8651,
+  "external_finite_capability_independent_crosscheck_passed": true,
+  "source_definition_vs_model_inference_explicit": true,
+  "new_PF_run_or_operating_profile_mutation": false,
+  "revised_model_feasibility_established_by_this_audit": false,
+  "all_12_2025_palIntegrated_source_archive_SHA256_checks_passed": true,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/annual_axes.mat",
+      "sha256": "167ab7023c41189fcea9138f2aea43e50d01db4640551046d1160ee21e4ff640"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_external_generator_shares.csv",
+      "sha256": "e0bef3a5c7c95fec628fb86410eb64f4ee5c3e3fd2a89e8eb5d42fa19289af7a"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/source_receipts.csv",
+      "sha256": "2c6e28a7743c49bd8ee540a8ca7eac7ce4dd37f9a3af928540ac0b676b87fad9"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/scaling_manifest.json",
+      "sha256": "7782acce9d5c8d6c64a3805161de16c89d1b1ae007f81fe3a7f3dad169058158"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/headroom/headroom_audit.json",
+      "sha256": "4d33faa5fe8bb626da358265c8ecebbd65a9cc203b56265b416d6d5ab2796643"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/regional_budget_review/regional_budget_reference_review.json",
+      "sha256": "ead54d6b592c96f8247b184eeff770a1432aabd91dc20b8f2a3ed7dd8f20f854"
+    }
+  ],
+  "source_code": {
+    "path": "scripts/nygrid_2025_ac_loss_revision/policy_evidence/build_policy_evidence.py",
+    "sha256": "d83f3126a0016e7be2d78ab7665a01d55f56bb6b95d7f60bf3a8a6d95ded2727"
+  },
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/primary_source_fact_ledger.csv",
+      "sha256": "8f5c86e4d7fa83a430b7c161db4be0c946c23c3aaedc5732c4a7a5942030bcf0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/external_original_capability_crosscheck.csv",
+      "sha256": "fabaadeaec8c07c15f1c43309d9c21a9caf49a6eac6dde6e152761dfaadc3808"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/loss_accounting_policy_contract.json",
+      "sha256": "b05ed3956c6ab606af6b9d8985b81d7c78f2fb76726da461f2b007a9b33dce23"
+    }
+  ]
+}

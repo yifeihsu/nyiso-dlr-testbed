@@ -1,0 +1,133 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T03:13:05.602663+00:00",
+  "scope": "Pre-result read-only comparison code review and frozen-source helper tests; revised outputs and full consumer execution not yet checked",
+  "source_qualified_hours": 8651,
+  "frozen_old_qualified_hours": 8494,
+  "revised_result_files_read": false,
+  "new_PF_or_OPF_run": false,
+  "source_contract_hashes_verified": true,
+  "three_original_terminal_conventions_checked": true,
+  "NY_terminal_imports_include_six_DC_and_external_loss_balance": true,
+  "finite_original_external28_bounds_checked": true,
+  "corrected81_generator_landing_issue_fixed": true,
+  "variant_mode_options_and_completion_gate_bound": true,
+  "dated_presence_activity_and_DC_axes_require_exact_frozen_equality": true,
+  "NY_gross_equals_served_plus_assigned_loss_checked_by_consumer": true,
+  "NY_bus_load_shares_and_PQ_ratio_preservation_checked_by_consumer": true,
+  "WAPE_MAE_RMSE_bias_negative_flow_fixture_passed": true,
+  "zero_observation_denominator_returns_NaN_and_emptycohort_omitted": true,
+  "paired_new_lost_and_old_all8494_metrics_keep_separate_masks": true,
+  "tests": [
+    {
+      "hour_index": 523,
+      "dated_state": "pre_may",
+      "terminal_conventions_reconstruction_error_public_MW": 9.094947017729282e-13,
+      "total_loss_ownership_closure_MW": 5.684341886080802e-14,
+      "external_region_KCL_closure_MW": 2.2168933355715126e-11,
+      "corrected_nonreference_native_bus_P_error_MW": 2.842170943040401e-14,
+      "uncorrected_mapping_false_error_MW": 48.84097524160623,
+      "old_single_slack_increment_at_Clay50_model_MW": 439.28836255039823,
+      "frozen_external28_finite_bound_violation_MW": 0.0
+    },
+    {
+      "hour_index": 3360,
+      "dated_state": "may21",
+      "terminal_conventions_reconstruction_error_public_MW": 4.547473508864641e-13,
+      "total_loss_ownership_closure_MW": 5.684341886080802e-14,
+      "external_region_KCL_closure_MW": 1.7305410437984392e-09,
+      "corrected_nonreference_native_bus_P_error_MW": 0.0,
+      "uncorrected_mapping_false_error_MW": 36.63769174977904,
+      "old_single_slack_increment_at_Clay50_model_MW": 286.83889653126107,
+      "frozen_external28_finite_bound_violation_MW": 0.0
+    },
+    {
+      "hour_index": 4000,
+      "dated_state": "may30",
+      "terminal_conventions_reconstruction_error_public_MW": 2.2737367544323206e-13,
+      "total_loss_ownership_closure_MW": 0.0,
+      "external_region_KCL_closure_MW": 1.700840357443667e-09,
+      "corrected_nonreference_native_bus_P_error_MW": 0.0,
+      "uncorrected_mapping_false_error_MW": 28.49450390506479,
+      "old_single_slack_increment_at_Clay50_model_MW": 356.2200541466598,
+      "frozen_external28_finite_bound_violation_MW": 0.0
+    },
+    {
+      "hour_index": 8508,
+      "dated_state": "post_dover",
+      "terminal_conventions_reconstruction_error_public_MW": 9.094947017729282e-13,
+      "total_loss_ownership_closure_MW": 5.684341886080802e-14,
+      "external_region_KCL_closure_MW": 2.0182397975077038e-09,
+      "corrected_nonreference_native_bus_P_error_MW": 1.4210854715202004e-14,
+      "uncorrected_mapping_false_error_MW": 33.78591029708613,
+      "old_single_slack_increment_at_Clay50_model_MW": 246.44927349886757,
+      "frozen_external28_finite_bound_violation_MW": 0.0
+    }
+  ],
+  "remaining_limitations": [
+    "No revised monthly exports existed during this review; the complete main scorer must still be run and independently read back after the producer exports them.",
+    "Policy-based NY loss assignment is declared rather than measured; successful accounting is not physical-meter or as-built parameter certification."
+  ],
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/comparison/score_revised_profiles.py",
+      "sha256": "6b172368b2179a0c5339babfac610e0c75e6860965341ade907b568fed9b512e"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/comparison/prepare_comparison.py",
+      "sha256": "c61fc9f201fbf788d0a06a00c0bb6642134f4ab5f1c47ab58f024c177863f0aa"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/comparison_contract.json",
+      "sha256": "6a7b0f5171a9b9e4dbfcf2c5889c7625c80ce92c85c61778c3fdb131ac4988a7"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/comparison/comparison_arrays.npz",
+      "sha256": "6033e200dde60e63bb9b12e123e085790975405dca0843482df9d0437faf7912"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_external_generator_shares.csv",
+      "sha256": "e0bef3a5c7c95fec628fb86410eb64f4ee5c3e3fd2a89e8eb5d42fa19289af7a"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_01.mat",
+      "sha256": "f21059f24b6614e4100d4cf7e7dec13e94f844fd3edcd265067873b1bc8d2369"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_05.mat",
+      "sha256": "fdc012f78d2511b930fefa563f033647cb250f5ceb15a60e67481a11b1b1ddf0"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_06.mat",
+      "sha256": "791ca8a79e3b2d2125aeea38482b0521cd8357c88b22b25ee661ee95f17f9b3c"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_12.mat",
+      "sha256": "9ef53680a25405da10524df26cfc65d2e25828053c7b986d10f5b6d67329dbf8"
+    }
+  ]
+}

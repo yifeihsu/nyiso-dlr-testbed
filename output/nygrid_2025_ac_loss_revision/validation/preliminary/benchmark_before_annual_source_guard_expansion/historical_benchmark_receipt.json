@@ -1,0 +1,15 @@
+{
+  "historical_only": true,
+  "not_current_qualification": true,
+  "reason": "Source guard was expanded after this benchmark to bind annual producer and benchmark caller; numerical kernel and source arrays unchanged. A new benchmark replaces current receipt.",
+  "original_receipt_bytes": {
+    "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/benchmark_before_annual_source_guard_expansion/benchmark_receipt.original.json.txt",
+    "sha256": "737c50416d72b8df8e90a412ce0a67cf5ea627a67f6ef661327a05261bb6761f"
+  },
+  "exact_historical_helper_snapshot": {
+    "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/benchmark_before_annual_source_guard_expansion/loss_validation_source_records_original.m",
+    "sha256": "bb072ee3c482c52f5d2886a2e1949f7df71a0c856a5e017384c43035ead37372"
+  },
+  "historical_helper_matches_original_receipt_hash": true,
+  "other_original_source_records_still_live": true
+}

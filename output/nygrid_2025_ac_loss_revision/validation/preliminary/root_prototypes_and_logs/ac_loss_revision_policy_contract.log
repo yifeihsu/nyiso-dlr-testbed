@@ -1,0 +1,6 @@
+{Subscripted assignment between dissimilar structures.
+
+Error in test_loss_policy_contract (line 12)
+checks(end+1)=check('zero_budget_preserves_PD_QD_PG',isequal(zero.bus,m.bus)&&isequal(zero.gen(:,2),m.gen(:,2))&&a.native_and_HQ_PG_unchanged);
+^^^^^^^^^^^^^
+} 

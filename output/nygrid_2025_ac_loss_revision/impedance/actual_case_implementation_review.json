@@ -1,0 +1,230 @@
+{
+  "passed": true,
+  "scope": "Independent actual ac_loss_prepare_case audit; no PF or OPF run",
+  "hours": [
+    1,
+    3360,
+    3576,
+    8472,
+    8508
+  ],
+  "checks": [
+    {
+      "hour_index": 1,
+      "full_bus_count": 266,
+      "full_branch_count": 485,
+      "parent224_runtime_rows": [
+        224,
+        481
+      ],
+      "parent224_R_X_B": [
+        0.02,
+        0.0147,
+        0
+      ],
+      "frozen_source_numeric_arrays_match_public_loader": true,
+      "only224_R_X_B_and_unqualified_ratings_changed": true,
+      "all_bus_gen_dcline_and_cost_arrays_unchanged": true,
+      "all_other_branch_parameters_unchanged": true,
+      "sibling225_unchanged": true,
+      "bus_shunts_unchanged_no224_reactor_existed": true,
+      "all224_conductor_and_current_limit_entries_removed": true,
+      "remaining_conductor_rows_preserved": true,
+      "temperature_resistance_updater_cannot_change224": true,
+      "formulation_callbacks_removed_other_callbacks_preserved": true,
+      "constraint_applied_flags_cleared": true,
+      "double_application_and_thermal_prepared_inputs_rejected": true,
+      "legacy_engineering_numeric_mode_unchanged": true,
+      "complex_series_equivalence_error_pu": 0,
+      "passed": true
+    },
+    {
+      "hour_index": 3360,
+      "full_bus_count": 266,
+      "full_branch_count": 485,
+      "parent224_runtime_rows": [
+        224,
+        481
+      ],
+      "parent224_R_X_B": [
+        0.02,
+        0.0147,
+        0
+      ],
+      "frozen_source_numeric_arrays_match_public_loader": true,
+      "only224_R_X_B_and_unqualified_ratings_changed": true,
+      "all_bus_gen_dcline_and_cost_arrays_unchanged": true,
+      "all_other_branch_parameters_unchanged": true,
+      "sibling225_unchanged": true,
+      "bus_shunts_unchanged_no224_reactor_existed": true,
+      "all224_conductor_and_current_limit_entries_removed": true,
+      "remaining_conductor_rows_preserved": true,
+      "temperature_resistance_updater_cannot_change224": true,
+      "formulation_callbacks_removed_other_callbacks_preserved": true,
+      "constraint_applied_flags_cleared": true,
+      "double_application_and_thermal_prepared_inputs_rejected": true,
+      "legacy_engineering_numeric_mode_unchanged": true,
+      "complex_series_equivalence_error_pu": 0,
+      "passed": true
+    },
+    {
+      "hour_index": 3576,
+      "full_bus_count": 266,
+      "full_branch_count": 485,
+      "parent224_runtime_rows": [
+        224,
+        481
+      ],
+      "parent224_R_X_B": [
+        0.02,
+        0.0147,
+        0
+      ],
+      "frozen_source_numeric_arrays_match_public_loader": true,
+      "only224_R_X_B_and_unqualified_ratings_changed": true,
+      "all_bus_gen_dcline_and_cost_arrays_unchanged": true,
+      "all_other_branch_parameters_unchanged": true,
+      "sibling225_unchanged": true,
+      "bus_shunts_unchanged_no224_reactor_existed": true,
+      "all224_conductor_and_current_limit_entries_removed": true,
+      "remaining_conductor_rows_preserved": true,
+      "temperature_resistance_updater_cannot_change224": true,
+      "formulation_callbacks_removed_other_callbacks_preserved": true,
+      "constraint_applied_flags_cleared": true,
+      "double_application_and_thermal_prepared_inputs_rejected": true,
+      "legacy_engineering_numeric_mode_unchanged": true,
+      "complex_series_equivalence_error_pu": 0,
+      "passed": true
+    },
+    {
+      "hour_index": 8472,
+      "full_bus_count": 267,
+      "full_branch_count": 488,
+      "parent224_runtime_rows": [
+        224,
+        484
+      ],
+      "parent224_R_X_B": [
+        0.02,
+        0.0147,
+        0
+      ],
+      "frozen_source_numeric_arrays_match_public_loader": true,
+      "only224_R_X_B_and_unqualified_ratings_changed": true,
+      "all_bus_gen_dcline_and_cost_arrays_unchanged": true,
+      "all_other_branch_parameters_unchanged": true,
+      "sibling225_unchanged": true,
+      "bus_shunts_unchanged_no224_reactor_existed": true,
+      "all224_conductor_and_current_limit_entries_removed": true,
+      "remaining_conductor_rows_preserved": true,
+      "temperature_resistance_updater_cannot_change224": true,
+      "formulation_callbacks_removed_other_callbacks_preserved": true,
+      "constraint_applied_flags_cleared": true,
+      "double_application_and_thermal_prepared_inputs_rejected": true,
+      "legacy_engineering_numeric_mode_unchanged": true,
+      "complex_series_equivalence_error_pu": 0,
+      "passed": true
+    },
+    {
+      "hour_index": 8508,
+      "full_bus_count": 267,
+      "full_branch_count": 488,
+      "parent224_runtime_rows": [
+        224,
+        484
+      ],
+      "parent224_R_X_B": [
+        0.02,
+        0.0147,
+        0
+      ],
+      "frozen_source_numeric_arrays_match_public_loader": true,
+      "only224_R_X_B_and_unqualified_ratings_changed": true,
+      "all_bus_gen_dcline_and_cost_arrays_unchanged": true,
+      "all_other_branch_parameters_unchanged": true,
+      "sibling225_unchanged": true,
+      "bus_shunts_unchanged_no224_reactor_existed": true,
+      "all224_conductor_and_current_limit_entries_removed": true,
+      "remaining_conductor_rows_preserved": true,
+      "temperature_resistance_updater_cannot_change224": true,
+      "formulation_callbacks_removed_other_callbacks_preserved": true,
+      "constraint_applied_flags_cleared": true,
+      "double_application_and_thermal_prepared_inputs_rejected": true,
+      "legacy_engineering_numeric_mode_unchanged": true,
+      "complex_series_equivalence_error_pu": 0,
+      "passed": true
+    }
+  ],
+  "optional_reactor_reversal_fixture_passed": true,
+  "physical_impedance_or_operating_feasibility_claimed": false,
+  "baseline_models_changed": false,
+  "source_hash_stable_during_audit": true,
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_prepare_case.m",
+      "sha256": "dccf49daf9d62b20a1d2a3f282e290dd01a4f52ab7de33a2f51db0a71faacd39"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/impedance/audit_actual_prepared_cases.m",
+      "sha256": "8233d84b2c6ee4d73c433a573b9a0ac424b560da323d13f9b0f629dd0d9f3c0c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/impedance_recommendation.json",
+      "sha256": "8fa3c727c8ffa1e6bdeaed6e63c4830a046e421d339e8c0787cb67abec212ae5"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_ac.m",
+      "sha256": "b46962e1d966233d03ae30bfdd1ad4d0120a075940579d83f9ffd7e017c5efc3"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_apply_resistance.m",
+      "sha256": "f3f15f91f1192138162d9ba87fb3c6f413f843b7bfa565fd9a5ec4c3f97fa2ac"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h0001.mat",
+      "sha256": "ca590aa089c883a6bb273f0763344023cda4e5c6342fd2260fe66b1f2f6824be"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h3360.mat",
+      "sha256": "fb9dec35082653e7690ff841727515b2c322f85ec92d13b86482cbbcc5e0da1c"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h3576.mat",
+      "sha256": "f38324de7355c2dd9498eba9ebc2cd80857c83295e79653905d3d7e4e21cedf0"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h8472.mat",
+      "sha256": "0bf999f20d50ac9e398cc47a58d127e02f59c3ac251a18159cac5700dfb7116d"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h8508.mat",
+      "sha256": "c9beabd35ac69c33a85a8aed4d985a3936fc69628443b328663b62487bb779bc"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_checks/prepared_h0001_numeric.mat",
+      "sha256": "2e7bca4fd67e743358956f90864372cc762ac636efef4c09863bc5fc73f58a50"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_checks/prepared_h3360_numeric.mat",
+      "sha256": "a27e28d2bbce8b863f133601ca8444a1250f511edb76aed3dbdc324b6386e370"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_checks/prepared_h3576_numeric.mat",
+      "sha256": "b7aaad74da4693cbe38f242886c3721c898d2e4fbf7dd8f439cad22ffd97797c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_checks/prepared_h8472_numeric.mat",
+      "sha256": "beb2a32b43737725ca6410e63d3c53b2bb228f4e8863dafbb6dddf3e8b06efee"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_checks/prepared_h8508_numeric.mat",
+      "sha256": "ba41090cbcb1b7b15ab56d6593725e13acefff01734a75f6d81322e4585769d6"
+    }
+  ]
+}

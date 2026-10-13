@@ -1,0 +1,604 @@
+                                                                                                                     Form Approved
+                                                  U.S. Department of Energy
+                                                                                                                 OMB No. 1905-0129
+                                                 1000 Independence Ave., SW
+                                                    Washington, DC 20585                                Expiration Date: 07/31/2029
+                                                                                                            Burden: 80 annual hours
+
+
+
+
+                                                            EIA-930
+                         HOURLY AND DAILY BALANCING AUTHORITY OPERATIONS REPORT
+                               DATA FORMAT AND TRANSMITTAL INSTRUCTIONS
+
+YOUR RESPONSE IS REQUIRED BY LAW
+This report is mandatory under Title 15 U.S.C. §772(b). Failure to comply may result in criminal fines, civil penalties and other
+sanctions as provided by Title 15 U.S.C. §797. Title 18 U.S.C. §1001 makes it a criminal offense for any person knowingly and
+willingly to make to any Agency or Department of the United States any false, fictitious, or fraudulent statements as to any
+matter within its jurisdiction.
+
+All entities in the contiguous United States that are listed in the North American Electric Reliability Corporation’s (NERC)
+Compliance Registry as a balancing authority must submit information as required by this data collection. Registered balancing
+authorities that are parties to the coordinated functional registration agreement JRO00001 are required to jointly submit for
+the Midcontinent Independent System Operator (MISO).
+
+PURPOSE
+The purpose of this data collection is to provide basic operating information about the nation’s electric power system on a
+current and historical basis. While regional transmission organizations and electric utilities have primary responsibility for
+electric system operations, many other entities, such as industry participants, policymakers, legislators, regulators, emergency
+and disaster response officials, entrepreneurs, economic analysts, industry researchers, and the public, have a direct interest in
+electric system operations and the associated data. This collection provides a centralized and comprehensive source for hourly
+electric industry operating data. A summary of the data appears on EIA’s website at www.eia.gov and in numerous
+government publications.
+
+RESPONSE DUE DATE
+
+Data is to be submitted in two files: “same-day” and “daily” files. Same-day files are to be submitted hourly, no later than
+within 60 minutes of the end of the operating hour. Respondents may voluntarily submit their hourly data within 30 minutes of
+the end of the operating hour. Respondents who are “generation-only” balancing authorities are not required to submit the
+same-day file. Daily files are to be submitted daily by 7:00 a.m. Eastern Prevailing (Standard or Daylight Saving) Time. The daily
+files are to remain available at the posting location for one year.
+
+PERIODIC INFORMATION UPDATES: At the beginning of each year, respondents will receive an email asking them to verify 1)
+contact information, 2) a list of directly, physically connected balancing authorities, 3) if applicable a list and description of
+demand sub-regions (a system map specifying the sub-regions is sufficient), and 4) a description of their submission method.
+
+Additionally, respondents are required to inform EIA via email to eia4usa@eia.gov of any change in their submission process or
+their status as a balancing authority at least seven business days prior to the effective date of the change.
+
+
+
+
+                                Form EIA-930 Hourly and Daily Balancing Authority Operations Report
+                                                                                                                  Form Approved
+                                                 U.S. Department of Energy
+                                                                                                              OMB No. 1905-0129
+                                                1000 Independence Ave., SW
+                                                   Washington, DC 20585                              Expiration Date: 07/31/2029
+                                                                                                          Burden: 80 annual hours
+
+
+
+
+HOW TO FILE A RESPONSE
+Same-day and daily file submissions are to be made using EIA’s standard XML or CSV file format (see FILE LAYOUT).
+
+Respondents can transmit their data using one of two methods: post files to a respondent-specified Internet website or submit
+the files to a secure EIA-designated website. Please provide to EIA the URL and any access instructions for the respondent-
+specified website. Respondents may, at their discretion, provide the public with access to the posted files at their Internet
+address. As an alternative, respondents may arrange with EIA to set up automated file retrieval using business-to-business data
+transfer or web services technology. Please contact EIA to discuss at eia4usa@eia.gov.
+
+QUESTIONS
+Please contact the EIA Survey Support Team using the following communication methods:
+
+        By email:         eia4usa@eia.gov
+        By phone:         1-855-EIA-4USA (1-855-342-4872) [Monday through Friday, 8:00 AM to 6:00 PM E.T.]
+
+
+SANCTIONS
+
+The timely submission of Form EIA-930 by those required to report is mandatory under 15 U.S.C. §772(b), as amended.
+Failure to respond may result in a civil penalty of not more than $13,273 each day for each violation. The government
+may bring a civil action to prohibit reporting violations which may result in a temporary restraining order or a preliminary
+or permanent injunction without bond. In such civil action, the court may also issue mandatory injunctions commanding
+any person to comply with these reporting requirements.
+
+Title 18 U.S.C. §1001 makes it a criminal offense for any person knowingly and willingly to make to any Agency or
+Department of the United States any false, fictitious, or fraudulent statements as to any matter within its jurisdiction. In
+the case of the EIA-930, EIA will not pursue sanctions if mechanical failure or other factors beyond the control of the
+respondent cause a failure to report.
+
+REPORTING BURDEN
+Public reporting burden for this collection of information is estimated as an annual average to be 80 hours per respondent,
+including the time for reviewing instructions, searching existing data sources, gathering and maintaining the data needed, and
+completing and reviewing the collection of information. Send comments regarding this burden estimate or any other aspect of
+this collection of information, including suggestions for reducing this burden, to the U.S. Energy Information
+Administration, Office of Statistical Methods and Research, EI-21 Forrestal Building, 1000 Independence Avenue S.W.,
+Washington, D.C. 20585-0670; and to the Office of Information and Regulatory Affairs, Office of Management and Budget,
+Washington, D.C. 20503. A person is not required to respond to the collection of information unless the form displays a
+valid OMB number.
+
+DISCLOSURE OF INFORMATION
+
+All information reported on Form EIA-930 is public information and may be publicly released in company identifiable form.
+
+
+
+
+                               Form EIA-930 Hourly and Daily Balancing Authority Operations Report
+                                                                                                                    Form Approved
+                                                   U.S. Department of Energy
+                                                                                                                OMB No. 1905-0129
+                                                  1000 Independence Ave., SW
+                                                     Washington, DC 20585                              Expiration Date: 07/31/2029
+                                                                                                            Burden: 80 annual hours
+
+
+
+
+FISMA REQUIREMENTS
+In order to comply with the requirement of the Federal Information Security Modernization Act of 2014 (FISMA), an
+Interconnection Security Agreement (ISA) may need to be signed if either (1) data is submitted to EIA using an automated
+business-to-business data transfer or web services technology or (2) data is posted to a respondent-specified Internet website
+that requires access with a user name and password.
+
+
+
+GENERAL INSTRUCTIONS
+Report all data as hourly integrated values in megawatts by hour ending time.
+
+Round all reported megawatt data to the nearest integer.
+
+Report hourly date-time stamps using the Coordinated Universal Time (UTC) that correlates with the respondent’s local time.
+For example, the date-time stamp for March 1, 2017, hour ending 1:00 AM Eastern Standard Time (with UTC Offset = 5) should
+be reported as: 2017-03-01T06:00:00.000Z.
+
+FILENAMES
+Same-day files: Use the following filename format, which will remain the same for every hourly submission and will not change
+from day-to-day or hour-to-hour:
+
+“XX[X][X]samedaydemand.xml or .csv” where XX[X][X] is the respondent’s Balancing Authority Code (see DATA DEFINITIONS).
+
+An example filename using MISO is:
+
+“MISOsamedaydemand.xml” or “MISOsamedaydemand.csv”
+
+Daily files: Use the following filename format:
+
+“XX[X][X]dailyDDDYYYY.xml or .csv” where XX[X][X] is the respondent’s Balancing Authority Code (see DATA DEFINITIONS) and
+DDDYYYY is the day-of-year date that is the file’s original required submission date.
+
+An example filename using MISO’s daily file submission for March 1, 2017, is:
+
+“MISOdaily0602017.x ml” or “MISOdaily0602017.csv”
+
+
+
+DATA FILE CONTENTS
+Same-day files should contain:
+
+    •    Hourly total actual demand for each hour up to and including the most recent operating hour of the day
+
+    •    Corresponding hourly UTC date-time stamps
+
+A single file should be used for the hourly same-day submissions with a standard filename as specified in the FILENAMES
+section.
+
+A new hourly value and date-time stamp should be added to the file each hour for the most recent operating hour. In the case
+of the first posting of each day (submitted between 12:00-12:30 a.m. respondent’s local time), the same-day file will contain
+demand values for the full set of hours for the previous day. In the next hour’s posting (submitted between 1:00-1:30 a.m.
+
+
+                                 Form EIA-930 Hourly and Daily Balancing Authority Operations Report
+                                                                                                                    Form Approved
+                                                    U.S. Department of Energy
+                                                                                                                OMB No. 1905-0129
+                                                   1000 Independence Ave., SW
+                                                      Washington, DC 20585                             Expiration Date: 07/31/2029
+                                                                                                            Burden: 80 annual hours
+
+
+
+respondent’s local time), the same-day file will only contain the demand value for the first hour of the current day (hour ending
+1:00 a.m. respondent’s local time); the previous day’s values are dropped.
+
+Daily files should contain:
+
+    •    Yesterday’s hourly day-ahead demand forecast for today
+
+    •    Yesterday’s hourly total actual demand
+
+    •    In certain circumstances: Yesterday’s hourly total actual demand know n to be used to store energy. (This information
+         is only required by respondents that are unable to account for electricity known to be used to store energy as described
+         the Data Type “D” section of the instructions.)
+
+    •    Yesterday’s hourly total net generation
+
+    •    Yesterday’s hourly net generation by energy source
+
+    •    Yesterday’s hourly total net metered tie line flow
+
+    •    Two-days-prior-to-today’s hourly net metered tie line flow with each directly, physically connected balancing authority
+
+    •    As soon as available, within one month after the operating day, hourly actual demand by sub-region*
+
+    •    Corresponding hourly UTC date-time stamps
+
+A single file should be produced each day for the daily submission with a standard filename as specified in the FILENAMES
+section. The daily files are to remain available at the posting location for one year.
+
+*Respondents that calculate hourly actual demand values for sub-regions within the tie line boundaries of their system (e.g.,
+local balancing authorities, areas, zones, operating companies, etc.) in the normal course of business within one month of the
+operating day are required to report these values. If reporting demand by sub-region, please provide to EIA information about
+these sub-regions in advance (see PERIODIC INFORMATION UPDATES).
+
+FILE LAYOUT
+Example XML and CSV files are available on the EIA website. Please refer to the XML and XML schema example files for the XML
+file layout and structure.
+
+The CSV file layout for both the same-day and daily files should contain a header row with these fields:
+
+Product Name, Posting Type, Balancing Authority Code, Data Type, Data Code, Data Date, UTC Offset, HR1, HR2, HR3, HR4, HR5,
+HR6, HR7, HR8, HR9, HR10, HR11, HR12, HR13, HR14, HR15, HR16, HR17, HR18, HR19, HR20, HR21, HR22, HR23, HR24, HR25
+
+DATA DEFINITIONS
+Please report the following information for each field. See the DATA QUALITY section for more discussion of the relationship
+between various data elements.
+
+Product Name: This is a standard required field. Please use “EIA-930” as the value.
+
+Posting Type: This is a standard required field. Use “Same-Day” for the same-day file and use “Daily” for the daily file
+
+Balancing Authority Code: This is the balancing authority’s two-to-four-character ID code used to uniquely identify balancing
+authorities in the industry’s e-tag interchange scheduling system. A current list of balancing authorities and their e-tag ID
+codes is provided on the EIA Website.
+
+                                Form EIA-930 Hourly and Daily Balancing Authority Operations Report
+                                                                                                                     Form Approved
+                                                  U.S. Department of Energy
+                                                                                                                 OMB No. 1905-0129
+                                                 1000 Independence Ave., SW
+                                                    Washington, DC 20585                                Expiration Date: 07/31/2029
+                                                                                                             Burden: 80 annual hours
+
+
+
+Data Type: This field is used to specify the type of record being reported.
+
+Note: electricity from the system that is known to be used to store energy should be excluded from demand (D) and included as
+a negative contribution to net generation (NG). Only respondents that are unable to account for energy storage in this way are
+required to report data type “DS”.
+
+UTC0 = the hourly UTC date-time stamps corresponding with the hourly data for the current day (i.e., the reporting day). This is
+reported on both the same-day and daily files.
+
+UTC1 = the hourly UTC date-time stamps corresponding with the hourly data for the day prior to the reporting day.
+
+UTC2 = the hourly UTC date-time stamps corresponding with the hourly data for the day two days prior to the reporting day.
+
+UTCD = the hourly UTC date-time stamps corresponding with the hourly demand by sub-region data. This should only be used if
+reporting demand by sub-region. (Report UTCD separately even if it is the same date as UTC1 or UTC2.)
+
+DF = day-ahead demand forecast. This value should always be positive.
+
+D = actual demand. This value should always be positive. This is reported on both the same-day and daily files.
+
+For hours when electricity from the system is known to be used to store energy (via pumped storage, batteries or other energy
+storage devices), this electricity should be excluded from the actual demand reported on Form EIA-930 and instead be included
+as a negative contribution to net generation. Respondents that are unable to account for electricity know n to be used to store
+energy this way should instead report the hourly electricity from the system that was known to be used to store energy using
+data code “DS”.
+
+DS = reported actual demand know n to be used to store energy. This field is only required by respondents that are unable to
+account for electricity known to be used to store energy as described in the previous paragraph.
+
+In cases when electricity from the system is known to be used to store energy (via pumped storage, batteries or other energy
+storage devices), but cannot be excluded from the actual demand reported on Form EIA-930, report the hourly electricity from
+the system that was known to be used to store energy using data code “DS”.
+
+NG = net generation. This value should usually be positive. However, negative values may be reported for hours when there is
+net energy storage. Also, station use for a generation-only balancing authority that exceeds gross output will yield negative net
+generation.
+
+In cases when electricity from the system is known to be used to store energy (via pumped storage, batteries or other energy
+storage devices) this electricity should be excluded from the actual demand reported on Form EIA-930 and instead be included
+as a negative contribution to net generation.
+
+Load resources acting as “generation” by agreeing to reduce load in exchange for financial compensation should not be included
+in the reported net generation.
+
+FLOW = net metered tie line flow. This value can be positive or negative. Positive net flows indicate that the electricity is flowing
+out of the respondent’s balancing authority. Negative net flows indicate that the electricity is flowing into the respondent’s
+balancing authority.
+
+Data Code: This field is used to further specify the data being reported for Data Types “D,” “NG,” and “FLOW.” Except as noted
+below, all Data Codes pertain to the daily file only.
+
+For Data Type “D” - Use “SYS” when reporting total actual demand (on both the daily and same-day files). Use “YY[Y][Y]”
+respondent-specified sub-region codes when reporting demand by sub-region.
+
+
+
+                                Form EIA-930 Hourly and Daily Balancing Authority Operations Report
+                                                                                                                  Form Approved
+                                                 U.S. Department of Energy
+                                                                                                              OMB No. 1905-0129
+                                                1000 Independence Ave., SW
+                                                   Washington, DC 20585                              Expiration Date: 07/31/2029
+                                                                                                          Burden: 80 annual hours
+
+
+
+For Data Type “NG” - Use “SYS” when reporting total net generation. Use “ZZ[Z]” codes below when reporting net generation
+by energy source:
+
+
+     COL - coal
+     NG - natural gas
+     NUC - nuclear
+     OIL - all petroleum products
+     WAT - hydro (excluding pumped storage*)
+     PS - pumped storage
+     SUN - solar without integrated battery storage
+     SNB - solar with integrated battery storage
+     WND - wind without integrated battery storage
+     WNB - wind with integrated battery storage
+     BAT - battery storage
+     OES - other energy storage
+     GEO - geothermal
+     OTH - all other energy sources
+     UNK - unknown
+
+
+
+*Hydro: If pumped storage cannot be distinguished from conventional hydroelectric generation, then combine the two energy
+sources and report as WAT. In cases of combined reporting: for hours when storage exceeds generation, report the net storage
+as a negative net generation for the hour; for hours when generation exceeds storage, report the net generation as a positive
+net generation for the hour.
+
+Pumped storage: For hours when pumped storage units store more electricity than they generate, report the net storage as a
+negative net generation for the hour. For hours when pumped storage units generate more electricity than they store, report
+the net generation as a positive net generation for the hour.
+
+Batteries: For hours when batteries or other energy storage devices store more electricity than they generate, report the net
+storage as a negative net generation for the hour. For hours when batteries or other energy storage devices generate more
+electricity than they store, report the net generation as a positive net generation for the hour.
+
+Dual-fuel or multiple fuel generators: For dual-fuel generators (which can switch from one fuel to another), use the energy
+source code for the actual fuel used if known, otherwise use the energy source code for the primary fuel of the generator. For
+multiple fuel generators (which can use multiple fuels simultaneously), use the energy source codes to report generation from
+each fuel used if known, otherwise use the energy source code for the primary fuel of the generator for the entire amount of
+generation.
+
+Unknown: For dual-fuel or multiple fuel generators do not report the energy source as unknown. See the guidance above for
+reporting dual-fuel or multiple fuel generators.
+
+Total Net Generation: For hours when storage devices such as pumped storages or batteries store more electricity than the
+entire system generates, report the net storage as a negative net generation for the hour. For hours when storage devices such
+as pumped storages or batteries store less electricity than the entire system generates, report net generation as a positive net
+generation for the hour.
+
+Confidentiality requirements: In cases where there are three or fewer generators in an energy source category, and tariffs or
+other agreements require this information to be masked, use the “other” category (“OTH”) for this generation.
+
+
+
+
+                               Form EIA-930 Hourly and Daily Balancing Authority Operations Report
+                                                                                                                        Form Approved
+                                                    U.S. Department of Energy
+                                                                                                                    OMB No. 1905-0129
+                                                   1000 Independence Ave., SW
+                                                      Washington, DC 20585                                 Expiration Date: 07/31/2029
+                                                                                                                Burden: 80 annual hours
+
+
+
+For Data Type “FLOW” - Use “SYS” when reporting total net metered tie line flow. Use “XX[X][X]” balancing authority codes for
+the receiving/supplying balancing authority when reporting net metered tie line flow with directly, physically connected
+balancing authorities.
+
+Data Date: Report the local date associated with the data being reported using the day-of-year (DDDYYYY) format. For the
+same-day file, the Data Date will be the day that is currently being reported in the file. For the daily file, the Data Date will differ
+for each Data Type reported in the file.
+
+For example, in the daily file submission for March 1, 2015 (0602015), the Data Dates would be:
+
+•        0602015 for UTC0 and DF
+
+•        0592015 for UTC1, D-SYS, DR, NG-SYS, NG-ZZ[Z], and FLOW-SYS
+
+•        0582015 for UTC2, FLOW-XX[X][X]
+
+•        For UTCD and D-YY[Y][Y], it will depend on the respondent’s timing of reporting this data
+
+
+
+UTC Offset: Report a value between 4 and 8 that represents the difference between UTC time and the respondent’s local time.
+Use the reference table below to determine the UTC offset.
+
+         COORDINATED UNIVERSAL TIME (UTC) OFFSET
+           U.S. Time          Standard       Daylight Savings
+            Zones               Time               Time
+
+            Eastern              5                   4
+            Central              6                   5
+
+           Mountain              7                   6
+
+             Pacific             8                   7
+
+
+Note: When reporting data for the second Sunday in March when Standard Time turns to Daylight Saving Time, use the UTC
+offset for Daylight Saving Time. And when reporting data for the first Sunday in November when time turns from Daylight
+Saving Time to Standard Time, use the UTC offset for Standard Time. Refer to the daily and same-day examples of the time
+change transitions on the EIA Website.
+
+HR#: Represents fields for reporting one value for each sequential hour of the day in respondent’s local time (e.g., HR5 is hour
+ending 5 a.m.). HR25 field is always included in the file layout but should only be used to report data for the first Sunday in
+November when time turns from Daylight Saving Time to Standard Time resulting in a 25th hour on that date. On the second
+Sunday in March when Standard Time turns to Daylight Saving Time, HR24 will be blank because there will only be 23 hours of
+data to report.
+
+EXAMPLE OF REPORTING ENERGY STORAGE
+EXAMPLE 1:
+
+Consider the following scenario where a reporting entity has a solar generating resource and an unintegrated battery storage.
+Suppose the solar resource generates 20 MWh of electricity in an hour, 3 MWh of the generated electricity is used to charge the
+battery, 12 MWh of load is served by the reporting entity (in addition to the 3 MWh used to charge the battery), and 5 MWh is
+exported to a neighboring balancing authority.
+
+
+
+                                 Form EIA-930 Hourly and Daily Balancing Authority Operations Report
+                                                                                                                  Form Approved
+                                                 U.S. Department of Energy
+                                                                                                              OMB No. 1905-0129
+                                                1000 Independence Ave., SW
+                                                   Washington, DC 20585                              Expiration Date: 07/31/2029
+                                                                                                          Burden: 80 annual hours
+
+
+
+In this scenario,
+    •     Net generation (NG) should be reported as 17 MWh (20 MWh generated minus 3 MWh used for energy storage)
+    •     Demand should be reported as 12 MWh (do not include the 3 MWh of electricity used for energy storage)
+    •     Net metered tie line flow (FLOW) should be reported as 5 MWh.
+    •     Reported actual demand know n to be used to store energy (DS) should be omitted from reporting
+    •     Solar generation (Data Code SUN) should be reported as 20 MWh
+    •     Battery generation (Data Code BAT) should be reported as -3 MWh
+
+
+Respondents unable to account for electricity known to be used to store energy as illustrated above, may alternatively report as
+follows:
+    • Demand may be reported as 15 MWh (12 MWh of traditional load plus 3 MWh of electricity used for energy storage)
+    • Net generation (NG) may be reported as 20 MWh (The full 20 MWh of generation is reported if energy storage cannot
+         be excluded minus 3 MWh used for energy storage)
+    • Net metered tie line flow (FLOW) should be reported as 5 MWh.
+    • Reported actual demand know n to be used to store energy (DS) may be reported as 3 MWh.
+    • Solar generation (Data Code SUN) should be reported as 20 MWh
+    • Battery generation (Data Code BAT) may be omitted
+
+EXAMPLE 2:
+
+Consider the following scenario where a reporting entity has a solar generating resource and an integrated battery storage.
+Suppose the solar resource generates 20 MWh of electricity in an hour, 3 MWh of the generated electricity is used to charge the
+integrated battery, 12 MWH of load is served by the reporting entity (in addition to the 3 MWH used to charge the battery), and
+5 MWh is exported to a neighboring balancing authority.
+
+In this scenario,
+    •     Net generation (NG) should be reported as 17 MWh (20 MWh generated minus 3 MWh used for energy storage)
+    •     Demand should be reported as 12 MWh (do not include the 3 MWh of electricity used for energy storage)
+    •     Net metered tie line flow (FLOW) should be reported as 5 MWh.
+    •     Reported actual demand know n to be used to store energy (DS) should be omitted from reporting
+    •     Solar generation with integrated battery storage (Data Code SNB) should be reported as 17 MWh
+
+Respondents unable to account for electricity know n to be used to store energy as illustrated above, may alternatively report
+as follows:
+    • Demand may be reported as 15 MWh (12 MWh of traditional load plus 3 MWh of electricity used for energy storage)
+    • Net generation (NG) may be reported as 20 MWh (The full 20 MWh of generation is reported if energy storage cannot
+        be excluded minus 3 MWh used for energy storage)
+    • Net metered tie line flow (FLOW) should be reported as 5 MWh.
+    • Reported actual demand known to be used to store energy (DS) may be reported as 3 MWh.
+    • Solar generation (Data Code SUN) may be reported as 20 MWh
+    • Battery generation (Data Code BAT) may be omitted.
+
+
+DATA QUALITY
+
+Expected data revisions: When respondents cannot report finalized data by the due date and time, they should submit their
+best estimates on schedule and correct the data with a resubmission within 3 days or as soon as the actual data is available. For
+example, if the initial reporting of total net metered tie line flow needs to be revised because of adjustments made during the
+check-out process with neighboring balancing authorities, then a new daily files should resubmitted. In cases where changes are
+routinely made respondents should make arrangements with EIA to schedule a regular resubmission process.
+
+                               Form EIA-930 Hourly and Daily Balancing Authority Operations Report
+                                                                                                                   Form Approved
+                                                  U.S. Department of Energy
+                                                                                                               OMB No. 1905-0129
+                                                 1000 Independence Ave., SW
+                                                    Washington, DC 20585                              Expiration Date: 07/31/2029
+                                                                                                           Burden: 80 annual hours
+
+
+
+
+Unexpected data revisions: When unexpected reporting errors exceed 10 MWh for any hour, resubmit corrected data to
+address the imbalance within 30 days. If such corrections cannot be made within 30 days, respondents should make
+arrangements with EIA to discuss an alternative resubmission timeline.
+
+Energy balance: The values reported for total actual demand, total net generation, and total net metered tie line flow are
+expected to balance hourly (i.e., the sum of demand and net metered tie line flow is expected to equal net generation).
+
+For hours when electricity from the system is known to be used to store energy (via pumped storage, batteries or other energy
+storage devices), the energy balance relationship should also continue to balance. In such hours the actual demand value should
+have been lowered by the amount of electricity consumed for storage purposes and a corresponding negative contribution
+should have been reflected in the reported net generation.
+
+Dem and forecast: If you do not produce a day-ahead demand forecast in the normal course of business that is directly
+comparable to actual demand as defined for this collection (see discussion of physical vs. commercial operations below), you
+are not required to produce a consistent demand forecast for the purposes of EIA-930 reporting. Please report the day-ahead
+demand forecast generated in the normal course of business.
+
+Demand: To the extent possible, the sum of the values reported for actual demand by sub-region is expected to equal reported
+total actual demand each hour. Where discrepancies exist due to different methods for calculating these two data elements,
+please provide a short description of the methods used.
+
+Net generation: To the extent possible, the sum of the values reported for net generation by energy source is expected to equal
+reported total net generation each hour. Where discrepancies exist due to different methods for calculating these two data
+elements, please provide a short description of the methods used.
+
+Net metered tie line flows: To the extent possible, the sum of the values reported for net metered tie line flow with each
+directly, physically connected balancing authority is expected to equal reported total net metered tie line flow each hour.
+Where discrepancies exist due to different methods for calculating these two data elements, please provide a short description
+of the methods used. Reported net metered tie line flow with each directly, physically connected balancing authority is
+expected to match that reported by the corresponding balancing authority.
+
+Anomalous data: Please suppress anomalous data values such as erroneous zero and large positive or negative values in same-
+day files. Submit the same-day file on schedule with the appropriate date-time stamp for the reporting hour but leave the
+demand value blank. Replace the blank demand value with a valid value as soon as possible in subsequent same-day file
+submissions. Do not report zeros for any energy values unless they are valid zeros.
+
+Please suppress anomalous data values such as erroneous zero and large positive or negative values in daily files. Submit the
+daily file on schedule with the appropriate date-time stamp for the reporting hour but leave the energy value blank. Replace the
+blank with a valid value as soon as possible and resubmit the daily file. Do not report zeros for any energy values unless they are
+valid zeros.
+
+Physical vs. commercial operations: With the EIA-930 data collection EIA is attempting to represent electric system operations
+in as purely a physical way as possible. Ownership and dispatch are irrelevant to the determination of what is associated with a
+balancing authority.
+
+Therefore, dynamic transfer arrangements implemented as either pseudo-ties or dynamic schedules are to be ignored in or
+excluded from reporting, meaning that metered tie line flows are not to be adjusted and actual demand and net generation
+should reflect only demand and net generation occurring within the physical tie line boundaries of the balancing authority.
+
+
+
+                               Form EIA-930 Hourly and Daily Balancing Authority Operations Report
+                                                                                                                   Form Approved
+                                                  U.S. Department of Energy
+                                                                                                               OMB No. 1905-0129
+                                                 1000 Independence Ave., SW
+                                                    Washington, DC 20585                              Expiration Date: 07/31/2029
+                                                                                                           Burden: 80 annual hours
+
+
+
+Generators physically embedded within the tie line boundary of your balancing authority, but owned, operated, or dispatched
+by another balancing authority, are to be included, for the purposes of the EIA-930, in your reporting of net generation. The
+transmission connection of that plant to your system is not considered to be a tie line boundary.
+
+Similarly, if your balancing authority is supplied from a generator that is owned, operated, or dispatched by you, but is located
+outside the tie line boundary of your balancing authority, it is not to be included, for the purposes of the EIA-930, in the
+reporting of your net generation. The transmission connection(s) of isolated plants physically embedded within the tie line
+boundary of another balancing authority is not considered to be a tie line boundary.
+
+Ultimate customer load that is physically embedded within the tie line boundary of your balancing authority, but is supplied by
+another balancing authority, is to be included, for the purposes of the EIA-930, in your reporting of actual demand. The
+transmission connection of that load area to your system is not considered to be a tie line boundary.
+
+Similarly, if your balancing authority supplies electricity to ultimate customer load outside the tie line boundary of your
+balancing authority, it is not to be included, for the purposes of the EIA-930, in the reporting of your actual demand. The
+transmission connection(s) to load areas within the tie line boundary of another balancing authority is not considered to be a tie
+line boundary.
+
+If ultimate customer load is supplied through your system and the load area is not physically embedded in another balancing
+authority, include that load in your actual demand, even though you consider the load area outside your metered tie line
+boundary.
+
+In situations where it is not possible or practical to exclude all dynamic transfer arrangements implemented as either pseudo-
+ties or dynamic schedules in the reporting of generation, demand, and interchange, then it is the responsibility of the impacted
+balancing authorities to reach an agreement with their counterparts on a consistent reporting of generation, demand, and
+interchange. Any such agreements between balancing authorities should be communicated to EIA. To simplify the
+implementation of these agreements and to reduce the burden of all parties involved, EIA encourages balancing authorities to
+consider using other existing industry conventions that may already be in place. Once an agreement has been communicated to
+EIA, none of the impacted balancing authorities should alter that reporting agreement without mutual agreement of all
+impacted balancing authorities.
+
+
+
+
+                               Form EIA-930 Hourly and Daily Balancing Authority Operations Report
+
