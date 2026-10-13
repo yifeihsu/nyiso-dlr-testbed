@@ -1,0 +1,4043 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T23:35:05.691860+00:00",
+  "baseline_HEAD": "3d2d3104879815180b82804861788dd132aed729",
+  "scope": "Independent mathematical feasibility/eligibility and saved-point recovery audit, not a new PF/OPF or compact solver validation",
+  "requested_retained_interface_buses": 148,
+  "extra_nodes_required_for_current_fixed_control_model": 0,
+  "retained148_is_user_chosen_interface_not_proved_globally_minimal": true,
+  "all43_station_nodes_and75_numerical_nodes_eliminable_in_current_passive_model": true,
+  "dated_Dover_regulated_auxiliary_eliminable_with_fixed_taps": true,
+  "original_detailed_model_operating_and_cable_classification_limits_preserved_not_repaired": true,
+  "results": [
+    {
+      "label": "topology_pre_may",
+      "full_buses": 266,
+      "retained_buses": 148,
+      "eliminated_buses": 118,
+      "eliminated_ids": [
+        10079,
+        10547,
+        10557,
+        10560,
+        10561,
+        10567,
+        10588,
+        10594,
+        10595,
+        10596,
+        10597,
+        10598,
+        10600,
+        10601,
+        10620,
+        10626,
+        10628,
+        10995,
+        10996,
+        11132,
+        11134,
+        11136,
+        11493,
+        11497,
+        11501,
+        11502,
+        11503,
+        11506,
+        11529,
+        11532,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        61701,
+        61801,
+        62101,
+        62201,
+        62202,
+        62501,
+        63601,
+        63701,
+        64001,
+        64601,
+        64901,
+        65101,
+        65401,
+        65501,
+        67401,
+        67601,
+        69601,
+        69602,
+        69901,
+        70801,
+        70802,
+        70901,
+        70902,
+        71001,
+        71002,
+        71401,
+        72101,
+        72102,
+        72301,
+        72401,
+        72801,
+        72901,
+        73101,
+        74701,
+        74702,
+        74703,
+        74704,
+        75101,
+        75102,
+        75103,
+        76301,
+        76302,
+        76303,
+        77601,
+        77602,
+        77701,
+        77801,
+        78001,
+        78301,
+        78401,
+        78402,
+        78403,
+        78501,
+        78502,
+        78503,
+        78504,
+        78505,
+        78701,
+        78702,
+        78901,
+        78902,
+        79501,
+        79502,
+        79503,
+        79504,
+        79505,
+        79506,
+        79601,
+        79602,
+        79603,
+        82401,
+        82501,
+        91901,
+        92001,
+        100201
+      ],
+      "eliminated_generator_or_DC_or_PV_or_REF_buses": 0,
+      "eliminated_bus_P_Q_zero": true,
+      "fixed_shunt_buses_eliminated": [
+        10079,
+        10557,
+        10594,
+        10596,
+        10601,
+        11132,
+        11134,
+        11136,
+        11502,
+        20005,
+        20007,
+        20014
+      ],
+      "eliminated_block_condition_2": 31987.853895826454,
+      "eliminated_block_min_singular_value_pu": 0.4570948141839609,
+      "eliminated_components": [
+        {
+          "eliminated_size": 6,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 37,
+          "retained_connections": 7
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 4,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 5,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        }
+      ],
+      "all_eliminated_components_retain_electrical_connection": true,
+      "maximum_random_phasor_eliminated_current_pu": 1.9426815345735873e-12,
+      "maximum_random_phasor_retained_current_error_pu": 1.4435213864144711e-12,
+      "maximum_random_phasor_branch_current_operator_error_pu": 1.0854851397666218e-12,
+      "full_Y_complex_transpose_asymmetry": 0.0,
+      "reduced_Y_complex_transpose_asymmetry": 5.684341886080802e-14,
+      "active_nonzero_phase_shift_branches": 0,
+      "phase_taps_and_shunts_included_in_complex_Y": true
+    },
+    {
+      "label": "topology_may21",
+      "full_buses": 266,
+      "retained_buses": 148,
+      "eliminated_buses": 118,
+      "eliminated_ids": [
+        10079,
+        10547,
+        10557,
+        10560,
+        10561,
+        10567,
+        10588,
+        10594,
+        10595,
+        10596,
+        10597,
+        10598,
+        10600,
+        10601,
+        10620,
+        10626,
+        10628,
+        10995,
+        10996,
+        11132,
+        11134,
+        11136,
+        11493,
+        11497,
+        11501,
+        11502,
+        11503,
+        11506,
+        11529,
+        11532,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        61701,
+        61801,
+        62101,
+        62201,
+        62202,
+        62501,
+        63601,
+        63701,
+        64001,
+        64601,
+        64901,
+        65101,
+        65401,
+        65501,
+        67401,
+        67601,
+        69601,
+        69602,
+        69901,
+        70801,
+        70802,
+        70901,
+        70902,
+        71001,
+        71002,
+        71401,
+        72101,
+        72102,
+        72301,
+        72401,
+        72801,
+        72901,
+        73101,
+        74701,
+        74702,
+        74703,
+        74704,
+        75101,
+        75102,
+        75103,
+        76301,
+        76302,
+        76303,
+        77601,
+        77602,
+        77701,
+        77801,
+        78001,
+        78301,
+        78401,
+        78402,
+        78403,
+        78501,
+        78502,
+        78503,
+        78504,
+        78505,
+        78701,
+        78702,
+        78901,
+        78902,
+        79501,
+        79502,
+        79503,
+        79504,
+        79505,
+        79506,
+        79601,
+        79602,
+        79603,
+        82401,
+        82501,
+        91901,
+        92001,
+        100201
+      ],
+      "eliminated_generator_or_DC_or_PV_or_REF_buses": 0,
+      "eliminated_bus_P_Q_zero": true,
+      "fixed_shunt_buses_eliminated": [
+        10079,
+        10557,
+        10594,
+        10596,
+        10601,
+        11132,
+        11134,
+        11136,
+        11502,
+        20005,
+        20007,
+        20014
+      ],
+      "eliminated_block_condition_2": 31987.43169816137,
+      "eliminated_block_min_singular_value_pu": 0.4571008629252784,
+      "eliminated_components": [
+        {
+          "eliminated_size": 6,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 38,
+          "retained_connections": 7
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 4,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 5,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        }
+      ],
+      "all_eliminated_components_retain_electrical_connection": true,
+      "maximum_random_phasor_eliminated_current_pu": 3.749942721349417e-12,
+      "maximum_random_phasor_retained_current_error_pu": 1.1453851927708648e-12,
+      "maximum_random_phasor_branch_current_operator_error_pu": 1.396428431027798e-12,
+      "full_Y_complex_transpose_asymmetry": 0.0,
+      "reduced_Y_complex_transpose_asymmetry": 1.705672600018858e-13,
+      "active_nonzero_phase_shift_branches": 0,
+      "phase_taps_and_shunts_included_in_complex_Y": true
+    },
+    {
+      "label": "topology_may30",
+      "full_buses": 266,
+      "retained_buses": 148,
+      "eliminated_buses": 118,
+      "eliminated_ids": [
+        10079,
+        10547,
+        10557,
+        10560,
+        10561,
+        10567,
+        10588,
+        10594,
+        10595,
+        10596,
+        10597,
+        10598,
+        10600,
+        10601,
+        10620,
+        10626,
+        10628,
+        10995,
+        10996,
+        11132,
+        11134,
+        11136,
+        11493,
+        11497,
+        11501,
+        11502,
+        11503,
+        11506,
+        11529,
+        11532,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        61701,
+        61801,
+        62101,
+        62201,
+        62202,
+        62501,
+        63601,
+        63701,
+        64001,
+        64601,
+        64901,
+        65101,
+        65401,
+        65501,
+        67401,
+        67601,
+        69601,
+        69602,
+        69901,
+        70801,
+        70802,
+        70901,
+        70902,
+        71001,
+        71002,
+        71401,
+        72101,
+        72102,
+        72301,
+        72401,
+        72801,
+        72901,
+        73101,
+        74701,
+        74702,
+        74703,
+        74704,
+        75101,
+        75102,
+        75103,
+        76301,
+        76302,
+        76303,
+        77601,
+        77602,
+        77701,
+        77801,
+        78001,
+        78301,
+        78401,
+        78402,
+        78403,
+        78501,
+        78502,
+        78503,
+        78504,
+        78505,
+        78701,
+        78702,
+        78901,
+        78902,
+        79501,
+        79502,
+        79503,
+        79504,
+        79505,
+        79506,
+        79601,
+        79602,
+        79603,
+        82401,
+        82501,
+        91901,
+        92001,
+        100201
+      ],
+      "eliminated_generator_or_DC_or_PV_or_REF_buses": 0,
+      "eliminated_bus_P_Q_zero": true,
+      "fixed_shunt_buses_eliminated": [
+        10079,
+        10557,
+        10594,
+        10596,
+        10601,
+        11132,
+        11134,
+        11136,
+        11502,
+        20005,
+        20007,
+        20008,
+        20010,
+        20014
+      ],
+      "eliminated_block_condition_2": 31987.27055521613,
+      "eliminated_block_min_singular_value_pu": 0.45710316567205017,
+      "eliminated_components": [
+        {
+          "eliminated_size": 6,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 39,
+          "retained_connections": 8
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 4,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 5,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        }
+      ],
+      "all_eliminated_components_retain_electrical_connection": true,
+      "maximum_random_phasor_eliminated_current_pu": 1.9426815345735873e-12,
+      "maximum_random_phasor_retained_current_error_pu": 1.3430009581892789e-12,
+      "maximum_random_phasor_branch_current_operator_error_pu": 7.171194872501411e-13,
+      "full_Y_complex_transpose_asymmetry": 0.0,
+      "reduced_Y_complex_transpose_asymmetry": 2.847716647714797e-14,
+      "active_nonzero_phase_shift_branches": 0,
+      "phase_taps_and_shunts_included_in_complex_Y": true
+    },
+    {
+      "label": "topology_post_dover",
+      "full_buses": 267,
+      "retained_buses": 148,
+      "eliminated_buses": 119,
+      "eliminated_ids": [
+        10079,
+        10547,
+        10557,
+        10560,
+        10561,
+        10567,
+        10588,
+        10594,
+        10595,
+        10596,
+        10597,
+        10598,
+        10600,
+        10601,
+        10620,
+        10626,
+        10628,
+        10995,
+        10996,
+        11132,
+        11134,
+        11136,
+        11493,
+        11497,
+        11501,
+        11502,
+        11503,
+        11506,
+        11529,
+        11532,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        21001,
+        61701,
+        61801,
+        62101,
+        62201,
+        62202,
+        62501,
+        63601,
+        63701,
+        64001,
+        64601,
+        64901,
+        65101,
+        65401,
+        65501,
+        67401,
+        67601,
+        69601,
+        69602,
+        69901,
+        70801,
+        70802,
+        70901,
+        70902,
+        71001,
+        71002,
+        71401,
+        72101,
+        72102,
+        72301,
+        72401,
+        72801,
+        72901,
+        73101,
+        74701,
+        74702,
+        74703,
+        74704,
+        75101,
+        75102,
+        75103,
+        76301,
+        76302,
+        76303,
+        77601,
+        77602,
+        77701,
+        77801,
+        78001,
+        78301,
+        78401,
+        78402,
+        78403,
+        78501,
+        78502,
+        78503,
+        78504,
+        78505,
+        78701,
+        78702,
+        78901,
+        78902,
+        79501,
+        79502,
+        79503,
+        79504,
+        79505,
+        79506,
+        79601,
+        79602,
+        79603,
+        82401,
+        82501,
+        91901,
+        92001,
+        100201
+      ],
+      "eliminated_generator_or_DC_or_PV_or_REF_buses": 0,
+      "eliminated_bus_P_Q_zero": true,
+      "fixed_shunt_buses_eliminated": [
+        10079,
+        10557,
+        10594,
+        10596,
+        10601,
+        11132,
+        11134,
+        11136,
+        11502,
+        20005,
+        20007,
+        20008,
+        20010,
+        20014
+      ],
+      "eliminated_block_condition_2": 31987.270555224608,
+      "eliminated_block_min_singular_value_pu": 0.45710316567192905,
+      "eliminated_components": [
+        {
+          "eliminated_size": 6,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 39,
+          "retained_connections": 8
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 4,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 5,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        }
+      ],
+      "all_eliminated_components_retain_electrical_connection": true,
+      "maximum_random_phasor_eliminated_current_pu": 2.317122215203005e-12,
+      "maximum_random_phasor_retained_current_error_pu": 1.7684522276642355e-12,
+      "maximum_random_phasor_branch_current_operator_error_pu": 2.7569338563221485e-12,
+      "full_Y_complex_transpose_asymmetry": 0.0,
+      "reduced_Y_complex_transpose_asymmetry": 2.847716647714797e-14,
+      "active_nonzero_phase_shift_branches": 0,
+      "phase_taps_and_shunts_included_in_complex_Y": true
+    },
+    {
+      "label": "saved_profile_h523",
+      "full_buses": 266,
+      "retained_buses": 148,
+      "eliminated_buses": 118,
+      "eliminated_ids": [
+        10079,
+        10547,
+        10557,
+        10560,
+        10561,
+        10567,
+        10588,
+        10594,
+        10595,
+        10596,
+        10597,
+        10598,
+        10600,
+        10601,
+        10620,
+        10626,
+        10628,
+        10995,
+        10996,
+        11132,
+        11134,
+        11136,
+        11493,
+        11497,
+        11501,
+        11502,
+        11503,
+        11506,
+        11529,
+        11532,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        61701,
+        61801,
+        62101,
+        62201,
+        62202,
+        62501,
+        63601,
+        63701,
+        64001,
+        64601,
+        64901,
+        65101,
+        65401,
+        65501,
+        67401,
+        67601,
+        69601,
+        69602,
+        69901,
+        70801,
+        70802,
+        70901,
+        70902,
+        71001,
+        71002,
+        71401,
+        72101,
+        72102,
+        72301,
+        72401,
+        72801,
+        72901,
+        73101,
+        74701,
+        74702,
+        74703,
+        74704,
+        75101,
+        75102,
+        75103,
+        76301,
+        76302,
+        76303,
+        77601,
+        77602,
+        77701,
+        77801,
+        78001,
+        78301,
+        78401,
+        78402,
+        78403,
+        78501,
+        78502,
+        78503,
+        78504,
+        78505,
+        78701,
+        78702,
+        78901,
+        78902,
+        79501,
+        79502,
+        79503,
+        79504,
+        79505,
+        79506,
+        79601,
+        79602,
+        79603,
+        82401,
+        82501,
+        91901,
+        92001,
+        100201
+      ],
+      "eliminated_generator_or_DC_or_PV_or_REF_buses": 0,
+      "eliminated_bus_P_Q_zero": true,
+      "fixed_shunt_buses_eliminated": [
+        10079,
+        10557,
+        10594,
+        10596,
+        10601,
+        11132,
+        11134,
+        11136,
+        11502,
+        20005,
+        20007,
+        20014
+      ],
+      "eliminated_block_condition_2": 31987.853895826454,
+      "eliminated_block_min_singular_value_pu": 0.4570948141839609,
+      "eliminated_components": [
+        {
+          "eliminated_size": 6,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 37,
+          "retained_connections": 7
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 4,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 5,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        }
+      ],
+      "all_eliminated_components_retain_electrical_connection": true,
+      "maximum_random_phasor_eliminated_current_pu": 1.9426815345735873e-12,
+      "maximum_random_phasor_retained_current_error_pu": 1.4435213864144711e-12,
+      "maximum_random_phasor_branch_current_operator_error_pu": 1.0854851397666218e-12,
+      "full_Y_complex_transpose_asymmetry": 0.0,
+      "reduced_Y_complex_transpose_asymmetry": 5.684341886080802e-14,
+      "active_nonzero_phase_shift_branches": 0,
+      "phase_taps_and_shunts_included_in_complex_Y": true,
+      "saved_PF_converged": true,
+      "maximum_saved_point_voltage_recovery_error_pu": 3.1180075528693523e-14,
+      "maximum_independent_original_branch_power_error_MVA": 5.222200019851144e-11,
+      "maximum_recovered_branch_power_error_MVA": 1.1321703007446094e-10,
+      "maximum_recovered_terminal_current_error_A": 2.8200832798009412e-09,
+      "maximum_saved_point_eliminated_current_pu": 2.5351145178521795e-12,
+      "exact_recovery_does_not_certify_operating_bound_feasibility": true
+    },
+    {
+      "label": "saved_profile_h2630",
+      "full_buses": 266,
+      "retained_buses": 148,
+      "eliminated_buses": 118,
+      "eliminated_ids": [
+        10079,
+        10547,
+        10557,
+        10560,
+        10561,
+        10567,
+        10588,
+        10594,
+        10595,
+        10596,
+        10597,
+        10598,
+        10600,
+        10601,
+        10620,
+        10626,
+        10628,
+        10995,
+        10996,
+        11132,
+        11134,
+        11136,
+        11493,
+        11497,
+        11501,
+        11502,
+        11503,
+        11506,
+        11529,
+        11532,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        61701,
+        61801,
+        62101,
+        62201,
+        62202,
+        62501,
+        63601,
+        63701,
+        64001,
+        64601,
+        64901,
+        65101,
+        65401,
+        65501,
+        67401,
+        67601,
+        69601,
+        69602,
+        69901,
+        70801,
+        70802,
+        70901,
+        70902,
+        71001,
+        71002,
+        71401,
+        72101,
+        72102,
+        72301,
+        72401,
+        72801,
+        72901,
+        73101,
+        74701,
+        74702,
+        74703,
+        74704,
+        75101,
+        75102,
+        75103,
+        76301,
+        76302,
+        76303,
+        77601,
+        77602,
+        77701,
+        77801,
+        78001,
+        78301,
+        78401,
+        78402,
+        78403,
+        78501,
+        78502,
+        78503,
+        78504,
+        78505,
+        78701,
+        78702,
+        78901,
+        78902,
+        79501,
+        79502,
+        79503,
+        79504,
+        79505,
+        79506,
+        79601,
+        79602,
+        79603,
+        82401,
+        82501,
+        91901,
+        92001,
+        100201
+      ],
+      "eliminated_generator_or_DC_or_PV_or_REF_buses": 0,
+      "eliminated_bus_P_Q_zero": true,
+      "fixed_shunt_buses_eliminated": [
+        10079,
+        10557,
+        10594,
+        10596,
+        10601,
+        11132,
+        11134,
+        11136,
+        11502,
+        20005,
+        20007,
+        20014
+      ],
+      "eliminated_block_condition_2": 31987.853895826454,
+      "eliminated_block_min_singular_value_pu": 0.4570948141839609,
+      "eliminated_components": [
+        {
+          "eliminated_size": 6,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 37,
+          "retained_connections": 7
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 4,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 5,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        }
+      ],
+      "all_eliminated_components_retain_electrical_connection": true,
+      "maximum_random_phasor_eliminated_current_pu": 1.9426815345735873e-12,
+      "maximum_random_phasor_retained_current_error_pu": 1.4435213864144711e-12,
+      "maximum_random_phasor_branch_current_operator_error_pu": 1.0854851397666218e-12,
+      "full_Y_complex_transpose_asymmetry": 0.0,
+      "reduced_Y_complex_transpose_asymmetry": 5.684341886080802e-14,
+      "active_nonzero_phase_shift_branches": 0,
+      "phase_taps_and_shunts_included_in_complex_Y": true,
+      "saved_PF_converged": true,
+      "maximum_saved_point_voltage_recovery_error_pu": 9.326672997489827e-14,
+      "maximum_independent_original_branch_power_error_MVA": 7.064074635892945e-11,
+      "maximum_recovered_branch_power_error_MVA": 1.3738006729569276e-10,
+      "maximum_recovered_terminal_current_error_A": 3.3034952879801973e-09,
+      "maximum_saved_point_eliminated_current_pu": 3.038332582694413e-12,
+      "exact_recovery_does_not_certify_operating_bound_feasibility": true
+    },
+    {
+      "label": "saved_profile_h4000",
+      "full_buses": 266,
+      "retained_buses": 148,
+      "eliminated_buses": 118,
+      "eliminated_ids": [
+        10079,
+        10547,
+        10557,
+        10560,
+        10561,
+        10567,
+        10588,
+        10594,
+        10595,
+        10596,
+        10597,
+        10598,
+        10600,
+        10601,
+        10620,
+        10626,
+        10628,
+        10995,
+        10996,
+        11132,
+        11134,
+        11136,
+        11493,
+        11497,
+        11501,
+        11502,
+        11503,
+        11506,
+        11529,
+        11532,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        61701,
+        61801,
+        62101,
+        62201,
+        62202,
+        62501,
+        63601,
+        63701,
+        64001,
+        64601,
+        64901,
+        65101,
+        65401,
+        65501,
+        67401,
+        67601,
+        69601,
+        69602,
+        69901,
+        70801,
+        70802,
+        70901,
+        70902,
+        71001,
+        71002,
+        71401,
+        72101,
+        72102,
+        72301,
+        72401,
+        72801,
+        72901,
+        73101,
+        74701,
+        74702,
+        74703,
+        74704,
+        75101,
+        75102,
+        75103,
+        76301,
+        76302,
+        76303,
+        77601,
+        77602,
+        77701,
+        77801,
+        78001,
+        78301,
+        78401,
+        78402,
+        78403,
+        78501,
+        78502,
+        78503,
+        78504,
+        78505,
+        78701,
+        78702,
+        78901,
+        78902,
+        79501,
+        79502,
+        79503,
+        79504,
+        79505,
+        79506,
+        79601,
+        79602,
+        79603,
+        82401,
+        82501,
+        91901,
+        92001,
+        100201
+      ],
+      "eliminated_generator_or_DC_or_PV_or_REF_buses": 0,
+      "eliminated_bus_P_Q_zero": true,
+      "fixed_shunt_buses_eliminated": [
+        10079,
+        10557,
+        10594,
+        10596,
+        10601,
+        11132,
+        11134,
+        11136,
+        11502,
+        20005,
+        20007,
+        20008,
+        20010,
+        20014
+      ],
+      "eliminated_block_condition_2": 31987.27055521613,
+      "eliminated_block_min_singular_value_pu": 0.45710316567205017,
+      "eliminated_components": [
+        {
+          "eliminated_size": 6,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 39,
+          "retained_connections": 8
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 4,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 5,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        }
+      ],
+      "all_eliminated_components_retain_electrical_connection": true,
+      "maximum_random_phasor_eliminated_current_pu": 1.9426815345735873e-12,
+      "maximum_random_phasor_retained_current_error_pu": 1.3430009581892789e-12,
+      "maximum_random_phasor_branch_current_operator_error_pu": 7.171194872501411e-13,
+      "full_Y_complex_transpose_asymmetry": 0.0,
+      "reduced_Y_complex_transpose_asymmetry": 2.847716647714797e-14,
+      "active_nonzero_phase_shift_branches": 0,
+      "phase_taps_and_shunts_included_in_complex_Y": true,
+      "saved_PF_converged": true,
+      "maximum_saved_point_voltage_recovery_error_pu": 3.933885838182339e-13,
+      "maximum_independent_original_branch_power_error_MVA": 4.748390310104463e-11,
+      "maximum_recovered_branch_power_error_MVA": 7.889429245146589e-10,
+      "maximum_recovered_terminal_current_error_A": 2.019078994111909e-09,
+      "maximum_saved_point_eliminated_current_pu": 1.4190149542984103e-11,
+      "exact_recovery_does_not_certify_operating_bound_feasibility": true
+    },
+    {
+      "label": "saved_profile_h4194",
+      "full_buses": 266,
+      "retained_buses": 148,
+      "eliminated_buses": 118,
+      "eliminated_ids": [
+        10079,
+        10547,
+        10557,
+        10560,
+        10561,
+        10567,
+        10588,
+        10594,
+        10595,
+        10596,
+        10597,
+        10598,
+        10600,
+        10601,
+        10620,
+        10626,
+        10628,
+        10995,
+        10996,
+        11132,
+        11134,
+        11136,
+        11493,
+        11497,
+        11501,
+        11502,
+        11503,
+        11506,
+        11529,
+        11532,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        61701,
+        61801,
+        62101,
+        62201,
+        62202,
+        62501,
+        63601,
+        63701,
+        64001,
+        64601,
+        64901,
+        65101,
+        65401,
+        65501,
+        67401,
+        67601,
+        69601,
+        69602,
+        69901,
+        70801,
+        70802,
+        70901,
+        70902,
+        71001,
+        71002,
+        71401,
+        72101,
+        72102,
+        72301,
+        72401,
+        72801,
+        72901,
+        73101,
+        74701,
+        74702,
+        74703,
+        74704,
+        75101,
+        75102,
+        75103,
+        76301,
+        76302,
+        76303,
+        77601,
+        77602,
+        77701,
+        77801,
+        78001,
+        78301,
+        78401,
+        78402,
+        78403,
+        78501,
+        78502,
+        78503,
+        78504,
+        78505,
+        78701,
+        78702,
+        78901,
+        78902,
+        79501,
+        79502,
+        79503,
+        79504,
+        79505,
+        79506,
+        79601,
+        79602,
+        79603,
+        82401,
+        82501,
+        91901,
+        92001,
+        100201
+      ],
+      "eliminated_generator_or_DC_or_PV_or_REF_buses": 0,
+      "eliminated_bus_P_Q_zero": true,
+      "fixed_shunt_buses_eliminated": [
+        10079,
+        10557,
+        10594,
+        10596,
+        10601,
+        11132,
+        11134,
+        11136,
+        11502,
+        20005,
+        20007,
+        20008,
+        20010,
+        20014
+      ],
+      "eliminated_block_condition_2": 31987.27055521613,
+      "eliminated_block_min_singular_value_pu": 0.45710316567205017,
+      "eliminated_components": [
+        {
+          "eliminated_size": 6,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 39,
+          "retained_connections": 8
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 4,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 5,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        }
+      ],
+      "all_eliminated_components_retain_electrical_connection": true,
+      "maximum_random_phasor_eliminated_current_pu": 1.9426815345735873e-12,
+      "maximum_random_phasor_retained_current_error_pu": 1.3430009581892789e-12,
+      "maximum_random_phasor_branch_current_operator_error_pu": 7.171194872501411e-13,
+      "full_Y_complex_transpose_asymmetry": 0.0,
+      "reduced_Y_complex_transpose_asymmetry": 2.847716647714797e-14,
+      "active_nonzero_phase_shift_branches": 0,
+      "phase_taps_and_shunts_included_in_complex_Y": true,
+      "saved_PF_converged": true,
+      "maximum_saved_point_voltage_recovery_error_pu": 6.720674350360494e-14,
+      "maximum_independent_original_branch_power_error_MVA": 5.2029593303593125e-11,
+      "maximum_recovered_branch_power_error_MVA": 1.3106978500108096e-10,
+      "maximum_recovered_terminal_current_error_A": 2.800128176795372e-09,
+      "maximum_saved_point_eliminated_current_pu": 2.5724394843074972e-12,
+      "exact_recovery_does_not_certify_operating_bound_feasibility": true
+    },
+    {
+      "label": "saved_profile_h8471",
+      "full_buses": 266,
+      "retained_buses": 148,
+      "eliminated_buses": 118,
+      "eliminated_ids": [
+        10079,
+        10547,
+        10557,
+        10560,
+        10561,
+        10567,
+        10588,
+        10594,
+        10595,
+        10596,
+        10597,
+        10598,
+        10600,
+        10601,
+        10620,
+        10626,
+        10628,
+        10995,
+        10996,
+        11132,
+        11134,
+        11136,
+        11493,
+        11497,
+        11501,
+        11502,
+        11503,
+        11506,
+        11529,
+        11532,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        61701,
+        61801,
+        62101,
+        62201,
+        62202,
+        62501,
+        63601,
+        63701,
+        64001,
+        64601,
+        64901,
+        65101,
+        65401,
+        65501,
+        67401,
+        67601,
+        69601,
+        69602,
+        69901,
+        70801,
+        70802,
+        70901,
+        70902,
+        71001,
+        71002,
+        71401,
+        72101,
+        72102,
+        72301,
+        72401,
+        72801,
+        72901,
+        73101,
+        74701,
+        74702,
+        74703,
+        74704,
+        75101,
+        75102,
+        75103,
+        76301,
+        76302,
+        76303,
+        77601,
+        77602,
+        77701,
+        77801,
+        78001,
+        78301,
+        78401,
+        78402,
+        78403,
+        78501,
+        78502,
+        78503,
+        78504,
+        78505,
+        78701,
+        78702,
+        78901,
+        78902,
+        79501,
+        79502,
+        79503,
+        79504,
+        79505,
+        79506,
+        79601,
+        79602,
+        79603,
+        82401,
+        82501,
+        91901,
+        92001,
+        100201
+      ],
+      "eliminated_generator_or_DC_or_PV_or_REF_buses": 0,
+      "eliminated_bus_P_Q_zero": true,
+      "fixed_shunt_buses_eliminated": [
+        10079,
+        10557,
+        10594,
+        10596,
+        10601,
+        11132,
+        11134,
+        11136,
+        11502,
+        20005,
+        20007,
+        20008,
+        20010,
+        20014
+      ],
+      "eliminated_block_condition_2": 31987.27055521613,
+      "eliminated_block_min_singular_value_pu": 0.45710316567205017,
+      "eliminated_components": [
+        {
+          "eliminated_size": 6,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 39,
+          "retained_connections": 8
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 4,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 5,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        }
+      ],
+      "all_eliminated_components_retain_electrical_connection": true,
+      "maximum_random_phasor_eliminated_current_pu": 1.9426815345735873e-12,
+      "maximum_random_phasor_retained_current_error_pu": 1.3430009581892789e-12,
+      "maximum_random_phasor_branch_current_operator_error_pu": 7.171194872501411e-13,
+      "full_Y_complex_transpose_asymmetry": 0.0,
+      "reduced_Y_complex_transpose_asymmetry": 2.847716647714797e-14,
+      "active_nonzero_phase_shift_branches": 0,
+      "phase_taps_and_shunts_included_in_complex_Y": true,
+      "saved_PF_converged": true,
+      "maximum_saved_point_voltage_recovery_error_pu": 1.992595178050601e-14,
+      "maximum_independent_original_branch_power_error_MVA": 5.215687124040458e-11,
+      "maximum_recovered_branch_power_error_MVA": 1.3030073613351932e-10,
+      "maximum_recovered_terminal_current_error_A": 2.373300189630367e-09,
+      "maximum_saved_point_eliminated_current_pu": 2.194185420378151e-12,
+      "exact_recovery_does_not_certify_operating_bound_feasibility": true
+    },
+    {
+      "label": "saved_profile_h8472",
+      "full_buses": 267,
+      "retained_buses": 148,
+      "eliminated_buses": 119,
+      "eliminated_ids": [
+        10079,
+        10547,
+        10557,
+        10560,
+        10561,
+        10567,
+        10588,
+        10594,
+        10595,
+        10596,
+        10597,
+        10598,
+        10600,
+        10601,
+        10620,
+        10626,
+        10628,
+        10995,
+        10996,
+        11132,
+        11134,
+        11136,
+        11493,
+        11497,
+        11501,
+        11502,
+        11503,
+        11506,
+        11529,
+        11532,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        21001,
+        61701,
+        61801,
+        62101,
+        62201,
+        62202,
+        62501,
+        63601,
+        63701,
+        64001,
+        64601,
+        64901,
+        65101,
+        65401,
+        65501,
+        67401,
+        67601,
+        69601,
+        69602,
+        69901,
+        70801,
+        70802,
+        70901,
+        70902,
+        71001,
+        71002,
+        71401,
+        72101,
+        72102,
+        72301,
+        72401,
+        72801,
+        72901,
+        73101,
+        74701,
+        74702,
+        74703,
+        74704,
+        75101,
+        75102,
+        75103,
+        76301,
+        76302,
+        76303,
+        77601,
+        77602,
+        77701,
+        77801,
+        78001,
+        78301,
+        78401,
+        78402,
+        78403,
+        78501,
+        78502,
+        78503,
+        78504,
+        78505,
+        78701,
+        78702,
+        78901,
+        78902,
+        79501,
+        79502,
+        79503,
+        79504,
+        79505,
+        79506,
+        79601,
+        79602,
+        79603,
+        82401,
+        82501,
+        91901,
+        92001,
+        100201
+      ],
+      "eliminated_generator_or_DC_or_PV_or_REF_buses": 0,
+      "eliminated_bus_P_Q_zero": true,
+      "fixed_shunt_buses_eliminated": [
+        10079,
+        10557,
+        10594,
+        10596,
+        10601,
+        11132,
+        11134,
+        11136,
+        11502,
+        20005,
+        20007,
+        20008,
+        20010,
+        20014
+      ],
+      "eliminated_block_condition_2": 31987.270555224608,
+      "eliminated_block_min_singular_value_pu": 0.45710316567192905,
+      "eliminated_components": [
+        {
+          "eliminated_size": 6,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 39,
+          "retained_connections": 8
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 4,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 5,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        }
+      ],
+      "all_eliminated_components_retain_electrical_connection": true,
+      "maximum_random_phasor_eliminated_current_pu": 2.317122215203005e-12,
+      "maximum_random_phasor_retained_current_error_pu": 1.7684522276642355e-12,
+      "maximum_random_phasor_branch_current_operator_error_pu": 2.7569338563221485e-12,
+      "full_Y_complex_transpose_asymmetry": 0.0,
+      "reduced_Y_complex_transpose_asymmetry": 2.847716647714797e-14,
+      "active_nonzero_phase_shift_branches": 0,
+      "phase_taps_and_shunts_included_in_complex_Y": true,
+      "saved_PF_converged": true,
+      "maximum_saved_point_voltage_recovery_error_pu": 5.460051551400408e-14,
+      "maximum_independent_original_branch_power_error_MVA": 1.0597449733500104e-10,
+      "maximum_recovered_branch_power_error_MVA": 4.6117398474105544e-10,
+      "maximum_recovered_terminal_current_error_A": 1.5323989654298118e-09,
+      "maximum_saved_point_eliminated_current_pu": 2.7661201467245603e-12,
+      "exact_recovery_does_not_certify_operating_bound_feasibility": true
+    },
+    {
+      "label": "saved_profile_h8508",
+      "full_buses": 267,
+      "retained_buses": 148,
+      "eliminated_buses": 119,
+      "eliminated_ids": [
+        10079,
+        10547,
+        10557,
+        10560,
+        10561,
+        10567,
+        10588,
+        10594,
+        10595,
+        10596,
+        10597,
+        10598,
+        10600,
+        10601,
+        10620,
+        10626,
+        10628,
+        10995,
+        10996,
+        11132,
+        11134,
+        11136,
+        11493,
+        11497,
+        11501,
+        11502,
+        11503,
+        11506,
+        11529,
+        11532,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        21001,
+        61701,
+        61801,
+        62101,
+        62201,
+        62202,
+        62501,
+        63601,
+        63701,
+        64001,
+        64601,
+        64901,
+        65101,
+        65401,
+        65501,
+        67401,
+        67601,
+        69601,
+        69602,
+        69901,
+        70801,
+        70802,
+        70901,
+        70902,
+        71001,
+        71002,
+        71401,
+        72101,
+        72102,
+        72301,
+        72401,
+        72801,
+        72901,
+        73101,
+        74701,
+        74702,
+        74703,
+        74704,
+        75101,
+        75102,
+        75103,
+        76301,
+        76302,
+        76303,
+        77601,
+        77602,
+        77701,
+        77801,
+        78001,
+        78301,
+        78401,
+        78402,
+        78403,
+        78501,
+        78502,
+        78503,
+        78504,
+        78505,
+        78701,
+        78702,
+        78901,
+        78902,
+        79501,
+        79502,
+        79503,
+        79504,
+        79505,
+        79506,
+        79601,
+        79602,
+        79603,
+        82401,
+        82501,
+        91901,
+        92001,
+        100201
+      ],
+      "eliminated_generator_or_DC_or_PV_or_REF_buses": 0,
+      "eliminated_bus_P_Q_zero": true,
+      "fixed_shunt_buses_eliminated": [
+        10079,
+        10557,
+        10594,
+        10596,
+        10601,
+        11132,
+        11134,
+        11136,
+        11502,
+        20005,
+        20007,
+        20008,
+        20010,
+        20014
+      ],
+      "eliminated_block_condition_2": 31987.270555211322,
+      "eliminated_block_min_singular_value_pu": 0.457103165672119,
+      "eliminated_components": [
+        {
+          "eliminated_size": 6,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 39,
+          "retained_connections": 8
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 1
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 4,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 1,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 3,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 5,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        },
+        {
+          "eliminated_size": 2,
+          "retained_connections": 2
+        }
+      ],
+      "all_eliminated_components_retain_electrical_connection": true,
+      "maximum_random_phasor_eliminated_current_pu": 1.9426815345735873e-12,
+      "maximum_random_phasor_retained_current_error_pu": 1.432144669219779e-12,
+      "maximum_random_phasor_branch_current_operator_error_pu": 2.139232254763182e-12,
+      "full_Y_complex_transpose_asymmetry": 29.91639449909638,
+      "reduced_Y_complex_transpose_asymmetry": 12.88221279685012,
+      "active_nonzero_phase_shift_branches": 2,
+      "phase_taps_and_shunts_included_in_complex_Y": true,
+      "saved_PF_converged": true,
+      "maximum_saved_point_voltage_recovery_error_pu": 4.879888667589125e-13,
+      "maximum_independent_original_branch_power_error_MVA": 2.0070938153016848e-10,
+      "maximum_recovered_branch_power_error_MVA": 1.0061880497603503e-09,
+      "maximum_recovered_terminal_current_error_A": 3.712594955098313e-09,
+      "maximum_saved_point_eliminated_current_pu": 1.7600473804846407e-11,
+      "exact_recovery_does_not_certify_operating_bound_feasibility": true
+    }
+  ],
+  "required_implementation_guards": [
+    "Reproduce full MATPOWER converter-generator/PV-control setup; Y equivalence alone does not establish control equivalence.",
+    "Retain every specified injection, generator/control, REF/PV or converter endpoint, unless separately modeled by an exact nonlinear reduced formulation.",
+    "Include fixed GS/BS and line charging in Y before elimination; fixed shunts do not themselves require retained voltage unknowns.",
+    "Use general complex blocks and solves. Phase taps can make Y nonsymmetric; do not substitute transpose/conjugate blocks or force branch-only R/X equivalents.",
+    "Reject singular or unanchored eliminated components; do not silently use a pseudoinverse or discard energized islands.",
+    "Rebuild or invalidate cache on branch status, R/X/B, tap/phase, shunt or retained-set changes. Temperature-dependent R changes the recovery operator.",
+    "Keep original branch identities and recover original voltages plus Yf*T, Yt*T and series currents for line/DLR audits.",
+    "Check eliminated-bus voltage bounds and original branch limits using recovered states; compact PF success does not enforce those bounds.",
+    "No OPF support or physical-parameter certification follows from this PF reduction audit."
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_slim/network/bus_register.csv",
+      "sha256": "9a3359281f3b51daedcb2c2740e3d31c4eb4f62adffca5ea7819b1736c0dc660"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_design_fixtures.mat",
+      "sha256": "93f063dde729d015558f255817c440ef22d08a0737658ce9734fd70223d9999e"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/representative_h0523.mat",
+      "sha256": "97e4028b1dcfc096119b6d9b1e3ebf53667d52f8831e446fb1fa6a631dab894f"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/representative_h2630.mat",
+      "sha256": "9ace86e8d5db125a209251a78e6012579111ff5d332e9aa05d0561c695f4fef5"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/representative_h4000.mat",
+      "sha256": "9a81c4c577ede1204a5cecf3c13723e6ac9fb5e084b1f10fbca8bb714de7f3d2"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/representative_h4194.mat",
+      "sha256": "affa8945413cdbe30eb8f95e032ee5ad64f8234190fff40fbb15450ae42362e4"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/representative_h8471.mat",
+      "sha256": "7a526cf4cac8efd9a012eb545b312bf204506fcb2556c70ecc1fa52bf4a27609"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/representative_h8472.mat",
+      "sha256": "1d141ea8f348856f2306b0e709666b282ac77d5a52f550b0aa880ba4f3b47e7b"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/representative_h8508.mat",
+      "sha256": "222dd189a616791fbd697927d79640f654e5f6315b3b5e361efc277befe86108"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/independent/probe_kron_feasibility.py",
+      "sha256": "2571aae6ed178e4af4e049bfb6459782f6d5db860450c2f42d95cd90cafd2826"
+    }
+  ]
+}

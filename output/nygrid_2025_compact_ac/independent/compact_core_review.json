@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T23:57:46.309851+00:00",
+  "scope": "Independent compact-kernel source inspection, source/operator mutation guards and paired detailed-control checks",
+  "independent_tests": 29,
+  "paired_Q_limit_modes": [
+    0,
+    1
+  ],
+  "extra_retained_nodes_on_baseline": 0,
+  "five_saved_operator_fingerprints_match_current_byte_stream": true,
+  "source_guard_rejects_R_X_B_phase_tap_shunt_status_mutation": true,
+  "derived_operator_guard_rejects_matrices_lift_currents_mapping_and_key_mutation": true,
+  "only_new_load_generator_or_converter_port_is_promoted": true,
+  "fixed_shunt_does_not_require_retained_unknown": true,
+  "unanchored_shunted_and_anchored_singular_interiors_rejected": true,
+  "MATPOWER_converted_generator_setup_and_Q_control_results_match": true,
+  "paired_results": [
+    {
+      "qlim": 0,
+      "compact_success": true,
+      "full_success": true,
+      "voltage_error_pu": 1.2735833387088324e-12,
+      "PG_error_MW": 4.367848305264488e-10,
+      "QG_error_MVAr": 1.4988472685217857e-09,
+      "branch_power_error_MVA": 1.5048016166474554e-09,
+      "current_error_A": 2.663085751919425e-09,
+      "compact_outer_iterations": 1
+    },
+    {
+      "qlim": 1,
+      "compact_success": true,
+      "full_success": true,
+      "voltage_error_pu": 4.575546924368527e-13,
+      "PG_error_MW": 2.8489921533036977e-10,
+      "QG_error_MVAr": 1.1186784831807017e-10,
+      "branch_power_error_MVA": 3.4015812389043276e-10,
+      "current_error_A": 2.763044903986156e-09,
+      "compact_outer_iterations": 3
+    }
+  ],
+  "limitations": [
+    "The retained 148 buses are the requested interface, not a proof of global minimum network order.",
+    "Exact reduction preserves existing operating-limit violations, synthetic parameters and unresolved cable classifications.",
+    "Any status, temperature-resistance, fixed shunt, phase/tap or specified device/control change requires a fresh valid reduction.",
+    "This is a PF-only model and recovery contract; OPF support and security qualification are not established."
+  ],
+  "resolved_findings": [
+    "Added connectivity guard for invertible but unanchored shunted interiors.",
+    "Added immutable operator fingerprint beyond the detailed-input fingerprint.",
+    "Empty numerical arrays retain shape hashes and no longer trigger Java overload errors."
+  ],
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_compact_ac/core/compact_ac_build.m",
+      "sha256": "e501cd0fc009ba5542850add00eb99d57f242087adc59bfc525accf333efa3b2"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/core/compact_ac_operator_fingerprint.m",
+      "sha256": "61da98261eabf176b3a997ad19812e7fe406dd1d882a6f62b34184c34edb3d3f"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/core/compact_ac_solve.m",
+      "sha256": "df890361ac16f4607c89776cb69d71474934d2c4077c37163bc289fa9dcc3db1"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/core/compact_ac_source_fingerprint.m",
+      "sha256": "a7496a7bbe5b7bb43f9b7b4c0d0cdbe2813f5aa254bbaeb8adec15b1158a2356"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/representative_h8508.mat",
+      "sha256": "222dd189a616791fbd697927d79640f654e5f6315b3b5e361efc277befe86108"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/independent/test_kernel_contract.py",
+      "sha256": "fd8f02e2bbf7a9b95d4a5baf44064510167fce5f7bc99587f3b9aa5d06a8dcfd"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/independent/kernel_guard_results.json",
+      "sha256": "9968540557af8430ab0ba383c4c94d20a1456419148671c60b8f04e2a09a6275"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/independent/kron_feasibility_review.json",
+      "sha256": "39440cba98533c978e75e625d881ff9665ee49739ca7d4e0f4aec54424e07bb5"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h0001.mat",
+      "sha256": "ca590aa089c883a6bb273f0763344023cda4e5c6342fd2260fe66b1f2f6824be"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h3360.mat",
+      "sha256": "fb9dec35082653e7690ff841727515b2c322f85ec92d13b86482cbbcc5e0da1c"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h3576.mat",
+      "sha256": "f38324de7355c2dd9498eba9ebc2cd80857c83295e79653905d3d7e4e21cedf0"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h8472.mat",
+      "sha256": "0bf999f20d50ac9e398cc47a58d127e02f59c3ac251a18159cac5700dfb7116d"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h8508.mat",
+      "sha256": "c9beabd35ac69c33a85a8aed4d985a3936fc69628443b328663b62487bb779bc"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/independent/kernel_guard_results_before_performance.json",
+      "sha256": "2712bedcb88c1ffcf12c7ed6a3a96f25414c0d389952046d7355ae15aae5afb9"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/independent/performance_source_diff_review.json",
+      "sha256": "91f3ce96194ba65e4c6d3acabba97c4e9b42321e5c4636d41a1e731383676cd6"
+    }
+  ],
+  "historical_mode2_comparison": {
+    "evidence_stage": "before_performance_only_change;not_rerun",
+    "qlim": 2,
+    "compact_success": true,
+    "full_success": true,
+    "voltage_error_pu": 2.303149837619679e-13,
+    "PG_error_MW": 6.821210263296962e-12,
+    "QG_error_MVAr": 8.003553375601768e-11,
+    "branch_power_error_MVA": 1.8452794847689802e-10,
+    "current_error_A": 1.4524630387313664e-09,
+    "compact_outer_iterations": 769
+  },
+  "performance_only_change_preserves_solver_math_and_fingerprint_byte_stream": true,
+  "metadata_correction": "Fresh test count/modes remain 29 and [0,1]; raw scope wording corrected to match the executed skip-mode2 option. Numerical test results unchanged."
+}
