@@ -1,0 +1,139 @@
+{
+  "scope": "Minimal current source provenance and required vendor notices for the latest-only runtime",
+  "created_utc": "2026-10-13T14:26:44.754822+00:00",
+  "source_model_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+  "source_model_branch": "codex/s13-phase1b-upny-coned",
+  "current_model_contract": {
+    "impedance_policy": "released_equivalent",
+    "loss_policy": "boundary_consistent",
+    "solver": "simultaneous_voltage_and_loss_Newton",
+    "compact_retained_bus_count": 148,
+    "source_dispatch_preserved_for_native_and_HQ": true,
+    "thermal_screen": "one_way_current_realization_R_and_X_conditioned",
+    "installed_asset_identity_claimed": false
+  },
+  "catalog_provenance": {
+    "catalog_rows": 14,
+    "catalog_csv_sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8",
+    "geometry_csv_sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84",
+    "manufacturer_sources": [
+      {
+        "url": "https://na.prysmian.com/sites/na.prysmian.com/files/media/documents/TransPowr%C2%AE%20ACSR%20Bare%20Overhead%20Conductor%20%28US%29.pdf",
+        "archived_catalog_sha256": "a1d775ccc5f38dd0ec76b82ec2404e8b058bbcce4937834a26ffb4be8dcffe5c"
+      },
+      {
+        "url": "https://na.prysmian.com/sites/na.prysmian.com/files/media/documents/TransPowr%C2%AE%20ACSS%20Bare%20Overhead%20Conductor%20%28US%29.pdf",
+        "archived_catalog_sha256": "a1d775ccc5f38dd0ec76b82ec2404e8b058bbcce4937834a26ffb4be8dcffe5c"
+      }
+    ],
+    "raw_catalog_PDFs_included": false,
+    "installed_manufacturer_identity_verified": false,
+    "geometry_windows_are_declared_engineering_assumptions": true
+  },
+  "data_provenance_contract": "The current model receipt records exact storage hashes and effective-date axes. The independent current-data review records source-input hashes and verifies all profile values, static structures and loss-policy vectors without bundling the source corpuses. Hourly unit outputs and availability remain reconstructed study inputs, not observed unit telemetry.",
+  "vendor_versions": {
+    "MATPOWER_version": "8.1",
+    "MIPS_version": "1.5.2",
+    "MP_Opt_Model_version": "5.0",
+    "MP_Test_version": "8.1"
+  },
+  "required_original_notice_files": [
+    {
+      "package_path": "vendor/matpower8.1/LICENSE",
+      "component": "MATPOWER",
+      "bytes": 2116,
+      "sha256": "9044a40856320681a1f24a1797d909339c5174b921c8fd8b887498f3788e4ed6",
+      "preserve_verbatim": true
+    },
+    {
+      "package_path": "vendor/matpower8.1/AUTHORS",
+      "component": "MATPOWER",
+      "bytes": 449,
+      "sha256": "6d4537891a64e5ac0bbf05989878af6f4061ce9e591b0c7d17b06fa9cf666aa5",
+      "preserve_verbatim": true
+    },
+    {
+      "package_path": "vendor/matpower8.1/CITATION",
+      "component": "MATPOWER",
+      "bytes": 3995,
+      "sha256": "0b765347445b0743cb6b15e2c5a8862a31c848539d17eba8c9f6062cc9fa4487",
+      "preserve_verbatim": true
+    },
+    {
+      "package_path": "vendor/matpower8.1/mips/LICENSE",
+      "component": "mips",
+      "bytes": 1615,
+      "sha256": "c7782029889856d7325609ba502a92fc9ec28065c1d3e1999d202b3aa49b356e",
+      "preserve_verbatim": true
+    },
+    {
+      "package_path": "vendor/matpower8.1/mips/AUTHORS",
+      "component": "mips",
+      "bytes": 45,
+      "sha256": "0e76799c6f48b8c1dc2d38c4c0f0537c3f891b0099724d86532f0fd8c26633ac",
+      "preserve_verbatim": true
+    },
+    {
+      "package_path": "vendor/matpower8.1/mips/CITATION",
+      "component": "mips",
+      "bytes": 1373,
+      "sha256": "ce5e577303444ab5ec9dd33ac9fc03a4f7a00779daa398a4981335060ba009cc",
+      "preserve_verbatim": true
+    },
+    {
+      "package_path": "vendor/matpower8.1/mp-opt-model/LICENSE",
+      "component": "mp-opt-model",
+      "bytes": 1615,
+      "sha256": "e6e1ad0becd452f99e12d0fb0bc0c5d229eabc26b3ac4e88c89f4857c5a0b2e2",
+      "preserve_verbatim": true
+    },
+    {
+      "package_path": "vendor/matpower8.1/mp-opt-model/AUTHORS",
+      "component": "mp-opt-model",
+      "bytes": 141,
+      "sha256": "24d5a0d187fcc406581445abe4730303cc08377e35af87dc104d55e931be58f2",
+      "preserve_verbatim": true
+    },
+    {
+      "package_path": "vendor/matpower8.1/mp-opt-model/CITATION",
+      "component": "mp-opt-model",
+      "bytes": 891,
+      "sha256": "08e68eb7dec94a263bc1a6e76abfd81d510947e88d9200d666acbebb89b820de",
+      "preserve_verbatim": true
+    },
+    {
+      "package_path": "vendor/matpower8.1/mptest/LICENSE",
+      "component": "mptest",
+      "bytes": 1615,
+      "sha256": "c7782029889856d7325609ba502a92fc9ec28065c1d3e1999d202b3aa49b356e",
+      "preserve_verbatim": true
+    },
+    {
+      "package_path": "vendor/matpower8.1/mptest/AUTHORS",
+      "component": "mptest",
+      "bytes": 33,
+      "sha256": "0a71abdcef96f8b69fc429f3af63428014c511bbb994c6389e610f18ad541e29",
+      "preserve_verbatim": true
+    }
+  ],
+  "current_notice_files": [
+    {
+      "source_relative_path": "output/nygrid_2025_latest_handoff/docs/THIRD_PARTY_NOTICES.md",
+      "proposed_package_path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "767cd00b898959facab30fc128fd36a798f447615d517dc67bceb4fcb183888b"
+    },
+    {
+      "source_relative_path": "output/nygrid_2025_latest_handoff/docs/MATPOWER_RUNTIME_SUBSET_NOTICE.txt",
+      "proposed_package_path": "vendor/matpower8.1/RUNTIME_SUBSET_NOTICE.txt",
+      "sha256": "a6e99e47d24f728ed130953e8d79f56cca9c143b1a868c913e2e7474b3c5c5b1"
+    }
+  ],
+  "MATLAB_bundled": false,
+  "vendor_case_data_bundled": false,
+  "historical_models_or_raw_source_corpuses_bundled": false,
+  "independent_current_data_review": {
+    "proposed_package_path": "verification/current_data_review.json",
+    "sha256": "e75f567a27e3932f14c1452ce3feb45d86cb60cce71803e0ba25c4d8c5e493f4",
+    "scope": "Exact current input arrays and four current static structures; no annual solution rerun"
+  }
+}

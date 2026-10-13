@@ -1,0 +1,149 @@
+retained_row_1based,model_bus_id,model_name,nominal_kV,accounting_group,is_reference_bus,has_generator_rows,has_fixed_transfer_terminal
+1,1,MILLSTONE PT,345.0,ISONE,False,False,False
+2,2,MONTVILLE,345.0,ISONE,False,False,False
+3,3,MONTVILLE,115.0,ISONE,False,False,False
+4,4,MONTVILLE,345.0,ISONE,False,False,False
+5,5,CARD ST,345.0,ISONE,False,False,False
+6,6,SHERMAN RD,345.0,ISONE,False,False,False
+7,7,MEDWAY,345.0,ISONE,False,False,False
+8,8,MILLBURY,115.0,ISONE,False,False,False
+9,9,CARPENTER HL,115.0,ISONE,False,False,False
+10,10,BRAYTON PT,115.0,ISONE,False,False,False
+11,11,BRAYTON PT,115.0,ISONE,False,False,False
+12,12,BRIDGEWATER,115.0,ISONE,False,False,False
+13,13,PILGRIM,345.0,ISONE,False,False,False
+14,14,CANAL,345.0,ISONE,False,False,False
+15,15,WALPOLA,345.0,ISONE,False,False,False
+16,16,VERMONT YNK,345.0,ISONE,False,False,False
+17,17,SCOBIE,345.0,ISONE,False,False,False
+18,18,SANDY POND,115.0,ISONE,False,False,False
+19,19,POWNAL,345.0,ISONE,False,False,False
+20,20,MAINE YANKEE,345.0,ISONE,False,False,False
+21,21,MILLSTONE PT,24.0,ISONE,False,True,True
+22,22,BRAYTON PT,18.0,ISONE,False,True,False
+23,23,BRAYTON PT,20.0,ISONE,False,True,False
+24,24,PILGRIM,22.8,ISONE,False,True,False
+25,25,CANAL,20.0,ISONE,False,True,False
+26,26,MAINE YANKEE,20.0,ISONE,False,True,False
+27,27,VERMONT YNK,22.0,ISONE,False,True,False
+28,28,NORTHFIELD,13.8,ISONE,False,False,False
+29,29,NORTHFIELD,345.0,ISONE,False,False,False
+30,30,LUDLOW,345.0,ISONE,False,False,False
+31,31,MANCHESTER,345.0,ISONE,False,False,False
+32,32,SCOVILL ROCK,345.0,ISONE,False,False,False
+33,33,HADDAM NECK,345.0,ISONE,False,False,False
+34,34,BLACK POND,345.0,ISONE,False,False,False
+35,35,SOUTHINGTEN,345.0,ISONE,False,False,False
+36,36,CONN YANKEE,345.0,ISONE,False,True,False
+37,37,NEW SEATHED,345.0,F,False,True,False
+38,38,GILBOA,345.0,E,False,True,False
+39,39,LEEDS,345.0,G,False,True,False
+40,40,NEW SEATHED,230.0,F,False,True,False
+41,41,ROTTERDAM,115.0,F,False,True,False
+42,42,ALBANY,115.0,F,False,True,False
+43,43,EDIC,345.0,E,False,True,False
+44,44,PORTER,230.0,E,False,True,False
+45,45,PORTER,115.0,E,False,True,False
+46,46,COLTON,115.0,E,False,True,False
+47,47,MOSES W,230.0,E,False,True,False
+48,48,MOSES E,230.0,D,False,True,True
+49,49,PLATTSBURGH,115.0,D,False,True,False
+50,50,CLAY,345.0,C,True,True,False
+51,51,CLAY,115.0,C,False,True,False
+52,52,ROCHESTER,345.0,B,False,True,False
+53,53,ROCHESTER,115.0,B,False,True,False
+54,54,NIAGARA W,230.0,A,False,True,False
+55,55,NIAGARA E,230.0,A,False,True,False
+56,56,HUNTLEY,230.0,A,False,True,False
+57,57,HUNTLEY,115.0,A,False,True,False
+58,58,GARDENVILLE,230.0,A,False,True,False
+59,59,GARDENVILLE,115.0,A,False,True,False
+60,60,DUNKIRK,230.0,A,False,True,False
+61,61,DUNKIRK,115.0,A,False,True,False
+62,62,STOLLE RD,230.0,B,False,True,False
+63,63,MEYER,230.0,C,False,True,False
+64,64,MEYER,115.0,C,False,True,False
+65,65,GESONIDGE,115.0,C,False,True,False
+66,66,WATERCURE,345.0,C,False,True,False
+67,67,WRHL,230.0,C,False,True,False
+68,68,HILLSIDE,115.0,C,False,True,False
+69,69,BINGHAMTON,345.0,E,False,True,False
+70,70,BINGHAMTON,230.0,C,False,True,False
+71,71,BINGHAMTON,115.0,C,False,True,False
+72,72,LAPEER,115.0,C,False,True,False
+73,73,PLEASANT VLY,345.0,G,False,True,False
+74,74,MILLWOOD,345.0,H,False,True,False
+75,75,RAMAPO,138.0,G,False,True,False
+76,76,RAMAPO,345.0,G,False,True,False
+77,77,BUCHANAN,345.0,G,False,True,False
+78,78,CE UG,345.0,I,False,False,False
+79,79,RAV A-3,22.0,K,False,True,True
+80,80,NORTHPORT,138.0,K,False,True,True
+81,81,GOETHALS,345.0,J,False,True,True
+82,82,AK-3,22.0,J,False,True,False
+83,83,KEITH,220.0,ONTARIO,False,False,False
+84,84,KEITH JCT,118.1,ONTARIO,False,False,False
+85,85,LAMBTON,220.0,ONTARIO,False,False,False
+86,86,LAMBTON,24.0,ONTARIO,False,True,False
+87,87,LAMBTON,220.0,ONTARIO,False,False,False
+88,88,SCOTT,220.0,ONTARIO,False,False,False
+89,89,SCOTT,220.0,ONTARIO,False,False,False
+90,90,VIDA,220.0,ONTARIO,False,False,False
+91,91,RICHVIEW,220.0,ONTARIO,False,True,False
+92,92,HANMER,500.0,ONTARIO,False,True,False
+93,93,ESSA,220.0,ONTARIO,False,False,False
+94,94,ORANGEVILLE,220.0,ONTARIO,False,False,False
+95,95,DES JOAC,220.0,ONTARIO,False,False,False
+96,96,HOLDEN,13.8,ONTARIO,False,False,False
+97,97,MARTINDELE,220.0,ONTARIO,False,True,False
+98,98,STLA,220.0,ONTARIO,False,True,False
+99,99,PVR,220.0,ONTARIO,False,False,False
+100,100,PHAS,220.0,ONTARIO,False,False,True
+101,101,SAB 2,220.0,ONTARIO,False,True,False
+102,102,BP 76,220.0,ONTARIO,False,False,False
+103,103,PA 27,220.0,ONTARIO,False,False,False
+104,104,BEACH,220.0,ONTARIO,False,False,False
+105,105,BUCHANAN,220.0,ONTARIO,False,False,False
+106,106,NEALE,220.0,ONTARIO,False,False,False
+107,107,NEALE,220.0,ONTARIO,False,False,False
+108,108,S CT,220.0,ONTARIO,False,False,False
+109,109,SLT,220.0,ONTARIO,False,False,False
+110,110,BURLINGTON,220.0,ONTARIO,False,False,False
+111,111,DETWIERER,220.0,ONTARIO,False,False,False
+112,112,CHATHAM,220.0,ONTARIO,False,False,False
+113,113,LAUZON,118.1,ONTARIO,False,False,False
+114,114,MARYSVILLE,220.0,PJM,False,False,False
+115,115,ST CLAIR,500.0,PJM,False,True,False
+116,116,WATERMAN,220.0,PJM,False,False,False
+117,117,PONTIAC,230.0,PJM,False,False,False
+118,118,WAYNE,115.0,PJM,False,False,False
+119,119,THETFORD,220.0,PJM,False,True,False
+120,120,ARGENTA,220.0,PJM,False,True,False
+121,121,SC415,220.0,PJM,False,True,False
+122,122,WATERMAN,220.0,PJM,False,True,False
+123,123,MONROE,230.0,PJM,False,True,False
+124,124,BRANCHBURG,230.0,PJM,False,False,True
+125,125,LINDON,230.0,PJM,False,False,True
+126,126,HUDSON,230.0,PJM,False,False,False
+127,127,ALBURTIS,500.0,PJM,False,False,False
+128,128,WHITPAIN,500.0,PJM,False,False,False
+129,129,KEENEY,500.0,PJM,False,False,False
+130,130,PEACH BOTTOM,500.0,PJM,False,True,False
+131,131,CONASTONE,500.0,PJM,False,False,False
+132,132,JUNIATA,500.0,PJM,False,False,False
+133,133,CONEMAUGH,500.0,PJM,False,True,False
+134,134,HOMER CITY,230.0,PJM,False,True,False
+135,135,KEYSTONE,500.0,PJM,False,True,False
+136,136,ERIE W,345.0,PJM,False,False,False
+137,137,ERIE S,230.0,PJM,False,True,False
+138,138,E TOMANO,230.0,PJM,False,False,False
+139,139,KYGER,345.0,PJM,False,True,False
+140,140,TE,230.0,PJM,False,False,False
+141,10774,LADENTOWN,345.0,G,False,False,False
+142,10858,E. FISHKILL,345.0,G,False,False,False
+143,10902,WOOD STREET,345.0,G,False,False,False
+144,10593,DUNWOODIE,345.0,I,False,False,False
+145,10589,EAST GARDEN CITY,345.0,K,False,False,False
+146,11129,GOWANUS,345.0,J,False,False,False
+147,11130,RAINEY,345.0,J,False,False,False
+148,20001,CRICKET VALLEY 345,345.0,G,False,False,False
