@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "package_kind": "fixture",
+  "source_model_commit": "8188cbec1172219a0414881121ad042b405a4044",
+  "source_model_branch": "codex/s13-phase1b-upny-coned",
+  "prepared_date": "2026-10-13",
+  "model_status": "conditional_synthetic_research; latest_annual_joint_operating_qualification_zero",
+  "includes_MATLAB_runtime": false,
+  "includes_MATPOWER_case_data": false,
+  "preserves_original_evidence": true,
+  "original_Git_finalizers_not_promised_portable": true,
+  "runtime_results_are_unsealed_user_outputs": true,
+  "files": {
+    "data.txt": {
+      "bytes": 27,
+      "sha256": "486d6414e575f08dfbd485699b705dbbdfda79340eb61e4a315e15679e4bca0a",
+      "role": "fixture"
+    },
+    "SOURCE_PATH_ALIASES.json": {
+      "bytes": 93,
+      "sha256": "1f8574d46f00406ae5b6b9d18792cd7d3c8d2a30511bf0e698101d5af3d0ae34",
+      "role": "package_navigation"
+    },
+    "START_HERE.txt": {
+      "bytes": 2259,
+      "sha256": "8e0f8c553c1bac67c5ce791d14966b824d45ae235a0958d290c16398c7111816",
+      "role": "package_navigation"
+    },
+    "THIRD_PARTY_NOTICES.txt": {
+      "bytes": 518,
+      "sha256": "7aa8036752c34663778977cb4f55c9e11f99ec31fdeb0720db0d3d8b89809d3d",
+      "role": "package_navigation"
+    }
+  }
+}

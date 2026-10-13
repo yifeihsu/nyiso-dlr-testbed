@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T04:28:59.552924+00:00",
+  "source_base_HEAD": "8188cbec1172219a0414881121ad042b405a4044",
+  "historical_identity_git_ref": "6dcc77f071a9ce4aaaa2fcba9a9aabc15f7d5dbc",
+  "historical_identity_bindings_verified_against_Git_at_package_preparation": true,
+  "historical_identity_bindings": [
+    {
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27",
+      "bytes": 16126
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7",
+      "bytes": 27204183
+    }
+  ],
+  "original_consumer": {
+    "path": "scripts/nygrid_2025_ac_loss_revision/comparison/score_revised_profiles.py",
+    "sha256": "43281ace83cfaa97628bbddb746263c8157adf0cd79f545e4383abb81cc0953a",
+    "bytes": 30087
+  },
+  "comparison_seed_files": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/comparison_contract.json",
+      "sha256": "6a7b0f5171a9b9e4dbfcf2c5889c7625c80ce92c85c61778c3fdb131ac4988a7",
+      "bytes": 11427,
+      "role": "comparison_contract"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/frozen_comparison_cohort.csv",
+      "sha256": "2a8ac4b6eb3cfb7577d5e8f3ad864589b15acb8af4d1c642aa901dcf6e086332",
+      "bytes": 743576,
+      "role": "cohort"
+    }
+  ],
+  "monthly_directory": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly",
+  "annual_receipt": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/annual_loss_policy_receipt.json",
+  "reference_metric_outputs": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/public_interface_metrics.csv",
+      "sha256": "b3cd77cfd14ea1b0c7c7cd5ebcc4b453e1606976c3622556e8553994a581973a",
+      "bytes": 213868
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_cohort.csv",
+      "sha256": "d62536ab7bc148d015e8fff773f835df40fc0ad53e8191b0297841af961c1778",
+      "bytes": 1264048
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/hourly_source_accounting.csv",
+      "sha256": "d514034502bd24277a9346eb01e727d381992129c72f89504bb8f4074cb64918",
+      "bytes": 2869816
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/NY_zonal_loss_accounting.csv",
+      "sha256": "56794ad2e379cd58d668cba9ea0f0788a5e779d1056976ef0f638f9d4267002b",
+      "bytes": 1790
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/regional_NY_terminal_import_errors.csv",
+      "sha256": "34f2f90b0249ec8037d16ab5f4efee12edfb4eb4abff85d7639a7c7bb79f6f54",
+      "bytes": 1221
+    }
+  ],
+  "required_package": "full_research_archive",
+  "identity_provider_in_extracted_package": "pinned SHA256 byte identity, not a Git command",
+  "original_scoring_numerics_and_qualification_policy_changed": false,
+  "minimum_Python_version": "3.11",
+  "tested_environment": {
+    "Python": "3.13.7",
+    "NumPy": "1.26.4",
+    "SciPy": "1.15.2",
+    "pandas": "2.2.3",
+    "OS": "Windows"
+  },
+  "environment_qualification": "Original full annual consumer passed on this installed environment; extracted no-Git portable wrapper receives its own execution receipt. Other version combinations are not guaranteed.",
+  "requirements_file": {
+    "path": "scripts/nygrid_2025_dlr_handoff/requirements_scoring.txt",
+    "sha256": "bfba272ff622d70ab41331420b80357c738e8d7406fb2496c965604198d55e70"
+  }
+}

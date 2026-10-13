@@ -161,3 +161,9 @@ output/nygrid_2025_ac_loss_revision/**/*.log -diff whitespace=-blank-at-eol,-bla
 output/nygrid_2025_ac_loss_revision/summary/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 "System Matpower Format/run_nygrid_2025_loss_consistent_acpf.m" -text !eol whitespace=cr-at-eol
 NYGRID_2025_AC_LOSS_REVISION.md -text !eol whitespace=cr-at-eol
+# Colleague handoff source, proof receipts and readable manual retain exact bytes.
+scripts/nygrid_2025_dlr_handoff/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_dlr_handoff/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_dlr_handoff/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_2025_DLR_HANDOFF.md -text !eol whitespace=-blank-at-eof,cr-at-eol
+NYGRID_2025_DLR_HANDOFF.docx -text -diff

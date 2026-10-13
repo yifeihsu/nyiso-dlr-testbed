@@ -1,0 +1,10 @@
+{Error using char
+Conversion of element 1 from <missing> to character vector is not supported.
+
+Error in nygrid_handoff_thermal_candidates (line 78)
+        'source_role',char(role),'parameter_basis',char(basis),'active',active,'same_voltage',same_voltage, ...
+                                                   ^^^^^^^^^^^
+Error in screen_nygrid_2025_loss_pf_thermal (line 28)
+[segments,ledger,conductors]=nygrid_handoff_thermal_candidates(m);
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
