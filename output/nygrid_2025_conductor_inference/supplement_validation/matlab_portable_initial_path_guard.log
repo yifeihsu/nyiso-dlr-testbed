@@ -1,0 +1,10 @@
+{Error using assert
+Assertion failed.
+
+Error in validate_rx_supplement (line 14)
+for k=1:numel(names),f=which(names{k});assert(startsWith(f,root,'IgnoreCase',true));resolved(end+1)=struct('name',names{k},'path',f);end
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run (line 100)
+evalin('caller', strcat(scriptStem, ';'));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

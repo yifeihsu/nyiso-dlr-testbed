@@ -167,3 +167,8 @@ output/nygrid_2025_dlr_handoff/** -text !eol whitespace=cr-at-eol
 output/nygrid_2025_dlr_handoff/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
 NYGRID_2025_DLR_HANDOFF.md -text !eol whitespace=-blank-at-eof,cr-at-eol
 NYGRID_2025_DLR_HANDOFF.docx -text -diff
+# R/X-conditioned synthetic-conductor policy and additive handoff supplement.
+scripts/nygrid_2025_conductor_inference/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_conductor_inference/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_conductor_inference/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_2025_CONDUCTOR_INFERENCE.md -text !eol whitespace=cr-at-eol

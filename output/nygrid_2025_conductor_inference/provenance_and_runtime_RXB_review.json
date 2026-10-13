@@ -1,0 +1,193 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T06:05:05.880236+00:00",
+  "baseline_commit": "51e424a139e0d0ec42fcbbb35749deaf119cffc2",
+  "scope": "Independent current runtime R/X/B arithmetic and imported-versus-engineered parameter provenance; no annual replay or prior modification",
+  "PF_or_OPF_run": false,
+  "states": [
+    {
+      "dated_state": "pre_may",
+      "current_OH_parents": 183,
+      "current_OH_runtime_branches": 255,
+      "current_OH_segments": 255,
+      "independently_RX_matched_parents": 183,
+      "synthetic_eligible_parents": 179,
+      "prior_handoff_eligible_parents": 44,
+      "new_admissions_only_from_removing_source_role_gate": 135,
+      "eligible_imported_RX_preserved": 123,
+      "eligible_prior_engineered_RX": 56
+    },
+    {
+      "dated_state": "may21",
+      "current_OH_parents": 183,
+      "current_OH_runtime_branches": 255,
+      "current_OH_segments": 255,
+      "independently_RX_matched_parents": 183,
+      "synthetic_eligible_parents": 179,
+      "prior_handoff_eligible_parents": 44,
+      "new_admissions_only_from_removing_source_role_gate": 135,
+      "eligible_imported_RX_preserved": 123,
+      "eligible_prior_engineered_RX": 56
+    },
+    {
+      "dated_state": "may30",
+      "current_OH_parents": 183,
+      "current_OH_runtime_branches": 255,
+      "current_OH_segments": 255,
+      "independently_RX_matched_parents": 183,
+      "synthetic_eligible_parents": 179,
+      "prior_handoff_eligible_parents": 44,
+      "new_admissions_only_from_removing_source_role_gate": 135,
+      "eligible_imported_RX_preserved": 123,
+      "eligible_prior_engineered_RX": 56
+    },
+    {
+      "dated_state": "post_dover",
+      "current_OH_parents": 184,
+      "current_OH_runtime_branches": 256,
+      "current_OH_segments": 257,
+      "independently_RX_matched_parents": 184,
+      "synthetic_eligible_parents": 180,
+      "prior_handoff_eligible_parents": 46,
+      "new_admissions_only_from_removing_source_role_gate": 134,
+      "eligible_imported_RX_preserved": 125,
+      "eligible_prior_engineered_RX": 55
+    }
+  ],
+  "maximum_runtime_R_X_B_errors_pu": {
+    "R": 1.3877787807814457e-17,
+    "X": 2.7755575615628914e-17,
+    "B": 2.220446049250313e-16
+  },
+  "all_current_runtime_RX_checks_pass": true,
+  "all_current_runtime_geometric_B_checks_pass": true,
+  "tolerance": {
+    "absolute_pu": 1e-10,
+    "relative": 1e-08
+  },
+  "prior_OH_parent_classifications": 186,
+  "prior_exact_RX_inverse_parents": 125,
+  "prior_source_design_parents": 3,
+  "prior_explicit_RX_redesign_parents": 58,
+  "latest_removed_redesign_parent224": true,
+  "source_identity_and_geographic_chord_not_eligibility_requirements": true,
+  "B_consistency_is_separate_from_RX_acceptance": true,
+  "positive_B_not_asserted_to_be_verified_pure_line_charging": true,
+  "original_imported_RX_search_feasible_parents": 141,
+  "restoration_candidate_parents": [
+    12,
+    29,
+    41,
+    86,
+    102,
+    103,
+    105,
+    108,
+    120,
+    125,
+    165,
+    383,
+    390
+  ],
+  "root_search_scope": "No geographic chord requirement; inherited 250/500/700/1000 km voltage-class caps, 14 catalog conductors, fixed reference temperature, integer circuits 1..4",
+  "three220kV_extended_length_only_parents": [
+    152,
+    163,
+    164
+  ],
+  "inferred_candidates_applied_to_frozen_models": false,
+  "installed_asset_identity_or_operating_feasibility_claimed": false,
+  "important_distinction": "Current engineered R/X can match a conductor exactly even where 58 prior overhead rows changed imported R/X. A current fit is not proof of imported parameter preservation.",
+  "sources": [
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/overhead_cable_classification_conflicts.csv",
+      "sha256": "7a0436a6fe8c9f8fbb07478a17e403ebd8df40adec39a13f8802bcef03c5c817"
+    },
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/audit_rx_provenance.py",
+      "sha256": "de1094eb2fb17e31e6e8bb2e3ebadd1b60b7ef13226d14df8d08713462f86c9f"
+    },
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/export_rx_provenance_inputs.m",
+      "sha256": "1c9b487696acaa14a8e04789fd14349fadf22067fb970e8a5cc3989947195fa9"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/provenance_inputs/export_receipt.json",
+      "sha256": "29488d72d2f3546ab8d25c7d48067b23138aae20b89985e1f74a073233ea022a"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/provenance_inputs/pre_may.mat",
+      "sha256": "6348ab13bf5c0ec897d20fe1383ba387dfc83413cf3a1625787b5c2594d1aff4"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/provenance_inputs/may21.mat",
+      "sha256": "76b3fc1300e1db6ade2156c713cd95a338406b2a70c9c64ca6841be1fb893581"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/provenance_inputs/may30.mat",
+      "sha256": "6a219ea439da20efae266bff308cb9d17de27a56b91e6b156d5ae76bc391f573"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/provenance_inputs/post_dover.mat",
+      "sha256": "2c3185900e035831bdb2323da5f416ff9ccb052c815e255a4f5c5ef4b8500017"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/inverse_target_summary.csv",
+      "sha256": "32ee374171861653f155dc1986eeec13ee0bab9b94de1b1628bb6535670f5434"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/inverse_search_receipt.json",
+      "sha256": "416e085bec67570c299d010325da09d37b8b540e00a5720edb7cba99014a790b"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_conductor_inference/all_parent_parameter_provenance.csv",
+      "sha256": "0f631d329c8ad5a4d0e750819d8c18872980af1f621e018484a9d8527d8d5975"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/runtime_branch_RXB_forward_validation.csv",
+      "sha256": "52e3bb5a16fe3912333d0117b871ac92bc256273a26f4dcca8e86b3ad3074d64"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/provenance_coverage_by_state.csv",
+      "sha256": "f694540bd3c081cb3909135665d6429e258dbbbe1e1ce4f9283c77b29a5d14ea"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/special_parent_provenance.csv",
+      "sha256": "b0bc1313949dca71b36671a42fa1bf50608c0ffd0a43b289028eafdbe01bb63f"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/provenance_coverage_by_class.csv",
+      "sha256": "a1c708e1893e5a21456bd9f42cf3cf6069a7303d338e71b01498a9145c91bc87"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/prior_redesign_imported_RX_restoration_candidates.csv",
+      "sha256": "1e7b0861416e21ae5c106de1d6ac53dc1ea0c0f377d021672e344b1f42fca8eb"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/runtime_segment_provenance_pre_may.csv",
+      "sha256": "3cc9091b5a15ac4d722e93e52bd7d74563be966cb331b06deac75d7e8031cc87"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/runtime_segment_provenance_may21.csv",
+      "sha256": "42d79af35cfbe38f8b53d7201a5fe2ff69d07228434ccfb1c7761ecdac758d09"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/runtime_segment_provenance_may30.csv",
+      "sha256": "b54fb1fb8a4eaaabe7c6b6831146350ffd4b9f183b71bebf866307390b58fecf"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/runtime_segment_provenance_post_dover.csv",
+      "sha256": "d4b0953e17d60d8a69436763ea0bb11511ee7d4006c55c614ba59ffa1518b045"
+    }
+  ]
+}

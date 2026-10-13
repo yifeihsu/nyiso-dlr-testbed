@@ -1,0 +1,397 @@
+{
+  "passed": true,
+  "test_count": 35,
+  "hours": [
+    4000,
+    8508
+  ],
+  "points": [
+    {
+      "hour_index": 4000,
+      "v1_parent_count": 44,
+      "v2_parent_count": 179,
+      "runtime_branch_count": 251,
+      "segment_count": 251,
+      "imported_RX_parent_count": 123,
+      "prior_engineered_RX_parent_count": 56,
+      "geometric_B_mismatch_parent_count": 0,
+      "max_forward_R_error_pu": 5.0820458952216541E-14,
+      "max_forward_X_error_pu": 1.1102230246251565E-16,
+      "max_Joule_identity_error_MW": 6.7814198700943962E-11,
+      "max_terminal_current_error_A": 6.1859850575274322E-11,
+      "max_series_utilization": 3.65415421196505,
+      "max_section_end_utilization": 3.6517964937976113,
+      "VQ_operating_gate": false
+    },
+    {
+      "hour_index": 8508,
+      "v1_parent_count": 46,
+      "v2_parent_count": 180,
+      "runtime_branch_count": 252,
+      "segment_count": 253,
+      "imported_RX_parent_count": 125,
+      "prior_engineered_RX_parent_count": 55,
+      "geometric_B_mismatch_parent_count": 0,
+      "max_forward_R_error_pu": 5.0820458952216541E-14,
+      "max_forward_X_error_pu": 1.1102230246251565E-16,
+      "max_Joule_identity_error_MW": 4.6556321731811012E-11,
+      "max_terminal_current_error_A": 1.13473674900888E-10,
+      "max_series_utilization": 1.4790761974014723,
+      "max_section_end_utilization": 1.4796060703729363,
+      "VQ_operating_gate": false
+    }
+  ],
+  "weather_is_observed": false,
+  "weather": {
+    "ambient_c": 25,
+    "wind_m_s": 0.6096,
+    "wind_angle_deg": 90,
+    "solar_w_m2": 1000,
+    "pressure_pa": 101325
+  },
+  "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+  "MATPOWER_version": "8.1",
+  "protected_sources": [
+    {
+      "path": "System Matpower Format/NY_Lite/add_dlr_series_current_constraints.m",
+      "sha256": "0c2fe8ebd452894188cb11cb7e37776eb5dbc837b52c6b156cbe75fd8f288183"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/dlr_heat_balance.m",
+      "sha256": "9a17663131eabae61c3d4cefff5a7d726c9ae81711c21992836411062416fed1"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/dlr_series_constraint.m",
+      "sha256": "3e1a967e63b43ab6ee4bf9e555f0a04382abe27fcbaafd138b12815d933bf627"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_ac.m",
+      "sha256": "b46962e1d966233d03ae30bfdd1ad4d0120a075940579d83f9ffd7e017c5efc3"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_compact_ac.m",
+      "sha256": "ef3f462d1dac27ddf41855c05603fd52f025b59e9f480b8fe19d3b0048278260"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_dover_dc.m",
+      "sha256": "b0f4c23bc1e7cf4e3907411089b96efba5ea9bb77bf1fed6a03910e4134b0979"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_full_dc.m",
+      "sha256": "3acff6c7187607c54c8b8e9b4fb4f3ccfe86c2dd3d6c9e22ef8eee75c4ffb2de"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_line_estimated_dc.m",
+      "sha256": "de3935e1e9b9dd2b94078d5a19976648884eac0f883dcead7786d4d1a93b20db"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_moses_corrected_dc.m",
+      "sha256": "5971086fc019920f2a7c2317476cdce97945b585632a3136c73aec225d459c46"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_par_controlled_dc.m",
+      "sha256": "99e6778597e4f023ce967bd0ba9fec18a41ffa9a3139553138d7758e818879cd"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_slim_dc.m",
+      "sha256": "2b7a67418717b9b0faf6fc9571e302793a04bd36eb8d54e9af4ecd1ee59be23f"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_western_corrected_dc.m",
+      "sha256": "6cf89f6076f2fa9e9c81e0d4da92d4a6bd930f99b644c2690c4ba9b63491ce01"
+    },
+    {
+      "path": "System Matpower Format/run_nygrid_2025_ac_dlr.m",
+      "sha256": "abb55a96e326d3d747bd82de89ddd8d0c845094a3869d9ffc4850472e5df561f"
+    },
+    {
+      "path": "System Matpower Format/run_nygrid_2025_compact_acpf.m",
+      "sha256": "9009265a6e6b09be11ee71a9b9ffa4b5b82208255ca32e46234a783d649d8c21"
+    },
+    {
+      "path": "System Matpower Format/run_nygrid_2025_loss_consistent_acpf.m",
+      "sha256": "11ee49bdb6d18923373b5940d1f5defad720e5ce41db269c3a455d68b613cb40"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/generator_capability_policy.json",
+      "sha256": "5426aa3db79a2cada69393b52831f0083834a84b8d3097957ff723f5e13dfba6"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/cable_segments.csv",
+      "sha256": "1673ea1dba11ac057af2af18873971cc024c7de2a104a0172ed8ed5d776c52cd"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/engineering_overlay.mat",
+      "sha256": "89fbfe38138ffc007930b3fec4dd4dd02b55f3a6518f73be25be56b1f9014f8f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_design_plan.mat",
+      "sha256": "aee5d1a7f4e34a4bfafda7462af93b8245353775c9335f62ac158a21373d24b5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_design_receipt.json",
+      "sha256": "36d941861036b9eba5c6a39c916d33ca3f44ef9df4520b015838c0a6c6ba17b2"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/thermal_segments.csv",
+      "sha256": "3be6298e619f6b2680f7d2dccc69bea75783d26a172e40b8993366042eae0b1e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/final_branch_mapping_review.json",
+      "sha256": "9586191164f2a87c7ac63c84ce06d62f95c28a4973ce82185a4f85c9adbebd58"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/geometry_defaults.csv",
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/voltage_changing_classification_review.csv",
+      "sha256": "c76f5684062a870dc9f72687c2cbc6ff9bf42a6f1a5ca88a2cfdea9aa05fff39"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/declared_weather_scenarios.csv",
+      "sha256": "ba6ee92302f00d21059561f1d8e01ec3be2e6ced577d0b1fc11e819bb6ce64b4"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/overhead_cable_classification_conflicts.csv",
+      "sha256": "7a0436a6fe8c9f8fbb07478a17e403ebd8df40adec39a13f8802bcef03c5c817"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/network_receipt.json",
+      "sha256": "c65358dc54875b6a945bf5ed194bb450be40be93924e6910555ee732a77e3d85"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/operating_states.mat",
+      "sha256": "bea2fb35c44a3c9510b7c4a68cf4a5ea901e7df0b51567755a2a388942dd171a"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/replay_receipt.json",
+      "sha256": "c5b0c9a4168525ded1eadfd4a4493c02a67a3eeae7a77b0a5a7f1964a5602931"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/network_cases.mat",
+      "sha256": "5fb84104d527b2e26d22f3a772ebd4e56ff981325ea7490d349fa53758646320"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/overlay_receipt.json",
+      "sha256": "a1c54e2657b63798f406176a41db99852277bb9a9741312bc1f236445913f8c9"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/replay/dated_hydro_zone_corrected.mat",
+      "sha256": "6acec85e2647377ad204ec46f86ec4e3f6497a66691de07ab347c54bb24211cb"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/replay/dated_verified_PAR_flows.mat",
+      "sha256": "4f034589dc10418d391d99cacf5c062b30c5d82308f0c9b73c06e4ae9c8fe6d1"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/bus_register.csv",
+      "sha256": "9a3359281f3b51daedcb2c2740e3d31c4eb4f62adffca5ea7819b1736c0dc660"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_slim/replay/topology_dated.mat",
+      "sha256": "7d86bea37e48f392a61b52b291e3e46638c56f50202d7fccf3688bb75a4b47b9"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_external_generator_shares.csv",
+      "sha256": "e0bef3a5c7c95fec628fb86410eb64f4ee5c3e3fd2a89e8eb5d42fa19289af7a"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_apply_budget.m",
+      "sha256": "ab62082de6bae0f08f0347456b5aa7ecf1b33a3c52f38f26cf32d8d11bbb2b85"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_budget.m",
+      "sha256": "4ee8f25d451e4f6e19355db1822ae2ad7263ce08bce5f34434732fd49b76a068"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_coupled_context.m",
+      "sha256": "5efadb750f2a3d3ff46ef4f2be4cd339ce9d178888e8436f7d17306e49f21ec0"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_coupled_equations.m",
+      "sha256": "1bffeaefc8e6563bea2ee56c1343d42cbcc8d63a74ccc54a4f37bc73ad12d59a"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_coupled_solve.m",
+      "sha256": "0e9ce88b66610d04d702c64bfe55ee5b39560a3e208a5868c7e1e8dd4d2492e5"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_finalize.m",
+      "sha256": "8074c6bf91f4cc7cd29ae539de75ddd80e081088a0db5864c06636b8119c3272"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_inner_pf.m",
+      "sha256": "daa695505456987e3daf22ed112be8495dd6cb72ab9bbb01af74d7f0cf42aa3f"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_prepare_case.m",
+      "sha256": "dccf49daf9d62b20a1d2a3f282e290dd01a4f52ab7de33a2f51db0a71faacd39"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_prepare_policy.m",
+      "sha256": "d5fed7cf527b794f46a88ef0c3cced939d03375168135920b8dad38bde4d3cda"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_solve.m",
+      "sha256": "6bc2e1787e6cbec5427439678e0c797af017884c57f3c02642da5d0aa1051cf0"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/audit_ac_solution.m",
+      "sha256": "07fcd00ff9f525af02ed40a6ba82951f427b5827aa93ddf47c6a1afe7edfe1b2"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/nygrid_ac_apply_sections.m",
+      "sha256": "ce3de5ef5ab5774ac30a596c589dc67ffb5231b8ca276cdf518d83e8c5180416"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_conductor_heat.m",
+      "sha256": "a70fdf123e90d99b91e206e20dd7fb1b5eacdfd91349b92a29e558f654de0538"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_conductor_resistance.m",
+      "sha256": "b51b4bb4b7ac0d5cf4f886950ac44ee5d2284d2951e74f4c07a6e4ac70511624"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_apply_resistance.m",
+      "sha256": "f3f15f91f1192138162d9ba87fb3c6f413f843b7bfa565fd9a5ec4c3f97fa2ac"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_current_audit.m",
+      "sha256": "f14301f156172f08611fe3cc028616e6d8f5158d8b3b7457cd22717f5c6ca234"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_limits.m",
+      "sha256": "926fcaf95dc169d31b55278062178d10b750cf0cdc64aeb5530f1b8ad6015832"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_prepare_case.m",
+      "sha256": "3e989e7a7ef8210b85ca9a496a8a1dda2f2ea0fbc8dd44251dc311278bf4ee85"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_terminal_current_audit.m",
+      "sha256": "e4733cc21ce0e6e2a8cd918bdfa510f739785aac75915e1c9f978ed7ac66cae0"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/add_ac_terminal_current_limits.m",
+      "sha256": "550020e7da959b7f0b39a61d85ba7699fc8d7c509d57759f49711312c88237cd"
+    },
+    {
+      "path": "scripts/nygrid_2025_acpf_profile_audit/acpf/audit_profile_pf.m",
+      "sha256": "6ea3ae9d7d2f2b526986ba7f117a6333bf24bff3e857d1a9556efc3c8612a987"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/THIRD_PARTY_NOTICES.md",
+      "sha256": "d0069f8d9d60ea4b3725fb9ca6d34f76b02947e037bcbe6992212f7331dab8d4"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/core/compact_ac_build.m",
+      "sha256": "e501cd0fc009ba5542850add00eb99d57f242087adc59bfc525accf333efa3b2"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/core/compact_ac_operator_fingerprint.m",
+      "sha256": "61da98261eabf176b3a997ad19812e7fe406dd1d882a6f62b34184c34edb3d3f"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/core/compact_ac_solve.m",
+      "sha256": "df890361ac16f4607c89776cb69d71474934d2c4077c37163bc289fa9dcc3db1"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/core/compact_ac_source_fingerprint.m",
+      "sha256": "a7496a7bbe5b7bb43f9b7b4c0d0cdbe2813f5aa254bbaeb8adec15b1158a2356"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/runtime/audit_nygrid_2025_runtime_dependencies.m",
+      "sha256": "d2dbfbe7a0fcd31b4bdfcfd1ace285a04d06dcef76056ca27950d75b7955a77c"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/runtime/build_runtime_manifests.py",
+      "sha256": "1c07dd735fede2ae69f1aa23b52035a1195e14ccc08113bf1ba6d98bbf269f8c"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/runtime/nygrid_handoff_thermal_candidates.m",
+      "sha256": "44d5682fa3e8a87c1bec45066d381bcd0cff4d8517efa7904f52bb84e4e2706f"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/runtime/screen_nygrid_2025_loss_pf_thermal.m",
+      "sha256": "535893689a0052cc08b7b604789fead2374c9ff6904792cb312490a8a8663fc9"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/runtime/setup_nygrid_2025_handoff.m",
+      "sha256": "1dcdfdcc8742d21366330448eabfa5f8558e9c688d542dec150b8ccc5b309ff3"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/runtime/smoke_nygrid_2025_handoff.m",
+      "sha256": "bc079e3790362e53f601a462433d46476fb800eff4cb22aa6b569c569b17a5fb"
+    }
+  ],
+  "new_runtime_source_files": [
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/export_rx_provenance_inputs.m",
+      "sha256": "1c9b487696acaa14a8e04789fd14349fadf22067fb970e8a5cc3989947195fa9"
+    },
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/nygrid_rx_thermal_candidates.m",
+      "sha256": "1e68d3a9eb3311df060a1716684152c130cdea974cbc7429091ad5aaca36b77f"
+    },
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/screen_nygrid_2025_rx_thermal.m",
+      "sha256": "2a64d36556659361ba281f8f0516e60e2c2f349d2fb0942b2ca3bc236823aeea"
+    },
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/test_nygrid_rx_thermal_screen.m",
+      "sha256": "ac0f16eb9f5f8a3cdecebf8bcac6fbb5fe8cb7160c1bf695a0c70149ca72dae2"
+    }
+  ],
+  "electrical_input_files_changed": false,
+  "handoff_v1_changed": false,
+  "annual_replay_run": false,
+  "OPF_run": false,
+  "installed_asset_DLR_qualification": false,
+  "whole_system_operating_qualification": false,
+  "scope": "selected-point R/X-conditioned synthetic conductor screen and adversarial guards; no electrical model changes"
+}

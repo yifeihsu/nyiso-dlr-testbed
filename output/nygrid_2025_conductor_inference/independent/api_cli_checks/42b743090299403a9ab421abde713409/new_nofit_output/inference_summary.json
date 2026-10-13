@@ -1,0 +1,33 @@
+{
+  "input_R_pu": 0.02,
+  "input_X_pu": 0.0147,
+  "input_B_pu": null,
+  "base_kV": 345.0,
+  "base_MVA": 100.0,
+  "candidate_count": 0,
+  "status": "no_candidate_under_declared_catalog_and_bounds",
+  "targets_changed": false,
+  "installed_conductor_identified": false,
+  "geographic_chord_used": false,
+  "power_flow_or_interface_observations_used": false,
+  "circuits_allowed": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "minimum_length_m": 5.0,
+  "maximum_length_m": 700000.0,
+  "length_cap_policy": "inherited_voltage_class_synthetic_cap_without_geographic_chord",
+  "resistance_temperature_policy": "catalog_reference_75C_ACSR_or95C_ACSS",
+  "B_used_for_ranking": false,
+  "candidate_set_is_conditional_not_a_statistical_confidence_interval": true,
+  "distinct_catalog_choices": 0,
+  "X_over_R": 0.735,
+  "declared_X_over_R_min": 3.4738407748928046,
+  "declared_X_over_R_max": 37.50334725388549,
+  "maximum_implied_GMD_m": 0.36051680976529454,
+  "required_GMD_min_m": 7.0,
+  "required_GMD_max_m": 14.0,
+  "no_candidate_is_not_universal_physical_impossibility": true
+}
