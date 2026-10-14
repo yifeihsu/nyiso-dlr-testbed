@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "scope": "Exact current offline map included with the latest model",
+  "map_source_commit": "de9a0e3bc5d588bde157c0877d03a08f06743b10",
+  "model_package_source_commit": "39402c2057b75670fe0591ab7f1f2ed304adec56",
+  "HTML": {
+    "package_path": "map/network_map.html",
+    "bytes": 14247991,
+    "sha256": "077d297471ff17655f01bd9a163466c522817dae7df16cc90a95453e1f01fa51"
+  },
+  "source_map_delivery_manifest_sha256": "eb663457598a17d21350b49080d8e59b77ae85e823df9e6e4d7b8b67712cd342",
+  "source_qualified_hours": 8651,
+  "equation_loss_qualified_hours": 8170,
+  "hour_slots": 8760,
+  "NY_zones": 11,
+  "modeled_interfaces": 7,
+  "DOM_checks": 28,
+  "native_browser_checks": 13,
+  "offline_self_contained": true,
+  "external_runtime_requests": false,
+  "new_PF_or_OPF_run_for_packaging": false,
+  "source_receipts": {
+    "build_receipt.json": "31180423c78844ec6b09e28563072ace8edfcfaa6dbdfcdbb981ad07198d7514",
+    "interaction_validation.json": "73c504d548c79efe7f2940371f51fc7c3c170990effba3af8cfaff2290dfd534",
+    "browser_visual_review.json": "9647a0323ceeec6e58bb199110eee85ec856c7ce2d297426e7be5029a1e0bb0d",
+    "independent_embedded_payload_review.json": "e472c4a0d1de5976aa78c0c8dc7ac36d7aaf2c941e13f542497b9ab5e45cc3d2"
+  }
+}

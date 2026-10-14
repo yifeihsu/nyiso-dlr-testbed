@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "base_archive": {
+    "path": "deliverables/nygrid_2025_latest_model_20261013/nygrid_latest_model_20261013.zip",
+    "bytes": 111481630,
+    "sha256": "b349bfc5587162fd8d945dd0e81485ed6748c205d432f4ce93e2ad42e2732f6a"
+  },
+  "archive": {
+    "path": "deliverables/nygrid_2025_latest_model_20261013/nygrid_latest_model_with_map_20261013.zip",
+    "bytes": 116111250,
+    "sha256": "7e6d13ea54f49aa141bd1d6bcfc77ef4e1ba64cbe2542c4675a3e9dd1cb16810"
+  },
+  "payload_files": 669,
+  "payload_bytes": 130345898,
+  "base_payload_files_unchanged": 665,
+  "modified_base_files": [
+    "START_HERE.md"
+  ],
+  "added_files": [
+    "map/network_map.html",
+    "map/README.md",
+    "verification/MAP_PROVENANCE.json"
+  ],
+  "map_HTML_bytes_identical": true,
+  "runtime_model_and_structure_documents_unchanged": true,
+  "archive_verification": {
+    "passed": true,
+    "kind": "latest_model_with_interactive_map",
+    "files": 669,
+    "bytes": 130345898,
+    "source_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+    "checksum_table_and_manifest_digest_verified": true
+  },
+  "fresh_extraction_verification": "separate receipt",
+  "sources": [
+    {
+      "path": "deliverables/nygrid_2025_latest_model_20261013/nygrid_latest_model_20261013.zip",
+      "sha256": "b349bfc5587162fd8d945dd0e81485ed6748c205d432f4ce93e2ad42e2732f6a"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/network_map.html",
+      "sha256": "077d297471ff17655f01bd9a163466c522817dae7df16cc90a95453e1f01fa51"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/DELIVERY_MANIFEST.json",
+      "sha256": "eb663457598a17d21350b49080d8e59b77ae85e823df9e6e4d7b8b67712cd342"
+    },
+    {
+      "path": "scripts/nygrid_2025_handoff_map/build_package.py",
+      "sha256": "767fa06818b66c95d0a0815138bce12459e07d10d1413ee74a8668784dddf5a7"
+    }
+  ]
+}
