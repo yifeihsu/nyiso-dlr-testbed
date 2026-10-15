@@ -1,0 +1,711 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T16:45:20.339022+00:00",
+  "HEAD": "ae07cd5e5ce9300daca0d8bac2509a5504bb11a8",
+  "baseline": "Authors released57-bus model with authors released2019 inputs only",
+  "authors_release_commit": "47698b6c7823ae7b1bc6935e5601d5b64b8f918e",
+  "released_code_data_files_verified": 73,
+  "annual_mat_and_companion_files_hash_verified": 12,
+  "hours": 8760,
+  "successful_saved_DC_hours": 8760,
+  "inventory": {
+    "buses": 57,
+    "AC_branches": 94,
+    "generators": 271,
+    "DC_links": 4
+  },
+  "same_unchanged_branch_PF_solutions_for_both_operators": true,
+  "stored_ifmap_members_match_pinned_authors_updateOpCond_source_exactly": true,
+  "maximum_literal_formula_recomputation_error_MW": 0.0,
+  "maximum_authors_ifmap_recomputation_error_MW": 0.0,
+  "maximum_saved_paper_error_recomputation_difference_percentage_points": 2.842170943040401e-14,
+  "maximum_MAT_vs_companion_CSV_difference": 5.002220859751105e-12,
+  "strict_literal_pooled": {
+    "model": "authors_released_57bus",
+    "year": 2019,
+    "operator": "strict_literal_flow4Plot",
+    "interface": "ALL_SEVEN_POOLED",
+    "hours": 8760,
+    "comparisons": 61320,
+    "MAE_public_MW": 1251.5755211080298,
+    "RMSE_public_MW": 1812.6313629090237,
+    "bias_model_minus_observed_MW": -1015.4475938240116,
+    "WAPE_percent": 60.66387966304786,
+    "mean_abs_observed_MW": 2063.1313527255347,
+    "MAPE_nonzero_actual_percent": 376.69108834848055,
+    "zero_observed_count": 0,
+    "positive_limit_9999_count": 8760,
+    "paper_signed_limit_q025_percent": -20.451285172476236,
+    "paper_signed_limit_q25_percent": -2.522337595036529,
+    "paper_signed_limit_median_percent": 14.57977807674628,
+    "paper_signed_limit_q75_percent": 41.94503847125604,
+    "paper_signed_limit_q975_percent": 85.84961181742372,
+    "mean_absolute_limit_normalized_error_percent": 25.52970062132679,
+    "fraction_abs_paper_error_at_most10pct": 0.35634377038486625,
+    "fraction_abs_paper_error_at_most15pct": 0.4575342465753425
+  },
+  "authors_ifmap_pooled": {
+    "model": "authors_released_57bus",
+    "year": 2019,
+    "operator": "authors_released_if_map",
+    "interface": "ALL_SEVEN_POOLED",
+    "hours": 8760,
+    "comparisons": 61320,
+    "MAE_public_MW": 231.44366232860054,
+    "RMSE_public_MW": 300.08500335537644,
+    "bias_model_minus_observed_MW": 82.91276562292883,
+    "WAPE_percent": 11.218076930625283,
+    "mean_abs_observed_MW": 2063.1313527255347,
+    "MAPE_nonzero_actual_percent": 53.4287087033472,
+    "zero_observed_count": 0,
+    "positive_limit_9999_count": 8760,
+    "paper_signed_limit_q025_percent": -16.56847313366416,
+    "paper_signed_limit_q25_percent": -5.474399378216897,
+    "paper_signed_limit_median_percent": -1.8415230520957966,
+    "paper_signed_limit_q75_percent": 1.7780591551725131,
+    "paper_signed_limit_q975_percent": 14.759669138547824,
+    "mean_absolute_limit_normalized_error_percent": 5.5712787415477365,
+    "fraction_abs_paper_error_at_most10pct": 0.8449934768427919,
+    "fraction_abs_paper_error_at_most15pct": 0.9427266797129811
+  },
+  "paper_metric": "100*(observed-simulated)/positive hourly interface limit; signed and distinct from WAPE.",
+  "WAPE_metric": "100*sum(abs(simulated-observed))/sum(abs(observed)); no denominator floor or hour exclusion.",
+  "new_PF_run": false,
+  "source_or_network_modified": false,
+  "derived_network_used_as_2019_baseline": false,
+  "original_2019_source_time_preparation_retained": true,
+  "current_2025_used_only_as_separate_existing_other_model_metrics": true,
+  "limitations": [
+    "2019 uses the authors8760naive local labels including their interpolation and repeated-hour preparation.",
+    "Strictliteral and authorsif.map are distinct measurement views; if.map aggregation does not alter any solved model state.",
+    "2025 has different inputs, topology,AC/loss treatment and8651qualified physical hours; the cross-year table is not a controlled model-performance comparison.",
+    "No physical-meter, operating-feasibility or original-paper-Figure5 exact-reproduction certification is made."
+  ],
+  "hash_checks": [
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/.gitattributes",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/.gitignore",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/RenewableGen.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/allocateLoad.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/bus_ny_type_zone_new.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/bus_ny_type_zone_population.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/fuelPriceWeekly_2019.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/fuelPriceWeekly_2019.mat",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/fuelmixHourly_2019.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/fuelmixHourly_2019.mat",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/genParamAll.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/genParamAll.mat",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/genParamAll_2019.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/genParamAll_newramp.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/genParamAll_newramp.mat",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/gen_bus_assignment.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/hydroGenMonthly_2019.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/hydroGenMonthly_2019.mat",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/interflowHourly2019.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/interflowHourly_2019.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/interflowHourly_2019.mat",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/loadHourly_2019.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/loadHourly_2019.mat",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.mat",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc_new.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/nuclearGenDaily_2019.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/nuclearGenDaily_2019.mat",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/priceHourly_2019.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/priceHourly_2019.mat",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/solar_example.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/thermalGenHourly_2019.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/thermalGenHourly_2019.mat",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/thermalGenMatched_2019.xlsx",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/thermalGenMatched_2019_copy.xlsx",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/thermalGenNotMatched_2019.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/thermalGenNotMatched_2019_copy.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/wind_example.csv",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/NYgrid.prj",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/OPFtestcase.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/PFtestcase.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/README.md",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/addRenewable.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/allocateGen.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/allocateLoad.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/createDir.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/downloadData.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/flow4Plot.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/fuel4Plot.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/importBusInfo.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/importGenData.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/importGenParam.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/importNearestBus.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/importRefTable.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/importRenewableGen.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/plotFlow.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/plotFuel.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/plotPrice.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/price4Plot.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/readOpCond.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/standardHeatRate.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeFuelPrice.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeFuelmix.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeGenParam.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeHydroGen.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeInterflow.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeLoad.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeNuclearGen.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writePrice.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeThermalGen.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/main.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/modifyMPC.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "pinned_authors_release",
+      "path": "tmp/nygrid_2019_reproduction/upstream/updateOpCond.m",
+      "sha256_verified": true,
+      "git_blob_verified": true
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_1.mat",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_1_cases.csv",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_1_interfaces.csv",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_2.mat",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_2_cases.csv",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_2_interfaces.csv",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_3.mat",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_3_cases.csv",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_3_interfaces.csv",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_4.mat",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_4_cases.csv",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    },
+    {
+      "scope": "saved_authors_57bus_annual_replay",
+      "path": "output/nygrid_2019/annual_4_interfaces.csv",
+      "sha256_verified": true,
+      "git_blob_verified": false
+    }
+  ],
+  "source_hashes_unchanged_after_analysis": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2019/verification_manifest.json",
+      "sha256": "7c8195017078f4ee707be11f0dbf2a813575b146870f5f9cafad16c27a0d4127",
+      "bytes": 17618
+    },
+    {
+      "path": "output/nygrid_2019/upstream_manifest.json",
+      "sha256": "6ea267b07fa3fd0ca9c24f93b660b02ac4704b4a3bedf2b0fe34ce173cadd6da",
+      "bytes": 27842
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/public_interface_metrics.csv",
+      "sha256": "6cb5dd4792ce306227cdd8a38c0003f95bf730c997bed79dd19ac49cc8578fc2",
+      "bytes": 270287
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/scoring_receipt.json",
+      "sha256": "930d727fb67a9130f9d5d8693aaf86496e0cb6e39c591f86691979c9eb718fa4",
+      "bytes": 6314
+    },
+    {
+      "path": "output/nygrid_2019/annual_1.mat",
+      "sha256": "314d817570b4edfd60b0970f25aee8d126bffd46aa70ceba8ee3bde10b05f274",
+      "bytes": 5569790
+    },
+    {
+      "path": "output/nygrid_2019/annual_1_cases.csv",
+      "sha256": "975024f20abfadbb42af807e41bb1b3d900bb781ee79b380e66ca539f4ba1f4e",
+      "bytes": 119832
+    },
+    {
+      "path": "output/nygrid_2019/annual_1_interfaces.csv",
+      "sha256": "43bbe74b4f8562018bfe7de6f58346c87a3afe479acd04ee270f04776ed387dd",
+      "bytes": 1631347
+    },
+    {
+      "path": "output/nygrid_2019/annual_2.mat",
+      "sha256": "e72ddd82be691ad4a46cd74c1316e450763944f259cce95e071b972b986383c6",
+      "bytes": 5545875
+    },
+    {
+      "path": "output/nygrid_2019/annual_2_cases.csv",
+      "sha256": "2ac37f02f919c6d20cf1fae95be25375868e21192d597e795ab823251a6fc734",
+      "bytes": 119765
+    },
+    {
+      "path": "output/nygrid_2019/annual_2_interfaces.csv",
+      "sha256": "a4d4ca157fdf1c050f7c1bd32eb14645fbfbcebee22f0af4725a44481345d44f",
+      "bytes": 1631467
+    },
+    {
+      "path": "output/nygrid_2019/annual_3.mat",
+      "sha256": "47375d88c36e2a3af33a85eeed461396186404fe9c7486ff43ed4aaec2988aab",
+      "bytes": 5767795
+    },
+    {
+      "path": "output/nygrid_2019/annual_3_cases.csv",
+      "sha256": "2df225949e193760fb40ed8e7670d5fa0f4fa4963ffd86476d9365c769eeb1cb",
+      "bytes": 119760
+    },
+    {
+      "path": "output/nygrid_2019/annual_3_interfaces.csv",
+      "sha256": "c772c6b5e175493c6806cb881ccae1bb3f76984ff3f97b5361b96d6b6d3be21a",
+      "bytes": 1633051
+    },
+    {
+      "path": "output/nygrid_2019/annual_4.mat",
+      "sha256": "795f57ce1ee3f483484da4f98461a9a47eaf15ca573a1dadca3bd3804a5f7431",
+      "bytes": 5461165
+    },
+    {
+      "path": "output/nygrid_2019/annual_4_cases.csv",
+      "sha256": "098405938b0f20d10bf969215961f8e79eb66d8188d8e56a649fc40b4cded863",
+      "bytes": 119789
+    },
+    {
+      "path": "output/nygrid_2019/annual_4_interfaces.csv",
+      "sha256": "88b04d8569d359528e0e66ea987ecb109682d66dcc46b0359be8be5bbcb216fe",
+      "bytes": 1633734
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/flow4Plot.m",
+      "sha256": "924df00f371ee600b16db75e6f83cf6997731beae2502df6db094a112a5eeaec",
+      "bytes": 2862
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/updateOpCond.m",
+      "sha256": "12cd365b756612d46dc10f1ec5c9ff39a9b54f191b0c6db64e2d1aa990794520",
+      "bytes": 20110
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_released_2019_comparison/independent/released_2019_recomputed_metrics.csv",
+      "sha256": "e72d9292f3bb9982ef56066774843106f744eea49b08868350afc41682133f7f",
+      "bytes": 5966
+    },
+    {
+      "path": "output/nygrid_released_2019_comparison/independent/released_operator_members.csv",
+      "sha256": "59a574306ad564f899a52c726027582e768baef279bdc659fe59020da78b46b2",
+      "bytes": 426
+    },
+    {
+      "path": "output/nygrid_released_2019_comparison/independent/released2019_vs_othermodel2025.csv",
+      "sha256": "e1dce02813b7e2b898c3cefee0b5ff8d066edf35f9810f409ca43c9cd534f04a",
+      "bytes": 1236
+    }
+  ],
+  "producer": {
+    "path": "scripts/nygrid_released_2019_comparison/independent/recompute_released_metrics.py",
+    "sha256": "fd4ecf8a1e7589514ff69b7e615f778c5b2b6dd29e61d995be7265c3adb247e6",
+    "bytes": 13988
+  }
+}

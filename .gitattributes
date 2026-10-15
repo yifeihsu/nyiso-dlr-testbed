@@ -198,3 +198,8 @@ output/nygrid_2025_physical_repair/**/*.log -diff whitespace=-blank-at-eol,-blan
 output/nygrid_2025_physical_repair/delivery/structure/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 NYGRID_2025_PHYSICAL_REPAIR.md -text !eol whitespace=cr-at-eol
 deliverables/CURRENT_NYGRID_MODEL.json -text !eol whitespace=cr-at-eol
+# Author-release-only 2019 comparison and provenance correction.
+scripts/nygrid_released_2019_comparison/** -text !eol whitespace=cr-at-eol
+output/nygrid_released_2019_comparison/** -text !eol whitespace=cr-at-eol
+output/nygrid_released_2019_comparison/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_RELEASED_2019_COMPARISON.md -text !eol whitespace=cr-at-eol

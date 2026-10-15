@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T16:48:24.295238+00:00",
+  "baseline": "Authors released57bus case and authors2019 inputs",
+  "authors_release_commit": "47698b6c7823ae7b1bc6935e5601d5b64b8f918e",
+  "our_derived140bus_case_used": false,
+  "our_current2025_inputs_used_in2019_case": false,
+  "fresh_unmodified_author_source_hours": 12,
+  "fresh_maximum_saved_input_and_solution_difference": 0.0,
+  "annual_original_release_hours_rescored": 8760,
+  "two_measurements_of_same_unchanged_case": true,
+  "author_map_pooled_WAPE_percent": 11.218076930625285,
+  "literal_helper_pooled_WAPE_percent": 60.66387966304786,
+  "reported_as_exact_paper_figure_reproduction": false,
+  "sources": [
+    {
+      "path": "output/nygrid_released_2019_comparison/independent/independent_released_2019_review.json",
+      "bytes": 25595,
+      "sha256": "0a54c83549a7ac6563fd71dd591444aed28f5338d027775e10fae0fef5d2bb9a"
+    },
+    {
+      "path": "output/nygrid_released_2019_comparison/fresh_author_release_receipt.json",
+      "bytes": 7623,
+      "sha256": "ce8a573c358b928042b32dad8ebe6fe45fa2cf55c16fe32ba25b8fa19c365c07"
+    },
+    {
+      "path": "output/nygrid_released_2019_comparison/fresh_author_release_checks.csv",
+      "bytes": 1016,
+      "sha256": "e1ccf3cd4a03d8ecf049ca1070694d8a6853e140f87e7b7c30b420b59424315e"
+    },
+    {
+      "path": "output/nygrid_released_2019_comparison/fresh_author_release_cases.mat",
+      "bytes": 468064,
+      "sha256": "e222edbc69a84af408eb9bfab504a78e3ca9c872ce8d86b5b987085eb7b8fbdc"
+    },
+    {
+      "path": "output/nygrid_released_2019_comparison/independent/released2019_vs_othermodel2025.csv",
+      "bytes": 1236,
+      "sha256": "e1dce02813b7e2b898c3cefee0b5ff8d066edf35f9810f409ca43c9cd534f04a"
+    },
+    {
+      "path": "output/nygrid_released_2019_comparison/independent/released_2019_recomputed_metrics.csv",
+      "bytes": 5966,
+      "sha256": "e72d9292f3bb9982ef56066774843106f744eea49b08868350afc41682133f7f"
+    },
+    {
+      "path": "scripts/nygrid_released_2019_comparison/check_unmodified_release.m",
+      "bytes": 5091,
+      "sha256": "63d3e83cd15623df522cf3fde369e077e2b84e34ba8bff3cbe0cb5d11940fe8d"
+    },
+    {
+      "path": "scripts/nygrid_released_2019_comparison/build_report.py",
+      "bytes": 10841,
+      "sha256": "06fa460ee6c2d660a00f0946ac8735365e3ab60aae589c17f0f79e185fd94fd5"
+    }
+  ],
+  "report": {
+    "path": "NYGRID_RELEASED_2019_COMPARISON.md",
+    "bytes": 7209,
+    "sha256": "68a0a266eddb8d6a0c70e08a2e84a712e8fe24425ca665d0cdd157b0f02c4b07"
+  }
+}
