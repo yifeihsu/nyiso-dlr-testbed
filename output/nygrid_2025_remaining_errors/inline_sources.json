@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "annual-errors",
+      "title": "Remaining interface errors",
+      "queries": [
+        {
+          "id": "annual-errors-evidence",
+          "source": {
+            "label": "Remaining interface errors",
+            "files": [
+              {
+                "label": "comparison_arrays.npz"
+              },
+              {
+                "label": "annual_metrics.csv"
+              },
+              {
+                "label": "baseline_receipt.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Remaining interface errors",
+                "definition": "MAE and signed bias compare the frozen original-from-terminal model cuts with the corresponding observations, in public-scale MW. WAPE divides total absolute error by total absolute observed flow."
+              }
+            ],
+            "filters": [
+              "Current equation, loss and recovery qualified cohort:8170hours",
+              "Failed solutions excluded"
+            ],
+            "caveats": [
+              "Physical2025 P32 meter membership and the conditional numeric-as-MW source interpretation remain unverified."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "Recorded checks",
+                "detail": "All seven annual metrics reproduce the sealed current-model comparison exactly."
+              }
+            ]
+          },
+          "reportingPeriod": "2025 hourly model results; diagnosis completed October15,2026",
+          "rows": [
+            {
+              "interface": "DYSINGER EAST",
+              "hours": 8170,
+              "mae_public_MW": 258.6435468479029,
+              "bias_public_MW": 4.990789969398163,
+              "wape_percent": 29.963813291686247
+            },
+            {
+              "interface": "WEST CENTRAL",
+              "hours": 8170,
+              "mae_public_MW": 255.04359964653355,
+              "bias_public_MW": 2.293614246175742,
+              "wape_percent": 45.85808760392107
+            },
+            {
+              "interface": "TOTAL EAST",
+              "hours": 8170,
+              "mae_public_MW": 472.6937939054189,
+              "bias_public_MW": -326.00357546476704,
+              "wape_percent": 14.695426068123677
+            },
+            {
+              "interface": "MOSES SOUTH",
+              "hours": 8170,
+              "mae_public_MW": 120.78014023391528,
+              "bias_public_MW": 11.832741550488656,
+              "wape_percent": 22.94359860253754
+            },
+            {
+              "interface": "CENTRAL EAST - VC",
+              "hours": 8170,
+              "mae_public_MW": 233.06226951428897,
+              "bias_public_MW": 172.43266464312788,
+              "wape_percent": 13.703768329560342
+            },
+            {
+              "interface": "UPNY CONED",
+              "hours": 8170,
+              "mae_public_MW": 224.32720519932337,
+              "bias_public_MW": -15.788771551885834,
+              "wape_percent": 7.562881773257351
+            },
+            {
+              "interface": "SPR/DUN-SOUTH",
+              "hours": 8170,
+              "mae_public_MW": 168.4243805725506,
+              "bias_public_MW": -62.3959314642373,
+              "wape_percent": 9.176816455415125
+            }
+          ],
+          "columns": [
+            {
+              "field": "interface",
+              "label": "Interface"
+            },
+            {
+              "field": "hours",
+              "label": "Hours"
+            },
+            {
+              "field": "mae_public_MW",
+              "label": "MAE(MW)"
+            },
+            {
+              "field": "bias_public_MW",
+              "label": "Bias(MW)"
+            },
+            {
+              "field": "wape_percent",
+              "label": "WAPE(%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "western-pattern",
+      "title": "Shared western residual",
+      "queries": [
+        {
+          "id": "western-pattern-evidence",
+          "source": {
+            "label": "Shared western residual",
+            "files": [
+              {
+                "label": "pairwise_residual_structure.csv"
+              },
+              {
+                "label": "month_metrics.csv"
+              },
+              {
+                "label": "local_hour_metrics.csv"
+              },
+              {
+                "label": "niagara_monthly_prior_oracle_comparison.csv"
+              },
+              {
+                "label": "niagara_saved_DC_counterfactuals_same8170_metrics.csv"
+              },
+              {
+                "label": "accounting_identity_review.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Shared western residual",
+                "definition": "Dysinger East and West Central share a variable residual; their complete model-cut identities isolate fixed zonal source inputs and small terminal corrections."
+              }
+            ],
+            "filters": [
+              "Identical8170-hour annual cohort"
+            ],
+            "caveats": [
+              "The pattern does not identify Niagara as the sole historical cause. EIA full-calendar means and selected-hour model means have different populations. Saved counterfactuals are DC responses."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "Recorded checks",
+                "detail": "Exact cut-identity closure is below1.9e-10modelMW. Zero lag has the lowest MAE for all seven interfaces on7936 common qualified triplets."
+              }
+            ]
+          },
+          "reportingPeriod": "2025 hourly model results; diagnosis completed October15,2026",
+          "rows": [
+            {
+              "correlation": 0.9982557071224564,
+              "difference_mae_public_MW": 14.393481147407966,
+              "common_variance_percent": 99.90846945934042
+            }
+          ],
+          "columns": [
+            {
+              "field": "correlation",
+              "label": "Residual correlation"
+            },
+            {
+              "field": "difference_mae_public_MW",
+              "label": "Residual difference MAE(MW)"
+            },
+            {
+              "field": "common_variance_percent",
+              "label": "Common variance(%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pjm-response",
+      "title": "Eastern import allocation sensitivity",
+      "queries": [
+        {
+          "id": "pjm-response-evidence",
+          "source": {
+            "label": "Eastern import allocation sensitivity",
+            "files": [
+              {
+                "label": "pjm_partition_plan.json"
+              },
+              {
+                "label": "pjm_partition_responses.csv"
+              },
+              {
+                "label": "independent_pjm_partition_review.json"
+              },
+              {
+                "label": "current_AC_vs_corrected_DC_same_hours.csv"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Eastern import allocation sensitivity",
+                "definition": "A bounded100publicMW transfer between external proxy buses130 and134 changes Total East and Central East while preserving regional generation totals."
+              }
+            ],
+            "filters": [
+              "15 calendar-selected hours",
+              "30 qualified directional cases"
+            ],
+            "caveats": [
+              "This is a local sensitivity, not observed historical dispatch or an annual improvement. Capacity-proportional alternatives were no-op controls."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "Recorded checks",
+                "detail": "Independent checks confirm finite unit bounds, regional total conservation, refreshed Q capabilities and score agreement within5.7e-14MW."
+              }
+            ]
+          },
+          "reportingPeriod": "2025 hourly model results; diagnosis completed October15,2026",
+          "rows": [
+            {
+              "variant": "pjm_130_to134_100MW",
+              "interface": "TOTAL EAST",
+              "paired_hours": 15,
+              "mean_response_public_MW": 18.663209714951
+            },
+            {
+              "variant": "pjm_130_to134_100MW",
+              "interface": "CENTRAL EAST - VC",
+              "paired_hours": 15,
+              "mean_response_public_MW": 10.313104018099937
+            },
+            {
+              "variant": "pjm_134_to130_100MW",
+              "interface": "TOTAL EAST",
+              "paired_hours": 15,
+              "mean_response_public_MW": -18.647945310045635
+            },
+            {
+              "variant": "pjm_134_to130_100MW",
+              "interface": "CENTRAL EAST - VC",
+              "paired_hours": 15,
+              "mean_response_public_MW": -10.307810006073591
+            }
+          ],
+          "columns": [
+            {
+              "field": "variant",
+              "label": "Direction"
+            },
+            {
+              "field": "interface",
+              "label": "Interface"
+            },
+            {
+              "field": "paired_hours",
+              "label": "Hours"
+            },
+            {
+              "field": "mean_response_public_MW",
+              "label": "Mean response(MW)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physical-limitations",
+      "title": "Loss and voltage limitations",
+      "queries": [
+        {
+          "id": "physical-limitations-evidence",
+          "source": {
+            "label": "Loss and voltage limitations",
+            "files": [
+              {
+                "label": "physics_review.json"
+              },
+              {
+                "label": "parent_loss_concentration.csv"
+              },
+              {
+                "label": "voltage_bound_concentration.csv"
+              },
+              {
+                "label": "paired_physical_responses.csv"
+              },
+              {
+                "label": "independent_probe_review.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Loss and voltage limitations",
+                "definition": "Annual losses are model-scale MW. Parent41 dominates zoneF assigned loss; all qualified annual hours exceed the voltage upper bound somewhere."
+              }
+            ],
+            "filters": [
+              "8170 annual qualified hours",
+              "Parent41 sensitivity uses15 calendar-selected hours"
+            ],
+            "caveats": [
+              "The parent41 admittance probe does not rebuild conductor or DLR metadata and was not promoted. Equation qualification does not establish operating feasibility."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "Recorded checks",
+                "detail": "The15 baseline cases reproduce all105 saved interface values exactly. Parent41 importedR/X reduces its sampled mean loss92.87\u21922.34modelMW with negligible interface response."
+              }
+            ]
+          },
+          "reportingPeriod": "2025 hourly model results; diagnosis completed October15,2026",
+          "rows": [
+            {
+              "parent41_mean_loss_model_MW": 77.8967008507937,
+              "F_loss_share_percent": 96.26810328606287,
+              "overvoltage_hours": 8170,
+              "maximum_voltage_pu": 1.1200050079088417
+            }
+          ],
+          "columns": [
+            {
+              "field": "parent41_mean_loss_model_MW",
+              "label": "Parent41 mean loss(modelMW)"
+            },
+            {
+              "field": "F_loss_share_percent",
+              "label": "Share of F loss(%)"
+            },
+            {
+              "field": "overvoltage_hours",
+              "label": "Overvoltage hours"
+            },
+            {
+              "field": "maximum_voltage_pu",
+              "label": "Maximum voltage(pu)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

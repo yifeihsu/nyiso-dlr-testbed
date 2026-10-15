@@ -1,0 +1,14 @@
+variant,qualified,status,hours
+baseline,True,loss_accounting_converged,15
+niagara_minus100,False,coupled_line_search_failed,1
+niagara_minus100,True,loss_accounting_converged,14
+niagara_plus100,True,loss_accounting_converged,15
+parent41_imported_RX,True,loss_accounting_converged,15
+parent41_imported_RXB,True,loss_accounting_converged,15
+pjm_PG_capacity_share,True,loss_accounting_converged,15
+pjm_both_capacity_share,True,loss_accounting_converged,15
+pjm_loss_capacity_share,True,loss_accounting_converged,15
+stlawrence_minus100,False,coupled_line_search_failed,1
+stlawrence_minus100,True,loss_accounting_converged,14
+stlawrence_plus100,False,probe:Infeasible: Hydro redistribution violates aggregate finite capability.,6
+stlawrence_plus100,True,loss_accounting_converged,9

@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T06:12:28.169017+00:00",
+  "reviewer": "Independent physics reviewer",
+  "report": {
+    "path": "NYGRID_2025_REMAINING_ERROR_DIAGNOSIS.md",
+    "sha256": "2cdd6513c633fc5bd3e5f051d3ff82a1680ac8699db2937e90bbe322172132d4"
+  },
+  "scope": "Read-only review of numerical and physical statements in the diagnosis against saved annual physics, cut-accounting evidence and completed controlled-probe outputs. No new experiment, annual replay, model promotion or report edit.",
+  "evidence_files": [
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/physics_review.json",
+      "sha256": "c8bba130e7e041a5a816b17c5c30086d0b58f5a25fec3df248d84a4fda309c00"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/current_AC_vs_corrected_DC_same_hours.csv",
+      "sha256": "9491f44b643c04db2a37e53fee2653328a18f9446ba928d3fb0f84f4d1e650a1"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/paired_physical_responses.csv",
+      "sha256": "9c40ec691dee40106ba6daa40dbfe1875d7092cdda9a6398b69cb7d2a63f5a2e"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/paired_interface_responses.csv",
+      "sha256": "46df4128d04383aefaa7445a15393b5835376eba100450fe825084363977e76d"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_receipt.json",
+      "sha256": "a90a148dbaa5823d9f9a70fabf928890721120d683a702b71cccd9b66e2b14ca"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/solve_status.csv",
+      "sha256": "20afdc3e974077a6be223047a8e8521063a06759cb2ed2a773fa513e8577d972"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/pjm_partition_responses.csv",
+      "sha256": "d7afd02e09b00ef5dba72a0e1f94fed137526f1b045af151bea40a319a53e287"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/pjm_partition_receipt.json",
+      "sha256": "8ae94bf67dabc6a8f4b0c919a9f85ac9ab92ce3d71b07770bf1a4a5c7091d8c3"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/pjm_partition_plan.json",
+      "sha256": "df2fd98bac42f3b18cc0d3171b9033d587c235ab62657053427f5b82966eafa9"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/accounting/accounting_identity_review.json",
+      "sha256": "a17dabffd13efd2fea495be5afa14f532cd56800eff24d1c4009e9f544388290"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/run_probes.m",
+      "sha256": "808efa93f97d5eaf16cd11506ba15d62535618aec3229bf81f477f4d2defaeb3"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/score_probes.py",
+      "sha256": "8927c7b9d4972a060b8796a46ed95163eb9d86ce89d39d39ee8d59e1fc8bae71"
+    }
+  ],
+  "key_checks": {
+    "parent41_sample_loss_model_MW": {
+      "baseline": 92.86536245032448,
+      "imported_RX": 2.337403840920757
+    },
+    "zone_F_sample_assigned_loss_model_MW": {
+      "baseline": 96.64847669908474,
+      "imported_RX": 6.120518089680835
+    },
+    "NY_sample_assigned_loss_model_MW": {
+      "baseline": 208.5948684151074,
+      "imported_RX": 118.0669098057022
+    },
+    "maximum_abs_interface_response_across_parent41_RX_and_RXB_public_MW": 1.3505996321327984e-10,
+    "annual_voltage_upper_bound_violation_hours": 8170,
+    "annual_voltage_lower_bound_violation_hours": 395,
+    "bus79503_VM_range_pu": [
+      1.1001810621412265,
+      1.1200050079088417
+    ],
+    "PJM_130_to134_mean_Total_East_response_public_MW": 18.663209714951,
+    "PJM_130_to134_mean_Central_East_response_public_MW": 10.313104018099937,
+    "PJM_capacity_proportion_variants_correctly_identified_as_no_ops": true,
+    "annual_total_network_loss_shares_distinguished_from_sample_NY_assigned_loss": true,
+    "annual_and_sample_scopes_distinguished": true,
+    "numerical_qualification_distinguished_from_operating_feasibility": true,
+    "source_meter_reconciliation_priorities_supported_without_oracle_dispatch_promotion": true,
+    "substantive_report_errors_found": [],
+    "report_edits_made": false
+  },
+  "limits_of_checks": [
+    "This review checks consistency and interpretation of saved evidence; it does not certify physical P32 meter membership, source timestamp semantics, or historical plant dispatch.",
+    "The 15-hour probes establish model sensitivities and numerical reproduction only; they do not establish annual error improvement or operating feasibility.",
+    "Parent-41 admittance probes do not validate a rebuilt conductor, thermal or DLR realization.",
+    "Annual voltage violations identify unresolved physical-model validity concerns; the review does not establish a unique corrected parameter or control setting.",
+    "No independent annual power-flow replay was performed during this report review."
+  ]
+}
