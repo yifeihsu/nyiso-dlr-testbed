@@ -1,0 +1,139 @@
+{
+  "status": "passed_model_cut_and_source_definition_recheck",
+  "state_checks": [
+    {
+      "state_index": 1,
+      "active_AC_crossing_parents": [
+        46,
+        51,
+        52
+      ],
+      "inactive_original_crossing_parent": [
+        211
+      ],
+      "prescribed_transfer_crossing_rows": [
+        5,
+        6
+      ],
+      "PAR_from_bus": 100,
+      "PAR_to_bus": 48,
+      "HQ_proxy_generator_row": 1464,
+      "HQ_proxy_bus": 48
+    },
+    {
+      "state_index": 2,
+      "active_AC_crossing_parents": [
+        46,
+        51,
+        52
+      ],
+      "inactive_original_crossing_parent": [
+        211
+      ],
+      "prescribed_transfer_crossing_rows": [
+        5,
+        6
+      ],
+      "PAR_from_bus": 100,
+      "PAR_to_bus": 48,
+      "HQ_proxy_generator_row": 1464,
+      "HQ_proxy_bus": 48
+    },
+    {
+      "state_index": 3,
+      "active_AC_crossing_parents": [
+        46,
+        51,
+        52
+      ],
+      "inactive_original_crossing_parent": [
+        211
+      ],
+      "prescribed_transfer_crossing_rows": [
+        5,
+        6
+      ],
+      "PAR_from_bus": 100,
+      "PAR_to_bus": 48,
+      "HQ_proxy_generator_row": 1464,
+      "HQ_proxy_bus": 48
+    },
+    {
+      "state_index": 4,
+      "active_AC_crossing_parents": [
+        46,
+        51,
+        52
+      ],
+      "inactive_original_crossing_parent": [
+        211
+      ],
+      "prescribed_transfer_crossing_rows": [
+        5,
+        6
+      ],
+      "PAR_from_bus": 100,
+      "PAR_to_bus": 48,
+      "HQ_proxy_generator_row": 1464,
+      "HQ_proxy_bus": 48
+    }
+  ],
+  "physical_definition_entries": 21,
+  "entries_per_edition": {
+    "summer2025": 7,
+    "winter2024_25": 7,
+    "winter2025_26": 7
+  },
+  "verified_2025_circuit_to_current_model_crosswalks": 0,
+  "complete_model_AC_cut": true,
+  "complete_AC_plus_prescribed_transfer_cut": false,
+  "physical_P32_equivalence_proved": false,
+  "summer_page_37_visual_inspection": "All seven names, circuits, voltages and metered-end asterisks agree with the cached PDF page.",
+  "summer_members": [
+    "MSU1 765 kV",
+    "MA1 230 kV",
+    "MA2 230 kV",
+    "4 115 kV",
+    "5 115 kV",
+    "13 115 kV",
+    "3 115 kV"
+  ],
+  "winter_2025_26_document_change": "MA1/MA2 at Moses 230 kV become HA1/HA2 at Haverstock 345 kV; operational cutover hour is not supplied by study posting dates.",
+  "boundary_assumptions": [
+    "The reduced D-area accounting cut is assumed comparable to the public Moses South meter aggregate.",
+    "The entire NYIS-HQT net interchange is assigned to one injection at bus48, while the physical corridor includes separately named Chateauguay/Massena and Cedars/Dennison paths.",
+    "The two Ontario PAR observations are prescribed transfers to bus48; they are not AC cut members.",
+    "A source-backed whole-cut equivalence could establish an aggregate model without seven explicit branches, but neither physical mapping nor that equivalence is presently certified."
+  ],
+  "causal_MW_attributed_to_boundary_mismatch": null,
+  "reason_attribution_unavailable": "No circuit-resolved hourly telemetry or verified P32 expression/operational intervals are available in the audited sources.",
+  "unknown_physical_terms_assumed_zero": false,
+  "new_AC_runs": 0,
+  "default_model_changed": false,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/all_seasonal_members.csv",
+      "sha256": "e4d3e1ba5511b18d6d3c8cc3c33429cfca0e590c4800d74c065bcf213e2a88c1"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/local_model/candidates/physical_term_model_identifiability.csv",
+      "sha256": "965224ce9d702796c73899e05a6e2e0f457436ecc08752c229d6a34556b5ac6e"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.pdf",
+      "sha256": "32e4fb86cc8397ab458fdf790ab52decfcaa9e9686de7aa9bec7527eaf04b901"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.pdf",
+      "sha256": "546402b7e85f51441e64a6b68adac53579f83828f6bc8c1195ccc480e082dc0b"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.pdf",
+      "sha256": "bcf26e7ac908f43a29f34230067b5b1afc6e587845b26246d7ca39a41ef9f072"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/latest_model.mat",
+      "sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "moses-hourly-sources",
+      "title": "Moses South: source reconstruction and controlled accounting probes",
+      "queries": [
+        {
+          "id": "source-audit-2025",
+          "reportingPeriod": "2025 model year; fresh source checks October 15, 2026",
+          "source": {
+            "label": "Frozen corrected model, EIA plant/regional sources and NYISO boundary observations",
+            "files": [
+              {"label": "balance_hourly.csv"},
+              {"label": "generation_audit_receipt.json and 208 extracted EIA inventory rows"},
+              {"label": "StLawrence_annual_energy_bounds.json"},
+              {"label": "boundary_audit_receipt.json"},
+              {"label": "source_alternative_review.json"},
+              {"label": "physical_boundary_review.json"}
+            ],
+            "metricDefinitions": [
+              {"label": "MAE", "definition": "Mean absolute modeled minus observed Moses South flow, in public-scale MW."},
+              {"label": "WAPE", "definition": "100 times total absolute flow error divided by total absolute observed flow; not hourly MAPE or the paper's limit-normalized metric."},
+              {"label": "Conditional probe", "definition": "Replace the named input in the exact cut balance while holding all other inputs and the original AC terminal correction fixed."}
+            ],
+            "filters": ["Same 8651 qualified hours for input substitutions; all 8760 physical UTC slots retained.", "Lag tests use an identical 8480-hour common triplet cohort."],
+            "caveats": [
+              "No new AC replay, feasible redispatch or promoted model correction is claimed.",
+              "Reported monthly plant generation does not establish hourly electrical output. Flat profiles are illustrative controls.",
+              "Seasonal inventory capacity used as a hard hourly bound conflicts with April-July reported energy; the appropriate replacement capacity remains unresolved.",
+              "Physical Moses meter equivalence, HQ/Cedars location and wheeling scope are not independently certified.",
+              "Associations and error reductions do not uniquely identify causal input errors."
+            ],
+            "evidenceFlow": [
+              {"kind": "validation", "title": "Source fidelity", "detail": "211,996 native PAR records and all 8,760 HQ hours reproduce current inputs to numerical precision. Final and monthly inventory sources independently audited; baseline numerical sources preserved by hash."},
+              {"kind": "validation", "title": "Generation energy bound", "detail": "Even filling all 109 excluded hours at the current 802.5 MW cap leaves a minimum 772,679.8 MWh annual St. Lawrence energy deficit (11.49%). The plant prior is suppressed mainly by the statewide hydro hourly projection."},
+              {"kind": "validation", "title": "Independent arithmetic and topology", "detail": "Boundary substitutions independently reproduce within 5.69e-14 MW. Complete model AC cut verified in all four states; physical meter mapping remains unproved."}
+            ]
+          },
+          "rows": [
+            {"probe": "Current baseline", "mae_mw": 118.820924, "bias_mw": 12.624497},
+            {"probe": "Flat St Lawrence at current monthly mean", "mae_mw": 91.8687, "bias_mw": 12.624497},
+            {"probe": "EIA monthly mean plus current demeaned shape", "mae_mw": 148.613676, "bias_mw": 102.293515},
+            {"probe": "PAR backward hold", "mae_mw": 118.878846},
+            {"probe": "PAR linear interpolation", "mae_mw": 118.813470},
+            {"probe": "Former HQ schedule including Cedars", "mae_mw": 119.995867}
+          ],
+          "columns": [
+            {"field": "probe", "label": "Accounting probe"},
+            {"field": "mae_mw", "label": "MAE (MW)"},
+            {"field": "bias_mw", "label": "Mean residual (MW)"}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-15T20:52:59.759659+00:00",
+  "baseline_commit": "d4aea78c1b042158d7e295edc4cb33cffa5b0341",
+  "critical_numeric_and_runtime_inputs_unchanged": 38,
+  "current_delivery_artifacts_verified_unchanged": [
+    {
+      "path": "deliverables/nygrid_2025_physical_repair_20261015/nygrid_physical_repair_20261015.zip",
+      "bytes": 117806159,
+      "sha256": "a082d0159cdc816840bb86ea048cb30883cb97c1c0e62c025374e96e8a8d5419"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/model_receipt.json",
+      "bytes": 135749,
+      "sha256": "bbefae143a0cc3acf394d01bba37df33fedc68f7af4ccab849ce8681f5086ef6"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/network_map.html",
+      "bytes": 14445385,
+      "sha256": "9af275cfbd3f98bb0c682aae9291e6f193c7515e52f0b299d540241511001196"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/DELIVERY_MANIFEST.json",
+      "bytes": 4299,
+      "sha256": "48318d689dab8030a8bb3c8711dd75bef8939cea498753adc9e8b7edcf353d83"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/docs/NYGRID_2025_PHYSICAL_REPAIR_MODEL_STRUCTURE.docx",
+      "bytes": 163308,
+      "sha256": "b34ca89d5f340737be58f59354bced739858cbf9f3f2a8f133b251f9c388cf85"
+    }
+  ],
+  "current_browser_map_matches_frozen_delivery": true,
+  "qualified_hours": 8651,
+  "physical_UTC_hours": 8760,
+  "maximum_primary_balance_closure_MW": 5.7980287238024175e-12,
+  "baseline_metrics_reproduced": true,
+  "new_AC_solutions_in_this_investigation": 0,
+  "diagnostic_input_promoted_to_default": false,
+  "report_local_links_checked": 13,
+  "report_sha256": "08eb3332d5d45e9e3b58b511c689f2acbe8a01abd18cf75bc7e2495a14782e69",
+  "review_receipts": [
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/temporal_review.json",
+      "sha256": "35967ce8a8dc1710f68731f74074658618b25a0420b16cb60bd3f900617f97f9"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/component_timing_review.json",
+      "sha256": "a601b4a0f7a3777c8ec2e6f887b91332568e6534cb97c97a787cf99878e69040"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/source_alternative_review.json",
+      "sha256": "a898905fd0fc3eb3b6238dfc1f650f1569b19577f2608fb5023c9f7c30a36803"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/boundary/report_review.json",
+      "sha256": "d66bcbbba7acc38a91f1be8871451843664410cddfec74f82262f3c9d1641f35"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/independent_review.json",
+      "sha256": "b2050527209b4a69914beba55861eae93a743aea9f21da2c41d73d766380c41a"
+    }
+  ],
+  "generation_source_and_output_hashes_verified": 42,
+  "national_inventory_cache_preserved_locally_not_versioned": true,
+  "figure_visual_review": "Viewed rendered PNG: titles, both axes, all24hours and annotations readable; no clipping."
+}

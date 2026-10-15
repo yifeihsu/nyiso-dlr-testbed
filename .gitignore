@@ -53,3 +53,7 @@ tmp/nygrid_2025_par_*/
 # Reproducible physical-repair package; versioned source/model/evidence are tracked.
 /deliverables/nygrid_2025_physical_repair_20261015/
 /output/nygrid_2025_latest_handoff/document_render/
+# National inventory downloads are retained locally; source rows, URL/hash
+# receipts and the hash-enforcing retrieval script are versioned.
+/output/nygrid_2025_moses_source_diagnosis/generation/sources/*.xlsx
+/output/nygrid_2025_moses_source_diagnosis/generation/sources/*.zip

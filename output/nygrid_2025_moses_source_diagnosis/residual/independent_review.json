@@ -1,0 +1,284 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T20:51:39.560840+00:00",
+  "scope": "Independent completed-evidence consistency review: calendar/month energy and missing-hour bounds, source-defined generation mean/shape probes, timing cohorts, native boundary probes, graph versus physical-meter claims, final report and figure data. No new PF, optimization or source promotion.",
+  "report": {
+    "path": "NYGRID_2025_MOSES_SOURCE_DIAGNOSIS.md",
+    "sha256": "08eb3332d5d45e9e3b58b511c689f2acbe8a01abd18cf75bc7e2495a14782e69"
+  },
+  "generation_receipt_sha256": "8d38b658e34113c41e1ef4015550366fdf40a092d5090f1078301013b07df264",
+  "qualified_hours": 8651,
+  "clock_hours": 8760,
+  "missing_hours": 109,
+  "conservative_missing_hour_energy_bound_MWh": 87472.5,
+  "minimum_annual_EIA_energy_gap_MWh": 772679.7747940458,
+  "monthly_energy_checks": [
+    {
+      "month": 1,
+      "physical_hours": 744,
+      "qualified_hours": 738,
+      "missing_hours_max_energy_MWh": 4815.0,
+      "minimum_source_energy_gap_MWh": 47813.4865748937
+    },
+    {
+      "month": 2,
+      "physical_hours": 672,
+      "qualified_hours": 661,
+      "missing_hours_max_energy_MWh": 8827.5,
+      "minimum_source_energy_gap_MWh": 38662.771048837574
+    },
+    {
+      "month": 3,
+      "physical_hours": 743,
+      "qualified_hours": 735,
+      "missing_hours_max_energy_MWh": 6420.0,
+      "minimum_source_energy_gap_MWh": 43511.30707938445
+    },
+    {
+      "month": 4,
+      "physical_hours": 720,
+      "qualified_hours": 714,
+      "missing_hours_max_energy_MWh": 4815.0,
+      "minimum_source_energy_gap_MWh": 60023.545809994685
+    },
+    {
+      "month": 5,
+      "physical_hours": 744,
+      "qualified_hours": 729,
+      "missing_hours_max_energy_MWh": 12037.5,
+      "minimum_source_energy_gap_MWh": 80554.94750401122
+    },
+    {
+      "month": 6,
+      "physical_hours": 720,
+      "qualified_hours": 710,
+      "missing_hours_max_energy_MWh": 8025.0,
+      "minimum_source_energy_gap_MWh": 92397.43926451937
+    },
+    {
+      "month": 7,
+      "physical_hours": 744,
+      "qualified_hours": 729,
+      "missing_hours_max_energy_MWh": 12037.5,
+      "minimum_source_energy_gap_MWh": 96372.65325423062
+    },
+    {
+      "month": 8,
+      "physical_hours": 744,
+      "qualified_hours": 732,
+      "missing_hours_max_energy_MWh": 9630.0,
+      "minimum_source_energy_gap_MWh": 73334.02800494869
+    },
+    {
+      "month": 9,
+      "physical_hours": 720,
+      "qualified_hours": 716,
+      "missing_hours_max_energy_MWh": 3210.0,
+      "minimum_source_energy_gap_MWh": 66040.04841138853
+    },
+    {
+      "month": 10,
+      "physical_hours": 744,
+      "qualified_hours": 740,
+      "missing_hours_max_energy_MWh": 3210.0,
+      "minimum_source_energy_gap_MWh": 71000.70285778178
+    },
+    {
+      "month": 11,
+      "physical_hours": 721,
+      "qualified_hours": 710,
+      "missing_hours_max_energy_MWh": 8827.5,
+      "minimum_source_energy_gap_MWh": 44739.42544509919
+    },
+    {
+      "month": 12,
+      "physical_hours": 744,
+      "qualified_hours": 737,
+      "missing_hours_max_energy_MWh": 5617.5,
+      "minimum_source_energy_gap_MWh": 58229.4195389559
+    }
+  ],
+  "status_inventory_operating_units_each_month": 15,
+  "aggregate_seasonal_cap_MW_each_month": 802.5,
+  "aggregate_nameplate_MW_each_month": 855,
+  "unit21_unit26_status_swap_does_not_change_aggregate_bus48_capability": true,
+  "physical_calendar_hours_preserve_DST": {
+    "March": 743,
+    "November": 721
+  },
+  "generation_score_maximum_recomputation_difference": 5.684341886080802e-14,
+  "generation_cases": [
+    {
+      "scenario": "baseline",
+      "hours": 8651,
+      "MAE_public_MW": 118.82092402208407,
+      "bias_public_MW": 12.624496552159801,
+      "above_current_cap_hours": 0
+    },
+    {
+      "scenario": "EIA_month_mean_preserve_qualified_shape",
+      "hours": 8651,
+      "MAE_public_MW": 148.61367647606878,
+      "bias_public_MW": 102.29351497683018,
+      "above_current_cap_hours": 4160
+    },
+    {
+      "scenario": "EIA_month_constant",
+      "hours": 8651,
+      "MAE_public_MW": 125.18351066583466,
+      "bias_public_MW": 102.29351497683015,
+      "above_current_cap_hours": 2882
+    },
+    {
+      "scenario": "current_month_mean_constant_shape_ablation",
+      "hours": 8651,
+      "MAE_public_MW": 91.86870327284561,
+      "bias_public_MW": 12.624496552159778,
+      "above_current_cap_hours": 0
+    }
+  ],
+  "shape_only_qualified_month_energy_preserved": true,
+  "generation_recipes_not_claimed_preregistered": true,
+  "timing_identical_triplet_hours": 8480,
+  "timing_maximum_independent_difference": 1.4210854715202004e-14,
+  "all_tested_nonzero_lags_worsen_annual_MAE": true,
+  "graph_checks": [
+    {
+      "state_index": 1,
+      "AC_components_after_cut_removal": 2,
+      "D_side_bus_ids_including_passive_interiors": [
+        48,
+        49,
+        64601,
+        65101
+      ],
+      "components_including_prescribed_transfers": 1
+    },
+    {
+      "state_index": 2,
+      "AC_components_after_cut_removal": 2,
+      "D_side_bus_ids_including_passive_interiors": [
+        48,
+        49,
+        64601,
+        65101
+      ],
+      "components_including_prescribed_transfers": 1
+    },
+    {
+      "state_index": 3,
+      "AC_components_after_cut_removal": 2,
+      "D_side_bus_ids_including_passive_interiors": [
+        48,
+        49,
+        64601,
+        65101
+      ],
+      "components_including_prescribed_transfers": 1
+    },
+    {
+      "state_index": 4,
+      "AC_components_after_cut_removal": 2,
+      "D_side_bus_ids_including_passive_interiors": [
+        48,
+        49,
+        64601,
+        65101
+      ],
+      "components_including_prescribed_transfers": 1
+    }
+  ],
+  "physical_definition_counts_mean_seven_members_per_edition_not_21_simultaneous_circuits": true,
+  "physical_cut_equivalence_or_causal_MW_claimed": false,
+  "root_report_and_figure_numbers_supported": true,
+  "findings": [],
+  "material_limits": [
+    "The generation energy inconsistency is independently supported, but one observed net interface cannot uniquely attribute the residual among generation, load, boundary inputs and meter scope.",
+    "The illustrative flat-month profile is a sensitivity control, not actual hourly generation or a promoted source correction.",
+    "Transferring full-calendar EIA means to the qualified subset assumes representativeness; separate missing-hour upper bounds address complete-year energy.",
+    "Seasonal and nameplate ratings are not interchangeable actual hourly capability, and monthly status is not hourly availability.",
+    "Fixed-terminal source substitutions are not AC-feasible annual replays; all current model/default inputs remain unchanged."
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/components.npz",
+      "sha256": "b90f02dbfaf5bf934e9ee0bd86fc54af3b351f8ed7536bee959b89d41f45335d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/balance_contract.json",
+      "sha256": "0479fb6e84ef6ce8d5ec4460c686c627b1633b857650adee845c5dd4a83b9c22"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/generation_audit_receipt.json",
+      "sha256": "8d38b658e34113c41e1ef4015550366fdf40a092d5090f1078301013b07df264"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_monthly_source_energy_and_allocation.csv",
+      "sha256": "bd89961d539c84f0ace79158adf2c7ddb1c7f6e00b8d018e7e7c8966269a868f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_hourly_source_trace.csv",
+      "sha256": "6419399f82dff3c51861f5631e5a754753effd27ce930f6d6c15f2f287ad294c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_annual_energy_bounds.json",
+      "sha256": "ada8c5fc15807ebc2b9ee2adb7252d6c511b5704f35cfc50f9aa779b797a47f1"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_inventory_status_by_month.csv",
+      "sha256": "112f85c96a41bc9923ad24ec799748b85d9f74ddbea0245b82f0f337cc548099"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/conditional_generation_variants.npz",
+      "sha256": "b9e0e8e4e87754e3438cfe12ec5d6531d2322d9d4e9490a431e6d7946d3ca64d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/conditional_generation_scores.csv",
+      "sha256": "a065d0ebe750ec03c0238316d4c92c50367a410a310b390011db91c509559121"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/conditional_generation_plan.json",
+      "sha256": "972ed996b413b89380a639912cbd80283ffd4ef1dcfd61bc20c6054e609a8fc9"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/timing_diagnostics.csv",
+      "sha256": "ee435242b512e39c7326810f03921d418b089a5a1f5430b3579aa8d2b1c1c54c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/source_alternative_review.json",
+      "sha256": "a898905fd0fc3eb3b6238dfc1f650f1569b19577f2608fb5023c9f7c30a36803"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/physical_boundary/physical_boundary_review.json",
+      "sha256": "ab1a4bff458ebc11ff034b158b7090b42b83bf8e4fb372b174a56449d83e530a"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/latest_model.mat",
+      "sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/daily_shape_figure_data.csv",
+      "sha256": "2d2f764f1587b453f1419c943c9126f817abdd8e1cec0af333b31b6681c4c19d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/daily_shape_diagnosis.png",
+      "sha256": "253323bbe479fafbd3d694a8b74aa1516103a507c14ef0343d21bd0220b62420"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/figure_receipt.json",
+      "sha256": "4830daa634ac424ecab5fbc726cdd087709928b4b6e1ea42645aaa16cf3075e8"
+    },
+    {
+      "path": "NYGRID_2025_MOSES_SOURCE_DIAGNOSIS.md",
+      "sha256": "08eb3332d5d45e9e3b58b511c689f2acbe8a01abd18cf75bc7e2495a14782e69"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/hourly_source_search_receipt.json",
+      "sha256": "6862f4f448648c0d7458f5ab21c7a8149fa889e66209f1f2633a75e9ae4ddc54"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_source_diagnosis/residual/review_combined_evidence.py",
+      "sha256": "8f64f07bebefff77e8a824a80280bada161634c823b9d127a73b255df3944a6f"
+    }
+  ]
+}

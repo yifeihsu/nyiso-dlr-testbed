@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "status": "final_report_factual_scope_and_cohort_review_passed",
+  "reviewed_utc": "2026-10-15T20:51:04.917849+00:00",
+  "report_path": "NYGRID_2025_MOSES_SOURCE_DIAGNOSIS.md",
+  "report_sha256": "08eb3332d5d45e9e3b58b511c689f2acbe8a01abd18cf75bc7e2495a14782e69",
+  "review_scope": "Independent report-to-artifact review of numerical claims, cohort definitions, HQ/PAR transformations, physical-boundary uncertainty, causal language, inventory rows, generation audit tables, local links and reproduction-script availability. No downloads or new AC calculations.",
+  "unresolved_findings": [],
+  "resolved_findings": [
+    {
+      "issue": "Conditional source-mean substitution was phrased as exposing another specific error.",
+      "resolution": "Final text requires compensating net-balance changes without identifying a unique cause, retaining the fixed-terminal and cohort assumptions."
+    },
+    {
+      "issue": "June dispatch-stage contribution was loosely rounded.",
+      "resolution": "Final text uses -0.035 MW, consistent with -0.034889408 MW in the source allocation table."
+    }
+  ],
+  "checks": {
+    "local_links_checked": 13,
+    "all_local_links_exist": true,
+    "reproduction_scripts_checked": 9,
+    "all_reproduction_scripts_exist": true,
+    "critical_input_hashes_preserved": 38,
+    "baseline_and_substitution_cohort_hours": 8651,
+    "lag_common_cohort_hours": 8480,
+    "all_tested_nonzero_lags_worsen_annual_MAE": true,
+    "HQ_PARsum_observation_nonzero_lags_worsen_all_monthly_comparisons": true,
+    "physical_cut_aggregate_equivalence_not_claimed": true,
+    "metered_end_and_seasonal_cutover_uncertainty_retained": true,
+    "source_physical_limits_not_treated_as_hourly_telemetry": true,
+    "P34_interval_semantics_left_unresolved": true,
+    "generation_inventory15_operating_units_and_802_5MW_all_months_verified": true,
+    "fullcalendar_EIA_means_distinguished_from_qualified_hour_energy": true,
+    "all12monthly_energy_deficits_persist_under_missing_hour_cap_allowance": true,
+    "annual_minimum_EIA_energy_gap_MWh": 772679.7747940458,
+    "annual_minimum_EIA_energy_gap_percent": 11.48635025223279,
+    "new_AC_validation_not_claimed": true,
+    "unique_causal_error_allocation_not_claimed": true,
+    "preliminary_results_seen_disclosed": true
+  },
+  "local_links": [
+    "output/nygrid_2025_moses_source_diagnosis/balance_hourly.csv",
+    "output/nygrid_2025_moses_source_diagnosis/balance_contract.json",
+    "output/nygrid_2025_moses_source_diagnosis/source_guard.json",
+    "output/nygrid_2025_moses_source_diagnosis/generation/generation_audit_receipt.json",
+    "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_monthly_source_energy_and_allocation.csv",
+    "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_annual_energy_bounds.json",
+    "output/nygrid_2025_moses_source_diagnosis/generation/conditional_generation_scores.csv",
+    "output/nygrid_2025_moses_source_diagnosis/daily_shape_diagnosis.png",
+    "output/nygrid_2025_moses_source_diagnosis/boundary/boundary_audit_receipt.json",
+    "output/nygrid_2025_moses_source_diagnosis/boundary/hourly_boundary_diagnostics.csv",
+    "output/nygrid_2025_moses_source_diagnosis/boundary/algebraic_probe_metrics.csv",
+    "output/nygrid_2025_moses_source_diagnosis/residual/timing_diagnostics.csv",
+    "output/nygrid_2025_moses_source_diagnosis/physical_boundary/physical_boundary_review.json"
+  ],
+  "evidence": [
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/balance_contract.json",
+      "sha256": "0479fb6e84ef6ce8d5ec4460c686c627b1633b857650adee845c5dd4a83b9c22"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/source_guard.json",
+      "sha256": "e28744a0d9f6346fcd7a1a8ec1e7cbf320adb0992adac9717658c8b7bd0794e2"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/boundary/boundary_audit_receipt.json",
+      "sha256": "15d25df561502cf791d89833fb3cc79dd5b2c6ee05c26a61ddfd7c60c64ff926"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/boundary/algebraic_probe_metrics.csv",
+      "sha256": "d3c297c835fb8708dd7da6eed870f3679c530fe92ac00a5ca24c43aab8dfa04c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/boundary/total_sum_discrepancy_residual_contribution.csv",
+      "sha256": "743bb5aa1754f7564fd61c27c92a56fee26ffd433bbd63b9e06ab3bfa879005d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/component_timing_review.json",
+      "sha256": "a601b4a0f7a3777c8ec2e6f887b91332568e6534cb97c97a787cf99878e69040"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/timing_diagnostics.csv",
+      "sha256": "ee435242b512e39c7326810f03921d418b089a5a1f5430b3579aa8d2b1c1c54c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/timing_monthly_stability.csv",
+      "sha256": "05a77d06c009fa407280c34ad907326ebb3c9fe9de9d4dbd2b3a18cc5234cd83"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/source_alternative_review.json",
+      "sha256": "a898905fd0fc3eb3b6238dfc1f650f1569b19577f2608fb5023c9f7c30a36803"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/physical_boundary/physical_boundary_review.json",
+      "sha256": "ab1a4bff458ebc11ff034b158b7090b42b83bf8e4fb372b174a56449d83e530a"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/generation_audit_receipt.json",
+      "sha256": "8d38b658e34113c41e1ef4015550366fdf40a092d5090f1078301013b07df264"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_monthly_source_energy_and_allocation.csv",
+      "sha256": "bd89961d539c84f0ace79158adf2c7ddb1c7f6e00b8d018e7e7c8966269a868f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_annual_energy_bounds.json",
+      "sha256": "ada8c5fc15807ebc2b9ee2adb7252d6c511b5704f35cfc50f9aa779b797a47f1"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/conditional_generation_scores.csv",
+      "sha256": "a065d0ebe750ec03c0238316d4c92c50367a410a310b390011db91c509559121"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/EIA860_plant2694_inventory_source_rows.csv",
+      "sha256": "b81c1547ac7a00bcb9a53bb0c4a809d7d1716fcefd9018fbedeeaa7c0b0e7518"
+    }
+  ],
+  "limits": [
+    "Review verifies generation claims against authenticated selected inventory rows and the finalized generation audit; it does not repeat national-workbook extraction.",
+    "External source links were not downloaded again; cached source material and source receipts support the reviewed factual statements.",
+    "The physical model-to-public-meter equivalence and actual hourly StLawrence generation remain unverified as explicitly stated in the report."
+  ]
+}

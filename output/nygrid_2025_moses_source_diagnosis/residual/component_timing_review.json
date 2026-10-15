@@ -1,0 +1,226 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T20:31:49.871062+00:00",
+  "scope": "Frozen-cut residual/source timing and necessary-bound diagnostics; no model/source replacement or new PF.",
+  "qualified_hours": 8651,
+  "exact_component_to_midpoint_error_public_MW": 1.8189894035458565e-12,
+  "exact_component_to_primary_error_public_MW": 5.6843418860808015e-12,
+  "baseline_primary": {
+    "hours": 8651,
+    "MAE_public_MW": 118.82092402208409,
+    "RMSE_public_MW": 147.84790732168128,
+    "bias_public_MW": 12.624496552159801,
+    "WAPE_percent": 22.00761741451924,
+    "observed_mean_public_MW": -190.1563974620789,
+    "observed_mean_absolute_public_MW": 539.9081680858989,
+    "prediction_mean_public_MW": -177.53190090991907,
+    "positive_error_fraction": 0.5724193734828343,
+    "absolute_error_p95_public_MW": 286.7650917930523,
+    "absolute_error_max_public_MW": 603.6639557946274,
+    "error_q01_public_MW": -343.41614287991285,
+    "error_q05_public_MW": -247.87705463057168,
+    "error_q25_public_MW": -85.62599156414814,
+    "error_q50_public_MW": 26.64046635430219,
+    "error_q75_public_MW": 111.42371642685816,
+    "error_q95_public_MW": 240.3760006785993,
+    "error_q99_public_MW": 338.1919356390341
+  },
+  "baseline_midpoint": {
+    "hours": 8651,
+    "MAE_public_MW": 119.47848325154173,
+    "RMSE_public_MW": 147.64631998821653,
+    "bias_public_MW": 23.543934853253973,
+    "WAPE_percent": 22.12940835385413,
+    "observed_mean_public_MW": -190.1563974620789,
+    "observed_mean_absolute_public_MW": 539.9081680858989,
+    "prediction_mean_public_MW": -166.61246260882493,
+    "positive_error_fraction": 0.6023581088891458,
+    "absolute_error_p95_public_MW": 283.1654339282982,
+    "absolute_error_max_public_MW": 579.7485354773219,
+    "error_q01_public_MW": -327.921015366911,
+    "error_q05_public_MW": -237.54907061097373,
+    "error_q25_public_MW": -74.34154161411644,
+    "error_q50_public_MW": 37.44086511291789,
+    "error_q75_public_MW": 120.79691967603767,
+    "error_q95_public_MW": 248.74784466811371,
+    "error_q99_public_MW": 346.6902427616561
+  },
+  "mean_terminal_correction_public_MW": -10.919438301094281,
+  "timing_common_triplet_hours": 8480,
+  "timing_component_triplet_hours": {
+    "StLawrence_generation": 8480,
+    "HQ_import": 8480,
+    "Ontario_PAR1": 8480,
+    "Ontario_PAR2": 8480,
+    "Ontario_PAR_sum": 8480,
+    "gross_zoneD_load": 8480,
+    "P32_observation": 8480
+  },
+  "timing_neighbor_availability_policy": "Conservative current-qualified same-state triplets plus finite component/observation arrays; no claim that finite-only flags certify independent raw source quality.",
+  "every_predeclared_lag_reported": true,
+  "clock_shift_selected_or_promoted": false,
+  "required_adjustment_distributions_annual": [
+    {
+      "required_adjustment_definition": "hold_terminal_correction",
+      "month": 0,
+      "hours": 8651,
+      "mean_public_MW": -12.624496552159801,
+      "mean_absolute_public_MW": 118.82092402208409,
+      "minimum_public_MW": -508.0831256893806,
+      "maximum_public_MW": 603.6639557946274,
+      "q01_public_MW": -338.1919356390341,
+      "q05_public_MW": -240.3760006785993,
+      "q25_public_MW": -111.42371642685816,
+      "q50_public_MW": -26.64046635430219,
+      "q75_public_MW": 85.62599156414814,
+      "q95_public_MW": 247.87705463057168,
+      "q99_public_MW": 343.41614287991285
+    },
+    {
+      "required_adjustment_definition": "remove_terminal_correction",
+      "month": 0,
+      "hours": 8651,
+      "mean_public_MW": -23.543934853253973,
+      "mean_absolute_public_MW": 119.47848325154173,
+      "minimum_public_MW": -512.7320213063333,
+      "maximum_public_MW": 579.7485354773219,
+      "q01_public_MW": -346.6902427616561,
+      "q05_public_MW": -248.74784466811371,
+      "q25_public_MW": -120.79691967603767,
+      "q50_public_MW": -37.44086511291789,
+      "q75_public_MW": 74.34154161411644,
+      "q95_public_MW": 237.54907061097373,
+      "q99_public_MW": 327.921015366911
+    }
+  ],
+  "conditional_StLawrence_bounds_annual": [
+    {
+      "required_adjustment_definition": "hold_terminal_correction",
+      "month": 0,
+      "qualified_hours": 8651,
+      "calendar_hours": 8760,
+      "qualified_fraction_of_calendar": 0.9875570776255708,
+      "oracle_StLawrence_below_lower_bound_hours": 0,
+      "oracle_StLawrence_above_upper_bound_hours": 1045,
+      "oracle_within_current_StLawrence_bounds_hours": 7606,
+      "current_StLawrence_at_upper_bound_hours": 1226,
+      "maximum_oracle_lower_shortfall_public_MW": 0.0,
+      "maximum_oracle_upper_excess_public_MW": 427.4508693848711,
+      "current_StLawrence_mean_public_MW": 678.1628395799277,
+      "oracle_StLawrence_mean_public_MW": 665.5383430277678,
+      "current_StLawrence_energy_on_qualified_hours_MWh": 5866786.725205954,
+      "oracle_StLawrence_energy_on_qualified_hours_MWh": 5757572.2055332195,
+      "required_energy_change_on_qualified_hours_MWh": -109214.51967273444,
+      "necessary_plant_bound_check_only": true,
+      "full_calendar_EIA_energy_comparison": false,
+      "statewide_balance_ramping_reservoir_and_AC_feasibility_checked": false
+    },
+    {
+      "required_adjustment_definition": "remove_terminal_correction",
+      "month": 0,
+      "qualified_hours": 8651,
+      "calendar_hours": 8760,
+      "qualified_fraction_of_calendar": 0.9875570776255708,
+      "oracle_StLawrence_below_lower_bound_hours": 0,
+      "oracle_StLawrence_above_upper_bound_hours": 912,
+      "oracle_within_current_StLawrence_bounds_hours": 7739,
+      "current_StLawrence_at_upper_bound_hours": 1226,
+      "maximum_oracle_lower_shortfall_public_MW": 0.0,
+      "maximum_oracle_upper_excess_public_MW": 425.8718129041861,
+      "current_StLawrence_mean_public_MW": 678.1628395799277,
+      "oracle_StLawrence_mean_public_MW": 654.6189047266737,
+      "current_StLawrence_energy_on_qualified_hours_MWh": 5866786.725205954,
+      "oracle_StLawrence_energy_on_qualified_hours_MWh": 5663108.144790454,
+      "required_energy_change_on_qualified_hours_MWh": -203678.58041550012,
+      "necessary_plant_bound_check_only": true,
+      "full_calendar_EIA_energy_comparison": false,
+      "statewide_balance_ramping_reservoir_and_AC_feasibility_checked": false
+    }
+  ],
+  "source_errors_identified_from_correlation": false,
+  "oracle_input_applied": false,
+  "global_balance_of_oracle_changes_claimed": false,
+  "limitations": [
+    "Every timing replacement holds the original hour terminal-loss correction fixed; it is an accounting sensitivity, not a new AC solution.",
+    "An error-reducing lag does not establish a timestamp defect. Provider clock semantics and independent source evidence govern any correction.",
+    "Residual/source associations contain shared algebraic terms and common reconstruction constraints; they are noncausal.",
+    "An oracle StLawrence value assumes every other input and the meter boundary are correct. Passing its plant box is necessary, not sufficient for feasible generation or attribution.",
+    "Qualified-hour energy totals are not complete calendar-month energy; they must not be equated to EIA monthly generation."
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/components.npz",
+      "sha256": "b90f02dbfaf5bf934e9ee0bd86fc54af3b351f8ed7536bee959b89d41f45335d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/balance_hourly.csv",
+      "sha256": "6ae19f7c7fcf93f5e3ca853dbf47304596f07494b249e8a6e9f1bb674ee83326"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/balance_contract.json",
+      "sha256": "0479fb6e84ef6ce8d5ec4460c686c627b1633b857650adee845c5dd4a83b9c22"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "3297f564d35b7cc1d132eeaa4d1f4054ecc49681b67478b957d6ca5752191245"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_source_diagnosis/residual/analyze_components.py",
+      "sha256": "6aa595d7d7db8148754044c0c9b103db538608047ca3b2f9955dc62b5269e865"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_source_diagnosis/residual/metrics.py",
+      "sha256": "af3c9f4ff9e9a578d025366cdf2179e32dc21cfb25eaebea0f0371614b68efb2"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_source_diagnosis/residual/analysis_design.json",
+      "sha256": "4ac97fd33bf700a0549703cce22362384ae510d62643c70f32604f4e0d547b37"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/timing_diagnostics.csv",
+      "sha256": "ee435242b512e39c7326810f03921d418b089a5a1f5430b3579aa8d2b1c1c54c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/timing_monthly_stability.csv",
+      "sha256": "05a77d06c009fa407280c34ad907326ebb3c9fe9de9d4dbd2b3a18cc5234cd83"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/timing_cohort_membership.csv",
+      "sha256": "4664c61faf6e36ef877837b04dbb9640d04677c0fdaf33e3f92a69e45503485e"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/component_calendar_profiles.csv",
+      "sha256": "8497214efa742719cefc6dee8afe051e450bd87aadf3eca34d7f67ba5d6a921c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/component_residual_associations.csv",
+      "sha256": "a4c00373966d39723a3be6ba9f582ba37edce09d7b1ce85310842c76e3854097"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/source_conditioned_error_metrics.csv",
+      "sha256": "6b358e1b22fe40ad56cdaafd47311c2a21bec619e1bac6bca39093beaabc654c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/component_local_hour_ramps.csv",
+      "sha256": "0c574f6151f1e8c82068745d8658bc5075747ec9cb9e820e4a36c005bbf4577c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/required_adjustment_hourly_DIAGNOSTIC_ONLY.csv",
+      "sha256": "723f42d25fd92c6efb286146c9040c6cbc57088384cc4a794ebab836d69e6958"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/required_adjustment_distributions.csv",
+      "sha256": "dd59d77846f0f9dd34c1b48a63ccea707e0f2a39063207e97cbdfa290758970f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/conditional_StLawrence_bound_checks.csv",
+      "sha256": "bad11c3ce066fdc0e6f5ca3428c5b3c11c202967a8d54d3057e826463450954d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/timing_DST_boundary_readback.csv",
+      "sha256": "3482142438564c46686fea79ad50a74d5eedba2b2b9a59ce88f1d97d90941329"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T20:33:53.530121+00:00",
+  "qualified_hours": 8651,
+  "scope": "Fresh read-only summaries of the saved repaired annual comparison. Source inputs/model unchanged; no PF or fitted correction.",
+  "annual_primary_metrics": {
+    "hours": 8651,
+    "MAE_public_MW": 118.82092402208409,
+    "RMSE_public_MW": 147.84790732168128,
+    "bias_public_MW": 12.624496552159801,
+    "WAPE_percent": 22.00761741451924,
+    "observed_mean_public_MW": -190.1563974620789,
+    "observed_mean_absolute_public_MW": 539.9081680858989,
+    "prediction_mean_public_MW": -177.53190090991907,
+    "positive_error_fraction": 0.5724193734828343,
+    "absolute_error_p95_public_MW": 286.7650917930523,
+    "absolute_error_max_public_MW": 603.6639557946274,
+    "error_q01_public_MW": -343.41614287991285,
+    "error_q05_public_MW": -247.87705463057168,
+    "error_q25_public_MW": -85.62599156414814,
+    "error_q50_public_MW": 26.64046635430219,
+    "error_q75_public_MW": 111.42371642685816,
+    "error_q95_public_MW": 240.3760006785993,
+    "error_q99_public_MW": 338.1919356390341
+  },
+  "required_primary_balance_adjustment_distribution": {
+    "hours": 8651,
+    "mean_public_MW": -12.624496552159801,
+    "mean_absolute_public_MW": 118.82092402208409,
+    "minimum_public_MW": -508.0831256893806,
+    "maximum_public_MW": 603.6639557946274,
+    "q01_public_MW": -338.1919356390341,
+    "q05_public_MW": -240.3760006785993,
+    "q25_public_MW": -111.42371642685816,
+    "q50_public_MW": -26.64046635430219,
+    "q75_public_MW": 85.62599156414814,
+    "q95_public_MW": 247.87705463057168,
+    "q99_public_MW": 343.41614287991285
+  },
+  "adjacent_same_state_qualified_pairs": 8565,
+  "autocorrelation": [
+    {
+      "lag_physical_hours": 1,
+      "paired_hours": 8565,
+      "residual_Pearson": 0.9031244691310155,
+      "scope": "eligible endpoints at exact physical-hour lag; same topology state; no row compression or interpolation"
+    },
+    {
+      "lag_physical_hours": 24,
+      "paired_hours": 8451,
+      "residual_Pearson": 0.43970652745471345,
+      "scope": "eligible endpoints at exact physical-hour lag; same topology state; no row compression or interpolation"
+    },
+    {
+      "lag_physical_hours": 168,
+      "paired_hours": 7885,
+      "residual_Pearson": 0.39121541001774374,
+      "scope": "eligible endpoints at exact physical-hour lag; same topology state; no row compression or interpolation"
+    }
+  ],
+  "DST_preserved_in_UTC_axis": true,
+  "local_time_used_only_for_grouping": true,
+  "causal_attribution_claimed": false,
+  "oracle_correction_applied": false,
+  "source_component_diagnosis_and_timing_tests_complete": false,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "3297f564d35b7cc1d132eeaa4d1f4054ecc49681b67478b957d6ca5752191245"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/public_interface_metrics.csv",
+      "sha256": "6cb5dd4792ce306227cdd8a38c0003f95bf730c997bed79dd19ac49cc8578fc2"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_source_diagnosis/residual/analyze_temporal.py",
+      "sha256": "6542cd7226042ef26948411b2c3246690888b35b9e806af7e2f50cdc4e324dbb"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_source_diagnosis/residual/metrics.py",
+      "sha256": "af3c9f4ff9e9a578d025366cdf2179e32dc21cfb25eaebea0f0371614b68efb2"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_source_diagnosis/residual/analysis_design.json",
+      "sha256": "4ac97fd33bf700a0549703cce22362384ae510d62643c70f32604f4e0d547b37"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/temporal_metrics.csv",
+      "sha256": "aa5e608ab6fd04c57d6297483ff6b8785dcf55110c52ff620bd3f392241da70e"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/residual_hourly_base.csv",
+      "sha256": "68462deb5f8e50f9ded500dbdb0b95bb7ea1d7a840107b01743dd3df6f089a46"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/ramp_metrics.csv",
+      "sha256": "a4c29366a1be73d514840fbf4e8d4efbed238203c6bf18697d431d606734ceed"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/residual_autocorrelation.csv",
+      "sha256": "03ae2e579da4b36a7ebafa02b493435bd8295ebfac0ce87708f8029a7e1ea885"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/shared_interface_residuals.csv",
+      "sha256": "66415ce96999f0d55e4b75a041aaa12e5e576945ced38db6349067db02906241"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/largest_residual_hours_descriptive.csv",
+      "sha256": "a25b4e0bfbdb4bfc182d3fd458e40181e400221ef718e69a1ca96f501fc044c9"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/residual/same_sign_residual_runs.csv",
+      "sha256": "0b737f2b6a087ccaaa351bb9e910c7cca6a8c31217fc4b3a5e0840145b5e87d6"
+    }
+  ]
+}

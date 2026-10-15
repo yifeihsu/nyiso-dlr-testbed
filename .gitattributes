@@ -203,3 +203,10 @@ scripts/nygrid_released_2019_comparison/** -text !eol whitespace=cr-at-eol
 output/nygrid_released_2019_comparison/** -text !eol whitespace=cr-at-eol
 output/nygrid_released_2019_comparison/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
 NYGRID_RELEASED_2019_COMPARISON.md -text !eol whitespace=cr-at-eol
+# Additive Moses source diagnosis; preserve source and numerical evidence bytes.
+scripts/nygrid_2025_moses_source_diagnosis/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_moses_source_diagnosis/** -text !eol whitespace=cr-at-eol
+NYGRID_2025_MOSES_SOURCE_DIAGNOSIS.md -text !eol whitespace=cr-at-eol
+# Preserve whitespace in native source pages and literal workbook cell extracts.
+output/nygrid_2025_moses_source_diagnosis/generation/sources/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_moses_source_diagnosis/generation/EIA860_plant2694_inventory_source_rows.csv whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol

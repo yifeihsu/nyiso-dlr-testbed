@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "scope": "Saved current Moses South residual, timing and balance-input identifiability diagnostics; no PF, fitted dispatch or default parameter selection.",
+  "primary_cohort": "Current repaired source/equation/loss/recovery-qualified 2025 hours on the preserved 8760-slot UTC axis.",
+  "residual_sign": "prediction_minus_observation",
+  "required_balance_adjustment": "Report both observation-minus-primary with the current terminal correction fixed, and observation-minus-midpoint with that correction removed. Both are conditional oracle requirements, never replacement source data.",
+  "units": "public MW for comparison and component diagnostics; original model/gamma provenance retained",
+  "time_axis": "Physical UTC hours; America/New_York only for calendar grouping. Both fall DST folds and the spring clock transition remain on the UTC axis.",
+  "groupings": ["annual", "New_York_calendar_month", "meteorological_season", "local_hour", "weekday_or_weekend", "topology_state"],
+  "timing_lags_physical_hours": [-1, 0, 1],
+  "positive_lag_meaning": "Use the component or observation at t+lag when evaluating hour t.",
+  "timing_components": ["StLawrence_generation", "HQ_import", "Ontario_PAR1", "Ontario_PAR2", "Ontario_PAR_sum", "gross_zoneD_load", "P32_observation"],
+  "timing_prediction_rule": "At hour t, change exactly one signed balance component x(t) to x(t+lag), holding other components and the t terminal correction fixed. For P32, change only observation time. These are accounting sensitivities, not new AC solutions.",
+  "timing_cohorts": ["component-specific intersection across all three lags", "common intersection across all components and all three lags"],
+  "timing_availability": "Require the original current-qualified evaluation hour, actual neighboring physical-hour continuity, unchanged topology state across the triplet, and explicit per-source availability when supplied. Otherwise conservatively require all three current-qualified hours and disclose that restriction.",
+  "timing_reporting": "Report every lag including zero, baseline and changed MAE/RMSE/bias on exactly the same cohort, and calendar-month stability; never choose a production shift by its error.",
+  "ramps": "One physical-hour backward differences with both adjacent hours eligible and in the same topology state.",
+  "conditional_groups": "Source-component quartiles and sign regimes fixed without residual values; residual quantiles are described only as outcome summaries, not causal groups.",
+  "associations": ["raw Pearson", "raw Spearman", "calendar-month-demeaned Pearson", "local-hour-demeaned Pearson", "same-state one-hour-difference Pearson"],
+  "association_limit": "Descriptive and noncausal; serial dependence, common source allocation and shared accounting terms preclude causal attribution or independent-sample significance claims.",
+  "bounds": "Compare one-at-a-time required StLawrence adjustment with its supplied hourly finite bounds when available; report infeasible signs/magnitudes and monthly-energy implications without applying it. Physical balance/meter equivalence remains an assumption.",
+  "prohibited_actions": ["new PF", "fit constant or hourly dispatch correction to observations", "alter source values or masks", "change default clock/sign/parameters from scores", "promote oracle values to model inputs", "commit or push"]
+}
