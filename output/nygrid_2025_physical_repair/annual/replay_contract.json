@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-15T14:13:53.713984+00:00",
+  "source_HEAD": "6d46babc3af4335638241e3abff525425a0a6d7e",
+  "source_branch": "codex/s13-phase1b-upny-coned",
+  "all_hour_slots": 8760,
+  "source_qualified_hours": 8651,
+  "frozen_current_baseline_qualified_hours": 8170,
+  "gamma": 0.30012075175285535,
+  "baseline_prediction": "revised_legacy_signed_literal_from",
+  "candidate_apply_function": "nyrepair_apply_case",
+  "candidate_axes_and_profiles_must_be_preserved": true,
+  "candidate_receipt": "output/nygrid_2025_physical_repair/candidate_receipt.json",
+  "candidate_frozen_or_annual_started_by_this_preparation": false,
+  "qualification": "Source eligibility AND PF convergence AND AC equation gate AND loss allocation gate AND recovery gate.",
+  "operating_qualification": "Separate voltage, finite generator P/Q/assumed-S, fixed transfer Q, declared equipment and current checks; never inferred from equation qualification.",
+  "cohorts": [
+    "candidate_all_success",
+    "paired_current_baseline",
+    "candidate_new_success",
+    "current_success_lost",
+    "current_baseline_all8170"
+  ],
+  "score_conventions": [
+    "legacy_signed_literal_from",
+    "oriented_source_side",
+    "oriented_target_side"
+  ],
+  "periods": [
+    "annual",
+    "each_NY_calendar_month",
+    "post_Dover"
+  ],
+  "failure_policy": "Retain every source-qualified attempt and nonconverged returned iterate; flag invalid predictions. Never impute failed flows.",
+  "current_units": "Model amperes use actual voltage and conductor voltage base, never divide by gamma.",
+  "P32_physical_meter_membership_certified": false,
+  "P32_numeric_as_MW_header_interpretation_certified": false,
+  "baseline_snapshot": {
+    "path": "output/nygrid_2025_physical_repair/annual/baseline_bundle/snapshot_receipt.json",
+    "sha256": "74549b740c7a3db9d4bb6114546393dd0664376701984a95c9d54423deb58539",
+    "bytes": 15726
+  },
+  "source_files": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad",
+      "bytes": 6349492
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171",
+      "bytes": 802063
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/model_receipt.json",
+      "sha256": "0abce18bdcf9f6a28f1c93d7daa6358a0b319c98a8f310a54412266e43cbdac8",
+      "bytes": 4079
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4",
+      "bytes": 54625507
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf",
+      "bytes": 54767622
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670",
+      "bytes": 12874
+    }
+  ]
+}

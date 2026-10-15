@@ -1,0 +1,942 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T14:19:30.172051+00:00",
+  "model_snapshot_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+  "scope": "Current physical-repair model structure and field semantics",
+  "physical_repair_receipt": {
+    "schema_version": 1,
+    "passed": true,
+    "created_utc": "2026-10-15T14:14:22.813698+00:00",
+    "baseline_HEAD": "6d46babc3af4335638241e3abff525425a0a6d7e",
+    "model_revision": "physical_repair_41_185_195_20261015",
+    "apply_function": "nyrepair_apply_case",
+    "parent41": "ImportedR/X restored using existing rank1 synthetic conductor; geometricB and matching thermal metadata; existing aggregate apparatus bounds retained.",
+    "parents185195": "Existing75percent nominal compensation distributed proportional to section-local charging; total rating, conductorRXB, PV setpoints and V limits retained.",
+    "parameter_selection_uses_interface_observations": false,
+    "all_hourly_source_arrays_and_controls_preserved": true,
+    "same_bus_branch_generator_axes": true,
+    "targeted_preannual_checks_passed": true,
+    "annual_validation_complete": false,
+    "installed_asset_identity_claimed": false,
+    "whole_system_operating_qualification_claimed": false,
+    "candidate_files": [
+      {
+        "path": "scripts/nygrid_2025_physical_repair/core/nyrepair_apply_case.m",
+        "bytes": 1487,
+        "sha256": "e91265f8b414a3ac1ef62dbc0c8ee90430f1187946f5895c822b0ceb6fd82ca6"
+      },
+      {
+        "path": "scripts/nygrid_2025_physical_repair/core/nyrepair_apply_parent41.m",
+        "bytes": 2272,
+        "sha256": "76708037350d843d25c45d5c0f3b3ad91523e76fe0ffd3dfb7f9bca74e2be9ac"
+      },
+      {
+        "path": "scripts/nygrid_2025_physical_repair/physics/nyrepair_apply_185195.m",
+        "bytes": 4715,
+        "sha256": "d7b709f48d3de9ec08ee8569b26caad28b4391ae73fa9ec32d886ff790f910e4"
+      },
+      {
+        "path": "output/nygrid_2025_physical_repair/physics/parent41_parameters.json",
+        "bytes": 4880,
+        "sha256": "0405ad77f50770eba7f984badfacb16ecaf300c75fb2d6b811a550cbe831174a"
+      },
+      {
+        "path": "output/nygrid_2025_physical_repair/validation/targeted_candidate_receipt.json",
+        "bytes": 4674,
+        "sha256": "730ba443d7a4bb394e3a390b34a458c82961508f226a23c948edc49bee0c1ba3"
+      },
+      {
+        "path": "output/nygrid_2025_physical_repair/physics/compensation_design_review.json",
+        "bytes": 12489,
+        "sha256": "a85eb1af5da308e1d4bde032310d3815a74ff6971a7a266e986c71aca41c5625"
+      },
+      {
+        "path": "output/nygrid_2025_physical_repair/physics/independent_candidate_review.json",
+        "bytes": 9160,
+        "sha256": "ed2858ee42e4a22febae9846161a0ad82e88d4c0a812a410e7c1aeb00b8f5fd3"
+      }
+    ],
+    "baseline_model_files": [
+      {
+        "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+        "bytes": 802063,
+        "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+      },
+      {
+        "path": "output/nygrid_2025_latest_handoff/model/profiles_h0001_4380.mat",
+        "bytes": 54625507,
+        "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+      },
+      {
+        "path": "output/nygrid_2025_latest_handoff/model/profiles_h4381_8760.mat",
+        "bytes": 54767622,
+        "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+      },
+      {
+        "path": "output/nygrid_2025_latest_handoff/model/model_receipt.json",
+        "bytes": 4079,
+        "sha256": "0abce18bdcf9f6a28f1c93d7daa6358a0b319c98a8f310a54412266e43cbdac8"
+      }
+    ]
+  },
+  "physical_repair_receipt_sha256": "3ea77c854ffff4e8eb30fa72fc92296e024cb23eb3744010e276bff49e3fc08f",
+  "model_kind": "148-retained-voltage synthetic AC network with coupled boundary-consistent losses and original-section thermal screening",
+  "base_MVA": 100,
+  "frequency_Hz": 60,
+  "power_scale_gamma": 0.30012075175285535,
+  "current_gamma_lift": false,
+  "impedance_gamma_transform": false,
+  "retained_bus_count": 148,
+  "retained_bus_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    10774,
+    10858,
+    10902,
+    10593,
+    10589,
+    11129,
+    11130,
+    20001
+  ],
+  "retained_accounting_groups": {
+    "ISONE": 36,
+    "F": 4,
+    "E": 7,
+    "G": 9,
+    "D": 2,
+    "C": 11,
+    "B": 3,
+    "A": 8,
+    "H": 1,
+    "I": 2,
+    "K": 3,
+    "J": 4,
+    "ONTARIO": 31,
+    "PJM": 27
+  },
+  "explicit_345kV_ports": [
+    {
+      "retained_row_1based": 141,
+      "model_bus_id": 10774,
+      "model_name": "LADENTOWN",
+      "nominal_kV": 345.0,
+      "accounting_group": "G",
+      "is_reference_bus": false,
+      "has_generator_rows": false,
+      "has_fixed_transfer_terminal": false
+    },
+    {
+      "retained_row_1based": 142,
+      "model_bus_id": 10858,
+      "model_name": "E. FISHKILL",
+      "nominal_kV": 345.0,
+      "accounting_group": "G",
+      "is_reference_bus": false,
+      "has_generator_rows": false,
+      "has_fixed_transfer_terminal": false
+    },
+    {
+      "retained_row_1based": 143,
+      "model_bus_id": 10902,
+      "model_name": "WOOD STREET",
+      "nominal_kV": 345.0,
+      "accounting_group": "G",
+      "is_reference_bus": false,
+      "has_generator_rows": false,
+      "has_fixed_transfer_terminal": false
+    },
+    {
+      "retained_row_1based": 144,
+      "model_bus_id": 10593,
+      "model_name": "DUNWOODIE",
+      "nominal_kV": 345.0,
+      "accounting_group": "I",
+      "is_reference_bus": false,
+      "has_generator_rows": false,
+      "has_fixed_transfer_terminal": false
+    },
+    {
+      "retained_row_1based": 145,
+      "model_bus_id": 10589,
+      "model_name": "EAST GARDEN CITY",
+      "nominal_kV": 345.0,
+      "accounting_group": "K",
+      "is_reference_bus": false,
+      "has_generator_rows": false,
+      "has_fixed_transfer_terminal": false
+    },
+    {
+      "retained_row_1based": 146,
+      "model_bus_id": 11129,
+      "model_name": "GOWANUS",
+      "nominal_kV": 345.0,
+      "accounting_group": "J",
+      "is_reference_bus": false,
+      "has_generator_rows": false,
+      "has_fixed_transfer_terminal": false
+    },
+    {
+      "retained_row_1based": 147,
+      "model_bus_id": 11130,
+      "model_name": "RAINEY",
+      "nominal_kV": 345.0,
+      "accounting_group": "J",
+      "is_reference_bus": false,
+      "has_generator_rows": false,
+      "has_fixed_transfer_terminal": false
+    },
+    {
+      "retained_row_1based": 148,
+      "model_bus_id": 20001,
+      "model_name": "CRICKET VALLEY 345",
+      "nominal_kV": 345.0,
+      "accounting_group": "G",
+      "is_reference_bus": false,
+      "has_generator_rows": false,
+      "has_fixed_transfer_terminal": false
+    }
+  ],
+  "states": [
+    {
+      "state": "pre_may",
+      "representative_hour": 523,
+      "timestamp_utc": "2025-01-22T23:00:00Z",
+      "retained_bus_count": 148,
+      "detailed_bus_count": 266,
+      "passive_eliminated_bus_count": 118,
+      "runtime_branch_records": 485,
+      "active_runtime_branch_records": 408,
+      "inactive_runtime_branch_records": 77,
+      "parent_corridor_records": 410,
+      "active_parent_corridors": 333,
+      "generator_rows": 1464,
+      "native_generator_rows": 1436,
+      "external_loss_participant_rows": 27,
+      "HQ_rows": 1,
+      "admitted_generator_rows_at_fixture": 812,
+      "fixed_transfer_records": 6,
+      "retained_bus_type_counts_at_fixture": {
+        "1": 84,
+        "2": 63,
+        "3": 1
+      },
+      "real_Newton_unknowns_at_fixture": 231,
+      "reference_bus": 50,
+      "reference_generator_row": 110,
+      "retained_accounting_group_counts": {
+        "ISONE": 36,
+        "F": 4,
+        "E": 7,
+        "G": 9,
+        "D": 2,
+        "C": 11,
+        "B": 3,
+        "A": 8,
+        "H": 1,
+        "I": 2,
+        "K": 3,
+        "J": 4,
+        "ONTARIO": 31,
+        "PJM": 27
+      },
+      "Yred_shape": [
+        148,
+        148
+      ],
+      "Yred_nonzeros": 642,
+      "voltage_lift_shape": [
+        266,
+        148
+      ],
+      "current_recovery_operator_shape": [
+        485,
+        148
+      ],
+      "synthetic_thermal_parent_count": 179,
+      "synthetic_thermal_runtime_branch_count": 251,
+      "synthetic_thermal_material_segments": 251
+    },
+    {
+      "state": "may21",
+      "representative_hour": 3360,
+      "timestamp_utc": "2025-05-21T04:00:00Z",
+      "retained_bus_count": 148,
+      "detailed_bus_count": 266,
+      "passive_eliminated_bus_count": 118,
+      "runtime_branch_records": 485,
+      "active_runtime_branch_records": 409,
+      "inactive_runtime_branch_records": 76,
+      "parent_corridor_records": 410,
+      "active_parent_corridors": 334,
+      "generator_rows": 1464,
+      "native_generator_rows": 1436,
+      "external_loss_participant_rows": 27,
+      "HQ_rows": 1,
+      "admitted_generator_rows_at_fixture": 796,
+      "fixed_transfer_records": 6,
+      "retained_bus_type_counts_at_fixture": {
+        "1": 84,
+        "2": 63,
+        "3": 1
+      },
+      "real_Newton_unknowns_at_fixture": 231,
+      "reference_bus": 50,
+      "reference_generator_row": 110,
+      "retained_accounting_group_counts": {
+        "ISONE": 36,
+        "F": 4,
+        "E": 7,
+        "G": 9,
+        "D": 2,
+        "C": 11,
+        "B": 3,
+        "A": 8,
+        "H": 1,
+        "I": 2,
+        "K": 3,
+        "J": 4,
+        "ONTARIO": 31,
+        "PJM": 27
+      },
+      "Yred_shape": [
+        148,
+        148
+      ],
+      "Yred_nonzeros": 642,
+      "voltage_lift_shape": [
+        266,
+        148
+      ],
+      "current_recovery_operator_shape": [
+        485,
+        148
+      ],
+      "synthetic_thermal_parent_count": 179,
+      "synthetic_thermal_runtime_branch_count": 251,
+      "synthetic_thermal_material_segments": 251
+    },
+    {
+      "state": "may30",
+      "representative_hour": 4000,
+      "timestamp_utc": "2025-06-16T20:00:00Z",
+      "retained_bus_count": 148,
+      "detailed_bus_count": 266,
+      "passive_eliminated_bus_count": 118,
+      "runtime_branch_records": 485,
+      "active_runtime_branch_records": 410,
+      "inactive_runtime_branch_records": 75,
+      "parent_corridor_records": 410,
+      "active_parent_corridors": 335,
+      "generator_rows": 1464,
+      "native_generator_rows": 1436,
+      "external_loss_participant_rows": 27,
+      "HQ_rows": 1,
+      "admitted_generator_rows_at_fixture": 1417,
+      "fixed_transfer_records": 6,
+      "retained_bus_type_counts_at_fixture": {
+        "1": 77,
+        "2": 70,
+        "3": 1
+      },
+      "real_Newton_unknowns_at_fixture": 224,
+      "reference_bus": 50,
+      "reference_generator_row": 110,
+      "retained_accounting_group_counts": {
+        "ISONE": 36,
+        "F": 4,
+        "E": 7,
+        "G": 9,
+        "D": 2,
+        "C": 11,
+        "B": 3,
+        "A": 8,
+        "H": 1,
+        "I": 2,
+        "K": 3,
+        "J": 4,
+        "ONTARIO": 31,
+        "PJM": 27
+      },
+      "Yred_shape": [
+        148,
+        148
+      ],
+      "Yred_nonzeros": 654,
+      "voltage_lift_shape": [
+        266,
+        148
+      ],
+      "current_recovery_operator_shape": [
+        485,
+        148
+      ],
+      "synthetic_thermal_parent_count": 179,
+      "synthetic_thermal_runtime_branch_count": 251,
+      "synthetic_thermal_material_segments": 251
+    },
+    {
+      "state": "post_dover",
+      "representative_hour": 8508,
+      "timestamp_utc": "2025-12-21T16:00:00Z",
+      "retained_bus_count": 148,
+      "detailed_bus_count": 267,
+      "passive_eliminated_bus_count": 119,
+      "runtime_branch_records": 488,
+      "active_runtime_branch_records": 412,
+      "inactive_runtime_branch_records": 76,
+      "parent_corridor_records": 413,
+      "active_parent_corridors": 337,
+      "generator_rows": 1464,
+      "native_generator_rows": 1436,
+      "external_loss_participant_rows": 27,
+      "HQ_rows": 1,
+      "admitted_generator_rows_at_fixture": 1460,
+      "fixed_transfer_records": 6,
+      "retained_bus_type_counts_at_fixture": {
+        "1": 77,
+        "2": 70,
+        "3": 1
+      },
+      "real_Newton_unknowns_at_fixture": 224,
+      "reference_bus": 50,
+      "reference_generator_row": 110,
+      "retained_accounting_group_counts": {
+        "ISONE": 36,
+        "F": 4,
+        "E": 7,
+        "G": 9,
+        "D": 2,
+        "C": 11,
+        "B": 3,
+        "A": 8,
+        "H": 1,
+        "I": 2,
+        "K": 3,
+        "J": 4,
+        "ONTARIO": 31,
+        "PJM": 27
+      },
+      "Yred_shape": [
+        148,
+        148
+      ],
+      "Yred_nonzeros": 654,
+      "voltage_lift_shape": [
+        267,
+        148
+      ],
+      "current_recovery_operator_shape": [
+        488,
+        148
+      ],
+      "synthetic_thermal_parent_count": 180,
+      "synthetic_thermal_runtime_branch_count": 252,
+      "synthetic_thermal_material_segments": 253
+    }
+  ],
+  "topology_windows": [
+    {
+      "state": "pre_may",
+      "first_hour_index": 1,
+      "last_hour_index": 3359,
+      "start_utc": "2025-01-01T05:00:00Z",
+      "start_local": "2025-01-01T00:00:00-05:00",
+      "hours": 3359,
+      "source_qualified_hours": 3315
+    },
+    {
+      "state": "may21",
+      "first_hour_index": 3360,
+      "last_hour_index": 3575,
+      "start_utc": "2025-05-21T04:00:00Z",
+      "start_local": "2025-05-21T00:00:00-04:00",
+      "hours": 216,
+      "source_qualified_hours": 214
+    },
+    {
+      "state": "may30",
+      "first_hour_index": 3576,
+      "last_hour_index": 8471,
+      "start_utc": "2025-05-30T04:00:00Z",
+      "start_local": "2025-05-30T00:00:00-04:00",
+      "hours": 4896,
+      "source_qualified_hours": 4835
+    },
+    {
+      "state": "post_dover",
+      "first_hour_index": 8472,
+      "last_hour_index": 8760,
+      "start_utc": "2025-12-20T04:00:00Z",
+      "start_local": "2025-12-19T23:00:00-05:00",
+      "hours": 289,
+      "source_qualified_hours": 287
+    }
+  ],
+  "hourly_axis": {
+    "rows": 8760,
+    "first_UTC": "2025-01-01T05:00:00Z",
+    "last_UTC": "2026-01-01T04:00:00Z",
+    "source_qualified_rows": 8651,
+    "hour_index_base": 1,
+    "time_rule": "Stored hourly UTC instants span the local2025 calendar; no local-hour duplication or DST inference is required."
+  },
+  "network": {
+    "branch_model": "Positive-sequence nominal pi with totalB split between ends, complex tap=tau exp(j shift), explicit bus shunts; inactive records retained with status0.",
+    "branch_rows_are_runtime_sections": true,
+    "reduced_matrix_entries_are_physical_lines": false,
+    "parent224": {
+      "total_R_pu": 0.02,
+      "total_X_pu": 0.0147,
+      "total_B_pu": 0.0,
+      "numerical_sections": 2,
+      "role": "unresolved_network_equivalent_without_an_admitted_plain_OH_conductor"
+    },
+    "eliminated_ports": "No prescribed load, generator terminal, controlled transfer terminal or independently controlled voltage is eliminated. Fixed shunts remain in Y.",
+    "reduction": "Ve=-Yee^{-1}Yek Vk; L embeds retained identity and passive lift; Yred=Ykk-Yke Yee^{-1}Yek.",
+    "recovery": "Vfull=L Vk; If=Yf L Vk; It=Yt L Vk; Iseries=Yseries L Vk.",
+    "current_bases": "From/to terminal amperes use their respective nominal endpoint kV; series amperes use the to-side base. Ibase=100000/(sqrt(3)*kV).",
+    "rebuild_required": "Rebuild operators when R,X,B,tap,phase,shunt,status or retained/injection/control contract changes; hourly input fingerprints reject stale operators."
+  },
+  "generation": {
+    "total_rows": 1464,
+    "native_fixed_active_power_rows": 1436,
+    "external_loss_participants": 27,
+    "HQ_fixed_signed_injection_rows": 1,
+    "external_group_counts": {
+      "ISONE": 9,
+      "ONTARIO": 6,
+      "PJM": 12
+    },
+    "reference_bus": 50,
+    "reference_name": "CLAY",
+    "reference_generator_row": 110,
+    "reference_role": "One retained voltage angle/reference magnitude; its finalP is checked against the same native schedule, not an unlimited loss supplier.",
+    "native_Q": "Online Qmax=-Qmin=max(abs(Pmin),abs(Pmax))*tan(acos(.95)); inactive rows have zeroQ capability.",
+    "external_Q": "Finite declared apparent-power proxy; Qmax=-Qmin=sqrt(S_assumed^2-P_final^2), updated after allocated regional loss changesP.",
+    "commitment": "GEN_STATUS is hourly availability/admission, not observed synchronization or a unit-commitment result.",
+    "voltage_limits_pu": [
+      0.95,
+      1.05
+    ],
+    "PF_Q_limits_enforced_by_default": false
+  },
+  "controlled_transfers": {
+    "count": 6,
+    "channel_names": [
+      "CSC",
+      "NEPTUNE",
+      "HTP",
+      "VFT",
+      "ONTARIO_PAR_25118",
+      "ONTARIO_PAR_25119"
+    ],
+    "interpretation": "Signed fixedP model ports in the MATPOWER dcline container; not six identified physicalHVDC assets.",
+    "active_loss_model": "LOSS0=LOSS1=0 and PT=PF",
+    "reactive_model": "Fixed QF=QT=0 with zero terminal Q bounds",
+    "positive_direction": "from endpoint toward to endpoint; a negative target reverses the signed injection"
+  },
+  "loss_policy": {
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "ISONE",
+      "ONTARIO",
+      "PJM"
+    ],
+    "NY_boundary_identity": "Delivered_PD_z + assigned_NY_loss_z = frozen_P58_boundary_target_z.",
+    "NY_ownership": "Half of each within-NY corridor loss to each endpoint zone; both halves accrue to one zone for an internal corridor.",
+    "external_ownership": "Each external region supplies its internal corridor losses and its AC-corridor losses intoNY through bounded frozen generation participation.",
+    "fixed_quantities": "NativePG, signedHQ injection, six controlled transfers and regional import targets atNY terminals remain fixed.",
+    "reactive_load": "QD scales with deliveredPD at the fixed inherited power factor.",
+    "required_contract": "Zero busGS, zero modeled DC losses and no AC connection between different external regions.",
+    "numerical_method": "Simultaneous voltage and loss-dependent injection Newton solve; referenceP and boundary identities checked afterward.",
+    "failure_policy": "Reject unsupported contracts, negative served-demand/domain failures and exhausted external capability; do not clip loss or promote failed iterates."
+  },
+  "conductor_screen": {
+    "eligible_parent_corridors_by_state": {
+      "pre_may": 179,
+      "may21": 179,
+      "may30": 179,
+      "post_dover": 180
+    },
+    "admission": "Active same-voltage OH class; integer circuit/bundle counts; valid catalog temperature/geometry; independently forward-matching R andX in every runtime section.",
+    "installed_identity_required": false,
+    "geographic_chord_required": false,
+    "geometric_B": "Predicted and reported separately; not rewritten or used as an admission gate.",
+    "broad_length_caps_m": {
+      "below200kV": 250000,
+      "below300kV": 500000,
+      "below400kV": 700000,
+      "otherwise": 1000000
+    },
+    "heat": "Per-subconductor Joule/convection/radiation/solar heat balance under explicit weather; total circuit phase current is divided by circuits times bundle count.",
+    "scope": "One-way reference-resistance steady-ampacity screen; does not alter electrical parameters, solve equilibriumtemperature, runOPF or certify an installed facility.",
+    "known_non_OH_conflicts": [
+      300,
+      309,
+      310,
+      386
+    ]
+  },
+  "field_units": {
+    "bus_PD": "modelMW; NY input is a boundary target, final allocated input is delivered demand",
+    "bus_QD": "modelMVAr",
+    "gen_PG_Pmin_Pmax": "modelMW",
+    "gen_QG_Qmin_Qmax": "modelMVAr",
+    "branch_R_X_B": "perunit on100MVA and terminal voltagebases;B is totalcharging",
+    "branch_PF_PT": "modelMW",
+    "branch_QF_QT": "modelMVAr",
+    "bus_VM": "perunit",
+    "bus_VA_and_phase_shift": "degrees",
+    "recovered_voltage": "complex perunit",
+    "recovered_current": "amperes at synthetic AC base, never divided by gamma",
+    "public_power_comparison": "publicMW=modelMW/gamma only for explicitly mapped public power quantities",
+    "weather": "ambientC,windm/s,wind/conductor angledegrees,solarW/m2,pressurePa"
+  },
+  "solve_outputs": {
+    "result_bus": "148retained rows",
+    "result_gen": "1464rows on generatoridentityaxis",
+    "result_dcline": "6fixed-transfer rows",
+    "recovered_bus": "266/267detailed rows",
+    "recovered_branch": "485/488runtime rows; columns14:17=PF,QF,PT,QT",
+    "recovered_full_voltage": "266/267complex perunit vector",
+    "recovered_line_current_A": "485/488by3 [fromterminal,toterminal,series]",
+    "result_success": "Converged AC equations and required loss policy; distinct from joint operating qualification.",
+    "audit_passed": "Also requires declared voltage, reactive and assumed apparent-power capability gates.",
+    "allocation_final_input": "Exact delivered-demand/loss-adjusted generator input underlying the returned solution."
+  },
+  "interpretation_limits": [
+    "Synthetic electrical and conductor parameters are not an installed-asset survey.",
+    "Fixed external load shapes, within-zone spatial loads, unit dispatch and reactive capability are explicit modeling assumptions.",
+    "Model-port names and diagnostic interface cuts do not certify actual physical facility membership.",
+    "Thermal current identities do not establish voltage/reactive feasibility, terminalequipment limits, N-1 security or economicbenefit.",
+    "Source eligibility, AC/loss-equation qualification, operating bounds and thermal exposure are separate flags."
+  ],
+  "independent_matrix_checks": [
+    {
+      "state": "pre_may",
+      "passed": true,
+      "maximum_absolute_operator_errors": {
+        "Yfull": 9.112693272687351e-13,
+        "Yred": 1.0247593068766006e-12,
+        "voltage_lift": 4.708065036825756e-14,
+        "YfL": 4.687428401686771e-13,
+        "YtL": 4.099037227506403e-13,
+        "YseriesL": 4.582862941503293e-13
+      }
+    },
+    {
+      "state": "may21",
+      "passed": true,
+      "maximum_absolute_operator_errors": {
+        "Yfull": 9.112693272687351e-13,
+        "Yred": 1.8283467199674115e-12,
+        "voltage_lift": 8.157209507945293e-14,
+        "YfL": 6.054745575780279e-13,
+        "YtL": 6.09065720443431e-13,
+        "YseriesL": 6.09065720443431e-13
+      }
+    },
+    {
+      "state": "may30",
+      "passed": true,
+      "maximum_absolute_operator_errors": {
+        "Yfull": 9.112693272687351e-13,
+        "Yred": 9.094947017729282e-13,
+        "voltage_lift": 4.779693843156707e-14,
+        "YfL": 6.834519954515513e-13,
+        "YtL": 6.834519954515513e-13,
+        "YseriesL": 6.834519954515513e-13
+      }
+    },
+    {
+      "state": "post_dover",
+      "passed": true,
+      "maximum_absolute_operator_errors": {
+        "Yfull": 9.165725883006586e-13,
+        "Yred": 3.6450773090749405e-12,
+        "voltage_lift": 4.779693843156707e-14,
+        "YfL": 2.73085155401175e-12,
+        "YtL": 3.639754730461873e-12,
+        "YseriesL": 2.73085155401175e-12
+      }
+    }
+  ],
+  "no_PF_OPF_or_annual_replay_run": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/current_branch_registry.csv",
+      "sha256": "5e4ddb42efc1cc10e8f69c7a0fde7c86f8dabfdfec6a483efea5ecf546496e25"
+    },
+    {
+      "path": "output/nygrid_2025_slim/replay/topology_dated.mat",
+      "sha256": "7d86bea37e48f392a61b52b291e3e46638c56f50202d7fccf3688bb75a4b47b9"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/operating_states.mat",
+      "sha256": "bea2fb35c44a3c9510b7c4a68cf4a5ea901e7df0b51567755a2a388942dd171a"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/structure_export_summary.json",
+      "sha256": "acf7cfad61f78b731902a63b8453729af8f6897e793f63b5410b1921f9391b14"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/export_current_structure.m",
+      "sha256": "1e027f1322c485b6c541b31f3a673a48af0878eaeaf7488d6e42ed2b24213d9c"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/pre_may.mat",
+      "sha256": "713bbe2f872e740040759a24f07191b706b08117cf4bbc5c4b4204664938b54a"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/pre_may_thermal_eligibility.csv",
+      "sha256": "a74d9057d5b1d17f0c3a4697f02290cba108bc94df6d937e3d1a578ba8a9f2d3"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/pre_may_thermal_segments.csv",
+      "sha256": "829336743f961f8255f17e2c41481ebcaf7eacebfb64b4170db40bbfd8cc80b2"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/pre_may_retention.csv",
+      "sha256": "942451faef45441afec3351cfb2313c816347020bf394f8eec6bd04ed7d5f95e"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/may21.mat",
+      "sha256": "74284cb540dd2ec115ff31c6c68fce42802b02a48cc0f4c90148dd7c58603f20"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/may21_thermal_eligibility.csv",
+      "sha256": "bb768e64482637916fecde3db1334367ba070b8b17e79806e229c502bacd1375"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/may21_thermal_segments.csv",
+      "sha256": "829336743f961f8255f17e2c41481ebcaf7eacebfb64b4170db40bbfd8cc80b2"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/may21_retention.csv",
+      "sha256": "942451faef45441afec3351cfb2313c816347020bf394f8eec6bd04ed7d5f95e"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/may30.mat",
+      "sha256": "e828d80300ae97a289036e1fd0618ec84a6eecfc9aa62faab1ce37f7a0864a27"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/may30_thermal_eligibility.csv",
+      "sha256": "447d0431dd017d70395f5fee8d2e6c3e74c09527a9d157ce082e15493568f4a2"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/may30_thermal_segments.csv",
+      "sha256": "829336743f961f8255f17e2c41481ebcaf7eacebfb64b4170db40bbfd8cc80b2"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/may30_retention.csv",
+      "sha256": "1ef054e98f24f5d408438b97ddd10187096aecf10955812b9563556ab27ab0ce"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/post_dover.mat",
+      "sha256": "68ec5019a1d5fb96822eeef27266a9c5e8cb18f2c6a377f2ae20dd345035ad9d"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/post_dover_thermal_eligibility.csv",
+      "sha256": "6c4687fae130855d4a66bb98856d4edf76c5026fa729b61c63aead228ce5cd66"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/post_dover_thermal_segments.csv",
+      "sha256": "44da7636604977b94e5e0d745b0cc3695a7b2ff39407a5952c5b1a4b9ff4decc"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure_inputs/post_dover_retention.csv",
+      "sha256": "e1f65f9949f490f423674650d4fd4f5c34620018a4d7a0750f60d1f42e840a64"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/build_current_structure.py",
+      "sha256": "c6342aa8fbd06dcf91ea4f545004e8f99a54346d98509bb4f96b4d43ebe58eab"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure/retained_bus_map.csv",
+      "sha256": "cf7421d7ed88b2328e51f1273ae9690e782a50048e36d5e03758b7d4e78962f0"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure/detailed_bus_map.csv",
+      "sha256": "6d72d3d4e0f3f1f031183a822134cc48d85ed71aaa26d0746f14f0d2d54b15da"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure/runtime_branch_map.csv",
+      "sha256": "aa955776b9e5667b22b7faa9725a79356b951d14d7f0fdaa97171aaf3239bc55"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure/generator_map.csv",
+      "sha256": "80709c19024b666f443a1beda7e64974f46ec598c38509ee32514666bf80c0fb"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure/controlled_transfer_map.csv",
+      "sha256": "9cb2bb322e01a8b88eed7719b2bc339f59e08817678e2d52635304877dfff73c"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure/dated_state_map.csv",
+      "sha256": "c4760962da9add53890474d8eecb180634a8351581f4f4a1ffd618c2594689fc"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure/generator_identity_map.csv",
+      "sha256": "cb59b1a0bf9036760874bfdd14e9c23299bf5e93530a6bad7caba00bbea44e2e"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/structure/controlled_transfer_identity_map.csv",
+      "sha256": "bede91d2eab8fa4098335fda40f01ebb25933a6a52fdba75f04a61a1b6d89ea7"
+    }
+  ]
+}

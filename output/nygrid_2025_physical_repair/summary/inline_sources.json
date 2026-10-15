@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "annual-coverage",
+      "title": "Annual coverage and qualification",
+      "queries": [
+        {
+          "id": "annual-coverage-evidence",
+          "reportingPeriod": "2025 hourly model; repaired annual replay completed October 15, 2026",
+          "source": {
+            "label": "Annual coverage and qualification",
+            "files": [
+              {
+                "label": "annual_receipt.json"
+              },
+              {
+                "label": "annual_input_accounting_review.json"
+              },
+              {
+                "label": "annual_physics_review.json"
+              },
+              {
+                "label": "scoring_receipt.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Annual coverage and qualification",
+                "definition": "Equation qualification requires convergence, AC equations, loss accounting and voltage/current recovery; operating limits are checked separately."
+              }
+            ],
+            "filters": [
+              "The frozen 2025 source eligibility mask is unchanged."
+            ],
+            "caveats": [
+              "Equation-qualified results do not establish whole-network operating feasibility."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "Independent checks",
+                "detail": "All 8,760 clock positions and source masks are preserved. Independent raw branch laws, nodal balance, generator capabilities, regional accounting and passive recovery pass."
+              }
+            ]
+          },
+          "rows": [
+            {
+              "source_hours": 8651,
+              "qualified_hours": 8651,
+              "recovered_hours": 481,
+              "lost_hours": 0,
+              "source_excluded_hours": 109,
+              "operating_qualified_hours": 0
+            }
+          ],
+          "columns": [
+            {
+              "field": "source_hours",
+              "label": "Eligible hours"
+            },
+            {
+              "field": "qualified_hours",
+              "label": "Equation-qualified"
+            },
+            {
+              "field": "recovered_hours",
+              "label": "Recovered hours"
+            },
+            {
+              "field": "lost_hours",
+              "label": "Lost successes"
+            },
+            {
+              "field": "source_excluded_hours",
+              "label": "Source-excluded"
+            },
+            {
+              "field": "operating_qualified_hours",
+              "label": "Operating-qualified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parent41-loss",
+      "title": "Parent 41 loss correction",
+      "queries": [
+        {
+          "id": "parent41-loss-evidence",
+          "reportingPeriod": "2025 hourly model; repaired annual replay completed October 15, 2026",
+          "source": {
+            "label": "Parent 41 loss correction",
+            "files": [
+              {
+                "label": "parent41_parameters.json"
+              },
+              {
+                "label": "independent_candidate_review.json"
+              },
+              {
+                "label": "target_parent_metrics.csv"
+              },
+              {
+                "label": "annual_physics_review.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Parent 41 loss correction",
+                "definition": "Parent 41 mean real loss is compared on the identical 8,170 previously successful hours, in model-scale MW."
+              }
+            ],
+            "filters": [
+              "The frozen 2025 source eligibility mask is unchanged."
+            ],
+            "caveats": [
+              "The R/X-conditioned conductor is a synthetic realization, not an identified installed asset. The existing aggregate 2,000 A apparatus ceiling is retained and still fails in some hours."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "Independent checks",
+                "detail": "Independent formulas verify the imported R/X, geometric B, conductor material data and Joule-loss identity; compiled templates preserve the corresponding thermal metadata."
+              }
+            ]
+          },
+          "rows": [
+            {
+              "previous_mean_MW": 77.8967008507937,
+              "repaired_mean_MW": 2.1203195692846535,
+              "reduction_percent": 97.27803675107371,
+              "paired_hours": 8170,
+              "current_limit_exceedance_hours_all_new": 2722
+            }
+          ],
+          "columns": [
+            {
+              "field": "previous_mean_MW",
+              "label": "Previous mean loss (model MW)"
+            },
+            {
+              "field": "repaired_mean_MW",
+              "label": "Repaired mean loss (model MW)"
+            },
+            {
+              "field": "reduction_percent",
+              "label": "Reduction (%)"
+            },
+            {
+              "field": "paired_hours",
+              "label": "Matched hours"
+            },
+            {
+              "field": "current_limit_exceedance_hours_all_new",
+              "label": "2,000 A exceedances in all 8,651 hours"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "target-voltages",
+      "title": "Voltage fixes and remaining limits",
+      "queries": [
+        {
+          "id": "target-voltages-evidence",
+          "reportingPeriod": "2025 hourly model; repaired annual replay completed October 15, 2026",
+          "source": {
+            "label": "Voltage fixes and remaining limits",
+            "files": [
+              {
+                "label": "compensation_design_review.json"
+              },
+              {
+                "label": "target_parent_metrics.csv"
+              },
+              {
+                "label": "annual_physics_review.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Voltage fixes and remaining limits",
+                "definition": "The complete parent 185 and 195 corridors are checked against the unchanged 0.95\u20131.05 pu bounds in all 8,651 solved hours."
+              }
+            ],
+            "filters": [
+              "The frozen 2025 source eligibility mask is unchanged."
+            ],
+            "caveats": [
+              "Other locations still violate operating limits: 8651 overvoltage hours and 599 undervoltage hours in the new qualified cohort.",
+              "Distributed reactor placement is a declared synthetic design; total nominal compensation, conductor parameters, voltage setpoints and limits are unchanged."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "Independent checks",
+                "detail": "Independent reconstruction confirms zero target-corridor voltage violations, exact total reactor rating conservation, full-axis shunt metadata and passive-network voltage recovery."
+              }
+            ]
+          },
+          "rows": [
+            {
+              "parent": 185,
+              "minimum_pu": 1.0199999999999991,
+              "maximum_pu": 1.0393803850683947,
+              "violation_hours": 0
+            },
+            {
+              "parent": 195,
+              "minimum_pu": 1.0065704372180289,
+              "maximum_pu": 1.0469923725485832,
+              "violation_hours": 0
+            }
+          ],
+          "columns": [
+            {
+              "field": "parent",
+              "label": "Parent"
+            },
+            {
+              "field": "minimum_pu",
+              "label": "Minimum voltage (pu)"
+            },
+            {
+              "field": "maximum_pu",
+              "label": "Maximum voltage (pu)"
+            },
+            {
+              "field": "violation_hours",
+              "label": "Violation hours"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

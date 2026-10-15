@@ -1,0 +1,181 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T14:40:15.666616+00:00",
+  "scope": "Independent final compiled-model metadata, HTML embedded numeric freshness, annual masks/units/cut flows, manual numerical content and root report/figure-data review; no PF or browser/visual-layout check.",
+  "candidate_sha256": "3ea77c854ffff4e8eb30fa72fc92296e024cb23eb3744010e276bff49e3fc08f",
+  "compiled_model_sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385",
+  "network_map_sha256": "9af275cfbd3f98bb0c682aae9291e6f193c7515e52f0b299d540241511001196",
+  "all_embedded_payloads_equal_standalone_JSON": true,
+  "clock_rows": 8760,
+  "qualified_rows": 8651,
+  "source_excluded_rows": 109,
+  "operating_qualified_rows": 0,
+  "interface_membership_terms_checked": 136,
+  "all_qualified_interface_values_checked": 60557,
+  "maximum_numeric_export_errors": {
+    "map_interface_vs_scored_model_MW": 2.2737367544323206e-13,
+    "gross_model_MW": 0.0,
+    "served_model_MW": 0.0,
+    "loss_model_MW": 0.0,
+    "map_interface_vs_raw_branch_sum_model_MW": 0.0,
+    "map_native_generation_vs_raw_solved_model_MW": 1.8530954548623413e-10,
+    "map_transfer_vs_raw_model_MW": 0.0
+  },
+  "parent41_compiled_registry_and_thermal_metadata_correct": true,
+  "full_axis_reactor_metadata_matches_map_in_all_four_states": true,
+  "profile_shards_hashes_preserved_and_authenticated": true,
+  "root_report_and_figure_paired_cohort_numbers_verified": true,
+  "manual_DOCX_and_Markdown_numeric_content_verified": true,
+  "substantive_findings": [],
+  "limitations": [
+    "Document layout and native browser interactions are covered by separate owner reviews.",
+    "The immutable preannual candidate receipt records annual_validation_complete=false by design; completed annual receipts and the delivered map/manual establish current annual completion.",
+    "Global operating qualification remains zero despite requested line-loss and voltage repairs."
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/map_data.json",
+      "sha256": "5e8b8c9abd8c277de936d7d8ff8d8afc75c9f7f28e4c8a6ae0f289cbb5ed662b"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/annual_data.json",
+      "sha256": "744d923aea06c84bac421e60649a0b4edea1e49c142f100665ec017e0abb2d3c"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/geography_data.json",
+      "sha256": "65a8b7e8b4305bc6aaca5650f6ac4d9323a3c514e149a27a7091b7440bc8d02f"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/interface_definitions.json",
+      "sha256": "a7214b19ca1c620dcb8cdc78e390d5fa66be7ad7faee2d186fff039ab25b5a7f"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/network_map.html",
+      "sha256": "9af275cfbd3f98bb0c682aae9291e6f193c7515e52f0b299d540241511001196"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/latest_model.mat",
+      "sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/candidate_receipt.json",
+      "sha256": "3ea77c854ffff4e8eb30fa72fc92296e024cb23eb3744010e276bff49e3fc08f"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/independent/compiled_model_metadata_readback.json",
+      "sha256": "7129635f441373b488b4cb55609d75d9e1b4c464554ca8c449aada98f1c8c0e1"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/model_receipt.json",
+      "sha256": "bbefae143a0cc3acf394d01bba37df33fedc68f7af4ccab849ce8681f5086ef6"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/parent41_parameters.json",
+      "sha256": "0405ad77f50770eba7f984badfacb16ecaf300c75fb2d6b811a550cbe831174a"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_01.mat",
+      "sha256": "bb1d6805854c7f10ab7cc45b7bcd4b0926ba168b9611a5a13a69405555b27cbb"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_02.mat",
+      "sha256": "8249c8930cf268cf437f27f252e4bcf63e63ff3bcdd398df6300626b3012216d"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_03.mat",
+      "sha256": "0a4600c1a5ae453a9bbb68b615a5ae0358278923e127fd0d23e0a420925702f4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_04.mat",
+      "sha256": "fe2585712dfaa9dce9497d67a362bba4189823d3a71968b8a0d70a687e70c9d2"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_05.mat",
+      "sha256": "df7920f5a55e42dd861f3aef58aa3af4711d5c9228a713aab56989bb0b19dc44"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_06.mat",
+      "sha256": "45ac14b19ba1dd5c1bfc65a4ed89d27189cc5a54fe4c4f13a4fa0b7b869406ae"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_07.mat",
+      "sha256": "f2f5bbf9de3c670096d7c8c90adca1cec3e556edadb7ee4feb00c783af20057a"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_08.mat",
+      "sha256": "7668f2d1b3a1bbc8623c9df984930e314aa2dd871b621afe738b24bb1d0374b7"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_09.mat",
+      "sha256": "3a2554c0df79a5c767ef4c7f2925f133dcd2fd0734185c5ae8e544ad61660973"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_10.mat",
+      "sha256": "cd467cf41cc9987563540808b01bd2a56686f38433d9c4c6a44df598e8047247"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_11.mat",
+      "sha256": "fde7871db5143276b6e21863ff6d745d4e9e433604023323e7d8c3ae547b16c0"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_12.mat",
+      "sha256": "ed7de0a1c3acdbd99bd6b9ac5d1efe2f080b8203aeff2169c8992feb11c6f881"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "3297f564d35b7cc1d132eeaa4d1f4054ecc49681b67478b957d6ca5752191245"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/docs/NYGRID_2025_PHYSICAL_REPAIR_MODEL_STRUCTURE.md",
+      "sha256": "d34a90d95101427401ef17a0663e5737878114f51ace20eea07c5144e748aed0"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/docs/NYGRID_2025_PHYSICAL_REPAIR_MODEL_STRUCTURE.docx",
+      "sha256": "b34ca89d5f340737be58f59354bced739858cbf9f3f2a8f133b251f9c388cf85"
+    },
+    {
+      "path": "NYGRID_2025_PHYSICAL_REPAIR.md",
+      "sha256": "c072005540da7468f4c1caa0ebfef72e8600587ad46e2426244f8a176c9a0907"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/independent/annual_physics_review.json",
+      "sha256": "dbdef3f0e850cb3fc33f5706725fac22e9ab7dd4a3ccd1c8e27883f45c1ae00a"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/summary/report_receipt.json",
+      "sha256": "2025cc440ace7db5cc29766388f84dbf47f081a4a6f39e059f3e6844a28fda29"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/independent/target_parent_metrics.csv",
+      "sha256": "6e092ce2d1cfcd130bc3839e02c98e293a62ea4040cb4a4733cd0495f75373bd"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/build_repair_report.py",
+      "sha256": "0130bf24ed390c24cd47af0ce7c82fd8d36451c418884a3c8607f1fc9165ed7b"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/summary/physical_repair_comparison.png",
+      "sha256": "e2c3ade30e2340493939d4d7eb9a59a564e8d3eef9ac01c1dc4e4aa9c856355d"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/summary/physical_repair_comparison.pdf",
+      "sha256": "fb1cd12122d6aad841affafec678f8952e8d3616d9515ad9cb29b808b407d6b6"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/independent/review_delivery.py",
+      "sha256": "490f7e401959dcfe3674e6d05a16b7adb738fa0e2d01ae82411de2a8c6c31f15"
+    }
+  ]
+}

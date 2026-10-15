@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T14:45:03.300853+00:00",
+  "HTML_sha256": "9af275cfbd3f98bb0c682aae9291e6f193c7515e52f0b299d540241511001196",
+  "html": {
+    "path": "output/nygrid_2025_physical_repair/delivery/map/network_map.html",
+    "bytes": 14445385,
+    "sha256": "9af275cfbd3f98bb0c682aae9291e6f193c7515e52f0b299d540241511001196"
+  },
+  "browser": "Codex in-app browser through CUA",
+  "preview_url": "http://127.0.0.1:8777/network_map.html",
+  "native_UI_interactions": true,
+  "checks": [
+    "Default hour8508 status distinguishes passed equations/loss balance from failed voltage/generator checks.",
+    "All11 accounting-zone labels and7 interface labels render legibly in NewYork view; FullNPCC view remains usable.",
+    "Public-scale power selection renders MosesSouth -583.2279612512973MW with reverse arrow and frozen signed members46,51,52.",
+    "Source-excluded hour154 shows unavailable flows/directions rather than numeric predictions.",
+    "Parent41 popup shows R=.0018,X=.0089,B=.02126747pu and synthetic thermal eligibility.",
+    "Parent185 popup shows6sections and distributed75percent compensation607.279MVAr over7modeledbuses.",
+    "Parent195 popup shows7sections and distributed75percent compensation254.817MVAr over8modeledbuses.",
+    "Footer binds repair candidate3ea77c854fff; physicalmeter/route/installedstation limitations remain visible."
+  ],
+  "screenshots": [
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/qa/native_new_york_flows.jpg",
+      "bytes": 142582,
+      "sha256": "50ca77af2a9ee05f9677e24982ce1bbfbffa7f5f07fdd1eafeebfaa9f4e07800"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/qa/native_parent195.jpg",
+      "bytes": 153063,
+      "sha256": "cc1341553b56dee9fe41e6811441acc99e7df80f14a597b77a050bc66dddd083"
+    }
+  ],
+  "scope": "Native desktop viewport and interactive controls; responsive DOM checks are recorded separately; no new scientific validation inferred from screenshots.",
+  "observed_layout_failures": []
+}

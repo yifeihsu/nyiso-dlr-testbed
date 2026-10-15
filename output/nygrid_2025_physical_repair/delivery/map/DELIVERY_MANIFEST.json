@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "status": "corrected_map_validated",
+  "created_utc": "2026-10-15T14:45:50.931873+00:00",
+  "offline_self_contained": true,
+  "HTML": {
+    "path": "output/nygrid_2025_physical_repair/delivery/map/network_map.html",
+    "bytes": 14445385,
+    "sha256": "9af275cfbd3f98bb0c682aae9291e6f193c7515e52f0b299d540241511001196"
+  },
+  "README": {
+    "path": "output/nygrid_2025_physical_repair/delivery/map/README.md",
+    "bytes": 961,
+    "sha256": "559417bcab38b083e92fdb6b474e3f55208090730ab6e686b2a6bb890f80c630"
+  },
+  "physical_repair_candidate_sha256": "3ea77c854ffff4e8eb30fa72fc92296e024cb23eb3744010e276bff49e3fc08f",
+  "compiled_model_sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385",
+  "annual_run": "physical_repair_v1",
+  "hours": 8760,
+  "source_qualified_hours": 8651,
+  "equation_loss_qualified_hours": 8651,
+  "joint_voltage_generator_qualified_hours": 0,
+  "full_operating_qualified_hours": 0,
+  "evidence": [
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/build_receipt.json",
+      "bytes": 3158,
+      "sha256": "644a19c631bb89fd757626b08cd8b25f7a3ddd152443c5ade371040991598a7e"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/scientific_data_receipt.json",
+      "bytes": 9985,
+      "sha256": "a83deb831ffb54b2e91d39bbd4aad100c0203a49091d8c53d3d999f3aa5be60c"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/interface_semantics_review.json",
+      "bytes": 13159,
+      "sha256": "d53384b2bc4ee5fc7af4f7cc0e5218e2a328664ec88383dd40ac1f707610f8de"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/geography_validation.json",
+      "bytes": 7927,
+      "sha256": "8faec0d1166124200eb5ccc0ceff3a61e96bf2d1c42513e5cc0bf387743599a2"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/geography_independent_review.json",
+      "bytes": 3764,
+      "sha256": "e047ef73df35c1afaf01df811a275bcf78b70bf5e6b7b280c833000bb7ed9258"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/independent_annual_data_review.json",
+      "bytes": 5881,
+      "sha256": "f405b8db6cf84d98905ec3189f9b17b22ffd7e798e974749116ce373815821c1"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/independent_ui_flow_math_review.json",
+      "bytes": 4277,
+      "sha256": "d8cd0d2d6b8d6fea76502a596ebf6c90b6480371a8333fef32b5f475e7b7f1bb"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/independent_embedded_payload_review.json",
+      "bytes": 2755,
+      "sha256": "2aea801fcf5502d54fe79b8c09494cbf4a590e70decdc0e5c40b2f1a1e1adb67"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/interaction_validation.json",
+      "bytes": 7314,
+      "sha256": "0cf2effccc1e2f7ae44c441a556633ffd7baa90d885b9821a7cb0ea984159d27"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/browser_visual_review.json",
+      "bytes": 2084,
+      "sha256": "9d78bf59c201ea6f4ab9ed576f91f6afeacbf271174de6e3f869ff4067290347"
+    }
+  ],
+  "canonical_data": [
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/annual_data.json",
+      "bytes": 12442526,
+      "sha256": "744d923aea06c84bac421e60649a0b4edea1e49c142f100665ec017e0abb2d3c"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/geography_data.json",
+      "bytes": 2764239,
+      "sha256": "65a8b7e8b4305bc6aaca5650f6ac4d9323a3c514e149a27a7091b7440bc8d02f"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/interface_definitions.json",
+      "bytes": 96870,
+      "sha256": "a7214b19ca1c620dcb8cdc78e390d5fa66be7ad7faee2d186fff039ab25b5a7f"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/map_data.json",
+      "bytes": 14380047,
+      "sha256": "5e8b8c9abd8c277de936d7d8ff8d8afc75c9f7f28e4c8a6ae0f289cbb5ed662b"
+    }
+  ],
+  "preexisting_map_edits_preserved": {
+    "path": "output/nygrid_2025_physical_repair/delivery/preservation/dirty_map_snapshot.json",
+    "bytes": 5652,
+    "sha256": "980499cea28748c0523347fc8972e8b165e5b3ce2883fff10341a9a749db133f"
+  }
+}

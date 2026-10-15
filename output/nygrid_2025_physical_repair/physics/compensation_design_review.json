@@ -1,0 +1,304 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T14:07:19.789514+00:00",
+  "scope": "Source/RXB-preserving synthetic reactor-placement repair and passive fixed-endpoint line check; coupled probes are separate.",
+  "fraction": 0.75,
+  "selection_rule": "At each pi-section end, fixed reactor rating = 0.75 * baseMVA * section B / 2. Sum contributions at shared nodes.",
+  "engineering_basis": "Existing 70-80 percent generic shunt-compensation source supports retained 75 percent total. Distributed placement is an explicit synthetic design extension, not a claim about source-identified stations or installed hardware.",
+  "source_url": "https://cdn.selinc.com/assets/Literature/Publications/Technical%20Papers/6515_ImpactsShunt_NF_20131121_Web2.pdf",
+  "additional_manufacturer_context_url": "https://www.hitachienergy.com/in/en/products-and-solutions/transformers/reactors-and-inductors/shunt-reactors",
+  "diagnosis": "Geometric charging spans 593.6/657.6 km but the old 75 percent reactors occur only at original terminals. Passive uncompensated interior sections retain a large Ferranti rise.",
+  "design_fit_to_observed_interface_flows": false,
+  "voltage_clipped_or_limits_relaxed": false,
+  "total_reactor_rating_changed": false,
+  "branch_RXB_conductor_thermal_metadata_changed": false,
+  "passive_elimination_remains_valid": true,
+  "fixed_endpoint_baseline_maximum_complex_voltage_reconstruction_error_pu": 1.1103397621272554e-15,
+  "selected_calendar_hours": [
+    349,
+    1093,
+    1765,
+    2509,
+    3229,
+    3469,
+    3613,
+    3973,
+    4693,
+    5477,
+    6181,
+    6901,
+    7645,
+    8365,
+    8605
+  ],
+  "parameters_by_state": [
+    {
+      "state_index": 1,
+      "parent_row": 185,
+      "section_count": 6,
+      "nominal_kV": 500.0,
+      "R_X_B_pu_preserved": [
+        0.005700000000000001,
+        0.06990000000000002,
+        8.097059575517385
+      ],
+      "total_nominal_reactor_MVAr_preserved": 607.2794681638038,
+      "original_end_reactor_MVAr_each": 50.60662234698365,
+      "interior_reactor_MVAr_each": 101.2132446939673
+    },
+    {
+      "state_index": 1,
+      "parent_row": 195,
+      "section_count": 7,
+      "nominal_kV": 345.0,
+      "R_X_B_pu_preserved": [
+        0.02446509360009043,
+        0.2054,
+        3.3975624010672747
+      ],
+      "total_nominal_reactor_MVAr_preserved": 254.8171800800456,
+      "original_end_reactor_MVAr_each": 18.201227148574684,
+      "interior_reactor_MVAr_each": 36.40245429714937
+    },
+    {
+      "state_index": 2,
+      "parent_row": 185,
+      "section_count": 6,
+      "nominal_kV": 500.0,
+      "R_X_B_pu_preserved": [
+        0.005700000000000001,
+        0.06990000000000002,
+        8.097059575517385
+      ],
+      "total_nominal_reactor_MVAr_preserved": 607.2794681638038,
+      "original_end_reactor_MVAr_each": 50.60662234698365,
+      "interior_reactor_MVAr_each": 101.2132446939673
+    },
+    {
+      "state_index": 2,
+      "parent_row": 195,
+      "section_count": 7,
+      "nominal_kV": 345.0,
+      "R_X_B_pu_preserved": [
+        0.02446509360009043,
+        0.2054,
+        3.3975624010672747
+      ],
+      "total_nominal_reactor_MVAr_preserved": 254.8171800800456,
+      "original_end_reactor_MVAr_each": 18.201227148574684,
+      "interior_reactor_MVAr_each": 36.40245429714937
+    },
+    {
+      "state_index": 3,
+      "parent_row": 185,
+      "section_count": 6,
+      "nominal_kV": 500.0,
+      "R_X_B_pu_preserved": [
+        0.005700000000000001,
+        0.06990000000000002,
+        8.097059575517385
+      ],
+      "total_nominal_reactor_MVAr_preserved": 607.2794681638038,
+      "original_end_reactor_MVAr_each": 50.60662234698365,
+      "interior_reactor_MVAr_each": 101.2132446939673
+    },
+    {
+      "state_index": 3,
+      "parent_row": 195,
+      "section_count": 7,
+      "nominal_kV": 345.0,
+      "R_X_B_pu_preserved": [
+        0.02446509360009043,
+        0.2054,
+        3.3975624010672747
+      ],
+      "total_nominal_reactor_MVAr_preserved": 254.8171800800456,
+      "original_end_reactor_MVAr_each": 18.201227148574684,
+      "interior_reactor_MVAr_each": 36.40245429714937
+    },
+    {
+      "state_index": 4,
+      "parent_row": 185,
+      "section_count": 6,
+      "nominal_kV": 500.0,
+      "R_X_B_pu_preserved": [
+        0.005700000000000001,
+        0.06990000000000002,
+        8.097059575517385
+      ],
+      "total_nominal_reactor_MVAr_preserved": 607.2794681638038,
+      "original_end_reactor_MVAr_each": 50.60662234698365,
+      "interior_reactor_MVAr_each": 101.2132446939673
+    },
+    {
+      "state_index": 4,
+      "parent_row": 195,
+      "section_count": 7,
+      "nominal_kV": 345.0,
+      "R_X_B_pu_preserved": [
+        0.02446509360009043,
+        0.2054,
+        3.3975624010672747
+      ],
+      "total_nominal_reactor_MVAr_preserved": 254.8171800800456,
+      "original_end_reactor_MVAr_each": 18.201227148574684,
+      "interior_reactor_MVAr_each": 36.40245429714937
+    }
+  ],
+  "line_only_results": [
+    {
+      "parent_row": 185,
+      "variant": "baseline",
+      "min": 1.0199999999999996,
+      "max": 1.0966907230184308
+    },
+    {
+      "parent_row": 185,
+      "variant": "distributed_75pct",
+      "min": 1.0199999999999996,
+      "max": 1.0382410543340257
+    },
+    {
+      "parent_row": 195,
+      "variant": "baseline",
+      "min": 1.0099999999999991,
+      "max": 1.1180072536950068
+    },
+    {
+      "parent_row": 195,
+      "variant": "distributed_75pct",
+      "min": 1.0099999999999991,
+      "max": 1.0459750537665646
+    }
+  ],
+  "selected_coupled_checks": {
+    "cases": 30,
+    "qualified_cases": 30,
+    "candidate_hours": 15,
+    "retained_bus_count_all_cases": 148,
+    "parent185_baseline_max_VM": 1.09669072301843,
+    "parent185_candidate_max_VM": 1.03781883101411,
+    "parent195_baseline_max_VM": 1.11800725369501,
+    "parent195_candidate_max_VM": 1.04501605776794,
+    "all_targeted_bus_voltages_within_unchanged_limits": true,
+    "maximum_remaining_global_voltage_violation_pu": 0.024010130087289,
+    "maximum_remaining_global_Q_violation_model_MVAr": 796.795125564625,
+    "maximum_regional_import_residual_model_MW": 4.9794834922067795e-11,
+    "maximum_nodal_P_residual_model_MW": 8.031406650843561e-09,
+    "maximum_nodal_Q_residual_model_MVAr": 7.340332786043291e-09,
+    "whole_network_operating_feasibility_claimed": false
+  },
+  "limitations": [
+    "Line-only profiles hold original endpoint phasors; global response requires a coupled solve.",
+    "Intermediate fixed shunts represent a synthetic compensated-line design; physical station existence, bank design and switching/transient behavior remain unverified.",
+    "Preserved 75 percent rating is not evidence of annual voltage, reactive or thermal feasibility."
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_plan.json",
+      "sha256": "1b9af6b5e17a4c7ed267e0f458ec4a31149bd4775f4d85be2c3d5167c6246b2a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/section_and_reactor_plan.csv",
+      "sha256": "48f23c9e0466bc599351fdee6d3dc0a8a6a951de7d398d672942366b8dce6f26"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/shunt_reactor_source_review.json",
+      "sha256": "287df5c25dcec0014e52540226ef5cc7c510eb0d2c18ca4e4c18cbb83b283947"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/sources/SEL_Oncor_2013_shunt_reactors.pdf",
+      "sha256": "50a25fb55d6024d632c431c611e6ad96788f8cc7f728983e4671ded54b207d72"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/physics/nyrepair_apply_185195.m",
+      "sha256": "d7b709f48d3de9ec08ee8569b26caad28b4391ae73fa9ec32d886ff790f910e4"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/physics/review_185195_design.py",
+      "sha256": "d4b1e2fd7f01317b4b0fa8547cd3acfc47c6bc5a5dbf02549c3bf5dda94ad3d4"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_01.mat",
+      "sha256": "c7de8f9f2d060a3ba91cf3f1a2ba8e0d7d7dd85abd8315ec4dbd2d28fe5a74e5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_02.mat",
+      "sha256": "115158dc8dc00e1930e88ca446a03a038f584e379add3791e6065c8d598b813d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_03.mat",
+      "sha256": "c259bce5e604773fe4b8d7c6364181ae346fb7803cebf95f1dca472a93bf690b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_04.mat",
+      "sha256": "cee22944247e1ad1892461f83ca0053a99de9ceada64639064dd436a7b06119e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_05.mat",
+      "sha256": "7f4c08f15f2363b8298ef90fd416f53ba42ee5522f54f9c341a5081be6672748"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_06.mat",
+      "sha256": "55110d8509e12b2bd3a0fd6ed27f7e41d8f952066c56d638091ac17f99bd5ab1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_07.mat",
+      "sha256": "b1fe05126664dab9a76c119a2573ec4317755144d361d00bf29f7a35346a4132"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_08.mat",
+      "sha256": "6c43c4fa55e3bef47c576b9981a7dec232cc6590653e8f91dfe55b2e8d0d077e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_09.mat",
+      "sha256": "a0faa5b5bffeb9847c00c7fdcbf5219b21ec7371c46ed40595d6cf87b340e82d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_10.mat",
+      "sha256": "1cb54774324953bb500fe895f10bc40c20d026719e54dc8b7976f01b16b20849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_11.mat",
+      "sha256": "0d44e45a44e464c04ac14c33eb90057e8efdf66523ca40e87a54d3b57aa784db"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_12.mat",
+      "sha256": "f7102fdad75d7508ec922b66da3e9841035b9af286dfc01d840bc43d6abd0d8b"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/selected_coupled_probes.csv",
+      "sha256": "f6f0445c527d8de9244a557664d06ef5062e7f27984e303064d137fd30e8127a"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/selected_coupled_probes.mat",
+      "sha256": "b070eaf3fab4d4fc53c7a6b0192bd518e6aeed93202ff6e623698a1b712cabc6"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/physics/run_185195_probes.m",
+      "sha256": "75eaec4719879f7790785bad2a0d70b0c22c57a55eec6248bc991aa2c9fe483a"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/reactor_placement_by_state.csv",
+      "sha256": "e4a8d5b570487093b84d8d85bbc0521ece7c05143080cc0bdaadbca1c8589269"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/fixed_endpoint_line_profiles.csv",
+      "sha256": "74370a461660d3e7e51b824c9a71e573f0d76cac6e92ed83c84c2513d8b77780"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/fixed_endpoint_line_summary.csv",
+      "sha256": "e57f50196f180144e114689b0402d919f77c69281e851aee4c115b40b02f6dc5"
+    }
+  ]
+}

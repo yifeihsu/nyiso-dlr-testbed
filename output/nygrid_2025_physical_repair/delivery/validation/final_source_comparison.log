@@ -1,0 +1,19 @@
+REPAIRED_RUNTIME h523 exact1 Verror0 Ierror0 thermal179
+REPAIRED_RUNTIME h3360 exact1 Verror0 Ierror0 thermal179
+REPAIRED_RUNTIME h4000 exact1 Verror0 Ierror0 thermal179
+REPAIRED_RUNTIME h8508 exact1 Verror0 Ierror0 thermal180
+
+ans = 
+
+  struct with fields:
+
+                           passed: 1
+                            scope: 'Four-state source-repair versus compiled derivative runtime; fresh coupled PF and thermal identity checks'
+    profile_shards_byte_identical: 1
+            source_mask_preserved: 1
+         candidate_receipt_sha256: '3ea77c854ffff4e8eb30fa72fc92296e024cb23eb3744010e276bff49e3fc08f'
+                     model_sha256: '5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385'
+                            setup: [1×1 struct]
+                           points: [4×1 struct]
+            annual_replay_claimed: 0
+

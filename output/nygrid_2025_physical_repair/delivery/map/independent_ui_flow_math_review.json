@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T14:35:48.681Z",
+  "scope": "Execute actual map-source power/format/direction helpers and arrow expressions against independent numeric fixtures",
+  "test_count": 11,
+  "tests": [
+    {
+      "name": "actual_JS_default_model_value",
+      "passed": true,
+      "details": {
+        "hour": 8508,
+        "interface": "MOSES SOUTH",
+        "value": -175.03881417402454
+      }
+    },
+    {
+      "name": "actual_JS_public_scale_value",
+      "passed": true,
+      "details": {
+        "value": -583.2279612512973,
+        "gamma": 0.30012075175285535
+      }
+    },
+    {
+      "name": "public_scale_preserves_direction",
+      "passed": true,
+      "details": {
+        "Moses": "reverse",
+        "TotalEast": "positive"
+      }
+    },
+    {
+      "name": "unavailable_hour_helpers_return_unavailable_not_zero",
+      "passed": true,
+      "details": {
+        "hour": 154,
+        "sourceEligibleFailureExists": false
+      }
+    },
+    {
+      "name": "source_excluded_helpers_return_unavailable_not_zero",
+      "passed": true,
+      "details": {
+        "hour": 154
+      }
+    },
+    {
+      "name": "null_and_zero_have_distinct_numeric_semantics",
+      "passed": true,
+      "details": {
+        "zero": "0",
+        "null": "—"
+      }
+    },
+    {
+      "name": "actual_JS_negative_arrow_swaps_endpoints",
+      "passed": true,
+      "details": {
+        "long_positive": {
+          "tail": [
+            0,
+            0
+          ],
+          "tip": [
+            100,
+            0
+          ],
+          "shaft": "M0,0 L88.6,0"
+        },
+        "long_negative": {
+          "tail": [
+            100,
+            0
+          ],
+          "tip": [
+            0,
+            0
+          ],
+          "shaft": "M100,0 L11.399999999999999,0"
+        },
+        "short_positive": {
+          "tail": [
+            -18.506096654409877,
+            -17.506096654409877
+          ],
+          "tip": [
+            22.506096654409877,
+            23.506096654409877
+          ],
+          "shaft": "M-18.506096654409877,-17.506096654409877 L14.445079348883237,15.445079348883237"
+        },
+        "short_negative": {
+          "tail": [
+            22.506096654409877,
+            23.506096654409877
+          ],
+          "tip": [
+            -18.506096654409877,
+            -17.506096654409877
+          ],
+          "shaft": "M22.506096654409877,23.506096654409877 L-10.445079348883237,-9.445079348883237"
+        }
+      }
+    },
+    {
+      "name": "actual_JS_zero_and_null_do_not_draw_arrows",
+      "passed": true,
+      "details": {
+        "positive": "",
+        "negative": "",
+        "zero": "none",
+        "null": "none"
+      }
+    },
+    {
+      "name": "UTC_hour_widget_is_explicit",
+      "passed": true,
+      "details": "The datetime-local input is explicitly labeled UTC and indexes supplied UTC timestamps"
+    },
+    {
+      "name": "chart_breaks_at_unavailable_values",
+      "passed": true,
+      "details": "The actual chart loop starts a new path after each null gap"
+    },
+    {
+      "name": "zero_total_and_net_native_labels_are_explicit",
+      "passed": true,
+      "details": "Zero interface totals are not labeled unavailable; native generation is a net quantity"
+    }
+  ],
+  "real_browser_rendering_test": false,
+  "simulation_run": false,
+  "sources": [
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/map/map.js",
+      "sha256": "629f41ddec7cb8876612394333e317d4912ad996be20d97b18c69405add4377a"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/annual_data.json",
+      "sha256": "744d923aea06c84bac421e60649a0b4edea1e49c142f100665ec017e0abb2d3c"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/interface_definitions.json",
+      "sha256": "a7214b19ca1c620dcb8cdc78e390d5fa66be7ad7faee2d186fff039ab25b5a7f"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/independent_annual_data_review.json",
+      "sha256": "f405b8db6cf84d98905ec3189f9b17b22ffd7e798e974749116ce373815821c1"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/map/audit_ui_flow_math.js",
+      "sha256": "7b2baccd47b25547c5f0f0d682e18d10e49306f5904ee3cb4cf62d2e587f10b5"
+    }
+  ]
+}

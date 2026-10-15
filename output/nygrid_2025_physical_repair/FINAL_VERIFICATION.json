@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T14:50:47.407328+00:00",
+  "authoritative_receipts": [
+    {
+      "path": "output/nygrid_2025_physical_repair/candidate_receipt.json",
+      "bytes": 3313,
+      "sha256": "3ea77c854ffff4e8eb30fa72fc92296e024cb23eb3744010e276bff49e3fc08f"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/independent_candidate_review.json",
+      "bytes": 9160,
+      "sha256": "ed2858ee42e4a22febae9846161a0ad82e88d4c0a812a410e7c1aeb00b8f5fd3"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/targeted_candidate_receipt.json",
+      "bytes": 4674,
+      "sha256": "730ba443d7a4bb394e3a390b34a458c82961508f226a23c948edc49bee0c1ba3"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/independent/annual_physics_review.json",
+      "bytes": 14948,
+      "sha256": "dbdef3f0e850cb3fc33f5706725fac22e9ab7dd4a3ccd1c8e27883f45c1ae00a"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/annual_receipt.json",
+      "bytes": 215895,
+      "sha256": "bf3a67330e3aa41a1301bd48838ce1575e8aad270b7c40f8a89bec137e904929"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/validation/annual_input_accounting_review.json",
+      "bytes": 12415,
+      "sha256": "a683bf8686c1dcf537e55f9be1e9432deac3df32d2b34f47079520298ca3b106"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/scoring_receipt.json",
+      "bytes": 6314,
+      "sha256": "930d727fb67a9130f9d5d8693aaf86496e0cb6e39c591f86691979c9eb718fa4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/independent_scoring_crosscheck.json",
+      "bytes": 1293,
+      "sha256": "77c013de964fcff511a3252592f7712eb08a11ef5583392640550de05d08b355"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/independent_delivery_review.json",
+      "bytes": 8998,
+      "sha256": "8b9f0951ce405425e861d7a6e64210742ca22a98c631345507cc0635baf5b4b1"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/browser_visual_review.json",
+      "bytes": 2084,
+      "sha256": "9d78bf59c201ea6f4ab9ed576f91f6afeacbf271174de6e3f869ff4067290347"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/map/DELIVERY_MANIFEST.json",
+      "bytes": 4299,
+      "sha256": "48318d689dab8030a8bb3c8711dd75bef8939cea498753adc9e8b7edcf353d83"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/validation/portable_extraction_review.json",
+      "bytes": 136458,
+      "sha256": "e10c17c83e68e8155c60cf7be21a78b4804374555b22d9c06a2a091f2dcc67b3"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/promotion_receipt.json",
+      "bytes": 644,
+      "sha256": "ce533da116a8d2b6bab801f2700fd7487ce6ca4431d5b2901f991a5bf7baa0bd"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/delivery/DELIVERY_MANIFEST.json",
+      "bytes": 3727,
+      "sha256": "9a72949ee43e954362bdf361b72b505706eece8b41cc47c0b7aee6cdc2d2ac3e"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/summary/report_receipt.json",
+      "bytes": 1913,
+      "sha256": "2025cc440ace7db5cc29766388f84dbf47f081a4a6f39e059f3e6844a28fda29"
+    }
+  ],
+  "bound_artifact_hash_checks": 1112,
+  "unique_files_hashed": 1067,
+  "historical_partial_receipts_are_not_final_validation": true,
+  "old_numerical_source_files_preserved": 53,
+  "preexisting_map_working_files_snapshotted": 21,
+  "preexisting_map_files_preserved_in_place": 18,
+  "authorized_alias_files_changed": [
+    "output/nygrid_2025_latest_map/DELIVERY_MANIFEST.json",
+    "output/nygrid_2025_latest_map/README.md",
+    "output/nygrid_2025_latest_map/network_map.html"
+  ],
+  "current_pointer": {
+    "path": "deliverables/CURRENT_NYGRID_MODEL.json",
+    "bytes": 2184,
+    "sha256": "f979034f3669f3b22195a53f3075dc9ed1966aa703e03301a6ba39f1454493e3"
+  },
+  "native_browser_and_scientific_figure_visual_review_completed": true,
+  "annual_equation_loss_recovery_qualified_hours": 8651,
+  "target185195_voltage_violations": 0,
+  "whole_network_operating_qualified_hours": 0,
+  "archive_reproducible_build_excluded_from_git_like_previous_handoff_packages": true,
+  "archive_locally_available_and_verified": true,
+  "root_report_links_valid": 7
+}

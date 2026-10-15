@@ -1,0 +1,205 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T14:13:21.295851+00:00",
+  "scope": "Independent formula, catalog, bound, source-profile and four-state saved-candidate validation plus review of completed 17-hour coupled checks. No repair helper imported and no new PF run.",
+  "parent41": {
+    "archived_rank1_match": true,
+    "catalog_id": "PRYSMIAN_ACSS_MALLARD_795_0_30_19",
+    "reference_temperature_C": 95,
+    "circuits": 4,
+    "bundle_count": 1,
+    "length_m": 10750.872721884722,
+    "GMD_m": 3.9484768888938304,
+    "manual_forward_R_X_B_pu": [
+      0.0017999999999997684,
+      0.008899999999999998,
+      0.021267472267637
+    ],
+    "maximum_forward_error_pu": 2.3158558404290375e-16,
+    "catalog_temperature_geometry_and_length_bounds_passed": true,
+    "material_electrical_Joule_checks": [
+      {
+        "aggregate_series_current_A": 1.0,
+        "per_subconductor_current_A": 0.25,
+        "material_loss_MW": 7.141499999999082e-07,
+        "electrical_loss_MW": 7.141499999999081e-07
+      },
+      {
+        "aggregate_series_current_A": 500.0,
+        "per_subconductor_current_A": 125.0,
+        "material_loss_MW": 0.178537499999977,
+        "electrical_loss_MW": 0.178537499999977
+      },
+      {
+        "aggregate_series_current_A": 2000.0,
+        "per_subconductor_current_A": 500.0,
+        "material_loss_MW": 2.856599999999632,
+        "electrical_loss_MW": 2.856599999999632
+      }
+    ],
+    "geometric_B_not_equal_to_imported_B": true,
+    "aggregate_apparatus_ceiling_preserved_A": 2000
+  },
+  "four_state_candidate_checks": [
+    {
+      "state_index": 1,
+      "hour_index": 349,
+      "bus_count": 266,
+      "branch_count": 485,
+      "maximum_branch_error_pu_or_native_units": 0.0,
+      "maximum_bus_error_native_units": 5.684341886080802e-14,
+      "maximum_source_generator_error_native_units": 0.0,
+      "maximum_fixed_transfer_error_native_units": 0.0,
+      "parent41_runtime_thermal_segment_matches_parameter_record": true,
+      "aggregate_apparatus_ceiling_A_each_terminal": 2000
+    },
+    {
+      "state_index": 2,
+      "hour_index": 3469,
+      "bus_count": 266,
+      "branch_count": 485,
+      "maximum_branch_error_pu_or_native_units": 0.0,
+      "maximum_bus_error_native_units": 5.684341886080802e-14,
+      "maximum_source_generator_error_native_units": 0.0,
+      "maximum_fixed_transfer_error_native_units": 0.0,
+      "parent41_runtime_thermal_segment_matches_parameter_record": true,
+      "aggregate_apparatus_ceiling_A_each_terminal": 2000
+    },
+    {
+      "state_index": 3,
+      "hour_index": 3613,
+      "bus_count": 266,
+      "branch_count": 485,
+      "maximum_branch_error_pu_or_native_units": 0.0,
+      "maximum_bus_error_native_units": 5.684341886080802e-14,
+      "maximum_source_generator_error_native_units": 0.0,
+      "maximum_fixed_transfer_error_native_units": 0.0,
+      "parent41_runtime_thermal_segment_matches_parameter_record": true,
+      "aggregate_apparatus_ceiling_A_each_terminal": 2000
+    },
+    {
+      "state_index": 4,
+      "hour_index": 8605,
+      "bus_count": 267,
+      "branch_count": 488,
+      "maximum_branch_error_pu_or_native_units": 0.0,
+      "maximum_bus_error_native_units": 5.684341886080802e-14,
+      "maximum_source_generator_error_native_units": 0.0,
+      "maximum_fixed_transfer_error_native_units": 0.0,
+      "parent41_runtime_thermal_segment_matches_parameter_record": true,
+      "aggregate_apparatus_ceiling_A_each_terminal": 2000
+    }
+  ],
+  "targeted_checks": {
+    "qualified_hours": 17,
+    "parent185_max_VM_pu": 1.03866022101898,
+    "parent195_max_VM_pu": 1.04598365451821,
+    "maximum_nodal_P_residual_model_MW": 6.03782268626674e-09,
+    "maximum_nodal_Q_residual_model_MVAr": 8.86579698544665e-09,
+    "maximum_recovered_current_error_A": 8.05684408078378e-10,
+    "detailed_vs_compact_voltage_error_pu": 1.1655755895357269e-12,
+    "detailed_vs_compact_flow_error_model_MW_MVAr": 7.451490091625601e-09
+  },
+  "limitations": [
+    "No installed conductor, route or intermediate reactor-station identity is certified.",
+    "The four-circuit realization is a selected synthetic hypothesis under declared R/X-conditioned catalog priors; parallel mutual coupling is not modeled.",
+    "The conservative aggregate 2000A apparatus limit is independent of conductor multiplicity and does not establish thermal feasibility.",
+    "This is targeted validation; annual results and final compiled handoff metadata require their separate checks.",
+    "The authoring thermal ledger retains the historical registry parameter_basis; the final compiled registry must carry the new declared parent41 basis.",
+    "All 17 sampled hours retain other global operating-limit violations."
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/parent41_parameters.json",
+      "sha256": "0405ad77f50770eba7f984badfacb16ecaf300c75fb2d6b811a550cbe831174a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/geometry_defaults.csv",
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/feasible_candidate_realizations.csv",
+      "sha256": "d4b86519cba7cf8d544ab15cd32987963b41b79b3224a566b3b206c6baa2ef5b"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/reactor_placement_by_state.csv",
+      "sha256": "e4a8d5b570487093b84d8d85bbc0521ece7c05143080cc0bdaadbca1c8589269"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/candidate_case_state1.mat",
+      "sha256": "5dc668458c7294a1ff40615b720b46f2309c91b6d6d4e4f854059527e68d9dd8"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/thermal_parent_ledger_state1.csv",
+      "sha256": "1e4c0cc30ca7e5cf43b9ffe08c2e4f8cac95fd9e6c65716e466d49960730e098"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/candidate_case_state2.mat",
+      "sha256": "4c93a318399111d529d03a013afb28b7e911340991894b21ba83052bb7980723"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/thermal_parent_ledger_state2.csv",
+      "sha256": "4e6eec5417562648776f97d3cd708140be4b1bd3e3f366bb73675043d771512d"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/candidate_case_state3.mat",
+      "sha256": "11365ec13aef2485d0a17bc209cd83ed71a7191af2288523a7039878196fa3f4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/thermal_parent_ledger_state3.csv",
+      "sha256": "28bb3cf4245eac43eb1766f4f743e2b6d18776139d0e4227517509e2882d087f"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/candidate_case_state4.mat",
+      "sha256": "3aefa7f8d041f708ff40a30e43e4a9aa2ea85bf11a03b237a7410114a03b6ee0"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/thermal_parent_ledger_state4.csv",
+      "sha256": "9f63d8f23e9f878fb5fba9bb0e40070f76ee7c0bf5d4d2fb5ff261202375e202"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/targeted_candidate_receipt.json",
+      "sha256": "730ba443d7a4bb394e3a390b34a458c82961508f226a23c948edc49bee0c1ba3"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/targeted_candidate_checks.csv",
+      "sha256": "47d343fd397591b8e5829fca89e54facaffaada5b32b5c2b7b99dad042cb3eeb"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/physics/review_combined_candidate.py",
+      "sha256": "2f65979d88ca145a3d8dcaf519fc8d807547f6e77c7c1ffb76c1271e4d227b9c"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/prepare_parent41.py",
+      "sha256": "32358df1a52d569b72ab75b753071a70d64b1299953d11acd51ca0e2b4147039"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/core/nyrepair_apply_parent41.m",
+      "sha256": "76708037350d843d25c45d5c0f3b3ad91523e76fe0ffd3dfb7f9bca74e2be9ac"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/core/nyrepair_apply_case.m",
+      "sha256": "e91265f8b414a3ac1ef62dbc0c8ee90430f1187946f5895c822b0ceb6fd82ca6"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/physics/nyrepair_apply_185195.m",
+      "sha256": "d7b709f48d3de9ec08ee8569b26caad28b4391ae73fa9ec32d886ff790f910e4"
+    }
+  ]
+}
