@@ -1,0 +1,224 @@
+{
+  "passed": true,
+  "completed": false,
+  "created_utc": "2026-10-15T22:02:46.882211+00:00",
+  "months_checked": 6,
+  "source_qualified_hours": 4287,
+  "candidate_qualified_hours": 4287,
+  "paired_current_baseline_hours": 4287,
+  "candidate_new_success_hours": 0,
+  "current_success_lost_hours": 0,
+  "VQ_qualified_hours": 0,
+  "full_operating_qualified_hours": 0,
+  "all_clock_rows_and_original_source_mask_preserved": true,
+  "compiled_candidate_native_HQ_boundary_profiles_and_fixed_transfer_targets_preserved": true,
+  "fixed_boundary_PQ_rows_verified": [
+    1466
+  ],
+  "fixed_boundary_not_native_or_loss_balancer": true,
+  "finite_P_Q_S_capability_metadata_reconstructed": true,
+  "physical_limit_violations_reported_without_promoting_failed_operating_cases": true,
+  "loss_ownership_and_regional_accounting_recomputed_from_saved_flows": true,
+  "terminal_amperes_checked_using_actual_voltage_without_gamma_lift": true,
+  "raw_complex_branch_law_and_passive_recovery_audit": "Separate moses_repair/validation review required for final physical validation.",
+  "maximum_independent_errors": {
+    "finite_capability_metadata_MW_MVAr": 0.0,
+    "native_HQ_PG_MW": 1.6900736365954572e-10,
+    "fixed_transfer_MW": 0.0,
+    "loss_budget_MW": 2.2683543932089378e-10,
+    "zonal_load_closure_MW": 2.269189280923456e-10,
+    "served_PD_QD_shape": 2.2737367544323206e-13,
+    "external_loss_increment_MW": 1.7475798586019664e-11,
+    "regional_import_MW": 2.55226950685028e-11,
+    "bus_generation_aggregation": 0.0,
+    "reported_bound_violation_difference": 3.2514435588382185e-11,
+    "current_from_power_A": 1.1449685644038254e-09,
+    "phase_control_deg": 0.0,
+    "fixed_boundary_PQ_MW_MVAr": 0.0
+  },
+  "tolerances": {
+    "finite_capability_metadata_MW_MVAr": 1e-08,
+    "native_HQ_PG_MW": 1e-07,
+    "fixed_transfer_MW": 1e-08,
+    "loss_budget_MW": 1e-05,
+    "zonal_load_closure_MW": 1e-05,
+    "served_PD_QD_shape": 1e-07,
+    "external_loss_increment_MW": 1e-05,
+    "regional_import_MW": 1e-05,
+    "bus_generation_aggregation": 1e-07,
+    "reported_bound_violation_difference": 1e-07,
+    "current_from_power_A": 1e-05,
+    "phase_control_deg": 1e-10,
+    "fixed_boundary_PQ_MW_MVAr": 1e-07
+  },
+  "monthly_counts": [
+    {
+      "month": 1,
+      "source_qualified": 738,
+      "candidate_qualified": 738,
+      "paired": 738,
+      "new": 0,
+      "lost": 0,
+      "solver_exceptions": 0
+    },
+    {
+      "month": 2,
+      "source_qualified": 661,
+      "candidate_qualified": 661,
+      "paired": 661,
+      "new": 0,
+      "lost": 0,
+      "solver_exceptions": 0
+    },
+    {
+      "month": 3,
+      "source_qualified": 735,
+      "candidate_qualified": 735,
+      "paired": 735,
+      "new": 0,
+      "lost": 0,
+      "solver_exceptions": 0
+    },
+    {
+      "month": 4,
+      "source_qualified": 714,
+      "candidate_qualified": 714,
+      "paired": 714,
+      "new": 0,
+      "lost": 0,
+      "solver_exceptions": 0
+    },
+    {
+      "month": 5,
+      "source_qualified": 729,
+      "candidate_qualified": 729,
+      "paired": 729,
+      "new": 0,
+      "lost": 0,
+      "solver_exceptions": 0
+    },
+    {
+      "month": 6,
+      "source_qualified": 710,
+      "candidate_qualified": 710,
+      "paired": 710,
+      "new": 0,
+      "lost": 0,
+      "solver_exceptions": 0
+    }
+  ],
+  "source_hashes_verified": 852,
+  "producer": {
+    "path": "scripts/nygrid_2025_moses_repair/annual/validate_annual.py",
+    "sha256": "8b161bea374a133a1a2e04812a74ca3df269b321483503e58814a8c0d18dedcf",
+    "bytes": 19295
+  },
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_axes.mat",
+      "sha256": "1e4c9a9fdf55180a9adc6f5de2b8dc6f83dcb839037ddec229798a4f0c83c056",
+      "bytes": 131387
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_network.mat",
+      "sha256": "e8cee6440b9b1688893eb1374f10e86a1862d299dd156e79481eaebdb79ce799",
+      "bytes": 275158
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "3297f564d35b7cc1d132eeaa4d1f4054ecc49681b67478b957d6ca5752191245",
+      "bytes": 6290016
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/candidate_bundle/model/latest_model.mat",
+      "sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8",
+      "bytes": 848957
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/candidate_bundle/model/profiles_h0001_4380.mat",
+      "sha256": "197a6bbb5909a61dc227f779805d07d76d8d5a7f3b7e1d77974e12c6375c91e6",
+      "bytes": 54282573
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/candidate_bundle/model/profiles_h4381_8760.mat",
+      "sha256": "ccd92f0560427d78ade6861d34182cf64a8b3c76b46744eb80e4a99edb6ffe61",
+      "bytes": 53594616
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_01.mat",
+      "sha256": "235060bbdbd6aa1146c463da2602da65c64aeb80e0dcf20042ce0bf41957cd26",
+      "bytes": 38766803
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_01_receipt.json",
+      "sha256": "c786694a111acabba76d3d4051e2b3e4eae89015a2287d030c7c78ec3bac8722",
+      "bytes": 1251
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_02.mat",
+      "sha256": "6545363fae3a6c1e16a463c8b09ab8f91bb562e42f9db6c63952d704d50cca4f",
+      "bytes": 35035992
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_02_receipt.json",
+      "sha256": "eda34e7723c9b74120960117d52a10bdb966ce6257ae9d22a1141534a3473c10",
+      "bytes": 1251
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_03.mat",
+      "sha256": "7b93be2424f1fba2b21bf92a484a60cbb6227e8f47a07960901670d00171b7e7",
+      "bytes": 40636086
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_03_receipt.json",
+      "sha256": "d1e4e496ea239e2ecd21382f3922c54c657c166ba600a3a01c53b508a55865ab",
+      "bytes": 1250
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_04.mat",
+      "sha256": "3307cce53ccbdd008eeeb36d19ff6abde6ee5d6221b0381c8eede1f5a5a77d9e",
+      "bytes": 40192632
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_04_receipt.json",
+      "sha256": "7ac5cf41305d5ac3366ed2a38fcb0c980b9021b3df8f074cbad344314cd4ab0c",
+      "bytes": 1250
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_05.mat",
+      "sha256": "28372f635ea2865ade07237cf48d8e6eed5144314baf927bce92aa6ff005e5da",
+      "bytes": 42421099
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_05_receipt.json",
+      "sha256": "49c8b093fbad7a53790ec8a102951dde74b11e0bd9a92794d3077a6c3319e4db",
+      "bytes": 1251
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_06.mat",
+      "sha256": "50be6dd999e465d66b80fca8db249c349f45f5d5076fb90ec53a2629095556ad",
+      "bytes": 42362205
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_06_receipt.json",
+      "sha256": "2e88a394384c9cc0f1467365abdddbacd929d8422bee1df1bd4cb2ac2634d6db",
+      "bytes": 1251
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/partial_06_failed_hours.csv",
+      "sha256": "3d0b07bede4a4dd5400e55cac887fead8215b68e0d2ba7d3bcb68c8e6558c431",
+      "bytes": 94
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/partial_06_physical_limits.csv",
+      "sha256": "ce412f68b600c9153c18d470afb7f72f67afee4668dfb087b1e467a3c4c3ba71",
+      "bytes": 411919
+    }
+  ],
+  "limitations": [
+    "Equation qualification does not certify all voltage/Q/S/current limits or historical as-built asset identity.",
+    "Failed or partial returned iterates remain invalid predictions; failure does not prove global infeasibility."
+  ]
+}

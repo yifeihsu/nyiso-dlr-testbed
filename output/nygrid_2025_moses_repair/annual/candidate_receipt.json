@@ -1,0 +1,194 @@
+{
+  "passed": true,
+  "schema_version": 1,
+  "created_utc": "2026-10-15T21:55:03.189724+00:00",
+  "candidate_id": "StLawrence_monthly_energy_PV20_boundary_proxy_v1",
+  "baseline_guard": {
+    "path": "output/nygrid_2025_moses_repair/baseline_guard.json",
+    "sha256": "da07d4e3d6c35004afca85cbd0649b82ddcbcb289191ebd6376e2f3aea239de2",
+    "bytes": 22739
+  },
+  "original_generator_rows_preserved": 1464,
+  "appended_StLawrence_unit21_row": 1465,
+  "appended_PV20_boundary_row": 1466,
+  "original_six_transfer_records_preserved": true,
+  "physical_branch_and_shunt_arrays_unchanged": true,
+  "raw_P63_is_not_asserted_equal_to_reconciled_hourly_hydro": true,
+  "fixed_regional_import_totals_preserved": true,
+  "physical_PV20_meter_equivalence_certified": false,
+  "actual_hourly_StLawrence_generation_claimed": false,
+  "internal_interface_observations_used_to_choose_candidate": false,
+  "candidate_annual_interface_scores_available_at_freeze": false,
+  "files": [
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/candidate_receipt.json",
+      "sha256": "04c717e2a2361064c662277afd4e49181beb135ca41db1810defb22bdcd0f1fc",
+      "bytes": 8187
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/boundary_rerouting_receipt.json",
+      "sha256": "15a0121447f847e5364794d97361415d56a3fbdabcd979b8fd5c9dedde65c65f",
+      "bytes": 2032
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/generation_candidate.mat",
+      "sha256": "f22c9d1aeef1c76a8ba8de5bb966f12c9504a5f7aac7c06a29e9af9e83115535",
+      "bytes": 21054699
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/boundary_rerouting.mat",
+      "sha256": "60cf14f347b40ff50c8471e9797d8766907db9a44126b6e2b94a55c8afffa0c6",
+      "bytes": 1193783
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/PV20_source_receipt.json",
+      "sha256": "74545707c320f7658d5ddceb6822a79ee18199f56db86fc3e6745e3dfe7744ed",
+      "bytes": 8473
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_apply_budget.m",
+      "sha256": "b9a26d5489361285ddad6252948755929b2424d88d7fd0156ac1e2ef8ead3fa3",
+      "bytes": 2333
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_audit_ac_solution.m",
+      "sha256": "cc4ca45f7c92d04da1a6cfc0c9ea0d2ae7e956e76ce69a07b05b1241bf1f5c4d",
+      "bytes": 8190
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_budget.m",
+      "sha256": "454d8d5842a63b66cfdb34568ea26a9724bc2d7d0062fafa24a59d6e1ae32e9b",
+      "bytes": 910
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_compact_build.m",
+      "sha256": "596332752f5bd6185754a6c595872c25355e29f098ce19181fbfed823096d5d5",
+      "bytes": 5681
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_conductor_heat.m",
+      "sha256": "35e92e4fb534ddbed129f4654ce32db14b6d2c891e6ca56dc78d906d7fe696d8",
+      "bytes": 789
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_conductor_resistance.m",
+      "sha256": "0f7688f8e2d80114f017c07ba8a2747459412f74fdf6a62f824901fcb05eaea0",
+      "bytes": 674
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_coupled_context.m",
+      "sha256": "dae2bf87cc8a25e81446e3c56825ea6924a177e4912362d803db8f432a9fa03e",
+      "bytes": 2263
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_coupled_equations.m",
+      "sha256": "8161af0470bad1a99d18636d793fd372486f85fbef78c79f2dbbec8acb7f83ed",
+      "bytes": 2371
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_coupled_solve.m",
+      "sha256": "eee52a1cd20481befbe436b972a1d77adc56e802b77b632e91c76bb9756ff723",
+      "bytes": 3957
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_dlr_apply_resistance.m",
+      "sha256": "28156afb8772421fb19a41e916c6c43931cb9cf043e1ca58f6b49de8239df5e6",
+      "bytes": 1205
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_dlr_current_audit.m",
+      "sha256": "934968b82ecff1bfb318732d4a75b7b3b5764c0ee54081ded4e570bfad0ece18",
+      "bytes": 2784
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_dlr_heat_balance.m",
+      "sha256": "e76267cc61a3621be7adbe35dba32e7aa6c41b9753cd1a38636cd5a4637d1743",
+      "bytes": 3192
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_dlr_limits.m",
+      "sha256": "e2adea7d49750c1384910fc7c34babb3ac9e891c6c64a3a8d27a23dea1b02371",
+      "bytes": 2977
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_finalize.m",
+      "sha256": "6140e119e0a22dbf72d077aa74a70f565eb502d342a63e060f32edfeb939574c",
+      "bytes": 5552
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_operator_fingerprint.m",
+      "sha256": "6f73ba32c90eaffc88ad2c1fcc691efa987165c0c99c6cecc66f72e8050a2b62",
+      "bytes": 1875
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_prepare_policy.m",
+      "sha256": "499dcdbbf36033cade6e0069deda694cafebf9d83c5be20c27408be9e83e100a",
+      "bytes": 1518
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_source_fingerprint.m",
+      "sha256": "aea665afe48f48e0da51384e1a84eba8ef47c6d3fb1803cb42783b83333b5c15",
+      "bytes": 614
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_terminal_current_audit.m",
+      "sha256": "fba0b6f06428899a179ffb3cd70ae7140a2ba89ecbbf519eb33f991e91bc7d43",
+      "bytes": 1069
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_thermal_candidates.m",
+      "sha256": "e06ff58549d065f8426ee5eff52ab4409113b784929c53b21a03ec5737027c65",
+      "bytes": 17627
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/load_nygrid_latest.m",
+      "sha256": "eb23eaf6e991ca6c43859ebdb6689cb2dc376c00fa33133f0b39cc5691836805",
+      "bytes": 3613
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/nylatest_data.m",
+      "sha256": "03d89bf34dda49a7c5e7e4623df600ef985620c99478a6fa2ec9c0f1bd7d4fc0",
+      "bytes": 2383
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/nylatest_file_sha256.m",
+      "sha256": "0ff894dab7ad2bb1d9eac9a5e1ab5ec06433050de1d3786338b926526f608c17",
+      "bytes": 395
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/nylatest_paths.m",
+      "sha256": "26d4c4b499acd2ac5d2028bb9ecd51e037607a6654411e171c8aef7ec3bfa439",
+      "bytes": 666
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/run_nygrid_latest_acpf.m",
+      "sha256": "fc42e2d088a3534fb370f89e6e4daf95f2f698b86998cf1e4016092f3606d169",
+      "bytes": 937
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/screen_nygrid_latest_dlr.m",
+      "sha256": "067775fb41512c166270c4c851154b97ac97884d749272018ee456469aad4b2b",
+      "bytes": 8787
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/setup_nygrid_latest.m",
+      "sha256": "728886412e82b845ad089c1d53ebb89b9472a727f8db67c025c12f010c25c0da",
+      "bytes": 2535
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/smoke_nygrid_latest.m",
+      "sha256": "84277b31f033ec6978008edff272ceb47bb3aec9309f8d035669d8d8d488a26f",
+      "bytes": 9274
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/export_model.m",
+      "sha256": "fefc3a0059509085bc5c312b5169e12601d38bd29c410fe10da3f3f9778d0cc0",
+      "bytes": 9146
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/prepare_boundary_rerouting.py",
+      "sha256": "be76a95f6a0f0c580b1028b27a9fadbeb85049a17f5c674d2eb93c44cabb2025",
+      "bytes": 4846
+    }
+  ]
+}

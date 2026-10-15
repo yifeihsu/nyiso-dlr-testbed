@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "source_HEAD": "f6c124a97b16f45a98a538c121c6006556255005",
+  "source_branch": "codex/s13-phase1b-upny-coned",
+  "all_hour_slots": 8760,
+  "source_qualified_hours": 8651,
+  "baseline_qualified_hours": 8651,
+  "baseline_run": "output/nygrid_2025_physical_repair/annual/physical_repair_v1",
+  "baseline_arrays": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+  "baseline_prediction_prefix": "candidate_",
+  "gamma": 0.30012075175285535,
+  "baseline_generator_rows": 1464,
+  "baseline_fixed_transfer_rows": 6,
+  "baseline_snapshot": {
+    "path": "output/nygrid_2025_moses_repair/annual/baseline_bundle/snapshot_receipt.json",
+    "sha256": "120fbf69e5b074b1d2ff6b6e5d916b7f5beb3ab0b66c864eebc8b7ffe75d4aee",
+    "bytes": 15877
+  },
+  "source_files": [
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "3297f564d35b7cc1d132eeaa4d1f4054ecc49681b67478b957d6ca5752191245",
+      "bytes": 6290016
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/annual_receipt.json",
+      "sha256": "bf3a67330e3aa41a1301bd48838ce1575e8aad270b7c40f8a89bec137e904929",
+      "bytes": 215895
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/validation/annual_input_accounting_review.json",
+      "sha256": "a683bf8686c1dcf537e55f9be1e9432deac3df32d2b34f47079520298ca3b106",
+      "bytes": 12415
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/independent/annual_physics_review.json",
+      "sha256": "dbdef3f0e850cb3fc33f5706725fac22e9ab7dd4a3ccd1c8e27883f45c1ae00a",
+      "bytes": 14948
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670",
+      "bytes": 12874
+    }
+  ],
+  "candidate_bound": true,
+  "candidate_loaded_directly_without_reapplying_physical_repair": true,
+  "preserve_previous_repairs": "Parent41 R/X/B and thermal realization; parent185/195 R/X/B and full-axis fixed-reactor placement.",
+  "generator_and_transfer_axes": "Candidate counts are read dynamically; existing row identities are preserved and any append is explicit.",
+  "qualification": "Fixed source mask AND PF convergence AND AC equation gate AND loss allocation gate AND recovery gate.",
+  "operating_qualification": "Separate V/Q/S, equipment, fixed-transfer and current checks; never inferred from equation closure.",
+  "cohorts": [
+    "candidate_all_success",
+    "paired_current_baseline",
+    "candidate_new_success",
+    "current_success_lost",
+    "current_baseline_all8651"
+  ],
+  "failure_policy": "Retain all attempted failures and all8760 slots. Failed iterates are never scored as valid predictions.",
+  "current_units": "Actual model amperes on appropriate bus kV; no gamma division.",
+  "physical_P32_membership_certified": false,
+  "PF_started": false,
+  "candidate_receipt": {
+    "path": "output/nygrid_2025_moses_repair/annual/candidate_receipt.json",
+    "sha256": "7d465d2bf86027fa28d58bfadce109d283f96ae0fd2a32b85850b8933992ae35",
+    "bytes": 8373
+  },
+  "candidate_snapshot": {
+    "path": "output/nygrid_2025_moses_repair/annual/candidate_bundle/snapshot_receipt.json",
+    "sha256": "dd9707fc1ffc75e6d68b9c01f083173f32df1cf6f5cdcf0b610e16655990e3e0",
+    "bytes": 15815
+  },
+  "candidate_generator_rows": 1466,
+  "candidate_fixed_transfer_rows": 6,
+  "candidate_model_directory": "output/nygrid_2025_moses_repair/model",
+  "candidate_runtime_directory": "scripts/nygrid_2025_moses_repair/delivery/runtime"
+}

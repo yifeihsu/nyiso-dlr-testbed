@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T22:12:41.998Z",
+  "scope": "Execute actual map-source power/format/direction helpers and arrow expressions against independent numeric fixtures",
+  "test_count": 11,
+  "tests": [
+    {
+      "name": "actual_JS_default_model_value",
+      "passed": true,
+      "details": {
+        "hour": 8508,
+        "interface": "MOSES SOUTH",
+        "value": -171.95023122562813
+      }
+    },
+    {
+      "name": "actual_JS_public_scale_value",
+      "passed": true,
+      "details": {
+        "value": -572.936826998309,
+        "gamma": 0.30012075175285535
+      }
+    },
+    {
+      "name": "public_scale_preserves_direction",
+      "passed": true,
+      "details": {
+        "Moses": "reverse",
+        "TotalEast": "positive"
+      }
+    },
+    {
+      "name": "unavailable_hour_helpers_return_unavailable_not_zero",
+      "passed": true,
+      "details": {
+        "hour": 154,
+        "sourceEligibleFailureExists": false
+      }
+    },
+    {
+      "name": "source_excluded_helpers_return_unavailable_not_zero",
+      "passed": true,
+      "details": {
+        "hour": 154
+      }
+    },
+    {
+      "name": "null_and_zero_have_distinct_numeric_semantics",
+      "passed": true,
+      "details": {
+        "zero": "0",
+        "null": "—"
+      }
+    },
+    {
+      "name": "actual_JS_negative_arrow_swaps_endpoints",
+      "passed": true,
+      "details": {
+        "long_positive": {
+          "tail": [
+            0,
+            0
+          ],
+          "tip": [
+            100,
+            0
+          ],
+          "shaft": "M0,0 L88.6,0"
+        },
+        "long_negative": {
+          "tail": [
+            100,
+            0
+          ],
+          "tip": [
+            0,
+            0
+          ],
+          "shaft": "M100,0 L11.399999999999999,0"
+        },
+        "short_positive": {
+          "tail": [
+            -18.506096654409877,
+            -17.506096654409877
+          ],
+          "tip": [
+            22.506096654409877,
+            23.506096654409877
+          ],
+          "shaft": "M-18.506096654409877,-17.506096654409877 L14.445079348883237,15.445079348883237"
+        },
+        "short_negative": {
+          "tail": [
+            22.506096654409877,
+            23.506096654409877
+          ],
+          "tip": [
+            -18.506096654409877,
+            -17.506096654409877
+          ],
+          "shaft": "M22.506096654409877,23.506096654409877 L-10.445079348883237,-9.445079348883237"
+        }
+      }
+    },
+    {
+      "name": "actual_JS_zero_and_null_do_not_draw_arrows",
+      "passed": true,
+      "details": {
+        "positive": "",
+        "negative": "",
+        "zero": "none",
+        "null": "none"
+      }
+    },
+    {
+      "name": "UTC_hour_widget_is_explicit",
+      "passed": true,
+      "details": "The datetime-local input is explicitly labeled UTC and indexes supplied UTC timestamps"
+    },
+    {
+      "name": "chart_breaks_at_unavailable_values",
+      "passed": true,
+      "details": "The actual chart loop starts a new path after each null gap"
+    },
+    {
+      "name": "zero_total_and_net_native_labels_are_explicit",
+      "passed": true,
+      "details": "Zero interface totals are not labeled unavailable; native generation is a net quantity"
+    }
+  ],
+  "real_browser_rendering_test": false,
+  "simulation_run": false,
+  "sources": [
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/map/map.js",
+      "sha256": "eec5d2c28b313143325e2567ba99329b7a62c9c76e0eb17d07ebc9d995da1b0f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/annual_data.json",
+      "sha256": "b2bb4d7f3125553c2d4e114edae52fcc8d08a9e8aa7ea5e05da46c6e42829d91"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/interface_definitions.json",
+      "sha256": "8a48315611fc4a44cb3b14821928b69080763883178b7a5018850bbdf0dde6eb"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/independent_annual_data_review.json",
+      "sha256": "304aaaef40db9b59d37bdc1c38d2d32d0fc29282e51405eb089b7b4c145ccbc9"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/map/audit_ui_flow_math.js",
+      "sha256": "89205268ebc7c9c10c4453e0e3532e3ed6c5172ba230b8e5bc16ddbe524d3bbb"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T21:57:38.576066+00:00",
+  "candidate_receipt": {
+    "path": "output/nygrid_2025_moses_repair/generation/candidate_receipt.json",
+    "sha256": "04c717e2a2361064c662277afd4e49181beb135ca41db1810defb22bdcd0f1fc",
+    "bytes": 8187
+  },
+  "candidate_file": {
+    "path": "output/nygrid_2025_moses_repair/generation/generation_candidate.mat",
+    "sha256": "f22c9d1aeef1c76a8ba8de5bb966f12c9504a5f7aac7c06a29e9af9e83115535",
+    "bytes": 21054699
+  },
+  "all_original_generator_rows_preserved": true,
+  "appended_actual_EIA_unit21_row": 1465,
+  "monthly_active_StLawrence_units": 15,
+  "all8760_calendar_energy_enforced": true,
+  "qualified_hours": 8651,
+  "unqualified_hours_not_promoted": 109,
+  "maximum_monthly_energy_error_MWh": 2.3283064365386963e-10,
+  "maximum_hourly_Hydro_conservation_error_MW": 1.6370904631912708e-11,
+  "maximum_qualified_total_generation_change_MW": 9.094947017729282e-12,
+  "maximum_StLawrence_minchange_KKT_residual": 5.115907697472721e-13,
+  "maximum_otherHY_minchange_KKT_residual": 1.7319479184152442e-14,
+  "PS_unchanged": true,
+  "otherHY_original_qualified_bounds_preserved": true,
+  "all_declared_latent_donor_bounds_pass": true,
+  "maximum_PS_reference_reconstruction_roundoff_MW": 3.552713678800501e-15,
+  "MAT_NPZ_values_identical": true,
+  "no_PF_or_P32_scoring": true,
+  "missing_hour_sensitivity": "Monthly feasible ranges for latent excluded energy are reported without reallocating all energy onto qualified hours.",
+  "output": {
+    "path": "output/nygrid_2025_moses_repair/generation/excluded_hour_energy_sensitivity.csv",
+    "sha256": "09e909b79e72df59827ba9e286d392bb792ef640848a45c518ce51d1b7e828c3",
+    "bytes": 1168
+  },
+  "producer": {
+    "path": "scripts/nygrid_2025_moses_repair/generation/validate_generation_candidate.py",
+    "sha256": "814723e74b1e4246223f79b53a07f76616646e0556556a9d2cdcc02de2afcd63",
+    "bytes": 9987
+  }
+}

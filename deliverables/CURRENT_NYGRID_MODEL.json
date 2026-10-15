@@ -1,51 +1,79 @@
 {
   "schema_version": 1,
   "status": "validated_current_corrected_model",
-  "created_utc": "2026-10-15T14:47:42.066452+00:00",
+  "created_utc": "2026-10-15T22:19:58.696071+00:00",
+  "usage_status": "Synthetic research model: annual equation/loss validation passed; physical meter equivalence and complete operating feasibility remain qualified.",
   "archive": {
-    "path": "deliverables/nygrid_2025_physical_repair_20261015/nygrid_physical_repair_20261015.zip",
-    "bytes": 117806159,
-    "sha256": "a082d0159cdc816840bb86ea048cb30883cb97c1c0e62c025374e96e8a8d5419"
+    "path": "deliverables/nygrid_2025_moses_repair_20261015/nygrid_moses_repair_20261015.zip",
+    "bytes": 143990002,
+    "sha256": "27a0276ae4af38c823e6fea4557135350008c8afbc18a81817633963a300025c"
   },
   "model_receipt": {
-    "path": "output/nygrid_2025_physical_repair/model/model_receipt.json",
-    "bytes": 135749,
-    "sha256": "bbefae143a0cc3acf394d01bba37df33fedc68f7af4ccab849ce8681f5086ef6"
+    "path": "output/nygrid_2025_moses_repair/model/model_receipt.json",
+    "bytes": 136157,
+    "sha256": "1a5705124182449a8a1242212465ade10508f6268fb1c8b08f81eddc79ab20da"
   },
   "structure_manual": {
-    "path": "output/nygrid_2025_physical_repair/delivery/docs/NYGRID_2025_PHYSICAL_REPAIR_MODEL_STRUCTURE.docx",
-    "bytes": 163308,
-    "sha256": "b34ca89d5f340737be58f59354bced739858cbf9f3f2a8f133b251f9c388cf85"
+    "path": "output/nygrid_2025_moses_repair/delivery/docs/NYGRID_2025_MOSES_REPAIR_MODEL_STRUCTURE.docx",
+    "bytes": 165472,
+    "sha256": "5a1df56b0e84a9efec048e4a1db54c012163cbe425ef43307de82f8ff693f3ef"
   },
   "map": {
-    "path": "output/nygrid_2025_physical_repair/delivery/map/network_map.html",
-    "bytes": 14445385,
-    "sha256": "9af275cfbd3f98bb0c682aae9291e6f193c7515e52f0b299d540241511001196"
+    "path": "output/nygrid_2025_moses_repair/delivery/map/network_map.html",
+    "bytes": 14953543,
+    "sha256": "a3e718f5097d82d10b329e59a1872d242eb38c42e651537e366be4e36f268b34"
   },
   "map_manifest": {
-    "path": "output/nygrid_2025_physical_repair/delivery/map/DELIVERY_MANIFEST.json",
-    "bytes": 4299,
-    "sha256": "48318d689dab8030a8bb3c8711dd75bef8939cea498753adc9e8b7edcf353d83"
+    "path": "output/nygrid_2025_moses_repair/delivery/map/DELIVERY_MANIFEST.json",
+    "bytes": 2204,
+    "sha256": "8b0ea469c9e1d5978c2b6fc9d6f15f690778c049d5863bd57c0f15c907fd398f"
+  },
+  "current_map_entry_manifest": {
+    "path": "output/nygrid_2025_latest_map/DELIVERY_MANIFEST.json",
+    "bytes": 2789,
+    "sha256": "3266483a703c3b33b7526db11f574091569404ef88c47bb5efe421dc269ae283"
   },
   "scientific_report": {
-    "path": "NYGRID_2025_PHYSICAL_REPAIR.md",
-    "bytes": 6734,
-    "sha256": "c072005540da7468f4c1caa0ebfef72e8600587ad46e2426244f8a176c9a0907"
+    "path": "NYGRID_2025_MOSES_REPAIR.md",
+    "bytes": 16085,
+    "sha256": "3faabcb7380bd03996db6c5127474216f24bc20338f23a2c269dfc7025d35215"
   },
   "portable_validation": {
-    "path": "output/nygrid_2025_physical_repair/delivery/validation/portable_extraction_review.json",
-    "bytes": 136458,
-    "sha256": "e10c17c83e68e8155c60cf7be21a78b4804374555b22d9c06a2a091f2dcc67b3"
+    "path": "output/nygrid_2025_moses_repair/delivery/validation/portable_extraction_review.json",
+    "bytes": 136321,
+    "sha256": "52b9f672db29e786b26e63bc495ff5712557be4dbf5470bd8e71cc530bea203f"
   },
   "independent_delivery_review": {
-    "path": "output/nygrid_2025_physical_repair/delivery/independent_delivery_review.json",
-    "bytes": 8998,
-    "sha256": "8b9f0951ce405425e861d7a6e64210742ca22a98c631345507cc0635baf5b4b1"
+    "path": "output/nygrid_2025_moses_repair/delivery/independent_delivery_review.json",
+    "bytes": 11077,
+    "sha256": "926fcb74b59a63dca372c453c32fd05e9a4813614dc4033e6e32db3b0c7fc753"
   },
+  "generation_validation": {
+    "path": "output/nygrid_2025_moses_repair/generation/independent_generation_review.json",
+    "bytes": 1980,
+    "sha256": "6bbe6997d1a76b5423cea19b3d337c023a4adb341daa9ecf2c48d7f094091b94"
+  },
+  "boundary_verification": {
+    "path": "output/nygrid_2025_moses_repair/boundary/boundary_verification_receipt.json",
+    "bytes": 28005,
+    "sha256": "bf6894762f315e925e5948f976151e226c77a81f83c65ad794efbf3d41d5faad"
+  },
+  "annual_validation": {
+    "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_input_accounting_review.json",
+    "bytes": 13122,
+    "sha256": "a0c7d6d1cb55c6e2e4142d3557b3193addc4317177c4cabdc44189a3b4cbc186"
+  },
+  "physical_validation": {
+    "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_physics_review.json",
+    "bytes": 14635,
+    "sha256": "f41e9e9d819a5a0a344fdcfbcf5a21b2a652d6337c29fc83ebc8a89237afdc90"
+  },
+  "physical_P32_meter_equivalence_certified": false,
+  "fully_operating_qualified_hours": 0,
   "old_sealed_numerical_bundles_preserved": true,
   "prior_map_recovery": {
-    "path": "output/nygrid_2025_physical_repair/delivery/preservation/dirty_map_snapshot.json",
-    "bytes": 5652,
-    "sha256": "980499cea28748c0523347fc8972e8b165e5b3ce2883fff10341a9a749db133f"
+    "path": "output/nygrid_2025_moses_repair/preservation/previous_map_and_sources.zip",
+    "bytes": 15655881,
+    "sha256": "c9ba99a2f2747f036c508a3196cbeedb22a19d57c6ba629946f7838d48661fd1"
   }
 }

@@ -1,0 +1,141 @@
+{
+  "passed": true,
+  "completed": true,
+  "created_utc": "2026-10-15T22:06:38.904988+00:00",
+  "run_label": "moses_repair_v1",
+  "source_qualified_hours": 8651,
+  "candidate_qualified_hours": 8651,
+  "current_baseline_qualified_hours": 8651,
+  "paired_qualified_hours": 8651,
+  "candidate_new_success_hours": 0,
+  "current_success_lost_hours": 0,
+  "operating_qualified_hours": 0,
+  "full_operating_qualified_hours": 0,
+  "solver_exceptions": 0,
+  "all8760_clock_rows_retained": true,
+  "failed_or_unqualified_hours_are_not_predictions": true,
+  "public_prediction_scaling": "Aggregate model MW divided once by frozen gamma; observations already public numeric MW.",
+  "current_scaling": "Saved currents remain model amperes; never divided by gamma.",
+  "physical_P32_meter_membership_certified": false,
+  "P32_numeric_as_MW_header_interpretation_independently_certified": false,
+  "cohort_and_terminal_convention_not_selected_by_score": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_receipt.json",
+      "sha256": "42292179c49ca8fd9b8b7f7eb1e2406713a1c675a7b6763b2726b9678051bc0d",
+      "bytes": 211362
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_input_accounting_review.json",
+      "sha256": "a0c7d6d1cb55c6e2e4142d3557b3193addc4317177c4cabdc44189a3b4cbc186",
+      "bytes": 13122
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_physics_review.json",
+      "sha256": "f41e9e9d819a5a0a344fdcfbcf5a21b2a652d6337c29fc83ebc8a89237afdc90",
+      "bytes": 14635
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "3297f564d35b7cc1d132eeaa4d1f4054ecc49681b67478b957d6ca5752191245",
+      "bytes": 6290016
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_axes.mat",
+      "sha256": "1e4c9a9fdf55180a9adc6f5de2b8dc6f83dcb839037ddec229798a4f0c83c056",
+      "bytes": 131387
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_network.mat",
+      "sha256": "e8cee6440b9b1688893eb1374f10e86a1862d299dd156e79481eaebdb79ce799",
+      "bytes": 275158
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670",
+      "bytes": 12874
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_01.mat",
+      "sha256": "235060bbdbd6aa1146c463da2602da65c64aeb80e0dcf20042ce0bf41957cd26",
+      "bytes": 38766803
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_02.mat",
+      "sha256": "6545363fae3a6c1e16a463c8b09ab8f91bb562e42f9db6c63952d704d50cca4f",
+      "bytes": 35035992
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_03.mat",
+      "sha256": "7b93be2424f1fba2b21bf92a484a60cbb6227e8f47a07960901670d00171b7e7",
+      "bytes": 40636086
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_04.mat",
+      "sha256": "3307cce53ccbdd008eeeb36d19ff6abde6ee5d6221b0381c8eede1f5a5a77d9e",
+      "bytes": 40192632
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_05.mat",
+      "sha256": "28372f635ea2865ade07237cf48d8e6eed5144314baf927bce92aa6ff005e5da",
+      "bytes": 42421099
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_06.mat",
+      "sha256": "50be6dd999e465d66b80fca8db249c349f45f5d5076fb90ec53a2629095556ad",
+      "bytes": 42362205
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_07.mat",
+      "sha256": "93ee6ae056ceea2539000c22ddca99c5e9458c8e615f7985aac8e5e884722532",
+      "bytes": 43309881
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_08.mat",
+      "sha256": "06c82cd080fba654a6754b1449059e7024a4e3c26b0ee6d5d2709f3c73a813ca",
+      "bytes": 42661664
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_09.mat",
+      "sha256": "52314266180b5f0c471f997efe855fdccb1a78a969800d959a3927e7329e90f4",
+      "bytes": 39990738
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_10.mat",
+      "sha256": "436383321d1f6bf164c076bad471fede640ca0fb7beec3595214201c38f02648",
+      "bytes": 40442533
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_11.mat",
+      "sha256": "525d187b03540dc11c4a0b0ceb8c7563fe99821e122e3f81d9bee38e6f84ce60",
+      "bytes": 38397553
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_12.mat",
+      "sha256": "9cf3be88a219bd1963ca15744105fb869b095f81ef0f46b4e4d47732b8c21ca6",
+      "bytes": 39203700
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079",
+      "bytes": 6391233
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_cohort.csv",
+      "sha256": "197f4c59106e014e4b2165922a537d2d9e04e1e50fb8a52d3d0ec4cd0b60251e",
+      "bytes": 900743
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv",
+      "sha256": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308",
+      "bytes": 261282
+    }
+  ],
+  "producer": {
+    "path": "scripts/nygrid_2025_moses_repair/annual/score_annual.py",
+    "sha256": "97ae0572f9305ad9cdf2f3c3b1f0a77a8668ae75e35be850e4b11059e61d1405",
+    "bytes": 10349
+  }
+}
