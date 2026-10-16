@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "pdf_sha256": "1397308903427234099dc61bf783341e84eafff0714d8abef2c3ce7715d231a0",
+  "main_tex_sha256": "b874b3dab776eb67d68c66afa3d6ed2f6caffb1cee84fd6feb031548ec6f50c6",
+  "slides_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+  "method": "Individual full-image inspection of all slide renders; changed slides rerendered and rechecked after layout corrections.",
+  "render_dpi": 130,
+  "template_match": {
+    "aspect_ratio": "16:9",
+    "theme": "Madrid",
+    "color_theme": "beaver",
+    "font": "Latin Modern",
+    "title_bar_and_footer_preserved": true,
+    "previous_subject_content_excluded": true
+  },
+  "checks": {
+    "no_clipped_content": true,
+    "no_overlapping_diagram_boxes": true,
+    "chart_labels_and_values_readable": true,
+    "table_text_and_source_notes_visible": true,
+    "all_page_numbers_correct": true,
+    "native_editable_chart_data": true,
+    "native_editable_topology": true
+  },
+  "repairs": [
+    "Shortened dense table content and adjusted row spacing without scaling whole slides.",
+    "Separated slide 2 hierarchy boxes and preserved the distinct released benchmark.",
+    "Split slide 9 category labels across two lines.",
+    "Rebased topology figure on the 225-row paper-derived parent and exposed Dover/Long Mountain labels.",
+    "Added spacing below tables and reduced chart widths to avoid column overflow."
+  ],
+  "qualification": "The diagram is selected schematic connectivity; source caveats are on-slide and expanded in presenter notes.",
+  "desktop_editor_compile": "success on final saved source",
+  "local_pdf_build": "15 pages; no overfull or underfull warnings"
+}

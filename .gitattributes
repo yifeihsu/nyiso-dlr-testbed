@@ -223,3 +223,7 @@ output/nygrid_2025_postrepair_diagnosis/** -text !eol whitespace=cr-at-eol
 output/nygrid_2025_postrepair_diagnosis/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
 output/nygrid_2025_postrepair_diagnosis/**/sources/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
 NYGRID_2025_POSTREPAIR_DIAGNOSIS.md -text !eol whitespace=cr-at-eol
+# Keep the editable deck and its audit/data hashes byte-stable.
+scripts/nygrid_weekly_20261015/** -text !eol whitespace=cr-at-eol
+output/nygrid_weekly_20261015/evidence/** -text !eol whitespace=cr-at-eol
+output/pdf/nygrid_weekly_2026-10-15/** -text !eol whitespace=cr-at-eol

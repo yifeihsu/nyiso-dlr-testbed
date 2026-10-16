@@ -1,0 +1,286 @@
+{
+  "review_created_utc": "2026-10-16T04:05:23.463435+00:00",
+  "reviewed_file": "output/pdf/nygrid_weekly_2026-10-15/main.tex",
+  "reviewed_tex_sha256": "b4bc2076c967d4c8a339015bfd85648869b17b7f8aff80a5ae3a78c013ea2a41",
+  "review_scope": "Factual/numeric review of physical slides5-15; title page counted as1. Layout/PDF rendering outside this subtask.",
+  "main_tex_modified": false,
+  "source_models_modified": false,
+  "status": "passed_after_parent_wording_fixes",
+  "required_findings": 3,
+  "optional_findings": 2,
+  "findings": [
+    {
+      "id": "R1",
+      "priority": "P2",
+      "slide": 6,
+      "line": 111,
+      "status": "verified_fixed_by_parent",
+      "current": "Thermal screening excludes voltage-changing branches.",
+      "replacement": "Conductor DLR excludes voltage-changing branches.",
+      "reason": "Voltage-changing equivalents are excluded from direct overhead-conductor heat balance, but still have declared terminal-current/apparatus/MVA envelopes. The current wording overstates the exclusion.",
+      "sources": [
+        {
+          "path": "NYGRID_2025_AC_SYSTEM.md",
+          "lines": "24,40,73-77"
+        },
+        {
+          "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_physics_review.json",
+          "field": "remaining_global_limits.branch_MVA_violation_hours"
+        }
+      ],
+      "resolution": "Current main.tex now limits exclusion to conductor DLR."
+    },
+    {
+      "id": "R2",
+      "priority": "P2",
+      "slide": 11,
+      "line": 260,
+      "status": "verified_fixed_by_parent",
+      "current": "Niagara's hourly allocation across its three model terminals.",
+      "replacement": "Niagara's actual hourly split among three electrical terminals; the current aggregate landing remains a proxy.",
+      "reason": "Sources document Niagara230, Niagara115 East and Niagara115 West, but explicitly state that the unit crosswalk/hourly three-terminal dispatch needed to replace the existing aggregate main-plant landing are unavailable. Three resolved model terminals should not be asserted.",
+      "sources": [
+        {
+          "path": "NYGRID_2025_WESTERN_SOURCE_AUDIT.md",
+          "lines": "68-70"
+        },
+        {
+          "path": "output/nygrid_2025_western_audit/generation/source_interpretation.json"
+        }
+      ],
+      "resolution": "Current main.tex distinguishes physical terminals from aggregate model proxy."
+    },
+    {
+      "id": "R3",
+      "priority": "P2",
+      "slide": 5,
+      "line": 95,
+      "status": "verified_fixed_by_parent",
+      "current": "held out of source-value and repair selection",
+      "replacement": "not used to fit input values or repair parameters",
+      "reason": "The receipts establish that input values, signs, reconstruction policies and interventions were source selected without fitting P32. They do not establish that interface diagnostics were never used to identify or prioritize which model problem to investigate. Broad repair-selection holdout overstates the documented separation.",
+      "sources": [
+        {
+          "path": "output/nygrid_2025_moses_repair/boundary/PV20_source_receipt.json",
+          "field": "internal_P32_observations_used_to_select_values"
+        },
+        {
+          "path": "output/nygrid_2025_moses_repair/generation/generation_policy.json",
+          "fields": [
+            "P32_or_interface_observations_read",
+            "Moses_residual_used_to_choose_policy"
+          ]
+        },
+        {
+          "path": "output/nygrid_2025_postrepair_diagnosis/ablations/scenario_recipe.json",
+          "field": "P32_observations_read_to_construct_interventions"
+        }
+      ],
+      "resolution": "Current main.tex no longer claims broad holdout from repair selection; values and parameter scope retained."
+    },
+    {
+      "id": "O1",
+      "priority": "P3",
+      "slide": 5,
+      "line": 94,
+      "status": "optional_precision",
+      "current": "Hourly aggregation; source gaps and sign/meter assumptions retained",
+      "replacement": "Hourly aggregation; Ontario signs verified; other historical-sign/meter qualifications retained",
+      "reason": "Current generic wording is compatible with the receipts, but can obscure the stronger Ontario-specific sign evidence. PS33/PS34 sign has an explicit2024-12-03 effective date; PV20 and Dover do not inherit that date.",
+      "sources": [
+        {
+          "path": "output/nygrid_2025_par_controls/controls/input_receipt.json",
+          "fields": [
+            "input_device_direction",
+            "P34_direction_verified",
+            "P34_direction_effective_date",
+            "P53A_sign_verified"
+          ]
+        },
+        {
+          "path": "output/nygrid_2025_moses_repair/boundary/PV20_source_receipt.json",
+          "field": "historical_2025_direction_effective_date_verified"
+        }
+      ]
+    },
+    {
+      "id": "O2",
+      "priority": "P3",
+      "slide": 10,
+      "line": 235,
+      "status": "optional_precision",
+      "current": "Six matched northern wind plants already exceed their full-year EIA energy in the modeled subset.",
+      "replacement": "The combined modeled subset energy of six matched northern wind plants exceeds their combined reported annual total.",
+      "reason": "The aggregate excess is established; not every individual plant is overallocated. The current chart strongly suggests aggregation, but the revised wording removes possible per-plant interpretation.",
+      "sources": [
+        {
+          "path": "output/nygrid_2025_postrepair_diagnosis/generation/D_wind_source_energy_review.json",
+          "fields": [
+            "EIA_2025_total_MWh",
+            "current_qualified_total_MWh",
+            "plants"
+          ]
+        }
+      ]
+    }
+  ],
+  "passed_checks": [
+    {
+      "slide": 8,
+      "claim": "errors_mae.csv values and ordering",
+      "passed": true,
+      "max_abs_discrepancy": 0.0,
+      "source": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv"
+    },
+    {
+      "slide": 8,
+      "claim": "errors_wape.csv values and ordering",
+      "passed": true,
+      "max_abs_discrepancy": 0.0,
+      "source": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv"
+    },
+    {
+      "slide": 9,
+      "claim": "B/G/P/GP chart and order-averaged attribution",
+      "passed": true,
+      "max_abs_chart_discrepancy": 5.684341886080802e-14,
+      "PV20_effect_MW": 34.91746754612194,
+      "hydro_effect_MW": -7.164571615092768,
+      "combined_MAE_change_MW": 27.752895931029173,
+      "scope": "Controlled in-model effects; correctly not claimed as real-world source-error attribution",
+      "source": "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_attribution.csv"
+    },
+    {
+      "slide": 10,
+      "claim": "Wind chart and conditional lower bound",
+      "passed": true,
+      "max_abs_chart_discrepancy_GWh": 0.0,
+      "excess_MWh": 237723.2505819518,
+      "mean_lower_bound_MW": 27.479279919310116,
+      "condition": "Nonnegative excluded-hour wind output; deck explicitly preserves negative-EIA-net-output qualification",
+      "source": "output/nygrid_2025_postrepair_diagnosis/generation/D_wind_source_energy_review.json"
+    },
+    {
+      "slide": 7,
+      "claim": "8651 qualified successes, zero exceptions, zero full operating passes, target185195 voltage checks",
+      "passed": true,
+      "sources": [
+        "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_receipt.json",
+        "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_physics_review.json"
+      ]
+    },
+    {
+      "slide": 7,
+      "claim": "UPNY and SPR rounded annual MAE/WAPE",
+      "passed": true,
+      "source": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv"
+    },
+    {
+      "slide": 13,
+      "claim": "1466 total and1437 native generator rows; HQ/PV20 fixed rows distinct",
+      "passed": true,
+      "source": "output/nygrid_2025_moses_repair/model/model_generator_register.csv"
+    },
+    {
+      "slides": [
+        5,
+        13,
+        14
+      ],
+      "claim": "P34 controls distinguished from P53A schedules; Ontario transfer equivalents not physical HVDC",
+      "passed": true,
+      "specific_source_fact": "PS33/25118 and PS34/25119 positive Ontario to Moses; effective2024-12-03. P53A G/L sign unverified.",
+      "source": "output/nygrid_2025_par_controls/controls/input_receipt.json"
+    }
+  ],
+  "other_claims_reviewed": [
+    {
+      "slides": [
+        6,
+        7
+      ],
+      "claim": "Gross=served+allocated loss; native/HQ fixed and regional import targets preserved; physical185/195 repair redistributes unchanged total nominal compensation",
+      "status": "supported",
+      "sources": [
+        "NYGRID_2025_AC_LOSS_REVISION.md",
+        "NYGRID_2025_PHYSICAL_REPAIR.md",
+        "NYGRID_2025_MOSES_REPAIR.md"
+      ]
+    },
+    {
+      "slides": [
+        9,
+        10
+      ],
+      "claim": "Five-parent TotalEast proxy versus29 physical entries; monthly hydro does not establish hourly shape; SandBar versusPlattsburgh qualification",
+      "status": "supported",
+      "source": "NYGRID_2025_POSTREPAIR_DIAGNOSIS.md"
+    },
+    {
+      "slide": 11,
+      "claim": "108 earlier monthly target quantities match finalEIA; historicalDC correlations not represented as currentAC",
+      "status": "supported",
+      "source": "NYGRID_2025_WESTERN_SOURCE_AUDIT.md"
+    },
+    {
+      "slides": [
+        12,
+        14
+      ],
+      "claim": "Wind/operator diagnostics not promoted; P63/P27/GoldBook do not provide named hourly output; AM distinct fromA",
+      "status": "supported",
+      "source": "NYGRID_2025_POSTREPAIR_DIAGNOSIS.md"
+    }
+  ],
+  "packaging_observation": {
+    "slide": 15,
+    "presenter_notes_referenced": true,
+    "presenter_notes_present_at_review": false,
+    "action_if_still_missing_at_delivery": "Create the referenced presenter_notes.md or remove that companion-file claim; parent may still be assembling it.",
+    "presenter_notes_present_at_final_readback": true
+  },
+  "source_hashes": [
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv",
+      "sha256": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_attribution.csv",
+      "sha256": "5f0053eefcc0448959b193ccd3414657a64886875101fdf2e99ea0acd83fd71f"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/D_wind_source_energy_review.json",
+      "sha256": "3031b3065ce49eb50efb6566ba1a954f082e36a7c7dfe34e7d5c3f72961a9a4f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_receipt.json",
+      "sha256": "42292179c49ca8fd9b8b7f7eb1e2406713a1c675a7b6763b2726b9678051bc0d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_physics_review.json",
+      "sha256": "f41e9e9d819a5a0a344fdcfbcf5a21b2a652d6337c29fc83ebc8a89237afdc90"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/input_receipt.json",
+      "sha256": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747"
+    },
+    {
+      "path": "NYGRID_2025_AC_SYSTEM.md",
+      "sha256": "3d81dec007ceaa7a38c1bc0d386854d2f07aa4666e47159857e7ade8667588dc"
+    },
+    {
+      "path": "NYGRID_2025_WESTERN_SOURCE_AUDIT.md",
+      "sha256": "e21175a942b85519688708eaba22b2100ad06281b256a5d1dd66b17371b3d4cb"
+    }
+  ],
+  "final_readback_utc": "2026-10-16T04:09:02.387987+00:00",
+  "final_tex_sha256": "b874b3dab776eb67d68c66afa3d6ed2f6caffb1cee84fd6feb031548ec6f50c6",
+  "unresolved_required_findings": 0,
+  "presenter_notes": {
+    "path": "output/pdf/nygrid_weekly_2026-10-15/presenter_notes.md",
+    "sha256": "584564312e2b298d62880128e3653ed867fbe2649101ae620855b633e6c1345b",
+    "slide_sections": 15,
+    "numeric_table_source": "current seven annual primary-operator source rows; six-decimal display",
+    "created_by_reviewer": true
+  }
+}
