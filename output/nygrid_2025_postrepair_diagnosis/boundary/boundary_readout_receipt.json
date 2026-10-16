@@ -1,0 +1,367 @@
+{
+  "status": "completed_source_directed_readout_sensitivity_no_operator_promotion",
+  "created_utc": "2026-10-16T00:52:19.294216+00:00",
+  "qualified_hours": 8651,
+  "analysis_contract": {
+    "scope": "Post-repair source/meter interpretation and fixed-cohort readout sensitivities; no model, map or package change",
+    "preliminary_results_already_seen": true,
+    "prospective_validation_design_claimed": false,
+    "primary_cohort": "Same 8651 source-qualified and equation/loss-qualified hours in the physical-repair baseline and Moses-repair candidate",
+    "PV20_added_term": "outward_export_proxy = -PV20_SandBar_import_to_NY_proxy_MW",
+    "direction_basis": "Official seasonal Central East/Total East definitions include Plattsburgh to Sand Bar under D-to-N; the archived PAR diagram defines the opposite Sand Bar to NY sign as positive",
+    "direction_chosen_using_P32_fit": false,
+    "opposite_direction_scored": false,
+    "variants": [
+      "baseline_legacy",
+      "candidate_legacy",
+      "baseline_legacy_plus_same_PV20_export_proxy",
+      "candidate_legacy_plus_PV20_export_proxy"
+    ],
+    "Moses_variants": [
+      "baseline_legacy",
+      "candidate_legacy"
+    ],
+    "baseline_augmentation_warning": "Baseline did not separately route PV20. Adding a reported PV20 component to its coarse readout is a hybrid sensitivity, not a corrected baseline physical prediction.",
+    "candidate_augmentation_warning": "Candidate routes the PV20 proxy explicitly but its frozen CE/TE operators omit it. Adding its export component is source-directed partial scope accounting, not certification of remaining physical circuit terms or the P32 expression.",
+    "native_P34_semantics": "Operator-reported native numeric flow values; adopted numeric-as-MW and forward-hold aggregation. Raw MWH header, publication origin and native timestamp support remain independently unresolved.",
+    "source_meter_qualification": "Sand Bar PAR is not the Plattsburgh boundary meter. South Hero net load/injection, intervening loss and bypass terms are unresolved; no complete numerical error bound is established.",
+    "historical_sign_qualification": "The 2026-01-09 and 2026-07-17 official diagrams corroborate the same Sand Bar sign; no retrieved source certifies its effective date throughout 2025.",
+    "CentralEast_channel_qualification": "The CEVC24 physical interface definition includes PV20, but exact public P32 CENTRAL EAST - VC telemetry weights/expression are not independently certified.",
+    "promotion": "None: retain all declared sensitivity rows and do not choose an operator, sign or source scale by its score."
+  },
+  "annual_metrics": [
+    {
+      "interface": "TOTAL EAST",
+      "model": "baseline",
+      "readout": "legacy",
+      "month": 0,
+      "hours": 8651,
+      "MAE_MW": 471.55117717733964,
+      "RMSE_MW": 578.7386228971692,
+      "bias_MW": -285.7855653197753,
+      "WAPE_percent": 15.062786822704753,
+      "p95_absolute_error_MW": 1093.23160690925,
+      "positive_error_hours": 2495,
+      "mean_prediction_MW": 2841.2738837612555,
+      "mean_observation_MW": 3127.0594490810313,
+      "physical_P32_operator_certified": false,
+      "new_AC_solve": false,
+      "default_promoted": false
+    },
+    {
+      "interface": "TOTAL EAST",
+      "model": "baseline",
+      "readout": "legacy_plus_PV20_export_proxy",
+      "month": 0,
+      "hours": 8651,
+      "MAE_MW": 441.2167412651966,
+      "RMSE_MW": 542.03409540804,
+      "bias_MW": -209.79703933048697,
+      "WAPE_percent": 14.093812162803156,
+      "p95_absolute_error_MW": 1023.0668928845616,
+      "positive_error_hours": 2918,
+      "mean_prediction_MW": 2917.262409750544,
+      "mean_observation_MW": 3127.0594490810313,
+      "physical_P32_operator_certified": false,
+      "new_AC_solve": false,
+      "default_promoted": false
+    },
+    {
+      "interface": "TOTAL EAST",
+      "model": "candidate",
+      "readout": "legacy",
+      "month": 0,
+      "hours": 8651,
+      "MAE_MW": 499.3040731083688,
+      "RMSE_MW": 612.4717176984728,
+      "bias_MW": -340.15708498076157,
+      "WAPE_percent": 15.949299200055025,
+      "p95_absolute_error_MW": 1153.6235352254384,
+      "positive_error_hours": 2227,
+      "mean_prediction_MW": 2786.9023641002696,
+      "mean_observation_MW": 3127.0594490810313,
+      "physical_P32_operator_certified": false,
+      "new_AC_solve": false,
+      "default_promoted": false
+    },
+    {
+      "interface": "TOTAL EAST",
+      "model": "candidate",
+      "readout": "legacy_plus_PV20_export_proxy",
+      "month": 0,
+      "hours": 8651,
+      "MAE_MW": 463.43937193549186,
+      "RMSE_MW": 569.426366414163,
+      "bias_MW": -264.1685589914733,
+      "WAPE_percent": 14.803670953592416,
+      "p95_absolute_error_MW": 1077.7187426829485,
+      "positive_error_hours": 2636,
+      "mean_prediction_MW": 2862.8908900895576,
+      "mean_observation_MW": 3127.0594490810313,
+      "physical_P32_operator_certified": false,
+      "new_AC_solve": false,
+      "default_promoted": false
+    },
+    {
+      "interface": "CENTRAL EAST - VC",
+      "model": "baseline",
+      "readout": "legacy",
+      "month": 0,
+      "hours": 8651,
+      "MAE_MW": 230.42418809793662,
+      "RMSE_MW": 282.042727445738,
+      "bias_MW": 158.03396808814594,
+      "WAPE_percent": 13.849212530617868,
+      "p95_absolute_error_MW": 533.1943003311432,
+      "positive_error_hours": 6560,
+      "mean_prediction_MW": 1821.4163449424595,
+      "mean_observation_MW": 1663.3823768543139,
+      "physical_P32_operator_certified": false,
+      "new_AC_solve": false,
+      "default_promoted": false
+    },
+    {
+      "interface": "CENTRAL EAST - VC",
+      "model": "baseline",
+      "readout": "legacy_plus_PV20_export_proxy",
+      "month": 0,
+      "hours": 8651,
+      "MAE_MW": 278.9536035533941,
+      "RMSE_MW": 334.327278729524,
+      "bias_MW": 234.02249407743432,
+      "WAPE_percent": 16.765981790725334,
+      "p95_absolute_error_MW": 612.6662344730805,
+      "positive_error_hours": 7200,
+      "mean_prediction_MW": 1897.4048709317478,
+      "mean_observation_MW": 1663.3823768543139,
+      "physical_P32_operator_certified": false,
+      "new_AC_solve": false,
+      "default_promoted": false
+    },
+    {
+      "interface": "CENTRAL EAST - VC",
+      "model": "candidate",
+      "readout": "legacy",
+      "month": 0,
+      "hours": 8651,
+      "MAE_MW": 208.719123958017,
+      "RMSE_MW": 257.7176321318396,
+      "bias_MW": 112.61535208965495,
+      "WAPE_percent": 12.544670465196,
+      "p95_absolute_error_MW": 492.80338706766395,
+      "positive_error_hours": 6030,
+      "mean_prediction_MW": 1775.9977289439687,
+      "mean_observation_MW": 1663.3823768543139,
+      "physical_P32_operator_certified": false,
+      "new_AC_solve": false,
+      "default_promoted": false
+    },
+    {
+      "interface": "CENTRAL EAST - VC",
+      "model": "candidate",
+      "readout": "legacy_plus_PV20_export_proxy",
+      "month": 0,
+      "hours": 8651,
+      "MAE_MW": 248.05885575830055,
+      "RMSE_MW": 300.8040947644086,
+      "bias_MW": 188.60387807894327,
+      "WAPE_percent": 14.909111069704359,
+      "p95_absolute_error_MW": 563.9131673947973,
+      "positive_error_hours": 6879,
+      "mean_prediction_MW": 1851.9862549332568,
+      "mean_observation_MW": 1663.3823768543139,
+      "physical_P32_operator_certified": false,
+      "new_AC_solve": false,
+      "default_promoted": false
+    },
+    {
+      "interface": "MOSES SOUTH",
+      "model": "baseline",
+      "readout": "legacy",
+      "month": 0,
+      "hours": 8651,
+      "MAE_MW": 118.82092402208409,
+      "RMSE_MW": 147.84790732168128,
+      "bias_MW": 12.624496552159801,
+      "WAPE_percent": 22.00761741451924,
+      "p95_absolute_error_MW": 286.7650917930523,
+      "positive_error_hours": 4952,
+      "mean_prediction_MW": -177.53190090991907,
+      "mean_observation_MW": -190.1563974620789,
+      "physical_P32_operator_certified": false,
+      "new_AC_solve": false,
+      "default_promoted": false
+    },
+    {
+      "interface": "MOSES SOUTH",
+      "model": "candidate",
+      "readout": "legacy",
+      "month": 0,
+      "hours": 8651,
+      "MAE_MW": 108.94497475154104,
+      "RMSE_MW": 138.23965374306104,
+      "bias_MW": 24.31961013475311,
+      "WAPE_percent": 20.178426849472665,
+      "p95_absolute_error_MW": 275.2175109987669,
+      "positive_error_hours": 5270,
+      "mean_prediction_MW": -165.8367873273258,
+      "mean_observation_MW": -190.1563974620789,
+      "physical_P32_operator_certified": false,
+      "new_AC_solve": false,
+      "default_promoted": false
+    }
+  ],
+  "exact_frozen_operator_identity": "TOTAL_EAST_legacy = CENTRAL_EAST_VC_legacy + PF_at_parent224_original_from_terminal",
+  "mean_candidate_minus_baseline_parent224_readout_MW": -8.95290366249528,
+  "frozen_CE_members": 4,
+  "frozen_TE_members": 5,
+  "physical_CE_printed_members": 8,
+  "physical_TE_printed_members": 29,
+  "physical_CE_other_groups": [
+    "E -> F",
+    "D -> N"
+  ],
+  "physical_TE_other_groups": [
+    "E -> F",
+    "E -> G",
+    "D -> N",
+    "P -> G",
+    "P -> J",
+    "PJM RECo -> G"
+  ],
+  "source_directed_added_coefficient_to_import_positive_PV20": -1,
+  "monthly_comparison_summary": [
+    {
+      "interface": "TOTAL EAST",
+      "months": 12,
+      "candidate_worse_than_baseline_same_legacy_months": 10,
+      "candidate_worse_than_baseline_same_augmented_readout_months": 9,
+      "candidate_PV20_readout_addition_improves_MAE_months": 10
+    },
+    {
+      "interface": "CENTRAL EAST - VC",
+      "months": 12,
+      "candidate_worse_than_baseline_same_legacy_months": 1,
+      "candidate_worse_than_baseline_same_augmented_readout_months": 0,
+      "candidate_PV20_readout_addition_improves_MAE_months": 1
+    }
+  ],
+  "current_northern_balance_identity_max_error_MW": 5.343281372915953e-12,
+  "physical_PV20_component_membership_verified": true,
+  "entire_physical_operator_certified": false,
+  "CEVC_generic_definition_contains_PV20": true,
+  "exact_public_CEVC_P32_expression_certified": false,
+  "P34_native_unit_and_publication_origin_independently_resolved": false,
+  "historical_SandBar_sign_corroborated_on": "2026-01-09 and2026-07-17",
+  "historical_2025_sign_effective_date_certified": false,
+  "full_SouthHero_and_meter_gap_error_bound_MW": null,
+  "partial_context": {
+    "SouthHero29_1A_planning_peak_MVA": 6.66,
+    "complete_error_bound": false,
+    "current_Moses_MAE_MW": 108.94497475154104,
+    "current_Moses_bias_MW": 24.31961013475311,
+    "hypothetical_bound_formula": "If an independent bound B on the complete hourly meter correction existed, MAE could improve by no more than B. No such complete source-supported B was established."
+  },
+  "interpretation": [
+    "Both frozen CE and TE readouts share four coarse E-F corridor terms. A shared decrease can improve a positive CE bias while worsening a negative TE bias without establishing a globally worse network.",
+    "PV20 exits ZoneD toward NewEngland. The physical source-table direction adds its outward export, which is minus the adopted import-positive SandBar proxy. This sign was not selected by score.",
+    "The candidate explicitly routes PV20 outside the main NY cut, whereas its frozen CE/TE comparison operators still omit that component. An old coarse readout may contain compensating routing error; this sensitivity does not identify a unique causal attribution.",
+    "TE also includes PJM-to-eastern-NY paths absent from the frozen NY-only functional. Adding PV20 alone does not reconstruct all physical TE terms, their meter ends or the P32 expression.",
+    "Moses does not include PV20 in its seven-term meter. PV20 belongs in the northern-area injection balance; do not add the same proxy directly to the Moses meter readout a second time.",
+    "The 6.66MVA planning datum concerns one feeder, not the complete SouthHero net injection plus line/PAR losses and bypass flow. It cannot supply a source-certified complete uncertainty interval."
+  ],
+  "no_source_or_model_changes": true,
+  "new_AC_solves": 0,
+  "source_hashes_unchanged": true,
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_postrepair_diagnosis/boundary/readout_contract.json",
+      "sha256": "693791ae7731d566548e90987bea89fc439b8651bbdba13138c75b829576136d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "3297f564d35b7cc1d132eeaa4d1f4054ecc49681b67478b957d6ca5752191245"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/PV20_hourly_source.csv",
+      "sha256": "b9aa8d1da50f6f3374e0e9a571156b0123bcdf68f45f5cde269da34157fb0455"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_contract.json",
+      "sha256": "bb909130ecd61253819c2876f8d35347ca6bd3a9f4ce9507e82b79c7aee8b553"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/all_seasonal_members.csv",
+      "sha256": "e4d3e1ba5511b18d6d3c8cc3c33429cfca0e590c4800d74c065bcf213e2a88c1"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.pdf",
+      "sha256": "32e4fb86cc8397ab458fdf790ab52decfcaa9e9686de7aa9bec7527eaf04b901"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.pdf",
+      "sha256": "546402b7e85f51441e64a6b68adac53579f83828f6bc8c1195ccc480e082dc0b"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.pdf",
+      "sha256": "bcf26e7ac908f43a29f34230067b5b1afc6e587845b26246d7ca39a41ef9f072"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/latest_model.mat",
+      "sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/model_generator_register.csv",
+      "sha256": "4c9892ab2a855a75af893421ddce9131d3f491b407b072055a244e0448bb24f5"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h0001_4380.mat",
+      "sha256": "197a6bbb5909a61dc227f779805d07d76d8d5a7f3b7e1d77974e12c6375c91e6"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h4381_8760.mat",
+      "sha256": "ccd92f0560427d78ade6861d34182cf64a8b3c76b46744eb80e4a99edb6ffe61"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/central_north_2025_qualifiers.json",
+      "sha256": "baabbef45f6be710b9cfebd1f1da763e00218ff9d48b541eb9366d58008f30c7"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_CEVC24_2024.pdf",
+      "sha256": "42358fbf03847610a7da52fe66abac13ca269c29294309ac8743be22cba9527f"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/primary_evidence_conclusion.json",
+      "sha256": "8edcc7957deb51e6d9e3d8d3a467936efe28b4c8322567584e014e357721a2db"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version1_0.pdf",
+      "sha256": "98553ac3d45f1d836032180ea768ff1ad49ee61edf7bb4eaeabc3b69112ecac2"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version1_0.pdf.receipt.json",
+      "sha256": "e4fb556a3f1c3d3cfef0f673f4eade526973e96bbc913e0d6704ae62f7c4d799"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27.pdf",
+      "sha256": "c0647d2abc38f216ccf5c1f197ca679cf16358fde5f507659bcdcd80a6938ba4"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/boundary_verification_receipt.json",
+      "sha256": "bf6894762f315e925e5948f976151e226c77a81f83c65ad794efbf3d41d5faad"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/PV20_source_receipt.json",
+      "sha256": "74545707c320f7658d5ddceb6822a79ee18199f56db86fc3e6745e3dfe7744ed"
+    }
+  ],
+  "script_sha256": "25a86995f63090482e52c7ecda89fdb921bec4d59bfa2fd806c8048e22945fb6"
+}

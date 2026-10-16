@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-16T00:41:07.314864+00:00",
+  "source_policy_frozen_before_projection": true,
+  "P32_or_flow_observations_read": false,
+  "no_AC_run": true,
+  "current_model_unchanged": true,
+  "source_qualified_hours": 8651,
+  "full_calendar_hours": 8760,
+  "monthly_energy_error_MWh": 2.3283064365386963e-10,
+  "hourly_HY_total_error_public_MW": 9.094947017729282e-12,
+  "donor_bounds_violation_MW": 0.0,
+  "current_donor_reproduction_error_MW": 1.4210854715202004e-14,
+  "qualified_StL_delta": {
+    "mean": 0.4199210931272458,
+    "MAE": 71.00700172312276,
+    "min": -133.99783667554425,
+    "max": 347.5425874997864
+  },
+  "qualified_native_D_delta": {
+    "mean": 0.5009759477148444,
+    "MAE": 70.1034419144898,
+    "min": -132.11542159999198,
+    "max": 342.4256226705096
+  },
+  "current_cap_hours_all": 3220,
+  "current_cap_hours_qualified": 3161,
+  "selected_hours": [
+    651,
+    866,
+    1539,
+    2234,
+    3327,
+    3964,
+    5068,
+    5091,
+    6218,
+    7203,
+    7347,
+    8284
+  ],
+  "policy": {
+    "path": "output/nygrid_2025_postrepair_diagnosis/generation/monthly_flat_shape_policy.json",
+    "sha256": "329d4f064908b03fa284a288c2e01c8fcdbd9dd7a666646b87aaf8a9bf727ad8",
+    "bytes": 3439
+  },
+  "source_hashes_preserved": true,
+  "limitations": [
+    "Source-feasible control is not observed hourly dispatch.",
+    "A frozen-loss cut response is not a fresh AC sensitivity.",
+    "OtherHYmonthlyenergy is not constrained to each EIA plant target."
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/monthly_flat_hourly_injection_delta.csv",
+      "sha256": "970ec0314f3983bfb702ca8ea404a7c321225cf05e83bee97ec24f642463f443",
+      "bytes": 2016765
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/monthly_flat_monthly_summary.csv",
+      "sha256": "05eb7c869783b9834b505982b37d9632ba5cc852bd21d0e181463bbef84a8d72",
+      "bytes": 1067
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/monthly_flat_source_selected_hours.csv",
+      "sha256": "7b40e72935c3a7be155ea1fe71a73ec52294e69284395734969da511f6c9efd0",
+      "bytes": 3096
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/monthly_flat_generation_control.mat",
+      "sha256": "948cda16fd948471551016dc055e06ca45a824bf7257ccb81ebdcfd793b0131a",
+      "bytes": 20012639
+    }
+  ]
+}

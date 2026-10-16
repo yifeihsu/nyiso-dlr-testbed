@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "reviewed_utc": "2026-10-16T01:09:32.477287+00:00",
+  "report": {
+    "path": "NYGRID_2025_POSTREPAIR_DIAGNOSIS.md",
+    "sha256": "3d6b8cf1cbd36343939420b3c8f66b807cfb7f7ef64ac9b9a27413369363a8e9"
+  },
+  "scope": "Final narrative, source semantics, conditional inference, cohort, evidence links and figure review; no model or physical-meter promotion.",
+  "all_local_report_links_exist": true,
+  "local_links_checked": 26,
+  "immutable_source_and_current_delivery_hashes_checked": 55,
+  "final_generation_receipt_hashes_checked": 6,
+  "prior_independent_residual_and_wind_input_hashes_checked": 21,
+  "qualified_hours": 8651,
+  "report_qualifications_reviewed": [
+    "controlled_effects_within_current_model",
+    "PV20_operator_reported_proxy",
+    "native_P34_units_not_resolved",
+    "complete_interface_not_certified",
+    "wind_bound_conditional",
+    "negative_EIA_net_generation",
+    "AM_distinct_from_A",
+    "flat_control_includes_other_HY",
+    "flat_control_not_annual_AC",
+    "StLawrence_oracle_not_dispatch",
+    "912_not_certified_capability",
+    "one_feeder_not_error_bound",
+    "2026_goldbook_retrieval_limit",
+    "no_model_promotion"
+  ],
+  "Moses_prediction_interaction_public_MW": {
+    "mean": 0.19791709476227715,
+    "mean_absolute": 0.1979170947623852,
+    "p95_absolute": 0.4582731124741031,
+    "maximum_absolute": 1.0187333525368558,
+    "interpretation": "Large MAE interaction is supported as mainly offsetting signed effects and absolute-error nonlinearity, not hidden large opposing hourly prediction interactions."
+  },
+  "resolved_review_findings": [
+    "Annual wind table now recomputes interval distances and Boolean flags from annual totals.",
+    "AM monthly values reported annually are distinguished from annual-only A monthly estimates.",
+    "Wind lower bound is explicitly conditional on nonnegative excluded net generation; no auxiliary-power bound is invented.",
+    "PV20 is described as operator-reported under adopted MW/forward-hold semantics, with native support unresolved.",
+    "StLawrence-only necessary condition and frozen-terminal shape sensitivity retain all assumptions."
+  ],
+  "controlled_effects_figure_visual_review": {
+    "passed": true,
+    "method": "Reviewer visually inspected the rendered PNG; both B/G/P/GP rows, numeric labels, cohort and model-only qualification were legible and consistent with the report.",
+    "sha256": "4e59994bab4afeba70af9716567a5df9dc092c59c7706c6d8e4d2b25b7e02d85"
+  },
+  "unresolved_actionable_report_findings": [],
+  "remaining_scientific_limitations_are_disclosed": true,
+  "new_AC_power_flows": 0,
+  "model_map_handoff_pointer_changed_by_review": false,
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/source_guard.json",
+      "sha256": "8b44f78cccf9158e74767404f40514d8889c47460abbcc2e7be21d1f66985526"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/independent_summary_review.json",
+      "sha256": "80329bfde1fe6940701edeaf05e423688c661b054d96a0b2a0047d913e410215"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_arrays.npz",
+      "sha256": "1a53863f2b59b9655c8bf6c8930bcd66d4c15ba7b1c00fc49be00a2f8fcf793a"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_metrics.csv",
+      "sha256": "00660a3798cbc2b5e7e1275449fb4e4e05f8155fa64d45432bbeff953afdcdb6"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_attribution.csv",
+      "sha256": "5f0053eefcc0448959b193ccd3414657a64886875101fdf2e99ea0acd83fd71f"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_scoring_receipt.json",
+      "sha256": "787fc8aa8f0a1bd41e0554c62a517fae674fd4b690e6c43c87f6ce2fccfddef6"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/boundary/boundary_readout_receipt.json",
+      "sha256": "95246b84a07b36a41d5b23ffd9a687e66798f2e44fd61f8f2d9dac85f0bf8816"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/boundary/source_semantics_review.json",
+      "sha256": "37134b436259aeb2058e27ff4d9301d24f7055346d87538bf2b8de01af77635f"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/boundary/independent_residual_review.json",
+      "sha256": "152498f8b2d3e4e379ecf03c60110c272d335bd5f0f9411235871b2147d4e923"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/boundary/independent_wind_review.json",
+      "sha256": "dd36b69d2a6572399763dbbd74add40ba28896327ed654387d973dd9c14e2fbe"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/generation_source_review.json",
+      "sha256": "fc4f5d9dda3268fba3450e19e982c5d7c5cb5239c44f08bd8e2395648a69bc4c"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/D_wind_source_energy_review.json",
+      "sha256": "3031b3065ce49eb50efb6566ba1a954f082e36a7c7dfe34e7d5c3f72961a9a4f"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/D_wind_monthly_totals.csv",
+      "sha256": "a08575921d8362555a99f3796d8d3bffd4c573f79c547d771e472b1cd2f4157d"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/D_wind_annual_EIA_comparison.csv",
+      "sha256": "82e608f66ab64880f933ca83db4273088816add41ee29c3ce42ec0b170267c35"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/controlled_effects.png",
+      "sha256": "4e59994bab4afeba70af9716567a5df9dc092c59c7706c6d8e4d2b25b7e02d85"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/figure_receipt.json",
+      "sha256": "859280768d27c44d591c4030ad7edb5552d8c4a09b0fd0eb69a4bb1d5ce8e815"
+    }
+  ],
+  "script_sha256": "9b1fa93499c458c58f460524c1595ad98c28791f499756e2ba9cf68770067cbb"
+}

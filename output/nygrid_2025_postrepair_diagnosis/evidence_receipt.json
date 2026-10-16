@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "qualified_hours": 8651,
+  "physical_hours": 8760,
+  "public_power_units": true,
+  "current_Moses_cut_identity_max_error_MW": 5.343281372915953e-12,
+  "changed_Moses_flow_reconciles_nativeD_PV20_and_terminal_max_error_MW": 9.748646334628575e-12,
+  "TotalEast_operator_identity": "TotalEast = CentralEast + original parent224 signed-from flow; physical-meter equivalence not certified.",
+  "mean_Moses_change_components_MW": {
+    "delta_StLawrence_MW": 89.24909733154303,
+    "delta_other_D_MW": -1.1742861934867426,
+    "current_PV20_MW": -75.98852598928833,
+    "delta_Moses_terminal_MW": -0.3911715661745652,
+    "delta_Moses_primary_MW": 11.695113582593308
+  },
+  "source_guard_sha256": "8b44f78cccf9158e74767404f40514d8889c47460abbcc2e7be21d1f66985526",
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/hourly_evidence.csv",
+      "sha256": "9926ac86a0a6fd3d333bb198693554d8c042755ab102f4a1e3303ec8d1235f2b",
+      "bytes": 11898347
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/interface_evidence.npz",
+      "sha256": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079",
+      "bytes": 6391233
+    }
+  ],
+  "current_model_map_package_unchanged": true
+}

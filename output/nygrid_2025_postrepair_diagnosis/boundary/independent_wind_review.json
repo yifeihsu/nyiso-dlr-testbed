@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-16T01:02:56.369663+00:00",
+  "source_workbook_sha256": "95684212d89ac688a355a5c8b51935111247e6f60716eba250464b28d14cfd2c",
+  "plants": 6,
+  "model_rows_1based": [
+    655,
+    656,
+    668,
+    669,
+    671,
+    745
+  ],
+  "exact_plant_fuel_WND_prime_mover_WT_state_NY_BA_NYIS_year2025_matching": true,
+  "map_scope": "All six are current native ZoneD records at the Plattsburgh49 geographic proxy. This checks the model mapping, not a physical generator-to-feeder or Moses-meter certificate.",
+  "reporting_frequency_counts": {
+    "AM": 4,
+    "M": 2
+  },
+  "frequency_interpretation": "M reports monthly. AM supplies monthly values via an annual submission; AM must not be equated with annual-total monthly imputation. This does not establish hourly telemetry.",
+  "frequency_primary_context": "EIA923 instructions Schedule3D printedpage16 requires renewable annual respondents to report each month and permits negative net generation; PUDL maintainer code separately defines AM as monthly values submitted once annually.",
+  "frequency_sources": [
+    "https://www.eia.gov/survey/form/eia_923/instructions.pdf",
+    "https://docs.catalyst.coop/pudl/en/v2026.2.0/_modules/pudl/metadata/codes.html"
+  ],
+  "model_hours": 8760,
+  "qualified_hours": 8651,
+  "excluded_hours": 109,
+  "current_qualified_wind_MWh": 1662733.2505819513,
+  "reported_annual_wind_MWh": 1425010.0,
+  "qualified_energy_minus_reported_annual_MWh": 237723.25058195135,
+  "conditional_qualified_mean_excess_lower_bound_MW": 27.479279919310063,
+  "condition_for_that_lower_bound": "Actual net generation on all109excludedhours is nonnegative. This follows the current modeling envelope, not an EIA rule: EIA allows negative net generation from station use.",
+  "excluded_energy_required_if_qualified_model_were_actual_MWh": -237723.25058195135,
+  "mean_excluded_power_required_if_qualified_model_were_actual_MW": -2180.947253045425,
+  "bound_on_actual_negative_auxiliary_power_established": false,
+  "source_based_Moses_causal_contribution_identified": false,
+  "wind_input_preexisted_latest_repair": true,
+  "corrected_annual_interval_table_max_difference_MWh": 5.820766091346741e-11,
+  "earlier_annual_derived_field_aggregation_issue_resolved": true,
+  "public_scale_conversion": "Compiled model MW divided once by gamma; sum one-hour power values toMWh.",
+  "primary_source_units": "EIA worksheet reports electricity net generation inMWh, with an annual NetGeneration(Megawatthours) column; all six annual totals equal the sum of their12monthlycells.",
+  "default_model_map_package_changed": false,
+  "new_AC_power_flows": 0,
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/boundary/independent_wind_workbook_readback.json",
+      "sha256": "2def133da27cf75db825ef2f33cefdb4fa34cea0f9a1a890f4cda69774c897de"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/sources/EIA923_Schedules_2_3_4_5_M_12_2025_Final.xlsx",
+      "sha256": "95684212d89ac688a355a5c8b51935111247e6f60716eba250464b28d14cfd2c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/model_generator_register.csv",
+      "sha256": "4c9892ab2a855a75af893421ddce9131d3f491b407b072055a244e0448bb24f5"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/latest_model.mat",
+      "sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h0001_4380.mat",
+      "sha256": "197a6bbb5909a61dc227f779805d07d76d8d5a7f3b7e1d77974e12c6375c91e6"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h4381_8760.mat",
+      "sha256": "ccd92f0560427d78ade6861d34182cf64a8b3c76b46744eb80e4a99edb6ffe61"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_bounds.npz",
+      "sha256": "7fdc0f26448d6333ba427f7d10535cff2eef993de21fae0794eba99b549e9c52"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/D_wind_annual_EIA_comparison.csv",
+      "sha256": "82e608f66ab64880f933ca83db4273088816add41ee29c3ce42ec0b170267c35"
+    }
+  ],
+  "script_sha256": "45d7b74e673a196c34a376c52282a5d6a95f8a250a2a9bb7e4fd20f8e3d939ac"
+}

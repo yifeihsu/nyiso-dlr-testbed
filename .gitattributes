@@ -217,3 +217,9 @@ output/nygrid_2025_moses_repair/**/*.log -diff whitespace=-blank-at-eol,-blank-a
 output/nygrid_2025_moses_repair/**/sources/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
 NYGRID_2025_MOSES_REPAIR.md -text !eol whitespace=cr-at-eol
 output/nygrid_2025_moses_repair/delivery/structure/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+# Additive controlled diagnosis; immutable numerical and source evidence.
+scripts/nygrid_2025_postrepair_diagnosis/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_postrepair_diagnosis/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_postrepair_diagnosis/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_postrepair_diagnosis/**/sources/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_2025_POSTREPAIR_DIAGNOSIS.md -text !eol whitespace=cr-at-eol

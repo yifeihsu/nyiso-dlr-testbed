@@ -1,0 +1,536 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-16T01:06:08.704320+00:00",
+  "headline": "NYISO publishes generation data, but inspected public products do not provide named StLawrence hourly metered generation.",
+  "data_catalog": [
+    {
+      "dataset": "NYISO P63 Real-Time Fuel Mix",
+      "grain": "Timestamp x statewide fuel category",
+      "time_resolution": "Nominal five minutes; irregular additional intervals occur",
+      "history": "Public index includes Dec2015 onward and every2025 monthly archive",
+      "plant_identification": "No plant, generator or PTID field",
+      "access": "Public daily CSV and monthly ZIP",
+      "usefulness": "Observed statewide Hydro/Wind totals; cannot identify StLawrence or spatial plant dispatch",
+      "url": "https://mis.nyiso.com/public/P-63list.htm",
+      "evidence": "P63_schema_cadence_review.json;sources/NYISO_P63_index.html"
+    },
+    {
+      "dataset": "NYISO Gold Book existing generating facilities",
+      "grain": "Named generator or fleet row; some annual energy is grouped",
+      "time_resolution": "Annual prior-year net energy; seasonal capability and annual inventory snapshot",
+      "history": "Verified2025 edition reports2024 net energy and March2025 resource inventory",
+      "plant_identification": "Yes, at listed resource or grouped fleet grain",
+      "access": "Public PDF",
+      "usefulness": "StLawrenceFDR fleet PTID23600:2024 net energy7355.0GWh; capacity context; not2025 hourly output",
+      "url": "https://www.nyiso.com/documents/20142/2226333/2025-Gold-Book-Public.pdf",
+      "evidence": "sources/NYISO_2025_GoldBook.pdf;TableIII-2a printed84/PDF88"
+    },
+    {
+      "dataset": "NYISO Gold Book annual zonal energy",
+      "grain": "Zone x generator type",
+      "time_resolution": "Annual",
+      "history": "Verified2025 edition TableIII-3c covers2024",
+      "plant_identification": "No individual plant in this table",
+      "access": "Public PDF",
+      "usefulness": "Independent zonal annual generation summary, but year must match study",
+      "url": "https://www.nyiso.com/documents/20142/2226333/2025-Gold-Book-Public.pdf",
+      "evidence": "sources/NYISO_2025_GoldBook.pdf;TableIII-3c printed104/PDF108"
+    },
+    {
+      "dataset": "NYISO P19 Generator Names",
+      "grain": "Named resource/PTID with zone and location fields",
+      "time_resolution": "Reference list",
+      "history": "Live list inspected",
+      "plant_identification": "Yes",
+      "access": "Public CSV/HTML/PDF",
+      "usefulness": "Identity and zone crosswalk only; no generatedMW/MWh",
+      "url": "https://mis.nyiso.com/public/P-19list.htm",
+      "evidence": "sources/NYISO_P19_generator_names.html"
+    },
+    {
+      "dataset": "NYISO P2B/P24B/P4B generator LBMP",
+      "grain": "Timestamp x named generator pricing node/PTID",
+      "time_resolution": "Day-ahead hourly, real-time nominal5min, integrated hourly",
+      "history": "Public daily files and archives; sample2026-10-12 inspected",
+      "plant_identification": "Yes for price node",
+      "access": "Public",
+      "usefulness": "Prices in dollars/MWh, not generator electrical output",
+      "url": "https://mis.nyiso.com/public/P-4Blist.htm",
+      "evidence": "sources/NYISO_P4B_generator_LBMP.csv"
+    },
+    {
+      "dataset": "NYISO P27 delayed bid release",
+      "grain": "Masked generator/bidder x bid record",
+      "time_resolution": "Time-stamped offers and commitment parameters; monthly publication after three-month lag",
+      "history": "Index includes all2025 months and older history",
+      "plant_identification": "Generator and bidder identities deliberately masked; trackable pseudonyms",
+      "access": "Public monthly ZIP",
+      "usefulness": "Offer curves/commitment parameters, not named actual metered dispatch; DispatchMW1-12 are bid points",
+      "url": "https://mis.nyiso.com/public/P-27list.htm",
+      "evidence": "sources/NYISO_P27_masked_bid_description.pdf"
+    },
+    {
+      "dataset": "NYISO participant posted schedules",
+      "grain": "Resource/participant schedule",
+      "time_resolution": "Day-ahead/real-time schedule intervals",
+      "history": "Access controlled by entitlement",
+      "plant_identification": "Entitled participants can view their schedules",
+      "access": "Private to authorized registered participants",
+      "usefulness": "Detailed schedules exist but are not an unrestricted public plant-output feed",
+      "url": "https://www.nyiso.com/documents/20142/2923301/dayahd_schd_mnl.pdf/0024bc71-4dd9-fa80-a816-f9f3e26ea53a",
+      "evidence": "sources/NYISO_DayAheadSchedulingManual.pdf;Sections3.2 printed12-13"
+    },
+    {
+      "dataset": "NYISO P30 DAM daily energy report",
+      "grain": "NYCA aggregate market categories",
+      "time_resolution": "Daily summary with hourly aggregate detail",
+      "history": "Public daily and monthly archives including2025",
+      "plant_identification": "No named plant output",
+      "access": "Public",
+      "usefulness": "Offered/scheduled market energy; virtual supply explicitly distinct from physical production",
+      "url": "https://mis.nyiso.com/public/P-30list.htm",
+      "evidence": "sources/NYISO_P30_DAM_energy_report.html"
+    },
+    {
+      "dataset": "NYISO P15 generation maintenance",
+      "grain": "Date x NYCA forecast outage MW",
+      "time_resolution": "Daily forecast",
+      "history": "Current public report inspected",
+      "plant_identification": "No unit or plant field in current CSV",
+      "access": "Public",
+      "usefulness": "Aggregate outage context; cannot establish StLawrence unit outages",
+      "url": "https://mis.nyiso.com/public/P-15list.htm",
+      "evidence": "sources/NYISO_P15_generation_maintenance.csv"
+    },
+    {
+      "dataset": "NYISO P61 economic dispatch analysis",
+      "grain": "Aggregated above/below ideal dispatch chart",
+      "time_resolution": "Historical daily charts",
+      "history": "Inspected index lists Jul2004-Jan2005 archives",
+      "plant_identification": "No named hourly meter series in report description",
+      "access": "Public historical charts",
+      "usefulness": "Not a2025 StLawrence generation source",
+      "url": "https://mis.nyiso.com/public/P-61list.htm",
+      "evidence": "sources/NYISO_P61_index.html"
+    },
+    {
+      "dataset": "EIA923 final2025 generation (complementary source)",
+      "grain": "Plant x prime mover/fuel x month; respondent frequency matters",
+      "time_resolution": "Monthly generation values: M submitted monthly; AM submitted once annually",
+      "history": "Frozen final2025 workbook verified by hash",
+      "plant_identification": "Yes, stable EIA plantID",
+      "access": "Public",
+      "usefulness": "Observed annual plant energy and monthly StLawrence totals; no hourly net output",
+      "url": "https://www.eia.gov/electricity/data/eia923/",
+      "evidence": "sources/EIA923_official_index.html;D_wind_final_EIA923_source_rows.csv"
+    }
+  ],
+  "NYISO_2026_GoldBook_check": {
+    "official_catalog": "https://www.nyiso.com/load-capacity-data-report-gold-book-",
+    "catalog_found_from_official_system_outlook": true,
+    "catalog_HTML_cached": true,
+    "dynamic_public_listing_attempt_HTTP_status": 500,
+    "exact2026_document_located": false,
+    "unavailability_or_nonexistence_claimed": false,
+    "conclusion": "No2026file was verified through current catalog/search; only2025edition is used. This is a retrieval limitation, not a claim that2026does not exist."
+  },
+  "public_named_StLawrence_hourly_generation_found": false,
+  "universal_absence_claimed": false,
+  "named_generation_nuance": "GoldBook has named generator/fleet annual net energy; StLawrence is a fleet aggregate and its2025edition energy is2024, not2025.",
+  "source_supported_remaining_driver": {
+    "kind": "ZoneD wind spatial allocation inconsistent with final annual plant energy",
+    "qualified_model_energy_MWh": 1662733.2505819518,
+    "entire_year_EIA_energy_MWh": 1425010.0,
+    "qualified_energy_excess_MWh": 237723.2505819518,
+    "qualified_mean_overallocation_lower_bound_MW": 27.479279919310116,
+    "condition_for_qualified_lower_bound": "Current nonnegative net generation bounds on the109excludedhours; not an EIA rule.",
+    "excluded_net_energy_required_if_qualified_model_is_actual_MWh": -237723.2505819518,
+    "excluded_mean_net_power_required_if_qualified_model_is_actual_MW": -2180.9472530454295,
+    "actual_negative_auxiliary_power_bound_established": false,
+    "frequency_sources": [
+      "https://www.eia.gov/survey/form/eia_923/instructions.pdf",
+      "https://docs.catalyst.coop/pudl/en/v2026.2.0/_modules/pudl/metadata/codes.html"
+    ],
+    "mechanism": "The existing prior allocates the statewide wind signal using active nameplate shares and the same capacity factor at every site. Plant-specific annual energy and weather or curtailment are not imposed.",
+    "causal_limit": "The energy excess is established. Its exact contribution to Moses error is conditional on northern load/boundary/operator correctness; no wind repair or causal intervention is performed.",
+    "annual_EIA_equal_sum_months": true,
+    "plants": [
+      {
+        "plant_id": 56618,
+        "plant_name": "Clinton",
+        "EIA_net_generation_MWh": 177641.0,
+        "diagnostic_full_calendar_MWh": 249430.13529416855,
+        "diagnostic_full_minus_EIA_MWh": 71789.13529416853,
+        "relative_difference_pct": 40.41248095550494
+      },
+      {
+        "plant_id": 56619,
+        "plant_name": "Ellenburg",
+        "EIA_net_generation_MWh": 167719.0,
+        "diagnostic_full_calendar_MWh": 201033.24337141943,
+        "diagnostic_full_minus_EIA_MWh": 33314.24337141942,
+        "relative_difference_pct": 19.863130218651087
+      },
+      {
+        "plant_id": 56857,
+        "plant_name": "Marble River Wind Farm",
+        "EIA_net_generation_MWh": 495408.0,
+        "diagnostic_full_calendar_MWh": 534351.3246650198,
+        "diagnostic_full_minus_EIA_MWh": 38943.324665019805,
+        "relative_difference_pct": 7.860859062635202
+      },
+      {
+        "plant_id": 56901,
+        "plant_name": "Altona",
+        "EIA_net_generation_MWh": 177284.0,
+        "diagnostic_full_calendar_MWh": 241984.4596137456,
+        "diagnostic_full_minus_EIA_MWh": 64700.45961374561,
+        "relative_difference_pct": 36.49537443522575
+      },
+      {
+        "plant_id": 56904,
+        "plant_name": "Chateaugay",
+        "EIA_net_generation_MWh": 200788.0,
+        "diagnostic_full_calendar_MWh": 264321.48665501445,
+        "diagnostic_full_minus_EIA_MWh": 63533.486655014436,
+        "relative_difference_pct": 31.64207355768992
+      },
+      {
+        "plant_id": 59629,
+        "plant_name": "Jericho Rise Wind Farm LLC",
+        "EIA_net_generation_MWh": 206170.0,
+        "diagnostic_full_calendar_MWh": 192843.0001229542,
+        "diagnostic_full_minus_EIA_MWh": -13326.999877045808,
+        "relative_difference_pct": -6.464082978632104
+      }
+    ],
+    "source_crosswalk": {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/D_wind_asset_source_crosswalk.csv",
+      "sha256": "d45538cc0d294b55a984ff387681e5168f92e33d881d312583343eb34ea51cc6",
+      "bytes": 3541
+    },
+    "AM_monthly_caveat": "Four plants have raw code AM and supply monthly generation values once annually; Marble River and Jericho Rise have code M and report monthly. AM is not annual-total monthly imputation. Neither reporting frequency establishes hourly telemetry.",
+    "code_citations": [
+      {
+        "path": "scripts/nygrid_2025_inputs/generation_priors.py",
+        "lines": "484-506",
+        "claim": "Wind zonal allocation weights active nameplate against statewide Wind total."
+      },
+      {
+        "path": "scripts/nygrid_2025_dispatch/build_dispatch_priors.py",
+        "lines": "500-514",
+        "claim": "Unit/plant allocation broadcasts active nameplate weights across hours and normalizes to P63 Wind total."
+      },
+      {
+        "path": "scripts/nygrid_2025_inputs/generation_priors.py",
+        "lines": "651",
+        "claim": "Explicit same statewide capacity factor assumption."
+      }
+    ]
+  },
+  "other_D_HY_summary": {
+    "plants": 19,
+    "matched_EIA_plants": 18,
+    "missing_EIA_plants": [
+      {
+        "plant_id": 50093,
+        "plant_name": "Chateaugay High Falls Hydro",
+        "current_full_calendar_reconstruction_MWh": 1046.4107081389911
+      }
+    ],
+    "EIA_target_MWh": 202928.0,
+    "matched_current_full_calendar_MWh": 186009.19874541418,
+    "all_current_full_calendar_MWh": 187055.60945355316,
+    "current_qualified_MWh": 184414.53573248934,
+    "excluded_latent_MWh": 2641.073721063841,
+    "full_calendar_difference_MWh": -16918.801254585815,
+    "reference_before_StL_repair_MWh": 197332.48295665625,
+    "change_due_to_StL_repair_MWh": -10276.873503103057
+  },
+  "shape_control_summary": {
+    "qualified_StL_delta": {
+      "mean": 0.4199210931272458,
+      "MAE": 71.00700172312276,
+      "min": -133.99783667554425,
+      "max": 347.5425874997864
+    },
+    "qualified_native_D_delta": {
+      "mean": 0.5009759477148444,
+      "MAE": 70.1034419144898,
+      "min": -132.11542159999198,
+      "max": 342.4256226705096
+    },
+    "monthly_energy_error_MWh": 2.3283064365386963e-10,
+    "hourly_HY_total_error_public_MW": 9.094947017729282e-12,
+    "current_cap_hours_qualified": 3161
+  },
+  "shape_AC_summary": {
+    "passed": true,
+    "hours": [
+      651,
+      866,
+      1539,
+      2234,
+      3327,
+      3964,
+      5068,
+      5091,
+      6218,
+      7203,
+      7347,
+      8284
+    ],
+    "sample_current_Moses_MAE_public_MW": 184.51947067084905,
+    "sample_control_Moses_MAE_public_MW": 119.42508256400363,
+    "maximum_cut_closure_error_public_MW": 3.865352482534945e-12,
+    "maximum_terminal_correction_delta_public_MW": 8.37393628612324
+  },
+  "model_map_package_unchanged": true,
+  "no_wind_projection": true,
+  "receipt_files": [
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/official_source_cache_receipt.json",
+      "sha256": "92dc2f166af840237ed45f7be0add1c60f1742536c9f8421d837b194048354ea",
+      "bytes": 7353
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/P63_schema_cadence_review.json",
+      "sha256": "067234ad235dbf18de3e48be34753ad8af589a4c6ed3e027814583d6146480f0",
+      "bytes": 935
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/D_wind_source_energy_review.json",
+      "sha256": "3031b3065ce49eb50efb6566ba1a954f082e36a7c7dfe34e7d5c3f72961a9a4f",
+      "bytes": 7146
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/D_HY_source_energy_review.json",
+      "sha256": "d8f7123b7d1037a2ebc04529a7aa7cb18e10c7d1dadf3aea5cd714bab060f119",
+      "bytes": 6946
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/monthly_flat_control_receipt.json",
+      "sha256": "dad4f07c86d6c955729d120c2148a784bb2e59c7189cc5987e1ad662ba230981",
+      "bytes": 2497
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/shape_ac/monthly_flat_AC_receipt.json",
+      "sha256": "cb9e49bc1d71d7ff9841ace3579a4e1a0f14b058f6ab2b39205ad7cdc98aecc4",
+      "bytes": 16469
+    }
+  ],
+  "source_download_receipts": [
+    {
+      "url": "https://www.eia.gov/electricity/data/eia923/",
+      "retrieved_utc": "2026-10-16T00:51:09.979712+00:00",
+      "sha256": "64d60aee3113e661b138e7681f3e2ae75aa96eaf432a8de0240d1792587c80b6",
+      "bytes": 65728,
+      "http_status": 200
+    },
+    {
+      "url": "https://www.nyiso.com/documents/20142/2226333/2025-Gold-Book-Public.pdf",
+      "final_url": "https://www.nyiso.com/documents/20142/2226333/2025-Gold-Book-Public.pdf",
+      "retrieved_utc": "2026-10-16T00:38:43.388915+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "application/pdf",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_2025_GoldBook.pdf",
+      "bytes": 2122546,
+      "sha256": "cc43665b9344a04b4c9355edd1dc7e31d42a6bb759ffe027ad867221556aea8e"
+    },
+    {
+      "url": "https://www.nyiso.com/documents/20142/2923301/dayahd_schd_mnl.pdf/0024bc71-4dd9-fa80-a816-f9f3e26ea53a",
+      "final_url": "https://www.nyiso.com/documents/20142/2923301/dayahd_schd_mnl.pdf/0024bc71-4dd9-fa80-a816-f9f3e26ea53a",
+      "retrieved_utc": "2026-10-16T00:38:43.415173+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "application/pdf",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_DayAheadSchedulingManual.pdf",
+      "bytes": 1627799,
+      "sha256": "eb6255bfdf8463c86952947bbfef3d4ef264acafc5c78c7115cb4b37a3fcd175"
+    },
+    {
+      "url": "https://www.nyiso.com/o/nyiso-document-library/assets/index-BPS62cYd.js?t=1790834805722",
+      "retrieved_utc": "2026-10-16T00:45:08.360388+00:00",
+      "sha256": "d58132a464f47325d93ee6b47422f0b691cb367cb6e318fbef6f584679948cf8",
+      "bytes": 232573
+    },
+    {
+      "url": "https://www.nyiso.com/load-capacity-data-report-gold-book-",
+      "retrieved_utc": "2026-10-16T00:43:56.908105+00:00",
+      "http_status": 200,
+      "sha256": "0bc47b03745dabc748dad4b65d631080cde09793c0153538f1e54277683c345f",
+      "bytes": 152923,
+      "links": [
+        {
+          "text": "Load & Capacity Data Report (Gold Book)",
+          "href": "https://www.nyiso.com/load-capacity-data-report-gold-book-"
+        },
+        {
+          "text": "Load & Capacity Data Report (Gold Book)",
+          "href": "https://www.nyiso.com/load-capacity-data-report-gold-book-"
+        },
+        {
+          "text": "Load & Capacity Data Report (Gold Book)",
+          "href": "https://www.nyiso.com/load-capacity-data-report-gold-book-"
+        }
+      ]
+    },
+    {
+      "url": "https://mis.nyiso.com/public/csv/genmaint/gen_maint_report.csv",
+      "retrieved_utc": "2026-10-16T00:51:11.070282+00:00",
+      "sha256": "2594d1152af10a9c4e804e9cb059d86bcbc070b3cb22f200f00d5fcd62820a7b",
+      "bytes": 679,
+      "http_status": 200
+    },
+    {
+      "url": "https://mis.nyiso.com/public/P-15list.htm",
+      "final_url": "https://mis.nyiso.com/public/P-15list.htm",
+      "retrieved_utc": "2026-10-16T00:38:42.806419+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "text/html",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_P15_index.html",
+      "bytes": 509,
+      "sha256": "eb477a8d720b79736c75a4dc4c96f59946bd8a1a1aa57a5a89659204007715e1"
+    },
+    {
+      "url": "https://mis.nyiso.com/public/htm/generator/generator.htm",
+      "final_url": "https://mis.nyiso.com/public/htm/generator/generator.htm",
+      "retrieved_utc": "2026-10-16T00:38:42.808232+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "text/html",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_P19_generator_names.html",
+      "bytes": 200846,
+      "sha256": "8325e7a7f47899c87e589036135a89f220a33f2d584da264d3bf98247aa47a94"
+    },
+    {
+      "url": "https://mis.nyiso.com/public/P-27list.htm",
+      "final_url": "https://mis.nyiso.com/public/P-27list.htm",
+      "retrieved_utc": "2026-10-16T00:38:42.807113+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "text/html",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_P27_index.html",
+      "bytes": 350747,
+      "sha256": "3aa4990037cdcd32e33d7d7f6f639bd81276b942a0d9b56a5188b627c43a9240"
+    },
+    {
+      "url": "https://mis.nyiso.com/public/postings/NYISO%203%20Month%20Bid%20Data%20Release%20Description_V1.pdf",
+      "final_url": "https://mis.nyiso.com/public/postings/NYISO%203%20Month%20Bid%20Data%20Release%20Description_V1.pdf",
+      "retrieved_utc": "2026-10-16T00:38:42.821586+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "application/pdf",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_P27_masked_bid_description.pdf",
+      "bytes": 31193,
+      "sha256": "b2974ae201c19c8391da42b952034e40551e2443d47a3ec1dd956613ffa85d93"
+    },
+    {
+      "url": "https://mis.nyiso.com/public/htm/damenergy/20261016DAM_energy_rep.htm",
+      "final_url": "https://mis.nyiso.com/public/htm/damenergy/20261016DAM_energy_rep.htm",
+      "retrieved_utc": "2026-10-16T00:38:42.951996+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "text/html",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_P30_DAM_energy_report.html",
+      "bytes": 23039,
+      "sha256": "15b80df33a055c4235f765061f2258dfe3cf141ed9641b3be7339aae8e4010e7"
+    },
+    {
+      "url": "https://mis.nyiso.com/public/csv/rtlbmp/20261012rtlbmp_gen.csv",
+      "retrieved_utc": "2026-10-16T00:51:11.380635+00:00",
+      "sha256": "ed251d832b1864dbab790218ca6e97b85cf8e03bda75375e7b024c0ebc090314",
+      "bytes": 1116798,
+      "http_status": 200
+    },
+    {
+      "url": "https://mis.nyiso.com/public/P-4Blist.htm",
+      "final_url": "https://mis.nyiso.com/public/P-4Blist.htm",
+      "retrieved_utc": "2026-10-16T00:39:18.638843+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "text/html",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_P4B_index.html",
+      "bytes": 152028,
+      "sha256": "b858bc83ce3aaf742e8125f816d7ec9a56ba9a0e117f668be3b559259ec20101"
+    },
+    {
+      "url": "https://mis.nyiso.com/public/P-61list.htm",
+      "final_url": "https://mis.nyiso.com/public/P-61list.htm",
+      "retrieved_utc": "2026-10-16T00:38:43.198545+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "text/html",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_P61_index.html",
+      "bytes": 5052,
+      "sha256": "0d34a86d6c0379b613845a4b7ff6137d32af8c730920dbd1e5c16d51f89946f5"
+    },
+    {
+      "url": "https://mis.nyiso.com/public/csv/rtfuelmix/20250101rtfuelmix_csv.zip",
+      "final_url": "https://mis.nyiso.com/public/csv/rtfuelmix/20250101rtfuelmix_csv.zip",
+      "retrieved_utc": "2026-10-16T00:38:43.236707+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "application/zip",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_P63_202501.zip",
+      "bytes": 313927,
+      "sha256": "fb509edf63a7f087e90c97b7ab2a169dd037de10a2eaa80caf343cd4a9a1a177"
+    },
+    {
+      "url": "https://mis.nyiso.com/public/csv/rtfuelmix/20261014rtfuelmix.csv",
+      "final_url": "https://mis.nyiso.com/public/csv/rtfuelmix/20261014rtfuelmix.csv",
+      "retrieved_utc": "2026-10-16T00:38:43.061849+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "text/csv",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_P63_20261014.csv",
+      "bytes": 87237,
+      "sha256": "c13f8b9f3b33acc00e97d91e260acbe0c30181798bc8962583784435a3d4467e"
+    },
+    {
+      "url": "https://mis.nyiso.com/public/P-63list.htm",
+      "final_url": "https://mis.nyiso.com/public/P-63list.htm",
+      "retrieved_utc": "2026-10-16T00:38:42.806594+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "text/html",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_P63_index.html",
+      "bytes": 26562,
+      "sha256": "397b9ba46b3dc07dbd0c41e3aa404ce5c344183b962fd806135b91876e0c7b5d"
+    },
+    {
+      "url": "https://mis.nyiso.com/public/menu.htm",
+      "final_url": "https://mis.nyiso.com/public/menu.htm",
+      "retrieved_utc": "2026-10-16T00:38:42.806934+00:00",
+      "http_status": 200,
+      "status": "downloaded_and_type_verified",
+      "content_type": "text/html",
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/sources/NYISO_public_menu.html",
+      "bytes": 11866,
+      "sha256": "173aa206a9508a1cbb05a48104c72c9c49aca5b27b77bf8b502ae30c8b62fbf2"
+    },
+    {
+      "url": "https://www.nyiso.com/ny-power-system-information-outlook",
+      "retrieved_utc": "2026-10-16T00:43:45.141236+00:00",
+      "http_status": 200,
+      "sha256": "85b9c98ca874f67a10979751b4af3bc88001e91dab687e2d3c05dcb2453cd188",
+      "bytes": 155003,
+      "links": [
+        {
+          "text": "Load & Capacity Data Report (Gold Book)",
+          "href": "https://www.nyiso.com/load-capacity-data-report-gold-book-"
+        },
+        {
+          "text": "Load & Capacity Data Report (Gold Book)",
+          "href": "https://www.nyiso.com/load-capacity-data-report-gold-book-"
+        },
+        {
+          "text": "Load & Capacity Data Report (Gold Book)",
+          "href": "https://www.nyiso.com/load-capacity-data-report-gold-book-"
+        }
+      ]
+    }
+  ]
+}

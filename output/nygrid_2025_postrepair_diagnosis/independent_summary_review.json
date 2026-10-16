@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-16T01:07:42.272691+00:00",
+  "immutable_sources_and_current_delivery_files_checked": 55,
+  "all_four_qualified_hours": 8651,
+  "independent_metric_and_effect_checks": 224,
+  "maximum_metric_discrepancy": 5.684341886080802e-14,
+  "D_wind_qualified_energy_exceeds_entire_EIA_year_MWh": 237723.2505819518,
+  "minimum_D_wind_mean_excess_on_qualified_hours_MW": 27.479279919310116,
+  "implied_Moses_bias_after_minimum_wind_energy_correction_holding_other_terms_MW": -3.159669784557007,
+  "full_year_wind_point_estimate_is_not_used_for_robust_bound": true,
+  "wind_lower_bound_requires_current_nonnegative_excluded_generation_bounds": true,
+  "EIA_net_generation_can_be_negative_when_station_service_exceeds_gross": true,
+  "excluded_hour_mean_net_generation_required_to_erase_excess_MW": -2180.9472530454295,
+  "individual_input_effects_are_within_model_not_real_world_causal_estimates": true,
+  "current_model_map_handoff_and_pointer_unchanged": true
+}
