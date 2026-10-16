@@ -1,7 +1,7 @@
 # Weekly report: downstate refinement and 2025 operating inputs
 
-This 15-slide Beamer deck follows the supplied Madrid/beaver 16:9 template:
-12 main slides, including the cover, followed by three backup slides.
+This 16-slide Beamer deck follows the supplied Madrid/beaver 16:9 template:
+13 main slides, including the cover, followed by three backup slides.
 The report date and evidence snapshot are October 15, 2026; final preparation
 continued after midnight. The template's previous subject content is excluded.
 
@@ -51,12 +51,22 @@ Absolute and relative errors are separate. Total East has the largest MAE;
 West Central has the largest WAPE. Confirmed input inconsistencies,
 within-model ablation effects and unresolved physical causes are distinguished.
 
+Slide 9 adds the October 16 comparison of the reproduced released 2019 DC
+benchmark with the current 2025 AC model. It reports MAE and WAPE changes and
+changes in mean absolute NYISO-reported flow. The 2019 scores use the authors'
+supplied interface map, rather than the plotting helper's stale indices.
+These are recomputed scores, not values quoted from the paper's Figure 5.
+The periods, operating inputs, physics, prepared observations and diagnostic
+operators differ; the comparison does not isolate a topology effect.
+
 ## Repository regeneration
 
 From the repository root:
 
 ~~~powershell
 python scripts/nygrid_weekly_20261015/prepare_slide_data.py
+python scripts/nygrid_weekly_20261015/build_2019_comparison_evidence.py
+python scripts/nygrid_weekly_20261015/add_comparison_slide.py
 ~~~
 
 Figure generation uses scripts/nygrid_weekly_20261015/build_downstate_figure.py.

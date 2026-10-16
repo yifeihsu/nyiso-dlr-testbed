@@ -85,7 +85,27 @@ Sources: `output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_receipt.
 
 Sources: `output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv`; `scoring_receipt.json`; deck `data/errors_mae.csv` and `data/errors_wape.csv`. Full-precision source rows remain in the CSVs.
 
-## 9. Total East: Why the Latest Error Increased
+## 9. 2019 Benchmark vs. 2025: Errors and Observed Flows
+
+This slide was added October 16, 2026. It compares recomputed errors for the authors’ released 57-bus DC model and supplied 2019 inputs with the latest completed 2025 AC model, moses_repair_v1. It is a cross-year descriptive comparison, not a controlled test of topology alone. The authors’ supplied if.map is used for 2019; their plotting helper has stale branch indices for five interfaces. The exact published Figure 5 is not claimed as reproduced. The paper reports a different limit-normalized metric.
+
+All quantities are public MW. The source cohorts are 8,760 prepared 2019 positions and 8,651 source-qualified 2025 hours. WAPE uses the sum of absolute observations; the observed magnitude column is its denominator per hour. It is not signed net flow, energy or statewide throughput. Source preparation, exclusions and physical interface definitions differ.
+
+| Interface | MAE 2019 → 2025, MW | Change, MW | MAE change, % | WAPE 2019 → 2025, % | Change, pp | Observed mean absolute flow 2019 → 2025, MW | Flow change, % |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Total East | 286.527 → 499.304 | +212.777 | +74.26 | 7.235 → 15.949 | +8.714 | 3960.140 → 3130.571 | -20.95 |
+| Dysinger East | 209.918 → 249.433 | +39.515 | +18.82 | 22.494 → 29.742 | +7.247 | 933.205 → 838.662 | -10.13 |
+| West Central | 218.463 → 247.053 | +28.589 | +13.09 | 46.806 → 44.362 | -2.444 | 466.744 → 556.900 | +19.32 |
+| UPNY–ConEd | 241.124 → 235.207 | -5.917 | -2.45 | 9.912 → 7.844 | -2.068 | 2432.643 → 2998.501 | +23.26 |
+| Central East | 211.800 → 208.719 | -3.080 | -1.45 | 9.630 → 12.545 | +2.915 | 2199.388 → 1663.807 | -24.35 |
+| SPR/DUN–South | 299.571 → 177.242 | -122.330 | -40.83 | 10.886 → 9.592 | -1.295 | 2751.781 → 1847.905 | -32.85 |
+| Moses South | 152.702 → 108.945 | -43.757 | -28.66 | 8.993 → 20.178 | +11.185 | 1698.018 → 539.908 | -68.20 |
+
+Moses South illustrates the denominator effect: lower MW error accompanies higher WAPE because reported flow magnitude is much lower. Its reported signed mean and negative-hour share also change markedly. These describe the public reported series; they do not prove reversal through an unchanged physical meter. Dated physical membership and exact P32 effective switching times remain unresolved. Central East to Central East–VC is a comparison-name crosswalk, not proof of constant circuit membership. Do not pool the seven overlapping interfaces into a statewide improvement score.
+
+Sources: evidence/2019_comparison_current.csv and companion evidence review; data/comparison_2019_2025.csv; 2019 annual MAT readbacks and current comparison_arrays.npz as fingerprinted in source_manifest.json. Full signed-flow, variation and direction statistics are retained in the evidence CSVs.
+
+## 10. Total East: Why the Latest Error Increased
 
 - Define the factorial scenarios before interpreting the chart: **B** is the previous physical-repair baseline; **G** applies the corrected St. Lawrence hydro allocation, dated unit admission and capability bounds; **P** applies PV20 routing with the opposite ISO-NE pool adjustment; **GP** is the released combined Moses repair.
 - G and P are two additional completed annual ablations, compared on the same 8,651 hours as the saved B and GP cases. Their purpose is controlled attribution inside this model.
@@ -101,7 +121,7 @@ Sources: `output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/publ
 
 Sources: `NYGRID_2025_POSTREPAIR_DIAGNOSIS.md`; `output/nygrid_2025_postrepair_diagnosis/ablations/scenario_recipe.json`; `factorial_metrics.csv`; `factorial_attribution.csv`; `boundary/readout_sensitivity_metrics.csv`.
 
-## 10. Moses South: Remaining Generation Issues
+## 11. Moses South: Remaining Generation Issues
 
 - The chart compares combined energy for the same six matched Zone D wind plants. Final EIA annual energy is 1,425,010 MWh; modeled energy in the 8,651 qualified hours alone is 1,662,733.250582 MWh. It does not claim every plant individually has excess energy.
 - The excess is 237,723.250582 MWh. Under the current nonnegative wind-output bounds for all 109 excluded hours, at least 27.479280 MW of mean qualified-hour Zone D wind must be removed to meet the annual source total. This lower bound does not rely on an invented missing-hour shape.
@@ -111,7 +131,7 @@ Sources: `NYGRID_2025_POSTREPAIR_DIAGNOSIS.md`; `output/nygrid_2025_postrepair_d
 
 Sources: `output/nygrid_2025_postrepair_diagnosis/generation/D_wind_source_energy_review.json`; `D_wind_annual_EIA_comparison.csv`; `monthly_flat_frozen_terminal_scores.csv`; `generation/shape_ac/monthly_flat_AC_receipt.json`; `output/nygrid_2025_moses_repair/boundary/PV20_source_receipt.json`.
 
-## 11. Western Interfaces: Source and Control Gaps
+## 12. Western Interfaces: Source and Control Gaps
 
 - The 44.362102% West Central and 29.741813% Dysinger East WAPEs are current AC results. Earlier western DC comparisons and correlation diagnostics remain historical evidence about the reconstruction mechanism, not new current-AC statistics.
 - The earlier source audit matched all 108 Niagara/Lewiston/Gilboa monthly target quantities to final EIA. That supports those source quantities and arithmetic; it does not establish accurate hourly dispatch or hard satisfaction of every plant-month energy total after statewide reconciliation.
@@ -120,7 +140,7 @@ Sources: `output/nygrid_2025_postrepair_diagnosis/generation/D_wind_source_energ
 
 Sources: `NYGRID_2025_WESTERN_SOURCE_AUDIT.md`; `output/nygrid_2025_western_audit/generation/EIA923_target_vintage_comparison.csv`; `generation/source_interpretation.json`; `mapping/physical_source_scope.json`; current `public_interface_metrics.csv`.
 
-## 12. Next Modeling Priorities
+## 13. Next Modeling Priorities
 
 - First correct the source-backed plant-energy inconsistency while preserving statewide generation totals and physical bounds. Keep reported monthly energy separate from inferred hourly shape.
 - Complete the interface operators before treating agreement with their current proxies as a physical calibration objective.
@@ -129,7 +149,7 @@ Sources: `NYGRID_2025_WESTERN_SOURCE_AUDIT.md`; `output/nygrid_2025_western_audi
 
 Sources: `NYGRID_2025_POSTREPAIR_DIAGNOSIS.md`; `output/nygrid_2025_moses_repair/delivery/docs/START_HERE.md`; current annual `annual_receipt.json`.
 
-## 13. Appendix: Counts, Units and Comparison Scope
+## 14. Appendix: Counts, Units and Comparison Scope
 
 - Each count refers to a named representation: the released 57-bus benchmark, the derived 140-bus structural counterpart, the 191-bus station-detail construction, or the 266/267-bus detailed AC network recovered from 148 retained voltages. Do not treat these as interchangeable networks.
 - The current 1,466 generator rows comprise 1,437 native rows, 27 regional loss participants, fixed HQ and fixed PV20 boundary rows. Six transfer records mean four inherited transfers plus two Ontario PAR equivalents, not six physical HVDC assets.
@@ -138,7 +158,7 @@ Sources: `NYGRID_2025_POSTREPAIR_DIAGNOSIS.md`; `output/nygrid_2025_moses_repair
 
 Sources: `NYGRID_RELEASED_2019_COMPARISON.md`; `NYGRID_2019_DLR_REBUILD.md`; `output/nygrid_2025_moses_repair/model/model_generator_register.csv`; `delivery/structure/current_structure_inventory.json`; current `comparison/scoring_receipt.json`.
 
-## 14. Appendix: Public Generation Data and Assumptions
+## 15. Appendix: Public Generation Data and Assumptions
 
 - P63 verifies statewide fuel totals, not individual plant dispatch. The Gold Book provides named resources and prior-year annual energy; the verified 2025 edition's annual generation refers to 2024.
 - EIA-923 gives the matched plant-energy evidence used in these audits. It does not provide the hourly dispatch shape inferred by the model.
@@ -148,7 +168,7 @@ Sources: `NYGRID_RELEASED_2019_COMPARISON.md`; `NYGRID_2019_DLR_REBUILD.md`; `ou
 
 Sources: `NYGRID_2025_POSTREPAIR_DIAGNOSIS.md`; `output/nygrid_2025_postrepair_diagnosis/generation/generation_data_availability.csv`; `generation_source_review.json`; `D_wind_source_energy_review.json`.
 
-## 15. Appendix: Sources and Reproducibility
+## 16. Appendix: Sources and Reproducibility
 
 - `source_manifest.json` binds source filenames and hashes; the `data/` CSVs hold exact plotted values. `main.tex` is the editable slide source; this file supplies speaking notes and interpretation limits.
 - Current headline values are fresh readbacks of completed saved runs, not new solves performed for this deck. The historical 2019 reproduction and intermediate DC/AC stages remain separately named and preserved.

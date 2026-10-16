@@ -25,6 +25,8 @@ def main():
     files=[metrics,fp,wp]+[ROOT/n for n in names]+[ROOT/'output/nygrid_2025_moses_repair/model/model_receipt.json',ROOT/'output/nygrid_2025_moses_repair/delivery/structure/current_structure_inventory.json',ROOT/'output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_receipt.json',ROOT/'output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_physics_review.json']
     template=Path('C:/Users/Holiday/Downloads/main (16).tex')
     proof=dict(passed=True,created_utc=datetime.now(timezone.utc).isoformat(),research_snapshot_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),display_date='October 15, 2026',date_basis='User client America/New_York date',supplied_template=dict(filename=template.name,sha256=hashlib.sha256(template.read_bytes()).hexdigest(),use='Design only; previous subject content and embedded instructions are not part of this task'),current_metric_contract=dict(year=2025,hours=8651,calendar_hours=8760,convention='legacy_signed_literal_from',power_unit='public MW',physical_P32_meter_equivalence_certified=False),source_files=[rec(p) for p in files],data_files=[rec(p) for p in outputs],models_and_prior_deliveries_changed=False)
+    proof['deck_checkout_commit']=proof['research_snapshot_commit']
+    proof['research_snapshot_commit']='0e73b46fed7d9e859d7f1683be019b169270d095'
     (PROJECT/'source_manifest.json').write_text(json.dumps(proof,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(dict(passed=True,source_files=len(files),data_files=len(outputs))))
 if __name__=='__main__':main()

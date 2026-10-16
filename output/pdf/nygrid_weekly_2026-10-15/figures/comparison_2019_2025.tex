@@ -1,0 +1,31 @@
+\begin{frame}{2019 Benchmark vs. 2025: Errors and Observed Flows}
+\scope{Released 2019 DC case (8,760 h) $\to$ current 2025 AC case (8,651 eligible h)}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrr@{}}
+\toprule
+ & \makecell{MAE (MW)\\2019 $\to$ 2025} & $\Delta$ MW
+ & \makecell{WAPE (\%)\\2019 $\to$ 2025} & $\Delta$ pp
+ & \makecell{NYISO mean $|F|$ (MW)\\2019 $\to$ 2025} & $\Delta$\% \\
+\midrule
+Total East & 286.5$\to$499.3 & \bad{$+212.8$} & 7.24$\to$15.95 & \bad{$+8.71$} & 3,960$\to$3,131 & $-20.9$ \\
+Dysinger East & 209.9$\to$249.4 & \bad{$+39.5$} & 22.49$\to$29.74 & \bad{$+7.25$} & 933$\to$839 & $-10.1$ \\
+West Central & 218.5$\to$247.1 & \bad{$+28.6$} & 46.81$\to$44.36 & \good{$-2.44$} & 467$\to$557 & $+19.3$ \\
+UPNY--ConEd & 241.1$\to$235.2 & \good{$-5.9$} & 9.91$\to$7.84 & \good{$-2.07$} & 2,433$\to$2,999 & $+23.3$ \\
+Central East & 211.8$\to$208.7 & \good{$-3.1$} & 9.63$\to$12.54 & \bad{$+2.91$} & 2,199$\to$1,664 & $-24.4$ \\
+SPR/DUN--South & 299.6$\to$177.2 & \good{$-122.3$} & 10.89$\to$9.59 & \good{$-1.29$} & 2,752$\to$1,848 & $-32.8$ \\
+Moses South & 152.7$\to$108.9 & \good{$-43.8$} & 8.99$\to$20.18 & \bad{$+11.19$} & 1,698$\to$540 & $-68.2$ \\
+\bottomrule
+\end{tabular*}
+\par\vspace{0.2em}
+{\scriptsize $\Delta$ = 2025 minus 2019; pp = percentage points. Mean $|F|$ is the absolute reported interface-flow magnitude.}
+\par\vspace{0.4em}
+\footnotesize
+\textbf{Moses South:} MAE falls 28.7\%, while WAPE rises 11.19 pp as mean $|F|$ falls 68.2\%.
+\par\vspace{0.2em}Reported signed mean: $+1,697\to -190$ MW; negative-flow hours: 0.1\%$\to$68.6\%.
+
+\par\vspace{0.3em}
+\textbf{Cross-year scope:} inputs, physics, cohorts and meter definitions differ; changes do not isolate a topology effect.
+\reportsource{[1,4] 2019: author-release if.map; 2025: moses\_repair\_v1. Recomputed WAPE; the paper's limit-normalized metric differs. Physical meter continuity remains unverified.}
+\end{frame}

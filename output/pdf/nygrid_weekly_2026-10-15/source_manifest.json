@@ -19,11 +19,6 @@
   },
   "source_files": [
     {
-      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv",
-      "sha256": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308",
-      "bytes": 261282
-    },
-    {
       "path": "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_metrics.csv",
       "sha256": "00660a3798cbc2b5e7e1275449fb4e4e05f8155fa64d45432bbeff953afdcdb6",
       "bytes": 243845
@@ -87,6 +82,71 @@
       "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_physics_review.json",
       "sha256": "f41e9e9d819a5a0a344fdcfbcf5a21b2a652d6337c29fc83ebc8a89237afdc90",
       "bytes": 14635
+    },
+    {
+      "path": "output/nygrid_2019/verification_manifest.json",
+      "sha256": "7c8195017078f4ee707be11f0dbf2a813575b146870f5f9cafad16c27a0d4127",
+      "bytes": 17618
+    },
+    {
+      "path": "output/nygrid_2019/upstream_manifest.json",
+      "sha256": "6ea267b07fa3fd0ca9c24f93b660b02ac4704b4a3bedf2b0fe34ce173cadd6da",
+      "bytes": 27842
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/updateOpCond.m",
+      "sha256": "12cd365b756612d46dc10f1ec5c9ff39a9b54f191b0c6db64e2d1aa990794520",
+      "bytes": 20110
+    },
+    {
+      "path": "output/nygrid_released_2019_comparison/independent/released_2019_recomputed_metrics.csv",
+      "sha256": "e72d9292f3bb9982ef56066774843106f744eea49b08868350afc41682133f7f",
+      "bytes": 5966
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv",
+      "sha256": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308",
+      "bytes": 261282
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079",
+      "bytes": 6391233
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/scoring_receipt.json",
+      "sha256": "3dc8fb5fb58db73e6add7b17cc76cbb1c813436d1c009783ac2da08e90435d25",
+      "bytes": 6227
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f",
+      "bytes": 2258117
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_quality_wide.csv",
+      "sha256": "4deee20774691c3193a5ecab239fc3d25878dec34c143ca90f1eb9d6ed158262",
+      "bytes": 1288521
+    },
+    {
+      "path": "output/nygrid_2019/annual_1.mat",
+      "sha256": "314d817570b4edfd60b0970f25aee8d126bffd46aa70ceba8ee3bde10b05f274",
+      "bytes": 5569790
+    },
+    {
+      "path": "output/nygrid_2019/annual_2.mat",
+      "sha256": "e72ddd82be691ad4a46cd74c1316e450763944f259cce95e071b972b986383c6",
+      "bytes": 5545875
+    },
+    {
+      "path": "output/nygrid_2019/annual_3.mat",
+      "sha256": "47375d88c36e2a3af33a85eeed461396186404fe9c7486ff43ed4aaec2988aab",
+      "bytes": 5767795
+    },
+    {
+      "path": "output/nygrid_2019/annual_4.mat",
+      "sha256": "795f57ce1ee3f483484da4f98461a9a47eaf15ca573a1dadca3bd3804a5f7431",
+      "bytes": 5461165
     }
   ],
   "data_files": [
@@ -109,7 +169,23 @@
       "path": "output/pdf/nygrid_weekly_2026-10-15/data/wind_energy.csv",
       "sha256": "632a180bff2cc9a5c151fa1ea6ed6dfbe1617f8581856c0999e86dc363a9906f",
       "bytes": 40
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/data/comparison_2019_2025.csv",
+      "sha256": "2844df2e8847d7df845376949c5ee7aa53c7aec98bf7cc02ad83f73928d62f2a",
+      "bytes": 2148
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/figures/comparison_2019_2025.tex",
+      "sha256": "59cf83e6ff740b0327140ba9ddd8fdf1681ab53fe0e9a42cc116ef6065d54398",
+      "bytes": 2036
     }
   ],
-  "models_and_prior_deliveries_changed": false
+  "models_and_prior_deliveries_changed": false,
+  "presentation_revision": {
+    "date": "October 16, 2026",
+    "added_slide": 9,
+    "base_deck_commit": "1172727343f7ff5411163da59cb2956004b3aa36",
+    "comparison": "Recomputed released 2019 DC versus latest completed 2025 AC; cross-year descriptive only"
+  }
 }

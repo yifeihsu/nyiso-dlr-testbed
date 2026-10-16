@@ -1,9 +1,26 @@
 {
   "passed": true,
-  "pdf_sha256": "1397308903427234099dc61bf783341e84eafff0714d8abef2c3ce7715d231a0",
-  "main_tex_sha256": "b874b3dab776eb67d68c66afa3d6ed2f6caffb1cee84fd6feb031548ec6f50c6",
-  "slides_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
-  "method": "Individual full-image inspection of all slide renders; changed slides rerendered and rechecked after layout corrections.",
+  "pdf_sha256": "7be9e3ee2bfa8004f2dbfed1e5673ca31e3fa13ad20f1d2ce4a969d77c4b2675",
+  "main_tex_sha256": "79b77b1e8fffc695a6ccca467b0c30e7fda8e18292e9738c78038d40dca9fdc2",
+  "slides_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "method": "Slide9 inspected individually after final correction; full16slide contact sheet scanned. All15 priorPDFpage texts independently verified unchanged apart from counters; existing TeX content byte-identical after removing new frame input.",
   "render_dpi": 130,
   "template_match": {
     "aspect_ratio": "16:9",
@@ -27,9 +44,13 @@
     "Separated slide 2 hierarchy boxes and preserved the distinct released benchmark.",
     "Split slide 9 category labels across two lines.",
     "Rebased topology figure on the 225-row paper-derived parent and exposed Dover/Long Mountain labels.",
-    "Added spacing below tables and reduced chart widths to avoid column overflow."
+    "Added spacing below tables and reduced chart widths to avoid column overflow.",
+    "Added one native seven-interface comparison table with error deltas and observed-flow shifts; fit to the existing template."
   ],
   "qualification": "The diagram is selected schematic connectivity; source caveats are on-slide and expanded in presenter notes.",
   "desktop_editor_compile": "success on final saved source",
-  "local_pdf_build": "15 pages; no overfull or underfull warnings"
+  "local_pdf_build": "16 pages; no overfull or underfull warnings",
+  "prior_deck_commit": "1172727343f7ff5411163da59cb2956004b3aa36",
+  "prior_fifteen_slides_text_unchanged": true,
+  "comparison_slide": 9
 }

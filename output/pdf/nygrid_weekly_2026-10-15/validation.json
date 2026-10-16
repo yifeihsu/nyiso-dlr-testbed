@@ -1,9 +1,9 @@
 {
-  "created_utc": "2026-10-16T04:10:16.324389+00:00",
+  "created_utc": "2026-10-16T14:48:52.754148+00:00",
   "passed_build_and_source_checks": true,
-  "final_pdf_sha256": "1397308903427234099dc61bf783341e84eafff0714d8abef2c3ce7715d231a0",
-  "main_tex_sha256": "b874b3dab776eb67d68c66afa3d6ed2f6caffb1cee84fd6feb031548ec6f50c6",
-  "slide_count": 15,
+  "final_pdf_sha256": "7be9e3ee2bfa8004f2dbfed1e5673ca31e3fa13ad20f1d2ce4a969d77c4b2675",
+  "main_tex_sha256": "79b77b1e8fffc695a6ccca467b0c30e7fda8e18292e9738c78038d40dca9fdc2",
+  "slide_count": 16,
   "aspect_ratio": "16:9",
   "native_editable_charts": true,
   "native_editable_topology": true,
@@ -52,43 +52,47 @@
     },
     {
       "slide": 9,
-      "chars": 629,
+      "chars": 1083,
       "text_in_page": true
     },
     {
       "slide": 10,
-      "chars": 800,
+      "chars": 630,
       "text_in_page": true
     },
     {
       "slide": 11,
-      "chars": 817,
+      "chars": 800,
       "text_in_page": true
     },
     {
       "slide": 12,
-      "chars": 832,
+      "chars": 817,
       "text_in_page": true
     },
     {
       "slide": 13,
-      "chars": 849,
+      "chars": 832,
       "text_in_page": true
     },
     {
       "slide": 14,
-      "chars": 853,
+      "chars": 849,
       "text_in_page": true
     },
     {
       "slide": 15,
+      "chars": 853,
+      "text_in_page": true
+    },
+    {
+      "slide": 16,
       "chars": 997,
       "text_in_page": true
     }
   ],
-  "source_fingerprints_checked": 25,
+  "source_fingerprints_checked": 39,
   "source_hashes": {
-    "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308",
     "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_metrics.csv": "00660a3798cbc2b5e7e1275449fb4e4e05f8155fa64d45432bbeff953afdcdb6",
     "output/nygrid_2025_postrepair_diagnosis/generation/D_wind_source_energy_review.json": "3031b3065ce49eb50efb6566ba1a954f082e36a7c7dfe34e7d5c3f72961a9a4f",
     "NYGRID_RELEASED_2019_COMPARISON.md": "68a0a266eddb8d6a0c70e08a2e84a712e8fe24425ca665d0cdd157b0f02c4b07",
@@ -102,10 +106,25 @@
     "output/nygrid_2025_moses_repair/delivery/structure/current_structure_inventory.json": "7e48c1ed234e28bbcd2dfd8e80968f6acc9c4f7578dc604cad8d741672666814",
     "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_receipt.json": "42292179c49ca8fd9b8b7f7eb1e2406713a1c675a7b6763b2726b9678051bc0d",
     "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_physics_review.json": "f41e9e9d819a5a0a344fdcfbcf5a21b2a652d6337c29fc83ebc8a89237afdc90",
+    "output/nygrid_2019/verification_manifest.json": "7c8195017078f4ee707be11f0dbf2a813575b146870f5f9cafad16c27a0d4127",
+    "output/nygrid_2019/upstream_manifest.json": "6ea267b07fa3fd0ca9c24f93b660b02ac4704b4a3bedf2b0fe34ce173cadd6da",
+    "tmp/nygrid_2019_reproduction/upstream/updateOpCond.m": "12cd365b756612d46dc10f1ec5c9ff39a9b54f191b0c6db64e2d1aa990794520",
+    "output/nygrid_released_2019_comparison/independent/released_2019_recomputed_metrics.csv": "e72d9292f3bb9982ef56066774843106f744eea49b08868350afc41682133f7f",
+    "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308",
+    "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_arrays.npz": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079",
+    "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/scoring_receipt.json": "3dc8fb5fb58db73e6add7b17cc76cbb1c813436d1c009783ac2da08e90435d25",
+    "output/nygrid_2025_inputs/load_source/interface_wide.csv": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f",
+    "output/nygrid_2025_inputs/load_source/interface_quality_wide.csv": "4deee20774691c3193a5ecab239fc3d25878dec34c143ca90f1eb9d6ed158262",
+    "output/nygrid_2019/annual_1.mat": "314d817570b4edfd60b0970f25aee8d126bffd46aa70ceba8ee3bde10b05f274",
+    "output/nygrid_2019/annual_2.mat": "e72ddd82be691ad4a46cd74c1316e450763944f259cce95e071b972b986383c6",
+    "output/nygrid_2019/annual_3.mat": "47375d88c36e2a3af33a85eeed461396186404fe9c7486ff43ed4aaec2988aab",
+    "output/nygrid_2019/annual_4.mat": "795f57ce1ee3f483484da4f98461a9a47eaf15ca573a1dadca3bd3804a5f7431",
     "output/pdf/nygrid_weekly_2026-10-15/data/errors_mae.csv": "1bd494205b3d8a565dd02051591ddcf40e9a1187616a958965c3e3ea3e1558d5",
     "output/pdf/nygrid_weekly_2026-10-15/data/errors_wape.csv": "ed37d8212193ce1bbd268e0607e1ccbe87050541488cdbd37c0b65142755d1f4",
     "output/pdf/nygrid_weekly_2026-10-15/data/total_east_ablation.csv": "38a61a22465da9faba74eacf6250b02dc4a803ebb139483bba4291c8844b5ede",
     "output/pdf/nygrid_weekly_2026-10-15/data/wind_energy.csv": "632a180bff2cc9a5c151fa1ea6ed6dfbe1617f8581856c0999e86dc363a9906f",
+    "output/pdf/nygrid_weekly_2026-10-15/data/comparison_2019_2025.csv": "2844df2e8847d7df845376949c5ee7aa53c7aec98bf7cc02ad83f73928d62f2a",
+    "output/pdf/nygrid_weekly_2026-10-15/figures/comparison_2019_2025.tex": "59cf83e6ff740b0327140ba9ddd8fdf1681ab53fe0e9a42cc116ef6065d54398",
     "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_attribution.csv": "5f0053eefcc0448959b193ccd3414657a64886875101fdf2e99ea0acd83fd71f",
     "output/nygrid_2025_par_controls/controls/input_receipt.json": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747",
     "NYGRID_2025_AC_SYSTEM.md": "3d81dec007ceaa7a38c1bc0d386854d2f07aa4666e47159857e7ade8667588dc",
@@ -114,9 +133,10 @@
     "output/nygrid_2025_moses_repair/delivery/map/geography_data.json": "2f9ee668e8c01b29996a14587769acb46757bd02e73508b53a1fac4467e96e75",
     "output/nygrid_2025_downstate/network/bus_register.csv": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27"
   },
-  "visual_review": "passed_all_15_slides",
+  "visual_review": "passed_all_16_slides",
   "scope": "Presentation only; saved research results were not rerun",
   "independent_content_review": "passed_after_parent_wording_fixes",
-  "standalone_build": "passed; 15 pages with identical extracted text",
+  "independent_comparison_review": "passed; all seven interfaces and cross-year scope",
+  "standalone_build": "passed; 16 pages with identical extracted text",
   "passed": true
 }
