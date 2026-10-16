@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "method": "Native SVG rasterization from LinkeDOM interaction-test output; no browser, browser file access or page navigation.",
+  "verifies": "Map-vector geometry, flags, colors and labels under disclosed layout stubs.",
+  "native_browser_visual_QA": false,
+  "native_hit_testing": false,
+  "full_HTML_sidebar_layout_verified": false,
+  "preview_adjustments": [
+    "Authored SVG CSS resolved to presentation attributes by the DOM test.",
+    "Transparent/eight-digit colors normalized, non-scaling strokes resolved and text halos flattened for native rasterizer compatibility."
+  ],
+  "html_sha256": "c27872ed2f678224b19699dac8926dc5c7f3303252e2bd063e14e7b62f875284",
+  "images": [
+    {
+      "svg_sha256": "00406edc9e293cfab19ed93aa7fba60b61baf393ed2f9a9e83f70dc7e20ba1d8",
+      "image": "qa/default_review_static.png",
+      "png_sha256": "3f00a2b30c8b96513c00b0bd39e77d83705862f3f6e251af144b47698b92c472",
+      "width": 1024,
+      "height": 720
+    },
+    {
+      "svg_sha256": "39fe74fc3b4d55565a428f20ea963a9d0658343b83d97a47b9c6f95969d172b6",
+      "image": "qa/classification_conflicts_static.png",
+      "png_sha256": "43d819c6f53caf7912398284691d4df757d2d7cb7d27e5b4fb0280d06e9b2c80",
+      "width": 1024,
+      "height": 720
+    },
+    {
+      "svg_sha256": "469b46c52296e13ab85c7bb2b46732b9b0f82f8e920b2e8c71fad03bf5518577",
+      "image": "qa/selected_y50_static.png",
+      "png_sha256": "23502132905586542e3b746c8043b0cc5ead27d790e29d75d93ebdae499ca59b",
+      "width": 1024,
+      "height": 720
+    },
+    {
+      "svg_sha256": "a8cc020c3157136e604ed588517b15475e3d7fe5bd56e7856315c532e6abbfe6",
+      "image": "qa/mobile_review_static.png",
+      "png_sha256": "30d8c4f657a9fa4157a55e5950ef2988e34f3e26a49f7d6f9296de51e0e41198",
+      "width": 390,
+      "height": 540
+    }
+  ]
+}
