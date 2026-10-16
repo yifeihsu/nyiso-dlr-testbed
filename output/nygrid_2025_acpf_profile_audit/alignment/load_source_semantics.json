@@ -1,0 +1,31 @@
+{
+  "source_url": "https://www.nysrc.org/wp-content/uploads/2025/11/7.3.3-Summer-2025-NYISO-Hot-Weather-Operating-Conditions-EC-Nov-14-Attachment-7.3.3.pdf",
+  "author": "Aaron Markham, NYISO Operations",
+  "presentation_date": "2025-11-14",
+  "title": "Summer 2025 Hot Weather Operating Conditions",
+  "evidence_pdf_pages": [
+    7,
+    12
+  ],
+  "measured_load_semantics": "NYISO measured load is net of behind-the-meter solar and NYISO/retail demand response.",
+  "peak_load_hour": {
+    "local_date": "2025-06-24",
+    "hour_beginning": 18,
+    "measured_load_rounded_MW": 31857,
+    "BTM_solar_MW": 947,
+    "NYISO_and_retail_DR_MW": 995,
+    "reconstructed_total_demand_MW": 33799
+  },
+  "peak_total_demand_hour": {
+    "local_date": "2025-06-24",
+    "hour_beginning": 16,
+    "measured_load_MW": 30720,
+    "BTM_solar_MW": 2675,
+    "NYISO_and_retail_DR_MW": 1096,
+    "total_demand_MW": 34491
+  },
+  "frozen_variable_name_qualification": "bus_gross_pd / gross load in old manifests means no second subtraction of separately modeled generation. These names do not establish gross end-use demand before BTM solar and DR.",
+  "timing_qualification": "The public peak is consistent with interpreting the frozen P58C labels as hour beginnings; this corroborates the peak label, not every provider integration convention.",
+  "model_action": "No frozen load/generation inputs changed; semantic correction recorded only in this audit.",
+  "evidence_status": "Primary NYISO-authored public PDF downloaded, hashed, text-extracted, and PDF pages7/12 visually inspected during this audit."
+}

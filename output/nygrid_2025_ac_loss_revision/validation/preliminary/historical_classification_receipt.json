@@ -1,0 +1,134 @@
+{
+  "historical_only": true,
+  "not_current_solver_qualification": true,
+  "original_locations_preserved": true,
+  "exact_historical_kernel_source_was_not_frozen": true,
+  "historical_source_defaults_changed_after_these_experiments": true,
+  "current_qualification_directories": [
+    "jacobian",
+    "pairs/simultaneous_representatives",
+    "policy_contract"
+  ],
+  "files": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initial_stress/h3133.mat",
+      "sha256": "ce908a69dc843dd623d6ea0a2bc604bb6e5fa1a9b62a877aebf6e93f39b711fc",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initial_stress/h4194.mat",
+      "sha256": "2576e3c106e264851e5271d25fb69c6c9dd051cbcec7bb6dba8b9ca2573a3df0",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initial_stress/h4860.mat",
+      "sha256": "ecbbeaf24c7e7f0982698eaa73f7c00ef729a386f61c03a92ceb996e98eef47a",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initial_stress/h8508.mat",
+      "sha256": "0b31a2a6a3d7ec8ea89e2ddf2dca157f6094162306f00ae73c1e4b2e8d3a3eb0",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initial_stress/pair_checks.csv",
+      "sha256": "7bfea75fd75d7a25bdb39e9e4196e3c67d35df45deb23900c02243306d9da6b8",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initial_stress/pair_receipt.json",
+      "sha256": "b3a1bd4d6960a44f843d705c7aff67993b4a11bc58c0773321f7b2ca3beda6bf",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initialization_probes/adjusted_DCPF_voltage_on_seed_budget_h4860.mat",
+      "sha256": "b7ec7996464236c3890cf3ab588b531c6e3baf0bbec054b51336903df7082456",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initialization_probes/case_voltage_on_seed_budget_h4860.mat",
+      "sha256": "be29f5c36804ee88442a0b3ce7955a50bc194a7593d494dd3694001e1a086859",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initialization_probes/initialization_checks.csv",
+      "sha256": "5da735e06024230fd273fa3480a10c301f8aff237f97e793c5ca3cd83a5ae878",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initialization_probes/initialization_receipt.json",
+      "sha256": "17dfddd52e184d880b8a8beb8101584b82abcbc373a85952047f011015421064",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initialization_probes/zero_budget_damping_0.5_h4860.mat",
+      "sha256": "bcc4e52e579c140d2bd06694a049c68418cef4302a1881fabbc33438f95578b0",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/outer_initialization_probes/zero_budget_damping_1_h4860.mat",
+      "sha256": "c81a1bad25ce45d5aa7423c6bc17e7b9c0b68a772d55fa44310bcb815b4b8092",
+      "classification": "historical_exploratory_outer_results_not_current_qualification"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/root_prototypes_and_logs/ac_loss_revision_smoke.log",
+      "sha256": "2f6efa5d838d16eac144e55d5f04e0de3d6b07c77fd6a70f404cfc8e40a0188e",
+      "classification": "historical_pre_freeze_prototype_or_setup_log"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/root_prototypes_and_logs/ac_loss_revision_smoke.mat",
+      "sha256": "0f285cd713fd0f6f8cd4a4b762dea25fffb20aea1395e9de1353c163551eedb5",
+      "classification": "historical_pre_freeze_prototype_or_setup_log"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/root_prototypes_and_logs/ac_loss_revision_4860_continuation.log",
+      "sha256": "6a82a1da6fb17ced7d29fbd65e35decef123d6b60ad3b232a403103ed320e8ce",
+      "classification": "historical_pre_freeze_prototype_or_setup_log"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/root_prototypes_and_logs/ac_loss_revision_4860_continuation.mat",
+      "sha256": "0547815d00fe76be27830151c22891cd187b07bbbb6d625fd15e188561f7a7e1",
+      "classification": "historical_pre_freeze_prototype_or_setup_log"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/root_prototypes_and_logs/ac_loss_revision_4860_coupled.log",
+      "sha256": "6ee86f3232e52638c6094d23f9e37f22aecd270e88f221ff68d76c906b3bd2f7",
+      "classification": "historical_pre_freeze_prototype_or_setup_log"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/root_prototypes_and_logs/ac_loss_revision_4860_coupled.mat",
+      "sha256": "462a2b0aee2b94cbaee72138be367ef69f49b3901ec0b3c23c7c45df1cee8015",
+      "classification": "historical_pre_freeze_prototype_or_setup_log"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/root_prototypes_and_logs/ac_loss_revision_8508_coupled.log",
+      "sha256": "bbf0f8bd5e10b20d221a1e38f067b4e618d5477aaf0d01449ea86fe0b4f8137b",
+      "classification": "historical_pre_freeze_prototype_or_setup_log"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/root_prototypes_and_logs/ac_loss_revision_8508_coupled.mat",
+      "sha256": "43fc8509e9e02a7345ea00ff191e7b96e19e27408b5f092220cea34a2b4cb6ee",
+      "classification": "historical_pre_freeze_prototype_or_setup_log"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/root_prototypes_and_logs/ac_loss_revision_initial_pairs.log",
+      "sha256": "5d56189b013c083eaea41d0ca2e137fb3ce045bc501181722aae3db209cfd5d9",
+      "classification": "historical_pre_freeze_prototype_or_setup_log"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/root_prototypes_and_logs/ac_loss_revision_initialization_probes.log",
+      "sha256": "3f8137c12001ecf451b94e0c2927eb1c010da73ae103782165f3689d965238a8",
+      "classification": "historical_pre_freeze_prototype_or_setup_log"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/root_prototypes_and_logs/ac_loss_revision_policy_contract.log",
+      "sha256": "b013a46f5b34a158b71721f84d343244a5544f74bdc64fec74391c2a7777038f",
+      "classification": "historical_pre_freeze_prototype_or_setup_log"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/preliminary/probe_loss_policy_initialization_historical_source.m",
+      "sha256": "65d0a0da9c40d84725b9211379c09f1c516123f4a13764e0767ed83f27aa67fe",
+      "classification": "historical_calling_source_that_used_then_default_outer_solver"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+model_bus,model_name,base_kv,active_full191_unique_neighbor_count,rationale,added_P_Q_GS_BS_zero,native_generator_relocated
+10774,LADENTOWN,345,2,Named Ladentown terminal separates the registered Ramapo-Ladentown and Ladentown-Buchanan source circuits; retained as a transmission-path waypoint despite degree2.,True,False
+10858,E. FISHKILL,345,2,East Fishkill distinguishes the two PleasantValley-EastFishkill and two EastFishkill-WoodStreet circuits from the direct PleasantValley-WoodStreet circuits; degree2 by neighbors but four physical circuit rows.,True,False
+10902,WOOD STREET,345,3,"Wood Street retains the junction of the PleasantValley,EastFishkill and Millwood transmission paths.",True,False
+10593,DUNWOODIE,345,4,Dunwoodie345 retains the main ZoneI delivery junction and its explicit CEUG aggregate attachment.,True,False
+10589,EAST GARDEN CITY,345,3,EastGardenCity345 retains the LongIsland delivery port and separates that port from the RAVA3 ZoneK aggregate proxy.,True,False
+11129,GOWANUS,345,3,Gowanus345 retains the StatenIsland/Brooklyn delivery port and declared Goethals regional attachment.,True,False
+11130,RAINEY,345,3,Rainey345 retains the Queens receiving port and exposes the Rainey-Corona project response in the condensed network.,True,False
+20001,CRICKET VALLEY 345,345,2,"CricketValley345 retains the dated PV-CV F83/F84 and CV-LongMountain/Dover path boundary; degree2 is intentional station-level path identification, not a copied generator injection.",True,False

@@ -1,0 +1,578 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T02:32:44.884022+00:00",
+  "source_qualified_hours": 8651,
+  "modeled_generator_rows": 1464,
+  "native_rows": 1436,
+  "external_equivalent_rows": 28,
+  "join_keys_and_hour_axes_exact": true,
+  "qualified_source_PG_within_current_boxes": true,
+  "native_headroom_policy_candidates": [
+    {
+      "policy": "native_fossil_available_model_status",
+      "eligible_rows": {
+        "min": 286.0,
+        "mean": 286.3292104958964,
+        "max": 287.0
+      },
+      "upward_headroom_model_MW": {
+        "min": 1397.504797187317,
+        "mean": 5554.526627454529,
+        "max": 7490.924177462935
+      }
+    },
+    {
+      "policy": "native_fossil_positive_P",
+      "eligible_rows": {
+        "min": 33.0,
+        "mean": 256.8350479713328,
+        "max": 287.0
+      },
+      "upward_headroom_model_MW": {
+        "min": 560.5784976695599,
+        "mean": 4903.56330389725,
+        "max": 7458.874575501893
+      }
+    },
+    {
+      "policy": "native_conventional_fossil_positive_P",
+      "eligible_rows": {
+        "min": 33.0,
+        "mean": 237.76811929256732,
+        "max": 265.0
+      },
+      "upward_headroom_model_MW": {
+        "min": 560.5784976695599,
+        "mean": 4888.915077904733,
+        "max": 7441.599875928364
+      }
+    },
+    {
+      "policy": "native_conventional_fossil_available_status",
+      "eligible_rows": {
+        "min": 264.0,
+        "mean": 264.3292104958964,
+        "max": 265.0
+      },
+      "upward_headroom_model_MW": {
+        "min": 1381.8616772501923,
+        "mean": 5537.57003194598,
+        "max": 7473.607210086796
+      }
+    },
+    {
+      "policy": "native_conventional_positive_source_and_modeled_P",
+      "eligible_rows": {
+        "min": 33.0,
+        "mean": 77.84614495434055,
+        "max": 215.0
+      },
+      "upward_headroom_model_MW": {
+        "min": 301.4074955368076,
+        "mean": 1015.4602556853936,
+        "max": 2623.830946620853
+      }
+    }
+  ],
+  "fuel_headroom": [
+    {
+      "fuel_category": "Combined Fossil",
+      "model_rows": 287,
+      "modeled_available_rows": {
+        "min": 286.0,
+        "mean": 286.3292104958964,
+        "max": 287.0
+      },
+      "positive_P_rows": {
+        "min": 33.0,
+        "mean": 256.8350479713328,
+        "max": 287.0
+      },
+      "all_available_upward_headroom_model_MW": {
+        "min": 1397.5047971873169,
+        "mean": 5554.526627454529,
+        "max": 7490.924177462934
+      },
+      "positive_P_upward_headroom_model_MW": {
+        "min": 560.5784976695597,
+        "mean": 4903.56330389725,
+        "max": 7458.874575501892
+      }
+    },
+    {
+      "fuel_category": "Hydro",
+      "model_rows": 363,
+      "modeled_available_rows": {
+        "min": 348.0,
+        "mean": 354.9702924517397,
+        "max": 363.0
+      },
+      "positive_P_rows": {
+        "min": 265.0,
+        "mean": 350.00589527222286,
+        "max": 363.0
+      },
+      "all_available_upward_headroom_model_MW": {
+        "min": 117.82702092286881,
+        "mean": 515.6480042126785,
+        "max": 936.839045871347
+      },
+      "positive_P_upward_headroom_model_MW": {
+        "min": 117.82702092286881,
+        "mean": 511.2706124555697,
+        "max": 924.4492981566272
+      }
+    },
+    {
+      "fuel_category": "Import",
+      "model_rows": 28,
+      "modeled_available_rows": {
+        "min": 27.0,
+        "mean": 27.99953762570801,
+        "max": 28.0
+      },
+      "positive_P_rows": {
+        "min": 27.0,
+        "mean": 27.170962894463067,
+        "max": 28.0
+      },
+      "all_available_upward_headroom_model_MW": {
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "positive_P_upward_headroom_model_MW": {
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "fuel_category": "Nuclear",
+      "model_rows": 4,
+      "modeled_available_rows": {
+        "min": 3.0,
+        "mean": 3.947520517859207,
+        "max": 4.0
+      },
+      "positive_P_rows": {
+        "min": 3.0,
+        "mean": 3.947520517859207,
+        "max": 4.0
+      },
+      "all_available_upward_headroom_model_MW": {
+        "min": 0.0,
+        "mean": 8.06617742881025,
+        "max": 228.80266868616954
+      },
+      "positive_P_upward_headroom_model_MW": {
+        "min": 0.0,
+        "mean": 8.06617742881025,
+        "max": 228.80266868616954
+      }
+    },
+    {
+      "fuel_category": "Other Renewables",
+      "model_rows": 747,
+      "modeled_available_rows": {
+        "min": 92.0,
+        "mean": 398.1442607791007,
+        "max": 744.0
+      },
+      "positive_P_rows": {
+        "min": 92.0,
+        "mean": 398.1139752629754,
+        "max": 744.0
+      },
+      "all_available_upward_headroom_model_MW": {
+        "min": 14.247816409111694,
+        "mean": 27.542189521220457,
+        "max": 44.47721322622745
+      },
+      "positive_P_upward_headroom_model_MW": {
+        "min": 14.247816409111694,
+        "mean": 27.542179469931696,
+        "max": 44.47721322622745
+      }
+    },
+    {
+      "fuel_category": "Wind",
+      "model_rows": 35,
+      "modeled_available_rows": {
+        "min": 35.0,
+        "mean": 35.0,
+        "max": 35.0
+      },
+      "positive_P_rows": {
+        "min": 35.0,
+        "mean": 35.0,
+        "max": 35.0
+      },
+      "all_available_upward_headroom_model_MW": {
+        "min": 0.0,
+        "mean": 0.03601890966041241,
+        "max": 2.1699552297841453
+      },
+      "positive_P_upward_headroom_model_MW": {
+        "min": 0.0,
+        "mean": 0.03601890966041241,
+        "max": 2.1699552297841453
+      }
+    }
+  ],
+  "native_conventional_zone_headroom": [
+    {
+      "zone": "A",
+      "static_candidate_rows": 12,
+      "minimum_eligible_rows": 0,
+      "maximum_eligible_rows": 12,
+      "minimum_headroom_model_MW": 0.0,
+      "mean_headroom_model_MW": 106.65664015824001,
+      "maximum_headroom_model_MW": 156.3022357009414
+    },
+    {
+      "zone": "B",
+      "static_candidate_rows": 5,
+      "minimum_eligible_rows": 0,
+      "maximum_eligible_rows": 5,
+      "minimum_headroom_model_MW": 0.0,
+      "mean_headroom_model_MW": 27.3999700899358,
+      "maximum_headroom_model_MW": 36.04099557159984
+    },
+    {
+      "zone": "C",
+      "static_candidate_rows": 16,
+      "minimum_eligible_rows": 0,
+      "maximum_eligible_rows": 16,
+      "minimum_headroom_model_MW": 0.0,
+      "mean_headroom_model_MW": 589.0640335919697,
+      "maximum_headroom_model_MW": 939.5724620571367
+    },
+    {
+      "zone": "D",
+      "static_candidate_rows": 8,
+      "minimum_eligible_rows": 0,
+      "maximum_eligible_rows": 8,
+      "minimum_headroom_model_MW": 0.0,
+      "mean_headroom_model_MW": 74.63661508842186,
+      "maximum_headroom_model_MW": 105.69092005499209
+    },
+    {
+      "zone": "E",
+      "static_candidate_rows": 7,
+      "minimum_eligible_rows": 0,
+      "maximum_eligible_rows": 7,
+      "minimum_headroom_model_MW": 0.0,
+      "mean_headroom_model_MW": 51.66293282640019,
+      "maximum_headroom_model_MW": 66.65033402541485
+    },
+    {
+      "zone": "F",
+      "static_candidate_rows": 21,
+      "minimum_eligible_rows": 2,
+      "maximum_eligible_rows": 21,
+      "minimum_headroom_model_MW": 49.634117940179046,
+      "mean_headroom_model_MW": 524.9301378210592,
+      "maximum_headroom_model_MW": 1007.3387008460151
+    },
+    {
+      "zone": "G",
+      "static_candidate_rows": 21,
+      "minimum_eligible_rows": 0,
+      "maximum_eligible_rows": 21,
+      "minimum_headroom_model_MW": 0.0,
+      "mean_headroom_model_MW": 889.025500446536,
+      "maximum_headroom_model_MW": 1386.1083111360765
+    },
+    {
+      "zone": "H",
+      "static_candidate_rows": 0,
+      "minimum_eligible_rows": 0,
+      "maximum_eligible_rows": 0,
+      "minimum_headroom_model_MW": 0.0,
+      "mean_headroom_model_MW": 0.0,
+      "maximum_headroom_model_MW": 0.0
+    },
+    {
+      "zone": "J",
+      "static_candidate_rows": 91,
+      "minimum_eligible_rows": 15,
+      "maximum_eligible_rows": 91,
+      "minimum_headroom_model_MW": 126.85972778038456,
+      "mean_headroom_model_MW": 1545.120212871106,
+      "maximum_headroom_model_MW": 2348.4618740246383
+    },
+    {
+      "zone": "K",
+      "static_candidate_rows": 84,
+      "minimum_eligible_rows": 3,
+      "maximum_eligible_rows": 84,
+      "minimum_headroom_model_MW": 39.24011638198558,
+      "mean_headroom_model_MW": 1080.4190350110644,
+      "maximum_headroom_model_MW": 1530.5898059407652
+    }
+  ],
+  "external_original_capability_by_region": [
+    {
+      "region": "ISONE",
+      "equivalent_rows": 9,
+      "frozen_generation_shares_sum": 0.9999999999999994,
+      "original_Pmin_total_model_MW": 0.0,
+      "original_Pmax_total_model_MW": 10816.389465376169,
+      "scheduled_total_PG_model_MW": {
+        "min": 1489.75882201591,
+        "mean": 2590.523175658228,
+        "max": 5179.63239137323
+      },
+      "original_Pbox_upward_headroom_model_MW": {
+        "min": 5636.757074002939,
+        "mean": 8225.866289717942,
+        "max": 9326.630643360259
+      },
+      "original_Pbox_downward_headroom_model_MW": {
+        "min": 1489.75882201591,
+        "mean": 2590.523175658228,
+        "max": 5179.63239137323
+      },
+      "current_pinned_box_headroom_model_MW": {
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "assumed_S_proxy_total_MVA": 11385.6731214486,
+      "original_Pbox_violating_source_hours": 0,
+      "capability_is_historical_synthetic_equivalent_proxy_not_verified_2025_unit_reserve": true
+    },
+    {
+      "region": "ONTARIO",
+      "equivalent_rows": 6,
+      "frozen_generation_shares_sum": 0.9999999999999997,
+      "original_Pmin_total_model_MW": 0.0,
+      "original_Pmax_total_model_MW": 14951.374010764888,
+      "scheduled_total_PG_model_MW": {
+        "min": 1979.2977941614429,
+        "mean": 3266.863060228077,
+        "max": 5867.507227556534
+      },
+      "original_Pbox_upward_headroom_model_MW": {
+        "min": 9083.866783208352,
+        "mean": 11684.510950536811,
+        "max": 12972.076216603444
+      },
+      "original_Pbox_downward_headroom_model_MW": {
+        "min": 1979.2977941614429,
+        "mean": 3266.863060228077,
+        "max": 5867.507227556534
+      },
+      "current_pinned_box_headroom_model_MW": {
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "assumed_S_proxy_total_MVA": 15738.288432384092,
+      "original_Pbox_violating_source_hours": 0,
+      "capability_is_historical_synthetic_equivalent_proxy_not_verified_2025_unit_reserve": true
+    },
+    {
+      "region": "PJM",
+      "equivalent_rows": 12,
+      "frozen_generation_shares_sum": 0.9999999999999996,
+      "original_Pmin_total_model_MW": 0.0,
+      "original_Pmax_total_model_MW": 20025.05880994907,
+      "scheduled_total_PG_model_MW": {
+        "min": 2948.36558796438,
+        "mean": 4951.966297132012,
+        "max": 8169.265067646152
+      },
+      "original_Pbox_upward_headroom_model_MW": {
+        "min": 11855.793742302918,
+        "mean": 15073.09251281706,
+        "max": 17076.69322198469
+      },
+      "original_Pbox_downward_headroom_model_MW": {
+        "min": 2948.36558796438,
+        "mean": 4951.966297132012,
+        "max": 8169.265067646152
+      },
+      "current_pinned_box_headroom_model_MW": {
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "assumed_S_proxy_total_MVA": 21079.0092736306,
+      "original_Pbox_violating_source_hours": 0,
+      "capability_is_historical_synthetic_equivalent_proxy_not_verified_2025_unit_reserve": true
+    },
+    {
+      "region": "HQ",
+      "equivalent_rows": 1,
+      "frozen_generation_shares_sum": 1.0,
+      "original_Pmin_total_model_MW": -1100.0,
+      "original_Pmax_total_model_MW": 1500.0,
+      "scheduled_total_PG_model_MW": {
+        "min": -333.4341551974223,
+        "mean": -163.6459829866957,
+        "max": 490.0971876124128
+      },
+      "original_Pbox_upward_headroom_model_MW": {
+        "min": 1009.9028123875871,
+        "mean": 1663.6459829866956,
+        "max": 1833.4341551974223
+      },
+      "original_Pbox_downward_headroom_model_MW": {
+        "min": 766.5658448025777,
+        "mean": 936.3540170133043,
+        "max": 1590.0971876124129
+      },
+      "current_pinned_box_headroom_model_MW": {
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "assumed_S_proxy_total_MVA": 1578.9473684210527,
+      "original_Pbox_violating_source_hours": 0,
+      "capability_is_historical_synthetic_equivalent_proxy_not_verified_2025_unit_reserve": true
+    }
+  ],
+  "previous_AC_loss_headroom_check": {
+    "cohort": "previous detailed-AC equation/profile-qualified8494 only; not a revised-PF feasibility proof",
+    "eligibility_policy": "native_conventional_fossil_positive_P",
+    "hours": 8494,
+    "shortfall_hours": 0,
+    "minimum_margin_model_MW": 244.46221695740985,
+    "minimum_margin_hour_index": 3039,
+    "headroom_at_minimum_margin_model_MW": 560.5784976695599,
+    "previous_AC_losses_at_minimum_margin_model_MW": 316.11628071215,
+    "stricter_positive_source_and_modeled_P_shortfall_hours": 24,
+    "stricter_positive_source_and_modeled_P_minimum_margin_model_MW": -165.92407857827487,
+    "stricter_positive_source_and_modeled_P_shortfall_hour_indices": [
+      3066,
+      4867,
+      4868,
+      5077,
+      5586,
+      5587,
+      5588,
+      5609,
+      5610,
+      5611,
+      5612,
+      5613,
+      5635,
+      5681,
+      5682,
+      5683,
+      5922,
+      5923,
+      5945,
+      5946,
+      6185,
+      6186,
+      6187,
+      6188
+    ]
+  },
+  "previous_single_reference_generator_audit": {
+    "original_reference_bus_ids": [
+      50
+    ],
+    "original_reference_generator_rows": [
+      110
+    ],
+    "original_reference_PG_model_MW": {
+      "min": 0.122320383043121,
+      "mean": 0.8535545446667984,
+      "max": 2.08327066450642
+    },
+    "original_reference_Pmax_model_MW": {
+      "min": 2.10084526226999,
+      "mean": 2.343874524655969,
+      "max": 2.52101431472399
+    },
+    "original_reference_headroom_model_MW": {
+      "min": 0.37098739216137977,
+      "mean": 1.4903199799891702,
+      "max": 2.398693931680869
+    },
+    "previous_unbounded_reference_increment_model_MW": {
+      "min": 143.984008602451,
+      "mean": 312.39646835420723,
+      "max": 869.314308860955
+    }
+  },
+  "native_conventional_resource_rows": 265,
+  "native_fossil_fuel_cell_rows_excluded_from_conventional_proxy": 22,
+  "modeled_GEN_STATUS_is_availability_not_observed_commitment": true,
+  "positive_baseline_P_is_model_output_proxy_not_observed_synchronized_or_AGC_status": true,
+  "bounded_dispatch_projection_can_make_zero_prior_units_positive": true,
+  "source_prior_positive_is_EPA_group_capacity_allocation_proxy_not_unit_net_telemetry": true,
+  "native_fleet_hourly_dispatch_observed_flags": 0,
+  "native_fleet_hourly_availability_observed_flags": 0,
+  "fixed_external_P_boxes_are_policy_constraints_not_zero_physical_capability": true,
+  "no_default_regional_loss_policy_chosen": true,
+  "external_meter_and_NY_load_loss_semantics_pending": true,
+  "no_production_model_or_profile_changed": true,
+  "no_PF_OPF_or_parameter_fit_run": true,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05",
+      "bytes": 190996
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/fleet_register.csv",
+      "sha256": "d025a1994c9a1c19cb62c6b4ae61a1e0bb62ae2060158592c61f6ecf19546d89",
+      "bytes": 3043498
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab",
+      "bytes": 27343868
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c",
+      "bytes": 70200265
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883",
+      "bytes": 56579710
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/priors/prior_summary.json",
+      "sha256": "e58a58a860c54fc5ab13638efd5d62c5a06bd7190660518c71171c1920e82be8",
+      "bytes": 7625
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/operating_states.mat",
+      "sha256": "bea2fb35c44a3c9510b7c4a68cf4a5ea901e7df0b51567755a2a388942dd171a",
+      "bytes": 99254
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b",
+      "bytes": 19157492
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_external_generator_shares.csv",
+      "sha256": "e0bef3a5c7c95fec628fb86410eb64f4ee5c3e3fd2a89e8eb5d42fa19289af7a",
+      "bytes": 1267
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/annual_hour_quality.csv",
+      "sha256": "6d3e181b8695198dcfd51731026a567b4b015a77a97a4150722b1a0378c9866c",
+      "bytes": 8078484
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h8508.mat",
+      "sha256": "c9beabd35ac69c33a85a8aed4d985a3936fc69628443b328663b62487bb779bc",
+      "bytes": 386806
+    }
+  ],
+  "source_code": {
+    "path": "scripts/nygrid_2025_ac_loss_revision/validation/audit_loss_participation_headroom.py",
+    "sha256": "1e77d2f7af45b89dad308580082ea19421a52e2c4fe9b6eecf5c47c2f7661b31",
+    "bytes": 14692
+  }
+}

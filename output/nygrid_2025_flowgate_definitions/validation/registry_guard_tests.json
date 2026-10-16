@@ -1,0 +1,299 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T03:12:25.074313+00:00",
+  "counts": {
+    "total": 53,
+    "passed": 53,
+    "failed": 0,
+    "inspection_successes": 21,
+    "numeric_operator_refusals": 21
+  },
+  "dependencies": {
+    "scripts/nygrid_2025_flowgate_definitions/build_registry.py": "27bad379f709a33ee2f7a72c490b56b24e318d59f17aeb0d60598cc1bac180dd",
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.pdf": "546402b7e85f51441e64a6b68adac53579f83828f6bc8c1195ccc480e082dc0b",
+    "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.pdf": "32e4fb86cc8397ab458fdf790ab52decfcaa9e9686de7aa9bec7527eaf04b901",
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.pdf": "bcf26e7ac908f43a29f34230067b5b1afc6e587845b26246d7ca39a41ef9f072",
+    "output/nygrid_2025_flowgate_definitions/definitions/western_2025.csv": "382667ec1989f126558381171227824ae3fbfcae523f7264f100c029902aab22",
+    "output/nygrid_2025_flowgate_definitions/definitions/western_winter2025_26.csv": "a9a4d409ba1833c68de4796a39617a1f1930225fd7904a8bd020cef0f4daf95b",
+    "output/nygrid_2025_flowgate_definitions/definitions/western_winter2024_25.csv": "1949563de67b230fe8b554bcb33e1697b4a36e91a00c435150a5529a89d21163",
+    "output/nygrid_2025_flowgate_definitions/definitions/central_north_2025.csv": "f795ccd2d2b09a12a66f73cde5eaa8ff103bdcec50e8b126e32ffc0c1a49892c",
+    "output/nygrid_2025_flowgate_definitions/definitions/central_north_winter2024_25.csv": "11a3a4b3fb2fb1f608b97311575d0c79c3aa7c44a4bf8c9070e48877b485ce03",
+    "output/nygrid_2025_flowgate_definitions/definitions/downstate_2025.csv": "835f7fe7c3fd81bdc46225c710fb5db4f711787e6d1bcff115e6bbdec97e1c60",
+    "output/nygrid_2025_flowgate_definitions/definitions/all_seasonal_members.csv": "e4d3e1ba5511b18d6d3c8cc3c33429cfca0e590c4800d74c065bcf213e2a88c1",
+    "output/nygrid_2025_flowgate_definitions/definitions/definition_summary.csv": "f3eb7ca763e8079757ca51ce5fef1542661017fe7821be7d18924515707d468d",
+    "output/nygrid_2025_flowgate_definitions/definitions/physical_flowgate_registry.json": "7d7c2714176644a2638f5e0d077c53de853e3c79b4f776f3d7dd33e52bab6d5d",
+    "output/nygrid_2025_flowgate_definitions/definitions/model_binding_template.csv": "e9e0d7a799c071927eaadf0b7be3c90e72a994e16959a2bba5f617014f76fe02",
+    "output/nygrid_2025_flowgate_definitions/definitions/registry_receipt.json": "856c9e9ed5a17f2567de5ea7bd64aacb107597193a891e25ca8c7839ca7d3501",
+    "scripts/nygrid_2025_flowgate_definitions/test_registry.py": "2ce0df0a7e4c5210ddd0428b7dcf8d3c0f7081329568eee9a8c96f1928b00ff7",
+    "scripts/nygrid_2025_flowgate_definitions/inspect_definition.py": "a0f608dde8ce4ebd94cf85812f1f4b427fe50fd73abab7cc805875efce278e70"
+  },
+  "tests": [
+    {
+      "test": "inspect:central_east:summer2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:central_east:summer2025",
+      "passed": true,
+      "detail": "No certified physical model operator for central_east / summer2025; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:dysinger_east:summer2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:dysinger_east:summer2025",
+      "passed": true,
+      "detail": "No certified physical model operator for dysinger_east / summer2025; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:moses_south:summer2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:moses_south:summer2025",
+      "passed": true,
+      "detail": "No certified physical model operator for moses_south / summer2025; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:sprain_dunwoodie_south:summer2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:sprain_dunwoodie_south:summer2025",
+      "passed": true,
+      "detail": "No certified physical model operator for sprain_dunwoodie_south / summer2025; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:total_east:summer2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:total_east:summer2025",
+      "passed": true,
+      "detail": "No certified physical model operator for total_east / summer2025; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:upny_coned:summer2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:upny_coned:summer2025",
+      "passed": true,
+      "detail": "No certified physical model operator for upny_coned / summer2025; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:west_central:summer2025",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:west_central:summer2025",
+      "passed": true,
+      "detail": "No certified physical model operator for west_central / summer2025; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:central_east:winter2024_25",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:central_east:winter2024_25",
+      "passed": true,
+      "detail": "No certified physical model operator for central_east / winter2024_25; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:dysinger_east:winter2024_25",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:dysinger_east:winter2024_25",
+      "passed": true,
+      "detail": "No certified physical model operator for dysinger_east / winter2024_25; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:moses_south:winter2024_25",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:moses_south:winter2024_25",
+      "passed": true,
+      "detail": "No certified physical model operator for moses_south / winter2024_25; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:sprain_dunwoodie_south:winter2024_25",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:sprain_dunwoodie_south:winter2024_25",
+      "passed": true,
+      "detail": "No certified physical model operator for sprain_dunwoodie_south / winter2024_25; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:total_east:winter2024_25",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:total_east:winter2024_25",
+      "passed": true,
+      "detail": "No certified physical model operator for total_east / winter2024_25; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:upny_coned:winter2024_25",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:upny_coned:winter2024_25",
+      "passed": true,
+      "detail": "No certified physical model operator for upny_coned / winter2024_25; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:west_central:winter2024_25",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:west_central:winter2024_25",
+      "passed": true,
+      "detail": "No certified physical model operator for west_central / winter2024_25; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:central_east:winter2025_26",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:central_east:winter2025_26",
+      "passed": true,
+      "detail": "No certified physical model operator for central_east / winter2025_26; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:dysinger_east:winter2025_26",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:dysinger_east:winter2025_26",
+      "passed": true,
+      "detail": "No certified physical model operator for dysinger_east / winter2025_26; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:moses_south:winter2025_26",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:moses_south:winter2025_26",
+      "passed": true,
+      "detail": "No certified physical model operator for moses_south / winter2025_26; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:sprain_dunwoodie_south:winter2025_26",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:sprain_dunwoodie_south:winter2025_26",
+      "passed": true,
+      "detail": "No certified physical model operator for sprain_dunwoodie_south / winter2025_26; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:total_east:winter2025_26",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:total_east:winter2025_26",
+      "passed": true,
+      "detail": "No certified physical model operator for total_east / winter2025_26; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:upny_coned:winter2025_26",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:upny_coned:winter2025_26",
+      "passed": true,
+      "detail": "No certified physical model operator for upny_coned / winter2025_26; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "inspect:west_central:winter2025_26",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "refuse_operator:west_central:winter2025_26",
+      "passed": true,
+      "detail": "No certified physical model operator for west_central / winter2025_26; resolve circuit/aggregate lineage, metered ports, P32 expression and operational interval first"
+    },
+    {
+      "test": "unknown_edition",
+      "passed": true,
+      "detail": "Use an explicit known gate and study edition; dates cannot select an operational definition"
+    },
+    {
+      "test": "unknown_gate",
+      "passed": true,
+      "detail": "Use an explicit known gate and study edition; dates cannot select an operational definition"
+    },
+    {
+      "test": "missing_member",
+      "passed": true,
+      "detail": "Incomplete definition membership"
+    },
+    {
+      "test": "duplicate_member",
+      "passed": true,
+      "detail": "Incomplete definition membership"
+    },
+    {
+      "test": "wrong_term_scope",
+      "passed": true,
+      "detail": "Incomplete definition membership"
+    },
+    {
+      "test": "resealed_missing_term",
+      "passed": true,
+      "detail": "Incomplete registry"
+    },
+    {
+      "test": "resealed_duplicate_key",
+      "passed": true,
+      "detail": "Duplicate source-entry keys"
+    },
+    {
+      "test": "stale_hash",
+      "passed": true,
+      "detail": "Changed registry output: physical_flowgate_registry.json"
+    },
+    {
+      "test": "incomplete_output_manifest",
+      "passed": true,
+      "detail": "Incomplete registry output manifest"
+    },
+    {
+      "test": "CLI_requires_edition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "reviewed_files_unchanged",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "internal_observations_used": false,
+  "model_fitting_used": false
+}

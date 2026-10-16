@@ -1,0 +1,3044 @@
+{
+  "schema_version": 1,
+  "model_version_source_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+  "scope": "Current model NY accounting-zone labels and frozen diagnostic interface cuts",
+  "default_convention": "legacy_signed_literal_from",
+  "conventions": {
+    "legacy_signed_literal_from": "sum(sign * PF_at_original_corridor_from_terminal)",
+    "oriented_source_side": "sum(PF_first if sign>0 else PT_last)",
+    "oriented_target_side": "sum(-PT_last if sign>0 else -PF_first)"
+  },
+  "gamma": 0.30012075175285535,
+  "default_units": "model_MW",
+  "public_scale_formula": "model_MW / gamma",
+  "ampere_gamma_rescaling": false,
+  "flow_availability_mask": [
+    "source_qualified",
+    "PF_converged",
+    "AC_equation_gate",
+    "loss_allocation_gate",
+    "reduction_and_equation_gate"
+  ],
+  "missing_or_failed_model_flow": null,
+  "negative_flow_reverses_arrow": true,
+  "physical_gate_scope": "Modeled zone-cut diagnostic; physical NYISO P-32 meter membership and route are not certified",
+  "observed_comparison_units": "Preserved numeric-as-MW interpretation of P32 Flow (MWH), not independently certified",
+  "projection": {
+    "proj4": "+proj=lcc +lat_1=40 +lat_2=45 +lat_0=42 +lon_0=-76 +datum=WGS84 +units=m +no_defs",
+    "xy_definition": "[easting_m/1000, -northing_m/1000]",
+    "geographic_axis": "[longitude,latitude]"
+  },
+  "zones": [
+    {
+      "id": "A",
+      "display_name": "West",
+      "source_name": "WEST",
+      "PTID": 61752,
+      "label": "A \u00b7 West",
+      "anchor_lonlat": [
+        -78.8605,
+        42.77287499999999
+      ],
+      "anchor_xy": [
+        -233.913627,
+        -89.762714
+      ],
+      "anchor_member_bus_ids": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "accounting_member_bus_ids": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "anchor_basis": "Mean of located current retained model-bus coordinates in this accounting group",
+      "official_zone_polygon": false,
+      "display_name_is_readable_expansion_of_source_abbreviation": true
+    },
+    {
+      "id": "B",
+      "display_name": "Genesee",
+      "source_name": "GENESE",
+      "PTID": 61753,
+      "label": "B \u00b7 Genesee",
+      "anchor_lonlat": [
+        -77.83800000000001,
+        42.96966666666666
+      ],
+      "anchor_xy": [
+        -149.894248,
+        -109.288196
+      ],
+      "anchor_member_bus_ids": [
+        52,
+        53,
+        62
+      ],
+      "accounting_member_bus_ids": [
+        52,
+        53,
+        62
+      ],
+      "anchor_basis": "Mean of located current retained model-bus coordinates in this accounting group",
+      "official_zone_polygon": false,
+      "display_name_is_readable_expansion_of_source_abbreviation": true
+    },
+    {
+      "id": "C",
+      "display_name": "Central",
+      "source_name": "CENTRL",
+      "PTID": 61754,
+      "label": "C \u00b7 Central",
+      "anchor_lonlat": [
+        -76.61963636363636,
+        42.422363636363634
+      ],
+      "anchor_xy": [
+        -50.963595,
+        -47.256101
+      ],
+      "anchor_member_bus_ids": [
+        50,
+        51,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        70,
+        71,
+        72
+      ],
+      "accounting_member_bus_ids": [
+        50,
+        51,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        70,
+        71,
+        72
+      ],
+      "anchor_basis": "Mean of located current retained model-bus coordinates in this accounting group",
+      "official_zone_polygon": false,
+      "display_name_is_readable_expansion_of_source_abbreviation": true
+    },
+    {
+      "id": "D",
+      "display_name": "North",
+      "source_name": "NORTH",
+      "PTID": 61755,
+      "label": "D \u00b7 North",
+      "anchor_lonlat": [
+        -74.47749999999999,
+        44.772499999999994
+      ],
+      "anchor_xy": [
+        120.523893,
+        -308.937059
+      ],
+      "anchor_member_bus_ids": [
+        48,
+        49
+      ],
+      "accounting_member_bus_ids": [
+        48,
+        49
+      ],
+      "anchor_basis": "Mean of located current retained model-bus coordinates in this accounting group",
+      "official_zone_polygon": false,
+      "display_name_is_readable_expansion_of_source_abbreviation": true
+    },
+    {
+      "id": "E",
+      "display_name": "Mohawk Valley",
+      "source_name": "MHK VL",
+      "PTID": 61756,
+      "label": "E \u00b7 Mohawk Valley",
+      "anchor_lonlat": [
+        -75.16499999999999,
+        43.20928571428572
+      ],
+      "anchor_xy": [
+        67.770806,
+        -134.573767
+      ],
+      "anchor_member_bus_ids": [
+        38,
+        43,
+        44,
+        45,
+        46,
+        47,
+        69
+      ],
+      "accounting_member_bus_ids": [
+        38,
+        43,
+        44,
+        45,
+        46,
+        47,
+        69
+      ],
+      "anchor_basis": "Mean of located current retained model-bus coordinates in this accounting group",
+      "official_zone_polygon": false,
+      "display_name_is_readable_expansion_of_source_abbreviation": true
+    },
+    {
+      "id": "F",
+      "display_name": "Capital",
+      "source_name": "CAPITL",
+      "PTID": 61757,
+      "label": "F \u00b7 Capital",
+      "anchor_lonlat": [
+        -73.84925,
+        42.732
+      ],
+      "anchor_xy": [
+        175.93178,
+        -83.47949
+      ],
+      "anchor_member_bus_ids": [
+        37,
+        40,
+        41,
+        42
+      ],
+      "accounting_member_bus_ids": [
+        37,
+        40,
+        41,
+        42
+      ],
+      "anchor_basis": "Mean of located current retained model-bus coordinates in this accounting group",
+      "official_zone_polygon": false,
+      "display_name_is_readable_expansion_of_source_abbreviation": true
+    },
+    {
+      "id": "G",
+      "display_name": "Hudson Valley",
+      "source_name": "HUD VL",
+      "PTID": 61758,
+      "label": "G \u00b7 Hudson Valley",
+      "anchor_lonlat": [
+        -73.99218595945783,
+        41.475469682829754
+      ],
+      "anchor_xy": [
+        167.466001,
+        56.168883
+      ],
+      "anchor_member_bus_ids": [
+        39,
+        73,
+        75,
+        76,
+        77,
+        10774,
+        10858,
+        10902,
+        20001
+      ],
+      "accounting_member_bus_ids": [
+        39,
+        73,
+        75,
+        76,
+        77,
+        10774,
+        10858,
+        10902,
+        20001
+      ],
+      "anchor_basis": "Mean of located current retained model-bus coordinates in this accounting group",
+      "official_zone_polygon": false,
+      "display_name_is_readable_expansion_of_source_abbreviation": true
+    },
+    {
+      "id": "H",
+      "display_name": "Millwood",
+      "source_name": "MILLWD",
+      "PTID": 61759,
+      "label": "H \u00b7 Millwood",
+      "anchor_lonlat": [
+        -73.80035896499999,
+        41.19290852900008
+      ],
+      "anchor_xy": [
+        184.379572,
+        87.175156
+      ],
+      "anchor_member_bus_ids": [
+        74
+      ],
+      "accounting_member_bus_ids": [
+        74
+      ],
+      "anchor_basis": "Mean of located current retained model-bus coordinates in this accounting group",
+      "official_zone_polygon": false,
+      "display_name_is_readable_expansion_of_source_abbreviation": true
+    },
+    {
+      "id": "I",
+      "display_name": "Dunwoodie",
+      "source_name": "DUNWOD",
+      "PTID": 61760,
+      "label": "I \u00b7 Dunwoodie",
+      "anchor_lonlat": [
+        -73.85731296999995,
+        40.94027596600006
+      ],
+      "anchor_xy": [
+        180.315115,
+        115.326911
+      ],
+      "anchor_member_bus_ids": [
+        10593
+      ],
+      "accounting_member_bus_ids": [
+        78,
+        10593
+      ],
+      "anchor_basis": "Mean of located current retained model-bus coordinates in this accounting group",
+      "official_zone_polygon": false,
+      "display_name_is_readable_expansion_of_source_abbreviation": true
+    },
+    {
+      "id": "J",
+      "display_name": "New York City",
+      "source_name": "N.Y.C.",
+      "PTID": 61761,
+      "label": "J \u00b7 New York City",
+      "anchor_lonlat": [
+        -74.04740173405169,
+        40.6807435156158
+      ],
+      "anchor_xy": [
+        164.977129,
+        144.50651
+      ],
+      "anchor_member_bus_ids": [
+        81,
+        11129,
+        11130
+      ],
+      "accounting_member_bus_ids": [
+        81,
+        82,
+        11129,
+        11130
+      ],
+      "anchor_basis": "Mean of located current retained model-bus coordinates in this accounting group",
+      "official_zone_polygon": false,
+      "display_name_is_readable_expansion_of_source_abbreviation": true
+    },
+    {
+      "id": "K",
+      "display_name": "Long Island",
+      "source_name": "LONGIL",
+      "PTID": 61762,
+      "label": "K \u00b7 Long Island",
+      "anchor_lonlat": [
+        -73.47608675549998,
+        40.826822951000054
+      ],
+      "anchor_xy": [
+        212.745473,
+        127.022297
+      ],
+      "anchor_member_bus_ids": [
+        80,
+        10589
+      ],
+      "accounting_member_bus_ids": [
+        79,
+        80,
+        10589
+      ],
+      "anchor_basis": "Mean of located current retained model-bus coordinates in this accounting group",
+      "official_zone_polygon": false,
+      "display_name_is_readable_expansion_of_source_abbreviation": true
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "dysinger_east",
+      "index": 1,
+      "name": "DYSINGER EAST",
+      "inherited_interface_id": 1,
+      "source_zones": [
+        "A"
+      ],
+      "target_zones": [
+        "B"
+      ],
+      "member_count": 4,
+      "members_by_state": {
+        "pre_may": [
+          {
+            "parent_id": 58,
+            "parent_key": "PARENT:58",
+            "coefficient": -1,
+            "from_bus": 53,
+            "to_bus": 55,
+            "positive_from_bus": 55,
+            "positive_to_bus": 53,
+            "first_runtime_key": "PARENT:58",
+            "last_runtime_key": "PARENT:58",
+            "first_runtime_row": 58,
+            "last_runtime_row": 58,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 61,
+            "parent_key": "PARENT:61",
+            "coefficient": 1,
+            "from_bus": 54,
+            "to_bus": 62,
+            "positive_from_bus": 54,
+            "positive_to_bus": 62,
+            "first_runtime_key": "PARENT:61",
+            "last_runtime_key": "PARENT:61",
+            "first_runtime_row": 61,
+            "last_runtime_row": 61,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 69,
+            "parent_key": "PARENT:69",
+            "coefficient": 1,
+            "from_bus": 58,
+            "to_bus": 62,
+            "positive_from_bus": 58,
+            "positive_to_bus": 62,
+            "first_runtime_key": "PARENT:69",
+            "last_runtime_key": "PARENT:69",
+            "first_runtime_row": 69,
+            "last_runtime_row": 69,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 212,
+            "parent_key": "PARENT:212",
+            "coefficient": 1,
+            "from_bus": 54,
+            "to_bus": 52,
+            "positive_from_bus": 54,
+            "positive_to_bus": 52,
+            "first_runtime_key": "PARENT:212",
+            "last_runtime_key": "PARENT:212",
+            "first_runtime_row": 212,
+            "last_runtime_row": 212,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may21": [
+          {
+            "parent_id": 58,
+            "parent_key": "PARENT:58",
+            "coefficient": -1,
+            "from_bus": 53,
+            "to_bus": 55,
+            "positive_from_bus": 55,
+            "positive_to_bus": 53,
+            "first_runtime_key": "PARENT:58",
+            "last_runtime_key": "PARENT:58",
+            "first_runtime_row": 58,
+            "last_runtime_row": 58,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 61,
+            "parent_key": "PARENT:61",
+            "coefficient": 1,
+            "from_bus": 54,
+            "to_bus": 62,
+            "positive_from_bus": 54,
+            "positive_to_bus": 62,
+            "first_runtime_key": "PARENT:61",
+            "last_runtime_key": "PARENT:61",
+            "first_runtime_row": 61,
+            "last_runtime_row": 61,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 69,
+            "parent_key": "PARENT:69",
+            "coefficient": 1,
+            "from_bus": 58,
+            "to_bus": 62,
+            "positive_from_bus": 58,
+            "positive_to_bus": 62,
+            "first_runtime_key": "PARENT:69",
+            "last_runtime_key": "PARENT:69",
+            "first_runtime_row": 69,
+            "last_runtime_row": 69,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 212,
+            "parent_key": "PARENT:212",
+            "coefficient": 1,
+            "from_bus": 54,
+            "to_bus": 52,
+            "positive_from_bus": 54,
+            "positive_to_bus": 52,
+            "first_runtime_key": "PARENT:212",
+            "last_runtime_key": "PARENT:212",
+            "first_runtime_row": 212,
+            "last_runtime_row": 212,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may30": [
+          {
+            "parent_id": 58,
+            "parent_key": "PARENT:58",
+            "coefficient": -1,
+            "from_bus": 53,
+            "to_bus": 55,
+            "positive_from_bus": 55,
+            "positive_to_bus": 53,
+            "first_runtime_key": "PARENT:58",
+            "last_runtime_key": "PARENT:58",
+            "first_runtime_row": 58,
+            "last_runtime_row": 58,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 61,
+            "parent_key": "PARENT:61",
+            "coefficient": 1,
+            "from_bus": 54,
+            "to_bus": 62,
+            "positive_from_bus": 54,
+            "positive_to_bus": 62,
+            "first_runtime_key": "PARENT:61",
+            "last_runtime_key": "PARENT:61",
+            "first_runtime_row": 61,
+            "last_runtime_row": 61,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 69,
+            "parent_key": "PARENT:69",
+            "coefficient": 1,
+            "from_bus": 58,
+            "to_bus": 62,
+            "positive_from_bus": 58,
+            "positive_to_bus": 62,
+            "first_runtime_key": "PARENT:69",
+            "last_runtime_key": "PARENT:69",
+            "first_runtime_row": 69,
+            "last_runtime_row": 69,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 212,
+            "parent_key": "PARENT:212",
+            "coefficient": 1,
+            "from_bus": 54,
+            "to_bus": 52,
+            "positive_from_bus": 54,
+            "positive_to_bus": 52,
+            "first_runtime_key": "PARENT:212",
+            "last_runtime_key": "PARENT:212",
+            "first_runtime_row": 212,
+            "last_runtime_row": 212,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "post_dover": [
+          {
+            "parent_id": 58,
+            "parent_key": "PARENT:58",
+            "coefficient": -1,
+            "from_bus": 53,
+            "to_bus": 55,
+            "positive_from_bus": 55,
+            "positive_to_bus": 53,
+            "first_runtime_key": "PARENT:58",
+            "last_runtime_key": "PARENT:58",
+            "first_runtime_row": 58,
+            "last_runtime_row": 58,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 61,
+            "parent_key": "PARENT:61",
+            "coefficient": 1,
+            "from_bus": 54,
+            "to_bus": 62,
+            "positive_from_bus": 54,
+            "positive_to_bus": 62,
+            "first_runtime_key": "PARENT:61",
+            "last_runtime_key": "PARENT:61",
+            "first_runtime_row": 61,
+            "last_runtime_row": 61,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 69,
+            "parent_key": "PARENT:69",
+            "coefficient": 1,
+            "from_bus": 58,
+            "to_bus": 62,
+            "positive_from_bus": 58,
+            "positive_to_bus": 62,
+            "first_runtime_key": "PARENT:69",
+            "last_runtime_key": "PARENT:69",
+            "first_runtime_row": 69,
+            "last_runtime_row": 69,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 212,
+            "parent_key": "PARENT:212",
+            "coefficient": 1,
+            "from_bus": 54,
+            "to_bus": 52,
+            "positive_from_bus": 54,
+            "positive_to_bus": 52,
+            "first_runtime_key": "PARENT:212",
+            "last_runtime_key": "PARENT:212",
+            "first_runtime_row": 212,
+            "last_runtime_row": 212,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ]
+      },
+      "positive_orientation": {
+        "source_bus_ids": [
+          54,
+          55,
+          58
+        ],
+        "target_bus_ids": [
+          52,
+          53,
+          62
+        ],
+        "located_source_bus_ids": [
+          54,
+          55,
+          58
+        ],
+        "located_target_bus_ids": [
+          52,
+          53,
+          62
+        ],
+        "source_lonlat": [
+          -78.692,
+          42.945
+        ],
+        "target_lonlat": [
+          -77.83800000000001,
+          42.96966666666666
+        ],
+        "label_anchor_lonlat": [
+          -78.265,
+          42.95733333333333
+        ],
+        "source_xy": [
+          -219.536517,
+          -108.413328
+        ],
+        "target_xy": [
+          -149.894248,
+          -109.288196
+        ],
+        "label_anchor_xy": [
+          -184.715382,
+          -108.850762
+        ],
+        "geometry_basis": "Unweighted mean of unique located sign-oriented member endpoint model coordinates; schematic cut arrow, not a meter route",
+        "positive_arrow": "source_to_target",
+        "negative_arrow": "target_to_source",
+        "zero_or_null_flow_arrow": "none"
+      },
+      "physical_NYISO_meter_membership_certified": false
+    },
+    {
+      "id": "west_central",
+      "index": 2,
+      "name": "WEST CENTRAL",
+      "inherited_interface_id": 2,
+      "source_zones": [
+        "B"
+      ],
+      "target_zones": [
+        "C"
+      ],
+      "member_count": 4,
+      "members_by_state": {
+        "pre_may": [
+          {
+            "parent_id": 54,
+            "parent_key": "PARENT:54",
+            "coefficient": -1,
+            "from_bus": 50,
+            "to_bus": 52,
+            "positive_from_bus": 52,
+            "positive_to_bus": 50,
+            "first_runtime_key": "PARENT:54:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:54:SECTION:2_OF_2",
+            "first_runtime_row": 54,
+            "last_runtime_row": 423,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 55,
+            "parent_key": "PARENT:55",
+            "coefficient": -1,
+            "from_bus": 51,
+            "to_bus": 53,
+            "positive_from_bus": 53,
+            "positive_to_bus": 51,
+            "first_runtime_key": "PARENT:55:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:55:SECTION:2_OF_2",
+            "first_runtime_row": 55,
+            "last_runtime_row": 424,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 59,
+            "parent_key": "PARENT:59",
+            "coefficient": 1,
+            "from_bus": 53,
+            "to_bus": 65,
+            "positive_from_bus": 53,
+            "positive_to_bus": 65,
+            "first_runtime_key": "PARENT:59",
+            "last_runtime_key": "PARENT:59",
+            "first_runtime_row": 59,
+            "last_runtime_row": 59,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 72,
+            "parent_key": "PARENT:72",
+            "coefficient": 1,
+            "from_bus": 62,
+            "to_bus": 63,
+            "positive_from_bus": 62,
+            "positive_to_bus": 63,
+            "first_runtime_key": "PARENT:72",
+            "last_runtime_key": "PARENT:72",
+            "first_runtime_row": 72,
+            "last_runtime_row": 72,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may21": [
+          {
+            "parent_id": 54,
+            "parent_key": "PARENT:54",
+            "coefficient": -1,
+            "from_bus": 50,
+            "to_bus": 52,
+            "positive_from_bus": 52,
+            "positive_to_bus": 50,
+            "first_runtime_key": "PARENT:54:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:54:SECTION:2_OF_2",
+            "first_runtime_row": 54,
+            "last_runtime_row": 423,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 55,
+            "parent_key": "PARENT:55",
+            "coefficient": -1,
+            "from_bus": 51,
+            "to_bus": 53,
+            "positive_from_bus": 53,
+            "positive_to_bus": 51,
+            "first_runtime_key": "PARENT:55:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:55:SECTION:2_OF_2",
+            "first_runtime_row": 55,
+            "last_runtime_row": 424,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 59,
+            "parent_key": "PARENT:59",
+            "coefficient": 1,
+            "from_bus": 53,
+            "to_bus": 65,
+            "positive_from_bus": 53,
+            "positive_to_bus": 65,
+            "first_runtime_key": "PARENT:59",
+            "last_runtime_key": "PARENT:59",
+            "first_runtime_row": 59,
+            "last_runtime_row": 59,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 72,
+            "parent_key": "PARENT:72",
+            "coefficient": 1,
+            "from_bus": 62,
+            "to_bus": 63,
+            "positive_from_bus": 62,
+            "positive_to_bus": 63,
+            "first_runtime_key": "PARENT:72",
+            "last_runtime_key": "PARENT:72",
+            "first_runtime_row": 72,
+            "last_runtime_row": 72,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may30": [
+          {
+            "parent_id": 54,
+            "parent_key": "PARENT:54",
+            "coefficient": -1,
+            "from_bus": 50,
+            "to_bus": 52,
+            "positive_from_bus": 52,
+            "positive_to_bus": 50,
+            "first_runtime_key": "PARENT:54:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:54:SECTION:2_OF_2",
+            "first_runtime_row": 54,
+            "last_runtime_row": 423,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 55,
+            "parent_key": "PARENT:55",
+            "coefficient": -1,
+            "from_bus": 51,
+            "to_bus": 53,
+            "positive_from_bus": 53,
+            "positive_to_bus": 51,
+            "first_runtime_key": "PARENT:55:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:55:SECTION:2_OF_2",
+            "first_runtime_row": 55,
+            "last_runtime_row": 424,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 59,
+            "parent_key": "PARENT:59",
+            "coefficient": 1,
+            "from_bus": 53,
+            "to_bus": 65,
+            "positive_from_bus": 53,
+            "positive_to_bus": 65,
+            "first_runtime_key": "PARENT:59",
+            "last_runtime_key": "PARENT:59",
+            "first_runtime_row": 59,
+            "last_runtime_row": 59,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 72,
+            "parent_key": "PARENT:72",
+            "coefficient": 1,
+            "from_bus": 62,
+            "to_bus": 63,
+            "positive_from_bus": 62,
+            "positive_to_bus": 63,
+            "first_runtime_key": "PARENT:72",
+            "last_runtime_key": "PARENT:72",
+            "first_runtime_row": 72,
+            "last_runtime_row": 72,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "post_dover": [
+          {
+            "parent_id": 54,
+            "parent_key": "PARENT:54",
+            "coefficient": -1,
+            "from_bus": 50,
+            "to_bus": 52,
+            "positive_from_bus": 52,
+            "positive_to_bus": 50,
+            "first_runtime_key": "PARENT:54:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:54:SECTION:2_OF_2",
+            "first_runtime_row": 54,
+            "last_runtime_row": 426,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 55,
+            "parent_key": "PARENT:55",
+            "coefficient": -1,
+            "from_bus": 51,
+            "to_bus": 53,
+            "positive_from_bus": 53,
+            "positive_to_bus": 51,
+            "first_runtime_key": "PARENT:55:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:55:SECTION:2_OF_2",
+            "first_runtime_row": 55,
+            "last_runtime_row": 427,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 59,
+            "parent_key": "PARENT:59",
+            "coefficient": 1,
+            "from_bus": 53,
+            "to_bus": 65,
+            "positive_from_bus": 53,
+            "positive_to_bus": 65,
+            "first_runtime_key": "PARENT:59",
+            "last_runtime_key": "PARENT:59",
+            "first_runtime_row": 59,
+            "last_runtime_row": 59,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 72,
+            "parent_key": "PARENT:72",
+            "coefficient": 1,
+            "from_bus": 62,
+            "to_bus": 63,
+            "positive_from_bus": 62,
+            "positive_to_bus": 63,
+            "first_runtime_key": "PARENT:72",
+            "last_runtime_key": "PARENT:72",
+            "first_runtime_row": 72,
+            "last_runtime_row": 72,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ]
+      },
+      "positive_orientation": {
+        "source_bus_ids": [
+          52,
+          53,
+          62
+        ],
+        "target_bus_ids": [
+          50,
+          51,
+          63,
+          65
+        ],
+        "located_source_bus_ids": [
+          52,
+          53,
+          62
+        ],
+        "located_target_bus_ids": [
+          50,
+          51,
+          63,
+          65
+        ],
+        "source_lonlat": [
+          -77.83800000000001,
+          42.96966666666666
+        ],
+        "target_lonlat": [
+          -76.849,
+          42.8235
+        ],
+        "label_anchor_lonlat": [
+          -77.3435,
+          42.89658333333333
+        ],
+        "source_xy": [
+          -149.894248,
+          -109.288196
+        ],
+        "target_xy": [
+          -69.598536,
+          -91.931672
+        ],
+        "label_anchor_xy": [
+          -109.746392,
+          -100.609934
+        ],
+        "geometry_basis": "Unweighted mean of unique located sign-oriented member endpoint model coordinates; schematic cut arrow, not a meter route",
+        "positive_arrow": "source_to_target",
+        "negative_arrow": "target_to_source",
+        "zero_or_null_flow_arrow": "none"
+      },
+      "physical_NYISO_meter_membership_certified": false
+    },
+    {
+      "id": "total_east",
+      "index": 3,
+      "name": "TOTAL EAST",
+      "inherited_interface_id": 3,
+      "source_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "target_zones": [
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "member_count": 5,
+      "members_by_state": {
+        "pre_may": [
+          {
+            "parent_id": 33,
+            "parent_key": "PARENT:33",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 38,
+            "positive_from_bus": 38,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:33",
+            "last_runtime_key": "PARENT:33",
+            "first_runtime_row": 33,
+            "last_runtime_row": 33,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 36,
+            "parent_key": "PARENT:36",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 43,
+            "positive_from_bus": 43,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:36:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:36:SECTION:2_OF_2",
+            "first_runtime_row": 36,
+            "last_runtime_row": 417,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 40,
+            "parent_key": "PARENT:40",
+            "coefficient": -1,
+            "from_bus": 40,
+            "to_bus": 44,
+            "positive_from_bus": 44,
+            "positive_to_bus": 40,
+            "first_runtime_key": "PARENT:40:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:40:SECTION:2_OF_2",
+            "first_runtime_row": 40,
+            "last_runtime_row": 419,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 42,
+            "parent_key": "PARENT:42",
+            "coefficient": -1,
+            "from_bus": 41,
+            "to_bus": 45,
+            "positive_from_bus": 45,
+            "positive_to_bus": 41,
+            "first_runtime_key": "PARENT:42",
+            "last_runtime_key": "PARENT:42",
+            "first_runtime_row": 42,
+            "last_runtime_row": 42,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 224,
+            "parent_key": "PARENT:224",
+            "coefficient": 1,
+            "from_bus": 38,
+            "to_bus": 77,
+            "positive_from_bus": 38,
+            "positive_to_bus": 77,
+            "first_runtime_key": "PARENT:224:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:224:SECTION:2_OF_2",
+            "first_runtime_row": 224,
+            "last_runtime_row": 481,
+            "section_count": 2,
+            "indices_are_one_based": true
+          }
+        ],
+        "may21": [
+          {
+            "parent_id": 33,
+            "parent_key": "PARENT:33",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 38,
+            "positive_from_bus": 38,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:33",
+            "last_runtime_key": "PARENT:33",
+            "first_runtime_row": 33,
+            "last_runtime_row": 33,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 36,
+            "parent_key": "PARENT:36",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 43,
+            "positive_from_bus": 43,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:36:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:36:SECTION:2_OF_2",
+            "first_runtime_row": 36,
+            "last_runtime_row": 417,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 40,
+            "parent_key": "PARENT:40",
+            "coefficient": -1,
+            "from_bus": 40,
+            "to_bus": 44,
+            "positive_from_bus": 44,
+            "positive_to_bus": 40,
+            "first_runtime_key": "PARENT:40:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:40:SECTION:2_OF_2",
+            "first_runtime_row": 40,
+            "last_runtime_row": 419,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 42,
+            "parent_key": "PARENT:42",
+            "coefficient": -1,
+            "from_bus": 41,
+            "to_bus": 45,
+            "positive_from_bus": 45,
+            "positive_to_bus": 41,
+            "first_runtime_key": "PARENT:42",
+            "last_runtime_key": "PARENT:42",
+            "first_runtime_row": 42,
+            "last_runtime_row": 42,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 224,
+            "parent_key": "PARENT:224",
+            "coefficient": 1,
+            "from_bus": 38,
+            "to_bus": 77,
+            "positive_from_bus": 38,
+            "positive_to_bus": 77,
+            "first_runtime_key": "PARENT:224:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:224:SECTION:2_OF_2",
+            "first_runtime_row": 224,
+            "last_runtime_row": 481,
+            "section_count": 2,
+            "indices_are_one_based": true
+          }
+        ],
+        "may30": [
+          {
+            "parent_id": 33,
+            "parent_key": "PARENT:33",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 38,
+            "positive_from_bus": 38,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:33",
+            "last_runtime_key": "PARENT:33",
+            "first_runtime_row": 33,
+            "last_runtime_row": 33,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 36,
+            "parent_key": "PARENT:36",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 43,
+            "positive_from_bus": 43,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:36:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:36:SECTION:2_OF_2",
+            "first_runtime_row": 36,
+            "last_runtime_row": 417,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 40,
+            "parent_key": "PARENT:40",
+            "coefficient": -1,
+            "from_bus": 40,
+            "to_bus": 44,
+            "positive_from_bus": 44,
+            "positive_to_bus": 40,
+            "first_runtime_key": "PARENT:40:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:40:SECTION:2_OF_2",
+            "first_runtime_row": 40,
+            "last_runtime_row": 419,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 42,
+            "parent_key": "PARENT:42",
+            "coefficient": -1,
+            "from_bus": 41,
+            "to_bus": 45,
+            "positive_from_bus": 45,
+            "positive_to_bus": 41,
+            "first_runtime_key": "PARENT:42",
+            "last_runtime_key": "PARENT:42",
+            "first_runtime_row": 42,
+            "last_runtime_row": 42,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 224,
+            "parent_key": "PARENT:224",
+            "coefficient": 1,
+            "from_bus": 38,
+            "to_bus": 77,
+            "positive_from_bus": 38,
+            "positive_to_bus": 77,
+            "first_runtime_key": "PARENT:224:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:224:SECTION:2_OF_2",
+            "first_runtime_row": 224,
+            "last_runtime_row": 481,
+            "section_count": 2,
+            "indices_are_one_based": true
+          }
+        ],
+        "post_dover": [
+          {
+            "parent_id": 33,
+            "parent_key": "PARENT:33",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 38,
+            "positive_from_bus": 38,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:33",
+            "last_runtime_key": "PARENT:33",
+            "first_runtime_row": 33,
+            "last_runtime_row": 33,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 36,
+            "parent_key": "PARENT:36",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 43,
+            "positive_from_bus": 43,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:36:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:36:SECTION:2_OF_2",
+            "first_runtime_row": 36,
+            "last_runtime_row": 420,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 40,
+            "parent_key": "PARENT:40",
+            "coefficient": -1,
+            "from_bus": 40,
+            "to_bus": 44,
+            "positive_from_bus": 44,
+            "positive_to_bus": 40,
+            "first_runtime_key": "PARENT:40:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:40:SECTION:2_OF_2",
+            "first_runtime_row": 40,
+            "last_runtime_row": 422,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 42,
+            "parent_key": "PARENT:42",
+            "coefficient": -1,
+            "from_bus": 41,
+            "to_bus": 45,
+            "positive_from_bus": 45,
+            "positive_to_bus": 41,
+            "first_runtime_key": "PARENT:42",
+            "last_runtime_key": "PARENT:42",
+            "first_runtime_row": 42,
+            "last_runtime_row": 42,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 224,
+            "parent_key": "PARENT:224",
+            "coefficient": 1,
+            "from_bus": 38,
+            "to_bus": 77,
+            "positive_from_bus": 38,
+            "positive_to_bus": 77,
+            "first_runtime_key": "PARENT:224:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:224:SECTION:2_OF_2",
+            "first_runtime_row": 224,
+            "last_runtime_row": 484,
+            "section_count": 2,
+            "indices_are_one_based": true
+          }
+        ]
+      },
+      "positive_orientation": {
+        "source_bus_ids": [
+          38,
+          43,
+          44,
+          45
+        ],
+        "target_bus_ids": [
+          37,
+          40,
+          41,
+          77
+        ],
+        "located_source_bus_ids": [
+          38,
+          43,
+          44,
+          45
+        ],
+        "located_target_bus_ids": [
+          37,
+          40,
+          41,
+          77
+        ],
+        "source_lonlat": [
+          -75.124,
+          42.8435
+        ],
+        "target_lonlat": [
+          -73.92905965975,
+          42.37262859800002
+        ],
+        "label_anchor_lonlat": [
+          -74.52652982987499,
+          42.608064299000006
+        ],
+        "source_xy": [
+          71.596764,
+          -93.991247
+        ],
+        "target_xy": [
+          170.36659,
+          -43.439381
+        ],
+        "label_anchor_xy": [
+          120.981677,
+          -68.715314
+        ],
+        "geometry_basis": "Unweighted mean of unique located sign-oriented member endpoint model coordinates; schematic cut arrow, not a meter route",
+        "positive_arrow": "source_to_target",
+        "negative_arrow": "target_to_source",
+        "zero_or_null_flow_arrow": "none"
+      },
+      "physical_NYISO_meter_membership_certified": false
+    },
+    {
+      "id": "moses_south",
+      "index": 4,
+      "name": "MOSES SOUTH",
+      "inherited_interface_id": 4,
+      "source_zones": [
+        "D"
+      ],
+      "target_zones": [
+        "E"
+      ],
+      "member_count": 3,
+      "members_by_state": {
+        "pre_may": [
+          {
+            "parent_id": 46,
+            "parent_key": "PARENT:46",
+            "coefficient": -1,
+            "from_bus": 44,
+            "to_bus": 48,
+            "positive_from_bus": 48,
+            "positive_to_bus": 44,
+            "first_runtime_key": "PARENT:46:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:46:SECTION:2_OF_2",
+            "first_runtime_row": 46,
+            "last_runtime_row": 420,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 51,
+            "parent_key": "PARENT:51",
+            "coefficient": -1,
+            "from_bus": 46,
+            "to_bus": 49,
+            "positive_from_bus": 49,
+            "positive_to_bus": 46,
+            "first_runtime_key": "PARENT:51:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:51:SECTION:2_OF_2",
+            "first_runtime_row": 51,
+            "last_runtime_row": 422,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 52,
+            "parent_key": "PARENT:52",
+            "coefficient": -1,
+            "from_bus": 47,
+            "to_bus": 48,
+            "positive_from_bus": 48,
+            "positive_to_bus": 47,
+            "first_runtime_key": "PARENT:52",
+            "last_runtime_key": "PARENT:52",
+            "first_runtime_row": 52,
+            "last_runtime_row": 52,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may21": [
+          {
+            "parent_id": 46,
+            "parent_key": "PARENT:46",
+            "coefficient": -1,
+            "from_bus": 44,
+            "to_bus": 48,
+            "positive_from_bus": 48,
+            "positive_to_bus": 44,
+            "first_runtime_key": "PARENT:46:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:46:SECTION:2_OF_2",
+            "first_runtime_row": 46,
+            "last_runtime_row": 420,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 51,
+            "parent_key": "PARENT:51",
+            "coefficient": -1,
+            "from_bus": 46,
+            "to_bus": 49,
+            "positive_from_bus": 49,
+            "positive_to_bus": 46,
+            "first_runtime_key": "PARENT:51:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:51:SECTION:2_OF_2",
+            "first_runtime_row": 51,
+            "last_runtime_row": 422,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 52,
+            "parent_key": "PARENT:52",
+            "coefficient": -1,
+            "from_bus": 47,
+            "to_bus": 48,
+            "positive_from_bus": 48,
+            "positive_to_bus": 47,
+            "first_runtime_key": "PARENT:52",
+            "last_runtime_key": "PARENT:52",
+            "first_runtime_row": 52,
+            "last_runtime_row": 52,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may30": [
+          {
+            "parent_id": 46,
+            "parent_key": "PARENT:46",
+            "coefficient": -1,
+            "from_bus": 44,
+            "to_bus": 48,
+            "positive_from_bus": 48,
+            "positive_to_bus": 44,
+            "first_runtime_key": "PARENT:46:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:46:SECTION:2_OF_2",
+            "first_runtime_row": 46,
+            "last_runtime_row": 420,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 51,
+            "parent_key": "PARENT:51",
+            "coefficient": -1,
+            "from_bus": 46,
+            "to_bus": 49,
+            "positive_from_bus": 49,
+            "positive_to_bus": 46,
+            "first_runtime_key": "PARENT:51:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:51:SECTION:2_OF_2",
+            "first_runtime_row": 51,
+            "last_runtime_row": 422,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 52,
+            "parent_key": "PARENT:52",
+            "coefficient": -1,
+            "from_bus": 47,
+            "to_bus": 48,
+            "positive_from_bus": 48,
+            "positive_to_bus": 47,
+            "first_runtime_key": "PARENT:52",
+            "last_runtime_key": "PARENT:52",
+            "first_runtime_row": 52,
+            "last_runtime_row": 52,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "post_dover": [
+          {
+            "parent_id": 46,
+            "parent_key": "PARENT:46",
+            "coefficient": -1,
+            "from_bus": 44,
+            "to_bus": 48,
+            "positive_from_bus": 48,
+            "positive_to_bus": 44,
+            "first_runtime_key": "PARENT:46:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:46:SECTION:2_OF_2",
+            "first_runtime_row": 46,
+            "last_runtime_row": 423,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 51,
+            "parent_key": "PARENT:51",
+            "coefficient": -1,
+            "from_bus": 46,
+            "to_bus": 49,
+            "positive_from_bus": 49,
+            "positive_to_bus": 46,
+            "first_runtime_key": "PARENT:51:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:51:SECTION:2_OF_2",
+            "first_runtime_row": 51,
+            "last_runtime_row": 425,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 52,
+            "parent_key": "PARENT:52",
+            "coefficient": -1,
+            "from_bus": 47,
+            "to_bus": 48,
+            "positive_from_bus": 48,
+            "positive_to_bus": 47,
+            "first_runtime_key": "PARENT:52",
+            "last_runtime_key": "PARENT:52",
+            "first_runtime_row": 52,
+            "last_runtime_row": 52,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ]
+      },
+      "positive_orientation": {
+        "source_bus_ids": [
+          48,
+          49
+        ],
+        "target_bus_ids": [
+          44,
+          46,
+          47
+        ],
+        "located_source_bus_ids": [
+          48,
+          49
+        ],
+        "located_target_bus_ids": [
+          44,
+          46,
+          47
+        ],
+        "source_lonlat": [
+          -74.47749999999999,
+          44.772499999999994
+        ],
+        "target_lonlat": [
+          -75.13266666666668,
+          44.031666666666666
+        ],
+        "label_anchor_lonlat": [
+          -74.80508333333333,
+          44.40208333333333
+        ],
+        "source_xy": [
+          120.523893,
+          -308.937059
+        ],
+        "target_xy": [
+          69.491207,
+          -225.885223
+        ],
+        "label_anchor_xy": [
+          95.00755,
+          -267.411141
+        ],
+        "geometry_basis": "Unweighted mean of unique located sign-oriented member endpoint model coordinates; schematic cut arrow, not a meter route",
+        "positive_arrow": "source_to_target",
+        "negative_arrow": "target_to_source",
+        "zero_or_null_flow_arrow": "none"
+      },
+      "physical_NYISO_meter_membership_certified": false
+    },
+    {
+      "id": "central_east_vc",
+      "index": 5,
+      "name": "CENTRAL EAST - VC",
+      "inherited_interface_id": 5,
+      "source_zones": [
+        "E"
+      ],
+      "target_zones": [
+        "F"
+      ],
+      "member_count": 4,
+      "members_by_state": {
+        "pre_may": [
+          {
+            "parent_id": 33,
+            "parent_key": "PARENT:33",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 38,
+            "positive_from_bus": 38,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:33",
+            "last_runtime_key": "PARENT:33",
+            "first_runtime_row": 33,
+            "last_runtime_row": 33,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 36,
+            "parent_key": "PARENT:36",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 43,
+            "positive_from_bus": 43,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:36:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:36:SECTION:2_OF_2",
+            "first_runtime_row": 36,
+            "last_runtime_row": 417,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 40,
+            "parent_key": "PARENT:40",
+            "coefficient": -1,
+            "from_bus": 40,
+            "to_bus": 44,
+            "positive_from_bus": 44,
+            "positive_to_bus": 40,
+            "first_runtime_key": "PARENT:40:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:40:SECTION:2_OF_2",
+            "first_runtime_row": 40,
+            "last_runtime_row": 419,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 42,
+            "parent_key": "PARENT:42",
+            "coefficient": -1,
+            "from_bus": 41,
+            "to_bus": 45,
+            "positive_from_bus": 45,
+            "positive_to_bus": 41,
+            "first_runtime_key": "PARENT:42",
+            "last_runtime_key": "PARENT:42",
+            "first_runtime_row": 42,
+            "last_runtime_row": 42,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may21": [
+          {
+            "parent_id": 33,
+            "parent_key": "PARENT:33",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 38,
+            "positive_from_bus": 38,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:33",
+            "last_runtime_key": "PARENT:33",
+            "first_runtime_row": 33,
+            "last_runtime_row": 33,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 36,
+            "parent_key": "PARENT:36",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 43,
+            "positive_from_bus": 43,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:36:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:36:SECTION:2_OF_2",
+            "first_runtime_row": 36,
+            "last_runtime_row": 417,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 40,
+            "parent_key": "PARENT:40",
+            "coefficient": -1,
+            "from_bus": 40,
+            "to_bus": 44,
+            "positive_from_bus": 44,
+            "positive_to_bus": 40,
+            "first_runtime_key": "PARENT:40:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:40:SECTION:2_OF_2",
+            "first_runtime_row": 40,
+            "last_runtime_row": 419,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 42,
+            "parent_key": "PARENT:42",
+            "coefficient": -1,
+            "from_bus": 41,
+            "to_bus": 45,
+            "positive_from_bus": 45,
+            "positive_to_bus": 41,
+            "first_runtime_key": "PARENT:42",
+            "last_runtime_key": "PARENT:42",
+            "first_runtime_row": 42,
+            "last_runtime_row": 42,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may30": [
+          {
+            "parent_id": 33,
+            "parent_key": "PARENT:33",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 38,
+            "positive_from_bus": 38,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:33",
+            "last_runtime_key": "PARENT:33",
+            "first_runtime_row": 33,
+            "last_runtime_row": 33,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 36,
+            "parent_key": "PARENT:36",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 43,
+            "positive_from_bus": 43,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:36:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:36:SECTION:2_OF_2",
+            "first_runtime_row": 36,
+            "last_runtime_row": 417,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 40,
+            "parent_key": "PARENT:40",
+            "coefficient": -1,
+            "from_bus": 40,
+            "to_bus": 44,
+            "positive_from_bus": 44,
+            "positive_to_bus": 40,
+            "first_runtime_key": "PARENT:40:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:40:SECTION:2_OF_2",
+            "first_runtime_row": 40,
+            "last_runtime_row": 419,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 42,
+            "parent_key": "PARENT:42",
+            "coefficient": -1,
+            "from_bus": 41,
+            "to_bus": 45,
+            "positive_from_bus": 45,
+            "positive_to_bus": 41,
+            "first_runtime_key": "PARENT:42",
+            "last_runtime_key": "PARENT:42",
+            "first_runtime_row": 42,
+            "last_runtime_row": 42,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "post_dover": [
+          {
+            "parent_id": 33,
+            "parent_key": "PARENT:33",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 38,
+            "positive_from_bus": 38,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:33",
+            "last_runtime_key": "PARENT:33",
+            "first_runtime_row": 33,
+            "last_runtime_row": 33,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 36,
+            "parent_key": "PARENT:36",
+            "coefficient": -1,
+            "from_bus": 37,
+            "to_bus": 43,
+            "positive_from_bus": 43,
+            "positive_to_bus": 37,
+            "first_runtime_key": "PARENT:36:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:36:SECTION:2_OF_2",
+            "first_runtime_row": 36,
+            "last_runtime_row": 420,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 40,
+            "parent_key": "PARENT:40",
+            "coefficient": -1,
+            "from_bus": 40,
+            "to_bus": 44,
+            "positive_from_bus": 44,
+            "positive_to_bus": 40,
+            "first_runtime_key": "PARENT:40:SECTION:1_OF_2",
+            "last_runtime_key": "PARENT:40:SECTION:2_OF_2",
+            "first_runtime_row": 40,
+            "last_runtime_row": 422,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 42,
+            "parent_key": "PARENT:42",
+            "coefficient": -1,
+            "from_bus": 41,
+            "to_bus": 45,
+            "positive_from_bus": 45,
+            "positive_to_bus": 41,
+            "first_runtime_key": "PARENT:42",
+            "last_runtime_key": "PARENT:42",
+            "first_runtime_row": 42,
+            "last_runtime_row": 42,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ]
+      },
+      "positive_orientation": {
+        "source_bus_ids": [
+          38,
+          43,
+          44,
+          45
+        ],
+        "target_bus_ids": [
+          37,
+          40,
+          41
+        ],
+        "located_source_bus_ids": [
+          38,
+          43,
+          44,
+          45
+        ],
+        "located_target_bus_ids": [
+          37,
+          40,
+          41
+        ],
+        "source_lonlat": [
+          -75.124,
+          42.8435
+        ],
+        "target_lonlat": [
+          -73.923,
+          42.742
+        ],
+        "label_anchor_lonlat": [
+          -74.5235,
+          42.79275
+        ],
+        "source_xy": [
+          71.596764,
+          -93.991247
+        ],
+        "target_xy": [
+          169.862841,
+          -84.432301
+        ],
+        "label_anchor_xy": [
+          120.729802,
+          -89.211774
+        ],
+        "geometry_basis": "Unweighted mean of unique located sign-oriented member endpoint model coordinates; schematic cut arrow, not a meter route",
+        "positive_arrow": "source_to_target",
+        "negative_arrow": "target_to_source",
+        "zero_or_null_flow_arrow": "none"
+      },
+      "physical_NYISO_meter_membership_certified": false
+    },
+    {
+      "id": "upny_coned",
+      "index": 6,
+      "name": "UPNY CONED",
+      "inherited_interface_id": 8,
+      "source_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "target_zones": [
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "member_count": 6,
+      "members_by_state": {
+        "pre_may": [
+          {
+            "parent_id": 297,
+            "parent_key": "PERFORM:1114",
+            "coefficient": -1,
+            "from_bus": 10547,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 10547,
+            "first_runtime_key": "PERFORM:1114",
+            "last_runtime_key": "PERFORM:1114",
+            "first_runtime_row": 297,
+            "last_runtime_row": 297,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 361,
+            "parent_key": "PERFORM:1731",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1731",
+            "last_runtime_key": "PERFORM:1731",
+            "first_runtime_row": 361,
+            "last_runtime_row": 361,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 362,
+            "parent_key": "PERFORM:1732",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1732",
+            "last_runtime_key": "PERFORM:1732",
+            "first_runtime_row": 362,
+            "last_runtime_row": 362,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 363,
+            "parent_key": "PERFORM:1733",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1733",
+            "last_runtime_key": "PERFORM:1733",
+            "first_runtime_row": 363,
+            "last_runtime_row": 363,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 364,
+            "parent_key": "PERFORM:1734",
+            "coefficient": 1,
+            "from_bus": 10902,
+            "to_bus": 74,
+            "positive_from_bus": 10902,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1734",
+            "last_runtime_key": "PERFORM:1734",
+            "first_runtime_row": 364,
+            "last_runtime_row": 364,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 365,
+            "parent_key": "PERFORM:1735",
+            "coefficient": 1,
+            "from_bus": 10902,
+            "to_bus": 74,
+            "positive_from_bus": 10902,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1735",
+            "last_runtime_key": "PERFORM:1735",
+            "first_runtime_row": 365,
+            "last_runtime_row": 365,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may21": [
+          {
+            "parent_id": 297,
+            "parent_key": "PERFORM:1114",
+            "coefficient": -1,
+            "from_bus": 10547,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 10547,
+            "first_runtime_key": "PERFORM:1114",
+            "last_runtime_key": "PERFORM:1114",
+            "first_runtime_row": 297,
+            "last_runtime_row": 297,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 361,
+            "parent_key": "PERFORM:1731",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1731",
+            "last_runtime_key": "PERFORM:1731",
+            "first_runtime_row": 361,
+            "last_runtime_row": 361,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 362,
+            "parent_key": "PERFORM:1732",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1732",
+            "last_runtime_key": "PERFORM:1732",
+            "first_runtime_row": 362,
+            "last_runtime_row": 362,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 363,
+            "parent_key": "PERFORM:1733",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1733",
+            "last_runtime_key": "PERFORM:1733",
+            "first_runtime_row": 363,
+            "last_runtime_row": 363,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 364,
+            "parent_key": "PERFORM:1734",
+            "coefficient": 1,
+            "from_bus": 10902,
+            "to_bus": 74,
+            "positive_from_bus": 10902,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1734",
+            "last_runtime_key": "PERFORM:1734",
+            "first_runtime_row": 364,
+            "last_runtime_row": 364,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 365,
+            "parent_key": "PERFORM:1735",
+            "coefficient": 1,
+            "from_bus": 10902,
+            "to_bus": 74,
+            "positive_from_bus": 10902,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1735",
+            "last_runtime_key": "PERFORM:1735",
+            "first_runtime_row": 365,
+            "last_runtime_row": 365,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may30": [
+          {
+            "parent_id": 297,
+            "parent_key": "PERFORM:1114",
+            "coefficient": -1,
+            "from_bus": 10547,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 10547,
+            "first_runtime_key": "PERFORM:1114",
+            "last_runtime_key": "PERFORM:1114",
+            "first_runtime_row": 297,
+            "last_runtime_row": 297,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 361,
+            "parent_key": "PERFORM:1731",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1731",
+            "last_runtime_key": "PERFORM:1731",
+            "first_runtime_row": 361,
+            "last_runtime_row": 361,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 362,
+            "parent_key": "PERFORM:1732",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1732",
+            "last_runtime_key": "PERFORM:1732",
+            "first_runtime_row": 362,
+            "last_runtime_row": 362,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 363,
+            "parent_key": "PERFORM:1733",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1733",
+            "last_runtime_key": "PERFORM:1733",
+            "first_runtime_row": 363,
+            "last_runtime_row": 363,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 364,
+            "parent_key": "PERFORM:1734",
+            "coefficient": 1,
+            "from_bus": 10902,
+            "to_bus": 74,
+            "positive_from_bus": 10902,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1734",
+            "last_runtime_key": "PERFORM:1734",
+            "first_runtime_row": 364,
+            "last_runtime_row": 364,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 365,
+            "parent_key": "PERFORM:1735",
+            "coefficient": 1,
+            "from_bus": 10902,
+            "to_bus": 74,
+            "positive_from_bus": 10902,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1735",
+            "last_runtime_key": "PERFORM:1735",
+            "first_runtime_row": 365,
+            "last_runtime_row": 365,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "post_dover": [
+          {
+            "parent_id": 297,
+            "parent_key": "PERFORM:1114",
+            "coefficient": -1,
+            "from_bus": 10547,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 10547,
+            "first_runtime_key": "PERFORM:1114",
+            "last_runtime_key": "PERFORM:1114",
+            "first_runtime_row": 297,
+            "last_runtime_row": 297,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 361,
+            "parent_key": "PERFORM:1731",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1731",
+            "last_runtime_key": "PERFORM:1731",
+            "first_runtime_row": 361,
+            "last_runtime_row": 361,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 362,
+            "parent_key": "PERFORM:1732",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1732",
+            "last_runtime_key": "PERFORM:1732",
+            "first_runtime_row": 362,
+            "last_runtime_row": 362,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 363,
+            "parent_key": "PERFORM:1733",
+            "coefficient": -1,
+            "from_bus": 74,
+            "to_bus": 77,
+            "positive_from_bus": 77,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1733",
+            "last_runtime_key": "PERFORM:1733",
+            "first_runtime_row": 363,
+            "last_runtime_row": 363,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 364,
+            "parent_key": "PERFORM:1734",
+            "coefficient": 1,
+            "from_bus": 10902,
+            "to_bus": 74,
+            "positive_from_bus": 10902,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1734",
+            "last_runtime_key": "PERFORM:1734",
+            "first_runtime_row": 364,
+            "last_runtime_row": 364,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 365,
+            "parent_key": "PERFORM:1735",
+            "coefficient": 1,
+            "from_bus": 10902,
+            "to_bus": 74,
+            "positive_from_bus": 10902,
+            "positive_to_bus": 74,
+            "first_runtime_key": "PERFORM:1735",
+            "last_runtime_key": "PERFORM:1735",
+            "first_runtime_row": 365,
+            "last_runtime_row": 365,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ]
+      },
+      "positive_orientation": {
+        "source_bus_ids": [
+          77,
+          10902
+        ],
+        "target_bus_ids": [
+          74,
+          10547
+        ],
+        "located_source_bus_ids": [
+          77,
+          10902
+        ],
+        "located_target_bus_ids": [
+          74,
+          10547
+        ],
+        "source_lonlat": [
+          -73.87059866899997,
+          41.30917599300005
+        ],
+        "target_lonlat": [
+          -73.81625129299997,
+          41.13502204900007
+        ],
+        "label_anchor_lonlat": [
+          -73.84342498099997,
+          41.22209902100006
+        ],
+        "source_xy": [
+          178.164553,
+          74.423386
+        ],
+        "target_xy": [
+          183.211983,
+          93.631791
+        ],
+        "label_anchor_xy": [
+          180.688268,
+          84.027588
+        ],
+        "geometry_basis": "Unweighted mean of unique located sign-oriented member endpoint model coordinates; schematic cut arrow, not a meter route",
+        "positive_arrow": "source_to_target",
+        "negative_arrow": "target_to_source",
+        "zero_or_null_flow_arrow": "none"
+      },
+      "physical_NYISO_meter_membership_certified": false
+    },
+    {
+      "id": "spr_dun_south",
+      "index": 7,
+      "name": "SPR/DUN-SOUTH",
+      "inherited_interface_id": 10,
+      "source_zones": [
+        "I"
+      ],
+      "target_zones": [
+        "J"
+      ],
+      "member_count": 8,
+      "members_by_state": {
+        "pre_may": [
+          {
+            "parent_id": 319,
+            "parent_key": "PERFORM:1236",
+            "coefficient": -1,
+            "from_bus": 11136,
+            "to_bus": 10594,
+            "positive_from_bus": 10594,
+            "positive_to_bus": 11136,
+            "first_runtime_key": "PERFORM:1236:SECTION:1_OF_2",
+            "last_runtime_key": "PERFORM:1236:SECTION:2_OF_2",
+            "first_runtime_row": 319,
+            "last_runtime_row": 483,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 320,
+            "parent_key": "PERFORM:1237",
+            "coefficient": -1,
+            "from_bus": 11136,
+            "to_bus": 10594,
+            "positive_from_bus": 10594,
+            "positive_to_bus": 11136,
+            "first_runtime_key": "PERFORM:1237:SECTION:1_OF_2",
+            "last_runtime_key": "PERFORM:1237:SECTION:2_OF_2",
+            "first_runtime_row": 320,
+            "last_runtime_row": 484,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 328,
+            "parent_key": "PERFORM:1248",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1248",
+            "last_runtime_key": "PERFORM:1248",
+            "first_runtime_row": 328,
+            "last_runtime_row": 328,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 329,
+            "parent_key": "PERFORM:1249",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1249",
+            "last_runtime_key": "PERFORM:1249",
+            "first_runtime_row": 329,
+            "last_runtime_row": 329,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 330,
+            "parent_key": "PERFORM:1250",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1250",
+            "last_runtime_key": "PERFORM:1250",
+            "first_runtime_row": 330,
+            "last_runtime_row": 330,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 336,
+            "parent_key": "PERFORM:1262",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1262",
+            "last_runtime_key": "PERFORM:1262",
+            "first_runtime_row": 336,
+            "last_runtime_row": 336,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 337,
+            "parent_key": "PERFORM:1263",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1263",
+            "last_runtime_key": "PERFORM:1263",
+            "first_runtime_row": 337,
+            "last_runtime_row": 337,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 338,
+            "parent_key": "PERFORM:1264",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1264",
+            "last_runtime_key": "PERFORM:1264",
+            "first_runtime_row": 338,
+            "last_runtime_row": 338,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may21": [
+          {
+            "parent_id": 319,
+            "parent_key": "PERFORM:1236",
+            "coefficient": -1,
+            "from_bus": 11136,
+            "to_bus": 10594,
+            "positive_from_bus": 10594,
+            "positive_to_bus": 11136,
+            "first_runtime_key": "PERFORM:1236:SECTION:1_OF_2",
+            "last_runtime_key": "PERFORM:1236:SECTION:2_OF_2",
+            "first_runtime_row": 319,
+            "last_runtime_row": 483,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 320,
+            "parent_key": "PERFORM:1237",
+            "coefficient": -1,
+            "from_bus": 11136,
+            "to_bus": 10594,
+            "positive_from_bus": 10594,
+            "positive_to_bus": 11136,
+            "first_runtime_key": "PERFORM:1237:SECTION:1_OF_2",
+            "last_runtime_key": "PERFORM:1237:SECTION:2_OF_2",
+            "first_runtime_row": 320,
+            "last_runtime_row": 484,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 328,
+            "parent_key": "PERFORM:1248",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1248",
+            "last_runtime_key": "PERFORM:1248",
+            "first_runtime_row": 328,
+            "last_runtime_row": 328,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 329,
+            "parent_key": "PERFORM:1249",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1249",
+            "last_runtime_key": "PERFORM:1249",
+            "first_runtime_row": 329,
+            "last_runtime_row": 329,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 330,
+            "parent_key": "PERFORM:1250",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1250",
+            "last_runtime_key": "PERFORM:1250",
+            "first_runtime_row": 330,
+            "last_runtime_row": 330,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 336,
+            "parent_key": "PERFORM:1262",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1262",
+            "last_runtime_key": "PERFORM:1262",
+            "first_runtime_row": 336,
+            "last_runtime_row": 336,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 337,
+            "parent_key": "PERFORM:1263",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1263",
+            "last_runtime_key": "PERFORM:1263",
+            "first_runtime_row": 337,
+            "last_runtime_row": 337,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 338,
+            "parent_key": "PERFORM:1264",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1264",
+            "last_runtime_key": "PERFORM:1264",
+            "first_runtime_row": 338,
+            "last_runtime_row": 338,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "may30": [
+          {
+            "parent_id": 319,
+            "parent_key": "PERFORM:1236",
+            "coefficient": -1,
+            "from_bus": 11136,
+            "to_bus": 10594,
+            "positive_from_bus": 10594,
+            "positive_to_bus": 11136,
+            "first_runtime_key": "PERFORM:1236:SECTION:1_OF_2",
+            "last_runtime_key": "PERFORM:1236:SECTION:2_OF_2",
+            "first_runtime_row": 319,
+            "last_runtime_row": 483,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 320,
+            "parent_key": "PERFORM:1237",
+            "coefficient": -1,
+            "from_bus": 11136,
+            "to_bus": 10594,
+            "positive_from_bus": 10594,
+            "positive_to_bus": 11136,
+            "first_runtime_key": "PERFORM:1237:SECTION:1_OF_2",
+            "last_runtime_key": "PERFORM:1237:SECTION:2_OF_2",
+            "first_runtime_row": 320,
+            "last_runtime_row": 484,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 328,
+            "parent_key": "PERFORM:1248",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1248",
+            "last_runtime_key": "PERFORM:1248",
+            "first_runtime_row": 328,
+            "last_runtime_row": 328,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 329,
+            "parent_key": "PERFORM:1249",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1249",
+            "last_runtime_key": "PERFORM:1249",
+            "first_runtime_row": 329,
+            "last_runtime_row": 329,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 330,
+            "parent_key": "PERFORM:1250",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1250",
+            "last_runtime_key": "PERFORM:1250",
+            "first_runtime_row": 330,
+            "last_runtime_row": 330,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 336,
+            "parent_key": "PERFORM:1262",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1262",
+            "last_runtime_key": "PERFORM:1262",
+            "first_runtime_row": 336,
+            "last_runtime_row": 336,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 337,
+            "parent_key": "PERFORM:1263",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1263",
+            "last_runtime_key": "PERFORM:1263",
+            "first_runtime_row": 337,
+            "last_runtime_row": 337,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 338,
+            "parent_key": "PERFORM:1264",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1264",
+            "last_runtime_key": "PERFORM:1264",
+            "first_runtime_row": 338,
+            "last_runtime_row": 338,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ],
+        "post_dover": [
+          {
+            "parent_id": 319,
+            "parent_key": "PERFORM:1236",
+            "coefficient": -1,
+            "from_bus": 11136,
+            "to_bus": 10594,
+            "positive_from_bus": 10594,
+            "positive_to_bus": 11136,
+            "first_runtime_key": "PERFORM:1236:SECTION:1_OF_2",
+            "last_runtime_key": "PERFORM:1236:SECTION:2_OF_2",
+            "first_runtime_row": 319,
+            "last_runtime_row": 486,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 320,
+            "parent_key": "PERFORM:1237",
+            "coefficient": -1,
+            "from_bus": 11136,
+            "to_bus": 10594,
+            "positive_from_bus": 10594,
+            "positive_to_bus": 11136,
+            "first_runtime_key": "PERFORM:1237:SECTION:1_OF_2",
+            "last_runtime_key": "PERFORM:1237:SECTION:2_OF_2",
+            "first_runtime_row": 320,
+            "last_runtime_row": 487,
+            "section_count": 2,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 328,
+            "parent_key": "PERFORM:1248",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1248",
+            "last_runtime_key": "PERFORM:1248",
+            "first_runtime_row": 328,
+            "last_runtime_row": 328,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 329,
+            "parent_key": "PERFORM:1249",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1249",
+            "last_runtime_key": "PERFORM:1249",
+            "first_runtime_row": 329,
+            "last_runtime_row": 329,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 330,
+            "parent_key": "PERFORM:1250",
+            "coefficient": -1,
+            "from_bus": 10596,
+            "to_bus": 11502,
+            "positive_from_bus": 11502,
+            "positive_to_bus": 10596,
+            "first_runtime_key": "PERFORM:1250",
+            "last_runtime_key": "PERFORM:1250",
+            "first_runtime_row": 330,
+            "last_runtime_row": 330,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 336,
+            "parent_key": "PERFORM:1262",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1262",
+            "last_runtime_key": "PERFORM:1262",
+            "first_runtime_row": 336,
+            "last_runtime_row": 336,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 337,
+            "parent_key": "PERFORM:1263",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1263",
+            "last_runtime_key": "PERFORM:1263",
+            "first_runtime_row": 337,
+            "last_runtime_row": 337,
+            "section_count": 1,
+            "indices_are_one_based": true
+          },
+          {
+            "parent_id": 338,
+            "parent_key": "PERFORM:1264",
+            "coefficient": 1,
+            "from_bus": 11501,
+            "to_bus": 10600,
+            "positive_from_bus": 11501,
+            "positive_to_bus": 10600,
+            "first_runtime_key": "PERFORM:1264",
+            "last_runtime_key": "PERFORM:1264",
+            "first_runtime_row": 338,
+            "last_runtime_row": 338,
+            "section_count": 1,
+            "indices_are_one_based": true
+          }
+        ]
+      },
+      "positive_orientation": {
+        "source_bus_ids": [
+          10594,
+          11501,
+          11502
+        ],
+        "target_bus_ids": [
+          10596,
+          10600,
+          11136
+        ],
+        "located_source_bus_ids": [
+          10594,
+          11501,
+          11502
+        ],
+        "located_target_bus_ids": [
+          10596,
+          10600,
+          11136
+        ],
+        "source_lonlat": [
+          -73.85668215733328,
+          40.95162379400006
+        ],
+        "target_lonlat": [
+          -73.91751184599997,
+          40.819377992333365
+        ],
+        "label_anchor_lonlat": [
+          -73.88709700166663,
+          40.88550089316671
+        ],
+        "source_xy": [
+          180.336348,
+          114.066492
+        ],
+        "target_xy": [
+          175.577026,
+          128.866179
+        ],
+        "label_anchor_xy": [
+          177.956687,
+          121.466335
+        ],
+        "geometry_basis": "Unweighted mean of unique located sign-oriented member endpoint model coordinates; schematic cut arrow, not a meter route",
+        "positive_arrow": "source_to_target",
+        "negative_arrow": "target_to_source",
+        "zero_or_null_flow_arrow": "none"
+      },
+      "physical_NYISO_meter_membership_certified": false
+    }
+  ],
+  "zone_primary_source": {
+    "url": "https://mis.nyiso.com/public/csv/palIntegrated/20250101palIntegrated_csv.zip",
+    "archive_sha256": "f77f56ccb24a2395ddf9bc967b5ab372380a1791448ba228d95cfe1a0a43e28e",
+    "member": "20250101palIntegrated.csv",
+    "member_sha256": "b3a19aa958f7bfd51b7433e2b4de8308e32f1abdb4232d068944cbfc464d2a84",
+    "letter_mapping_source": {
+      "path": "System Matpower Format/NY_Lite/nyiso_public_zone_map.m",
+      "bytes": 325,
+      "sha256": "f4138671c1fdadafb3fb7bc03cce64aef77957a5f5eeba718e4ee06e57666a78"
+    }
+  },
+  "notes": [
+    "State-specific numeric runtime rows must not index canonical annual arrays directly; join by runtime branch key.",
+    "UPNY and SPR use the expanded current terms; unexpanded parent IDs in the older intent-only JSON are not current members.",
+    "TOTAL EAST includes the four CENTRAL EAST - VC parents plus parent 224; overlapping cuts are not independent corridors.",
+    "Unknown/unlocated model points are not geocoded or fabricated for these anchors."
+  ],
+  "prepared_sources": [
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "bytes": 12874,
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_contract.json",
+      "bytes": 4872,
+      "sha256": "bb909130ecd61253819c2876f8d35347ca6bd3a9f4ce9507e82b79c7aee8b553"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/interface_definitions.json",
+      "bytes": 3242,
+      "sha256": "e96c7d938cedeb7a65383ea94b85ad7fec8a7c7f79867b87c5c31fb0295be4fd"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure/runtime_branch_map.csv",
+      "bytes": 365239,
+      "sha256": "f6d85aeacb799a4aec2f89965f09ebe970c27d1e3567aad2f2a30c673df4bf24"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure/detailed_bus_map.csv",
+      "bytes": 132019,
+      "sha256": "f94800e2703017530e7ef136ed005be1a97cd14cbb11b3023c191e3ae01939f9"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure/retained_bus_map.csv",
+      "bytes": 6714,
+      "sha256": "cf7421d7ed88b2328e51f1273ae9690e782a50048e36d5e03758b7d4e78962f0"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/bus_geographic_register.csv",
+      "bytes": 72924,
+      "sha256": "7aaedd8f68e6c1a9d2c13cf19158abe604a57c669ef1c3aa7e07df2e33476973"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "bytes": 6349492,
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/annual_loss_policy_receipt.json",
+      "bytes": 45740,
+      "sha256": "7e7ff61c77b430b113d2e4cd70c27ac211ef555f0715c8ba7dd8f4cc4cbcfd2f"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/build_interface_definitions.py",
+      "bytes": 18868,
+      "sha256": "eedb65366f478ec34efa0e1f33f008e239b421b155ed1a4d32b6c363240081dc"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250101palIntegrated_csv.zip",
+      "bytes": 78666,
+      "sha256": "f77f56ccb24a2395ddf9bc967b5ab372380a1791448ba228d95cfe1a0a43e28e"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250101palIntegrated_csv.zip.provenance.json",
+      "bytes": 815,
+      "sha256": "1a3946250354c231b99ee5de54cc5c88586a83a974f22912b9a8ac92ed4ee014"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/nyiso_public_zone_map.m",
+      "bytes": 325,
+      "sha256": "f4138671c1fdadafb3fb7bc03cce64aef77957a5f5eeba718e4ee06e57666a78"
+    }
+  ]
+}

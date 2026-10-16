@@ -1,0 +1,13 @@
+{
+  "interval": "[hour_start,hour_end)",
+  "max_bracketing_gap_seconds": 600,
+  "extrapolation_allowed": false,
+  "required_coverage_seconds": 3600,
+  "duplicate_policy": "identical_values_collapsed_conflicting_values_rejected",
+  "conventions": [
+    "forward_sample_hold",
+    "backward_sample_hold",
+    "linear_between_samples"
+  ],
+  "label_convention_evidence": "load_only_comparison_not_exact_NYISO_integration_reproduction"
+}

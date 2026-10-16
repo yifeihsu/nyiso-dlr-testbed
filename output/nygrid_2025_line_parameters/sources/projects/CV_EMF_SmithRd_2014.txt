@@ -1,0 +1,70 @@
+                                                                                                                         Cricket Valley Energy
+                                                                                                                         Attachments for Interrogatory-Document Request 39
+                                                                                                                                                                                           Based on EPRI Transmission Line                            Version 1.3
+ELECTRICAL AND MAGNETIC FIELD CALCULATOR                                                                                                                                                   Reference Book (Red Book, 1982)
+
+        Project/Site: Effect of Clearance on EMF of typical 345kV double circuit line.
+Wire Data             NW corner of house on Smith Rd                                                                                                        Number of Wires         10
+                                                        Phase    Bundle                                                           Location                          Equivalent Diam                                 X location along ground                 50 ft
+  Wire                             Voltage   Current                        Conduc. Number
+               Description                              Angle    Spacing
+ Label                              (kV)     (amps)                        Diam (in) in Bundle                                X (ft)                    Y (ft)       (ft)           (in)                           Y location above ground           3.28084 ft
+                                                        (deg)      (in)
+    1                                 0         0         0         0        0.546       1                                      30                      148.3       0.046          0.546
+    2                                 0         0         0         0        0.546       1                                      10                      148.3       0.046          0.546                              Graphing
+   3‐1                              345       2695       240       18         1.14       2                                      10                      109.8       0.534          6.406                                         Left Bound               ‐125 ft
+   3‐2                              345       2695        0        18         1.14       2                                      10                       46.1       0.534          6.406                                     Center for Mag                  0 ft
+   3‐3                              345       2695       120       18         1.14       2                                      10                       40.5       0.534          6.406                                     Center for Elec                 0 ft
+   6‐1                              345       2260        0         0        1.762       1                                    ‐75.6                      45.6       0.147          1.762                                       Right Round                 125 ft
+   6‐2                              345       2260       120        0        1.762       1                                     ‐50                       45.6       0.147          1.762
+   6‐3                              345       2260       240        0        1.762       1                                    ‐24.4                      45.6       0.147          1.762
+   4‐1                                0         0         0         0        0.546       1                                     ‐68                       73.2       0.046          0.546              Values at Given Location (X=50.00, Y=3.28)
+   5‐1                                0         0         0         0        0.546       1                                     ‐32                       73.2       0.046          0.546          Magnitude of Magnetic Field (App. 8‐1)    144.0 mG
+                                                                                                                                                                    0.000          0.000            Magnitude of Mag. Field (Resultant)     144.1 mG
+                                                                                                                                                                    0.000          0.000           Magnitude of Electric Field (App. 8‐1)   0.647 kV/m
+                                                                                                                                                                    0.000          0.000          Magnitude of Electric Field (Resultant)   0.647 kV/m
+                                                                                                                                                                    0.000          0.000
+                                                                                                                                                                    0.000          0.000              Maximums over Given Range
+                                                                                                                                                                    0.000          0.000            Max Mag Field (using Appendix 8.1)                 198.58 mG
+                                                                                                                                                                    0.000          0.000                               Approx. Location                ‐68.36 ft
+                                                                                                                                                                    0.000          0.000          Max Mag Field (using Resltnt of Br & Bi)             224.31 mG
+                                                                                                                                                                    0.000          0.000                               Approx. Location                ‐68.36 ft
+                                                                                                                                                                    0.000          0.000
+                                                                                                                                                                    0.000          0.000                         Max Elec Field (App. 8‐1)               2.345 kV/m
+                                                                                                                                                                    0.000          0.000                                 Approx. Location                12.61 ft
+                                                                                                                                                                    0.000          0.000               Max Elec Field (Resultant of Er & Ei)             2.347 kV/m
+                                                                                                                                                                    0.000          0.000                                 Approx. Location                12.61 ft
+                                             Use GREEN text to copy/paste with PLS‐CADD EMF Calculator
+
+                 260                                                                                                                                    3
+                                                                                                       Max Mag Field (using                                                                                                              Magnitude of Electric Field
+                 240                                                                                   Resltnt of Br & Bi)                                                                                                               (Resultant)
+                 220                                                                                   Max Mag Field (using                                                                                                              Magnitude of Electric Field
+                 200                                                                                   Appendix 8.1)                                                                                                 10., 2.31           (App. 8‐1)
+
+                 180                                       ‐50., 182.86        10., 185.86
+                                                                                                                                                        2
+                                                                                                                                                                                                                  0., 1.89
+                                                                                                                                       E‐field (kV/m)
+
+
+                 160                                                        0., 157.86
+  M‐field (mG)
+
+
+
+
+                 140                                                                          50., 144.11
+                 120
+                 100                                                                                                                                                                             ‐50., 1.2
+                              ‐125., 96.04                                                                                                                           ‐125., 1.07
+                  80                                                                                                                                    1
+                                                                                                                  101., 72.53
+                  60                                                                                                                                                                                                                  50., 0.65
+                                                                                                                         125., 54.29
+                  40                                                                                                                                                                                                                                 101., 0.25
+                  20                                                                                                                                                                                                                                            125., 0.28
+                   0                                                                                                                                    0
+                       ‐150       ‐100               ‐50                 0               50                 100                150                          ‐150            ‐100           ‐50                 0                 50                100                 150
+                                                                Offset Distance (ft)                                                                                                                  Offset Distance (ft)
+

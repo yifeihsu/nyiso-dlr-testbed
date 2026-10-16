@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T03:30:20.747108+00:00",
+  "scope": "One finished monthly export readback, not completed annual scoring",
+  "annual_comparison_complete": false,
+  "month": 1,
+  "hour_positions": 744,
+  "source_qualified_hours": 738,
+  "revised_comparison_qualified_hours": 738,
+  "checks": {
+    "independent_loss_budget_error_model_MW": 2.425490919222284e-10,
+    "NY_gross_target_vs_source_error_model_MW": 1.1368683772161603e-13,
+    "NY_gross_served_plus_loss_closure_model_MW": 2.426077116979286e-10,
+    "regional_NY_terminal_import_vs_source_error_model_MW": 2.2964741219766438e-11,
+    "native_per_unit_PG_delta_audit_model_MW": 1.3866841008791653e-10,
+    "external_original_P_bound_violation_model_MW": 0.0,
+    "HQ_PG_delta_audit_model_MW": 0.0,
+    "six_controlled_transfer_P_delta_model_MW": 0.0
+  },
+  "matched_frozen_dated_axes_and_topology": true,
+  "corrected_generator_landing_axis_verified": true,
+  "source_receipts": [
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/comparison/check_month_export.py",
+      "sha256": "d991df9ea10853c085a1da2a6bdc6f2c2ba91d032f62c702fed450a9603d439c"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/comparison/score_revised_profiles.py",
+      "sha256": "6b172368b2179a0c5339babfac610e0c75e6860965341ade907b568fed9b512e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/comparison_contract.json",
+      "sha256": "6a7b0f5171a9b9e4dbfcf2c5889c7625c80ce92c85c61778c3fdb131ac4988a7"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_01.mat",
+      "sha256": "c7de8f9f2d060a3ba91cf3f1a2ba8e0d7d7dd85abd8315ec4dbd2d28fe5a74e5"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_01.mat",
+      "sha256": "f21059f24b6614e4100d4cf7e7dec13e94f844fd3edcd265067873b1bc8d2369"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    }
+  ]
+}

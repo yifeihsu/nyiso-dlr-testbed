@@ -1,0 +1,901 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-10T03:24:31.613277+00:00",
+  "audit_scope": "Read-only source and primary-reference audit; no model changes, no causal regression claims, no generator raw-source rebuild",
+  "upstream_pin": "47698b6c7823ae7b1bc6935e5601d5b64b8f918e",
+  "source_receipts": [
+    {
+      "filename": "NYISO_Summer2019_Operating_Study_Appendices.pdf",
+      "url": "https://www.nyiso.com/documents/20142/3691300/Summer2019-Operating-Study-Appendices-OC-Approved.pdf/7923fe3b-579b-a48d-bda8-8063b309dc08",
+      "final_url": "https://www.nyiso.com/documents/20142/3691300/Summer2019-Operating-Study-Appendices-OC-Approved.pdf/7923fe3b-579b-a48d-bda8-8063b309dc08",
+      "sha256": "5a08d0c8501df096806506df79fb1b8ded77e6da8c4fe9c82ef405a71c3cf140",
+      "bytes": 3429697,
+      "pdf_pages": 62,
+      "source_period": "Summer 2019 operating study",
+      "verified_pdf_pages": [
+        44
+      ],
+      "printed_pages": [
+        72
+      ],
+      "use": "Contemporaneous Dysinger East physical circuit membership and mixed metering terminals; Appendix E does not list West Central",
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.pdf",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.txt",
+      "text_sha256": "731da35565c15b1d460a48cf8331782b9c3e2d5d797668587370a72b9906175f"
+    },
+    {
+      "filename": "NYISO_Summer2017_Operating_Study_Appendices.pdf",
+      "url": "https://www.nyiso.com/documents/20142/3691300/Summer2017_Operating_Study__Final__OC_Approved_Appendices_6-15-2017.pdf/f32709c3-9097-cfc2-0637-228e2aef6944",
+      "final_url": "https://www.nyiso.com/documents/20142/3691300/Summer2017_Operating_Study__Final__OC_Approved_Appendices_6-15-2017.pdf/f32709c3-9097-cfc2-0637-228e2aef6944",
+      "sha256": "49c514713babe93860501ef2e2967f53188b1616dc3d2f887a416069e2c0ec76",
+      "bytes": 739794,
+      "pdf_pages": 62,
+      "source_period": "Summer2017",
+      "use": "Historical interface comparison only; 2019 appendix preferred",
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2017_Operating_Study_Appendices.pdf",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2017_Operating_Study_Appendices.txt",
+      "text_sha256": "57d95e01c3364784efb94fdbfe8cd8fcb17807e3a3c858d4464d3f2bd487629e"
+    },
+    {
+      "filename": "NYISO_CRPP_Appendix5_1_Interface_Definitions.pdf",
+      "url": "https://www.nyiso.com/documents/20142/1410707/CRPP_Appendix_5.1_Interface_Definitions.pdf/6bd50d60-bfd2-4572-31bf-634fbb6c8ddf",
+      "final_url": "https://www.nyiso.com/documents/20142/1410707/CRPP_Appendix_5.1_Interface_Definitions.pdf/6bd50d60-bfd2-4572-31bf-634fbb6c8ddf",
+      "sha256": "87cf3ecaa2b80c8851b79951437e190a0e0eb2aba542cc028ce5351831bdc5f7",
+      "bytes": 13872,
+      "pdf_pages": 6,
+      "source_period": "Undated retrieved public planning appendix; not certified as 2019 operator",
+      "verified_pdf_pages": [
+        2
+      ],
+      "use": "Supplementary PSS/E branch IDs and metering F/T; 19 West Central entries, includes lower-voltage paths",
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.pdf",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.txt",
+      "text_sha256": "52ce521985529b7a2cd569634eba1ee05e925e3bc8c57b8d645f1d91fd4e52ae"
+    },
+    {
+      "filename": "NYISO_2019_SOM.pdf",
+      "url": "https://www.nyiso.com/documents/20142/2223763/NYISO-2019-SOM-Report-Full-Report-5-19-2020-final.pdf/bbe0a779-a2a8-4bf6-37bc-6a748b2d148e?t=1589915508638",
+      "final_url": "https://www.nyiso.com/documents/20142/2223763/NYISO-2019-SOM-Report-Full-Report-5-19-2020-final.pdf/bbe0a779-a2a8-4bf6-37bc-6a748b2d148e?t=1589915508638",
+      "sha256": "a0c12d706d0d67e791edfe40049dcc6fa217afe670134eb68b94b3f858346ec9",
+      "bytes": 6991650,
+      "pdf_pages": 398,
+      "source_period": "Calendar 2019 retrospective; report released May 2020",
+      "verified_pdf_pages": [
+        59
+      ],
+      "printed_pages": [
+        39
+      ],
+      "use": "Niagara voltage-level distribution, 2019 western OOM actions, PAR controls and unmodeled 115kV constraints",
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_2019_SOM.pdf",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_2019_SOM.txt",
+      "text_sha256": "8db5b25004ecb44f39c028af464d7432668ae91f855dd3596561cddd8b9b7d83"
+    },
+    {
+      "filename": "NYISO_2016_ATR_NYSRC.pdf",
+      "url": "https://www.nysrc.org/wp-content/uploads/2023/04/2016_NYISO_IntermediateATR_3-2-2017_redline.pdf",
+      "final_url": "https://www.nysrc.org/wp-content/uploads/2023/04/2016_NYISO_IntermediateATR_3-2-2017_redline.pdf",
+      "sha256": "d7f2e476b12a615d5bda1993452219abc9c8c6241c3c71162647b775fb30aa20",
+      "bytes": 923914,
+      "pdf_pages": 44,
+      "source_period": "2016 intermediate ATR, study year 2021; redline March 2 2017",
+      "use": "Historical/planning context only, not 2019 operating settings",
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_2016_ATR_NYSRC.pdf",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_2016_ATR_NYSRC.txt",
+      "text_sha256": "ec797c9fd692b57d37dc160538d7581f1e0e9a41f83a20d088f1cb4b7adcfea5"
+    },
+    {
+      "filename": "NYISO_2020_FERC715_NYSRC.pdf",
+      "url": "https://www.nysrc.org/wp-content/uploads/2023/04/NYISO_2020_Form_715_Report_Final.pdf",
+      "final_url": "https://www.nysrc.org/wp-content/uploads/2023/04/NYISO_2020_Form_715_Report_Final.pdf",
+      "sha256": "597d2ac3502f88dccab7281dcba9d503a60eb0a84821dd60601bf9e12987d512",
+      "bytes": 419570,
+      "pdf_pages": 29,
+      "source_period": "2020 filing reviewing 2019 studies",
+      "use": "Confirms Summer2019 and Winter2019-20 study source period; not independent plant telemetry",
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_2020_FERC715_NYSRC.pdf",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_2020_FERC715_NYSRC.txt",
+      "text_sha256": "c019d6c24c7dc21936802a149a26bcb04010bad1ee3fa9fe17791d675a85ec67"
+    },
+    {
+      "filename": "NYISO_DE_WC_Stability_2014.pdf",
+      "url": "https://www.nyiso.com/documents/20142/1394656/DE_WC_Stability_Limit_Report_final-3.pdf/b461b192-f51d-7bf7-340e-d424b60c84fa",
+      "sha256": "094f26c8b268b432567cf5a4b62f3b8699f53d3220e7180971dc595b6ad5d7be",
+      "bytes": 1986221,
+      "pdf_pages": 28,
+      "source_period": "November 2014, final OC-approved",
+      "verified_pdf_pages": [
+        4,
+        6,
+        9
+      ],
+      "use": "Dated West Central and Dysinger member tables; 9999 stability-limit placeholder rationale; Genesee load-pocket transfer relationship",
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.pdf",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.txt",
+      "text_sha256": "8734cd72ee75d70328e0bf5229834beca3719c8a2466e599d05d2189411590d6"
+    },
+    {
+      "filename": "NYISO_Niagara_Model_20180724.pdf",
+      "url": "https://www.nyiso.com/documents/20142/2181113/Enhancements%20to%20the%20Niagara%20Model%20vJuly24_2018vFINAL.pdf/9340e3b7-26a6-813a-0998-e1252622d1d1",
+      "sha256": "7ace05f9231540b218add162fbe70398b649bd4089fc350f062d81e067178396",
+      "bytes": 638610,
+      "pdf_pages": 12,
+      "source_period": "July 24, 2018, draft discussion presentation; intended December 2018 implementation corroborated by 2019 SOM",
+      "verified_pdf_pages": [
+        3,
+        4,
+        6,
+        7,
+        11
+      ],
+      "use": "Three physical Niagara injection groups including Lewiston pump-generating units; controls available for redistribution",
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_Niagara_Model_20180724.pdf",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_Niagara_Model_20180724.txt",
+      "text_sha256": "2c50bf9d092e322c41729b5873ea4563385306213452b2d950dbae6e585fdebd"
+    }
+  ],
+  "local_source_fingerprints": [
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/updateOpCond.m",
+      "sha256": "12cd365b756612d46dc10f1ec5c9ff39a9b54f191b0c6db64e2d1aa990794520",
+      "bytes": 20110
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/modifyMPC.m",
+      "sha256": "a81ead508d7c9c3a7fa807236da2ee897357c92e8af0bb97d0c2c0125ffe3bbf",
+      "bytes": 2783
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/allocateGen.m",
+      "sha256": "b959d66d495e1876811839ecb6ae11c556fd324fdb0f940717d4e211d8120897",
+      "bytes": 6826
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/allocateLoad.m",
+      "sha256": "6eda67f10f47561dab120f18796a91b0477facc9732296be2a80ecfe7f2dbd29",
+      "bytes": 5265
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeThermalGen.m",
+      "sha256": "dd38acc0dc82d2e567d245a4ae2de5d6bb2e6e4ac6ccc96f1ac7b9fba19b0f47",
+      "bytes": 2509
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeHydroGen.m",
+      "sha256": "6dc68793296bf8d1eab0e252e9898b59e6eeb3b155ec3f37741b750fc85255ce",
+      "bytes": 2721
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeNuclearGen.m",
+      "sha256": "a7f68338864d47f7645a1e808bfd8b268d930c618e493848a9f74d4065b2e4c2",
+      "bytes": 3480
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/readOpCond.m",
+      "sha256": "b75f5c8fb25814d33dbf0c5b2c6c10c57d2b6dc87347b1798a1e902cbb0b646f",
+      "bytes": 7107
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/writeInterflow.m",
+      "sha256": "e83c4028b17a895a1669c79b48ad82aa376df8191fe15227a9dfa06c8c75cc32",
+      "bytes": 3453
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.mat",
+      "sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb",
+      "bytes": 8129
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d",
+      "bytes": 10665
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042",
+      "bytes": 10671
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/RenewableGen.csv",
+      "sha256": "270e44f264b7e9b2132b5efab5cdcca0561724f82d8581e41a9305eaa293dc53",
+      "bytes": 1749
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/genParamAll_newramp.csv",
+      "sha256": "b9617960c80dca2c01817149c031807c9da2b14b797dd048b205111bdf8e706f",
+      "bytes": 36184
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/gen_bus_assignment.csv",
+      "sha256": "997475693f94747e89f40702601324d2a9bca1f7584ccd15ee7c35c947376629",
+      "bytes": 19450
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/thermalGenMatched_2019.xlsx",
+      "sha256": "dbf3542eea2250305ec3139a6d125e96dc4f6c67923fb87c027123812363296f",
+      "bytes": 39496
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/thermalGenHourly_2019.csv",
+      "sha256": "a6de40f9d9e9dba19302bfd0b1224f1a5617a18bfa03f257ab523f59d605116f",
+      "bytes": 54411514
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/hydroGenMonthly_2019.csv",
+      "sha256": "a9797753476bcfc6133f3e0b2b714e61447c14f8c467df7d47f2ad747c49eb1f",
+      "bytes": 769
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/fuelmixHourly_2019.csv",
+      "sha256": "e5a742ed76a91bb81989bd85da01b3faba6ca8945d7bc391566a1e5cfc64386e",
+      "bytes": 2674035
+    }
+  ],
+  "interface_definition_evidence": {
+    "model_cut_terms": [
+      {
+        "smoke_case": "1",
+        "interface": "Dysinger East",
+        "operator_variant": "released_if_map",
+        "branch_row": "33",
+        "PF_coefficient": "-1",
+        "from_bus": "53",
+        "to_bus": "55",
+        "from_name": "ROCHESTER",
+        "to_name": "NIAGARA E",
+        "from_zone": "B",
+        "to_zone": "A",
+        "status": "1",
+        "semantic_PF_coefficient": "-1",
+        "coefficient_matches_semantic_cut": "1",
+        "observations_used_for_construction": "0"
+      },
+      {
+        "smoke_case": "1",
+        "interface": "Dysinger East",
+        "operator_variant": "released_if_map",
+        "branch_row": "35",
+        "PF_coefficient": "1",
+        "from_bus": "54",
+        "to_bus": "52",
+        "from_name": "NIAGARA W",
+        "to_name": "ROCHESTER",
+        "from_zone": "A",
+        "to_zone": "B",
+        "status": "1",
+        "semantic_PF_coefficient": "1",
+        "coefficient_matches_semantic_cut": "1",
+        "observations_used_for_construction": "0"
+      },
+      {
+        "smoke_case": "1",
+        "interface": "Dysinger East",
+        "operator_variant": "released_if_map",
+        "branch_row": "38",
+        "PF_coefficient": "1",
+        "from_bus": "54",
+        "to_bus": "62",
+        "from_name": "NIAGARA W",
+        "to_name": "STOLLE RD",
+        "from_zone": "A",
+        "to_zone": "B",
+        "status": "1",
+        "semantic_PF_coefficient": "1",
+        "coefficient_matches_semantic_cut": "1",
+        "observations_used_for_construction": "0"
+      },
+      {
+        "smoke_case": "1",
+        "interface": "Dysinger East",
+        "operator_variant": "released_if_map",
+        "branch_row": "48",
+        "PF_coefficient": "1",
+        "from_bus": "58",
+        "to_bus": "62",
+        "from_name": "GARDENVILLE",
+        "to_name": "STOLLE RD",
+        "from_zone": "A",
+        "to_zone": "B",
+        "status": "1",
+        "semantic_PF_coefficient": "1",
+        "coefficient_matches_semantic_cut": "1",
+        "observations_used_for_construction": "0"
+      },
+      {
+        "smoke_case": "1",
+        "interface": "West Central",
+        "operator_variant": "released_if_map",
+        "branch_row": "29",
+        "PF_coefficient": "-1",
+        "from_bus": "50",
+        "to_bus": "52",
+        "from_name": "CLAY",
+        "to_name": "ROCHESTER",
+        "from_zone": "C",
+        "to_zone": "B",
+        "status": "1",
+        "semantic_PF_coefficient": "-1",
+        "coefficient_matches_semantic_cut": "1",
+        "observations_used_for_construction": "0"
+      },
+      {
+        "smoke_case": "1",
+        "interface": "West Central",
+        "operator_variant": "released_if_map",
+        "branch_row": "30",
+        "PF_coefficient": "-1",
+        "from_bus": "51",
+        "to_bus": "53",
+        "from_name": "CLAY",
+        "to_name": "ROCHESTER",
+        "from_zone": "C",
+        "to_zone": "B",
+        "status": "1",
+        "semantic_PF_coefficient": "-1",
+        "coefficient_matches_semantic_cut": "1",
+        "observations_used_for_construction": "0"
+      },
+      {
+        "smoke_case": "1",
+        "interface": "West Central",
+        "operator_variant": "released_if_map",
+        "branch_row": "34",
+        "PF_coefficient": "1",
+        "from_bus": "53",
+        "to_bus": "65",
+        "from_name": "ROCHESTER",
+        "to_name": "GESONIDGE",
+        "from_zone": "B",
+        "to_zone": "C",
+        "status": "1",
+        "semantic_PF_coefficient": "1",
+        "coefficient_matches_semantic_cut": "1",
+        "observations_used_for_construction": "0"
+      },
+      {
+        "smoke_case": "1",
+        "interface": "West Central",
+        "operator_variant": "released_if_map",
+        "branch_row": "51",
+        "PF_coefficient": "1",
+        "from_bus": "62",
+        "to_bus": "63",
+        "from_name": "STOLLE RD",
+        "to_name": "MEYER",
+        "from_zone": "B",
+        "to_zone": "C",
+        "status": "1",
+        "semantic_PF_coefficient": "1",
+        "coefficient_matches_semantic_cut": "1",
+        "observations_used_for_construction": "0"
+      }
+    ],
+    "model_convention": "Positive signed PF in source-directed zone crossing. Lossless DC uses all signed PF. This is an internally consistent coarse measurement, not verified exact NYISO membership.",
+    "official_dysinger_2019": {
+      "pdf": "NYISO_Summer2019_Operating_Study_Appendices.pdf",
+      "pdf_page": 44,
+      "printed_page": 72,
+      "direction": "West A toward Genesee B and Central C; member star explicitly identifies metered end",
+      "members": [
+        {
+          "from_name": "Somerset",
+          "to_name": "Rochester (Station 80)",
+          "circuit": "SR1-39",
+          "kv": 345,
+          "metered_end": "from",
+          "source_zone": "A",
+          "sink_zone": "B"
+        },
+        {
+          "from_name": "Niagara",
+          "to_name": "Rochester (Station 80)",
+          "circuit": "NR2",
+          "kv": 345,
+          "metered_end": "to",
+          "source_zone": "A",
+          "sink_zone": "B"
+        },
+        {
+          "from_name": "Lockport",
+          "to_name": "N. Akron",
+          "circuit": "108",
+          "kv": 115,
+          "metered_end": "from",
+          "source_zone": "A",
+          "sink_zone": "B"
+        },
+        {
+          "from_name": "Lockport",
+          "to_name": "Oakfield",
+          "circuit": "112",
+          "kv": 115,
+          "metered_end": "from",
+          "source_zone": "A",
+          "sink_zone": "B"
+        },
+        {
+          "from_name": "Lockport",
+          "to_name": "Sweden 1",
+          "circuit": "111",
+          "kv": 115,
+          "metered_end": "from",
+          "source_zone": "A",
+          "sink_zone": "B"
+        },
+        {
+          "from_name": "Lockport",
+          "to_name": "Shelby",
+          "circuit": "113",
+          "kv": 115,
+          "metered_end": "from",
+          "source_zone": "A",
+          "sink_zone": "B"
+        },
+        {
+          "from_name": "Lockport",
+          "to_name": "Telegraph",
+          "circuit": "107",
+          "kv": 115,
+          "metered_end": "from",
+          "source_zone": "A",
+          "sink_zone": "B"
+        },
+        {
+          "from_name": "Lockport",
+          "to_name": "Telegraph",
+          "circuit": "114",
+          "kv": 115,
+          "metered_end": "from",
+          "source_zone": "A",
+          "sink_zone": "B"
+        },
+        {
+          "from_name": "Stolle Road",
+          "to_name": "High Sheldon",
+          "circuit": "67",
+          "kv": 230,
+          "metered_end": "from",
+          "source_zone": "A",
+          "sink_zone": "C"
+        },
+        {
+          "from_name": "Andover",
+          "to_name": "Palmiter",
+          "circuit": "157-932",
+          "kv": 115,
+          "metered_end": "from",
+          "source_zone": "A",
+          "sink_zone": "C"
+        }
+      ]
+    },
+    "official_west_central_dated_2014": {
+      "pdf": "NYISO_DE_WC_Stability_2014.pdf",
+      "pdf_page": 6,
+      "source_date": "2014-11",
+      "not_certified_as_exact_2019_definition": true,
+      "members": [
+        {
+          "from_name": "Pannell Rd",
+          "to_name": "Clay",
+          "circuit": "PC1",
+          "voltage_text_kv": "345",
+          "metered_end": "to"
+        },
+        {
+          "from_name": "Pannell Rd",
+          "to_name": "Clay",
+          "circuit": "PC2",
+          "voltage_text_kv": "345",
+          "metered_end": "to"
+        },
+        {
+          "from_name": "Quaker",
+          "to_name": "Macedon",
+          "circuit": "930",
+          "voltage_text_kv": "115",
+          "metered_end": "from"
+        },
+        {
+          "from_name": "Mortimer",
+          "to_name": "Hook Rd-Elbridge",
+          "circuit": "1/7",
+          "voltage_text_kv": "115",
+          "metered_end": "from"
+        },
+        {
+          "from_name": "Mortimer",
+          "to_name": "Elbridge",
+          "circuit": "2",
+          "voltage_text_kv": "115",
+          "metered_end": "from"
+        },
+        {
+          "from_name": "Pannell",
+          "to_name": "Farmington",
+          "circuit": "4",
+          "voltage_text_kv": "115",
+          "metered_end": "from"
+        },
+        {
+          "from_name": "Quaker",
+          "to_name": "Sleight Rd",
+          "circuit": "13",
+          "voltage_text_kv": "115",
+          "metered_end": "from"
+        },
+        {
+          "from_name": "St. 162",
+          "to_name": "S. Perry",
+          "circuit": "906",
+          "voltage_text_kv": "115",
+          "metered_end": "from"
+        },
+        {
+          "from_name": "Hook Rd (RGE-NGRID)",
+          "to_name": "",
+          "circuit": "TB#3",
+          "voltage_text_kv": "34.5/115",
+          "metered_end": "unmarked_in_table"
+        },
+        {
+          "from_name": "Clyde",
+          "to_name": "",
+          "circuit": "TR1",
+          "voltage_text_kv": "34.5/115",
+          "metered_end": "unmarked_in_table"
+        },
+        {
+          "from_name": "Farmington",
+          "to_name": "",
+          "circuit": "#7",
+          "voltage_text_kv": "34.5/115",
+          "metered_end": "unmarked_in_table"
+        },
+        {
+          "from_name": "Farmington",
+          "to_name": "",
+          "circuit": "#4",
+          "voltage_text_kv": "34.5/115 and 12/115",
+          "metered_end": "unmarked_in_table"
+        },
+        {
+          "from_name": "Stolle Road",
+          "to_name": "High Sheldon",
+          "circuit": "67",
+          "voltage_text_kv": "230",
+          "metered_end": "from"
+        },
+        {
+          "from_name": "Andover",
+          "to_name": "Palmiter",
+          "circuit": "932",
+          "voltage_text_kv": "115",
+          "metered_end": "from"
+        }
+      ]
+    },
+    "scope_discrepancies": [
+      "Official Dysinger includes A-C paths and many 115kV members; source operator is only source-labeled A-B rows",
+      "Source labels bus62 STOLLE RD as B, while official Stolle Road-High Sheldon circuit is an A-C member shared by both gates; no one-to-one verified reduction mapping is available",
+      "Official West Central includes many115kV and some lower-voltage transformer paths absent as distinct circuits in NPCC source; aggregate equivalence of their injections/losses is unverified",
+      "2019 Appendix E contains Dysinger but not a West Central table; use 2014 dated definition and undated planning appendix only with explicit temporal limits",
+      "No independently verified Elmira-named contribution or combined WEST CENTRAL+ELMIRA channel was identified. The prepared/raw first-day P32 channels contain no Elmira label. Absence of that name is not proof that its physical contribution is absent or zero."
+    ],
+    "metering_limit": "Mixed sender/receiver terminal metering affects AC losses; DC signed-PF identities alone cannot certify exact measured terminal totals.",
+    "raw_P32_contract": {
+      "first_day": "2019-01-01",
+      "raw_header": "Timestamp,Interface Name,Point ID,Flow (MWH),Positive Limit (MWH),Negative Limit (MWH)",
+      "dysinger_point_id": 23326,
+      "west_central_point_id": 23312,
+      "interpretation": "Release averages samples without energy rescaling and compares them numerically to MATPOWER MW; retain that documented convention while preserving the original MWH field label."
+    },
+    "limit_9999_explanation": {
+      "source": "NYISO_DE_WC_Stability_2014.pdf page4",
+      "status": "Direct source corroboration: West Central stability limits replaced by9999 and associated contingencies evaluated underDysinger. Not a physical equipment rating."
+    }
+  },
+  "generation_reconstruction": {
+    "hydro": {
+      "source_lines": "updateOpCond.m134-151",
+      "niagara_bus": 55,
+      "niagara_bus_kv": 230,
+      "niagara_mw_equation": "0.8*NYISO_statewide_hourly_hydro - 856*StLawrence_monthly_CF",
+      "niagara_parameter_capacity_mw": 2460,
+      "st_lawrence_bus": 48,
+      "st_lawrence_mw_equation": "856*monthly_CF; fixed in each month",
+      "small_hydro": "20% of statewide hourly hydro allocated by fixed capacity shares; same time profile for all small hydro",
+      "rmn_monthly_table_used_as_hourly_constraint": false,
+      "source_internal_monthly_comparison": [
+        {
+          "month": 1,
+          "prepared_hours": 744,
+          "released_rmn_monthly_eia_mwh": 1462245.0,
+          "hourly_policy_rmn_integrated_mwh": 1418236.9734132509,
+          "policy_minus_released_monthly_mwh": -44008.026586749125,
+          "relative_difference_percent": -3.009620589350559,
+          "mean_policy_minus_released_monthly_mw": -59.150573369286455,
+          "stl_cf": 0.913279758315747,
+          "stl_constant_mw": 781.7674731182794
+        },
+        {
+          "month": 2,
+          "prepared_hours": 672,
+          "released_rmn_monthly_eia_mwh": 1257903.0,
+          "hourly_policy_rmn_integrated_mwh": 1239030.3063101606,
+          "policy_minus_released_monthly_mwh": -18872.69368983945,
+          "relative_difference_percent": -1.5003298099964368,
+          "mean_policy_minus_released_monthly_mw": -28.08436560988013,
+          "stl_cf": 0.948257398753894,
+          "stl_constant_mw": 811.7083333333333
+        },
+        {
+          "month": 3,
+          "prepared_hours": 744,
+          "released_rmn_monthly_eia_mwh": 1476454.0,
+          "hourly_policy_rmn_integrated_mwh": 1387693.537279388,
+          "policy_minus_released_monthly_mwh": -88760.46272061206,
+          "relative_difference_percent": -6.011732347950705,
+          "mean_policy_minus_released_monthly_mw": -119.30169720512374,
+          "stl_cf": 1.01119234247814,
+          "stl_constant_mw": 865.5806451612877
+        },
+        {
+          "month": 4,
+          "prepared_hours": 720,
+          "released_rmn_monthly_eia_mwh": 1258460.0,
+          "hourly_policy_rmn_integrated_mwh": 1288953.0644122548,
+          "policy_minus_released_monthly_mwh": 30493.06441225484,
+          "relative_difference_percent": 2.423045977802629,
+          "mean_policy_minus_released_monthly_mw": 42.35147835035394,
+          "stl_cf": 0.95471183800623,
+          "stl_constant_mw": 817.2333333333329
+        },
+        {
+          "month": 5,
+          "prepared_hours": 744,
+          "released_rmn_monthly_eia_mwh": 1459814.0,
+          "hourly_policy_rmn_integrated_mwh": 1468915.8393733744,
+          "policy_minus_released_monthly_mwh": 9101.839373374358,
+          "relative_difference_percent": 0.6234930870216537,
+          "mean_policy_minus_released_monthly_mw": 12.233655071739728,
+          "stl_cf": 0.992108205205507,
+          "stl_constant_mw": 849.244623655914
+        },
+        {
+          "month": 6,
+          "prepared_hours": 720,
+          "released_rmn_monthly_eia_mwh": 1364832.0,
+          "hourly_policy_rmn_integrated_mwh": 1332219.8520668182,
+          "policy_minus_released_monthly_mwh": -32612.14793318184,
+          "relative_difference_percent": -2.3894624344374837,
+          "mean_policy_minus_released_monthly_mw": -45.294649907197,
+          "stl_cf": 1.09836773104881,
+          "stl_constant_mw": 940.2027777777814
+        },
+        {
+          "month": 7,
+          "prepared_hours": 744,
+          "released_rmn_monthly_eia_mwh": 1499017.0,
+          "hourly_policy_rmn_integrated_mwh": 1296913.7206323643,
+          "policy_minus_released_monthly_mwh": -202103.27936763573,
+          "relative_difference_percent": -13.482387415728825,
+          "mean_policy_minus_released_monthly_mw": -271.6441926984351,
+          "stl_cf": 1.07607746708873,
+          "stl_constant_mw": 921.1223118279529
+        },
+        {
+          "month": 8,
+          "prepared_hours": 744,
+          "released_rmn_monthly_eia_mwh": 1450448.0,
+          "hourly_policy_rmn_integrated_mwh": 1153735.0463036962,
+          "policy_minus_released_monthly_mwh": -296712.95369630377,
+          "relative_difference_percent": -20.45664192692904,
+          "mean_policy_minus_released_monthly_mw": -398.80773346277385,
+          "stl_cf": 1.09990673047935,
+          "stl_constant_mw": 941.5201612903236
+        },
+        {
+          "month": 9,
+          "prepared_hours": 720,
+          "released_rmn_monthly_eia_mwh": 1390462.0,
+          "hourly_policy_rmn_integrated_mwh": 1142239.3977180307,
+          "policy_minus_released_monthly_mwh": -248222.60228196927,
+          "relative_difference_percent": -17.851807692836573,
+          "mean_policy_minus_released_monthly_mw": -344.75361428051286,
+          "stl_cf": 1.09761487538941,
+          "stl_constant_mw": 939.5583333333349
+        },
+        {
+          "month": 10,
+          "prepared_hours": 744,
+          "released_rmn_monthly_eia_mwh": 1381413.0,
+          "hourly_policy_rmn_integrated_mwh": 1222342.2884130536,
+          "policy_minus_released_monthly_mwh": -159070.7115869464,
+          "relative_difference_percent": -11.515072725314324,
+          "mean_policy_minus_released_monthly_mw": -213.80471987492794,
+          "stl_cf": 1.00532923826751,
+          "stl_constant_mw": 860.5618279569886
+        },
+        {
+          "month": 11,
+          "prepared_hours": 720,
+          "released_rmn_monthly_eia_mwh": 1361124.0,
+          "hourly_policy_rmn_integrated_mwh": 1302159.0046120582,
+          "policy_minus_released_monthly_mwh": -58964.99538794183,
+          "relative_difference_percent": -4.33208108797889,
+          "mean_policy_minus_released_monthly_mw": -81.89582692769699,
+          "stl_cf": 1.04913356697819,
+          "stl_constant_mw": 898.0583333333307
+        },
+        {
+          "month": 12,
+          "prepared_hours": 744,
+          "released_rmn_monthly_eia_mwh": 1547130.0,
+          "hourly_policy_rmn_integrated_mwh": 1454573.2618548113,
+          "policy_minus_released_monthly_mwh": -92556.73814518866,
+          "relative_difference_percent": -5.982479697581244,
+          "mean_policy_minus_released_monthly_mw": -124.40421793708154,
+          "stl_cf": 1.0455591774696,
+          "stl_constant_mw": 894.9986559139776
+        }
+      ],
+      "annual_rmn_policy_minus_downloaded_monthly_mwh": -1202289.707610739,
+      "comparison_limit": "Compares two released input representations; original EIA versus NYISO net/gross/pumped-storage boundaries are not requalified. Do not treat differences as independently measured model bias."
+    },
+    "nuclear": {
+      "source_lines": "writeNuclearGen.m55-79; updateOpCond.m76-90",
+      "ginna_bus": 53,
+      "ginna_parameter_capacity_mw": 581.7,
+      "temporal_rule": "NRC daily percentage multiplied by581.7 and repeated through the day; no hourly telemetry. All three Central-zone nuclear records are atbus50; upstream slack atbus74 changes solved nuclear PG separately."
+    },
+    "thermal": {
+      "source_lines": "allocateGen.m40-57; writeThermalGen.m27-44; updateOpCond.m186-226",
+      "coverage": [
+        {
+          "zone": "A",
+          "parameter_records": 10,
+          "matched_profile_records": 8,
+          "missing_values_in_matched_profiles": 0,
+          "unmatched": [
+            {
+              "name": "Allied Frozen Storage",
+              "ptid": "23774",
+              "pmax_mw": 0.1,
+              "bus": 55
+            },
+            {
+              "name": "General Mills Inc",
+              "ptid": "23808",
+              "pmax_mw": 3.8,
+              "bus": 57
+            }
+          ]
+        },
+        {
+          "zone": "B",
+          "parameter_records": 2,
+          "matched_profile_records": 2,
+          "missing_values_in_matched_profiles": 0,
+          "unmatched": []
+        },
+        {
+          "zone": "C",
+          "parameter_records": 10,
+          "matched_profile_records": 9,
+          "missing_values_in_matched_profiles": 0,
+          "unmatched": [
+            {
+              "name": "Binghamton (RET - 1/9/18)",
+              "ptid": "23790",
+              "pmax_mw": 47.7,
+              "bus": 71
+            }
+          ]
+        }
+      ],
+      "all_parameter_count": 227,
+      "all_unique_prepared_hourly_profile_keys": 137,
+      "missing_rule": "Unmatched hourlyPG/heatinput filled withzero",
+      "residual_rule": "All statewide thermal residual allocated proportional to nonzero zoneJ thermalPG; K coefficient0 and A coefficient0. Paper text saysJandK, but this is literal released code.",
+      "jamestown_shared_unit": {
+        "status": "Mapping and repeated prepared profiles verified; physical combined-unit interpretation still requires raw-RGGI/NYISO source qualification",
+        "workbook": "Data/thermalGenMatched_2019.xlsx Sheet1rows61-63",
+        "facility_id": 2682,
+        "facility_name": "S A Carlson",
+        "unit_id": 20,
+        "combined_flag": 1,
+        "records": [
+          {
+            "name": "Jamestown 5",
+            "ptid": 1658,
+            "bus": 60,
+            "parameter_pmax_mw": 28.7,
+            "profile_max_mw": 46.0,
+            "sum_prepared_hourly_mw": 131391.0
+          },
+          {
+            "name": "Jamestown 6",
+            "ptid": 1658,
+            "bus": 60,
+            "parameter_pmax_mw": 25.0,
+            "profile_max_mw": 46.0,
+            "sum_prepared_hourly_mw": 131391.0
+          },
+          {
+            "name": "Jamestown 7",
+            "ptid": 1659,
+            "bus": 60,
+            "parameter_pmax_mw": 46.0,
+            "profile_max_mw": 46.0,
+            "sum_prepared_hourly_mw": 131391.0
+          }
+        ],
+        "all_8760_timestamp_pg_and_heat_vectors_identical": true,
+        "single_profile_mwh_over_prepared_hour_labels": 131391.0,
+        "three_copy_total": 394173.0,
+        "conditional_two_copy_excess": 262782.0,
+        "conditional_average_excess_mw": 29.997945205479454,
+        "notes_interpretation": "Notes sheet: blue multipleRGGIunits\u2192oneNYCAgenerator;green station-total reporting;Combined1 also appears for legitimate many-to-one groupings. No weights or inverse one-to-many allocation specified. Combined is not used to disaggregate inwriteThermalGen.",
+        "counterfactual_contract": "If testingoneversusthree copies, reducebus60 total by2*sharedprofile and add same MW tozoneJ underreleasedresidualconvention; not a certified correction."
+      },
+      "gross_net_caveat": "writeThermalGen sums RGGI GrossLoadMW directly into hourlyGen. No per-unit gross-to-net auxiliary-load conversion is visible; the statewide residual reconciliation is allocated only to J. Comparison with independent station net generation must preserve this difference.",
+      "workbook_filter_period": "The matched workbook column is 2018 Net Energy (GWh); writeThermalGen uses NetEnergyGWh>0 as a membership filter while comments call it zero generation in2019. No assertion made about resulting western bias."
+    },
+    "wind_and_other": {
+      "source_lines": "updateOpCond.m286-300",
+      "rule": "Statewide hourly wind and other-renewable totals apportioned to buses by fixed installed-capacity shares, as negativePD; perfect spatial profile correlation assumed."
+    },
+    "interchange": {
+      "source_lines": "updateOpCond.m248-262,321-355,366-378",
+      "rule": "Scheduled NYISO area interchange channels used toscale all external area PG after scaling external load by NY loadratio; no observedhourly perboundary-line allocation. HQ is an equivalentbus48 generator.",
+      "western_implication": "Ontario flow splits between North/StLawrence and West/Niagara ties emerge from coarse topology without telemetry/PAR setpoints; totalOntario schedulealone doesnot establish westernshare."
+    },
+    "raw_phase_shift_nonzero_count": 0,
+    "phase_controls": "Source hasnohourlyphase-angle-regulator input/control logic; addedMarcy/DCbranches do not supply that missingwestboundarycontrol."
+  },
+  "candidate_mechanisms": [
+    {
+      "id": "metering_scope",
+      "evidence_level": "Direct primary-source/source-model scope discrepancy",
+      "hypothesis": "Coarse sourcezonecut maynotmatch reportedphysicalflowgate. Verify mapping/regionledger before fitting reactance or generation to targets."
+    },
+    {
+      "id": "jamestown_repeated_mapping",
+      "evidence_level": "Direct releasedworkbook+8760profile identity",
+      "hypothesis": "One-to-three joinedsourceunit createsconditional excesswesternPG; needscombined-unitsemantics confirmation; effectsizeanderrorreduction requirebalancedcounterfactual."
+    },
+    {
+      "id": "niagara_temporal_allocation",
+      "evidence_level": "Direct sourceequationandmonthlyinputcomparison",
+      "hypothesis": "Fixed80/20hydroshare andmonthlySTL makeNiagara hourlyresidual; same-yearNiagara monthlyenergy notenforced. Mayalterwesternnetinjection; no causalpercentattribution."
+    },
+    {
+      "id": "niagara_voltage_injections",
+      "evidence_level": "OfficialNYISO2018presentation+2019retrospective;sourceallRMNbus55/230kV",
+      "hypothesis": "Source lacks documentedthreebusNiagaradistributionfreedom andpumpingrepresentationdetail, affectinglocalpathflows/boundarysplit. Closedregionexportwouldremainfixedifallregionalinjectionsandboundaryflowswereheldfixed."
+    },
+    {
+      "id": "boundary_and_PAR_controls",
+      "evidence_level": "Official2019SOMcontrolhistory;sourceabsenceofhourlyPAR/per-lineflowdata",
+      "hypothesis": "Coarseexternaldispatchandfixedbranchshifts mayproducewrongOntarioWest/NorthorPJMsplit evenwholesystemnetinterchangesmatch."
+    },
+    {
+      "id": "wind_nuclear_temporal_spatial_priors",
+      "evidence_level": "Direct sourceassumptions",
+      "hypothesis": "Fixedwindcapacityshares anddailyGinna/othernuclear canmisplace/timegeneration; musttestagainst independentplantdata andconsistentloadrole beforetargetfit."
+    },
+    {
+      "id": "gross_net_station_boundaries",
+      "evidence_level": "Direct released field/processing semantics",
+      "hypothesis": "RGGI GrossLoadMW is injected as generation without visible per-unit gross-to-net conversion; J-only residual reconciliation can preserve statewide totals while leaving regional allocation differences. Qualify against consistent plant reporting boundaries before treating a difference as error."
+    }
+  ],
+  "limits": [
+    "No regressionassociation reportedascausation",
+    "No exact2019WestCentralphysical-meterlist recovered; dated2014list andundatedplanninglist retainedseparately",
+    "No fullRGGI,EIA,NRCrawrebuild; allsource-internal quantitiesidentifiedaspreparedrelease",
+    "No knownElmira-name absence converted into numericmissing-flowclaim",
+    "No source/model/script edits orsimulationoutputs overwritten"
+  ]
+}

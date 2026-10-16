@@ -1,0 +1,169 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T15:16:23.578517+00:00",
+  "source_days": 366,
+  "physical_2025_hours": 8760,
+  "per_bank_native_summary": [
+    {
+      "point_id": 625149,
+      "bank_name": "T398-A",
+      "native_records_including_endpoint": 93662,
+      "native_2025_records": 93373,
+      "first_source_timestamp_utc": "2025-02-12T17:45:00+00:00",
+      "first_nonzero_timestamp_utc": "2025-12-19T22:00:00+00:00",
+      "first_nonzero_timestamp_local": "2025-12-19T17:00:00-05:00",
+      "native_2025_nonzero_rows": 3262,
+      "native_2025_minimum": -323.4,
+      "native_2025_maximum": 204.8,
+      "pre_full_service_nonzero_rows": 2
+    },
+    {
+      "point_id": 625150,
+      "bank_name": "T398-B",
+      "native_records_including_endpoint": 93662,
+      "native_2025_records": 93373,
+      "first_source_timestamp_utc": "2025-02-12T17:45:00+00:00",
+      "first_nonzero_timestamp_utc": "2025-12-19T22:00:00+00:00",
+      "first_nonzero_timestamp_local": "2025-12-19T17:00:00-05:00",
+      "native_2025_nonzero_rows": 3262,
+      "native_2025_minimum": -323.4,
+      "native_2025_maximum": 204.8,
+      "pre_full_service_nonzero_rows": 2
+    }
+  ],
+  "pair_comparison": {
+    "common_native_timestamps": 93373,
+    "nonzero_pair_native_timestamps": 3262,
+    "exactly_equal_nonzero_pair_timestamps": 3255,
+    "maximum_absolute_bank_difference": 29.2,
+    "mean_absolute_bank_difference": 0.0180564071122011,
+    "independent_PTIDs_published": true,
+    "empirical_similarity_does_not_prove_sensor_alias_or_independent_measurement_accuracy": true
+  },
+  "source_full_coverage_hours_per_bank": [
+    7664,
+    7664
+  ],
+  "source_both_bank_coverage_hours": 7664,
+  "source_duplicate_conflict_hours_per_bank": [
+    0,
+    0
+  ],
+  "strict_source_quality_hours_per_bank": [
+    7664,
+    7664
+  ],
+  "post_full_service_hours": 289,
+  "post_full_service_source_qualified_hours": 287,
+  "post_full_service_existing_common_hours": 287,
+  "fixed_full_service_cutover_utc": "2025-12-20T04:00:00+00:00",
+  "cutover_scope": "parent_selected_full_service_HB23_scenario_boundary_not_first_energization_inferred_from_P34",
+  "pre_service_zeros_not_promoted_to_zero_intertie_transfer": true,
+  "no_zero_fill_for_absent_channels": true,
+  "no_new_observation_download": true,
+  "no_internal_interface_observations_read": true,
+  "no_impedance_or_phase_fit": true,
+  "actual_tap_trajectory_inferred": false,
+  "direction": {
+    "ptids": [
+      625149,
+      625150
+    ],
+    "bank_names": [
+      "T398-A",
+      "T398-B"
+    ],
+    "diagram_pdf": "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27.pdf",
+    "diagram_sha256": "c0647d2abc38f216ccf5c1f197ca679cf16358fde5f507659bcdcd80a6938ba4",
+    "inspected_pdf_pages": [
+      6,
+      26
+    ],
+    "parallel_banks": true,
+    "normal_bypass_state": "normally_open_as_drawn_not_hourly_switch_telemetry",
+    "current_documented_positive_direction": "Dover_CT_LongMountain_ISONE_to_Dover_NY_CricketValley_NYISO",
+    "raw_to_NY_import_multiplier": [
+      1,
+      1
+    ],
+    "raw_to_NY_to_CT_model_branch_multiplier": [
+      -1,
+      -1
+    ],
+    "diagram_Dover_page_effective_date": null,
+    "source_document_vintage": "current_2026_document_Dover_page_undated",
+    "historical_2025_sign_effective_date_verified": false,
+    "Moses_2024_12_03_annotation_applies_to_Dover": false,
+    "numeric_sign_not_selected_using_interface_fit": true,
+    "actual_tap_or_phase_telemetry_available": false
+  },
+  "units": {
+    "literal_source_column": "Flow (MWH)",
+    "numeric_policy": "retain_existing_posted_PAR_flow_numeric_convention_no_energy_interval_rescaling",
+    "fresh_MW_unit_header_proof": false,
+    "source_row_interval": "mostly5minutes_with_duplicate_or_irregular_postings",
+    "guide_scope": "September2026_MPUG_section5.5.4_describes_hourly_SCUC_and_time_weighted_hourly_RTD_flows;does_not_relabel_literal_header",
+    "instantaneous_meter_MW_asserted": false,
+    "aggregation": "forward_hold_between_postings_max600s;complete3600s_required;duplicates_averaged_and_spread_reported",
+    "no_factor12_applied": true,
+    "model_scale_gamma_applied_once": true
+  },
+  "necessary_P_only_screen_limit750_is_not_full_thermal_validation": true,
+  "schedule_scope": "metadata_only_no_numeric_schedule_values_compiled_or_sign_promoted",
+  "source_hashes_unchanged": true,
+  "dependencies": {
+    "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27.pdf": "c0647d2abc38f216ccf5c1f197ca679cf16358fde5f507659bcdcd80a6938ba4",
+    "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27_layout.txt": "defe8dfc6265cb13b1504cc304a268f6f4248a108fde074ed5db03feac5010bb",
+    "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27_page26.png": "c7f1300a97be9213a6c799c3c010aedf9f2e241d8930ce3827a56c1016aed58a",
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_ParFlows_page06.png": "9cc6b39948839f82e68492411912c39ffc1af8f66e88de7b9925a0467f7a76c4",
+    "output/nygrid_2025_dover_parameters/sources/NYISO_MarketParticipants_UserGuide.pdf": "83a76f2e51762798feb53b342266457991b153cde9489a52834c0fb148c80897",
+    "output/nygrid_2025_par_controls/controls/input_receipt.json": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747",
+    "output/nygrid_2025_dispatch/dispatch/dispatch.mat": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c",
+    "output/nygrid_2025_western_audit/replay/paired_common_mask.npy": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4",
+    "output/nygrid_2025_moses_audit/exchanges/par_source_receipts.csv": "b39d82ac719458499145b34541de7a9c0f7165e23546bcac06ee63b285bb48bb",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20250101ParFlows_csv.zip": "bb760c2b1c15bc59e907e28ba0eaec5715260179dce513ee43cd2c2c9e2ec076",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20250201ParFlows_csv.zip": "5466d3ed258b133b0c7296228ac1087c3dc2c73e74b72dfeaf0ea7e0195faaf7",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20250301ParFlows_csv.zip": "5b011a11c73b2f31779da5bd2a80e3fbcccaf6d685fb1cacc92c8c3a98c7199a",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20250401ParFlows_csv.zip": "e5d349be83ce17ce7a8767e88c91c9d5a66a55f3391ea401abe01555d1f94efb",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20250501ParFlows_csv.zip": "805cd14d79b7234d82856fa72f9a71acdcd70a4534c5d7bab11e73fd98d8be8f",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20250601ParFlows_csv.zip": "4fcfc99c76ce1cd8f04548088004b57fdc73266b8bb3d053c2177397ad6517e9",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20250701ParFlows_csv.zip": "05f572827945a51003dc5b744cc533cc7464a3e99a457bc3340df84c93066fe2",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20250801ParFlows_csv.zip": "6c0501a90e001d781daffadd5286adc2b1188a77157cd44fac73de8b5309e98b",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20250901ParFlows_csv.zip": "3ddf7f4708b783abbc3b6c8bc0494482356538ab5adbf1cb7010e06f25c2e76e",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20251001ParFlows_csv.zip": "7e739cda35caac38deea8f8bc024e8845f9cc76aa1ddb715680a168193f9ea7e",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20251101ParFlows_csv.zip": "df8734666414d51aa04319565cb0f1377e069cef04bff623b8d92de6cde74644",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20251201ParFlows_csv.zip": "6e08b8e43669c5d97348842c107c3043812167eb505018e3eac44977a2a639ef",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20260101ParFlows_csv.zip": "0bda820cf2c06bc5da05787f13399b79ef6a698452c037e32f3feec3ba7ff085",
+    "output/nygrid_2025_par_controls/sources/schedules/acquisition_receipts.json": "535eeb896f451d5c4be413c49889071f0d47906754301cb2e18fe6bce25c6807",
+    "output/nygrid_2025_par_controls/sources/schedules/20250101parSchedule_txt.zip": "163ac93abda8eae5362e48c3d85ae948d77162c25914cd7ac94f44a8ab4c706d",
+    "output/nygrid_2025_par_controls/sources/schedules/20250201parSchedule_txt.zip": "be4c485ffc738ea115967fc1ec83096530c1693d20ebf5de7472b51145fe8d27",
+    "output/nygrid_2025_par_controls/sources/schedules/20250301parSchedule_txt.zip": "0f6a652a2228fee901879bfd1f7744dc27cf7c7677b628d492ed280376538d41",
+    "output/nygrid_2025_par_controls/sources/schedules/20250401parSchedule_txt.zip": "d9eb0d97f8fc4fa7a5209f8960cd479655466bdef9aefd7c023b7bf030b66bd9",
+    "output/nygrid_2025_par_controls/sources/schedules/20250501parSchedule_txt.zip": "973f937f37ac42cf1fde69456b64984027c86fa8a0733ec271e489aac8485c84",
+    "output/nygrid_2025_par_controls/sources/schedules/20250601parSchedule_txt.zip": "6f55243ad5cc32f51eb9692bc8ab3fc53e30132507e5e038431c3e3ceb53bd79",
+    "output/nygrid_2025_par_controls/sources/schedules/20250701parSchedule_txt.zip": "cdce06a146066be4caa44e44365c4f1b2481ab665781519cbb87d8bc4d7fdef4",
+    "output/nygrid_2025_par_controls/sources/schedules/20250801parSchedule_txt.zip": "7b8807acbe8bf88e9d74abc6055c1cc0e7cffca76ea8c90c37560267bca90969",
+    "output/nygrid_2025_par_controls/sources/schedules/20250901parSchedule_txt.zip": "96260e3d606d5fd7a0e3fae5d864e22b9bcfdefe78b63df84c457548f6164f23",
+    "output/nygrid_2025_par_controls/sources/schedules/20251001parSchedule_txt.zip": "e1cbfa771adb21ec5879b52474efc1bb38f221c7711f4855ecb16a54c8fddcb8",
+    "output/nygrid_2025_par_controls/sources/schedules/20251101parSchedule_txt.zip": "02fdcc68b94068aff6d834b5459f810217bb5b5e3ad86853aea2551981e89c1e",
+    "output/nygrid_2025_par_controls/sources/schedules/20251201parSchedule_txt.zip": "12ca6c2c0496512b656ce537bd060643b3b61d98d19b807318fb41c5529aba93",
+    "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b",
+    "output/nygrid_2025_line_parameters/overlays/engineering_nominal/network_cases.mat": "5fb84104d527b2e26d22f3a772ebd4e56ff981325ea7490d349fa53758646320",
+    "output/nygrid_2025_line_parameters/overlays/engineering_nominal/overlay_receipt.json": "a1c54e2657b63798f406176a41db99852277bb9a9741312bc1f236445913f8c9",
+    "scripts/nygrid_2025_dover_parameters/local_audit/audit_local_sources.py": "59e947d2c9af5062e783dd6886e9bdc5dbfdddf965aeda205ea787c9024d8579"
+  },
+  "outputs": {
+    "Dover_direction_source_qualification.json": "ea80013f18d7c4f6cc1462cbb906101d836ef5b458651a7e0d6304cad5f2d5da",
+    "Dover_P34_channel_presence.csv": "0d8ccee86cfecceab522e2915bdbcbbc1a4c7e43522902236f5d48042c9fc930",
+    "Dover_P34_daily_native_audit.csv": "9c551ddf6b56b95c4ea404b03c14bd26cdca10bc7e34b4756c1ded200f1a2d65",
+    "Dover_P34_hourly_2025.csv": "e76a3f2a8e9fb9b2a879cb1405f997b3758d2512f9c08284c568c6259e106147",
+    "Dover_P34_inputs.mat": "d35fe15890cbf0a208254ed664adab56fc6ca0d9226b5531a40269c05b90513a",
+    "Dover_P34_inputs.npz": "31b5a0bf77f4664ca1ab4b6660e6737d78201bfdd2c566f413f664e25b1ffb1a",
+    "Dover_P34_member_receipts.csv": "44d013ff12d2059ad0b02ddc9e42453676cd4b6db7d3f0786054d7c4897cf4b5",
+    "Dover_P34_monthly_native_audit.csv": "1670cd80b881fbefd6b5d2bb136794568ca6e0995b2e76a0b9f99f58aa1040e9",
+    "Dover_P34_raw_2025_with_endpoint.csv.gz": "736e2bff9a446e7e2ee00d0b01cd059fb26dcc6d59f288ab70f4f6febb0bc967",
+    "Dover_P53A_channel_metadata_only.csv": "52dbec9ca9eca5149877624a0fa07663d6f6f682eab5d30db0564af3ab0caa45",
+    "Dover_ParFlows_page06.png": "9cc6b39948839f82e68492411912c39ffc1af8f66e88de7b9925a0467f7a76c4",
+    "existing_model_contract.json": "ffb6926270f9e68afcfaad524a29ecb28496ec0033c2e80ef3c5c976e4d4d631"
+  }
+}

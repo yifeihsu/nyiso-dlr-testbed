@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "experiment": "within_zone_A_B_load_allocation_only",
+  "source_defined_before_posthoc_scoring": true,
+  "no_internal_interface_observation_access": true,
+  "baseline": "final western dated_combined with all4actual regional imports and six fixed transfer records",
+  "baseline_replay": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+  "baseline_generation": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+  "fixed_cohort": {
+    "hours": 8651,
+    "file": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+    "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+  },
+  "baseline_share_source": "pinned released Data/npcc_new.csv positive sumLoadP0 shares, verified against delivered2025 allocation",
+  "alternative_share_source": "pinned original Data/npcc.csv positive sumLoadP0 shares, independently agreeing with raw npcc.mat PD shares",
+  "scenarios": [
+    {
+      "name": "load_original_A",
+      "changed_zones": [
+        "A"
+      ],
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/load_original_A.npz"
+    },
+    {
+      "name": "load_original_B",
+      "changed_zones": [
+        "B"
+      ],
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/load_original_B.npz"
+    },
+    {
+      "name": "load_original_AB",
+      "changed_zones": [
+        "A",
+        "B"
+      ],
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/load_original_AB.npz"
+    }
+  ],
+  "expected_source_aliases": {
+    "load_original_A": "baseline_exact_noop",
+    "load_original_AB": "load_original_B_exact_alias"
+  },
+  "QD_rule": "Preserve each zone's frozen hourly totalQD and distribute by the same counterfactual P weights; baseline0.98PF remains; no AC feasibility claim",
+  "allowed_changes": "Only within-A/B bus PD/QD distribution. No transfers of load between zones.",
+  "preserved": [
+    "observed hourly ZoneA andB totals",
+    "all other busPD/QD",
+    "all native and28external generator PG",
+    "all native bounds/availability",
+    "original4DC schedules",
+    "both P34 transfers",
+    "all148buses and branch parameters"
+  ],
+  "extreme_bound": {
+    "method": "Linear response over nonnegative load-share simplexes on all8A and3B retained buses",
+    "zones": {
+      "A": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "B": [
+        52,
+        53,
+        62
+      ]
+    },
+    "bus_load_capacity_constraints_assumed": false,
+    "purpose": "Conservative algebraic maximum; not a physically observed or thermally feasible load arrangement",
+    "source_of_objective": "Frozen model interface operators only; no observed interface values",
+    "annual_power_flow_required": false
+  },
+  "scope": "Historical-layout sensitivity, not a claim of observed2025 nodal loads or a promoted correction",
+  "dependencies": [
+    {
+      "path": "output/nygrid_2019/upstream_manifest.json",
+      "sha256": "6ea267b07fa3fd0ca9c24f93b660b02ac4704b4a3bedf2b0fe34ce173cadd6da"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.mat",
+      "sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+      "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/provenance.json",
+      "sha256": "781b83d403e017c0dbc531a04989ba256afa4e696c752c582ec133bf37e1ba2b"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/bus_allocation.csv",
+      "sha256": "757fbe115e4ee517014dcda313d99005619cffa492cfb49f9c5e4226579489f1"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/design/experiment_plan.json",
+      "sha256": "173b9e745c1444e2ee138a4162e62edc116e1c0a498bc94dd7fc3c8089f6f51e"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/build_load_allocation.py",
+      "sha256": "86d485e4468e243717b9c39eb586fcdc2eb24ad3c19d6aab4f175cf1ad7b84d7"
+    }
+  ]
+}

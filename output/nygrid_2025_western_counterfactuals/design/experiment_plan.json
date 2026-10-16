@@ -1,0 +1,121 @@
+{
+  "created_utc": "2026-10-12T01:37:09.886412+00:00",
+  "branch": "codex/s13-phase1b-upny-coned",
+  "head": "8290ced50354c81eb572a87f0f90eb87278c3cfe",
+  "purpose": "Matched 2025 source-defined diagnostic counterfactuals for Niagara generation, within-zone load allocation and interface operators.",
+  "fixed_hours": 8651,
+  "fixed_hour_mask": {
+    "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+    "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+  },
+  "topology": "dated commissioning states; exactly the baseline 148-bus model",
+  "fixed_boundaries": "All28 external generator equivalents, original4DC schedules and2 observed P34 transfers stay exactly fixed.",
+  "primary_scoring": "All primary scenarios use the exact8651mask; no observation-based exclusion. Infeasible literal hypotheses cannot be called full-cohort results.",
+  "Niagara": {
+    "targets": [
+      "legacy80percent_of_P63_hydro_minus_fixed_StLawrence",
+      "EIA_RMN_monthly_mean_times_baseline_hourly_shape",
+      "same_monthly_mean_with_hourly_capacity_feasible_shape"
+    ],
+    "fixed": [
+      "all_loads",
+      "StLawrence2694",
+      "all_pumped_storage_and_Lewiston2692",
+      "all_nonhydro_generation",
+      "all_boundaries"
+    ],
+    "primary_compensation": "Other conventionalHY outside zonesA/B excludingStLawrence; preserve hourly statewideHY total and original unit bounds.",
+    "compensation_sensitivity": "All other conventionalHY excludingStLawrence; distinguish this from the outsideA/B pool.",
+    "bounded_legacy": "Explicit nearest-feasible projection of the requested hypothesis target; report all changes without modifying source data.",
+    "monthly_scope": "Source EIA monthly energy divided by actual local-calendar physical hours defines a mean. Matching that mean on the fixed qualified cohort is conditional and does not claim full-month energy reconciliation.",
+    "feasibility": "Report raw requested-target infeasibility, and month-level feasibility before scoring; no capacity relaxation."
+  },
+  "load": {
+    "candidates": [
+      "original_A",
+      "original_B",
+      "original_AB"
+    ],
+    "scope": "Original npcc.csv versus released npcc_new.csv nonnegative bus load shares; preserve every zonalPD/QDtotal and all generation.",
+    "negative_and_null_controls": "A shares are identical; A-only should be a no-op and AB should equal B-only.",
+    "extremal_test": "A priori simplex bounds across retainedA/Bbuses demonstrate maximum operator response without fitting demand to observations."
+  },
+  "mapping": {
+    "candidates": [
+      "baseline_corrected_full191_operator",
+      "independent_zone_cuts",
+      "literal_released_plot_negative_control"
+    ],
+    "physical_alternative": "Only evaluate an as-built physical gate if every member/sign/terminal maps independently. Incomplete coverage is a documented identifiability gap, never a zero-filled operator.",
+    "fixed": "Identical flows/angles/injections for operator-only comparisons; no network parameter changes."
+  },
+  "analysis": {
+    "families": "One factor at a time; fully crossed Niagara plus load cases only as algebraic interaction checks when load-cut invariance holds.",
+    "internal_observations": "Read only in separate posthoc score command after all candidate definitions and input hashes are sealed.",
+    "outputs": "All7interfaces, annual/monthly MW metrics/WAPE, matchedbaseline metrics per diagnostic mask, component deltas, feasibility and independent validation.",
+    "attribution": "Changes measure sensitivity to declared hypotheses, not shares of true error. Residual after tests is not automatically assigned to interface mapping."
+  },
+  "constraints": {
+    "no_internal_flow_fitting": true,
+    "no_default_model_promotion": true,
+    "no_original_artifact_changes": true
+  },
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_dispatch_receipt.json",
+      "sha256": "1ec2caef4fd0324d8b9aeceeed96f26aaf295d2b7ae3a0ffb6c5fbdade01a623"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/provenance.json",
+      "sha256": "781b83d403e017c0dbc531a04989ba256afa4e696c752c582ec133bf37e1ba2b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+      "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/common.py",
+      "sha256": "c005e17c59ebd797cfeef386cfacdbcc8aa4df39f2ee873cecc5af97e582217d"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/freeze_design.py",
+      "sha256": "135ebc3fa570d217f40388c27c00c1bd9ed5a5c895b3af6b10520d99742db7fa"
+    }
+  ]
+}

@@ -1,0 +1,883 @@
+{
+  "status": "independent_review_passed",
+  "captured_utc": "2026-10-11T06:18:47.432658+00:00",
+  "checks": 163,
+  "failed_checks": 0,
+  "plant_count": 26,
+  "inventory_unit_rows_in_zone_crosswalk": 55,
+  "GoldBook_evidence_rows": 46,
+  "dc_actual_case_finite_difference_error_mw_per_degree": 4.945377440890297e-10,
+  "unit_test_result": "All3 existing augmented-matrix/bridge/missing-input guards passed in independent invocation.",
+  "review_scope": "GoldBook literal rows and zone columns, frozenEIA plant identities/watercourse, plant-site aliases, three correctD controls, phase-response algebra and actual148 finite-difference/target/nodal checks. No observation-fitting or orientation selection.",
+  "findings": [],
+  "limits": [
+    "GoldBook plant-site zone correction is not a per-unit admission or capacity crosswalk.",
+    "P34 orientation remains unproven. Controlled replay is a diagnostic unless sign and control-source policy are established.",
+    "Equivalent shifts are model parameters required by prescribed branch transfers, not measured physical tap settings."
+  ],
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_moses_audit/generation/confirmed_hydro_zone_corrections.csv",
+      "sha256": "4530bb1e883a4cc4412898ccd7a60235cbab2ce986d885d8e17290f429534722"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/generation/goldbook_zone_evidence.csv",
+      "sha256": "140e4a5f82e42372a0fff051992c91cd94abde368f9b6c90caf216c386c1afcd"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/generation/correct_D_site_controls.csv",
+      "sha256": "1be1e398c74e4c24865da0ccde2e5f256f8f5bd2fdbb0e300126eee578e055e5"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_scope/2025_Gold_Book.pdf",
+      "sha256": "cc43665b9344a04b4c9355edd1dc7e31d42a6bb759ffe027ad867221556aea8e"
+    },
+    {
+      "path": "tmp/nonfossil_sources/eia860_2025/2___Plant_Y2025_Early_Release.xlsx",
+      "sha256": "c0a083b67635d786e204be977b2e4bf56ff505732696eb1cac3169f4b7b046c4"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_audit/dc_control.py",
+      "sha256": "ad7794d749f0bcda792fb824a389768064002d7866c6b8f3ca727da194541812"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_audit/test_dc_control.py",
+      "sha256": "23b0e8d302fa7836836316d9be9fe4594d0bacf0d8bc798eecaa582aeff8c3cf"
+    },
+    {
+      "path": "scripts/nygrid_2019/replay_dc.py",
+      "sha256": "bf48540453c4ab8191b6b8e2cb65d8248acaae425b154ab85f6d182be3e57434"
+    }
+  ],
+  "checks_detail": [
+    {
+      "check": "26_unique_EIA_plant_ids",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "all_candidates_requested_D_to_E",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_hash_matches_all_crosswalk_rows",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_workbook_hash_matches_all_crosswalk_rows",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2547_91_67",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2547_91_67",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2548_89_82",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2548_89_82",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2548_90_11",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2548_90_11",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2551_91_77",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2551_91_77",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2551_91_79",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2551_91_79",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2551_91_81",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2551_91_81",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2556_90_13",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2556_90_13",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2556_90_15",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2556_90_15",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2556_90_17",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2556_90_17",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2561_91_83",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2561_91_83",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2562_91_69",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2562_91_69",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2563_90_19",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2563_90_19",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2563_90_21",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2563_90_21",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2571_91_85",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2571_91_85",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2571_92_11",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2571_92_11",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2573_90_23",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2573_90_23",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2573_90_25",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2573_90_25",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2576_92_13",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2576_92_13",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2576_92_15",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2576_92_15",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2576_92_17",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2576_92_17",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2576_92_19",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2576_92_19",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2590_92_21",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2590_92_21",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2591_92_23",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2591_92_23",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2600_91_71",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2600_91_71",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2604_90_33",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2604_90_33",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2604_90_35",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2604_90_35",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2604_90_37",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2604_90_37",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2604_90_39",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2604_90_39",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2611_91_73",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2611_91_73",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2613_91_75",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2613_91_75",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2616_92_27",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2616_92_27",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2616_92_29",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2616_92_29",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2624_92_31",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2624_92_31",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_2624_92_33",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_2624_92_33",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_7583_90_41",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_7583_90_41",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_7583_90_43",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_7583_90_43",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_10116_92_41",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_10116_92_41",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_10220_102_41",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_10220_102_41",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_10547_102_51",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_10547_102_51",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_50269_102_33",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_50269_102_33",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_52058_102_23",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_52058_102_23",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_58678_90_29",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_58678_90_29",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_58678_90_31",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_58678_90_31",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_58679_90_45",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_58679_90_45",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_58679_90_47",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_58679_90_47",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_literal_row_58679_90_49",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GoldBook_zone_column_58679_90_49",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "all_plants_have_recorded_E_rows",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2547",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2547",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2548",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2548",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2551",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2551",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2556",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2556",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2561",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2561",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2562",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2562",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2563",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2563",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2571",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2571",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2573",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2573",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2576",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2576",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2590",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2590",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2591",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2591",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2600",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2600",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2604",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2604",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2611",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2611",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2613",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2613",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2616",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2616",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_2624",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_2624",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_7583",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_7583",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_10116",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_10116",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_10220",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_10220",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_10547",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_10547",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_50269",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_50269",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_52058",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_52058",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_58678",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_58678",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_identity_58679",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "EIA_watercourse_58679",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "D_controls_retained",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "crosswalk_no_capacity_admission_change",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "actual148_phase_response_finite_difference",
+      "passed": true,
+      "details": "4.945377440890297e-10"
+    },
+    {
+      "check": "actual148_control_target_signed_three_values",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "actual148_control_nodal_balance",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "actual148_control_generation_unchanged",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "unchanged_confirmed_hydro_zone_corrections.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "unchanged_goldbook_zone_evidence.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "unchanged_correct_D_site_controls.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "unchanged_2025_Gold_Book.pdf",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "unchanged_2___Plant_Y2025_Early_Release.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "unchanged_dc_control.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "unchanged_test_dc_control.py",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "unchanged_replay_dc.py",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "visual_source_inspection": {
+    "pdf_pages": [
+      90,
+      91,
+      102
+    ],
+    "printed_pages": [
+      86,
+      87,
+      98
+    ],
+    "result": "Zone E column visually confirmed for Oswegatchie/Upper-Lower Raquette rows and four named non-market sites; PDF headers and PTID/zone columns are unambiguous.",
+    "nonmarket_scope": "Only plant-site zone is accepted; no claim that Gold Book zeroCRIS/zero2025capability implies admission or operating-capacity change."
+  }
+}

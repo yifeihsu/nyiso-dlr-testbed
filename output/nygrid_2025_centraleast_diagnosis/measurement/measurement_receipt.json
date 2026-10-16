@@ -1,0 +1,421 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T01:46:09.007890+00:00",
+  "baseline_HEAD": "6dcc77f071a9ce4aaaa2fcba9a9aabc15f7d5dbc",
+  "status": "measurement_and_original_terminal_accounting_complete_no_causal_claim",
+  "interface": "CENTRAL EAST - VC",
+  "point_id": 23330,
+  "gamma": 0.30012075175285535,
+  "source_hours": 8651,
+  "matched_hours": 8494,
+  "excluded_source_hours": 157,
+  "member_rows": [
+    -33,
+    -36,
+    -40,
+    -42
+  ],
+  "auxiliary_cut_identity": "TotalEast = CentralEast + signed_original_branch224 under each matched terminal convention",
+  "DC_matched": {
+    "hours": 8494,
+    "mean_observed_public_MW": 1675.981455654972,
+    "mean_prediction_public_MW": 1384.2828985351316,
+    "observed_absolute_sum_public_MWh": 14238958.769000001,
+    "absolute_error_sum_public_MWh": 2638027.68053653,
+    "MAE_public_MW": 310.5754274236555,
+    "RMSE_public_MW": 373.1033669669534,
+    "bias_public_MW": -291.6985571198404,
+    "WAPE_percent": 18.52682996933629,
+    "underprediction_hours": 7600,
+    "overprediction_hours": 894,
+    "zero_error_hours": 0,
+    "signed_error_min_public_MW": -1183.0672209691618,
+    "signed_error_p01_public_MW": -856.8431298556734,
+    "signed_error_p05_public_MW": -681.0880239469691,
+    "signed_error_p25_public_MW": -444.8745647825324,
+    "signed_error_p50_public_MW": -286.1116739818713,
+    "signed_error_p75_public_MW": -128.23837875820107,
+    "signed_error_p95_public_MW": 79.70509995976154,
+    "signed_error_p99_public_MW": 192.27359783726033,
+    "signed_error_max_public_MW": 389.0488492070185,
+    "absolute_error_p50_public_MW": 286.90863413996306,
+    "absolute_error_p90_public_MW": 594.0137777812236,
+    "absolute_error_p95_public_MW": 681.088023946969,
+    "absolute_error_p99_public_MW": 856.8431298556733,
+    "absolute_error_max_public_MW": 1183.0672209691618
+  },
+  "AC_legacy_matched": {
+    "hours": 8494,
+    "mean_observed_public_MW": 1675.981455654972,
+    "mean_prediction_public_MW": 2430.9327452459943,
+    "observed_absolute_sum_public_MWh": 14238958.769000001,
+    "absolute_error_sum_public_MWh": 6412645.867794589,
+    "MAE_public_MW": 754.961839862796,
+    "RMSE_public_MW": 795.3126740840017,
+    "bias_public_MW": 754.9512895910221,
+    "WAPE_percent": 45.035918509404794,
+    "underprediction_hours": 1,
+    "overprediction_hours": 8493,
+    "zero_error_hours": 0,
+    "signed_error_min_public_MW": -44.8070042237714,
+    "signed_error_p01_public_MW": 229.87042159438099,
+    "signed_error_p05_public_MW": 383.4492578182143,
+    "signed_error_p25_public_MW": 576.9861434779831,
+    "signed_error_p50_public_MW": 739.72933038353,
+    "signed_error_p75_public_MW": 912.8251253241926,
+    "signed_error_p95_public_MW": 1175.1470196932307,
+    "signed_error_p99_public_MW": 1435.0636923106015,
+    "signed_error_max_public_MW": 1970.3744881120674,
+    "absolute_error_p50_public_MW": 739.72933038353,
+    "absolute_error_p90_public_MW": 1074.0200356104644,
+    "absolute_error_p95_public_MW": 1175.1470196932307,
+    "absolute_error_p99_public_MW": 1435.0636923106015,
+    "absolute_error_max_public_MW": 1970.3744881120674
+  },
+  "AC_source_side_matched": {
+    "hours": 8494,
+    "mean_observed_public_MW": 1675.981455654972,
+    "mean_prediction_public_MW": 2446.983992080978,
+    "observed_absolute_sum_public_MWh": 14238958.769000001,
+    "absolute_error_sum_public_MWh": 6548960.360606231,
+    "MAE_public_MW": 771.0101672482024,
+    "RMSE_public_MW": 812.0033408608836,
+    "bias_public_MW": 771.0025364260061,
+    "WAPE_percent": 45.993253206576725,
+    "underprediction_hours": 1,
+    "overprediction_hours": 8493,
+    "zero_error_hours": 0,
+    "signed_error_min_public_MW": -32.40810186719682,
+    "signed_error_p01_public_MW": 239.30608696606947,
+    "signed_error_p05_public_MW": 391.77707586997934,
+    "signed_error_p25_public_MW": 589.5168042119158,
+    "signed_error_p50_public_MW": 755.9959542687038,
+    "signed_error_p75_public_MW": 931.5583538490489,
+    "signed_error_p95_public_MW": 1196.3963136995505,
+    "signed_error_p99_public_MW": 1470.1335611017685,
+    "signed_error_max_public_MW": 2041.261953005158,
+    "absolute_error_p50_public_MW": 755.9959542687038,
+    "absolute_error_p90_public_MW": 1094.3958939206955,
+    "absolute_error_p95_public_MW": 1196.3963136995505,
+    "absolute_error_p99_public_MW": 1470.1335611017685,
+    "absolute_error_max_public_MW": 2041.261953005158
+  },
+  "DC_source_8651": {
+    "hours": 8651,
+    "mean_observed_public_MW": 1663.3823768543139,
+    "mean_prediction_public_MW": 1365.3680279051148,
+    "observed_absolute_sum_public_MWh": 14393595.641833335,
+    "absolute_error_sum_public_MWh": 2738462.2691201237,
+    "MAE_public_MW": 316.54863820600207,
+    "RMSE_public_MW": 380.62199031995505,
+    "bias_public_MW": -298.01434894919873,
+    "WAPE_percent": 19.025560653941795,
+    "underprediction_hours": 7757,
+    "overprediction_hours": 894,
+    "zero_error_hours": 0,
+    "signed_error_min_public_MW": -1185.5685616074338,
+    "signed_error_p01_public_MW": -891.8463274786536,
+    "signed_error_p05_public_MW": -694.5064804504332,
+    "signed_error_p25_public_MW": -453.90977137951506,
+    "signed_error_p50_public_MW": -292.2372209744615,
+    "signed_error_p75_public_MW": -130.5346264380828,
+    "signed_error_p95_public_MW": 78.28435873994374,
+    "signed_error_p99_public_MW": 191.02764067818703,
+    "signed_error_max_public_MW": 389.0488492070185,
+    "absolute_error_p50_public_MW": 293.1314804078172,
+    "absolute_error_p90_public_MW": 605.0055559310779,
+    "absolute_error_p95_public_MW": 694.5064804504332,
+    "absolute_error_p99_public_MW": 891.8463274786536,
+    "absolute_error_max_public_MW": 1185.5685616074338
+  },
+  "DC_excluded_157": {
+    "hours": 157,
+    "mean_observed_public_MW": 981.7481390658176,
+    "mean_prediction_public_MW": 342.0373837563026,
+    "observed_absolute_sum_public_MWh": 154636.87283333333,
+    "absolute_error_sum_public_MWh": 100434.58858359382,
+    "MAE_public_MW": 639.7107553095148,
+    "RMSE_public_MW": 671.9132293574598,
+    "bias_public_MW": -639.7107553095148,
+    "WAPE_percent": 64.9486676388248,
+    "underprediction_hours": 157,
+    "overprediction_hours": 0,
+    "zero_error_hours": 0,
+    "signed_error_min_public_MW": -1185.5685616074338,
+    "signed_error_p01_public_MW": -1102.6420809053548,
+    "signed_error_p05_public_MW": -986.1928975382655,
+    "signed_error_p25_public_MW": -758.842209818948,
+    "signed_error_p50_public_MW": -624.2991350212759,
+    "signed_error_p75_public_MW": -504.54039211590316,
+    "signed_error_p95_public_MW": -314.9133730468248,
+    "signed_error_p99_public_MW": -198.02819323548547,
+    "signed_error_max_public_MW": -138.00278712107735,
+    "absolute_error_p50_public_MW": 624.2991350212759,
+    "absolute_error_p90_public_MW": 921.5714976137757,
+    "absolute_error_p95_public_MW": 986.1928975382655,
+    "absolute_error_p99_public_MW": 1102.6420809053548,
+    "absolute_error_max_public_MW": 1185.5685616074338
+  },
+  "matched_WAPE_increase_percentage_points": 26.509088540068504,
+  "matched_MAE_increase_public_MW": 444.38641243914043,
+  "mean_signed_AC_minus_DC_public_MW": 1046.6498467108627,
+  "DC_source_to_matched_WAPE_change_percentage_points": -0.49873068460550485,
+  "DC_underprediction_hours": 7600,
+  "AC_underprediction_hours": 1,
+  "DC_under_to_AC_over_hours": 7599,
+  "positive_AC_minus_DC_hours": 8494,
+  "L1_accounting": {
+    "identity": "delta_MAE = mean_flow_shift + 2*(mean_negative_error_part_AC - mean_negative_error_part_DC)",
+    "mean_flow_shift_public_MW": 1046.6498467108627,
+    "underprediction_penalty_change_public_MW": -602.263434271722,
+    "delta_MAE_public_MW": 444.38641243914043,
+    "interpretation": "Exact error-sign accounting, not attribution of physical causes."
+  },
+  "terminal_convention": {
+    "legacy_equals_oriented_target_exactly": true,
+    "explanation": "All four signs are negative, so legacy -PF at the literal F terminal is the oriented target-side flow.",
+    "mean_source_minus_target_loss_public_MW": 16.051246834984372,
+    "maximum_source_minus_target_loss_public_MW": 76.15840725819287,
+    "source_side_minus_legacy_WAPE_percentage_points": 0.9573346971719303,
+    "diagnostic_sensitivity_not_confidence_interval": true
+  },
+  "eastern_cut_accounting": {
+    "mean_CE_shift_public_MW": 1046.6498467108627,
+    "mean_branch224_shift_public_MW": -746.8364743415937,
+    "mean_TotalEast_shift_public_MW": 299.81337236926885,
+    "interpretation": "Exact overlapping-cut identity; no independent-branch causal effect claimed."
+  },
+  "DC_member_reconstruction_checks": [
+    {
+      "state": "may21",
+      "source_hours": 214,
+      "maximum_direct_vs_affine_member_error_model_MW": 3.410605131648481e-13,
+      "maximum_member_sum_vs_archived_CE_error_model_MW": 5.115907697472721e-13,
+      "maximum_member_sum_vs_archived_TotalEast_error_model_MW": 9.094947017729282e-13
+    },
+    {
+      "state": "may30",
+      "source_hours": 4835,
+      "maximum_direct_vs_affine_member_error_model_MW": 4.547473508864641e-13,
+      "maximum_member_sum_vs_archived_CE_error_model_MW": 7.958078640513122e-13,
+      "maximum_member_sum_vs_archived_TotalEast_error_model_MW": 9.094947017729282e-13
+    },
+    {
+      "state": "post_dover",
+      "source_hours": 287,
+      "maximum_direct_vs_affine_member_error_model_MW": 4.547473508864641e-13,
+      "maximum_member_sum_vs_archived_CE_error_model_MW": 1.0231815394945443e-12,
+      "maximum_member_sum_vs_archived_TotalEast_error_model_MW": 1.8189894035458565e-12
+    },
+    {
+      "state": "pre_may",
+      "source_hours": 3315,
+      "maximum_direct_vs_affine_member_error_model_MW": 4.547473508864641e-13,
+      "maximum_member_sum_vs_archived_CE_error_model_MW": 1.0231815394945443e-12,
+      "maximum_member_sum_vs_archived_TotalEast_error_model_MW": 1.1368683772161603e-12
+    }
+  ],
+  "maximum_raw_public_reaggregation_difference": 4.092726157978177e-12,
+  "raw_public_source_reaggregation_qualified_hours": 8673,
+  "prior_deliveries_byte_preserved": [
+    {
+      "namespace": "nygrid_2025_ac_system",
+      "file_records": 454,
+      "manifest_sha256": "3230c388c4b7129a1da0c89daf4be6eeb2a3ac2afc540a38a78b2e59e5451292"
+    },
+    {
+      "namespace": "nygrid_2025_acpf_profile_audit",
+      "file_records": 156,
+      "manifest_sha256": "4be2e0a78bde675fbf92891f397974afb3cd85dd58c6ff678f47d091968ceb8a"
+    },
+    {
+      "namespace": "nygrid_2025_compact_ac",
+      "file_records": 129,
+      "manifest_sha256": "154be7a2a29db4d9ca29bd937a5672ccee0f703c54527f1fee9df39da51d1c60"
+    }
+  ],
+  "no_PF_or_OPF_executed": true,
+  "no_parameter_profile_operator_or_public_observation_changes": true,
+  "no_interface_fitting": true,
+  "physical_P32_meter_binding_or_numeric_units_certified": false,
+  "accounting_is_not_causal_model_attribution": true,
+  "qualifications": [
+    "AC metrics use only frozen equation/profile-qualified hours; failed AC iterates are not scored.",
+    "Native dispatch and external loads are reconstructed assumptions; AC operating-limit qualification remains false.",
+    "The model cut is not yet bound to the exact physical NYISO P32 meter expression.",
+    "The published Flow(MWH) numeric-as-MW assumption is retained, not certified by reproducing the source.",
+    "Controlled physics/model bridge experiments are needed to assign causes to the measured change."
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_ac_system/DELIVERY_MANIFEST.json",
+      "sha256": "3230c388c4b7129a1da0c89daf4be6eeb2a3ac2afc540a38a78b2e59e5451292"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/DELIVERY_MANIFEST.json",
+      "sha256": "4be2e0a78bde675fbf92891f397974afb3cd85dd58c6ff678f47d091968ceb8a"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/DELIVERY_MANIFEST.json",
+      "sha256": "154be7a2a29db4d9ca29bd937a5672ccee0f703c54527f1fee9df39da51d1c60"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/bounded_x_nominal.npz",
+      "sha256": "0b1c2075989ba715fe356eaef24a008a2d4196e11034dbc44fb193dc469b85f9"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/comparison/comparison_arrays.npz",
+      "sha256": "6033e200dde60e63bb9b12e123e085790975405dca0843482df9d0437faf7912"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_quality_wide.csv",
+      "sha256": "4deee20774691c3193a5ecab239fc3d25878dec34c143ca90f1eb9d6ed158262"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/hour_catalog.csv",
+      "sha256": "96d4a0db424cbe1062b7c6b51d5f244a4de699679ad89428a8db3a992980f86a"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/network_cases.mat",
+      "sha256": "5fb84104d527b2e26d22f3a772ebd4e56ff981325ea7490d349fa53758646320"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_contract.json",
+      "sha256": "bb909130ecd61253819c2876f8d35347ca6bd3a9f4ce9507e82b79c7aee8b553"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/raw_source_check.json",
+      "sha256": "d5a5747f0793aad63f5c465b84ca1cc975a254cbb716ab5799c8a3320832adb7"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/measurement/account_central_east.py",
+      "sha256": "2c70af0f8dce67d68aaf6daaf9e2a955994e1a164092971d3d731b742a24aee5"
+    },
+    {
+      "path": "scripts/nygrid_2025_acpf_profile_audit/alignment/interface_operator.py",
+      "sha256": "944e63f827f46fd161e0a8da67473a2bb59cfdf3107f34ab984510cc0319a308"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/interface_definitions.json",
+      "sha256": "e96c7d938cedeb7a65383ea94b85ad7fec8a7c7f79867b87c5c31fb0295be4fd"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/interface_membership.csv",
+      "sha256": "810bd49179ef58fa277f45ab76c12ef8ee71dd28dbbdf92f308c3951532412b0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/pre_may_branch_map.csv",
+      "sha256": "54839b8bbd5ad7732649d29b098080d9aadb09e41d5eff2d9bbc190fb9a7e0b1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may21_branch_map.csv",
+      "sha256": "ea891fc3459f5510e68c6c8f61466c63751c46c44015a4ff124e03de8174340c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may30_branch_map.csv",
+      "sha256": "d6289c0fef222030f13e346025488a09acb98859f357a6d21e00358948cc5594"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/post_dover_branch_map.csv",
+      "sha256": "fa6e77ebd36d7336c11234c1fff1d50a5b930391d203653ba317adeefe08bf67"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_01.mat",
+      "sha256": "f21059f24b6614e4100d4cf7e7dec13e94f844fd3edcd265067873b1bc8d2369"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_02.mat",
+      "sha256": "06dd1ba4915daf839cc27905768141bdfbb228d8d7a6b9fb8cf23f1869c86443"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_03.mat",
+      "sha256": "2d518a28264d1fcc4f2fb16082f9b3dee94ef3f60e349f564d3f7e5d662260b1"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_04.mat",
+      "sha256": "9161554a02952e53da73b1c3dd933d77cdc6e5a5c3250826018973c9d9997ef2"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_05.mat",
+      "sha256": "fdc012f78d2511b930fefa563f033647cb250f5ceb15a60e67481a11b1b1ddf0"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_06.mat",
+      "sha256": "791ca8a79e3b2d2125aeea38482b0521cd8357c88b22b25ee661ee95f17f9b3c"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_07.mat",
+      "sha256": "e292c36bd9255a53c9d7149845aa6fbdf7a097e9f18cf49558593e647ae1d1a6"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_08.mat",
+      "sha256": "1c50cb51edf8854831fcc1da0d0bdfa5ba722bf47b05763fb08f70e352d3252b"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_09.mat",
+      "sha256": "2da4ed8badebc8e80151c06b1eb22904d2ca2f8d256bdbc3e9c0ba53c3eae122"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_10.mat",
+      "sha256": "2a3efa9c55e96119eb311fc5b6170edab5fe84beef7b813171951f2b922d7bb7"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_11.mat",
+      "sha256": "43fc75780afc6ae46c15c840ef39bf8f6bfb5da9e8a6c89dcd469e2990348e87"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_12.mat",
+      "sha256": "9ef53680a25405da10524df26cfc65d2e25828053c7b986d10f5b6d67329dbf8"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/AC_original_terminal_mapping.csv",
+      "sha256": "b20039bf0cfd9868b97e0a305c0fe37478f53a3b398c3d766e5fedf45a50ebed"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/CE_hourly_accounting.csv",
+      "sha256": "2de35dc6e56608e548f3d79664722635a12a4534265c38e361ed496addade42c"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/CE_metrics_by_cohort_period.csv",
+      "sha256": "c970b6361d6cb2bb0b9fccca924fcf8c4d9df5c723e55878cdf9083b5cf7276e"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/DC_original_member_parameters.csv",
+      "sha256": "8eb6b411d79f00acbcc1926224e840149579dc25aacaffd356107be4f4372442"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/diagnostic_extreme_hours.csv",
+      "sha256": "1a5fb77777140e48ec7f65907f0072aa3c1cb4facd8cda0936f9f9dce96d6b8d"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/original_member_contributions.csv",
+      "sha256": "cdb6c53745cd7479f961bace709467718dcbe7bdd1378093781b9d0ca4969ae6"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/original_member_hourly_terms.csv",
+      "sha256": "4ea5ecf12845a34a3fe1ce55868c5542e9eaad8e95fefbe55126f893ba78b104"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/raw_source_members_checked.csv",
+      "sha256": "bc8516127608e0a648f5a64e169514725bbed729fc3781fe753e90b3015bd3b8"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/raw_source_reaggregation.csv",
+      "sha256": "e2583126468e9afefceaad5aca3f75e8fc22fecc32c982fcd71ee0eff843e8b7"
+    }
+  ]
+}

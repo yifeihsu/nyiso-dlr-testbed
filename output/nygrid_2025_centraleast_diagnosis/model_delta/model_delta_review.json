@@ -1,0 +1,330 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T01:33:30.339125+00:00",
+  "baseline_HEAD": "6dcc77f071a9ce4aaaa2fcba9a9aabc15f7d5dbc",
+  "scope": "Structural parameter/operator/input-contract comparison; no new PF, no observation fitting, no causal dominance claim",
+  "exact_DC_comparator": "bounded_x_nominal with corrected generator locations, six fixed transfers and branch211 disabled",
+  "gamma": 0.30012075175285535,
+  "all_four_CENTRAL_EAST_member_total_X_values_preserved": true,
+  "CENTRAL_EAST_parent_rows": [
+    33,
+    36,
+    40,
+    42
+  ],
+  "all_raw_member_orientations": "F_to_E",
+  "comparison_direction": "E_to_F",
+  "historical_negative_literal_PF_equals_oriented_target_side": true,
+  "no_reactors_on_CENTRAL_EAST_members_or_endpoint_buses": true,
+  "active_corridors_with_changed_X": 33,
+  "candidate_experiments": [
+    {
+      "parent_rows": [
+        224
+      ],
+      "reason": "Direct E-to-G bypass in TOTAL EAST but not CENTRAL EAST; X increases3.772646x."
+    },
+    {
+      "parent_rows": [
+        41
+      ],
+      "reason": "F-to-F Rotterdam-Albany neighboring path X increases22.926433x."
+    },
+    {
+      "parent_rows": [
+        12,
+        13,
+        41,
+        56,
+        59,
+        60,
+        75,
+        86,
+        105,
+        118,
+        125,
+        140,
+        147,
+        151,
+        152,
+        153,
+        164,
+        165,
+        176,
+        177,
+        179,
+        196,
+        200,
+        221,
+        222,
+        224,
+        383,
+        402,
+        403,
+        404,
+        408,
+        409,
+        410
+      ],
+      "reason": "All33 active X redesigns, preserving current AC R/B/status/taps/control as an isolated bridge."
+    }
+  ],
+  "hypotheses_not_established_causes": [
+    "Surrounding-path X changes can reroute the fixed injections through CE although CE member X is unchanged.",
+    "Single-reference loss balancing at CLAY in zoneC can increase eastward transfers; quantify separately from X changes.",
+    "AC voltage products, conductance and reactive support can change real-power routing; PF equivalence does not validate those assumptions."
+  ],
+  "source_data_caveats": [
+    "Inherited zone-crossing functional is not certified physical NYISO meter membership.",
+    "Generic conductor/geometry redesign and external equivalent impedances are synthetic; unchanged totalX on CE does not establish physical circuit accuracy.",
+    "Raw full-network template gen.bus contains81 preexisting stale placements; the frozen DC replay already applies the same corrected generator buses used by AC.",
+    "The row224/41 redesigns use fallback_candidate after no exact R/X/catalog/geometry/length candidate exists. If originalX implies a route outside the declared length interval, it uses the preferred1.25-geographic-chord route before clipping; these are not measured routes.",
+    "A lower public-interface WAPE under an alternative impedance does not establish that impedance as physically correct."
+  ],
+  "states": [
+    {
+      "state": "pre_may",
+      "template_hour": 1,
+      "original_bus_count": 191,
+      "AC_bus_count": 266,
+      "original_branches": 410,
+      "AC_branches": 485,
+      "numerical_section_buses": 75,
+      "topology_identical_after_contracting_sections": true,
+      "all_status_tap_and_phase_contracts_match": true,
+      "current_generator_locations_match_corrected_DC_contract": true,
+      "raw_source_template_generator_locations_differ_but_preexisting_DC_correction_count": 81,
+      "source_load_PQ_and_six_active_transfers_exactly_preserved": true,
+      "maximum_section_sum_R_X_B_error_pu": 4.440892098500626e-16,
+      "maximum_sectioned_DC_Bbus_Schur_vs_unsplit_overlay_error_MW_per_rad": 5.820766091346741e-11,
+      "maximum_sectioned_phase_injection_vs_unsplit_overlay_error_MW": 0.0,
+      "maximum_original_DC_CE_kernel_vs_sealed_operator_error_MW_per_rad": 9.094947017729282e-13,
+      "DC_Bbus_relative_Frobenius_change": 0.07637845398088475,
+      "CE_retained_angle_kernel_relative_L2_change": 6.357674616460983e-17,
+      "CE_retained_angle_kernel_maximum_delta_MW_per_rad": 9.094947017729282e-13,
+      "largest_CE_kernel_change_retained_bus": 43,
+      "graph_components_after_removing_all_CE_members": 1,
+      "CE_members_are_not_a_complete_graph_separating_cut": true,
+      "reactor_rows": 35,
+      "reactor_total_nominal_MVAr": 3837.28901974172,
+      "maximum_single_application_reactor_BS_audit_error_MVAr": 5.684341886080802e-14
+    },
+    {
+      "state": "may21",
+      "template_hour": 3360,
+      "original_bus_count": 191,
+      "AC_bus_count": 266,
+      "original_branches": 410,
+      "AC_branches": 485,
+      "numerical_section_buses": 75,
+      "topology_identical_after_contracting_sections": true,
+      "all_status_tap_and_phase_contracts_match": true,
+      "current_generator_locations_match_corrected_DC_contract": true,
+      "raw_source_template_generator_locations_differ_but_preexisting_DC_correction_count": 81,
+      "source_load_PQ_and_six_active_transfers_exactly_preserved": true,
+      "maximum_section_sum_R_X_B_error_pu": 4.440892098500626e-16,
+      "maximum_sectioned_DC_Bbus_Schur_vs_unsplit_overlay_error_MW_per_rad": 5.820766091346741e-11,
+      "maximum_sectioned_phase_injection_vs_unsplit_overlay_error_MW": 0.0,
+      "maximum_original_DC_CE_kernel_vs_sealed_operator_error_MW_per_rad": 9.094947017729282e-13,
+      "DC_Bbus_relative_Frobenius_change": 0.08179785364742385,
+      "CE_retained_angle_kernel_relative_L2_change": 6.357674616460983e-17,
+      "CE_retained_angle_kernel_maximum_delta_MW_per_rad": 9.094947017729282e-13,
+      "largest_CE_kernel_change_retained_bus": 43,
+      "graph_components_after_removing_all_CE_members": 1,
+      "CE_members_are_not_a_complete_graph_separating_cut": true,
+      "reactor_rows": 35,
+      "reactor_total_nominal_MVAr": 3837.28901974172,
+      "maximum_single_application_reactor_BS_audit_error_MVAr": 5.684341886080802e-14
+    },
+    {
+      "state": "may30",
+      "template_hour": 3576,
+      "original_bus_count": 191,
+      "AC_bus_count": 266,
+      "original_branches": 410,
+      "AC_branches": 485,
+      "numerical_section_buses": 75,
+      "topology_identical_after_contracting_sections": true,
+      "all_status_tap_and_phase_contracts_match": true,
+      "current_generator_locations_match_corrected_DC_contract": true,
+      "raw_source_template_generator_locations_differ_but_preexisting_DC_correction_count": 81,
+      "source_load_PQ_and_six_active_transfers_exactly_preserved": true,
+      "maximum_section_sum_R_X_B_error_pu": 4.440892098500626e-16,
+      "maximum_sectioned_DC_Bbus_Schur_vs_unsplit_overlay_error_MW_per_rad": 5.820766091346741e-11,
+      "maximum_sectioned_phase_injection_vs_unsplit_overlay_error_MW": 0.0,
+      "maximum_original_DC_CE_kernel_vs_sealed_operator_error_MW_per_rad": 9.094947017729282e-13,
+      "DC_Bbus_relative_Frobenius_change": 0.08192876844420927,
+      "CE_retained_angle_kernel_relative_L2_change": 6.357674616460983e-17,
+      "CE_retained_angle_kernel_maximum_delta_MW_per_rad": 9.094947017729282e-13,
+      "largest_CE_kernel_change_retained_bus": 43,
+      "graph_components_after_removing_all_CE_members": 1,
+      "CE_members_are_not_a_complete_graph_separating_cut": true,
+      "reactor_rows": 35,
+      "reactor_total_nominal_MVAr": 3862.1055471543123,
+      "maximum_single_application_reactor_BS_audit_error_MVAr": 5.684341886080802e-14
+    },
+    {
+      "state": "post_dover",
+      "template_hour": 8472,
+      "original_bus_count": 192,
+      "AC_bus_count": 267,
+      "original_branches": 413,
+      "AC_branches": 488,
+      "numerical_section_buses": 75,
+      "topology_identical_after_contracting_sections": true,
+      "all_status_tap_and_phase_contracts_match": true,
+      "current_generator_locations_match_corrected_DC_contract": true,
+      "raw_source_template_generator_locations_differ_but_preexisting_DC_correction_count": 81,
+      "source_load_PQ_and_six_active_transfers_exactly_preserved": true,
+      "maximum_section_sum_R_X_B_error_pu": 4.440892098500626e-16,
+      "maximum_sectioned_DC_Bbus_Schur_vs_unsplit_overlay_error_MW_per_rad": 5.820766091346741e-11,
+      "maximum_sectioned_phase_injection_vs_unsplit_overlay_error_MW": 0.0,
+      "maximum_original_DC_CE_kernel_vs_sealed_operator_error_MW_per_rad": 9.094947017729282e-13,
+      "DC_Bbus_relative_Frobenius_change": 0.07451850168175639,
+      "CE_retained_angle_kernel_relative_L2_change": 6.357674616460983e-17,
+      "CE_retained_angle_kernel_maximum_delta_MW_per_rad": 9.094947017729282e-13,
+      "largest_CE_kernel_change_retained_bus": 43,
+      "graph_components_after_removing_all_CE_members": 1,
+      "CE_members_are_not_a_complete_graph_separating_cut": true,
+      "reactor_rows": 35,
+      "reactor_total_nominal_MVAr": 3862.1055471543123,
+      "maximum_single_application_reactor_BS_audit_error_MVAr": 5.684341886080802e-14
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/build_model_delta.py",
+      "sha256": "3765575f64315433d0352044176b4bcd7950bb1b7f0c1dcf0f72a172d572dc1e"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/network_cases.mat",
+      "sha256": "5fb84104d527b2e26d22f3a772ebd4e56ff981325ea7490d349fa53758646320"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/bus_register.csv",
+      "sha256": "9a3359281f3b51daedcb2c2740e3d31c4eb4f62adffca5ea7819b1736c0dc660"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/operating_states.mat",
+      "sha256": "bea2fb35c44a3c9510b7c4a68cf4a5ea901e7df0b51567755a2a388942dd171a"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h0001.mat",
+      "sha256": "ca590aa089c883a6bb273f0763344023cda4e5c6342fd2260fe66b1f2f6824be"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/pre_may_reactor_ledger.csv",
+      "sha256": "a766295a4bd22a08de200c2dd28c7c70625a5ce61016c07b2bc9e26adf487276"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h3360.mat",
+      "sha256": "fb9dec35082653e7690ff841727515b2c322f85ec92d13b86482cbbcc5e0da1c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may21_reactor_ledger.csv",
+      "sha256": "a766295a4bd22a08de200c2dd28c7c70625a5ce61016c07b2bc9e26adf487276"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h3576.mat",
+      "sha256": "f38324de7355c2dd9498eba9ebc2cd80857c83295e79653905d3d7e4e21cedf0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may30_reactor_ledger.csv",
+      "sha256": "8f85cc38402abe4187fbc03ebb4e13dcfab374b7c58f17b64c7c5625b817dac3"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h8472.mat",
+      "sha256": "0bf999f20d50ac9e398cc47a58d127e02f59c3ac251a18159cac5700dfb7116d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/post_dover_reactor_ledger.csv",
+      "sha256": "8f85cc38402abe4187fbc03ebb4e13dcfab374b7c58f17b64c7c5625b817dac3"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_ac.m",
+      "sha256": "b46962e1d966233d03ae30bfdd1ad4d0120a075940579d83f9ffd7e017c5efc3"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_dover_dc.m",
+      "sha256": "b0f4c23bc1e7cf4e3907411089b96efba5ea9bb77bf1fed6a03910e4134b0979"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_line_estimated_dc.m",
+      "sha256": "de3935e1e9b9dd2b94078d5a19976648884eac0f883dcead7786d4d1a93b20db"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_western_corrected_dc.m",
+      "sha256": "6cf89f6076f2fa9e9c81e0d4da92d4a6bd930f99b644c2690c4ba9b63491ce01"
+    },
+    {
+      "path": "scripts/nygrid_2025_par_controls/controlled_equivalent.py",
+      "sha256": "ee43b19d7b5e5fc2936a38bb9228b703456ce242d0be7ccae5ea8a78d9d6fcbf"
+    },
+    {
+      "path": "scripts/nygrid_2025_dover_parameters/run_dover_replay.py",
+      "sha256": "022dc62e6a09a7c2dfda80318a3a2233c87717a6bff0d005ca67af471214edb2"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/nygrid_ac_apply_sections.m",
+      "sha256": "ce3de5ef5ab5774ac30a596c589dc67ffb5231b8ca276cdf518d83e8c5180416"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/line_equivalents.py",
+      "sha256": "f55c9c499f8ee8d7bf925a5a97c3c06c2be55f813d3a256796480cb5201183e6"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/build_assignments.py",
+      "sha256": "4da333c789719e8dc1a17304a458cf0aab40aa075de4c4d2aef038d82f1f70ea"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/branch_parameter_deltas.csv",
+      "sha256": "9fb79d89c3cae115b27cc4bea652852e18c8d9a040c89c3ccecc0dfea99ea358"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/bus_shunt_and_injection_locations.csv",
+      "sha256": "3da7aee6b365eccc4dad71cbf25cd6a554f0c114b62ba13d89e14c44240215c6"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/CENTRAL_EAST_member_deltas.csv",
+      "sha256": "fe190cb977a5a98c5eb9b19eb8e7a0dba798e5f4ba63510111e868f60a7397fb"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/x_changed_corridors.csv",
+      "sha256": "08000fd8071a0fea919547cafafbf06b65f4f0d063faac31ee12cc3d1181b71c"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/zone_E_F_boundary_branches.csv",
+      "sha256": "72ce9327c5d08f16e9feca3fd6face3a02fcca7fe66fbc79d9695642864f1edd"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/zone_input_summary.csv",
+      "sha256": "ba4b66721fcf285ed9d4783c9e6526d50c0249a71c8148081ced578502915e93"
+    }
+  ]
+}

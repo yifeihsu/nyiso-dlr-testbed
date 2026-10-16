@@ -1,0 +1,86 @@
+{
+  "status": "passed_necessary_P_only_screen_not_full_physical_feasibility",
+  "native_resolution_screen_precedes_hourly_aggregation": true,
+  "devices": [
+    {
+      "ptid": 25118,
+      "native_resolution": {
+        "records": 105998,
+        "finite_records": 105998,
+        "missing_records": 0,
+        "minimum_public_mw": -245.8,
+        "maximum_public_mw": 244.4,
+        "maximum_absolute_public_mw": 245.8,
+        "necessary_abs_p_screen_mw": 300.0,
+        "violations": 0,
+        "scope": "necessary_abs_P_le_nominal_S_only",
+        "full_P_Q_rating_feasible": false
+      },
+      "hourly": {
+        "records": 8760,
+        "finite_records": 8673,
+        "missing_records": 87,
+        "minimum_public_mw": -165.64166666666668,
+        "maximum_public_mw": 185.4,
+        "maximum_absolute_public_mw": 185.4,
+        "necessary_abs_p_screen_mw": 300.0,
+        "violations": 0,
+        "scope": "necessary_abs_P_le_nominal_S_only",
+        "full_P_Q_rating_feasible": false
+      },
+      "P53A_schedule": {
+        "records": 8760,
+        "finite_records": 8760,
+        "missing_records": 0,
+        "minimum_public_mw": -25.0,
+        "maximum_public_mw": 25.0,
+        "maximum_absolute_public_mw": 25.0,
+        "necessary_abs_p_screen_mw": 300.0,
+        "violations": 0,
+        "scope": "necessary_abs_P_le_nominal_S_only",
+        "full_P_Q_rating_feasible": false
+      }
+    },
+    {
+      "ptid": 25119,
+      "native_resolution": {
+        "records": 105998,
+        "finite_records": 105998,
+        "missing_records": 0,
+        "minimum_public_mw": -252.6,
+        "maximum_public_mw": 247.3,
+        "maximum_absolute_public_mw": 252.6,
+        "necessary_abs_p_screen_mw": 300.0,
+        "violations": 0,
+        "scope": "necessary_abs_P_le_nominal_S_only",
+        "full_P_Q_rating_feasible": false
+      },
+      "hourly": {
+        "records": 8760,
+        "finite_records": 8673,
+        "missing_records": 87,
+        "minimum_public_mw": -167.475,
+        "maximum_public_mw": 181.49166666666667,
+        "maximum_absolute_public_mw": 181.49166666666667,
+        "necessary_abs_p_screen_mw": 300.0,
+        "violations": 0,
+        "scope": "necessary_abs_P_le_nominal_S_only",
+        "full_P_Q_rating_feasible": false
+      },
+      "P53A_schedule": {
+        "records": 8760,
+        "finite_records": 8760,
+        "missing_records": 0,
+        "minimum_public_mw": -25.0,
+        "maximum_public_mw": 25.0,
+        "maximum_absolute_public_mw": 25.0,
+        "necessary_abs_p_screen_mw": 300.0,
+        "violations": 0,
+        "scope": "necessary_abs_P_le_nominal_S_only",
+        "full_P_Q_rating_feasible": false
+      }
+    }
+  ],
+  "clipping_performed": false,
+  "equivalent_phase_clipping_performed": false
+}

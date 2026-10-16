@@ -1,0 +1,190 @@
+{
+  "passed": true,
+  "status": "source_generation_repair_plus_two_unpromoted_PAR_orientations",
+  "original_qualified_hours": 8663,
+  "par_qualified_hours": 8673,
+  "common_qualified_hours": 8663,
+  "moved_admitted_generator_rows": 46,
+  "original_PG_PD_QD_bounds_DC_schedules_and_topology_preserved": true,
+  "original_unit_dispatch_remains_optimal": true,
+  "optimum_identity_reason": "objective, generator boxes and global balance target are independent of generator bus IDs",
+  "internal_interface_observations_read": false,
+  "PAR_orientation_selection_uses_internal_observations": false,
+  "equivalent_phase_shift_is_physical_tap_telemetry": false,
+  "variants": [
+    {
+      "variant": "dated_baseline_replayed",
+      "topology": "dated",
+      "source_generation_mapping_corrected": false,
+      "par_controlled": false,
+      "raw_PAR_to_branch_sign": null,
+      "par_orientation_is_promoted": false,
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "maximum_nodal_residual_model_mw": 2.688693712116219e-11,
+      "maximum_slack_change_model_mw": 3.433342499192804e-11,
+      "equivalent_shift_min_deg": 0.0,
+      "equivalent_shift_max_deg": 0.0,
+      "file": "output/nygrid_2025_moses_audit/replay/dated_baseline_replayed.mat",
+      "sha256": "110a46b3cf078fd292667e7f73351ab2ae1899a5e7aad233f2e0f2e318768acd"
+    },
+    {
+      "variant": "dated_hydro_zone_corrected",
+      "topology": "dated",
+      "source_generation_mapping_corrected": true,
+      "par_controlled": false,
+      "raw_PAR_to_branch_sign": null,
+      "par_orientation_is_promoted": false,
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "maximum_nodal_residual_model_mw": 2.737010618147906e-11,
+      "maximum_slack_change_model_mw": 3.444711182964966e-11,
+      "equivalent_shift_min_deg": 0.0,
+      "equivalent_shift_max_deg": 0.0,
+      "file": "output/nygrid_2025_moses_audit/replay/dated_hydro_zone_corrected.mat",
+      "sha256": "6acec85e2647377ad204ec46f86ec4e3f6497a66691de07ab347c54bb24211cb"
+    },
+    {
+      "variant": "dated_hydro_zone_par_from_moses",
+      "topology": "dated",
+      "source_generation_mapping_corrected": true,
+      "par_controlled": true,
+      "raw_PAR_to_branch_sign": 1.0,
+      "par_orientation_is_promoted": false,
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "maximum_nodal_residual_model_mw": 3.558398020686582e-11,
+      "maximum_slack_change_model_mw": 3.444711182964966e-11,
+      "equivalent_shift_min_deg": -99.921074801676,
+      "equivalent_shift_max_deg": 29.299115235086536,
+      "file": "output/nygrid_2025_moses_audit/replay/dated_hydro_zone_par_from_moses.mat",
+      "sha256": "c16eeb4e0c66a51ddf75853938045ffd0d86546698843c4f7d42b1c522420081"
+    },
+    {
+      "variant": "dated_hydro_zone_par_toward_moses",
+      "topology": "dated",
+      "source_generation_mapping_corrected": true,
+      "par_controlled": true,
+      "raw_PAR_to_branch_sign": -1.0,
+      "par_orientation_is_promoted": false,
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "maximum_nodal_residual_model_mw": 3.558398020686582e-11,
+      "maximum_slack_change_model_mw": 3.444711182964966e-11,
+      "equivalent_shift_min_deg": -78.71703682720302,
+      "equivalent_shift_max_deg": 31.65402392767146,
+      "file": "output/nygrid_2025_moses_audit/replay/dated_hydro_zone_par_toward_moses.mat",
+      "sha256": "3c10489a16a57638a8c50f5eb58bf9bf91f2ef04decde21ad4e373885ca947e9"
+    },
+    {
+      "variant": "year_end_baseline_replayed",
+      "topology": "year_end",
+      "source_generation_mapping_corrected": false,
+      "par_controlled": false,
+      "raw_PAR_to_branch_sign": null,
+      "par_orientation_is_promoted": false,
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "maximum_nodal_residual_model_mw": 2.5266899683629163e-11,
+      "maximum_slack_change_model_mw": 2.4556356947869062e-11,
+      "equivalent_shift_min_deg": 0.0,
+      "equivalent_shift_max_deg": 0.0,
+      "file": "output/nygrid_2025_moses_audit/replay/year_end_baseline_replayed.mat",
+      "sha256": "7335b15806f43a46690dd2debaaa767db515fc093780eb87df32848248117fec"
+    },
+    {
+      "variant": "year_end_hydro_zone_corrected",
+      "topology": "year_end",
+      "source_generation_mapping_corrected": true,
+      "par_controlled": false,
+      "raw_PAR_to_branch_sign": null,
+      "par_orientation_is_promoted": false,
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "maximum_nodal_residual_model_mw": 2.4783730623312294e-11,
+      "maximum_slack_change_model_mw": 2.432898327242583e-11,
+      "equivalent_shift_min_deg": 0.0,
+      "equivalent_shift_max_deg": 0.0,
+      "file": "output/nygrid_2025_moses_audit/replay/year_end_hydro_zone_corrected.mat",
+      "sha256": "a59d5c9d34702bbcaf1e9bd7f1c2d9debfa179e417b3eab022783b87476fe1e5"
+    },
+    {
+      "variant": "year_end_hydro_zone_par_from_moses",
+      "topology": "year_end",
+      "source_generation_mapping_corrected": true,
+      "par_controlled": true,
+      "raw_PAR_to_branch_sign": 1.0,
+      "par_orientation_is_promoted": false,
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "maximum_nodal_residual_model_mw": 2.5067947717616335e-11,
+      "maximum_slack_change_model_mw": 2.432898327242583e-11,
+      "equivalent_shift_min_deg": -99.921074801676,
+      "equivalent_shift_max_deg": 29.299115235086536,
+      "file": "output/nygrid_2025_moses_audit/replay/year_end_hydro_zone_par_from_moses.mat",
+      "sha256": "291b423b27d7e2af3dd9a3f48234e60b73f25842592095141b92b0e0c55a6b60"
+    },
+    {
+      "variant": "year_end_hydro_zone_par_toward_moses",
+      "topology": "year_end",
+      "source_generation_mapping_corrected": true,
+      "par_controlled": true,
+      "raw_PAR_to_branch_sign": -1.0,
+      "par_orientation_is_promoted": false,
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "maximum_nodal_residual_model_mw": 2.4840574042173102e-11,
+      "maximum_slack_change_model_mw": 2.432898327242583e-11,
+      "equivalent_shift_min_deg": -78.71703682720302,
+      "equivalent_shift_max_deg": 31.65402392767146,
+      "file": "output/nygrid_2025_moses_audit/replay/year_end_hydro_zone_par_toward_moses.mat",
+      "sha256": "bae1ed619e8bead7f3452c4340dbbd9880e099808b5ead0842e5cd4214d9c61b"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/model_generator_register.csv",
+      "sha256": "7c613350f8cb397dc80fbfffd78d1a5e6e8e956e46cccdb6fc3a238af0615dda"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/corrected/fleet/fleet_register.csv",
+      "sha256": "f7266a08faac3d65442482f8e5c3f2facfbf0c25960419820c7f2eb514710d13"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/corrected/fleet/repair_receipt.json",
+      "sha256": "dff75a3f1b45eb83286a4f68553b28c9e4d2752e974314ece1eaf7f2d764c51d"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/par_stlawrence_hourly_2025.csv",
+      "sha256": "6987b1858257e05300790f43deb755c7912494bcc72be457ed7d8e23cc402d21"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_audit/replay_corrections.py",
+      "sha256": "2b71f8d3a63324bc352f602bf26c23b34dc59c0741c657ab12cf49c89f8bb9ef"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_audit/dc_control.py",
+      "sha256": "ad7794d749f0bcda792fb824a389768064002d7866c6b8f3ca727da194541812"
+    },
+    {
+      "path": "scripts/nygrid_2019/replay_dc.py",
+      "sha256": "bf48540453c4ab8191b6b8e2cb65d8248acaae425b154ab85f6d182be3e57434"
+    }
+  ]
+}

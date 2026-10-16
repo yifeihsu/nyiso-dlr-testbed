@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "created_utc": "2026-10-15T22:13:47.712605+00:00",
+  "package_kind": "Moses_source_repair_current_interactive_map",
+  "candidate_sha256": "7d465d2bf86027fa28d58bfadce109d283f96ae0fd2a32b85850b8933992ae35",
+  "compiled_model_sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8",
+  "annual_run": "moses_repair_v1",
+  "counts": {
+    "hours": 8760,
+    "sourceQualified": 8651,
+    "sourceExcluded": 109,
+    "qualified": 8651,
+    "failed": 0,
+    "operatingQualified": 0,
+    "publicObservationRows": 8673
+  },
+  "offline_self_contained": true,
+  "physical_meter_equivalence_certified": false,
+  "files": [
+    {
+      "path": "network_map.html",
+      "sha256": "a3e718f5097d82d10b329e59a1872d242eb38c42e651537e366be4e36f268b34",
+      "bytes": 14953543
+    },
+    {
+      "path": "README.md",
+      "sha256": "058110cd0c9ba8b3225082341960cda7d094d2f20acabd81839234dabf232f89",
+      "bytes": 1894
+    }
+  ],
+  "numerical_and_interaction_evidence": [
+    {
+      "path": "build_receipt.json",
+      "sha256": "d3f95871e1fd797d84faa64bd408a34bc048c70b1f172fc6ee44d43959c6cf60"
+    },
+    {
+      "path": "scientific_data_receipt.json",
+      "sha256": "7e9d68d511f4ca0ef5ab1f6cdfe270a2a1670237dcfcbe7d15b76db8b5093a22"
+    },
+    {
+      "path": "independent_annual_data_review.json",
+      "sha256": "304aaaef40db9b59d37bdc1c38d2d32d0fc29282e51405eb089b7b4c145ccbc9"
+    },
+    {
+      "path": "geography_independent_review.json",
+      "sha256": "15c84ca46d86ccf38d308aae34fa68373768c5be1eb0ee8e9c0bc72d2852157e"
+    },
+    {
+      "path": "independent_ui_flow_math_review.json",
+      "sha256": "03a5b9d3f719e5420c18ec8589b5c6e12120a7d1ee2a072cb928446697b2ba9b"
+    },
+    {
+      "path": "independent_embedded_payload_review.json",
+      "sha256": "5de3ab7c8621ae5e97510589fcda15731dd4012aa78698e808a1ca11cc56b9e9"
+    },
+    {
+      "path": "interaction_validation.json",
+      "sha256": "d0fd487f190a0681a5f74dc53f00fa5850a2acc219df2885f977633b3771f3ce"
+    }
+  ],
+  "browser_visual_review_sha256": "fa72877ebdfb9595c7087115fce7a817378da951309e519a628197ba14a9a869"
+}

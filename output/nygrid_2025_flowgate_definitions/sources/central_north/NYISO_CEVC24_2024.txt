@@ -1,0 +1,766 @@
+
+===== PDF PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Central-East Voltage Limit Study 
+(CEVC-24) 
+ 
+A Report by Operations Engineering Staff  
+New York Independent System Operator  
+ 
+September  2023 
+
+
+===== PDF PAGE 2 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   2 
+ 
+Executive Summary 
+With the pending completion of the Segment A and Segment B transmission projects, the NYISO 
+deemed it appropriate to conduct a study of area voltage performance, including the investigation of 
+voltage collapse transfer limits, for the Central-East operating interface. This report presents the 
+methodology, analysis and results of this study.  
+The voltage collapse limits currently in use for the Central-East interface were developed in spring of 
+2023 as part of on-going studies related to transmission network upgrades. This study re-evaluates these 
+limits to maintain reliable operation of the bulk power system. New derates were developed to account for 
+the two new Edic-Princetown, 351 and 352, 345 kV lines coming into service.  
+This study shows overall increases in voltage collapse limits as a result of new transmission 
+strengthening the existing network. The study also shows that no adjustments to pre-contingency low 
+voltage limits are necessary.  
+It is recommended that the Central East voltage collapse limits be updated as reported in this study.  
+ 
+ 
+  
+
+===== PDF PAGE 3 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   3 
+ 
+Table of Contents 
+EXECUTIVE SUMMARY .................................................................................................................................................. 2 
+LIST OF FIGURES ........................................................................................................................................................... 4 
+INTRODUCTION .............................................................................................................................................................. 5 
+RECOMMENDATIONS .................................................................................................................................................... 5 
+Loss-of-ISO-NE Source Impact on Central-East Voltage ......................................................................... 9 
+DISCUSSION ................................................................................................................................................................. 10 
+System Representation and Base Study Assumptions ........................................................................ 10 
+Study Criteria .......................................................................................................................................... 11 
+Study Methodology ................................................................................................................................. 11 
+Central-East Interface Definition ........................................................................................................... 13 
+Transfer Case Development .................................................................................................................. 14 
+Voltage Contingency Evaluation ............................................................................................................ 14 
+Configuration Modeling .......................................................................................................................... 15 
+Monitored Buses .................................................................................................................................... 17 
+RESULTS ....................................................................................................................................................................... 18 
+All-Lines-In-Service Base Limit Changes ............................................................................................... 21 
+Derates for Sithe Independence Changes............................................................................................ 22 
+Derates for Athens ................................................................................................................................. 23 
+Derates for Reactive Devices ................................................................................................................ 24 
+Derates for Existing Line Outages ......................................................................................................... 25 
+Derates for New Equipment .................................................................................................................. 26 
+New Derates for N-2 and N-3 Conditions ............................................................................................. 26 
+
+===== PDF PAGE 4 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   4 
+ 
+List of Figures 
+Figure 1 – Oswego Generating Complex Limits ............................................................................................................................... 6 
+Figure 2 - Limit Derates for Independence Generating Station ........................................................................................................ 6 
+Figure 3 - Limit Derates for Athens Generating Station ................................................................................................................... 6 
+Figure 4 - Limit Derates for Transmission Facility Outages ............................................................................................................. 7 
+Figure 5 – Additional Limit Derate Adders for N-2 and N-3 Conditions ......................................................................................... 7 
+Figure 6 - Limit Derates for Capacitors, SVCs, STATCOM (out-of-service) .................................................................................. 8 
+Figure 7 - Limit Derates for Marcy-South Series Capacitors ............................................................................................................ 8 
+Figure 8 – Central-East Interface Definition ................................................................................................................................... 13 
+Figure 9 - NYISO Transmission System (Central-East inset) ......................................................................................................... 13 
+Figure 10 – Central-East Contingencies .......................................................................................................................................... 14 
+Figure 11 – Central-East Line Outages ........................................................................................................................................... 15 
+Figure 12 – Central-East N-2 and N-3 Line Outages ...................................................................................................................... 16 
+Figure 13 - Central-East Reactive Devices Studied ........................................................................................................................ 16 
+Figure 14 - Post-Contingency Flows for 3 Oswego Units IS Base Case ......................................................................................... 18 
+Figure 15 - Pre-Contingency Flows for 3 Oswego Units IS Base Case .......................................................................................... 19 
+Figure 16 - Tabular Limit Results for 3 Oswego Units IS Base Case ............................................................................................. 20 
+Figure 17 - Base Limits for Oswego AVR Status with All-Lines-In-Service and 7040 Imports at 1500 MW ............................... 21 
+Figure 18 - Derates for Sithe Independence .................................................................................................................................... 22 
+Figure 19 - Derates for Athens ........................................................................................................................................................ 23 
+Figure 20 - Derates for Reactive Devices ....................................................................................................................................... 24 
+Figure 21 - Derates for Existing Line Outages ................................................................................................................................ 25 
+Figure 22 - New Derates .................................................................................................................................................................  26 
+Figure 23 - New Derates for N-2 and N-3 Conditions .................................................................................................................... 26 
+ 
+
+===== PDF PAGE 5 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   5 
+ 
+Introduction 
+The purpose of this study is to evaluate the Central-East Voltage Collapse Transfer Limits for all-lines-
+in-service and significant equipment outage conditions expected for the system configuration for the 
+Winter 2023-24 season going forward. This analysis was conducted on the NYISO Summer 2022 
+Operating Study base case with all system changes resulting from the Segment A and Segment B projects 
+included. Details of base case development are included in this report.  
+This report documents the results of the analysis and provides recommendations based on the 
+simulation results for operating criteria contingencies. Tables of the recommended derates, the 
+contingencies evaluated, examples of power-voltage (PV) plots and summaries of the transfer base case 
+conditions are included.  
+The New York State Reliability Council (NYSRC) Reliability Rules for Planning and Operating the New 
+York State Power System provide the documented methodology employed to develop System Operating 
+Limits (SOLs) within the NYISO Reliability Coordinator Area. NYSRC Reliability Rules require compliance 
+with all North American Electric Reliability Corporation (NERC) Standards and Northeast Power 
+Coordinating Council (NPCC) Standards and Criteria. NYSRC Rule C.1, Establishing Operating Transfer 
+Capabilities, addresses the contingencies to be evaluated and the performance requirements to be applied. 
+Rule C.1 also references NYISO Bus Voltage Limits as found in Tables A.2 and A.3 of the “NYISO Emergency 
+Operations Manual”. The applicable process for establishing voltage collapse limits is established by the 
+“Guideline for Voltage Analysis and Determination of Voltage-Based Transfer Limits” found in the NYISO 
+“Transmission Expansion and Interconnection Manual” Attachment G. 
+Recommendations 
+It is recommended that the limits presented in this report be employed to secure the bulk power 
+system for the applicable system conditions identified in this study. Figures 1 through 7 show the 
+breakdown of the Central-East Voltage Collapse Transfer Limit components. Tables showing the changes 
+in limits can be found in the Discussion section.  
+The results of the study also showed that no changes are needed for pre-contingency low voltage 
+limits, given the recommended establishment of the Central-East interface voltage collapse limits.  
+
+===== PDF PAGE 6 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   6 
+ 
+Figure 1 – Oswego Generating Complex Limits 
+Oswego Generating Complex Limits 
+ 0 Oswego 
+Cmplx I/S 
+1 Oswego 
+Cmplx I/S 
+2 Oswego 
+Cmplx I/S 
+3 Oswego 
+Cmplx I/S 
+4 Oswego 
+Cmplx I/S 
+5 Oswego 
+Cmplx I/S 
+Base Limit 3460 3540 3640 3725 3805 3885 
+ 
+Figure 2 - Limit Derates for Independence Generating Station 
+Limit Derates for Independence Generating Station 
+Independence 
+Units I/S 
+0 Oswego 
+Cmplx I/S 
+1 Oswego 
+Cmplx I/S 
+2 Oswego 
+Cmplx I/S 
+3 Oswego 
+Cmplx I/S 
+4 Oswego 
+Cmplx I/S 
+5 Oswego 
+Cmplx I/S 
+0 645 485 335 240 150 95 
+1 515 395 265 195 115 75 
+2 380 300 195 145 80 55 
+3 245 205 125 95 45 35 
+4 165 140 85 65 30 25 
+5 85 70 45 35 15 15 
+6 0 0 0 0 0 0 
+ 
+Figure 3 - Limit Derates for Athens Generating Station 
+Limit Derates for Athens Generating Station 
+Athens Units 
+I/S 
+0 Oswego 
+Cmplx I/S 
+1 Oswego 
+Cmplx I/S 
+2 Oswego 
+Cmplx I/S 
+3 Oswego 
+Cmplx I/S 
+4 Oswego 
+Cmplx I/S 
+5 Oswego 
+Cmplx I/S 
+0 120 120 120 120 120 120 
+1 80 80 80 80 80 80 
+2 40 40 40 40 40 40 
+ 
+ 
+  
+
+===== PDF PAGE 7 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   7 
+ 
+ 
+Figure 4 - Limit Derates for Transmission Facility Outages 
+Limit Derates for Transmission Facility Outages 
+Transmission Facility Name PTID 
+0 
+Oswego 
+Cmplx I/S 
+1 
+Oswego 
+Cmplx I/S 
+2 
+Oswego 
+Cmplx I/S 
+3 
+Oswego 
+Cmplx I/S 
+4 
+Oswego 
+Cmplx I/S 
+5 
+Oswego 
+Cmplx I/S 
+FITZPTRK-EDIC_____345_FE-1 25077 205 205 205 205 205 205 
+EDIC____-GORDONRD_345_14 327482 380 380 380 380 380 380 
+GORDONRD-ROTTRDAM_230_30 327485 35 35 35 35 35 35 
+GORDONRD-ROTTRDAM_230_31 327486 35 35 35 35 35 35 
+MASSENA_-MARCY____765_MSU1  25224 840 825 685 555 525 475 
+MARCY___-N.SCTLND_345_18 25276 485 485 485 485 485 485 
+VOLNEY__-MARCY____345_19 25345 200 200 200 200 200 200 
+INGHAM_C_115_115_PAR_2 25242 120 120 120 120 120 120 
+S HERO__-PLATSBRG_115_PV20 25027 100 100 100 100 100 100 
+PRINCTWN-N.SCTLND_345_55 327492 80 80 80 80 80 80 
+PRINCTWN-N.SCTLND_345_361 625031 85 85 85 85 85 85 
+PRINCTWN-N.SCTLND_345_362 625032 85 85 85 85 85 85 
+GORDONRD-PRINCTWN_345_371 625030 320 320 320 320 320 320 
+EDIC____-PRINCTWN_345_351  390 390 390 390 390 390 
+EDIC____-PRINCTWN_345_352  390 390 390 390 390 390 
+ 
+ 
+Figure 5 – Additional Limit Derate Adders for N-2 and N-3 Conditions 
+Additional Limit Derate Adders for N-2 and N-3 Transmission Facility Outages 
+Transmission Facility Name PTID 
+0 
+Oswego 
+Cmplx I/S 
+1 
+Oswego 
+Cmplx I/S 
+2 
+Oswego 
+Cmplx I/S 
+3 
+Oswego 
+Cmplx I/S 
+4 
+Oswego 
+Cmplx I/S 
+5 
+Oswego 
+Cmplx I/S 
+351 & 352  305 305 305 305 305 305 
+351 & 352 & 14  570 570 570 570 570 570 
+351 & 352 & 18  580 580 580 580 580 580 
+351 & 352 & 371  290 290 290 290 290 290 
+361 & 362  100 100 100 100 100 100 
+361 & 362 & 55  825 825 825 825 825 825 
+  
+
+===== PDF PAGE 8 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   8 
+ 
+ 
+Figure 6 - Limit Derates for Capacitors, SVCs, STATCOM (out-of-service) 
+Limit Derates for Capacitors, SVCs, STATCOM (out-of-service) 
+Reactive Device Name PTID Derate MWs 
+EDIC_PTR_345KV_CAP_CAP _1 31400 80 
+FRASER___345KV_CAP_CAP _1 31336 25 
+FRASER ___345KV_CAP_CAP _2 31345 25 
+GILBOA____345KV_CAP_CAP _1 31337 30 
+LEEDS ____345KV_CAP_CAP _1 31338 40 
+LEEDS____345KV_CAP_CAP _2 31346 40 
+MARCY____345KV_CAP_CAP _1 31339 75 
+MARCY____345KV_CAP_CAP _2 31353 75 
+N.SCTLND_345KV_CAP_CAP _1 31349 40 
+N.SCTLND_345KV_CAP_CAP _2 31342 40 
+N.SCTLND_345KV_CAP_CAP _3 31350 40 
+OAKDALE__  345KV_CAP_CAP_1 31394 35 
+ROTTRDAM_230KV_CAP_CAP_3 31365 30 
+MARCY___345_STATCOM SVC 31395 75 
+FRASER__345_FRASER SVC 31328 70 
+LEEDS___345_LEEDS SVC 31327 50 
+ 
+ 
+Figure 7 - Limit Derates for Marcy-South Series Capacitors 
+Limit Derates for Marcy-South Series Capacitors 
+(bypass breaker open) 
+Bypass Breaker Name PTID Derate MWs 
+FRASER___345KV_3322_____________CB 315800 10 
+FRASER___345KV_3722_____________CB 315804 145 
+FRASER___345KV_3822_____________CB 315808 60 
+ 
+  
+
+===== PDF PAGE 9 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   9 
+ 
+Loss-of-ISO-NE Source Impact on Central-East Voltage 
+The NYISO defines maximum Loss of ISO New England Source Contingency Limits on ISO New 
+England’s system operations to ensure that large capacity contingencies will not result in exceedance of 
+voltage collapse limits on the New York Central East interface. New England sources do not contribute 
+directly to Central East Voltage Collapse (CEVC) Transfer Limits, rather, they impact Central East flows 
+post-contingency. The limits are defined in terms of a NE Source Contingency Limit and a Central East Post 
+Contingency Offset. 
+From examination of post-contingency flows in this study it has been determined that the changes to 
+the New York transmission system will support an increased limit. It is recommended that the minimum 
+limit for the loss of ISO-NE source be increased to 1,500 MW from the present 1,320. The post-contingency 
+distribution factor was found to be 0.33, which results in a new post-contingency offset of 495 MW. Details 
+and supporting documentation will be presented in a separate report.  
+  
+
+===== PDF PAGE 10 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   10 
+ 
+Discussion 
+System Representation and Base Study Assumptions 
+The study was conducted on the 2022 NYISO Summer Peak Operating Study Base Case with a NYISO 
+forecasted summer coincident peak load of 31,765 MW. This base case was selected as a continuation of 
+the previous study and was updated to account for all system changes expected in-service for Winter 
+2023-24 and beyond.  
+The initial base case is modeled as an all-lines-in-service representation with all generation in-service. 
+A key level of conservatism in the development of voltage transfer limits developed for Operations is all 
+analysis is conducted under peak load conditions.  This is conservative for two reasons.  First, it is the 
+highest end user reactive load condition, and thereby consumes the greatest amount of inherent and 
+controllable reactive resources at the point of delivery to the end user.  Second, the delivery of power to 
+the end user under peak load results in the highest level of reactive transmission losses across the system.   
+Under anything less than peak load conditions, additional reactive resources are available to the system. 
+The initial base case dispatch real power transfers were adjusted to stress conditions through: 
+ Ontario generation set to attain an import of ~2500 MW across Frontier and Adirondack interfaces  
+ 7040 flow set to 1,500 MW import from Hydro-Québec 
+ 200 MW import on Cedars-Dennison 
+ Sandbar PAR set to achieve 100 MW flow on PV20 
+ Ontario-Michigan PARS set to maintain Lake Erie circulation near zero  
+ Interfaces at Dysinger-East interface and Moses-South stressed to 2,020 and 2,580 MW respectively. 
+ 
+To ensure utilization of available reactive resources, the following actions were taken: 
+ All capacitors in-service were switched in. 
+ All generator terminal voltages were set to local control, between .95 and 1.05.  
+ Assorted Generator and LTC control parameters were adjusted to maintain all bulk power buses within 
+historic operating voltage ranges.  
+ Oswego area 345 kV stations modeled to typical voltages which can exceed 1.06 p.u. 
+ Marcy-South Series Capacitors were modeled out-of-service (bypassed). 
+ 
+
+===== PDF PAGE 11 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   11 
+ 
+Updates to the base case included additional transmission as part of the Segment A. This included the 
+addition of the Edic-Princetown 345kV 351 and 352 lines. A change from the previous study is the 
+modeling of the Knickerbocker Series Compensation as bypassed as a conservative assumption.   
+From the Segment B project, the Dover PAR, on the Pleasant Valley-Long Mtn 398 345 kV line between 
+New York and New England, was bypassed as it is not expected to be in-service in the near future. A follow 
+up study will be conducted to evaluate any impacts this device may have on Central-East performance.  
+Study Criteria 
+This analysis was conducted in accordance with the “NYSRC Reliability Rules, Standards for Planning 
+and Operation the New York ISO Bulk Power System” and "NPCC Regional Reliability Reference Directory 
+# 1 Design and Operation of the Bulk Power System".      
+The NYISO Transmission Expansion and Interconnection Manual, Attachment G: NYISO Transmission 
+Planning Guideline #2-1 "Guideline for Voltage Analysis and Determination of Voltage-Based Transfer 
+Limits" describes the methodology employed to determine voltage transfer limits.  
+A pre-contingency kV limit is determined when the post-contingency voltages fall below the post-
+contingency low voltage limit. In this analysis the pre-contingency low voltages were recorded at the 
+highest transfer at which the post-contingency low solved voltage reached the defined post-contingency 
+low limit.  The NYISO post-contingency low voltages employed in the analysis are found in the NYSO 
+Emergency Operations Manual, Attachment A, Table A-2 "NYISO Voltage Limits".   
+Study Methodology 
+The Voltage Contingency Analysis Procedure (VCAP) is used to evaluate the steady state voltage 
+performance of the power system for a series of power transfer conditions. A transmission interface in the 
+vicinity of the area of the system to be studied is tested by preparing a series of power flow base cases 
+with increasing MW transfer levels across that interface. The pre-contingency cases are then subjected to 
+the most severe voltage contingencies for the area involved. The post-contingency cases are then reviewed 
+for voltage performance at each of the monitored buses to best determine reactive conditions and develop 
+guidelines for the operation of the system. 
+The basic principle employed is to develop a set of power transfer vs. voltage (PV) curves through the 
+VCAP application. These PV curves are developed by progressively increasing transfers across Central-
+East interface and recording the post contingency voltage for severe contingencies. Two potential limits 
+are obtained through examination of the PV curves. A post-contingency voltage transfer limit is defined 
+when the post contingency voltage crosses the predefined post contingency low voltage limit. A voltage 
+
+===== PDF PAGE 12 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   12 
+ 
+collapse transfer limit is defined by identifying the highest transfer where post contingency power flow 
+stopped increasing, also called the “knee” of the post contingent flow curve, and then applying a 5% 
+margin. The voltage collapse transfer limit is then compared to that transfer level obtained by applying the 
+applicable post-contingency low voltage limit. To ensure that a voltage-based transfer limit is determined 
+with a safe margin, the lower of the two power transfer levels from the foregoing comparison is to be 
+selected as the interface transfer limit. 
+A key level of conservatism in the development of voltage transfer limits developed for operations is 
+all analysis is conducted under peak load conditions. This is conservative for two reasons. First, it is the 
+highest end user reactive load condition, and thereby consumes the greatest amount of innate and 
+controllable reactive resources at the point of delivery to the end user. Secondly, the delivery of power to 
+the end user under peak load results in the highest level of reactive transmission losses across the system. 
+Under anything less than peak load conditions, additional reactive resources are available to the system. 
+ 
+
+===== PDF PAGE 13 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   13 
+ 
+Central-East Interface Definition 
+The Central-East interface definition is given below in Figure 8 and illustrated in Figure 9. The Edic-
+Princetown 345kV 351 and 352 circuits are a new addition to the interface definition.  
+Figure 8 – Central-East Interface Definition 
+ 
+Figure 9 - NYISO Transmission System (Central-East inset) 
+ 
+CENTRAL EAST 
+Mohawk Valley (Zone E) – Capital (Zone F) 
+ Name Line ID Voltage (kV) 
+ Edic-Gordon Road* 14 345 
+ Marcy-New Scotland* 18 345 
+ East Springfield-Inghams* 7-942 115 
+ Inghams PAR PAR 115 
+ Inghams Bus Tie R81 115 
+ Edic*-Princetown 351 345 
+ Edic*-Princetown 352 345 
+North (Zone D) – ISONE (Zone N) 
+ *Plattsburgh-Sand Bar PV20 115 
+
+===== PDF PAGE 14 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   14 
+ 
+Transfer Case Development 
+Transfer cases were developed by sourcing generation in the Oswego Complex. Power was sinked to 
+major generation on the 345 kV network in western Massachusetts. For some configurations it was 
+necessary to adjust flows on the Ontario-New York, Dysinger-East and Moses-South interfaces. For base 
+transfer conditions the bulk power system voltages were maintained in the .95-1.05 p.u. range. 
+To ensure full utilization of available reactive resources, the following actions were taken.  
+ All switched shunt capacitors were switched in so long as it did not cause excessively high 
+voltage. 
+ Generator and LTC voltage control parameters were adjusted to maintain adequate voltages. 
+In some cases, where generator step up transformer ratios warranted, plant voltage settings 
+were set higher than 1.05 p.u. 
+Voltage Contingency Evaluation 
+Figure 10 below lists the contingencies that were evaluated for each configuration studied. 
+Figure 10 – Central-East Contingencies 
+ID Name Description 
+ce01 Edic-Gordon Rd. 345 CE01 L/O EDIC- GORDON RD. (14) 
+ce02 Marcy-N.Scot 345 CE02 L/O MARCY-NEW SCOTLAND (18) 
+ce03 N.Scot-Leeds 345 CE03 L/O NEW SCOTLAND-LEEDS (94) 
+ce07 Marcy South N. CE07 TWR NORTHERN MARCY SOUTH DBL CKT 
+ce08 Marcy South S. CE08 TWR SOUTHERN-MARCY SOUTH DBL CKT 
+ce09 Fitz-Edic-Princetown CE09 STK EDIC R10 BRK FE-1/BKUP CLR#351 
+ce11 SBK Edic R945 CE11 STK EDIC R945 BKR 14&Edic 3/1 BK5 
+ce13 Volney-Marcy CE13 L/O VOLNEY-MARCY (VU-19) 
+ce15 SBK Marcy R3108 CE15 STK MARCY R3108 BKR VU-19&UE1-7 
+ce20 SBK Edic R70 CE20 STK EDIC R70 BRKR 
+ce30 SBK Princetown 345 CE30 STK PRINCETOWN BRKR G220 (361&371) 
+ce31 Princetown-N.Scot 345 CE31 L/O PRINCETOWN-NEW SCOTLAND (55) 
+ce32 361-362 Dlb Ckt Twr 345 CE32 TWR PRNCETWN-N.SCTLAND 361/362 DBL CKT 
+ce33 351-352 Dlb Ckt Twr 345 CE33 TWR EDIC-PRINCETOWN 351/352 DBL CKT 
+ce34 SBK Edic R935 CE34 STK EDIC R935 BKR 14 & FE-1 
+ce35 351&UCC2-41 Dlb Ckt Twr CE35 TWR 351 & UCC2-41 DBL CKT 
+ce36 352&EF24-40 Dlb Ckt Twr CE36 TWR 352 & EF24-40 DBL CKT 
+log09 Ravenswood 3 LOG09 L/O RAVENSWOOD 3 
+log15 Ph2 DC 1500 LOG15 L/O SANDY POND HVDC @ 1500 MW 
+ 
+  
+
+===== PDF PAGE 15 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   15 
+ 
+Configuration Modeling 
+Figure 11 below lists the equipment outages that were modeled and studied. The 351-352 double 
+circuit tower contingency leaves the possibility that the system may be operated in a N-2 configuration 
+that resembles the system at present and therefore additional derates are necessary. The studied N-2 and 
+N-3 configurations are listed in Figure 12. 
+Figure 13 below lists the reactive devices modeled and studied. In this study there is only one shunt 
+capacitor bank at Rotterdam as cap bank #4 has been retired. Although the VanWagner caps were studied, 
+the impact to Central-East VC was small enough to not warrant implementing a derate.  
+Figure 11 – Central-East Line Outages 
+Equipment Status ID Voltage (kV) 
+0-5 Oswego Units IS - - 
+Fitz-Edic 1 O/S FE-1 345 
+Edic-Gordon Rd 14 O/S 14 345 
+Gordon Rd-Rotterdam 30 O/S 30 345/230 
+Gordon Rd-Rotterdam 31 O/S 31 345/230 
+Massena-Marcy 1 O/S MSU1 765 
+Marcy-New Scotland 18 O/S 18 345 
+Volney-Marcy 19 O/S 19 345 
+Princetown-New Scotland 55 O/S 55 345 
+Gordon Rd-Princetown 371 O/S 371 345 
+Princetown-New Scotland 361 O/S 361 345 
+Princetown-New Scotland 362 O/S 362 345 
+Edic-Princetown 351 O/S 351 345 
+Edic-Princetown 352 O/S 352 345 
+ 
+
+===== PDF PAGE 16 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   16 
+ 
+Figure 12 – Central-East N-2 and N-3 Line Outages 
+Equipment Status IDs Voltage (kV) 
+Princetown-New Scotland 361 & 362 O/S 361 & 362 345 
+Princetown-New Scotland 361 & 362 & 55 O/S 361 & 362 & 55 345 
+Edic-Princetown 351 & 352 O/S 351 & 352 345 
+Edic-Princetown 351 & 352  
+& Edic-Gordon Rd 14 O/S 351 & 352 & 14 345 
+Edic-Princetown 351 & 352  
+& Marcy-New Scotland 18 O/S 351 & 352 & 18 345 
+Edic-Princetown 351 & 352  
+& Gordon Rd-Princetown 371 O/S 351 & 352 & 371 345 
+ 
+Figure 13 - Central-East Reactive Devices Studied 
+Equipment Status ID Voltage (kV) 
+Marcy-Coopers Corners SR IS 3722 345 
+Edic-Fraser SR IS 3822 345 
+Fraser-Coopers Corners SR IS 3322 345 
+Edic Cap O/S  345 
+Fraser Caps O/S (2)  345 
+Gilboa Cap O/S  345 
+Leeds Caps O/S (2)  345 
+Marcy Caps O/S (2)  345 
+New Scotland Caps O/S (3)  345 
+Oakdale Cap O/S  345 
+Rotterdam Caps O/S (1)*  230 
+VanWagner Caps O/S (2)  345 
+Fraser SVC O/S  345 
+Leeds SVC O/S  345 
+Marcy STATCOM O/S  345 
+*Represents Rotterdam Cap Bank #3. Rotterdam Cap Bank #4 has been retired.  
+
+===== PDF PAGE 17 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   17 
+ 
+ 
+ 
+Monitored Buses 
+All buses in the Emergency Operations Manual A.2 Bus List were monitored for pre-contingency and 
+post-contingency low voltage limits.  
+
+===== PDF PAGE 18 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   18 
+ 
+Results 
+The Appendices contain all the tabular results. Due to the volume of material, the Appendices are a 
+separate document. As an example, the results of the 3 Oswego units all-lines-in-service base case analysis 
+are presented here.  
+Figure 14 below shows the post-contingency flows for the most limiting contingencies for the 3 
+Oswego units in-service base case. From this graph the knees of the curves are identified. In this case the 
+most limiting contingency is the loss of the Phase II DC tie at 1500 MW. 
+Figure 14 - Post-Contingency Flows for 3 Oswego Units IS Base Case 
+ 
+ 
+PH2 DC 1500 
+KNEE 
+
+===== PDF PAGE 19 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   19 
+ 
+Figure 15 below shows the pre-contingency base flow with the respective post-contingency voltage for 
+each of the most limiting contingencies. The graph is marked with the MW level corresponding to the knee 
+of the curve from the post-contingency plot on the previous page. It is also marked at the MW level of the 
+5% margin from this knee. Furthermore, the limit for the post-contingency low voltage is identified, which 
+happens to be at Gordon Rd 345kV station for a stuck breaker at Princetown 345kV station. From this it 
+can be seen that the 5% margin is more limiting than the post-contingency low voltage limit.  
+ 
+Figure 15 - Pre-Contingency Flows for 3 Oswego Units IS Base Case 
+ 
+  
+PH2 DC 1500 
+KNEE 5% Margin 
+Post-Contingency 
+Low Voltage 
+Limit 
+
+===== PDF PAGE 20 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   20 
+ 
+Figure 16 below shows the limits in tabular form, listing the limiting elements in increasing value.  
+ 
+Figure 16 - Tabular Limit Results for 3 Oswego Units IS Base Case 
+Limit <------------FACILITY------------> <---CONTINGENCY---> 
+3755 limit with 5% margin Ph2 DC 1500 
+3757 Dunwoodie 345kV Voltage Pre-Fault 
+3763 limit with 5% margin Marcy South N. 
+3763 limit with 5% margin 351-352 Dlb Ckt Twr 
+3769 Gordon Rd 345kV Voltage Pre-Fault 
+3777 Sprain Brook 345kV Voltage Pre-Fault 
+3779 limit with 5% margin Fitz-Edic-Princetown 
+3779 limit with 5% margin 352 & EF24-40 Dlb Ckt Twr 
+3799 Marcy 345kV Voltage Pre-Fault 
+3800 limit with 5% margin Edic-Gordon Rd. 345 
+3800 limit with 5% margin Marcy-N.Scot99 345 
+3800 limit with 5% margin N.Scot-Leeds 345 
+3800 limit with 5% margin Marcy South S. 
+3800 limit with 5% margin SBK Edic R945 
+3800 limit with 5% margin Volney-Marcy 
+3800 limit with 5% margin SBK Marcy R3108 
+3800 limit with 5% margin SBK Edic R70 
+3800 limit with 5% margin SBK Princetown 345 
+3800 limit with 5% margin Princetown-N.Scot 345 
+3800 limit with 5% margin 361-362 Dlb Ckt Twr 
+3800 limit with 5% margin SBK Edic R935 
+3800 limit with 5% margin 351 & UCC2-41 Dlb Ckt Twr 
+3800 limit with 5% margin Ravenswood 3 
+3801 PRNC345 Pre-Fault 
+3817 Edic 345kV Voltage Pre-Fault 
+3887 Gordon Rd 345kV Voltage SBK Princetown 345 
+ 
+ 
+
+===== PDF PAGE 21 =====
+ 
+ 
+All-Lines-In-Service Base Limit Changes 
+Figure 17 below shows a comparison of the existing and new limits for the All-Lines-In-Service cases. The base limits include derates 
+for Chateauguay 7040 imports at 1,500 MW.  
+ 
+Figure 17 - Base Limits for Oswego AVR Status with All-Lines-In-Service and 7040 Imports at 1500 MW 
+  Number of Oswego AVRs In-Service  
+  0 1 2 3 4 5 
+New ALI Limit 3460 3540 3640 3725 3805 3885 
+Existing Limit 2390 2480 2595 2720 2800 2885 
+Change +1070 +1060 +1045 +1005 +1005 +1000 
+ 
+ 
+  
+
+===== PDF PAGE 22 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   22 
+ 
+Derates for Sithe Independence Changes 
+Figure 18 below shows a comparison of the existing and new derates for Sithe Independence. 
+Figure 18 - Derates for Sithe Independence 
+ New Derates   Existing Derates  Change 
+# 
+Sithe 
+Units 
+IS  
+# Oswego AVRs IS               
+ 0 1 2 3 4 5  0 1 2 3 4 5  0 1 2 3 4 5 
+ 0 645 485 335 240 150 95  460 405 290 280 260 220  185 80 45 -40 -110 -125 
+ 1 515 395 265 195 115 75  375 330 245 235 210 180  140 65 20 -40 -95 -105 
+ 2 380 300 195 145 80 55  285 255 195 190 160 140  95 45 0 -45 -80 -85 
+ 3 245 205 125 95 45 35  195 175 145 145 105 95  50 30 -20 -50 -60 -60 
+ 4 165 140 85 65 30 25  130 120 100 100 70 65  35 20 -15 -35 -40 -40 
+ 5 85 70 45 35 15 15  65 60 50 50 35 35  20 10 -5 -15 -20 -20 
+ 6  0 0 0 0 0 0   0 0 0 0 0 0  0 0 0 0 0 0 
+ 
+  
+
+===== PDF PAGE 23 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   23 
+ 
+Derates for Athens 
+Figure 19 below shows a comparison of the existing and new derates for Athens.  
+Figure 19 - Derates for Athens 
+ New Derates   Existing Derates  Change 
+# 
+Athens 
+Units 
+IS  
+# Oswego AVRs IS               
+ 0 1 2 3 4 5  0 1 2 3 4 5  0 1 2 3 4 5 
+ 0 120 120 120 120 120 120  10 20 30 80 75 130  110 100 90 40 45 -10 
+ 1 80 80 80 80 80 80  0 0 20 55 40 90  80 80 60 25 40 -10 
+ 2 40 40 40 40 40 40  0 0 10 20 25 75  40 40 30 20 15 -35 
+ 3 0 0 0 0 0 0  0 0 0 0 0 0  0 0 0 0 0 0 
+ 
+  
+
+===== PDF PAGE 24 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   24 
+ 
+Derates for Reactive Devices 
+Figure 20 below shows a comparison of the existing and new derates for reactive devices on the system. 
+Figure 20 - Derates for Reactive Devices 
+Devices New  
+Derates  Existing Derates Change 
+ Edic Cap O/S 80 85 -5 
+ 2 Fraser Caps O/S 50 40 +10 
+ Gilboa Cap O/S 30 5 +25 
+ 2 Leeds Caps O/S 80 30 +50 
+ 2 Marcy Caps O/S 150 140 +10 
+ 3 New Scotland Caps O/S 120 120 0 
+ Oakdale Cap O/S 35 35 0 
+1 Rotterdam Cap O/S* 30 55 -25     
+Marcy Statcom OON 75 70 +5 
+Fraser SVC OON 70 30 +40 
+Leeds SVC OON 50 20 +30     
+FCC33 SC Byp Open  10 45 -35 
+UCC2-41 SC Byp Open 145 135 +10 
+EF24-40 SC Byp Open 60 90 -30 
+*Represents Rotterdam Cap Bank #3. Rotterdam Cap Bank #4 has been retired.  
+
+===== PDF PAGE 25 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   25 
+ 
+Derates for Existing Line Outages 
+Figure 21 below shows a comparison of the existing and new derates for existing line outages.  
+Figure 21 - Derates for Existing Line Outages 
+ New Derates  Existing Derates  Change 
+ # Oswego AVRs IS     
+Equipment O/S 0 1 2 3 4 5  0 1 2 3 4 5  0 1 2 3 4 5 
+FE-1 205 205 205 205 205 205  145 145 145 145 145 145  60 60 60 60 60 60 
+14 380 380 380 380 380 380  860 885 920 990 1020 1050  -480 -505 -540 -610 -640 -670 
+30 or 31 35 35 35 35 35 35  25 25 25 25 25 25  10 10 10 10 10 10 
+MSU1 840 825 685 555 525 475  650 660 575 660 560 570  190 165 110 -105 -35 -95 
+18 485 485 485 485 485 485  880 910 970 1035 1075 1160  -395 -425 -485 -550 -590 -675 
+19 200 200 200 200 200 200  145 145 145 145 145 145  55 55 55 55 55 55 
+ING_PAR 120 120 120 120 120 120  120 120 120 120 120 120  0 0 0 0 0 0 
+PV20 100 100 100 100 100 100  100 100 100 100 100 100  0 0 0 0 0 0 
+55 80 80 80 80 80 80  25 25 25 25 25 25  55 55 55 55 55 55 
+361 or 362 85 85 85 85 85 85  30 30 30 30 30 30  55 55 55 55 55 55 
+371 320 320 320 320 320 320  285 310 310 425 485 565  35 10 10 -105 -165 -245 
+ 
+  
+
+===== PDF PAGE 26 =====
+   
+  Central-East Voltage Limit Study (CEVC-24)   |   26 
+ 
+Derates for New Equipment 
+Figure 22 below shows derates that were developed as a result of new equipment coming into service.  
+Figure 22 - New Derates 
+ # Oswego AVRs In-Service 
+ 0 1 2 3 4 5 
+Edic-Princetown 351 or 352 O/S 390 390 390 390 390 390 
+ 
+New Derates for N-2 and N-3 Conditions 
+Figure 23 below shows new derates that were developed as a result of system configuration changes. These derates are added to the 
+derates for the individual outages.  
+Figure 23 - New Derates for N-2 and N-3 Conditions 
+ Number of Oswego AVRs In-Service 
+ 0 1 2 3 4 5 
+Edic-Princetown 351 & 352 O/S 305 305 305 305 305 305 
+Edic-Princetown 351 & 352  
+& Edic-Gordon Rd 14 O/S 570 570 570 570 570 570 
+Edic-Princetown 351 & 352 
+& Marcy-New Scotland 18 O/S 580 580 580 580 580 580 
+Edic-Princetown 351 & 352  
+& Gordon Rd-Princetown 371 O/S 290 290 290 290 290 290 
+New Scotland-Princetown 361 & 362 O/S 100 100 100 100 100 100 
+New Scotland-Princetown 361 & 362 & 55 O/S 825 825 825 825 825 825 
+ 

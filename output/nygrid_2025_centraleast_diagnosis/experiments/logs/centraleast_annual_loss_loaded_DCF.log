@@ -1,0 +1,19 @@
+CE_ANNUAL_LOSS_DCF month01 hours738/8494 solves2214 4.9s
+CE_ANNUAL_LOSS_DCF month02 hours1399/8494 solves4197 8.6s
+CE_ANNUAL_LOSS_DCF month03 hours2134/8494 solves6402 12.8s
+CE_ANNUAL_LOSS_DCF month04 hours2848/8494 solves8544 16.9s
+CE_ANNUAL_LOSS_DCF month05 hours3577/8494 solves10731 21.2s
+CE_ANNUAL_LOSS_DCF month06 hours4287/8494 solves12861 25.8s
+CE_ANNUAL_LOSS_DCF month07 hours4940/8494 solves14820 29.8s
+CE_ANNUAL_LOSS_DCF month08 hours5591/8494 solves16773 33.6s
+CE_ANNUAL_LOSS_DCF month09 hours6307/8494 solves18921 37.8s
+CE_ANNUAL_LOSS_DCF month10 hours7047/8494 solves21141 41.9s
+CE_ANNUAL_LOSS_DCF month11 hours7757/8494 solves23271 45.8s
+CE_ANNUAL_LOSS_DCF month12 hours8494/8494 solves25482 49.9s
+               allocation               hours    DCPF_audits_passed    CE_mean_public_MW    mean_construction_delta_public_MW    mean_loss_allocation_delta_public_MW    mean_remaining_AC_minus_loss_loaded_public_MW    mean_absolute_remaining_public_MW    maximum_absolute_remaining_public_MW    mean_baseline_AC_loss_model_MW    maximum_slack_minus_baseline_loss_MW    maximum_nodal_P_residual_MW    maximum_branch_law_error_MW
+    ________________________________    _____    __________________    _________________    _________________________________    ____________________________________    _____________________________________________    _________________________________    ____________________________________    ______________________________    ____________________________________    ___________________________    ___________________________
+
+    {'half_each_runtime_branch_end'}    8494           true                 2427.2                       600.32                                 442.57                                      3.7547                                       4.22                                 21.495                               312.4                              3.6232e-10                         3.8581e-10                     7.2953e-11         
+    {'all_at_runtime_from_end'     }    8494           true                 2429.8                       600.32                                 445.19                                      1.1378                                      3.226                                 13.171                               312.4                              3.6232e-10                         3.5962e-10                     7.6567e-11         
+    {'all_at_runtime_to_end'       }    8494           true                 2424.6                       600.32                                 439.96                                      6.3716                                     6.6247                                 35.176                               312.4                              3.6164e-10                         3.8033e-10                     7.8858e-11         
+

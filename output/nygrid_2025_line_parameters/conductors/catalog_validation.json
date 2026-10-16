@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "catalog_rows": 13,
+  "primary_target_rows": 1,
+  "documented_family_size_candidates": 8,
+  "CT2156_ACSS_compatible_rows": 1,
+  "comparison_ACSR_rows": 4,
+  "manufacturer_geometry_electrical_unit_checks": 13,
+  "excluded_from_catalog_scope": [
+    "underground_RCC_cables",
+    "transformers_and_PAR_equivalents",
+    "DC_Schur_equivalent_edges"
+  ],
+  "existing_model_parameters_changed": false,
+  "R_matching_alone_can_certify_conductor": false,
+  "files": [
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/conductor_catalog.csv",
+      "sha256": "f55a0d0a8e8857117b0e708eb50bc377ad07e209257438ff0851b3c5d3de3bd4"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/conductor_raw_values.csv",
+      "sha256": "f833361c54b280ae46ccb23b3853ad9401c82eeaf76c95b36a827820efcfab68"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/F84_Mallard_engineering_basis.json",
+      "sha256": "6f4c799b21d096693e901ec3eb4439059054a20e1b896ce1f3c36cbda2286a90"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/CT398_Bluebird_compatible_basis.json",
+      "sha256": "bf256f737976e2e85a52b7ca7ccdd5ad750ef08e190a61e1ec15f0199c6697e1"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/existing_surrogate_catalog_audit.csv",
+      "sha256": "9f6ce55429d31a08e239ac9302bca5d19a427b00fbf2cdb6d388e7a836d67b73"
+    },
+    {
+      "path": "output/compact_ny_2025/thermal/conductor_library.csv",
+      "sha256": "5de0af6e0468a68816a68bb6dfb50dbc4b362a6a2d4bf4eed7d0cf5b3bd430bb"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/source_receipts.json",
+      "sha256": "d81655441c5647755b62e03d8461ebb676580bdd81c6186228b787d4e614c429"
+    },
+    {
+      "path": "scripts/nygrid_2025_line_parameters/conductors/build_catalog.py",
+      "sha256": "dec9c9aa401caa09f2aa28ae7ba76139718faf7e34b3af7f36bb5a1b82882486"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T21:44:14.373990+00:00",
+  "scope": "Independent revision2-to-revision3 delta audit; exactly the evidence-classified 65 composite terminal-capacity priors change",
+  "records": 413,
+  "composite_equivalents": 65,
+  "station_transformer_compatible": 38,
+  "all_413_R_X_B_preserved": true,
+  "all_conductor_cable_geometry_and_geographic_bounds_preserved": true,
+  "all_38_transformer_compatible_capacity_priors_preserved": true,
+  "reactor_policy_values_and_section_rules_unchanged": true,
+  "original_load_generation_transfer_data_not_modified_by_this_change": true,
+  "capacity_from_voltage_class_current_not_total_X_or_observed_flow": true,
+  "limitation": "Internal line/transformer decomposition for 65 composite equivalents remains unresolved; direct OH thermal coverage does not certify those physical interiors.",
+  "checked_files": [
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/branch_assignments.csv",
+      "sha256": "d0297d8b706505bee6c31f1c1416bf41c99aa8d1118284b1584dde0e424b63b0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/engineering_overlay.mat",
+      "sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/engineering_overlay.mat",
+      "sha256": "89fbfe38138ffc007930b3fec4dd4dd02b55f3a6518f73be25be56b1f9014f8f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_03_composite_capacity/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_03_composite_capacity/engineering_overlay.mat",
+      "sha256": "89fbfe38138ffc007930b3fec4dd4dd02b55f3a6518f73be25be56b1f9014f8f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/thermal_segments.csv",
+      "sha256": "3be6298e619f6b2680f7d2dccc69bea75783d26a172e40b8993366042eae0b1e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/cable_segments.csv",
+      "sha256": "1673ea1dba11ac057af2af18873971cc024c7de2a104a0172ed8ed5d776c52cd"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/section_and_reactor_plan.csv",
+      "sha256": "48f23c9e0466bc599351fdee6d3dc0a8a6a951de7d398d672942366b8dce6f26"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/voltage_changing_classification_review.csv",
+      "sha256": "c76f5684062a870dc9f72687c2cbc6ff9bf42a6f1a5ca88a2cfdea9aa05fff39"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/engineering/review_composite_revision.py",
+      "sha256": "1f411ec08d2e691e02eddc2dca4a3db622e5b866e938768d31a178a3f82d5350"
+    }
+  ]
+}

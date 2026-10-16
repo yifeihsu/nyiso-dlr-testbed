@@ -1,0 +1,723 @@
+ PROTECTING A 138 KV PHASE SHIFTING TRANSFORMER:
+ EMTP MODELING AND MODEL POWER SYSTEM TESTING
+         Demetrios A. Tziouvaras                                     Ramon Jimenez
+  Schweitzer Engineering Laboratories, Inc.                      ComEd an Exelon Company
+            Pullman, WA USA                                         Chicago, IL USA
+
+
+ABSTRACT
+     This paper describes the protection of a 138 kV, 300 MVA Phase Shifting Transformer (PST)
+     installation, and the issues associated with differential protection stability during external faults
+     that cause PST series winding saturation. In addition, this paper discusses PST modeling using
+     the Electromagnetic Transients Program (EMTP). EMTP modeling is necessary for these
+     complex devices, to verify the protective relaying settings for the particular application and their
+     applicability to different fault scenarios and operating conditions. For the case study detailed in
+     this paper, we verified the relay settings by playing the EMTP transient data back into the
+     protective relays using an open loop approach. From the test data, we made setting changes and
+     other enhancements that increased the PST protection system security for external faults. Finally,
+     we analyzed event report data captured by numerical relays during an actual external line-to-
+     ground fault that occurred after we placed the PST in service.
+
+
+KEYWORDS
+     Phase shifting transformer, phase-angle regulator, digital relay, differential protection,
+     transformer protection.
+
+
+INTRODUCTION
+     Increased energy demand, deregulation, and privatization of the power supply industry often
+     cause utilities to operate and stress transmission systems to, and occasionally beyond, their
+     original design capabilities. Maintaining reliable, secure, and economical operation of
+     interconnected networks under these conditions requires that transmission operators better control
+     and manage network power flows.
+     Specially designed power system equipment can control the flow of active and/or reactive power
+     in interconnected power systems by affecting one or more parameters. Traditionally, the only
+     device available to power system operators that controlled both the magnitude and direction of
+     power flow was the PST. Today other devices are also available to control network power flows,
+     such as unified power flow controllers, thyristor-controlled phase-angle regulators, and interphase
+     power flow controllers [1]. This paper focuses on the PST.
+     Equation (1) shows the equation for active power transferred from sending Bus S in the network
+     to receiving Bus R through Reactance XL, connecting the two buses.
+
+                                                VS VR sin δ
+                                           P=                                                     Equation 1
+                                                       XL
+
+
+
+
+                                                   1
+Where
+     P = Active power from bus S to bus R
+     VS = Sending end bus voltage
+     VR = Receiving end bus voltage
+     XL = Reactance of the transmission line
+     δ = Angle by which VS leads VR
+
+The PSTs control and alter power flows, alleviate line overloads, change parallel-line load
+sharing, reduce curtailments, and facilitate transfers of energy throughout regional transmission
+interconnections. The PST controls the flow of active power by varying the phase angle δ
+between the two buses. The PST varies this phase angle by adding a regulated quadrature voltage
+to the source line-to-neutral voltage. Note that the PST obtains quadrature voltage for regulating a
+particular phase from the phase-to-phase voltages of the other two phases. Figure 1 shows how a
+PST shifts an A-phase angle using the quadrature voltage derived from B-phase and C-phase
+voltages. Shifting the angle of B-phase and C-phase voltages is similar. The PST load tap changer
+(LTC), located in the secondary winding of the exciting unit, controls the amount of phase angle
+shift by changing the magnitude of the quadrature voltage. Note that this quadrature voltage is
+impressed on the delta secondary winding of the series unit. The exciting-unit secondary winding
+quadrature voltage is then reflected to the primary winding of the series unit. Depending on LTC
+tap position and connections, the quadrature voltage adds or subtracts from the source-side
+primary voltage to create the desired angular phase shift between the source and load side of the
+PST.
+                                            Series RV
+                                            61.783 kV
+                                              422 t
+
+                                   S1                         L1
+
+
+                                                                  Series SV
+                                                 Va               41.580 kV
+                                                                    248 t
+                                                      300
+
+
+                                                                    Exciting HV
+                                                                     76.914 kV
+                     L3                                                       S2
+
+                                    Vc                       Vb
+
+
+
+
+                                   S3
+                                                               L2
+
+                      Figure 1    Series- and Exciting-Unit Voltage Phasors
+
+PSTs are built and configured in various ways to provide either a fixed or a continuous variable
+phase shift [2], [7]. Some designs also control magnitude. The PST described in this paper is the
+conventional Delta Secondary Series Winding/Grounded-Wye Exciting Winding with LTCs
+allowing phase angle variations of 30° in a total of 32 steps. This PST also includes windings to
+
+
+                                             2
+provide voltage regulation by controlling the magnitude of the line-to-neutral voltage. The PST is
+constructed in two units mounted in separate tanks: a series unit and an exciting unit. The series-
+unit secondary winding is delta connected, while the center tap of the series-unit primary winding
+is connected to the primary winding of the exciting unit. The exciting unit is connected grounded-
+wye-grounded-wye. Figure 2 shows the simplified PST connections.
+                     C    B    A
+                     S3   S2   S1
+
+
+
+
+                                             A                               A
+
+
+
+
+                                              B                              B
+
+
+
+
+                                              C                              C
+
+
+                                    Series Unit              Exciting Unit
+
+
+
+
+                     C    B    A
+                     L3   L2   L1
+
+
+                   Figure 2     Phase Shifting Transformer Winding Connections
+
+To provide an effective protection scheme for this PST, we must first understand the fundamental
+operation and electrical characteristics of the phase shifting transformer. From this understanding,
+we can then evaluate protection schemes.
+
+
+
+
+                                                  3
+PHASE SHIFTING TRANSFORMER PROTECTION
+      The particular PST discussed here is protected by two numerical current differential relay
+      systems, a pair of multifunction distance relays configured in a Permissive Overreaching Transfer
+      Trip (POTT) scheme, two Buchholtz-type relays for the series- and exciting-unit transformer
+      tanks, and LTC sudden pressure relays. Additional protection for some PST faults is also
+      provided by the numerical pilot relaying and distance/ground backup systems that protect a short
+      138 kV underground cable, which is in series with the PST. The overall PST protection relay
+      system is divided into two subsystems, each with separate ac and dc inputs for increased
+      reliability.
+      The first relay subsystem receives dc power from the primary dc panel board. Any relay operation
+      picks up the primary lockout relay, which in turn trips the appropriate local circuit breakers,
+      initiates breaker failure protection, sends a transfer trip signal to trip the remote-end circuit
+      breaker, stops local blocking signals of the cable/PST directional comparison blocking pilot
+      relaying system, and inhibits PST fan/pump operation. The second relay system receives dc
+      power from another dc panel board. Any relay operation picks up the secondary protection
+      system lockout relay, which provides functionality identical to that of the primary lockout relay.
+
+Primary Current Differential Relay System:
+      The primary differential relay (Device 87P) is connected as shown in Figure 3. Its main function
+      is to provide protection for phase-to-ground and multiphase faults in the primary windings of the
+      PST series and exciting units. Device 87P cannot detect faults on the secondary windings of the
+      PST series and exciting units. To provide phase and ground fault protection for the secondary
+      series- and exciting-unit windings, a second differential relay is applied (Device 87S), which is
+      functionally identical to Device 87P, but connected as shown in Figure 4. Device 87P receives its
+      current inputs from the primary windings of the PST. The primary differential relay system is
+      unaffected by series-unit winding saturation caused by overvoltages during nearby external faults.
+      The current differential relay system has independent restraint and unrestraint current differential
+      elements. The restraint element has a unique dual-slope variable percentage differential
+      characteristic that provides more sensitive and secure protection than traditional current
+      differential protection. The dual-slope characteristic compensates for current transformer ratio
+      mismatch, CT ratio errors, and CT saturation. A separate unrestrained differential element
+      provides fast tripping for high-magnitude internal faults. The differential relay is secure against
+      conditions that could cause incorrect relay operation resulting from system or transformer events.
+      Even harmonic elements (second and fourth), complemented by an element that measures the dc
+      offset, offer security against inrush currents during PST energization. The even harmonic element
+      offers a choice between harmonic blocking and harmonic restraint. A fifth harmonic element is
+      also available, and can be used to prevent incorrect relay operation for allowable overexcitation
+      conditions. The second, fourth, and fifth harmonic element thresholds are independently settable.
+      DC blocking and harmonic restraint features are independently enabled. For each of the four
+      windings, the multifunction differential relay provides overcurrent phase, residual, and negative-
+      sequence elements with instantaneous, definite-time, and inverse-time characteristics. The
+      differential relay also offers current transformer and PST connection compensation
+      programmability to accommodate phase shifts in the transformer or CTs, or to remove zero-
+      sequence currents from the secondary circuits. This same device also offers programmable input
+      and output contacts, and enhanced logic control equations that permit anyone to develop custom
+      control schemes.
+
+
+
+
+                                                   4
+                                                               Delta RV
+                                      Series Unit                wdg
+                            Is                                                     IL
+
+                                                          IE
+                       S           2000/5                                         2000/5   L
+                                    Wye                                            Wye
+
+
+                                                         Exciting Unit
+                                                                     Delta
+                                                                    Tertiary
+                                                                     wdg
+
+
+
+                           87P
+                                                                      Voltage
+                                                                     regulating
+                                                                        wdg
+
+
+                                                                       Phase
+                                                                       shifting
+                                                                        wdg
+
+
+
+                                                           2000/5
+                                                            Wye
+
+
+
+
+                                 Figure 3   Device 87P Connection Diagram
+
+      Three CTs from the neutral side of the exciting unit primary windings are connected to the third
+      input of the 87P. The third winding input of the 87P provides information to the main differential
+      function and is also programmed to provide nondirectional residual overcurrent protection for
+      ground fault protection of the primary windings of the PST exciting and series units.
+
+Secondary Current Differential Relay System:
+      The secondary current differential system, Device 87S, is functionally equivalent to the primary
+      differential relay system. Its main function is to provide protection for faults in the secondary
+      windings of the PST series and exciting units.
+      Device 87S receives CT currents from the source and load side of the PST and from the neutral
+      side of the secondary winding of the exciting unit. The relay is connected as shown in Figure 4.
+      The CTs for the secondary differential relay system are connected such that the series-unit source
+      and load currents flow into the polarity side, and the exciting-unit secondary winding currents
+      flow out of the polarity side of Device 87S respective inputs. The exciting-unit secondary
+      winding current is balanced against the sum of the series-unit primary source and load currents in
+      the PST secondary differential relay system. This differs from the approach we use in a
+      conventional three-winding power transformer differential protection system, where the CT ratios
+      and tap selections are based on balancing the differential relay two-windings at a time.
+      The CT connections and current balancing in the secondary differential relay system are of
+      utmost importance. You must determine the CT ratio requirements and connections under PST
+      full load current conditions and with the LTC set at neutral and at maximum phase shift tap
+
+
+                                                    5
+positions. References [2, 5-7] discuss in great detail how to select the CT ratio, relay taps, and CT
+connections for the secondary differential relay system. In our application, all CTs to the 87S are
+wye connected as shown in Figure 4. However, individual CT input connection compensation
+settings in the numerical relay adjust for the fact that the series and load side currents must be
+delta connected, and the neutral-side exciting-unit secondary CTs must be wye connected.
+
+                                                           Delta RV
+                                  Series Unit                wdg
+                      Is                                                      IL
+                 S                                                                      L
+                                                      IE
+                              2000/5                                               2000/5
+                               Wye                                                  Wye
+
+
+                                                     Exciting Unit
+                                                                 Delta
+                                                                Tertiary
+                                                                 wdg
+
+
+                     87S
+                                                                  Voltage
+                                                                 regulating
+                                                                    wdg
+
+
+                                                                   Phase
+                                                                   shifting
+                                                                    wdg
+
+
+
+
+                                                       2000/5
+                                                        Wye
+
+
+
+
+                            Figure 4    Device 87S Connection Diagram
+
+The voltage presented to the PST series unit for system faults depends on many factors: the
+system source impedances, fault location, type of fault, and fault point on wave. In addition, PST
+series-unit impedance, voltage rating, saturation characteristic, and LTC position affect winding
+voltages. For the PST we modeled, the series-unit winding has an impedance of 3.43 ohms and a
+41.58 kV rated voltage. This rated voltage equals the quadrature voltage necessary to produce the
+desired 30° phase shift. Because this voltage is about 52 percent of the system line-to-neutral
+voltage, the series-unit transformer windings can be subjected to an overvoltage or overexcitation
+condition.
+An overvoltage condition of the series unit during an external fault can cause series-unit
+saturation and upset the ampere-turn coupling between the primary source and load windings and
+the secondary winding of the series unit. Series-unit saturation can cause incorrect 87S operation
+for external faults because one input of the secondary differential relay system is connected on
+the secondary winding of the series unit. Therefore, you should evaluate whether series-unit
+saturation is possible. If series-unit saturation is a problem, determine appropriate relay settings to
+avoid misoperations for nearby external faults. Some relay settings options are: desensitize the
+87S, detect series-unit overvoltage/overexcitation using the presence of fifth harmonics to block
+
+
+
+                                                6
+      tripping of the 87S device during the overvoltage condition, or use information from other
+      devices with directional elements to block operation of the 87S device.
+      A simple calculation method provides a quick answer as to whether series-unit saturation must be
+      considered. From short circuit studies, determine the voltage developed across the series-unit
+      primary winding for various faults at the series-unit source and load side of the PST. Be sure to
+      consider strong source (lowest source impedance), and minimum and maximum PST impedances.
+      If you determine that series-unit saturation is possible, then you know you must perform further
+      studies to set the 87S properly. EMTP is a valuable tool for performing these studies. We discuss
+      the modeling aspects of the PST later in this paper.
+
+Backup Ground Fault Protection:
+      Traditionally, two ground overcurrent relays are applied in the neutral of the exciting-unit
+      primary and phase shifting windings for backup PST ground fault protection [5]. You must then
+      determine if the ground overcurrent relays need to coordinate with other nearby ground relays for
+      external faults and whether these same elements require harmonic restraint supervision to prevent
+      overtrips during PST energization [4].
+      In this application, we take advantage of ground overcurrent elements available in the
+      multifunction differential relays to provide the necessary elements for PST ground fault backup
+      protection. The third winding input of device 87P is programmed as a nondirectional residual
+      overcurrent function to provide ground overcurrent protection for the PST exciting and series
+      units. The PST exciting unit has a tertiary delta-connected winding that provides a low impedance
+      path for zero-sequence current to flow during ground faults external to the PST protection zone.
+      For this reason, the ground overcurrent relay element is coordinated with system ground
+      overcurrent relays.
+      The current differential relay applied in this installation has second and fourth harmonic
+      percentage restraint elements that can be programmed to supervise the ground overcurrent
+      elements. However, the system operator decided not to apply this particular function based on
+      earlier operating experience with PST protection. This decision may change pending further
+      experience with, and performance analysis of, the design.
+
+Permissive Overreaching Transfer Trip Protection:
+      Two multifunction numerical distance relays (Devices 11-1 and 11-2) provide an additional level
+      of phase and ground fault protection for the PST. Phase distance, ground distance, and directional
+      overcurrent elements are used in a POTT mode to provide high-speed PST protection for phase-
+      to-ground and multiphase faults. The POTT scheme does not use a communications channel for
+      the permissive signal. Instead, the permissive trip keying and receive signals are hardwired
+      because both relays are located in the same control house panel. Instantaneous and time-delayed
+      phase distance and ground distance elements, and an inverse-time nondirectional ground
+      overcurrent element provide additional PST protection.
+      Reverse-looking phase and ground distance elements and reverse-looking directional ground
+      overcurrent elements are programmed to block the operation of the secondary differential relay
+      system (Device 87S) during external faults. The dropout time of these elements is extended for a
+      number of cycles to provide additional security to the secondary differential relay system.
+
+
+
+
+                                                  7
+Buchholtz and LTC Sudden Pressure Relay Protection:
+      Buchholtz-type relays are applied in the series and exciting-unit transformers. Sudden-pressure
+      relays are also applied in the LTC compartments of the exciting-unit transformer. These relays
+      provide PST protection for turn-to-turn faults not detected by the PST differential, distance, or
+      overcurrent protection functions. Sudden-pressure relays are very sensitive to low- or high-energy
+      arcs within the transformer LTC. Their inverse-time operating characteristic provides high-speed
+      operation for severe internal transformer faults and a slower operation for low-energy faults.
+
+
+PHASE SHIFTING TRANSFORMER EMTP MODEL
+      In our studied PST application, short-circuit fault studies indicated that series-unit saturation was
+      possible. Therefore, we decided to use EMTP modeling of the PST to verify the differential relay
+      stability during series-unit winding saturation, to verify the ability of the protection to properly
+      detect internal transformer faults, and to verify the proposed CT connections. This was the first
+      time the system operator had applied digital relay technology for complete PST protection. To
+      verify the proposed in-service relay settings, we used EMTP data converted to COMTRADE file
+      format using a readily available open-loop playback test system.
+      Modeling PSTs with EMTP is complicated because it involves several windings and mutual
+      coupling between windings. At minimum, the EMTP model must represent the correct phase
+      shift, the positive-sequence impedance at different exciting-unit secondary winding tap positions,
+      the correct zero-sequence PST impedance, and the series-unit saturation characteristic.
+      The PST is modeled as two separate units using transformer models and other elements available
+      in EMTP. Interconnection of the series and exciting units is done externally. Transformer
+      manufacturer test reports are used to determine the parameters necessary for modeling
+      development. The biggest challenges in modeling this device were insufficient manufacturer data
+      and converting the actual transformer test report data to the level of data needed to adequately
+      model the PST. The scope necessary to address all of the modeling details is beyond that
+      permitted in this paper. However, we address some important points here because very few
+      references discuss the use of EMTP to model PSTs [8].
+      We modeled the series unit as a three-winding transformer with the saturation characteristic
+      placed on the delta RV winding of the series unit because 67 percent of the SV winding turns are
+      located closest to the series-unit transformer core. The exciting unit was also modeled as a three-
+      winding transformer with one primary winding and two secondary windings: the phase shifting
+      and tertiary windings. The voltage-regulating winding is not modeled because it does not
+      substantially alter the simulation results. Also, the regulating winding does not pose any
+      additional concerns from a differential protection point of view.
+      Items needing close attention in modeling the PST in EMTP are:
+          • Correct representation of the positive- and zero-sequence impedances for the series and
+             exciting units.
+          • Proper leakage reactance data of the secondary winding of the exciting unit, for the
+             different phase shifting tap positions and turns ratio.
+          • Correct MVA rating of the series and exciting units.
+          • Proper external connections between the series- and the exciting-unit phase shifting
+             windings, to provide the correct phase shift at all LTC positions.
+
+
+
+
+                                                    8
+     • Series-unit saturation characteristic model.
+     • Appropriate system source voltages and impedance data.
+The transformer manufacturer provided the test report data for the overall PST but not for each
+separate unit. This created a problem in the model development, because we needed to derive
+other data from these test reports to create an accurate model.
+The PST ratings for our application were:
+     Rated power:        300 MVA
+     Rated voltage:      138 kV / 138 kV
+     Rated current:      1255 A / 1255 A
+     Rated frequency:    60 Hz
+     Volt. Regulation:   ±5%
+     Phase angle:        ±30°
+Series Unit:
+     SV winding:         (142 + 142) = 248 turns
+     SV voltage:         41,579 V
+     RV winding:         422 turns
+     RV voltage:         61,783 V
+Exciting Unit:
+     Exciting wdg:       414 turns
+     Phase shift wdg:    192 turns = (16 steps x 12 )
+     Tertiary wdg:       56 turns
+You must determine the proper MVA and winding voltage ratings for each unit because the
+series- and exciting-unit transformers are modeled as two separate transformers in EMTP.
+The MVA rating of the series unit is:
+     MVA3ph = 3.0 x 41.579. x 1.255 = 156.545 MVA
+From Figure 1 we can calculate the voltage ratings of the exciting unit:
+     Vexc = (138.0 kV /√3) x cos(30°/2) = 76.959 kV
+Similarly, the exciting-unit current rating is given by:
+     Iexc = 2.0 x 1255 A x sin(30°/2) = 650 A
+Therefore, the exciting-unit MVA is:
+     MVAecx = 3.0 x 76.959 kV x 0.65 kA = 149.986 MVA
+The positive-sequence impedance of the PST series unit is different at different LTC positions
+(Figure 5) because of variations of the leakage impedance of the exciting-unit secondary phase
+shifting winding at different LTC taps. This impedance variation must be reflected in the EMTP
+model. Because the manufacturer does not provide the phase shifting winding leakage impedance
+at every tap position, we must derive it from the series-unit positive-sequence impedance values.
+
+
+
+
+                                              9
+                                9
+
+
+                               8.5
+                                            Short Circuit Impedance as a Function of LTC position
+
+                                8
+
+
+              % X at 300 MVA   7.5
+
+
+                                7
+
+
+                               6.5
+
+
+                                6
+
+
+                               5.5
+
+
+                                5
+                                     -15     -10         -5           0        5            10      15
+                                                      Phase Shifting wdg LTC Position
+
+                                       Figure 5    PST Positive-Sequence Impedance Graph
+
+The phase shifting leakage impedance is reflected back to the series-unit positive-sequence
+impedance by the square of the turns ratio of the series-unit transformer. Therefore, to calculate
+the exciting-winding leakage ohms at LTC position 16A, first find the impedance difference,
+∆XS1, of the series unit between positions 16A and N (neutral or zero position). For this PST, the
+positive-sequence impedance at position 16A is 8.75 percent at 300 MVA and 138 kV, which is
+equal to 5.56 ohms. At the neutral position the positive sequence impedance is 5.40 percent, or
+3.43 ohms.
+    ∆XS1 = 5.56 – 3.43 = 2.13 Ω primary
+Dividing the value for ∆XS1 by the square of the turns ratio of the series-unit turns ratio, taking
+into consideration the fact that the series windings (SV) are wye connected and the regulating
+windings (RV) are delta connected, yields a value of 1.5676 ohms. This is the appropriate leakage
+impedance to use for the 16A tap position. You can determine the resistance value at any tap
+position by multiplying the phase shifting winding ohms/turn resistance by the number of turns in
+each LTC step. For this particular PST there are 12 turns/step for a total of 192 turns at the 16A
+LTC position.
+The zero-sequence data provided by the manufacturer were given by four different zero-sequence
+tests involving both the series and exciting units. The manufacturer provided data for the
+following tests:
+1. Series-unit source side excited with zero-sequence voltage with the series-unit load side open.
+   The impedance for this test is 0.691 + j 14.25 ohms.
+2. Series-unit source side excited with zero-sequence voltage with the series-unit load side short-
+   circuited. The impedance for this test is 0.076 + j 3.153 ohms.
+
+
+
+
+                                                              10
+3. Series-unit load side excited with zero-sequence voltage with the series-unit source side open.
+   The impedance for this test is 0.717 + j 14.89 ohms.
+4. Series-unit load side excited with zero-sequence voltage with the series-unit source side short-
+   circuited. The impedance for this test is 0.079 + j 3.153 ohms.
+To calculate the zero-sequence equivalent circuit for the series and exciting units, we must
+consider the fact that the exciting unit has a tertiary winding that is closed during these tests, and
+that the RV winding of the series unit is also connected in delta. As Figure 6 shows, the resulting
+zero-sequence equivalent is derived from the test data.
+                                   j 1.40 Ohms          j 2.04 Ohms
+
+                             S                                          L
+
+
+                                                         j 12.85 Ohms
+
+
+
+
+                                                 S0L0
+
+                         Figure 6    PST Zero-Sequence Equivalent Circuit
+
+Note that the series-unit zero-sequence impedance value is very close to the positive-sequence
+impedance value and that the exciting unit is a strong source of zero-sequence current for system
+faults. Therefore, the exciting-unit ground backup element must coordinate with the other ground
+relay elements in the nearby transmission lines. Also important: the zero-sequence impedance of
+the PST does not change substantially with the different tap positions of the phase shifting
+winding. The exciting-unit zero-sequence impedance is placed in the tertiary winding in the
+model, taking into consideration the appropriate turns ratio between the exciting-unit primary and
+tertiary windings.
+The series excitation characteristic conversion from the manufacturer data to the model is also
+very important. The series-unit excitation data are listed in Table 1. In addition, the excitation of
+the series unit at 100 percent voltage is 1.59 Tesla and the air-core reactance is 10.9 ohms/phase
+at a saturation point of 2.1 Tesla.
+                                 Table 1 Series Unit Excitation Data
+
+               Rms Voltage in %                                   Rms Current in Amperes
+                         5.00                                                  0.02
+                        50.00                                                  0.04
+                      100.00                                                   0.31
+                      117.20                                                   1.10
+                      125.80                                                   4.00
+                      132.00                                                7487.00
+
+You must use an EMTP auxiliary routine to convert the rms saturation data of the PST series unit
+to peak flux versus peak current data before using it in the model. The input data in the EMTP
+
+
+
+                                              11
+     conversion routine must be given in per-unit voltage and per-unit excitation current. Note that the
+     model requires a point on the excitation curve deep into saturation. This point is very critical in
+     modeling saturation characteristics of iron-core transformers, such as power transformers or CTs.
+     Using a voltage of 9.4 per unit and an air-core reactance value of 10.9 ohms/phase results in a
+     calculated excitation current of 63.248 per unit.
+
+
+MODEL POWER SYSTEM TESTS
+     We developed numerous EMTP test cases for various types of faults internal and external to the
+     differential zone of protection. We then converted each EMTP file output to a COMTRADE
+     format. Next, we loaded the COMTRADE file into a playback test system connected to the relay
+     scheme being tested: two differential relay systems and the POTT system. The MPS testing
+     revealed the need to make some setting adjustments for this installation.
+     Performance of the secondary differential relay (87S) is a concern for this installation because of
+     series-unit saturation for external faults on the load side of the PST. The PST source-side system
+     is stronger than the load-side system in this application. Early stages of testing necessitated a few
+     setting changes such as Winding 1 and Winding 2 compensation settings, and a differential TAP
+     setting for Winding 3 from 5.89 to 1.83. As we discussed earlier, a pair of numerical distance
+     relays provides PST protection using a POTT scheme and backup distance and overcurrent
+     elements. The reverse elements from this pair of numerical relays (Devices 11-1 and 11-2)
+     provide additional security to the secondary differential relay system by blocking the 87S device
+     during external faults.
+     No incorrect operations occurred during testing of the differential relay systems. However, close
+     inspection of the test reports indicated that the differential relay system could misoperate during
+     external faults in an adjacent transmission line. After the line breaker clears the fault, the series-
+     unit transformer is still recovering from saturation and can cause incorrect 87S operation.
+     Because incorrect operation is possible for several cycles after the external fault is cleared, it is
+     critical that the blocking signal from Devices 11-1 and 11-2 be maintained after reverse element
+     dropout, using the multifunction relay programmable logic and timers. A programmable fifth
+     harmonic element is available in the differential relay for blocking 87S relay operation for a short
+     period of time during series-unit transformer overexcitation conditions. The 87S differential relay
+     system operated reliably for all internal faults. Our testing also showed that increasing the slope
+     from 30 percent to 40 percent in both 87P and 87S was necessary to ensure security. The primary
+     differential relay system performed well for internal and external faults.
+     The permissive overreaching relaying scheme operated reliably and securely for all tested
+     scenarios.
+
+
+IN-SERVICE OPERATING EXPERIENCE
+     The studied PST has been in operation since the fall of 2001. In January of 2002, a single-line-to-
+     ground fault occurred on the 138 kV underground cable that was in series with the PST. This fault
+     was external to the PST zone of protection and within the overall cable/PST zone of protection.
+     Our analysis of current differential event reports indicated correct restraining by both primary and
+     secondary differential relay systems. In addition, our analysis of event reports captured by the
+     pair of numerical distance relays (Devices 11-1 and 11-2) indicated correct operation of the
+     POTT scheme and proper blocking of the secondary differential relay system by the reverse-
+     looking directional elements of Devices 11-1 and 11-2.
+
+
+                                                  12
+Figure 7 and Figure 8 show the performance of the numerical distance relays that make up the
+POTT relaying scheme. Device 11-2 detects the fault as a C-phase-to-ground fault within the
+zone of the overreaching Zone 2 element, labeled ZCG, in about one power system cycle. Relay
+output contacts three and four are programmed as the permissive tripping signal keying contacts.
+The second digital trace in Figure 7 (labeled OUT 3&4) indicates that Device 11-1 sent a
+permissive trip signal to Device 11-2. From Trace 1 (labeled IN 7&8) in Figure 8 we see that
+Device 11-2 receives permission to trip, but never produces a trip because the fault is external to
+the PST zone of protection and the reverse-looking Zone 3 is picked up as seen in the last digital
+trace, labeled ZCG.
+Further analysis of Device 11-1 and 11-2 relay event reports provided useful data from which we
+calculated and verified the positive- and zero-sequence impedance of the PST. In addition, we
+were able to calculate the negative- and zero-sequence source impedance data behind Device 11-
+1, and the actual LTC tap position during this incident. This additional data helped us create a
+new EMTP case to represent the system conditions at the time of this fault, and we were able to
+verify the correctness of the EMTP model by comparing the magnitudes and angles of the fault
+currents in all the PST windings.
+
+
+
+
+                  Figure 7    Device 11-1 Event Report (Oscillographic Format)
+
+
+
+
+                                            13
+                      Figure 8   Device 11-2 Event Report (Oscillographic Format)
+
+
+
+CONCLUSIONS
+    1. Complete PST protection requires a combination of relay elements such as current differential,
+       distance, ground overcurrent, series- and exciting-unit Buchholz-type relays, and LTC sudden
+       pressure relays.
+    2. PST differential relay schemes require careful examination to determine CT placement, CT
+       ratio, tap selection, and CT polarity and wiring connections.
+    3. EMTP modeling of the PST provided data necessary to test the relays, and to verify and
+       enhance the relay settings for this complex protection application.
+    4. With numerical relays, we can eliminate the additional ground backup overcurrent relays,
+       second harmonic, and volts/hertz relays needed with earlier electro-mechanical or solid-state
+       technologies.
+    5. Event reports from numerical relays are extremely valuable in verifying correct operation of
+       the relaying systems, and in verifying the power system models used for short circuit or
+       transient studies.
+
+
+REFERENCES
+    [1] Wirth, E., Kara, A., “Innovative Power Flow Management and Voltage Control
+        Technologies,” Power Engineering Journal, June 2000.
+    [2] Li, H.J., “Protective Relaying for Phase Angle Regulator,” 2nd Annual Western Protective
+        Relay Conference, Spokane, Washington, USA, October 1975.
+
+
+
+                                               14
+     [3] Plumptre, F.P., “Nelway Substation Phase Shifting Transformer Protection,” 17th Annual
+         Western Protective Relay Conference, Spokane, Washington, USA, October 1990.
+     [4] Bladow, J., Montoya, A., “Experience with Parallel EHV Phase Shifting Transformers,”
+         IEEE Transactions on Power Delivery, Vol. 6, No. 3, July 1991, pp. 1096–1100.
+     [5] Ibrahim, M.A., Stacom, F.P., “Phase Angle Regulating Transformer Protection,” IEEE
+         Transactions on Power Delivery, Vol. 9, No. 1, January 1994, pp. 394–404.
+     [6] Ibrahim, M.A., Stacom, F., “Protection of the East Garden City 345 kV Phase Angle
+         Regulating Transformer,” 19th Annual Western Protective Relay Conference, Spokane,
+         Washington, USA, October 1992.
+     [7] “Protection of Phase Angle Regulating Transformers,” IEEE Power System Relaying
+         Committee, October 1999, available at www.pes-psrc.org
+     [8] Thallam, R.S et al., “Modeling Mead-Phoenix 500 kV Phase Shifting Transformer in EMTP
+         Studies,” International Conference on Power System Transients, Lisbon, September 3-7,
+         1995.
+
+
+BIOGRAPHIES
+     Demetrios A. Tziouvaras received his BSEE degree in 1980 from the University of New
+     Mexico, and his MSEE in 1986 from Santa Clara University. He worked for Pacific Gas and
+     Electric Co. for 18 years in the System Protection Group. He served as a Principle Engineer
+     responsible for the selection of relaying systems, system protection design standards, and
+     application of new technologies in substation automation. In 1998, he joined Schweitzer
+     Engineering Laboratories as a Research Engineer. He is currently a Senior Research Engineer
+     involved in the development of numerical relays. His main interests are protection of power
+     systems, power system transients, and digital relaying. He is the author or co-author of numerous
+     papers in the area of power system protection. He holds one patent and has several patents
+     pending. He is an IEEE senior member, a member of the Power System Relaying Committee, and
+     a member of CIGRE. He is also the convener of CIGRE SC-34 Working Group 15 on “Distance
+     Protection Functions for Modern Applications.”
+     Ramon Jimenez received his BSEE degree in 1995 from California State Polytechnic University,
+     Pomona, with an emphasis in Power Engineering. He joined the General Electric (GE)
+     Company’s Technical Leadership Program and attended Advanced Power System Engineering
+     Courses in Schenectady, New York. From 1995 to 1997 he worked as an application engineer
+     with GE Power Systems Engineering Department. From 1998 to 1999 he worked as a product
+     support and testing engineer for GE transmission line digital relays in Malvern, Pennsylvania. In
+     1999, he joined Commonwealth Edison (ComEd) in Chicago, Illinois, as a protection engineer.
+     At ComEd, Mr. Jimenez has been responsible for selection of relaying systems, fault studies for
+     relay settings, protection engineering field support, and contractor design oversight for various
+     projects. This includes relay upgrades, capacity jobs, and various independent power producer
+     interconnection projects. He is currently a senior protection engineer for the ComEd transmission
+     system.
+
+
+                                         Copyright © SEL 2002
+                                          (All rights reserved)
+                                            Printed in USA
+                                                20020905
+
+
+
+                                                  15
+

@@ -1,0 +1,448 @@
+
+===== PDF PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ADDENDUM TO MOSES SOUTH 
+STABILITY LIMIT S ANALYSIS FOR ALL  
+LINES I/S AND OUTAGE CONDITIONS 
+(MS-24) 
+ 
+ 
+ 
+A Report by the  
+New York Independent System Operator  
+ 
+July 2024
+
+===== PDF PAGE 2 =====
+ 
+ 
+ 
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 2 
+ 
+Executive Summary 
+ 
+This stability analysis of the Moses South interface was conducted to analyze the impact of N-2 and N-3 scenarios 
+inside the North Country/Area D pocket. The study covers outage scenarios for the 765 kV path (the Hydro Quebec 
+HVDC line to Chateauguay 765kV, the Chateauguay – Massena (7040) 765kV line, and the Massena – Marcy (MSU1) 
+765kV Line, the 230 kV path (MAP 1 and MAP2 from Moses – Adirondack – Porter 230kV), and the St Lawrence 
+PARs path (the IESO L33 and L34 PARs from St. Lawrence – Moses 230 kV). 
+ 
+The existing all lines in service and outage condition limits not explicitly stated in this report have been confirmed 
+and remain in effect. A future comprehensive analysis of the Moses South interface will be conducted for the 
+implementation of the Smart Path and Smart Path Connect projects. 
+ 
+The limits recommended in this report are based on a stable system response at the highest transfer level tested. 
+There were no instances of any system or unit instability observed. 
+ 
+It is recommended that the Moses South stability transfer limits be implemented as reported in Table 1. 
+  
+
+===== PDF PAGE 3 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 3 
+ 
+Table of Contents 
+ 
+INTRODUCTION .................................................................................................................................................................................. 5 
+SUMMARY OF PROPOSED LIMITS ................................................................................................................................................. 6 
+SYSTEM OPERATING LIMIT METHODOLOGY ........................................................................................................................... 7 
+INTERFACE SUMMARY ..................................................................................................................................................................... 7 
+SYSTEM REPRESENTATION AND TRANSFER CASE DEVELOPMENT ................................................................................. 9 
+TESTED CONTINGENCIES .............................................................................................................................................................. 10 
+MONITORED PARAMETERS .......................................................................................................................................................... 11 
+DISCUSSION ........................................................................................................................................................................................ 11 
+RECOMMENDATIONS ...................................................................................................................................................................... 19 
+ 
+ 
+ 
+  
+
+===== PDF PAGE 4 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 4 
+ 
+List of Tables 
+Table 1: Summary of Evaluated Stability Limits 
+Table 2: Moses South Interface Definition 
+Table 3: Contingencies Applied for Evaluating Moses South Stability Transfer Limits 
+Table 4: Summary of Evaluated Stability Limits 
+List of Figures 
+Figure 1. NYCA Transmission System Interface (Moses South inset) 
+Figure 2. Main Transmission Elements Around North NYCA 
+Figure 3. Moses Voltage response for all contingencies for MSU1&7040&HVDC & (L33 or L34) O/S  
+Figure 4. Voltage Angle and Frequency for scenario with MSU1&7040&HVDC & (L33 or L34) O/S 
+Figure 5. Moses Voltage response for all contingencies for L33 & L34 & (MAP1 or MAP2) O/S 
+Figure 6. Voltage Angle and Frequency for scenario with L33 & L34 & (MAP1 or MAP2) O/S 
+Figure 7. Moses Voltage response for all contingencies for MAP1&MAP2 O/S 
+Figure 8. Voltage Angle and Frequency for scenario with MAP1&MAP2 O/S 
+ 
+ 
+ 
+ 
+
+===== PDF PAGE 5 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 5 
+ 
+Introduction 
+This study serves as an analysis of N-2 and N-3 scenarios on stability limits of the Moses South interface. The study 
+covers outage scenarios for the 765 kV path (the Hydro Quebec HVDC line to Chateauguay 765kV station, the 
+Chateauguay – Massena (7040) 765kV line, and the Massena – Marcy (MSU1) 765kV line), the 230 kV path (MAP 1 
+and MAP2 from Moses – Adirondack – Porter 230kV), and the St Lawrence PARs path (the IESO St. Lawrence – 
+Moses (L33P) 230 kV and St. Lawrence – Moses (L34P) 230 kV PARs). The existing Moses South stability transfer 
+limits as reported in the “Moses South Stability Limits All Lines I/S and Outage Conditions” 
+(https://www.nyiso.com/documents/20142/1411640/MS-14%20Report_12092014_-FINAL.pdf/36b0d5e8-
+60cb-9e07-26b8-e5c4e3ffd0bf) are studied as part of this analysis and found to be still valid. 
+ 
+This study recommends adding stability transfer limits for outage conditions as listed in Table 1 in addition to the 
+existing Moses South stability transfer limits. 
+  
+
+===== PDF PAGE 6 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 6 
+ 
+Summary of Evaluated Limits 
+Table 1: Summary of Evaluated Stability Limits (MW) 
+Scenario 
+Moses South  
+Stability Limit  
+with Margin (MW) 
+MSU1&7040&HVDC & (L33 or L34) O/S 750 
+MSU1&7040&HVDC & (MAP1 or MAP2) O/S 500 
+MSU1&7040&HVDC & (L33 or L34) & (MAP1 or MAP2) O/S 500* 
+MSU1&7040&HVDC & MAP1 & MAP2 O/S 100 
+MSU1&7040&HVDC & MAP1 & MAP2 & (L33 or L34) O/S 100* 
+MSU1&7040&HVDC & R8105 O/S 750 
+MSU1&7040&HVDC & R8105 & (MAP1 or MAP 2) O/S 500 
+MSU1&7040&HVDC & R8105 & (L33 or L34) O/S 750* 
+MSU1&7040&HVDC & R8105 & DS 5 115 kV O/S 750* 
+MSU1&7040&HVDC & R8105 & NS 4 115 kV O/S 750* 
+MSU1&7040&HVDC & DS 5 115 kV O/S 750 
+MSU1&7040&HVDC & NS 4 115 kV O/S 750 
+L33 & L34 & (MAP1 or MAP2) O/S 2050* 
+L33 & L34 & (MAP1 or MAP2) & (MMS1 or MMS2) O/S 2050* 
+L33 & L34 & MAP1 & MAP2 O/S 1650* 
+MAP1&MAP2 O/S 2750* 
+MAP1&MAP2 & (L33 or L34) O/S 2550* 
+MAP1&MAP2 & (L33 or L34) & (MMS1 or MMS2) O/S 2450* 
+ 
+*More restrictive limits will control flows below these limits therefore these limits will not be implemented in the 
+Energy Management System.  
+
+===== PDF PAGE 7 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 7 
+ 
+ 
+System Operating Limit Methodology 
+ 
+As identified in the “FAC-011-4_Methodology for Establishing SOL for the Operations Horizon_20240401”, 
+the NYSRC Reliability Rules for Planning and Operating the New York State Power System provide the documented 
+methodology employed to develop System Operating Limits (SOLs) within the NYISO Reliability Coordinator Area.   
+NYSRC Reliability Rules require compliance with all North American Electric Reliability Corporation (NERC) 
+Standards and Northeast Power Coordinating Council (NPCC) Standards and Criteria.  NYSRC Rule C.1 addresses 
+the contingencies to be evaluated and the performance requirements to be applied.  Rule C.1 also incorporates by 
+reference Attachment H, NYISO Transmission Planning Guideline #3-1, “Guideline for Stability Analysis and 
+Determination of Stability-Based Transfer Limits” of the NYISO Transmission Expansion and Interconnection 
+Manual.      
+Interface Summary  
+The Moses South limit is defined as the maximum transfer permissible across the Moses South interface. Table 2 
+presents the elements forming the Moses South interface and Figure 1 gives a graphical representation of it. 
+ 
+Table 2: Moses South Interface Elements 
+Name Line ID Voltage 
+(kV) 
+*Massena-Marcy MSU1 765 
+*Moses-Adirondack MA1 230 
+*Moses-Adirondack MA2 230 
+*Dennison-Norfolk 4 115 
+*Dennison-Sandstone 5 115 
+*Alcoa-N. Ogdensburg 13 115 
+Parishville-Colton* 3 115 
+ 
+Table 2: The Moses South interface definition. * Indicates line metering location 
+ 
+
+===== PDF PAGE 8 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 8 
+ 
+ 
+ 
+ Figure 1. Moses South Interface Definition Highlighted by the Bold Green Line 
+ 
+ 
+  
+
+
+===== PDF PAGE 9 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 9 
+ 
+System Representation and Transfer Case Development 
+The analysis was based on the 2023 NYISO Operations dynamics base case, which was developed from the 2023 
+MMWG dynamics base case with the NYISO representation updated to the representation of the NYISO 2023 
+Summer Operating Study. 
+The base case model includes: 
+• the NYISO Transmission Operator area; 
+• all Transmission Operator areas contiguous with NYISO; 
+• all system elements modeled as in-service; 
+• all generation represented; 
+• phase shifters in the regulating mode;  
+• the NYISO Load Forecast; 
+• transmission facility additions and retirements; 
+• generation facility additions and retirements; 
+• Remedial Action Scheme (RAS) models currently existing or projected for implementation within the 
+studied time horizon;  
+• series compensation for each line at the expected operating level; and  
+• facility ratings as provided by the Transmission Owner and Generator Owner 
+ 
+The Moses-St. Lawrence PARs (Phase Angle Regulators) connecting the NYCA with IESO were set to control to their 
+maximum limit. The PV20 PAR connecting NYCA with ISO-NE was set to control 0 MW flowing from NY to VT. 
+Fraser SVC, Leeds SVC and Marcy FACTs were modeled out of service in pre-contingency conditions and put back 
+in service, if applicable in the scenario, with their pre-contingency terminal voltage as their set point. 
+ 
+Generation output of the Moses units and Hydro Quebec (HQ) generation were adjusted depending on the desired 
+transfer levels across Moses South. In some cases, to be able to achieve the desired transfer level, the out-of-service 
+units at Beauharnios (HQ) were put back in service and generation at Cedars (HQ) was also connected to NYCA to 
+push the transfer level further. All transfers modeled the Cedars-Dennison power transfer at approximately 270 
+MW importing into NYISO. All transfers modeled the Chateauguay to Massena 765 kV (MSC-7040) line flow at 1500 
+MW importing into NYISO. 
+  
+
+===== PDF PAGE 10 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 10 
+ 
+Tested Contingencies 
+Eighteen (18) contingencies were tested for each developed Moses South transfer case scenario. Table 3 provides 
+the identification and description of these contingencies. 
+ 
+Table 3: 
+Contingencies Applied for Evaluating Moses South Stability Transfer Limits  
+# ID Description 
+1 NYPA01-SPS41C 3PH-NC @MARCY765 L/O MASSENA-MARCY (MSU1) W/REJ 
+2 NYPA02 3PH-NC @MOSES230 L/O MOSES-ADIRONDACK (MA2) W/NOREJ. 
+3 NYPA03 LLG @MOSES230 L/O MOSES-ADIRONDACK (MA1 & MA2) 
+4 NYPA04 3PH-NC @MOSES230 L/O MASSENA-MOSES765230 (MMS1) 
+5 NYPA05 3PH-NC@MASSENA765 – L/O MASSENA-MOSES 765/230 MMS1 
+6 NYPA06 SLG-STK MOSES230 BKR2108 L/O MASSENA-MOSES230(MMS2 BKUP_CLR AT4) W/NOREJ 
+7 NYPA07 SLG-STK@MASSENA765 – L/O MASSENA-MOSES 765/230 MMS-1 
+8 NYPA08 SLG-STK @MOSES230 BKR2408 L/O MOSES-ADIRONDACK (MA2 BKUP_CLR MW1)) W/NOREJ 
+9 NYPA09 3PH-NC @MASSENA765 L/O MASSENA-MARCY (MSU1) W/REJ 
+10 NYPA10 SLG-STK @WILLIS230 BKR2108 L/O MOSES-WILLIS (MW2 BKUP_CLR WRY-2) 
+11 NYPA13 LLG- @MOSES L/O MOSES-MASSENA230 (MMS1 & MMS2) DCT 
+12 NYPA150 LLG- @MOSES230 L/O MOSES-ST. LAWRENCE (L33P & L34P) PDCT W/NOREJ 
+13 CE03_AC-SegA SLG-STK@EDIC345 (BKR R935) – L/O EDIC-GORDON ROAD #14 / BKUP CLR FE1 
+14 CE07AR LLG@MARCY/EDIC - L/O MARCY-COOPERS (UCC2-41) & EDIC-FRASER (EF24-40) DCT W/RCL 
+15 CE15 SLG-STK@MARCY345(BKR 3108) – L/O VOLNEY-MARCY (VU-19) / BKUP CLR#UE1-7 
+16 CE23 LLG@FRASER – L/O MARCY-COOPERS(UCC2-41)/EDIC-FRASER(EF24-40) DCT 
+17 CE23AR LLG@FRASER – L/O MARCY-COOPERS(UCC2-41)/EDIC-FRASER(EF24-40) DCT W/RCL 
+18 CE99 SLG-STK@SCRIBA345 (BKR R935) – L/O SCRIBA-VOLNEY 21 / BKUP CLR FITZ-SCRIBA #10 
+ 
+  
+
+===== PDF PAGE 11 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 11 
+ 
+Monitored Parameters 
+To assess system stability response for the Moses South power transfer scenarios considering contingencies, the 
+following parameters were monitored and analyzed: 
+ 
+• Generators’ angles, power outputs, terminal voltages, and speeds in the following areas/zones (HQ, ONT, 
+North, Mohawk, Capital, representative generators from West, Central, ISO-NE, Hudson, and NYC) 
+• Bus voltages and frequencies around Moses South and Central East interfaces 
+• Internal and external Interface flows  
+• SVCs and FACTs voltage and MVAR output 
+• HVDC parameters 
+ 
+The recommended limits in this report are all based on stable system response at the highest transfer level tested. 
+There were no instances of any system or unit instability observed in any of the simulations. 
+Discussion 
+Moses South limits are required to be established for element outages in north part of NYCA. With regards to 
+Moses South, there are four major corridors linking the North NYCA to the rest of the Eastern interconnection and 
+HQ as shown in Figure 2. Table 4 below presents the Moses South stability transfer limits that were validated as 
+part of this re-evaluation. All the dynamic responses of each developed Moses South stability transfer cases are 
+available and upon request plots related to any specific scenario will be provided. 
+ 
+
+===== PDF PAGE 12 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 12 
+ 
+ 
+Figure 2. Main Transmission Elements Around North NYCA  
+ 
+Angle and Voltage Monitoring 
+Machine angles and system voltages were employed in this analysis as the key indicators of system stability. The 
+discussions that follow include representative plots of generation unit angle response for illustration purposes. 
+Similar plots are included in the Appendices for all the simulations conducted.  
+ 
+The representative plots for the dynamic response of Moses machine angle for all the evaluated contingencies at 
+the limiting transfer level are shown below.  
+ 
+Generation Rejection at Moses Plant 
+The NYPA-06 and NYPA-15 contingencies (described in Table 3), were stable for all stability transfer limits 
+indicated in Table 4 below. When deemed unstable, these two contingencies may require generation rejection at 
+NYPA Moses plant. For this study, the update of the Moses South stability limits will not require the generation 
+rejection at Moses plant at all times. 
+  
+(4) 
+(5) 
+(13) 
+(3) 
+
+===== PDF PAGE 13 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 13 
+ 
+Representative Plots 
+Three representative outage cases were chosen to demonstrate system response: 
+• MSU1&7040&HVDC & (L33 or L34) O/S 
+• L33 & L34 & (MAP1 or MAP2) O/S 
+• MAP1&MAP2 O/S 
+ 
+MSU1&7040&HVDC & (L33 or L34) Out of Service 
+Most Severe Contingency 
+Moses voltages were plotted for all the Moses South contingencies as shown in Figure 3 for 
+MSU1&7040&HVDC & (L33 or L34) O/S.  It can be seen from Figure 3 that the voltage response at Moses 230kV is 
+most severe for NYPA-02 contingency compared to all other Moses South contingencies. The magnitude of the post 
+contingency voltage swings was found to be the largest when the NYPA-02 contingency was applied.   The NYPA-02 
+contingency was selected as the most severe contingency in the discussions that follow for this outage condition. 
+  
+
+===== PDF PAGE 14 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 14 
+ 
+ 
+Figure 3. Moses Voltage response for all contingencies for MSU1&7040&HVDC & (L33 or L34) O/S 
+ 
+Angle, Voltage, and Frequency Monitoring 
+Machine angle, voltage and frequency were employed in this analysis as the key indicators of system stability. 
+Machine angles at Moses and Fitzpatrick, voltages at Moses and Marcy stations and frequency at Marcy station 
+were plotted for the NYPA-02 contingency on the MSU1&7040&HVDC & (L33 or L34) O/S scenario, as shown in 
+Figure 4.   The NYPA-02 contingency consists of a 3PH-NC @MOSES230 L/O MOSES-ADIRONDACK (MA2) 
+W/NOREJ. 
+NYPA-02 
+
+===== PDF PAGE 15 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 15 
+ 
+ 
+Figure 4. Voltage Angle and Frequency for scenario with MSU1&7040&HVDC & (L33 or L34) O/S 
+ 
+L33 & L34 & (MAP1 or MAP2) Out of Service 
+Most Severe Contingency 
+Moses voltages were plotted for all the Moses South contingencies as shown in Figure 5 for 
+L33 & L34 & (MAP1 or MAP2) O/S.  It can be seen from Figure 5 that the voltage response at Moses 230kV is most 
+severe for NYPA-01 contingency compared to all other Moses South contingencies. The magnitude of the post 
+contingency voltage swings was found to be the largest when the NYPA-01 contingency was applied.   The NYPA-01 
+contingency was selected as the most severe contingency in the discussions that follow for this outage condition. 
+
+
+===== PDF PAGE 16 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 16 
+ 
+ 
+  
+• Figure 5. Moses Voltage response for all contingencies for L33 & L34 & (MAP1 or MAP2) O/S 
+ 
+Angle, Voltage, and Frequency Monitoring 
+Machine angle, voltage and frequency were employed in this analysis as the key indicators of system stability. 
+Machine angles at Moses and Fitzpatrick, voltages at Moses and Marcy stations and frequency at Marcy station 
+were plotted for the NYPA-01 contingency on the L33 & L34 & (MAP1 or MAP2) O/S scenario, as shown in 
+Figure 6.   The NYPA-01 contingency consists of a 3PH-NC @MARCY765 L/O MASSENA-MARCY (MSU1) W/REJ. 
+NYPA-01 
+
+===== PDF PAGE 17 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 17 
+ 
+  
+• Figure 6. Voltage Angle and Frequency for scenario with L33 & L34 & (MAP1 or MAP2) O/S 
+ 
+MAP1&MAP2 Out of Service 
+Most Severe Contingency 
+Moses voltages were plotted for all the Moses South contingencies as shown in Figure 7 for MAP1&MAP2 O/S.  It 
+can be seen from Figure 7 that the voltage response at Moses 230kV is most severe for NYPA-01 contingency 
+compared to all other Moses South contingencies. The magnitude of the post contingency voltage swings was found 
+to be the largest when the NYPA-01 contingency was applied.   The NYPA-01 contingency was selected as the most 
+severe contingency in the discussions that follow for this outage condition. 
+  
+
+
+===== PDF PAGE 18 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 18 
+ 
+ 
+ 
+Figure 7. Moses Voltage response for all contingencies for MAP1&MAP2 O/S 
+ 
+Angle, Voltage, and Frequency Monitoring 
+Machine angle, voltage and frequency were employed in this analysis as the key indicators of system stability. 
+Machine angles at Moses and Fitzpatrick, voltages at Moses and Marcy stations and frequency at Marcy station 
+were plotted for the NYPA-01 contingency on the MAP1&MAP2 O/S scenario, as shown in Figure 8.   The NYPA-01 
+contingency consists of a 3PH-NC @MARCY765 L/O MASSENA-MARCY (MSU1) W/REJ. 
+NYPA-01 
+
+===== PDF PAGE 19 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 19 
+ 
+  
+Figure 8. Voltage Angle and Frequency for scenario with MAP1&MAP2 O/S 
+Recommendations 
+Based on the results of this study, it is recommended that the NYISO Moses South stability transfer limits on 
+“Summary of Interface Limits & Operating Studies” be updated according to Table 4. 
+
+
+===== PDF PAGE 20 =====
+   
+MOSES SOUTH STABILITY LIMITS ANALYSIS (MS-24) | 20 
+ 
+Table 4: Summary of Evaluated Stability Limits (MW) 
+Scenario 
+Moses South  
+Stability Limit  
+with Margin (MW) 
+MSU1&7040&HVDC & (L33 or L34) O/S 750 
+MSU1&7040&HVDC & (MAP1 or MAP2) O/S 500 
+MSU1&7040&HVDC & (L33 or L34) & (MAP1 or MAP2) O/S 500* 
+MSU1&7040&HVDC & MAP1 & MAP2 O/S 100 
+MSU1&7040&HVDC & MAP1 & MAP2 & (L33 or L34) O/S 100* 
+MSU1&7040&HVDC & R8105 750 
+MSU1&7040&HVDC & R8105 & (MAP1 or MAP 2) O/S 500 
+MSU1&7040&HVDC & R8105 & (L33 or L34) O/S 750* 
+MSU1&7040&HVDC & R8105 & DS 5 115 kV O/S 750* 
+MSU1&7040&HVDC & R8105 & NS 4 115 kV O/S 750* 
+MSU1&7040&HVDC & DS 5 115 kV O/S 750 
+MSU1&7040&HVDC & NS 4 115 kV O/S 750 
+L33 & L34 & (MAP1 or MAP2) O/S 2050* 
+L33 & L34 & (MAP1 or MAP2) & (MMS1 or MMS2) O/S 2050* 
+L33 & L34 & MAP1 & MAP2 O/S 1650* 
+MAP1&MAP2 O/S 2750* 
+MAP1&MAP2 & (L33 or L34) O/S 2550* 
+MAP1&MAP2 & (L33 or L34) & (MMS1 or MMS2) O/S 2450* 
+ 
+*More restrictive limits will control flows below these limits therefore these limits will not be implemented in the 
+Energy Management System. 
+ 

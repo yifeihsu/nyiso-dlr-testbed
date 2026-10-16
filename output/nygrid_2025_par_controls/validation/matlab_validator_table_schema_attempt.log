@@ -1,0 +1,7 @@
+{Error using tabular/vertcat (line 209)
+All tables being vertically concatenated must have the same variable names.
+
+Error in validate_matlab_par (line 88)
+    checks=[checks;table(string(f.topology),double(f.hour_index),string(f.label),branch_error,angle_error, ...
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

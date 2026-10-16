@@ -1,0 +1,152 @@
+{
+  "created_utc": "2026-10-12T22:33:37.841924+00:00",
+  "status": "fresh_read_only_profile_source_and_mapping_audit_complete",
+  "all_numeric_assertions_passed": true,
+  "no_PF_solved_by_this_script": true,
+  "no_frozen_input_or_model_mutations": true,
+  "hours": 8760,
+  "timestamp_spacing_seconds": 3600,
+  "local_year_2025": true,
+  "duplicate_local_clock_hours": 1,
+  "timestamp_timezone_policy": "canonical UTC with explicit New York EST/EDT and repeated-hour fold",
+  "gamma": 0.30012075175285535,
+  "model_power_base_MVA": 100,
+  "peak_public_load_MW": 31857.177300000003,
+  "peak_timestamp_utc": "2025-06-24T22:00:00Z",
+  "peak_local_timestamp": "2025-06-24T18:00:00",
+  "ny_scaled_peak_MW": 9561.0,
+  "gamma_anchor_is_historical_model_load_not_measured_model_peak": true,
+  "NY_load": {
+    "assigned_original_buses": 46,
+    "positive_weight_buses": 31,
+    "zones": 11,
+    "complete_hour_zone_rows": 96360,
+    "maximum_public_scale_zone_reaggregation_error_MW": 9.094947017729282e-13,
+    "Q_assumption_power_factor": 0.98,
+    "maximum_Q_formula_error_MVAr": 0.0,
+    "within_zone_load_distribution_observed_2025": false,
+    "zero_snapshot_zone_J_policy": "uniform half allocation to original buses81 and82",
+    "public_annual_load_MWh": 151593746.47509998,
+    "model_annual_load_MWh": 45496429.15313878,
+    "added_asset_and_section_bus_loads_zero_in_checked_cases": true
+  },
+  "external_load": {
+    "buses": 94,
+    "positive_PD_buses": 56,
+    "policy": "static historical absolute PD magnitudes times statewide NY measured-load shape; QD retains signed snapshot ratio",
+    "maximum_common_shape_error_MW": 4.547473508864641e-13,
+    "independent_2025_regional_loads_used": false,
+    "model_annual_load_MWh": 87595258.63936608,
+    "NY_load_and_external_load_are_separate_disjoint_bus_groups": true
+  },
+  "generation": {
+    "native_rows": 1436,
+    "external_equivalent_rows": 28,
+    "source_and_dispatch_qualified_hours": 8657,
+    "unqualified_hours": 103,
+    "final_common_replay_source_qualified_hours": 8651,
+    "final_replay_additional_excluded_hours": 6,
+    "finite_qualified_PG": true,
+    "native_profile_max_P_bound_violation_MW": 0.0,
+    "native_PG_equals_NY_PD_minus_actual_import_max_error_model_MW": 4.581579560181126e-11,
+    "external_PG_equals_external_PD_plus_actual_import_max_error_model_MW": 1.2732925824820995e-11,
+    "full_NPCC_PG_equals_total_PD_before_AC_losses_max_error_model_MW": 5.820766091346741e-11,
+    "lossless_profile_balance_is_not_AC_net_boundary_validation": true,
+    "profile_is_observed_unit_dispatch": false,
+    "profile_is_bounded_source_prior_projection": true,
+    "current_profile_file": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+    "current_generator_bus_file": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+    "original_input_stage_pending_flags_are_current_operating_status": false,
+    "source_inputs": "EPA gross weights/P63 aggregate fuel mix; NRC availability; EIA fleet and hydro; declared renewable allocations; NYIS-reported four-region actual exchange totals",
+    "scope": "hourly continuous P-box projection with frozen priors, not unit commitment, ramping, reserve or storage-energy validation",
+    "external_equivalent_P_is_exact_AC_net_interchange": false
+  },
+  "internal_interface_comparison": {
+    "names": [
+      "DYSINGER EAST",
+      "WEST CENTRAL",
+      "TOTAL EAST",
+      "MOSES SOUTH",
+      "CENTRAL EAST - VC",
+      "UPNY CONED",
+      "SPR/DUN-SOUTH"
+    ],
+    "P32_all_seven_qualified_hours": 8673,
+    "upstream_dispatch_and_P32_cohort_hours": 8657,
+    "final_source_and_P32_cohort_hours": 8651,
+    "target_file": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+    "quality_file": "output/nygrid_2025_inputs/load_source/interface_quality_wide.csv",
+    "scope": "posthoc legacy zone-cut diagnostics only; physical P32 membership and operational expression remain unestablished",
+    "P32_quantity_assumption": "published Flow(MWH) numeric treated as MW, with no unit factor fitted",
+    "aggregation": "forward-hold time-weighted UTC [h,h+1); duplicate timestamps averaged, complete coverage and source gap<=600s",
+    "observations_used_to_tune_profiles_or_operators": false
+  },
+  "representative_cases_checked": 7,
+  "representative_loader_and_non_slack_profiles_exactly_preserved": true,
+  "source_receipts": {
+    "inputs": {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b"
+    },
+    "allocation": {
+      "path": "output/nygrid_2025_inputs/model/bus_allocation.csv",
+      "sha256": "757fbe115e4ee517014dcda313d99005619cffa492cfb49f9c5e4226579489f1"
+    },
+    "public_load": {
+      "path": "output/nygrid_2025_inputs/load_source/load_wide.csv",
+      "sha256": "442435c39c3e1ca6ffdb867f5bbee34ba28d7ae764cf1777e83a84859d43c300"
+    },
+    "hour_catalog": {
+      "path": "output/nygrid_2025_inputs/load_source/hour_catalog.csv",
+      "sha256": "96d4a0db424cbe1062b7c6b51d5f244a4de699679ad89428a8db3a992980f86a"
+    },
+    "public_interfaces": {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    "interface_quality": {
+      "path": "output/nygrid_2025_inputs/load_source/interface_quality_wide.csv",
+      "sha256": "4deee20774691c3193a5ecab239fc3d25878dec34c143ca90f1eb9d6ed158262"
+    },
+    "current_dispatch": {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    "current_replay": {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    "final_replay": {
+      "path": "output/nygrid_2025_dover_parameters/replay/bounded_x_nominal.npz",
+      "sha256": "0b1c2075989ba715fe356eaef24a008a2d4196e11034dbc44fb193dc469b85f9"
+    },
+    "original_dispatch": {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    "dispatch_priors": {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    "dispatch_bounds": {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    "generator_register": {
+      "path": "output/nygrid_2025_dispatch/dispatch/model_generator_register.csv",
+      "sha256": "7c613350f8cb397dc80fbfffd78d1a5e6e8e956e46cccdb6fc3a238af0615dda"
+    },
+    "load_semantics_pdf": {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/sources/NYISO_2025_hot_weather_operations.pdf",
+      "sha256": "cdf7e3ac98ea5fc0aac0342fe367987944e528ad5c69c404462ca2970af63cb8"
+    }
+  },
+  "limitations": [
+    "Zonal public-load agreement is a construction identity and cannot validate within-zone bus loads.",
+    "Native generation is source-informed reconstructed dispatch, not measured unit net output.",
+    "New substation and section nodes inherit zero load; topology expansion is not load-distribution reconstruction.",
+    "ACPF slack balances active losses and can violate its small inherited generator limit.",
+    "AC equation convergence and current availability do not establish voltage/reactive/dispatch feasibility.",
+    "Physical NYISO interface membership and meter convention are not certified by legacy aggregate comparison."
+  ]
+}

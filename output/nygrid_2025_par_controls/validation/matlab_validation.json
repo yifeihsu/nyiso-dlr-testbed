@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "fresh_MATPOWER_snapshots": 31,
+  "observed_source_snapshots": 27,
+  "synthetic_zero_counterflow_snapshots": 4,
+  "maximum_branch_error_model_mw": 1.3237411167210666E-11,
+  "maximum_angle_error_degree": 4.5830006456526462E-13,
+  "maximum_generation_change_model_mw": 1.5898393712632242E-11,
+  "maximum_bound_violation_model_mw": 2.2737367544323206E-13,
+  "maximum_interface_error_model_mw": 2.2282620193436742E-11,
+  "maximum_per_device_PAR_target_error_model_mw": 7.1054273576010019E-15,
+  "maximum_original_four_DC_error_model_mw": 7.1054273576010019E-15,
+  "maximum_logical_branch211_error_model_mw": 0,
+  "missing_source_hour_rejected": true,
+  "invalid_topology_rejected": true,
+  "physical_tap_reconstruction_available": false,
+  "physical_HVDC_devices_added": 0,
+  "full_P_Q_thermal_or_tap_feasibility_certified": false,
+  "MATPOWER_solver": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\rundcpf.m",
+  "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+  "dependencies": [
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dispatch\\dispatch\\dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dispatch\\dispatch\\dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_par_controls\\controls\\inputs.mat",
+      "sha256": "585bf12987d319aab802705da5d4b917b9e695e16ee24acf5f093a7a872ebc43"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_par_controls\\controls\\input_receipt.json",
+      "sha256": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_par_controls\\validation\\matlab_fixture_expected.mat",
+      "sha256": "868a5763b39a85f33046799b87881c3e90f7a49ec2a93f9ac668a30d5292d760"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_par_controlled_dc.m",
+      "sha256": "99e6778597e4f023ce967bd0ba9fec18a41ffa9a3139553138d7758e818879cd"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_moses_corrected_dc.m",
+      "sha256": "5971086fc019920f2a7c2317476cdce97945b585632a3136c73aec225d459c46"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_slim_dc.m",
+      "sha256": "2b7a67418717b9b0faf6fc9571e302793a04bd36eb8d54e9af4ecd1ee59be23f"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_full_dc.m",
+      "sha256": "3acff6c7187607c54c8b8e9b4fb4f3ccfe86c2dd3d6c9e22ef8eee75c4ffb2de"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_slim_interfaces.m",
+      "sha256": "c43fe312eda58b0a439d426a5eb05238a08115f07f6b7456b2a0e458cade2845"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_par_controls\\validate_matlab_par.m",
+      "sha256": "ddec7ec6e3743329527a7233d8d1bee676255ce9d8aaf1e0e055ff6a3956c880"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_par_controls\\replay\\dated_verified_PAR_flows.mat",
+      "sha256": "4f034589dc10418d391d99cacf5c062b30c5d82308f0c9b73c06e4ae9c8fe6d1"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_par_controls\\replay\\year_end_verified_PAR_flows.mat",
+      "sha256": "9ed9c74d74f9a21ac45017262f76bf030fcfac9aec0483be07f9ead1a6e2b559"
+    }
+  ]
+}

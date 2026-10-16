@@ -1,0 +1,64 @@
+{
+  "status": "complete_source_tables_with_explicit_quality_flags",
+  "year": 2025,
+  "created_utc": "2026-10-10T06:05:11.870565+00:00",
+  "started_utc": "2026-10-10T06:04:06.512672+00:00",
+  "physical_hours": 8760,
+  "zones": 11,
+  "source_scale": "unscaled_public_MW",
+  "model_gamma_applied": false,
+  "bus_allocation_performed": false,
+  "hour_first_utc": "2025-01-01T05:00:00+00:00",
+  "hour_last_utc": "2026-01-01T04:00:00+00:00",
+  "monthly_2025_archives": 24,
+  "boundary_2026_archives": 1,
+  "source_daily_members_consumed": 731,
+  "load_raw_rows": 96360,
+  "load_hour_zone_keys": 96360,
+  "load_qualified_hour_zone_keys": 96360,
+  "load_hours_all_zones_qualified": 8760,
+  "load_conflicting_duplicate_keys": 0,
+  "P32_annual_raw_rows": 1908324,
+  "P32_endpoint_day_rows": 5202,
+  "P32_channels": 18,
+  "P32_hour_channel_keys": 157680,
+  "P32_qualified_hour_channel_keys": 156114,
+  "P32_hours_all_channels_qualified": 8673,
+  "P32_maximum_gap_seconds": 3000.0,
+  "P32_duplicate_utc_channel_groups": 5544,
+  "P32_conflicting_duplicate_utc_channel_groups": 3035,
+  "P32_fall_fold_resolved_channels": 18,
+  "P32_raw_out_of_order_utc_rows": 0,
+  "P32_positive_limit_sentinel_hour_channel_keys": 8760,
+  "P32_negative_limit_sentinel_hour_channel_keys": 60895,
+  "catalog_EST_hours": 3049,
+  "catalog_EDT_hours": 5711,
+  "catalog_fall_second_fold_hours": 1,
+  "acquisition_counts": {
+    "fresh_official_download": 19,
+    "verified_legacy_cache_copy": 6
+  },
+  "algorithms": {
+    "load": "Official integrated hourly load, source EST/EDT retained; conflicting duplicate/missing keys remain NaN",
+    "P32_time": "No source timezone column; New York calendar plus explicit per-channel raw-order fall clock rewind, fail closed if ambiguous",
+    "P32_mean": "Forward-hold time-weighted mean on [UTC hour, next UTC hour); same-timestamp rows averaged; complete brackets and maximum source gap600s required",
+    "P32_alternative": "Unfilled raw-row arithmetic mean in physical UTC hour, retained only as paper-method diagnostic",
+    "P32_limit_sentinels": "Per-sign flags detect any contributing raw held sample with absolute value9999 before duplicate averaging; mixed sentinel/finite averages are not usable limits",
+    "missing_policy": "No interpolation, extrapolation, long-gap fill, or fabricated spring/fall hour"
+  },
+  "sources": {
+    "loads_index": "https://mis.nyiso.com/public/P-58Clist.htm",
+    "interfaces_index": "https://mis.nyiso.com/public/P-32list.htm"
+  },
+  "limitations": [
+    "SCH channels are schedules, not observed actual interchange; overlapping HQ channels are retained separately and not summed",
+    "Published P32 Flow (MWH) numeric values are treated as power in MW consistently with the existing source pipeline; no energy rescaling",
+    "P32 EST/EDT is inferred from the calendar and raw clock order, not supplied telemetry",
+    "Source quality flags do not establish model accuracy, physical ratings, bus-level demand, or dispatch validity"
+  ],
+  "runtime": {
+    "python": "3.13.7",
+    "pandas": "2.2.3",
+    "numpy": "1.26.4"
+  }
+}

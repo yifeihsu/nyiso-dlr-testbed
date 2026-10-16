@@ -1,0 +1,237 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-16T14:50:14.268390+00:00",
+  "scope": "Slide9 only: seven-row cross-year comparison, source values/deltas, Moses signed-flow statistics, displayed rounding, wording and rendered layout.",
+  "method": "Independent direct reread of all four saved2019 MAT actual/corrected_sim arrays and current2025 comparison_arrays.npz; reconcile with source metric CSVs and slide CSV. No PF rerun or model changes.",
+  "baseline_operator": "authors_released_if_map",
+  "current_operator": "legacy_signed_literal_from",
+  "hours": {
+    "2019": 8760,
+    "2025": 8651
+  },
+  "maximum_slide_CSV_numeric_discrepancy": 3.552713678800501e-15,
+  "maximum_source_metric_numeric_discrepancy": 3.552713678800501e-15,
+  "table_rows": [
+    {
+      "interface": "DYSINGER EAST",
+      "csv_maximum_absolute_error": 3.552713678800501e-15,
+      "source_metric_maximum_absolute_error": 3.552713678800501e-15,
+      "displayed_numeric_tokens_match_rounded_sources": true,
+      "expected_display_tokens": [
+        "209.9",
+        "249.4",
+        "+39.5",
+        "22.49",
+        "29.74",
+        "+7.25",
+        "933",
+        "839",
+        "-10.1"
+      ]
+    },
+    {
+      "interface": "WEST CENTRAL",
+      "csv_maximum_absolute_error": 0.0,
+      "source_metric_maximum_absolute_error": 0.0,
+      "displayed_numeric_tokens_match_rounded_sources": true,
+      "expected_display_tokens": [
+        "218.5",
+        "247.1",
+        "+28.6",
+        "46.81",
+        "44.36",
+        "-2.44",
+        "467",
+        "557",
+        "+19.3"
+      ]
+    },
+    {
+      "interface": "TOTAL EAST",
+      "csv_maximum_absolute_error": 8.881784197001252e-16,
+      "source_metric_maximum_absolute_error": 8.881784197001252e-16,
+      "displayed_numeric_tokens_match_rounded_sources": true,
+      "expected_display_tokens": [
+        "286.5",
+        "499.3",
+        "+212.8",
+        "7.24",
+        "15.95",
+        "+8.71",
+        "3,960",
+        "3,131",
+        "-20.9"
+      ]
+    },
+    {
+      "interface": "MOSES SOUTH",
+      "csv_maximum_absolute_error": 3.552713678800501e-15,
+      "source_metric_maximum_absolute_error": 3.552713678800501e-15,
+      "displayed_numeric_tokens_match_rounded_sources": true,
+      "expected_display_tokens": [
+        "152.7",
+        "108.9",
+        "-43.8",
+        "8.99",
+        "20.18",
+        "+11.19",
+        "1,698",
+        "540",
+        "-68.2"
+      ]
+    },
+    {
+      "interface": "CENTRAL EAST - VC",
+      "csv_maximum_absolute_error": 0.0,
+      "source_metric_maximum_absolute_error": 0.0,
+      "displayed_numeric_tokens_match_rounded_sources": true,
+      "expected_display_tokens": [
+        "211.8",
+        "208.7",
+        "-3.1",
+        "9.63",
+        "12.54",
+        "+2.91",
+        "2,199",
+        "1,664",
+        "-24.4"
+      ]
+    },
+    {
+      "interface": "UPNY CONED",
+      "csv_maximum_absolute_error": 0.0,
+      "source_metric_maximum_absolute_error": 0.0,
+      "displayed_numeric_tokens_match_rounded_sources": true,
+      "expected_display_tokens": [
+        "241.1",
+        "235.2",
+        "-5.9",
+        "9.91",
+        "7.84",
+        "-2.07",
+        "2,433",
+        "2,999",
+        "+23.3"
+      ]
+    },
+    {
+      "interface": "SPR/DUN-SOUTH",
+      "csv_maximum_absolute_error": 1.7763568394002505e-15,
+      "source_metric_maximum_absolute_error": 1.7763568394002505e-15,
+      "displayed_numeric_tokens_match_rounded_sources": true,
+      "expected_display_tokens": [
+        "299.6",
+        "177.2",
+        "-122.3",
+        "10.89",
+        "9.59",
+        "-1.29",
+        "2,752",
+        "1,848",
+        "-32.8"
+      ]
+    }
+  ],
+  "Moses_direct_observed_array_checks": [
+    {
+      "year": 2019,
+      "hours": 8760,
+      "signed_mean_MW": 1697.2364018166622,
+      "mean_abs_MW": 1698.018353110422,
+      "negative_hours": 9,
+      "negative_percent": 0.10273972602739725,
+      "source_review_maximum_absolute_difference": 0
+    },
+    {
+      "year": 2025,
+      "hours": 8651,
+      "signed_mean_MW": -190.1563974620789,
+      "mean_abs_MW": 539.9081680858989,
+      "negative_hours": 5936,
+      "negative_percent": 68.61634493122183,
+      "source_review_maximum_absolute_difference": 0
+    }
+  ],
+  "cross_year_scope_present_on_slide": true,
+  "interpretation_review": "Mean absolute flow is distinguished from signed mean; error deltas are2025 minus2019. Moses figures describe reported/prepared observations, not a certified physical reversal. The on-slide scope and meter-continuity caveats make this descriptive comparison scientifically defensible. Central East is the established old Central East/current CENTRAL EAST - VC name crosswalk, not proof of identical meter membership.",
+  "render_review": {
+    "path": "output/nygrid_weekly_20261015/render/slide-09.jpg",
+    "manually_inspected": true,
+    "all_seven_rows_readable": true,
+    "no_clipped_text_or_overlap": true,
+    "Moses_summary_and_cross_year_caveat_visible": true,
+    "source_note_visible": true,
+    "footer": "9/16"
+  },
+  "issues": [],
+  "reviewed_files": [
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/data/comparison_2019_2025.csv",
+      "sha256": "2844df2e8847d7df845376949c5ee7aa53c7aec98bf7cc02ad83f73928d62f2a",
+      "bytes": 2148
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/figures/comparison_2019_2025.tex",
+      "sha256": "59cf83e6ff740b0327140ba9ddd8fdf1681ab53fe0e9a42cc116ef6065d54398",
+      "bytes": 2036
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/main.tex",
+      "sha256": "79b77b1e8fffc695a6ccca467b0c30e7fda8e18292e9738c78038d40dca9fdc2",
+      "bytes": 19684
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/main.pdf",
+      "sha256": "7be9e3ee2bfa8004f2dbfed1e5673ca31e3fa13ad20f1d2ce4a969d77c4b2675",
+      "bytes": 361736
+    },
+    {
+      "path": "output/nygrid_weekly_20261015/render/slide-09.jpg",
+      "sha256": "343c3a93cd8b3a465965c36acd4e5e680c9fb8883f3ef8f9248aeafdd42cf925",
+      "bytes": 86517
+    },
+    {
+      "path": "output/nygrid_weekly_20261015/evidence/2019_comparison_review.json",
+      "sha256": "78ddff21574eb9698f4d90be172681dd8d4ad90c6dabaf21d9a116848ea0e275",
+      "bytes": 35953
+    },
+    {
+      "path": "output/nygrid_released_2019_comparison/independent/released_2019_recomputed_metrics.csv",
+      "sha256": "e72d9292f3bb9982ef56066774843106f744eea49b08868350afc41682133f7f",
+      "bytes": 5966
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv",
+      "sha256": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308",
+      "bytes": 261282
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079",
+      "bytes": 6391233
+    },
+    {
+      "path": "output/nygrid_2019/annual_1.mat",
+      "sha256": "314d817570b4edfd60b0970f25aee8d126bffd46aa70ceba8ee3bde10b05f274",
+      "bytes": 5569790
+    },
+    {
+      "path": "output/nygrid_2019/annual_2.mat",
+      "sha256": "e72ddd82be691ad4a46cd74c1316e450763944f259cce95e071b972b986383c6",
+      "bytes": 5545875
+    },
+    {
+      "path": "output/nygrid_2019/annual_3.mat",
+      "sha256": "47375d88c36e2a3af33a85eeed461396186404fe9c7486ff43ed4aaec2988aab",
+      "bytes": 5767795
+    },
+    {
+      "path": "output/nygrid_2019/annual_4.mat",
+      "sha256": "795f57ce1ee3f483484da4f98461a9a47eaf15ca573a1dadca3bd3804a5f7431",
+      "bytes": 5461165
+    }
+  ],
+  "files_modified_by_reviewer": [
+    "output/nygrid_weekly_20261015/evidence/2019_comparison_slide_review.json"
+  ]
+}

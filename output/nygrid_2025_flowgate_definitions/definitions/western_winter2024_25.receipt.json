@@ -1,0 +1,172 @@
+{
+  "passed": true,
+  "status": "passed_literal_transcription_source_ambiguities_preserved",
+  "created_utc": "2026-10-12T03:03:12.718717+00:00",
+  "row_counts": {
+    "Dysinger East": 10,
+    "West Central": 16
+  },
+  "checks": [
+    {
+      "term_id": "dysinger_east_winter2024_25_01",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2024_25_02",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2024_25_03",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2024_25_04",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2024_25_05",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2024_25_06",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2024_25_07",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2024_25_08",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2024_25_09",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "dysinger_east_winter2024_25_10",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_01",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_02",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_03",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_04",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_05",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_06",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_07",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_08",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_09",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_10",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_11",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_12",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_13",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_14",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_15",
+      "exact_own_pdf_row": true
+    },
+    {
+      "term_id": "west_central_winter2024_25_16",
+      "exact_own_pdf_row": true
+    }
+  ],
+  "source_issues": [
+    {
+      "term_id": "dysinger_east_winter2024_25_05",
+      "source_issue": "winter2024_25_Telegraph_111_vs_later_Sweden1_111_no_alias_or_change_timestamp_proven"
+    },
+    {
+      "term_id": "west_central_winter2024_25_03",
+      "source_issue": "possible_duplicate_of_Quaker_Rd_Macedon_930_row_not_deduplicated"
+    },
+    {
+      "term_id": "west_central_winter2024_25_08",
+      "source_issue": "possible_duplicate_of_Quaker_Macedon_930_row_not_deduplicated"
+    },
+    {
+      "term_id": "west_central_winter2024_25_14",
+      "source_issue": "source_name_12_115_conflicts_with_voltage_column_34p5_115_no_correction_inferred"
+    }
+  ],
+  "unmarked_meter_entries": 5,
+  "visual_review": "Winter 2024_25 PDF pages 35 and 41 inspected; printed pages 62 and 68",
+  "physical_definition_ready_for_numerical_compilation": false,
+  "limitations": [
+    "Publication date is not the effective timestamp of an hourly P32 definition.",
+    "All literal entries are preserved; apparent duplicate identities and inconsistent voltage labels are not silently corrected.",
+    "Changes across seasonal publications may include editing and physical resection; the source alone does not distinguish them.",
+    "No historical-to-2025 circuit alias, positive P32 sign, physical meter loss, or reduced-model coefficient is inferred."
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/western_2025.csv",
+      "sha256": "382667ec1989f126558381171227824ae3fbfcae523f7264f100c029902aab22"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.pdf",
+      "sha256": "546402b7e85f51441e64a6b68adac53579f83828f6bc8c1195ccc480e082dc0b"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.receipt.json",
+      "sha256": "17e3d72d3e505c423a4893fcb58acb1a72261b06e2afe2197562ba50d858c99d"
+    },
+    {
+      "path": "scripts/nygrid_2025_flowgate_definitions/build_western_winter_ledgers.py",
+      "sha256": "ec313c826af0278a6bb3629720087d09ab3af28a7324d71043bf087a419ab960"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/Winter2024_25_Appendix_page035.png",
+      "sha256": "f9cf7377b06c189fb8d805d4f0679f8ebcb82732aaa2fb9b5cdbebc6ebf89947"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/Winter2024_25_Appendix_page041.png",
+      "sha256": "d3b0c54f9be4af54f5779fe2a27795159e222b0e602270dcc573d4bc8831b782"
+    }
+  ],
+  "output": {
+    "path": "output/nygrid_2025_flowgate_definitions/definitions/western_winter2024_25.csv",
+    "sha256": "1949563de67b230fe8b554bcb33e1697b4a36e91a00c435150a5529a89d21163"
+  }
+}

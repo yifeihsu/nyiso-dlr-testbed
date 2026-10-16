@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "entries": [
+    {
+      "source": "scripts/nygrid_2025_latest_handoff/export_current_structure.m",
+      "source_sha256": "3ed20bd7a1a58f7bde7468c5b150525e3962bc6cd01f19e1499de211ccc644ea",
+      "target": "scripts/nygrid_2025_physical_repair/delivery/export_current_structure.m",
+      "target_sha256": "230c0bb354b6325cf35f4f71b88fdbeb4be357a1f5312dad3ad1076e657d9404"
+    },
+    {
+      "source": "scripts/nygrid_2025_latest_handoff/build_current_structure.py",
+      "source_sha256": "b5e967f8e3166439a89815f676f581b5edd28005431c609760995db141fa6fe8",
+      "target": "scripts/nygrid_2025_physical_repair/delivery/build_current_structure.py",
+      "target_sha256": "1a6f334ffff5c70c5b185976021a37a0a2a0c2b818e10afb1a5f5b30fb9aefe8"
+    },
+    {
+      "source": "scripts/nygrid_2025_latest_map/build_geography_data.py",
+      "source_sha256": "80e1fe453b2d26e7955e08edbbc106eec2fcd8e0b3186fecc0c2bcab62607c44",
+      "target": "scripts/nygrid_2025_physical_repair/delivery/map/build_geography_data.py",
+      "target_sha256": "1cad186616aedfec797cc1c435c7507fdfd195a6ff6bc36aa9248455190d33d7"
+    },
+    {
+      "source": "scripts/nygrid_2025_latest_map/build_network_map.py",
+      "source_sha256": "5bc241daeb6d2053c6b77ae1477401c156c7b103fbb77bb7054c7d036127fd73",
+      "target": "scripts/nygrid_2025_physical_repair/delivery/map/build_network_map.py",
+      "target_sha256": "79c80dbbae84a29e4ee787c47d4d0a4cc98c5b12f88375989ada3a8e147b84ce"
+    },
+    {
+      "source": "scripts/nygrid_2025_latest_map/build_interface_definitions.py",
+      "source_sha256": "eedb65366f478ec34efa0e1f33f008e239b421b155ed1a4d32b6c363240081dc",
+      "target": "scripts/nygrid_2025_physical_repair/delivery/map/build_interface_definitions.py",
+      "target_sha256": "f10722dbd8d0c23648d461c7162ffde30f078ac9cf817be033e2ac56ed52991d"
+    },
+    {
+      "source": "scripts/nygrid_2025_latest_map/export_annual_data.py",
+      "source_sha256": "9e1f9feb51e7f6eca180dbb34340aa55b2da2260a6d1cbc0162c93117eaf5e78",
+      "target": "scripts/nygrid_2025_physical_repair/delivery/map/export_annual_data.py",
+      "target_sha256": "41fa4072a8d0ad91a628b05af9afea5f1f635830bdc62e7982206a5af1109534"
+    }
+  ]
+}

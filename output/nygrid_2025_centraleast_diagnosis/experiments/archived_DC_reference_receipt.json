@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "observations_read": false,
+  "primary_hours": [
+    2630,
+    4194,
+    523,
+    4000,
+    8508,
+    8471,
+    8472,
+    3360
+  ],
+  "diagnostic_extreme_hours": [
+    4746,
+    4213,
+    4740
+  ],
+  "source": {
+    "path": "output/nygrid_2025_dover_parameters/replay/bounded_x_nominal.npz",
+    "sha256": "0b1c2075989ba715fe356eaef24a008a2d4196e11034dbc44fb193dc469b85f9"
+  },
+  "output": {
+    "path": "output/nygrid_2025_centraleast_diagnosis/experiments/archived_DC_reference.mat",
+    "sha256": "7847232175a383a7298a24c62c25a381e52cc73f367e66be86f31afcc77e9641"
+  },
+  "source_scoring_receipt": {
+    "path": "output/nygrid_2025_dover_parameters/comparison/scoring_receipt.json",
+    "sha256": "5cbae13f3ee2c9923d6bdf196164f41283ea7f9bb51d94577263e49ef582f2c1"
+  },
+  "gamma": 0.30012075175285535,
+  "qualified_hours": 8651
+}

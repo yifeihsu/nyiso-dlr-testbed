@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-10-15T06:02:24Z",
+  "purpose": "Sensitivity to PJM spatial generation allocation, not a historical dispatch correction",
+  "selection": "Reuse all15 calendar-selected frozenhours; no residual ranking",
+  "variant_rule": "Transfer100publicMW between external generator buses130 and134 in both directions; keep original PJM lossweights; reject finite-bound violations",
+  "topological_basis": "Bus134 directly touches NY zoneC via parent79; bus130 is connected to bus124 at the zoneG parent90 landing. These are proxy locations, not certified historical generators.",
+  "held_fixed": "All regional baselinePGtotals, nativePG,HQ,load,sixDC/PARtargets and all admittances",
+  "new_annual_model_candidate": false
+}

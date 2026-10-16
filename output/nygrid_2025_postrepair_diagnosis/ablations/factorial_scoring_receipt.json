@@ -1,0 +1,226 @@
+{
+  "passed": true,
+  "completed": true,
+  "created_utc": "2026-10-16T00:49:06.776006+00:00",
+  "source_qualified_hours": 8651,
+  "scenario_qualified_hours": {
+    "B": 8651,
+    "GP": 8651,
+    "G": 8651,
+    "P": 8651
+  },
+  "same_all_four_qualified_hours": 8651,
+  "excluded_or_failed_not_promoted": true,
+  "all_8760_rows_retained": true,
+  "source_recipe_predeclared": true,
+  "all_seven_interfaces_scored": true,
+  "conventions": [
+    "legacy_signed_literal_from",
+    "oriented_source_side",
+    "oriented_target_side"
+  ],
+  "attribution_sign": "Negative MAE effect means improvement; signed bias and prediction effects retain their algebraic sign.",
+  "Shapley_sum_and_hourly_error_decomposition_verified": true,
+  "within_model_causality_only": true,
+  "physical_P32_meter_equivalence_verified": false,
+  "no_P32_fitting_or_source_mutation": true,
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/scenario_recipe.json",
+      "sha256": "5cd5db970ce86413532613d40ca7ebaed136335b59f264a2f00282d0f26760f8",
+      "bytes": 12586
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079",
+      "bytes": 6391233
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670",
+      "bytes": 12874
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_network.mat",
+      "sha256": "e8cee6440b9b1688893eb1374f10e86a1862d299dd156e79481eaebdb79ce799",
+      "bytes": 275158
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/annual_receipt.json",
+      "sha256": "0d88aa65386c42d0a8dce89ee78b99fe9b8c4259205c82eeadf8f9dd911f8ac0",
+      "bytes": 202662
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/annual_validation.json",
+      "sha256": "b5bc54bce4ed1d16cd2dbf241fa83535b5701fe371b78557d2e89cf9fa2f280a",
+      "bytes": 7133
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/axes.mat",
+      "sha256": "0f4400a653bb7086e313324068a4285e5f23897584b295653c3e7f5cfc7a27fd",
+      "bytes": 7313
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_01.mat",
+      "sha256": "8d6ad8a8042e7f9a294933af1ccc1c4ef1167efe0ec154c4fbef1354e6acaf6e",
+      "bytes": 19592311
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_02.mat",
+      "sha256": "b89fb7b0431541a675a6bce2b9c67d879322aec353aba62a64cce44265f34713",
+      "bytes": 17562051
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_03.mat",
+      "sha256": "7d328b62e640bfa68cff73dd8318de8e9c4ad18b6a98d37d0772db3d41a715dc",
+      "bytes": 19871398
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_04.mat",
+      "sha256": "cf584ed31c88c1540fad4fc5a196efca2974601b1657cc7f2bcc3151cff44d4f",
+      "bytes": 19178647
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_05.mat",
+      "sha256": "7575cb7e0bdbb6ac9e3c8035449dceccc3ac1d68f25204d105d586311b23be57",
+      "bytes": 19942165
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_06.mat",
+      "sha256": "143a392d9e1b3e72edf2f93ec0c3f3b48cf52a5fe90fbce4078a2901619dd776",
+      "bytes": 19674179
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_07.mat",
+      "sha256": "c0575d9ee2b17f2dc09eb56259c57b661a9387de8b6b0570489c7b8cedf27575",
+      "bytes": 20208273
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_08.mat",
+      "sha256": "12f018521ee9ca8ab9cb46062e67ed1e89d738db794061233ce925cb1b5b6246",
+      "bytes": 20050397
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_09.mat",
+      "sha256": "a959ddb598abb36cf9d0b0448b8f3c9dacf47375744ed515dd6eb8fa8989fcc5",
+      "bytes": 19235750
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_10.mat",
+      "sha256": "0a6d97a253684888f9cccdd05f18295d35b5d4712450953adcf5ddf017679458",
+      "bytes": 19817709
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_11.mat",
+      "sha256": "132e8065cd7077a172eb702bce760e5cb28ecce5087085a137f390b419fe7b92",
+      "bytes": 19061939
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/G_v1/monthly/ablation_12.mat",
+      "sha256": "25775b7337314ea13f95eee67678d455e0a9cc6e68096313bc413c7dcdf5d8f9",
+      "bytes": 19782601
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/annual_receipt.json",
+      "sha256": "2a5575c946e95425a345b81f5ae1e6f73c4633b463f3a46747d34a74516027a7",
+      "bytes": 202663
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/annual_validation.json",
+      "sha256": "567a5be5730c7b53d8bb1796e089de003e7609b3a20dbe7ba61a6a17f7ee7438",
+      "bytes": 7149
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/axes.mat",
+      "sha256": "b66296d46b045e8c4039725b51ab3ba32a95409a9cd6ccb42df31cbe9e20a0c7",
+      "bytes": 7313
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_01.mat",
+      "sha256": "66d395c872a7a781563f3a46a98abad6c74fd279c5d2779423e70c762043e1c6",
+      "bytes": 19659681
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_02.mat",
+      "sha256": "9ca34fab025a7cd50f4fc679d6ab8ad1c737eb3038e93ba9555d28f65469679a",
+      "bytes": 17635198
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_03.mat",
+      "sha256": "e4c18112f181be8c8413013fb723e4bfa6efed8e8514e18ca628b920c80249fc",
+      "bytes": 19944253
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_04.mat",
+      "sha256": "f3267aeeded9e1d7ba71f9b451a8dedc5c6ca1d9904a4b274bceedaf4d02543e",
+      "bytes": 19250619
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_05.mat",
+      "sha256": "47b2a161f0595de048455534a23ecf40e69b2f7f87ba5a00cec44764dafba929",
+      "bytes": 20029006
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_06.mat",
+      "sha256": "02678aa21df944ca4c7d0ab6c8268570f4cf264971c8aebe4b9c48d2942a6402",
+      "bytes": 19759968
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_07.mat",
+      "sha256": "cc0a3a9e9697e57fb35d93f183c25e9a69ddef5b6c2af5b4b7ea8335698124cb",
+      "bytes": 20346263
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_08.mat",
+      "sha256": "316a399d626335e83b84d94a41b170f152761c176fb2fdaaa69079f15da34fdc",
+      "bytes": 20393311
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_09.mat",
+      "sha256": "880593dfd392b07e888ec4f7f34637ce884feb09c7cd776d53c82397c3a9d693",
+      "bytes": 19569952
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_10.mat",
+      "sha256": "325d65ea54bd941475a6d1856723e88a0c206af85b56296ff5cdfe065f0a3e86",
+      "bytes": 20066197
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_11.mat",
+      "sha256": "7638f0c4b69a6d8457ffd468af81f2ade43e8954301c6c17d33c34da7589b0a9",
+      "bytes": 19137931
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/P_v1/monthly/ablation_12.mat",
+      "sha256": "bdc90353594223d72cce4e7227a13c4187e5a87c0b62b9d5672d8a7c616629f3",
+      "bytes": 19864895
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_metrics.csv",
+      "sha256": "00660a3798cbc2b5e7e1275449fb4e4e05f8155fa64d45432bbeff953afdcdb6",
+      "bytes": 243845
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_attribution.csv",
+      "sha256": "5f0053eefcc0448959b193ccd3414657a64886875101fdf2e99ea0acd83fd71f",
+      "bytes": 725629
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_arrays.npz",
+      "sha256": "1a53863f2b59b9655c8bf6c8930bcd66d4c15ba7b1c00fc49be00a2f8fcf793a",
+      "bytes": 5870305
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/hourly_Moses_TotalEast_attribution.csv",
+      "sha256": "5c8585fb93aec7c9901919be0aa71f13a90575025c663cdd58a3adb3fd2b84b5",
+      "bytes": 4274085
+    }
+  ],
+  "producer": {
+    "path": "scripts/nygrid_2025_postrepair_diagnosis/ablations/score_factorial.py",
+    "sha256": "46d7dd16c20c9fccc5994ffa2911eebf5649c991181d6ae1fab656ca7c5513c4",
+    "bytes": 10650
+  }
+}

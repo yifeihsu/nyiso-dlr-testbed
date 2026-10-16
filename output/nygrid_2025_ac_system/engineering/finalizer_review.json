@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T22:02:10.220547+00:00",
+  "scope": "Independent finalizer source inspection plus read-only package verification and an in-memory metadata rejection check; no new model or operating solve",
+  "read_only_verification_before_this_review_was_added": {
+    "passed": true,
+    "files": 453,
+    "bytes": 165478141,
+    "proof_checks": 520,
+    "report_local_links": 21
+  },
+  "partial_qualification_preserved": {
+    "qualified_electrical_hours": [
+      2630,
+      8471,
+      8472,
+      8508
+    ],
+    "unqualified_electrical_hours": [
+      523,
+      4000,
+      4194
+    ],
+    "qualified_weather_points": 4,
+    "attempted_weather_points": 8,
+    "all_operating_points_feasible": false
+  },
+  "reviewed_guards": [
+    "Required construction, classification, runtime and adapter receipts must pass and their current dependency hashes must match.",
+    "Operating receipt scope retains failed attempts, excludes full-year feasibility and excludes global infeasibility claims.",
+    "Independent whole-network audit confirms all eight attempts and four successful-point ACPF replays without claiming temperature equilibrium.",
+    "Public default API smoke receipt is required in addition to component tests.",
+    "Prior P34 and Dover delivery files are checked against their preserved manifests without rerunning earlier simulations.",
+    "Contract retains unresolved composite interiors, synthetic equipment status and fixed-reference-temperature limitations.",
+    "Verify mode compares the entire expected delivery manifest including qualification metadata and file hashes.",
+    "Verify mode only reads files and prints results; seal mode writes the contract and manifest.",
+    "The delivery manifest excludes itself from package hash coverage.",
+    "The report review checks the delivery-manifest link for existence only, avoiding a circular hash dependency."
+  ],
+  "metadata_rejection_fixture": {
+    "passed": true,
+    "mutation": "all_selected_operating_points_feasible=True in an in-memory copy of the parsed manifest",
+    "rejection": "Delivery bytes or qualification metadata changed after sealing",
+    "disk_manifest_modified": false
+  },
+  "resolved_findings": [
+    "Full manifest equality now rejects contradictory qualification metadata; the original file-list-only comparison was corrected."
+  ],
+  "unresolved_findings": [],
+  "delivery_manifest_not_a_hash_dependency": true,
+  "packaging_note": "The finalizer must be resealed after adding this review; this review deliberately does not bind a hash of the delivery manifest.",
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_ac_system/finalize_ac_system.py",
+      "sha256": "42d796cdce4716ce2d5c037451516681b8638edd6d0c1df95bcd117d07339320"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/AC_SYSTEM_CONTRACT.json",
+      "sha256": "a56bb7128838a01e66fc2d788909e98a1a27037b5231ee8f4a3cc76c985d8ad0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/report_review.json",
+      "sha256": "175f894c2992ef8b05f6b3f79d40d48ba9e08087c095c546e6f41adc9c42c909"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/public_api_smoke.json",
+      "sha256": "6cc3af8c513528c00a0f2f3fda3dafb445b602e78e3f4c6a8d52aeb52bde6523"
+    }
+  ]
+}

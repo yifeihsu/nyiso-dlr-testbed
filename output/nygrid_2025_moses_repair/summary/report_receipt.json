@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T22:14:16.734706+00:00",
+  "complete_annual_evidence": true,
+  "source_qualified_hours": 8651,
+  "paired_hours": 8651,
+  "full_operating_qualified_hours": 0,
+  "interfaces": [
+    "DYSINGER EAST",
+    "WEST CENTRAL",
+    "TOTAL EAST",
+    "MOSES SOUTH",
+    "CENTRAL EAST - VC",
+    "UPNY CONED",
+    "SPR/DUN-SOUTH"
+  ],
+  "primary_convention": "legacy_signed_literal_from",
+  "source_binding_counts": {
+    "verified": 15,
+    "assumed": 3,
+    "unresolved": 4
+  },
+  "physical_P32_meter_equivalence_verified": false,
+  "hourly_StLawrence_is_reconstruction": true,
+  "raw_P63_exact_preservation_claimed": false,
+  "full_calendar_EIA_energy_MWh": 6726939,
+  "all_inputs_unchanged": true,
+  "pending_packaging_links": [],
+  "figure_visual_inspection": {
+    "passed": true,
+    "reviewed_utc": "2026-10-15T22:15:48.750588+00:00",
+    "PNG_inspected": true,
+    "PDF_rendered_and_inspected": true,
+    "PDF_render_tool": "Poppler pdftoppm 110 DPI",
+    "findings": "Both panels, all seven interface labels, paired bar values, Jan-Dec ticks, legend, units and qualifications are legible with no clipping or overlap. Open/filled bars and dashed-square/solid-circle lines distinguish comparators without relying only on color.",
+    "files": [
+      {
+        "path": "output/nygrid_2025_moses_repair/summary/moses_repair_comparison.png",
+        "sha256": "f999bc8aa09bc8128644557122e702380ca0a8db31b6e8e38fea74387c72d4d2",
+        "bytes": 241088
+      },
+      {
+        "path": "output/nygrid_2025_moses_repair/summary/moses_repair_comparison.pdf",
+        "sha256": "364edc4e6bed42aa27553aa56f8ef52308691f0b31a42d596f7fb252f3ae0984",
+        "bytes": 27466
+      }
+    ],
+    "independent_parent_PNG_review_passed": true,
+    "independent_parent_report_review": "Numerical claims, caveats and cohorts reviewed; figure readable; no substantive findings.",
+    "PDF_pages_verified": 1
+  },
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv",
+      "sha256": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308",
+      "bytes": 261282
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_receipt.json",
+      "sha256": "42292179c49ca8fd9b8b7f7eb1e2406713a1c675a7b6763b2726b9678051bc0d",
+      "bytes": 211362
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_input_accounting_review.json",
+      "sha256": "a0c7d6d1cb55c6e2e4142d3557b3193addc4317177c4cabdc44189a3b4cbc186",
+      "bytes": 13122
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_physics_review.json",
+      "sha256": "f41e9e9d819a5a0a344fdcfbcf5a21b2a652d6337c29fc83ebc8a89237afdc90",
+      "bytes": 14635
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/scoring_receipt.json",
+      "sha256": "3dc8fb5fb58db73e6add7b17cc76cbb1c813436d1c009783ac2da08e90435d25",
+      "bytes": 6227
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/independent_scoring_crosscheck.json",
+      "sha256": "941c6e304b9bb603d1a3dd1df4d1bb3b7f7b7e21bf960b7d2f687f28ee508d60",
+      "bytes": 1419
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/candidate_receipt.json",
+      "sha256": "04c717e2a2361064c662277afd4e49181beb135ca41db1810defb22bdcd0f1fc",
+      "bytes": 8187
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/independent_generation_review.json",
+      "sha256": "6bbe6997d1a76b5423cea19b3d337c023a4adb341daa9ecf2c48d7f094091b94",
+      "bytes": 1980
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/generation_policy.json",
+      "sha256": "87c20c37415a47f102ac978bc724f3fc25323639683ae0a613899fa34f5a293a",
+      "bytes": 5477
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/StLawrence_monthly_energy_ledger.csv",
+      "sha256": "e5375d977b2e5fea74dbacba04af5fa4fca331e022bf09b4434725cd8b2f956f",
+      "bytes": 2701
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/boundary_verification_receipt.json",
+      "sha256": "bf6894762f315e925e5948f976151e226c77a81f83c65ad794efbf3d41d5faad",
+      "bytes": 28005
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/PV20_source_receipt.json",
+      "sha256": "74545707c320f7658d5ddceb6822a79ee18199f56db86fc3e6745e3dfe7744ed",
+      "bytes": 8473
+    }
+  ],
+  "outputs": [
+    {
+      "path": "NYGRID_2025_MOSES_REPAIR.md",
+      "sha256": "3faabcb7380bd03996db6c5127474216f24bc20338f23a2c269dfc7025d35215",
+      "bytes": 16085
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/summary/moses_repair_comparison.png",
+      "sha256": "f999bc8aa09bc8128644557122e702380ca0a8db31b6e8e38fea74387c72d4d2",
+      "bytes": 241088
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/summary/moses_repair_comparison.pdf",
+      "sha256": "364edc4e6bed42aa27553aa56f8ef52308691f0b31a42d596f7fb252f3ae0984",
+      "bytes": 27466
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/summary/annual_paired_comparison.csv",
+      "sha256": "cb824f84f51910336751f7bf0ec88dced6c44797272832adc6a5351f85e13a3e",
+      "bytes": 1232
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/summary/monthly_moses_comparison.csv",
+      "sha256": "fe121b46dadc28a2891f34f58f9e2b1712cfa5a9bccc1412e68c737d814bbcce",
+      "bytes": 1086
+    }
+  ],
+  "producer": {
+    "path": "scripts/nygrid_2025_moses_repair/build_report.py",
+    "sha256": "4913acd848cb3e6b24b9d7305f161bc5ca9718d1ee03f044f5ed86614e14bfb6",
+    "bytes": 26669
+  },
+  "all_local_report_links_resolve": true,
+  "local_report_links_checked": 23
+}

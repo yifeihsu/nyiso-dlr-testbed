@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "fresh_MATPOWER_snapshots": 131,
+  "variants": [
+    "expanded_identity",
+    "source_detail_2019",
+    "upgrades_year_end",
+    "upgrades_dated",
+    "assets_year_end",
+    "assets_dated",
+    "nyes_assumption_year_end"
+  ],
+  "maximum_branch_error_model_mw": 2.5102053768932819E-10,
+  "maximum_generation_change_model_mw": 2.8199664825478976E-10,
+  "maximum_bound_violation_model_mw": 2.2737367544323206E-13,
+  "maximum_interface_error_model_mw": 2.3533175408374518E-10,
+  "missing_source_hour_rejected": true,
+  "matlab_version": "26.1.0.3276743 (R2026a) Update 3",
+  "dependencies": [
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_downstate\\replay\\expanded_identity.mat",
+      "sha256": "e62a4ec0e003bf0394a486d78a8d6398445004db6c01bbfc2ce19628a1f7f289"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_downstate\\replay\\source_detail_2019.mat",
+      "sha256": "8892b5d3ab9cfe31b3e64ca5020a15759d0d61b8ec2f5cdc3fbc1c4bc449e218"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_downstate\\replay\\upgrades_year_end.mat",
+      "sha256": "2c28b3331310eabf471f1981a0f0f8a386ae841cd0bf3b69e214880e9ce243bc"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_downstate\\replay\\upgrades_dated.mat",
+      "sha256": "c9da03615b3bcbff1eaa7ddf1031e1f5c26c82587774ba29dc964afac2bcaf5e"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_downstate\\replay\\assets_year_end.mat",
+      "sha256": "5f376a07b90360f1807123d7350288a7e3bbcfcfa5ce699684020fa2657ca023"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_downstate\\replay\\assets_dated.mat",
+      "sha256": "7501308c9ae2555819c795658caf10da1cdda00f53dd53ccaad474d040c148a4"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_downstate\\replay\\nyes_assumption_year_end.mat",
+      "sha256": "e7d1aaa3dc0cc048c9a5c65c9acd397b859cb6d8e9b31cb7cbf7fb6157acf871"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_downstate\\network\\network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dispatch\\dispatch\\dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dispatch\\dispatch\\dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_downstate_dc.m",
+      "sha256": "05274b555ef45351eaf05b3b7b7fa7316f684d115a5e0dd0583a6eb3e5893347"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_downstate\\validate_matlab_refinement.m",
+      "sha256": "623ee16cc4205cb844c5f1d264cc01a119be3a6bd6de5ff0e2607e90c4f8e97c"
+    }
+  ]
+}

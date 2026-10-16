@@ -1,0 +1,65 @@
+{
+  "status": "complete_mapping_only_anchor_register",
+  "records": 11,
+  "located_station_anchors": 8,
+  "retained_unlocated_aggregate_proxies": [
+    78,
+    79,
+    82
+  ],
+  "source_voltage_caveat_bus80": true,
+  "no_electrical_arrays_or_zones_changed": true,
+  "network_sha256_before": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+  "network_sha256_after": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+  "goethals_canonical_host": {
+    "model_bus": 81,
+    "shared_project_bus": 20010,
+    "latitude_deg": 40.617053700847286,
+    "longitude_deg": -74.19615879415518,
+    "source_feature_id": "way/383102699",
+    "source_feature_version": "3",
+    "source_feature_timestamp": "2023-11-02T01:28:53Z",
+    "geometry_crs": "EPSG:32618",
+    "output_crs": "EPSG:4326",
+    "method": "polygon_area_centroid"
+  },
+  "sources": [
+    {
+      "path": "PERFORM/Auxilliary_Perform_NY/NYISO_MOD2MAP.xlsx",
+      "sha256": "4fe4e89009f70e8a31ea73dd14b9f22ef97121d92b99ab8a1f59aec29eef33ec"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_historical/raw_receipts/eversource_southington.json",
+      "sha256": "d7fe3ee646cd796aaeab484e4216ee3c470247410354c66201efae82387d7e00"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/project_station_coordinates.csv",
+      "sha256": "c8e143d16b261ef8e348d7b3168bc475a301c96352d623ca26331276d8729659"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/source_project/osm_way_383102699.json",
+      "sha256": "5ad293f5497a9497e3949e2ea83d5b30cbf975c2c2cdb77c65517b192cea4ad5"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/build_historical_geography.py",
+      "sha256": "c4f4082c092db19721242453030eb1a69404126bd4316049d29e532ada55ed40"
+    }
+  ],
+  "coordinate_update_verification": {
+    "changed_model_buses": [
+      81
+    ],
+    "other_anchor_rows_identical": true,
+    "historical38row_csv_byte_identical": true,
+    "shared_81_20010_coordinate_strings_identical": true,
+    "network_sha256_unchanged": true
+  }
+}

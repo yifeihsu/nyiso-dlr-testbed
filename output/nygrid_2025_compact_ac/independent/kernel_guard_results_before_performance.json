@@ -1,0 +1,195 @@
+{
+  "passed": true,
+  "tests": 30,
+  "checks": [
+    {
+      "test": "source_R",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "source_X",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "source_B",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "source_phase",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "source_tap",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "source_BS",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "source_GS",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "source_status",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "operator_Yred",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "operator_lift",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "operator_YfL",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "operator_YtL",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "operator_seriesL",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "operator_from_current_base",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "operator_to_current_base",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "operator_retained_row_map",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "operator_branch_key",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "operator_branch_parent",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "edited_compact_bus_view",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "edited_compact_gen_view",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "nonzero_eliminated_load_promotes_only_its_bus",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "new_PV_generator_promotes_only_its_bus",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "new_DC_terminal_promotes_only_its_bus",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "fixed_shunt_remains_eliminable_but_changes_operator",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "isolated_shunted_interior_rejected",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "anchored_resonant_singular_interior_rejected",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "empty_converter_and_promotion_arrays_hash",
+      "passed": true,
+      "error": 0
+    },
+    {
+      "test": "paired_8508_full_compact_qlim0",
+      "passed": true,
+      "error": 2.6630857519194251E-9
+    },
+    {
+      "test": "paired_8508_full_compact_qlim1",
+      "passed": true,
+      "error": 2.763044903986156E-9
+    },
+    {
+      "test": "paired_8508_full_compact_qlim2",
+      "passed": true,
+      "error": 1.4524630387313664E-9
+    }
+  ],
+  "paired_control_cases": [
+    {
+      "qlim": 0,
+      "compact_success": true,
+      "full_success": true,
+      "voltage_error_pu": 1.2735833387088324E-12,
+      "PG_error_MW": 4.3678483052644879E-10,
+      "QG_error_MVAr": 1.4988472685217857E-9,
+      "branch_power_error_MVA": 1.5048016166474554E-9,
+      "current_error_A": 2.6630857519194251E-9,
+      "compact_outer_iterations": 1
+    },
+    {
+      "qlim": 1,
+      "compact_success": true,
+      "full_success": true,
+      "voltage_error_pu": 4.5755469243685268E-13,
+      "PG_error_MW": 2.8489921533036977E-10,
+      "QG_error_MVAr": 1.1186784831807017E-10,
+      "branch_power_error_MVA": 3.4015812389043276E-10,
+      "current_error_A": 2.763044903986156E-9,
+      "compact_outer_iterations": 3
+    },
+    {
+      "qlim": 2,
+      "compact_success": true,
+      "full_success": true,
+      "voltage_error_pu": 2.3031498376196789E-13,
+      "PG_error_MW": 6.8212102632969618E-12,
+      "QG_error_MVAr": 8.0035533756017685E-11,
+      "branch_power_error_MVA": 1.8452794847689802E-10,
+      "current_error_A": 1.4524630387313664E-9,
+      "compact_outer_iterations": 769
+    }
+  ],
+  "network_phase_shift_preserved": true,
+  "full_converted_generator_setup_matches": true,
+  "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+  "scope": "Independent kernel mutations and one existing profile under three Q-limit modes; not annual operating qualification"
+}

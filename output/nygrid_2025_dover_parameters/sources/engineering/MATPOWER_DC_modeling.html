@@ -1,0 +1,237 @@
+<!DOCTYPE html> 
+<html  lang="en"> 
+<head><title>DC Modeling</title> 
+<meta  charset="UTF-8" /> 
+<meta  name="viewport" content="width=device-width,initial-scale=1.0" /> 
+<link  rel="stylesheet" type="text/css" href="MATPOWER.css" /> 
+</head><body  
+>
+   <!--l. 944--><div  class="crosslinks"><p  class="noindent">[<a  
+href="NetworkEquations.html" >prev</a>] [<a  
+href="NetworkEquations.html#tailNetworkEquations.html" >prev-tail</a>] [<a  
+href="Gettingmatpower.html#tailDCModeling.html">tail</a>] [<a  
+href="StandardDCOPF.html#RegisteringtheCallbacks.html" >up</a>] </p></div>
+   <h4  class="subsectionHead"><span  class="titlemark">3.7   </span> <a  
+ id="x49-340003.7"></a>DC Modeling</h4>
+<!--l. 946--><p  class="noindent" >The DC formulation <span  class="cite">[<a  
+href="tocbibnameprwmkbothtocbibname.html#Xwood1996">20</a>]</span> is based on the same parameters, but with the following three
+additional simplifying assumptions.
+</p>
+      <ul  class="itemize1">
+      <li  class="itemize">Branches can be considered lossless. In particular, branch resistances <img  
+src="MATPOWER108x.svg" alt="rs  "  class="math"  /> and
+      charging capacitances <img  
+src="MATPOWER109x.svg" alt="bc  "  class="math"  /> are negligible:
+      <table  
+class="equation"><tr><td><a  
+ id="eq:lossless"></a>
+      <center  class="math-display" >
+      <img  
+src="MATPOWER110x.svg" alt="y =  ---1----≈  -1-,   b ≈ 0.
+ s   rs + jxs   jxs     c
+      " class="math-display"  /></center></td><td  class="equation-label">(3.18)</td></tr></table>
+      <!--l. 953--><p  class="nopar" >
+      </p></li>
+      <li  class="itemize">All bus voltage magnitudes are close to 1 p.u.
+      <table  
+class="equation"><tr><td><a  
+ id="eq:V1"></a>
+                                                                                  
+                                                                                  
+      <center  class="math-display" >
+      <img  
+src="MATPOWER111x.svg" alt="      j𝜃i
+vi ≈ e  .
+      " class="math-display"  /></center></td><td  class="equation-label">(3.19)</td></tr></table>
+      <!--l. 958--><p  class="nopar" >
+      </p></li>
+      <li  class="itemize">Voltage angle diﬀerences across branches are small enough that
+      <table  
+class="equation"><tr><td><a  
+ id="eq:sin"></a>
+      <center  class="math-display" >
+      <img  
+src="MATPOWER112x.svg" alt="sin(𝜃f − 𝜃t − 𝜃shift) ≈ 𝜃f − 𝜃t − 𝜃shift.
+      " class="math-display"  /></center></td><td  class="equation-label">(3.20)</td></tr></table>
+      <!--l. 963--><p  class="nopar" >
+      </p></li></ul>
+<!--l. 966--><p  class="indent" >   Substituting the ﬁrst set of assumptions regarding branch parameters from (<a  
+href="#eq:lossless">3.18<!--tex4ht:ref: eq:lossless --></a>), the
+branch admittance matrix in (<a  
+href="Branches.html#eq:Ybr">3.2<!--tex4ht:ref: eq:Ybr --></a>) approximates to
+</p>
+   <table  
+class="equation"><tr><td><a  
+ id="x49-34004r21"></a>
+                                                                                  
+                                                                                  
+   <center  class="math-display" >
+<img  
+src="MATPOWER113x.svg" alt="          [                     ]
+      -1--     1τ2     − τe−j1𝜃shift
+Ybr ≈ jxs   − -j1𝜃---      1      .
+              τe shift
+" class="math-display"  /></center></td><td  class="equation-label">(3.21)</td></tr></table>
+<!--l. 974--><p  class="nopar" >
+Combining this and the second assumption with (<a  
+href="Branches.html#eq:if_it">3.1<!--tex4ht:ref: eq:if_it --></a>) yields the following approximation
+for <img  
+src="MATPOWER114x.svg" alt="if  "  class="math"  />:
+</p>
+   <div  class="align"><img  
+src="MATPOWER115x.svg" alt="pict"  /><a  
+ id="eq:if"></a></div>
+<!--l. 981--><p  class="indent" >   The approximate real power ﬂow is then derived as follows, ﬁrst applying (<a  
+href="#eq:V1">3.19<!--tex4ht:ref: eq:V1 --></a>) and
+(<a  
+href="#eq:if">3.22<!--tex4ht:ref: eq:if --></a>), then extracting the real part and applying (<a  
+href="#eq:sin">3.20<!--tex4ht:ref: eq:sin --></a>).
+</p>
+                                                                                  
+                                                                                  
+   <div  class="align"><img  
+src="MATPOWER116x.svg" alt="pict"  /><a  
+ id="x49-34006r23"></a></div>
+<!--l. 990--><p  class="indent" >   As expected, given the lossless assumption, a similar derivation for the power injection
+at the <span  
+class="cmti-12">to </span>end of the line leads to leads to <img  
+src="MATPOWER117x.svg" alt="pt = − pf  "  class="math"  />.
+</p><!--l. 992--><p  class="indent" >   The relationship between the real power ﬂows and voltage angles for an individual
+branch <img  
+src="MATPOWER118x.svg" alt="i  "  class="math"  /> can then be summarized as
+</p>
+   <table  
+class="equation"><tr><td><a  
+ id="x49-34007r24"></a>
+   <center  class="math-display" >
+<img  
+src="MATPOWER119x.svg" alt="[  p  ]      [  𝜃  ]
+    f  =  Bibr    f  +  Pishift
+   pt           𝜃t
+" class="math-display"  /></center></td><td  class="equation-label">(3.24)</td></tr></table>
+<!--l. 995--><p  class="nopar" >
+where
+</p>
+                                                                                  
+                                                                                  
+   <div  class="align"><img  
+src="MATPOWER120x.svg" alt="pict"  /></div>
+<!--l. 1001--><p  class="indent" >   and <img  
+src="MATPOWER121x.svg" alt="bi  "  class="math"  /> is deﬁned in terms of the series reactance <img  
+src="MATPOWER122x.svg" alt="xis  "  class="math"  /> and tap ratio <img  
+src="MATPOWER123x.svg" alt="τ i  "  class="math"  /> for branch <img  
+src="MATPOWER124x.svg" alt="i  "  class="math"  />
+as
+</p>
+   <center  class="math-display" >
+<img  
+src="MATPOWER125x.svg" alt="b =  -1--.
+ i   xisτi
+" class="math-display"  /></center>
+<!--l. 1004--><p  class="nopar" >
+</p><!--l. 1006--><p  class="indent" >   For a shunt element at bus <img  
+src="MATPOWER126x.svg" alt="i  "  class="math"  />, the amount of complex power consumed is
+</p>
+   <div  class="align"><img  
+src="MATPOWER127x.svg" alt="pict"  /><a  
+ id="x49-34008r25"></a></div>
+<!--l. 1012--><p  class="indent" >   So the vector of real power consumed by shunt elements at all buses can be
+approximated by
+</p>
+   <table  
+class="equation"><tr><td><a  
+ id="x49-34009r26"></a>
+                                                                                  
+                                                                                  
+   <center  class="math-display" >
+<img  
+src="MATPOWER128x.svg" alt="Psh ≈ Gsh.
+" class="math-display"  /></center></td><td  class="equation-label">(3.26)</td></tr></table>
+<!--l. 1015--><p  class="nopar" >
+</p><!--l. 1017--><p  class="indent" >   With a DC model, the linear network equations relate real power to bus voltage angles,
+versus complex currents to complex bus voltages in the AC case. Let the <img  
+src="MATPOWER129x.svg" alt="n ×  1
+ l  "  class="math"  /> vector
+<img  
+src="MATPOWER130x.svg" alt="Bff  "  class="math"  /> be constructed similar to <img  
+src="MATPOWER131x.svg" alt="Yff  "  class="math"  />, where the <img  
+src="MATPOWER132x.svg" alt="i  "  class="math"  />-th element is <img  
+src="MATPOWER133x.svg" alt="bi  "  class="math"  /> and let <img  
+src="MATPOWER134x.svg" alt="Pf,shift   "  class="math"  /> be
+the <img  
+src="MATPOWER135x.svg" alt="nl × 1  "  class="math"  /> vector whose <img  
+src="MATPOWER136x.svg" alt="i  "  class="math"  />-th element is equal to <img  
+src="MATPOWER137x.svg" alt="   i
+− 𝜃shiftbi  "  class="math"  />. Then the nodal real power
+injections can be expressed as a linear function of <img  
+src="MATPOWER138x.svg" alt="Θ  "  class="math"  />, the <img  
+src="MATPOWER139x.svg" alt="nb × 1  "  class="math"  /> vector of bus voltage
+angles
+</p>
+   <table  
+class="equation"><tr><td><a  
+ id="x49-34010r27"></a>
+   <center  class="math-display" >
+<img  
+src="MATPOWER140x.svg" alt="Pbus(Θ ) = BbusΘ +  Pbus,shift
+" class="math-display"  /></center></td><td  class="equation-label">(3.27)</td></tr></table>
+<!--l. 1020--><p  class="nopar" >
+where
+</p>
+   <table  
+class="equation"><tr><td><a  
+ id="x49-34011r28"></a>
+   <center  class="math-display" >
+<img  
+src="MATPOWER141x.svg" alt="Pbus,shift = (Cf − Ct)TPf,shift.
+" class="math-display"  /></center></td><td  class="equation-label">(3.28)</td></tr></table>
+<!--l. 1024--><p  class="nopar" >
+Similarly, the branch ﬂows at the <span  
+class="cmti-12">from </span>ends of each branch are linear functions of the bus
+voltage angles
+</p>
+   <table  
+class="equation"><tr><td><a  
+ id="eq:Pf"></a>
+   <center  class="math-display" >
+<img  
+src="MATPOWER142x.svg" alt="Pf(Θ ) = BfΘ  + Pf,shift
+" class="math-display"  /></center></td><td  class="equation-label">(3.29)</td></tr></table>
+<!--l. 1029--><p  class="nopar" >
+and, due to the lossless assumption, the ﬂows at the <span  
+class="cmti-12">to </span>ends are given by <img  
+src="MATPOWER143x.svg" alt="Pt = − Pf  "  class="math"  />. The
+construction of the system <img  
+src="MATPOWER144x.svg" alt="B  "  class="math"  /> matrices is analogous to the system <img  
+src="MATPOWER145x.svg" alt="Y  "  class="math"  /> matrices for the
+AC model:
+</p>
+   <div  class="align"><img  
+src="MATPOWER146x.svg" alt="pict"  /><a  
+ id="eq:Bf"></a><a  
+ id="eq:Bbus"></a></div>
+<!--l. 1036--><p  class="indent" >   The DC nodal power balance equations for the system can be expressed in matrix form
+as
+</p>
+   <table  
+class="equation"><tr><td><a  
+ id="eq:dcpf"></a>
+                                                                                  
+                                                                                  
+   <center  class="math-display" >
+<img  
+src="MATPOWER147x.svg" alt="gP(Θ, Pg) = BbusΘ  + Pbus,shift + Pd + Gsh − CgPg =  0
+" class="math-display"  /></center></td><td  class="equation-label">(3.32)</td></tr></table>
+<!--l. 1040--><p  class="nopar" >
+                                                                                  
+                                                                                  
+</p>
+   <!--l. 1045--><div  class="crosslinks"><p  class="noindent">[<a  
+href="NetworkEquations.html" >prev</a>] [<a  
+href="NetworkEquations.html#tailNetworkEquations.html" >prev-tail</a>] [<a  
+href="DCModeling.html" >front</a>] [<a  
+href="StandardDCOPF.html#RegisteringtheCallbacks.html" >up</a>] </p></div>
+<!--l. 1045--><p  class="indent" >   <a  
+ id="tailDCModeling.html"></a> </p> 
+</body> 
+</html>

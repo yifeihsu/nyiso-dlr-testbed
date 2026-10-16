@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "hours": [
+    90,
+    349,
+    1093,
+    1171,
+    1765,
+    1963,
+    2166,
+    2509,
+    2880,
+    3135,
+    3229,
+    3469,
+    3613,
+    3624,
+    3973,
+    4087,
+    4350,
+    4693,
+    5098,
+    5477,
+    5605,
+    5844,
+    6181,
+    6559,
+    6726,
+    6901,
+    7645,
+    7698,
+    8201,
+    8365,
+    8605
+  ],
+  "selection": "17priorrepresentativehours plus monthly StLawrence input peaks and PV20 source extremes; no P32 input",
+  "generator_rows": 1466,
+  "fixed_transfer_rows": 6,
+  "boundary_rows": 1466,
+  "all_four_states": true,
+  "fixed_PQ_contract_passed": true,
+  "all_declared_annual_fields_available": true,
+  "detailed_compact_hour": 90,
+  "detailed_compact_voltage_error_pu": 4.4193152320835454E-14,
+  "detailed_compact_PQ_error_MVA": 7.6676442972711811E-11,
+  "candidate_sha256": "7d465d2bf86027fa28d58bfadce109d283f96ae0fd2a32b85850b8933992ae35",
+  "setup": {
+    "package_root": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_moses_repair\\annual\\candidate_bundle",
+    "runtime_root": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_moses_repair\\annual\\candidate_bundle\\runtime",
+    "model_file": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_moses_repair\\annual\\candidate_bundle\\model\\latest_model.mat",
+    "model_sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8",
+    "matpower_root": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower",
+    "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+    "MATPOWER_version": "8.1",
+    "source_model_commit": "f6c124a97b16f45a98a538c121c6006556255005",
+    "hours": 8760,
+    "source_qualified_hours": 8651,
+    "topology_states": 4,
+    "retained_bus_count": 148,
+    "generator_count": 1466,
+    "fixed_transfer_records": 6,
+    "historical_model_loader_required": false,
+    "persistent_user_path_changed": false,
+    "function_resolution": [
+      {
+        "function": "setup_nygrid_latest",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_moses_repair\\annual\\candidate_bundle\\runtime\\setup_nygrid_latest.m"
+      },
+      {
+        "function": "load_nygrid_latest",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_moses_repair\\annual\\candidate_bundle\\runtime\\load_nygrid_latest.m"
+      },
+      {
+        "function": "run_nygrid_latest_acpf",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_moses_repair\\annual\\candidate_bundle\\runtime\\run_nygrid_latest_acpf.m"
+      },
+      {
+        "function": "screen_nygrid_latest_dlr",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_moses_repair\\annual\\candidate_bundle\\runtime\\screen_nygrid_latest_dlr.m"
+      },
+      {
+        "function": "nylatest_coupled_solve",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_moses_repair\\annual\\candidate_bundle\\runtime\\kernels\\nylatest_coupled_solve.m"
+      },
+      {
+        "function": "nylatest_compact_build",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_moses_repair\\annual\\candidate_bundle\\runtime\\kernels\\nylatest_compact_build.m"
+      },
+      {
+        "function": "nylatest_thermal_candidates",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_moses_repair\\annual\\candidate_bundle\\runtime\\kernels\\nylatest_thermal_candidates.m"
+      },
+      {
+        "function": "runpf",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\runpf.m"
+      },
+      {
+        "function": "makeYbus",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\makeYbus.m"
+      },
+      {
+        "function": "pfsoln",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\pfsoln.m"
+      }
+    ]
+  },
+  "whole_network_operating_feasibility_claimed": false,
+  "annual_started": false
+}

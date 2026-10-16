@@ -1,0 +1,76 @@
+{
+  "status": "passed_final_source_gate_validation",
+  "checked_utc": "2026-10-11T14:05:32.882771+00:00",
+  "tests_run": 21,
+  "failures": 0,
+  "errors": 0,
+  "all_inputs_unchanged_during_tests": true,
+  "frozen_source_or_replay_files_modified": false,
+  "coverage": [
+    "accept complete frozen source proof",
+    "reject unqualified receipt status",
+    "reject missing direction verification and wrong effective date",
+    "reject internal-flow source contamination and absent native P-only screen",
+    "reject reversed/unknown NPZ direction",
+    "reject wrong source hash",
+    "reject empty dependency proof and missing NPZ-output proof",
+    "reject changed limit/direction metadata and numerical-envelope mismatch",
+    "reject applying hardware phase bound to equivalent",
+    "reject per-device positive/negative/cancelling bound violations, missing/infinite targets, invalid dimensions",
+    "reject nonfinite/nonpositive limits in construction and qualification",
+    "preserve four original DC records and signed separate ideal ports",
+    "preserve branch data except representation substitution; no invented phase",
+    "reject native-resolution excursion hidden by averaging",
+    "preserve23/25 DST physical hours and reject wrong count",
+    "preserve missing schedule channel as missing"
+  ],
+  "source_gate_findings_resolved": [
+    "previously unused compiler receipt now enforced before solve",
+    "empty provenance list bypass now rejected with mandatory source/output paths",
+    "qualification helper now rejects invalid limits"
+  ],
+  "physical_claim_scope": "Passing tests establishes source integrity and necessary P-only screening, not complete P/Q, thermal, tap or operational feasibility. P53A schedule direction remains diagnostic.",
+  "inputs": [
+    {
+      "path": "scripts/nygrid_2025_par_controls/replay_controls.py",
+      "sha256": "385626125e848a616921a2840fcf07b84980721a84d556223175188f76314b69"
+    },
+    {
+      "path": "scripts/nygrid_2025_par_controls/controlled_equivalent.py",
+      "sha256": "ee43b19d7b5e5fc2936a38bb9228b703456ce242d0be7ccae5ea8a78d9d6fcbf"
+    },
+    {
+      "path": "scripts/nygrid_2025_par_controls/build_control_inputs.py",
+      "sha256": "a693a82f7fb76bbd9227f5764cdcfd647ec1b6aa4b5ebc7725e19c60af2904a9"
+    },
+    {
+      "path": "scripts/nygrid_2025_par_controls/test_control_sources.py",
+      "sha256": "1e967e868f7c84d912245a6bb73b0c4e8e0cef6b82bf9845f7526b6ed6ad3162"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.mat",
+      "sha256": "585bf12987d319aab802705da5d4b917b9e695e16ee24acf5f093a7a872ebc43"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/input_receipt.json",
+      "sha256": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/direction_verification_receipt.json",
+      "sha256": "70591310ccf0ef85058cb7e92a385594c103a6c717a477db807def1601d4a55e"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/limits/limits.json",
+      "sha256": "80f1f5f97e4dd5d5bb1f74211394fcea358ea5cbbff130d432f3103d5a1e01d8"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_par_controlled_dc.m",
+      "sha256": "99e6778597e4f023ce967bd0ba9fec18a41ffa9a3139553138d7758e818879cd"
+    }
+  ],
+  "test_output": "test_accepts_complete_frozen_source_proof (test_control_sources.SourceGateTests.test_accepts_complete_frozen_source_proof) ... ok\ntest_rejects_absent_NPZ_output_proof (test_control_sources.SourceGateTests.test_rejects_absent_NPZ_output_proof) ... ok\ntest_rejects_absent_dependency_proof (test_control_sources.SourceGateTests.test_rejects_absent_dependency_proof) ... ok\ntest_rejects_changed_direction_metadata (test_control_sources.SourceGateTests.test_rejects_changed_direction_metadata) ... ok\ntest_rejects_changed_equipment_metadata (test_control_sources.SourceGateTests.test_rejects_changed_equipment_metadata) ... ok\ntest_rejects_hardware_phase_bound_on_equivalent (test_control_sources.SourceGateTests.test_rejects_hardware_phase_bound_on_equivalent) ... ok\ntest_rejects_internal_observations_in_source_build (test_control_sources.SourceGateTests.test_rejects_internal_observations_in_source_build) ... ok\ntest_rejects_numerical_envelope_source_disagreement (test_control_sources.SourceGateTests.test_rejects_numerical_envelope_source_disagreement) ... ok\ntest_rejects_reversed_numeric_orientation (test_control_sources.SourceGateTests.test_rejects_reversed_numeric_orientation) ... ok\ntest_rejects_unpassed_native_P_screen (test_control_sources.SourceGateTests.test_rejects_unpassed_native_P_screen) ... ok\ntest_rejects_unqualified_status (test_control_sources.SourceGateTests.test_rejects_unqualified_status) ... ok\ntest_rejects_unverified_NPZ_direction (test_control_sources.SourceGateTests.test_rejects_unverified_NPZ_direction) ... ok\ntest_rejects_unverified_direction (test_control_sources.SourceGateTests.test_rejects_unverified_direction) ... ok\ntest_rejects_wrong_effective_date (test_control_sources.SourceGateTests.test_rejects_wrong_effective_date) ... ok\ntest_rejects_wrong_recorded_source_hash (test_control_sources.SourceGateTests.test_rejects_wrong_recorded_source_hash) ... ok\ntest_DST_day_headers_preserve_physical_hours (test_control_sources.TransferAndClockTests.test_DST_day_headers_preserve_physical_hours) ... ok\ntest_boundary_values_preserve_two_signed_ports_and_original_devices (test_control_sources.TransferAndClockTests.test_boundary_values_preserve_two_signed_ports_and_original_devices) ... ok\ntest_invalid_limits_are_rejected_by_construction_and_qualification (test_control_sources.TransferAndClockTests.test_invalid_limits_are_rejected_by_construction_and_qualification) ... ok\ntest_invalid_targets_are_rejected_per_device (test_control_sources.TransferAndClockTests.test_invalid_targets_are_rejected_per_device) ... ok\ntest_missing_schedule_channel_remains_missing (test_control_sources.TransferAndClockTests.test_missing_schedule_channel_remains_missing) ... ok\ntest_raw_excursion_cannot_hide_in_an_hourly_mean (test_control_sources.TransferAndClockTests.test_raw_excursion_cannot_hide_in_an_hourly_mean) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.589s\n\nOK\n"
+}

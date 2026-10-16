@@ -1,0 +1,352 @@
+{
+  "passed": true,
+  "scope": "independent construction and DC-equivalence audit; physical2025 flowgate and thermal qualification remain unverified",
+  "variants": [
+    {
+      "retained_original_buses": 140,
+      "retained_original_branch_rows": 225,
+      "registered_replaced_parent_rows": 9,
+      "maximum_parent_row_error": 0.0,
+      "variant": "expanded_identity",
+      "active_AC_branches": 276,
+      "maximum_schur_matrix_error_mw_per_rad": 9.322320693172514e-12,
+      "maximum_schur_phase_error_mw": 0.0,
+      "maximum_added_bus_fixed_GS_mw": 0.0,
+      "retained_bus_count": 140,
+      "added_bus_count": 51,
+      "maximum_operator_response_error_mw_per_rad": 4.547473508864641e-12,
+      "maximum_operator_phase_error_mw": 0.0
+    },
+    {
+      "retained_original_buses": 140,
+      "retained_original_branch_rows": 225,
+      "registered_replaced_parent_rows": 9,
+      "maximum_parent_row_error": 0.0,
+      "variant": "refined_2019",
+      "active_AC_branches": 332,
+      "maximum_schur_matrix_error_mw_per_rad": 57712.379154075286,
+      "maximum_schur_phase_error_mw": 0.0,
+      "maximum_added_bus_fixed_GS_mw": 0.0,
+      "retained_bus_count": 140,
+      "added_bus_count": 51,
+      "zone": "K",
+      "loaded_bus_count": 9,
+      "retained_anchor_count": 2,
+      "loaded_buses_unreachable_within_zone": 0
+    },
+    {
+      "retained_original_buses": 140,
+      "retained_original_branch_rows": 225,
+      "registered_replaced_parent_rows": 9,
+      "maximum_parent_row_error": 0.0,
+      "variant": "refined_2025_pre_may",
+      "active_AC_branches": 334,
+      "maximum_schur_matrix_error_mw_per_rad": 57721.49054734653,
+      "maximum_schur_phase_error_mw": 0.0,
+      "maximum_added_bus_fixed_GS_mw": 0.0,
+      "retained_bus_count": 140,
+      "added_bus_count": 51,
+      "zone": "K",
+      "loaded_bus_count": 9,
+      "retained_anchor_count": 2,
+      "loaded_buses_unreachable_within_zone": 0
+    },
+    {
+      "retained_original_buses": 140,
+      "retained_original_branch_rows": 225,
+      "registered_replaced_parent_rows": 9,
+      "maximum_parent_row_error": 0.0,
+      "variant": "refined_2025_may21",
+      "active_AC_branches": 335,
+      "maximum_schur_matrix_error_mw_per_rad": 57725.193634221825,
+      "maximum_schur_phase_error_mw": 0.0,
+      "maximum_added_bus_fixed_GS_mw": 0.0,
+      "retained_bus_count": 140,
+      "added_bus_count": 51,
+      "zone": "K",
+      "loaded_bus_count": 9,
+      "retained_anchor_count": 2,
+      "loaded_buses_unreachable_within_zone": 0
+    },
+    {
+      "retained_original_buses": 140,
+      "retained_original_branch_rows": 225,
+      "registered_replaced_parent_rows": 9,
+      "maximum_parent_row_error": 0.0,
+      "variant": "refined_2025_may30",
+      "active_AC_branches": 336,
+      "maximum_schur_matrix_error_mw_per_rad": 57757.70653129235,
+      "maximum_schur_phase_error_mw": 0.0,
+      "maximum_added_bus_fixed_GS_mw": 0.0,
+      "retained_bus_count": 140,
+      "added_bus_count": 51,
+      "zone": "K",
+      "loaded_bus_count": 9,
+      "retained_anchor_count": 2,
+      "loaded_buses_unreachable_within_zone": 0
+    },
+    {
+      "retained_original_buses": 140,
+      "retained_original_branch_rows": 225,
+      "registered_replaced_parent_rows": 9,
+      "maximum_parent_row_error": 0.0,
+      "variant": "refined_2025",
+      "active_AC_branches": 336,
+      "maximum_schur_matrix_error_mw_per_rad": 57757.70653129235,
+      "maximum_schur_phase_error_mw": 0.0,
+      "maximum_added_bus_fixed_GS_mw": 0.0,
+      "retained_bus_count": 140,
+      "added_bus_count": 51,
+      "zone": "K",
+      "loaded_bus_count": 9,
+      "retained_anchor_count": 2,
+      "loaded_buses_unreachable_within_zone": 0
+    },
+    {
+      "retained_original_buses": 140,
+      "retained_original_branch_rows": 225,
+      "registered_replaced_parent_rows": 10,
+      "maximum_parent_row_error": 0.0,
+      "variant": "refined_2025_nyes",
+      "active_AC_branches": 337,
+      "maximum_schur_matrix_error_mw_per_rad": 57757.70653129235,
+      "maximum_schur_phase_error_mw": 0.0,
+      "maximum_added_bus_fixed_GS_mw": 0.0,
+      "retained_bus_count": 140,
+      "added_bus_count": 51,
+      "zone": "K",
+      "loaded_bus_count": 9,
+      "retained_anchor_count": 2,
+      "loaded_buses_unreachable_within_zone": 0
+    }
+  ],
+  "exact_source_copy": {
+    "exact_source_rows": 97,
+    "maximum_source_parameter_error": 0.0,
+    "source_angle_limits_neutralized": true
+  },
+  "source_qualified_asset_landing_rows": 38,
+  "source_load_coverage": [
+    {
+      "zone": "I",
+      "full_source_pd_mw": 1304.57,
+      "selected_source_pd_mw": 1169.25,
+      "selected_source_fraction": 0.8962723349456143,
+      "residual_fraction_retained_at_original_buses": 0.10372766505438569,
+      "selected_source_load_buses": 2
+    },
+    {
+      "zone": "J",
+      "full_source_pd_mw": 10415.09,
+      "selected_source_pd_mw": 6655.26,
+      "selected_source_fraction": 0.639001679294178,
+      "residual_fraction_retained_at_original_buses": 0.36099832070582205,
+      "selected_source_load_buses": 12
+    },
+    {
+      "zone": "K",
+      "full_source_pd_mw": 4995.65,
+      "selected_source_pd_mw": 293.53000000000003,
+      "selected_source_fraction": 0.058757118693263145,
+      "residual_fraction_retained_at_original_buses": 0.9412428813067368,
+      "selected_source_load_buses": 9
+    }
+  ],
+  "common_interface_definitions": [
+    {
+      "interface": "DYSINGER EAST",
+      "inherited_interface_id": 1,
+      "source_zones": [
+        "A"
+      ],
+      "target_zones": [
+        "B"
+      ],
+      "signed_parent_branch_rows": [
+        -58,
+        61,
+        69,
+        212
+      ],
+      "coefficient_error": 0.0,
+      "physical_2025_interface_membership_verified": false,
+      "interpretation": "legacy NY-zone crossing functional; excludes external-region branches"
+    },
+    {
+      "interface": "WEST CENTRAL",
+      "inherited_interface_id": 2,
+      "source_zones": [
+        "B"
+      ],
+      "target_zones": [
+        "C"
+      ],
+      "signed_parent_branch_rows": [
+        -54,
+        -55,
+        59,
+        72
+      ],
+      "coefficient_error": 0.0,
+      "physical_2025_interface_membership_verified": false,
+      "interpretation": "legacy NY-zone crossing functional; excludes external-region branches"
+    },
+    {
+      "interface": "TOTAL EAST",
+      "inherited_interface_id": 3,
+      "source_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "target_zones": [
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "signed_parent_branch_rows": [
+        -33,
+        -36,
+        -40,
+        -42,
+        224
+      ],
+      "coefficient_error": 0.0,
+      "physical_2025_interface_membership_verified": false,
+      "interpretation": "legacy NY-zone crossing functional; excludes external-region branches"
+    },
+    {
+      "interface": "MOSES SOUTH",
+      "inherited_interface_id": 4,
+      "source_zones": [
+        "D"
+      ],
+      "target_zones": [
+        "E"
+      ],
+      "signed_parent_branch_rows": [
+        -46,
+        -51,
+        -52
+      ],
+      "coefficient_error": 0.0,
+      "physical_2025_interface_membership_verified": false,
+      "interpretation": "legacy NY-zone crossing functional; excludes external-region branches"
+    },
+    {
+      "interface": "CENTRAL EAST - VC",
+      "inherited_interface_id": 5,
+      "source_zones": [
+        "E"
+      ],
+      "target_zones": [
+        "F"
+      ],
+      "signed_parent_branch_rows": [
+        -33,
+        -36,
+        -40,
+        -42
+      ],
+      "coefficient_error": 0.0,
+      "physical_2025_interface_membership_verified": false,
+      "interpretation": "legacy NY-zone crossing functional; excludes external-region branches"
+    },
+    {
+      "interface": "UPNY CONED",
+      "inherited_interface_id": 8,
+      "source_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "target_zones": [
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "signed_parent_branch_rows": [
+        87,
+        -88
+      ],
+      "coefficient_error": 0.0,
+      "physical_2025_interface_membership_verified": false,
+      "interpretation": "legacy NY-zone crossing functional; excludes external-region branches"
+    },
+    {
+      "interface": "SPR/DUN-SOUTH",
+      "inherited_interface_id": 10,
+      "source_zones": [
+        "I"
+      ],
+      "target_zones": [
+        "J"
+      ],
+      "signed_parent_branch_rows": [
+        94,
+        95
+      ],
+      "coefficient_error": 0.0,
+      "physical_2025_interface_membership_verified": false,
+      "interpretation": "legacy NY-zone crossing functional; excludes external-region branches"
+    }
+  ],
+  "original_parent_bus_count": 140,
+  "original_parent_branch_count": 225,
+  "files": [
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/branch_register.csv",
+      "sha256": "6a574d53b40eb2bf08dba851757a5d56ab6b4d89377b2a33e5d6319d5cd2a18f"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/replacement_register.csv",
+      "sha256": "4591b2c9b024f73f76c9028f91336423d926758dc9a6d234f1abe94b61b182e4"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/source_bus_map.csv",
+      "sha256": "56f9bad150c960236c0982a9076d681423f5558aad47c672ab432eaffc188c72"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/generation_landing_register.csv",
+      "sha256": "1b73a02e140d27b09a467943061bca8343359049d550928b079c8699ef966d75"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/load_allocation_register.csv",
+      "sha256": "59decfb9e1d356bd23428c3da991ddb14ec867214fe9f36afb01b5e128f7e3dd"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/source_manifest.csv",
+      "sha256": "c852cd5ad6acd98940f63202bb102cf0ce8e89cc7368b758ff540cb915ca4c94"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/construction_summary.json",
+      "sha256": "cc421bf1b1ab936c5ffbbafc98634dad9d0e2e0c1e4ca434d465358bdcd2e06f"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/sources/asset_landing_crosswalk.csv",
+      "sha256": "b4b10f91587e2579bc0413383405bb2e296e9f20956a79e08f3c414e9d1af2ef"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/validate_refinement.py",
+      "sha256": "e56b89900a38e0f212fe3ef20be28012cc52ea7e4704a0c05e64750d83e78630"
+    }
+  ]
+}

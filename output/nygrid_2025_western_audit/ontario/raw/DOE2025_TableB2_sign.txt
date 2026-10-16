@@ -1,0 +1,59 @@
+OriginalPDFpage151;reportprintedB-4;usedonlyforexternalFlow-signandscope.
+  Report on Strengthening U.S. Grid Reliability and Security
+
+
+
+  Model Performance
+
+  Validating model performance on unseen data is essential to ensure the model’s reliability and
+  generalizability. The following evaluation examines how well the XGBoost model predicts
+  minimum energy transfer (MinFlow) and MaxFlow on the validation split, highlighting strengths
+  and areas for improvement.
+
+  Rigorous performance evaluation is a fundamental step in any ML workflow. From quantifying
+  error metrics (root mean square error and mean absolute error) and goodness-of-fit (R²) on both
+  training and validation splits, it is possible to identify overfitting, assess generalization, and guide
+  model refinement. Table B.1 shows XGBoost model performance for the Ontario–NYISO transfer
+  limit.
+
+
+   Table B.1. eXtreme Gradient Boosting model performance for the Ontario–NYISO transfer limit.
+           Metric             Value                               Explanation
+   MinFlow RMSE (Train)       69.2528 Root mean square error (RMSE) on training data for minimum
+                                      energy transfer (MinFlow)
+   MinFlow R2 (Train)          0.9651 R² on training data for MinFlow (higher  better fit)
+   MinFlow RMSE              163.6642 RMSE on held-out data for MinFlow
+   (Validation)
+   MinFlow R2 (Validation)     0.8073 R² on held-out data for MinFlow (higher  better generalization)
+   MaxFlow RMSE (Train)      114.4234 RMSE on training data for maximum energy transfer (MaxFlow)
+   MaxFlow R2 (Train)          0.8838 R² on training data for MaxFlow (higher  better fit)
+   MaxFlow RMSE              144.9614 RMSE on held-out data for MaxFlow
+   (Validation)
+   MaxFlow R2 (Validation)      0.8178 R² on held-out data for MaxFlow (higher  better generalization)
+
+  Overall, the XGBoost model delivers excellent in-sample as well as out-of-sample accuracy.
+  Similar outputs are available for each transfer limit.
+  Maximum flow predictions: Ontario to New York
+
+  Ontario and NYISO are connected through multiple high-voltage interconnections, which
+  collectively provide a total transfer capability of up to 2,500 MW, subject to individual tie-line limits.
+  Table B.2 outlines the data sources, preparation process, and assumptions used in creating
+  datasets for the prediction models.
+
+
+          Table B.2. Ontario to New York transmission flow data and assumptions overview.
+                                                                 Description
+   Data source                 https://www.ieso.ca/power-data/data-directory
+   Data preparation            IESO public hourly inter-tie schedule flow data can be accessed for the
+                               years spanning from 2002 to 2023.
+   Assumptions                 Positive flow indicates that Ontario is exporting to NY, and negative flow
+                               indicates that Ontario is importing from NY.
+
+  Figure B.4 illustrates the historical monthly MaxFlow for Ontario from 2007 through 2024,
+  alongside 2030 projected quartile scenarios (Q1, Q2, and Q3). Analyzing these trends helps
+  assess future reliability and facilitates capacity planning under varying conditions.
+
+
+
+
+U.S. Department of Energy                                                                                   B-4

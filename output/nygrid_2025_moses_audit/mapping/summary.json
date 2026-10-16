@@ -1,0 +1,70 @@
+{
+  "status": "passed_numerical_mapping_and_raw_channel_audit_physical_membership_unverified",
+  "started_utc": "2026-10-11T06:04:59.955607+00:00",
+  "completed_utc": "2026-10-11T06:05:20.602532+00:00",
+  "branch": "codex/s13-phase1b-upny-coned",
+  "head": "addc656be53308e6a62e4011a7266a05203f2104",
+  "checks": 74,
+  "failed_checks": 0,
+  "confirmed_numerical_mapping_or_channel_bugs": [],
+  "model_scope": "D-to-E accounting-zone crossing; inherited proxy with signed full rows -46,-51,-52",
+  "point_id_2019": 23319,
+  "point_id_2025": 23319,
+  "raw_rows_2019": 105402,
+  "raw_rows_2025_including_endpoint": 106307,
+  "imputed_2019_hours": 2,
+  "qualified_2025_Moses_hours": 8673,
+  "paired_scoring_hours": 8663,
+  "gamma": 0.30012075175285535,
+  "published_units": "Flow (MWH) in both raw schemas; preserved numeric convention treated as power MW in existing models",
+  "unit_scope": "No year-specific unit or source-column change found; no factor-of12 or factor-of60 conversion was introduced.",
+  "aggregation_diagnostic": {
+    "canonical_forward_hold_WAPE": 95.14283325765675,
+    "alternate_raw_arithmetic_WAPE": 95.14054839265349,
+    "arithmetic_minus_hold_mean_mw": -0.023285473984955535,
+    "arithmetic_minus_hold_mae_mw": 0.47019663271836853,
+    "selected_method": "frozen_source_contract_forward_hold",
+    "method_fitted_to_observations": false
+  },
+  "scores": [
+    {
+      "case": "2019_full140",
+      "hours": 8760,
+      "predicted_mean_mw": 1802.198460045501,
+      "observed_mean_mw": 1697.2364018166622,
+      "observed_mean_absolute_mw": 1698.0183531104217,
+      "mae_mw": 152.70704206830658,
+      "bias_mw": 104.96205822883853,
+      "wape_percent": 8.993250384401238
+    },
+    {
+      "case": "2025_original140",
+      "hours": 8663,
+      "predicted_mean_mw": 322.08770778425065,
+      "observed_mean_mw": -190.00530219836597,
+      "observed_mean_absolute_mw": 539.7880413572409,
+      "mae_mw": 513.5696361332909,
+      "bias_mw": 512.0930099826168,
+      "wape_percent": 95.14283325765675
+    },
+    {
+      "case": "2025_dated148",
+      "hours": 8663,
+      "predicted_mean_mw": 323.3249477029906,
+      "observed_mean_mw": -190.00530219836597,
+      "observed_mean_absolute_mw": 539.7880413572409,
+      "mae_mw": 514.7681375872678,
+      "bias_mw": 513.3302499013564,
+      "wape_percent": 95.36486512241672
+    }
+  ],
+  "physical_2025_membership_verified": false,
+  "limitations": [
+    "Physical flowgate membership is not established by matching a zone-cut operator.",
+    "2019 nominal-local-hour reconstruction and2025 qualified physical-hour reconstruction are different cohorts and methods.",
+    "Public operating-study limiting elements are not a complete flow-measurement operator.",
+    "This audit does not independently certify the public header's MWH label as a metering-unit specification."
+  ],
+  "recommended_builder_fix": "None supported by this mapping/observation audit. Preserve the current operator pending source-backed physical membership.",
+  "writes_scope": "new audit folder only; all frozen files preserved"
+}

@@ -1,0 +1,6 @@
+source_id,source_role,url,sha256,pinned_version
+EPA:SQL:hourly,gross MW rate copied to hourly public data,https://github.com/US-EPA-CAMD/easey-db-scripts/blob/3da401e329303638f1fac7e4d8754ec33779c2af/camdecmpsaux/procedures/pdem_update_public_load_p75_unit_hour.sql,0cd077ccbc0cf9d185bcd09776be1e6d20b38d653dd62ac3f88ddb3f55134229,3da401e329303638f1fac7e4d8754ec33779c2af
+EPA:SQL:daily,gross MW multiplied by operating time before daily MWh sum,https://github.com/US-EPA-CAMD/easey-db-scripts/blob/3da401e329303638f1fac7e4d8754ec33779c2af/camdecmpsaux/procedures/pdem_update_public_load_p75_unit_day.sql,3a89ccb9ff9305c3fcd9068bacb926802ab69d0ebcdfe363f1a8bb561e11e2ed,3da401e329303638f1fac7e4d8754ec33779c2af
+NYISO:GoldBook:2025,site zone evidence and NYC geography,https://www.nyiso.com/documents/20142/2226333/2025-Gold-Book-Public.pdf/088438e1-02f1-5316-211b-dbca17c01b4b,cc43665b9344a04b4c9355edd1dc7e31d42a6bb759ffe027ad867221556aea8e,2025
+EPA:PolicyManual:2013,local standard time and reported gross load estimates,https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100WXUK.TXT,,2013 questions13.4and13.6
+EPA:BulkMigration,February2023 move from FTP to CAMPD,https://www.epa.gov/air-emissions-inventories/where-can-i-download-hourly-emissions-data-continuous-monitoring,,page accessed2026-09-08

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "old_fleet_records": 2224,
+  "new_fleet_records": 2245,
+  "existing_identity_bus_zone_preserved": true,
+  "existing_arrays_equal_by_device_key": {
+    "physical_pmax_actual_mw": true,
+    "pmax_actual_mw": true,
+    "pmin_actual_mw": true
+  },
+  "added_outside_NY_inventory_rows": 21,
+  "corroborated_outside_NY_admitted_rows": 18,
+  "excluded_Linden_GTG6_rows": 1,
+  "quarantined_NJ_solar_rows": 2,
+  "excluded_rows_have_zero_native_bounds_and_no_native_landing": true,
+  "new_admitted_nameplate_mw": 1405.6,
+  "new_admitted_summer_mw": 1346.3,
+  "new_admitted_winter_mw": 1431.3999999999999,
+  "old_scope_archive": "output/nygrid_2025_dispatch/fleet/archive_ny_state_only_20261010",
+  "primary_source_receipts": "output/nygrid_2025_dispatch/fleet/source_scope/source_receipts.json",
+  "tests_passed": 8
+}

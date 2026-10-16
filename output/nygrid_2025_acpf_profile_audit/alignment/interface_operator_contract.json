@@ -1,0 +1,113 @@
+{
+  "created_utc": "2026-10-12T22:28:59.951360+00:00",
+  "status": "sealed_metadata_only_before_inspection_of_new_ACPF_interface_values",
+  "interpretation": "legacy active NY-zone crossing diagnostics; exact physical P-32 correspondence unestablished",
+  "primary_convention": "legacy_signed_literal_from",
+  "alternative_conventions": [
+    "oriented_source_side",
+    "oriented_target_side"
+  ],
+  "formulas": {
+    "legacy_signed_literal_from": "sum(sign * PF_at_original_corridor_from_terminal)",
+    "oriented_source_side": "sum(PF_first if sign>0 else PT_last)",
+    "oriented_target_side": "sum(-PT_last if sign>0 else -PF_first)"
+  },
+  "alternative_interpretation": "diagnostic meter-convention sensitivity, not a confidence interval or a bound on true P-32 flow",
+  "conservation": "oriented_source_side - oriented_target_side equals sum of included corridor active losses when internal section buses have no active injection or shunt conductance",
+  "public_unit_normalization": "divide aggregate model MW by gamma; no gamma scaling of solved current or impedances",
+  "membership_basis": "inherited seven zone cuts; independently checked against all four current full-case if.map and active zone crossings",
+  "forbidden_shortcuts": [
+    "no reduced DC H-theta coefficients",
+    "no historical-parent positional padding",
+    "no membership or orientation fitting to P-32 values"
+  ],
+  "p32_physical_flowgate_binding": "unestablished",
+  "checks": [
+    {
+      "state": "pre_may",
+      "branch_count": 485,
+      "membership_terms": 34,
+      "current_if_map_and_active_zone_crossing_match": true,
+      "full_recovery_matrix_match": null,
+      "original_physical_terminals_verified": true,
+      "row_permutation_test_pass": true,
+      "positive_loss_orientation_test_pass": true,
+      "retired_211_coefficient": 0.0,
+      "dover_old_394_coefficient": 0.0,
+      "dover_new_413_coefficient": null
+    },
+    {
+      "state": "may21",
+      "branch_count": 485,
+      "membership_terms": 34,
+      "current_if_map_and_active_zone_crossing_match": true,
+      "full_recovery_matrix_match": null,
+      "original_physical_terminals_verified": true,
+      "row_permutation_test_pass": true,
+      "positive_loss_orientation_test_pass": true,
+      "retired_211_coefficient": 0.0,
+      "dover_old_394_coefficient": 0.0,
+      "dover_new_413_coefficient": null
+    },
+    {
+      "state": "may30",
+      "branch_count": 485,
+      "membership_terms": 34,
+      "current_if_map_and_active_zone_crossing_match": true,
+      "full_recovery_matrix_match": null,
+      "original_physical_terminals_verified": true,
+      "row_permutation_test_pass": true,
+      "positive_loss_orientation_test_pass": true,
+      "retired_211_coefficient": 0.0,
+      "dover_old_394_coefficient": 0.0,
+      "dover_new_413_coefficient": null
+    },
+    {
+      "state": "post_dover",
+      "branch_count": 488,
+      "membership_terms": 34,
+      "current_if_map_and_active_zone_crossing_match": true,
+      "full_recovery_matrix_match": true,
+      "original_physical_terminals_verified": true,
+      "row_permutation_test_pass": true,
+      "positive_loss_orientation_test_pass": true,
+      "retired_211_coefficient": 0.0,
+      "dover_old_394_coefficient": 0.0,
+      "dover_new_413_coefficient": 0.0
+    }
+  ],
+  "source_receipts": [
+    {
+      "path": "output/nygrid_2025_downstate/replay/interface_definitions.json",
+      "sha256": "e96c7d938cedeb7a65383ea94b85ad7fec8a7c7f79867b87c5c31fb0295be4fd"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/interface_membership.csv",
+      "sha256": "810bd49179ef58fa277f45ab76c12ef8ee71dd28dbbdf92f308c3951532412b0"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/pre_may_branch_map.csv",
+      "sha256": "54839b8bbd5ad7732649d29b098080d9aadb09e41d5eff2d9bbc190fb9a7e0b1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may21_branch_map.csv",
+      "sha256": "ea891fc3459f5510e68c6c8f61466c63751c46c44015a4ff124e03de8174340c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may30_branch_map.csv",
+      "sha256": "d6289c0fef222030f13e346025488a09acb98859f357a6d21e00358948cc5594"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/post_dover_branch_map.csv",
+      "sha256": "fa6e77ebd36d7336c11234c1fff1d50a5b930391d203653ba317adeefe08bf67"
+    }
+  ]
+}

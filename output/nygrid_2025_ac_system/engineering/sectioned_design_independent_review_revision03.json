@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T21:31:37.633598+00:00",
+  "scope": "Independent four-state construction, MATLAB/Python parity, mapping, status-linked compensation and distributed-line electrical accuracy review; no OPF or coupled thermal feasibility claim",
+  "all_original_injections_controls_and_full_system_nodes_preserved": true,
+  "no_gamma_current_or_impedance_transform": true,
+  "maximum_ABCD_relative_error": 0.0027130615802702157,
+  "maximum_open_end_voltage_magnitude_error_pu": 0.0007967034827289776,
+  "declared_relative_ABCD_tolerance": 0.005,
+  "declared_voltage_tolerance_pu": 0.005,
+  "states": [
+    {
+      "state": "pre_may",
+      "original_buses": 191,
+      "buses": 266,
+      "original_branch_records": 410,
+      "branch_records": 485,
+      "added_zero_injection_buses": 75,
+      "OH_runtime_branches": 257,
+      "cable_runtime_sections": 40,
+      "total_reactor_mvar_at1pu": 3837.289019741722,
+      "all_original_load_generators_transfers_preserved": true,
+      "no_orphan_new_buses": true,
+      "hardware_amperes_only_original_endpoints": true,
+      "reactors_follow_corridor_status": true
+    },
+    {
+      "state": "may21",
+      "original_buses": 191,
+      "buses": 266,
+      "original_branch_records": 410,
+      "branch_records": 485,
+      "added_zero_injection_buses": 75,
+      "OH_runtime_branches": 257,
+      "cable_runtime_sections": 41,
+      "total_reactor_mvar_at1pu": 3837.289019741722,
+      "all_original_load_generators_transfers_preserved": true,
+      "no_orphan_new_buses": true,
+      "hardware_amperes_only_original_endpoints": true,
+      "reactors_follow_corridor_status": true
+    },
+    {
+      "state": "may30",
+      "original_buses": 191,
+      "buses": 266,
+      "original_branch_records": 410,
+      "branch_records": 485,
+      "added_zero_injection_buses": 75,
+      "OH_runtime_branches": 257,
+      "cable_runtime_sections": 42,
+      "total_reactor_mvar_at1pu": 3862.105547154314,
+      "all_original_load_generators_transfers_preserved": true,
+      "no_orphan_new_buses": true,
+      "hardware_amperes_only_original_endpoints": true,
+      "reactors_follow_corridor_status": true
+    },
+    {
+      "state": "post_dover",
+      "original_buses": 192,
+      "buses": 267,
+      "original_branch_records": 413,
+      "branch_records": 488,
+      "added_zero_injection_buses": 75,
+      "OH_runtime_branches": 258,
+      "cable_runtime_sections": 42,
+      "total_reactor_mvar_at1pu": 3862.105547154314,
+      "all_original_load_generators_transfers_preserved": true,
+      "no_orphan_new_buses": true,
+      "hardware_amperes_only_original_endpoints": true,
+      "reactors_follow_corridor_status": true
+    }
+  ],
+  "limitations": [
+    "Reactor sizing is a synthetic 75-percent charging rule; cable use is an explicit planning extension.",
+    "Section terminal electrical accuracy does not certify exact continuous local thermal maxima.",
+    "Four previously qualified equipment own-base impedance exceptions and unvalidated buried-cable thermal ratings remain."
+  ],
+  "checked_files": [
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_design_fixtures.mat",
+      "sha256": "81ae58a882a46629f6bd35868a709f58f38bc8601fa9e1f757b41e38069f9b67"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_design_plan.mat",
+      "sha256": "3a37801335e301f5d09eeeb8ba38ec6334249836dfed8436b5af9be5b3c59522"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/section_and_reactor_plan.csv",
+      "sha256": "05be0a4a301a65e931b035acea6c1c0fee68e008476346d81608e5065b42b23e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_design_receipt.json",
+      "sha256": "74f3eb12a80b5f0e3375cc85e806911a55ce1066e05c66f30701e38b90f8ca89"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/engineering_overlay.mat",
+      "sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/thermal_segments.csv",
+      "sha256": "3be6298e619f6b2680f7d2dccc69bea75783d26a172e40b8993366042eae0b1e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/cable_segments.csv",
+      "sha256": "1673ea1dba11ac057af2af18873971cc024c7de2a104a0172ed8ed5d776c52cd"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/engineering/review_sectioned_design.py",
+      "sha256": "55882b629369140e1fe7ccf936a4f986f1e65006f2e109ea44c47b59b0e82abd"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_matlab_runtime_validation.json",
+      "sha256": "2dc1c61ab459822f94bdb1aecb047c6fdc54281f69ea592beb721fe10154b4b1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_matlab_parity_checks.csv",
+      "sha256": "ae484a03f953932caa7d149006b6f098e79849740724e9f47a5b2742445b84c0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_matlab_guard_checks.csv",
+      "sha256": "f7c82777207ddd3b393c879040968dab1ad2eef5f71baa6228f56159a0b28215"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/nygrid_ac_apply_sections.m",
+      "sha256": "ce3de5ef5ab5774ac30a596c589dc67ffb5231b8ca276cdf518d83e8c5180416"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/validate_sectioned_runtime.m",
+      "sha256": "97915b3229c3b8f3a8216296a6296b26553ece0159b5dc9e2acd5c1c6104792d"
+    }
+  ],
+  "MATLAB_runtime_cross_language_confirmed": true,
+  "MATLAB_runtime_status_guards": 4,
+  "inactive_split_corridor_nodes_and_reactor_removed_verified": true
+}

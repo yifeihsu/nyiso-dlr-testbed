@@ -1,0 +1,48 @@
+{
+  "status": "primary_evidence_registered_not_asbuilt_electrical_model_certification",
+  "baseline_commit": "c7874aa90fec1d4e883814297e91bfcd3567bdf2",
+  "audit_run_git_head": "c7874aa90fec1d4e883814297e91bfcd3567bdf2",
+  "baseline_input_tables_verified_against_commit": true,
+  "checked_on": "2026-10-10",
+  "upgrade_records": 32,
+  "asset_landing_records": 82,
+  "source_receipts": 36,
+  "merchant_boundary_landing_records": 5,
+  "merchant_remap_status": "optional_evidence_only_no_model_endpoint_changes",
+  "sources_with_local_bytes": 30,
+  "sources_without_local_bytes": [
+    "NYES_COMPLETION",
+    "NYES_EMCP",
+    "NYES_2023_OWNER_REPORT",
+    "ASTORIA_II_LGIA",
+    "BAYONNE_POI",
+    "LINDEN_POI"
+  ],
+  "all_2025_core": [
+    "Rainey-Corona2023",
+    "NYEScore2023",
+    "CEEC2023",
+    "CricketValley2020topology",
+    "SouthFork2024POI"
+  ],
+  "dated_2025_core": [
+    "Gowanus-Greenwood2025-05-20",
+    "Goethals-FoxHills2025-05-29"
+  ],
+  "late_2025_only": [
+    "DoverY17_398_T398A_T398B2025-12-19HB23"
+  ],
+  "separate_upstate_sensitivity": "partialSPCcomponentswithowneractualdates;notwhole2026project",
+  "constructible_now": "physicalstation/circuit/voltage/statusschemaandconservativechronology;largesource-backedgenerationlandingimprovements",
+  "assumptions_required": "R_X_B,newcableandtransformerparameters,PARschedules,aggregate-to-physicalreplacementledger,andmostphysicalterminalratings",
+  "important_corrections": [
+    "Churchtownstation115not345",
+    "AstoriaEnergyIIAnnex345distinctfromAstoriaIEast138",
+    "SouthForkEastHampton69notNorthport138",
+    "Ravenswood1_2Vernon138versus3Rainey345",
+    "300MWprojectbenefitnot300MVAequipmentrating",
+    "DoveractualDecemberdateoverridessummerforecast"
+  ],
+  "fitted_to_interface_observations": false,
+  "baseline_files_modified": false
+}

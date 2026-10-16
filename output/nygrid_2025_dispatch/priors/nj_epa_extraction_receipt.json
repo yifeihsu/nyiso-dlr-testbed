@@ -1,0 +1,26 @@
+{
+  "scope": "Only Bayonne56964 and Linden50006 reporting records; originalNJstate bulk remains ignored cache",
+  "source_url": "https://api.epa.gov/easey/bulk-files/emissions/hourly/state/emissions-hourly-2025-nj.csv",
+  "raw_source_sha256": "c0919c8172663843e998c8536c73513a1ea6155426e7cc0a9d702b6933027183",
+  "raw_source_bytes": 171477210,
+  "source_retrieved_utc": "2026-10-10T18:51:50.494607+00:00",
+  "http_last_modified": "Tue, 03 Feb 2026 09:35:14 GMT",
+  "raw_cache_role": "ignored_download_cache_not_required_when_verified_target_extract_available",
+  "facility_metadata_path": "output/nygrid_2025_dispatch/priors/source_metadata/facility-2025.csv",
+  "facility_metadata_sha256": "d7b743273c8919b5af8a6fef45f813dd17f9dfada8c3330e508f342383a1690d",
+  "facility_metadata_url": "https://api.epa.gov/easey/bulk-files/facility/facility-2025.csv",
+  "extract_sha256": "a37cc666677958d4b886a0163f672ce7447c83044da5f01190999473abce18eb",
+  "register_sha256": "8ad67020aa308aac655966f785b5539a78f8c37955084bcab80895df56252780",
+  "selected_source_unit_hours": 140160,
+  "reporting_units": 16,
+  "admitted_reporting_units": 15,
+  "excluded_reporting_units": [
+    "EPA:ORIS:50006:UNIT:004001"
+  ],
+  "time_policy": "EPA fixed EST clock-hour date/hour mapped to canonical UTC; no daylight clock shift",
+  "quantity_policy": "reported gross MW times operating fraction once, matching existing independently validated EPA convention",
+  "Linden_shared_steam_limitation": "Excluded GTG6 reporting group004001 also lists NYISO steam units; no defensible hourly shared-steam split is available. Its entire gross weight is conservatively excluded. Five admitted reporting groups are pooled once and partitioned over eight unique native EIA generators.",
+  "native_scope_evidence": "Current fleet outside_NY_scope_register.csv: primary NYISO P19 and2025GoldBook unit admission; VFT remains a separate transmission schedule",
+  "excluded_group_is_verified_all_PJM_energy": false,
+  "excluded_group_policy": "Whole-group zero allocation weight is a conservative prior-construction choice, not verified hourly energy attribution; GTG6-linked group includes shared NYISO steam generators"
+}

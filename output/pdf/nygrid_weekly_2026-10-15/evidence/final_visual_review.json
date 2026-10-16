@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "pdf_sha256": "7be9e3ee2bfa8004f2dbfed1e5673ca31e3fa13ad20f1d2ce4a969d77c4b2675",
+  "main_tex_sha256": "79b77b1e8fffc695a6ccca467b0c30e7fda8e18292e9738c78038d40dca9fdc2",
+  "slides_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "method": "Slide9 inspected individually after final correction; full16slide contact sheet scanned. All15 priorPDFpage texts independently verified unchanged apart from counters; existing TeX content byte-identical after removing new frame input.",
+  "render_dpi": 130,
+  "template_match": {
+    "aspect_ratio": "16:9",
+    "theme": "Madrid",
+    "color_theme": "beaver",
+    "font": "Latin Modern",
+    "title_bar_and_footer_preserved": true,
+    "previous_subject_content_excluded": true
+  },
+  "checks": {
+    "no_clipped_content": true,
+    "no_overlapping_diagram_boxes": true,
+    "chart_labels_and_values_readable": true,
+    "table_text_and_source_notes_visible": true,
+    "all_page_numbers_correct": true,
+    "native_editable_chart_data": true,
+    "native_editable_topology": true
+  },
+  "repairs": [
+    "Shortened dense table content and adjusted row spacing without scaling whole slides.",
+    "Separated slide 2 hierarchy boxes and preserved the distinct released benchmark.",
+    "Split slide 9 category labels across two lines.",
+    "Rebased topology figure on the 225-row paper-derived parent and exposed Dover/Long Mountain labels.",
+    "Added spacing below tables and reduced chart widths to avoid column overflow.",
+    "Added one native seven-interface comparison table with error deltas and observed-flow shifts; fit to the existing template."
+  ],
+  "qualification": "The diagram is selected schematic connectivity; source caveats are on-slide and expanded in presenter notes.",
+  "desktop_editor_compile": "success on final saved source",
+  "local_pdf_build": "16 pages; no overfull or underfull warnings",
+  "prior_deck_commit": "1172727343f7ff5411163da59cb2956004b3aa36",
+  "prior_fifteen_slides_text_unchanged": true,
+  "comparison_slide": 9
+}

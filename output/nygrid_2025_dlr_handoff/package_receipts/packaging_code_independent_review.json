@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "completed": true,
+  "created_utc": "2026-10-13T04:53:42.283636+00:00",
+  "scope": "Bounded independent handoff packaging-code review with exact snapshot/alias/member-manifest inspection and 31 small integrity/preservation fixtures",
+  "model_base_commit": "8188cbec1172219a0414881121ad042b405a4044",
+  "resolved_findings": [
+    {
+      "id": "checksum_table_unverified",
+      "resolved": true,
+      "evidence": "Both root and ZIP verifiers now check checksum-table exact membership, no duplicates, SHA format and manifest digest. Missing/corrupt/missing-entry/duplicate/extra/wrong-manifest fixtures reject."
+    },
+    {
+      "id": "restage_overwrites_changed_retained_file",
+      "resolved": true,
+      "evidence": "Modified retained files, modified generated navigation and unowned conflicting targets now reject without overwriting their bytes. Unchanged restaging and legitimate updates from the previous manifest pass."
+    }
+  ],
+  "fixture_check_count": 31,
+  "all_fixture_checks_passed": true,
+  "actual_selection_review": {
+    "selected_frozen_inventory_files": 6424,
+    "research_aliases": 342,
+    "runtime_aliases": 12,
+    "separate_line_ending_variants": 38,
+    "committed_hashes_preserved": true,
+    "unrelated_modified_WESTERN_report_not_packaged_instead_of_commit": true,
+    "source_alias_hashes_match": true,
+    "Windows_path_collision_or_reserved_name_found": false,
+    "resolved_staged_path_escape_found": false,
+    "excluded_dependency_cache_namespaces_absent": true,
+    "observed_staged_checksum_tables_complete": true,
+    "scope": "Exact member/alias/snapshot checks apply to the recorded pre-fix manifests; fixes change verifier and staging guards only. Final rebuilt archive/member hashes remain the root builder and extraction-validation responsibility."
+  },
+  "archive_safety_checks": [
+    "Safe relative names reject empty/dot/parent/absolute/drive/backslash forms.",
+    "Duplicate ZIP members, parent traversal and unmanifested ZIP members reject.",
+    "Every manifested payload is size/SHA checked; checksum table also binds the manifest bytes.",
+    "Actual Windows canonical member names had no case/trailing-dot collisions or reserved names."
+  ],
+  "preservation_checks": [
+    "Builder reads original research and materializes matching working bytes or pinned Git blobs.",
+    "Source changes are not silently substituted into committed baseline paths.",
+    "Old receipt paths remain intact with explicit exact-content aliases.",
+    "Changed/unowned staged payloads reject; unrelated staged additions remain unmodified and unsealed.",
+    "This independent audit wrote only owned new handoff receipts/fixtures and did not edit the root builder or frozen research."
+  ],
+  "remaining_actionable_findings": [],
+  "limitations": [
+    "An internal hash manifest is an integrity check, not a digital authenticity signature; the externally recorded ZIP SHA provides the delivered archive identity.",
+    "No new annual PF, NYgrid OPF, full-array repetition or archive creation was run by this bounded code review.",
+    "The root builder must rebuild and read back final archives containing the fixed utilities."
+  ],
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/build_packages.py",
+      "sha256": "fbbdc14dda80681cbf574eb3900a84c3680604440fb1eadbcdf828209f630024"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/verify_package.py",
+      "sha256": "55694d44960de5f600a74e959c463a3bcc9872f36d3cf14ce7af76c2b6192fdf"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/build_package_inventory.py",
+      "sha256": "3db34954fa20ebd8cdbcd3fb18dec974bbe1a455640cb635db93e8c4be7d4b18"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/package_receipts/fixed_code_fixtures/fixture_results.json",
+      "sha256": "eba3a9f9db82d57f8c05ecb1d265133407c903b94f496580c289a26d16c3e9bd"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/package_receipts/packaging_code_independent_review_initial.json",
+      "sha256": "c98efce9697e109bbffb51530542ee39e3098d1af15c11b883daaed77aaf4792"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/package_receipts/packaging_manifest_independent_review.json",
+      "sha256": "ba2bcbed14f642a5b1ad9b9b343e85daad6f7ccf78b88ee70acc7a645e4a0986"
+    }
+  ]
+}

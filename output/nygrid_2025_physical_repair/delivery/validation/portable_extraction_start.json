@@ -1,0 +1,17 @@
+{
+  "archive_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\deliverables\\nygrid_2025_physical_repair_20261015\\nygrid_physical_repair_20261015.zip",
+  "archive_sha256": "a082d0159cdc816840bb86ea048cb30883cb97c1c0e62c025374e96e8a8d5419",
+  "package_root": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_physical_repair_xyxa40vf\\nygrid_physical_repair_20261015",
+  "temp_root": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_physical_repair_xyxa40vf",
+  "result_root": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_physical_repair_xyxa40vf\\results",
+  "script_path": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_physical_repair_xyxa40vf\\check_package.m",
+  "matlab_batch_command": "addpath('C:/Users/Holiday/AppData/Local/Temp/nygrid_physical_repair_xyxa40vf/nygrid_physical_repair_20261015/runtime'); check=smoke_nygrid_latest('C:/Users/Holiday/AppData/Local/Temp/nygrid_physical_repair_xyxa40vf/results'); assert(check.passed);",
+  "extracted_integrity": {
+    "passed": true,
+    "kind": "physical_repair_current_model_with_map",
+    "files": 693,
+    "bytes": 136249928,
+    "source_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+    "checksum_table_and_manifest_digest_verified": true
+  }
+}

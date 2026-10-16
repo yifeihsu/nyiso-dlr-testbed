@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "thermal_rows": 14,
+  "unit_and_mass_checks": 14,
+  "manufacturer_hot_range_extrapolated": false,
+  "mechanical_temperature_caps_certified_asbuilt": false,
+  "surface_properties_assumed": true,
+  "heat_capacity_proxy_and_constant_reference_qualified": true,
+  "source_static_rating_distinct_from_hardware": true,
+  "current_gamma_lift": false,
+  "synthetic_network": true,
+  "checked_files": [
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/candidate_conductor_catalog.csv",
+      "sha256": "a1d775ccc5f38dd0ec76b82ec2404e8b058bbcce4937834a26ffb4be8dcffe5c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/geometry_defaults.csv",
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/synthetic_equipment_defaults.json",
+      "sha256": "4548de603528d5652d813bf0cb59f891ea6faa46cbf1908da051099733cf9180"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/engineering_defaults.json",
+      "sha256": "dbbd8e71b0895825b3e825b3a15134092db0bb9d42b13a85d33542f76f2d8193"
+    }
+  ]
+}

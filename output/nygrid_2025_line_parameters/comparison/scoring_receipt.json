@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "internal_observations_posthoc_only": true,
+  "scenarios": 5,
+  "fixed_qualified_hours": 8651,
+  "annual_rows": 35,
+  "monthly_rows": 420,
+  "source_nominal_case_not_selected_by_scores": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/replay/replay_receipt.json",
+      "sha256": "eb24271211e1513f769ff8feccc206905cc8a33b04b0ecd0c223f5abb627afe5"
+    },
+    {
+      "path": "scripts/nygrid_2025_line_parameters/run_parameter_replay.py",
+      "sha256": "c4bfa13e018a27fcccf6b2f5c5aa51c240cc29da28436d30c2ca647ecdc41540"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/replay/identity_reference.npz",
+      "sha256": "e3643b1d21908de6cf727f181e17af1b1ce55225ab4e0c9b2f4c8fe25483f6de"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/replay/engineering_nominal.npz",
+      "sha256": "1f75d90c83789912fac1e0008ee553e0980d11c61dee82019236f387a1e63e31"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/replay/geometry_spacing_80pct.npz",
+      "sha256": "317734c5f950f0942bebafc1a320a9d4179f070bfa15aa719d803be04dd3ed1c"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/replay/geometry_spacing_120pct.npz",
+      "sha256": "488387c616176a91e8a0b7c88819dcd44b26624f71d6e632fb5feffbe57761d7"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/replay/ground_image_30ft.npz",
+      "sha256": "1f75d90c83789912fac1e0008ee553e0980d11c61dee82019236f387a1e63e31"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_line_parameters/comparison/annual_metrics.csv",
+      "sha256": "130f863911864bd2b0495fe9b775649110060ece309c399bad36ae1aee1b7239"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/comparison/monthly_metrics.csv",
+      "sha256": "34e300c9ffb064f66403f1974a4e014cb0cf60786f90a270185047ec6ab5c338"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "scope": "Current-model offline map build and identity/availability contracts",
+  "sourceModelCommit": "39402c2057b75670fe0591ab7f1f2ed304adec56",
+  "sourceElectricalModelCommit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+  "offlineSelfContained": true,
+  "externalRuntimeRequests": false,
+  "modelParametersChanged": false,
+  "annualPFOrOPFRerun": false,
+  "retainedBuses": 148,
+  "detailedBusesByState": [
+    266,
+    266,
+    266,
+    267
+  ],
+  "parentRecordsByState": [
+    410,
+    410,
+    410,
+    413
+  ],
+  "hours": 8760,
+  "sourceQualifiedHours": 8651,
+  "equationLossQualifiedHours": 8170,
+  "operatingQualifiedHours": 0,
+  "interfaceCount": 7,
+  "zoneCount": 11,
+  "stateHours": {
+    "pre_may": 3359,
+    "may21": 216,
+    "may30": 4896,
+    "post_dover": 289
+  },
+  "failedFlowValuesAreNull": true,
+  "defaultHour": 8508,
+  "defaultPowerUnits": "model_MW",
+  "sources": [
+    {
+      "path": "output/nygrid_2025_latest_map/geography_data.json",
+      "sha256": "aa846b69795fa42b8e4f870527fade4a49d1cf3bd6860d009c62070ce34e453c"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/annual_data.json",
+      "sha256": "786b4d5a585c374fc681289b4a28afc9fa0cc8a596b147e611d2ade781c69601"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/interface_definitions.json",
+      "sha256": "1e84dd46e8120688b5d866457c97d51673ad721a38f7d91ae1b7c26c87dc64ed"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/map_template.html",
+      "sha256": "7a11e393bc1d1680bb336c8ee2781dc635f07c91d176d7b1c1d2ddd4b732abe5"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/map.css",
+      "sha256": "53ab0e73b771dabfe36cd7c5b6159829b3f920c53c39eb08aaa9935c8574157a"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/map.js",
+      "sha256": "daea00c64aaeba3f9c77eac33f4e5c72c08fcccb027410f69855234dd30cecca"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/build_network_map.py",
+      "sha256": "59727290e575e6f4559d529c630e5ec5cebf31e1e32e5f07ed76e921d188d2ba"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_latest_map/network_map.html",
+      "sha256": "077d297471ff17655f01bd9a163466c522817dae7df16cc90a95453e1f01fa51",
+      "bytes": 14247991
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/map_data.json",
+      "sha256": "66b2d70aef2ff5ae28a6fd0c7983079ba6c052c7e8296ca94ed4af6bd8ed43d2",
+      "bytes": 14203096
+    }
+  ]
+}

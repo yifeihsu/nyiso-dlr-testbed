@@ -1,0 +1,728 @@
+{
+  "schema_version": 1,
+  "purpose": "Performance-only separate execution copy of pinned NYgrid sources",
+  "source_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\tmp\\nygrid_2019_reproduction\\upstream",
+  "execution_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\tmp\\nygrid_2019_reproduction\\cached_upstream",
+  "generator_script": "scripts/nygrid_2019/prepare_cached_upstream.py",
+  "generator_script_sha256": "5db162e203c5b4ce43be197270621ce895bb6ffc598c11898c00af9e0498ed80",
+  "patch_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2019\\cached_upstream_manifest.patch",
+  "patch_sha256": "7498959cd877de5655ea5121bac0527151e56663cdaae816d1023ff797db67b7",
+  "upstream_files_modified": false,
+  "model_math_or_network_reduction_modified": false,
+  "cache_policy": "Immutable process-local tables; exact datetime row index; original filters preserved; clear nygrid_cached_table after changing any source file",
+  "behavior_preserved": [
+    "row order and duplicates",
+    "MATLAB table metadata and categorical levels",
+    "hour/day/month equality selection",
+    "static weekly price selection",
+    "original missing-value treatment",
+    "all allocation, cost, reduction and solver arithmetic"
+  ],
+  "known_upstream_behavior_preserved": "updateOpCond omits usemat when calling readOpCond, so CSV mode still uses MAT operation-condition files",
+  "numeric_equivalence_validation": "pending root comparison against released sources",
+  "files": [
+    {
+      "relative_path": ".gitattributes",
+      "source_sha256": "7277a86eee2285c209f5b769dc3beaa4a4f8bb901f7fae60a4f85c6dcd1e9bf7",
+      "generated_sha256": "7277a86eee2285c209f5b769dc3beaa4a4f8bb901f7fae60a4f85c6dcd1e9bf7",
+      "bytes": 420,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": ".gitignore",
+      "source_sha256": "0f9f3c9aea85a9c456e77c8f78f6f7f1b956cf55551379f5c30449fb1e3806f7",
+      "generated_sha256": "0f9f3c9aea85a9c456e77c8f78f6f7f1b956cf55551379f5c30449fb1e3806f7",
+      "bytes": 82,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/allocateLoad.m",
+      "source_sha256": "6eda67f10f47561dab120f18796a91b0477facc9732296be2a80ecfe7f2dbd29",
+      "generated_sha256": "20a14901339a60df08d501bf475fa4a04941af2286aba412bc69fc4b4958ae35",
+      "bytes": 5343,
+      "modified": true,
+      "changes": [
+        {
+          "kind": "MAT_table_load_to_indexed_cache",
+          "count": 1
+        },
+        {
+          "kind": "static_CSV_import_cache",
+          "reader": "importBusInfo",
+          "count": 1
+        },
+        {
+          "kind": "timed_CSV_import_cache",
+          "reader": "importLoad",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "relative_path": "Data/bus_ny_type_zone_new.csv",
+      "source_sha256": "90600ccc873dec849af9a4f3d2dd11e2061f03d97d8dd091be4bd694a14543f9",
+      "generated_sha256": "90600ccc873dec849af9a4f3d2dd11e2061f03d97d8dd091be4bd694a14543f9",
+      "bytes": 4118,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/bus_ny_type_zone_population.csv",
+      "source_sha256": "8bdf2d282bdddb017f51f7db9e5f9d742f756b5d6af03c87c727deb717444d35",
+      "generated_sha256": "8bdf2d282bdddb017f51f7db9e5f9d742f756b5d6af03c87c727deb717444d35",
+      "bytes": 4121,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/fuelmixHourly_2019.csv",
+      "source_sha256": "e5a742ed76a91bb81989bd85da01b3faba6ca8945d7bc391566a1e5cfc64386e",
+      "generated_sha256": "e5a742ed76a91bb81989bd85da01b3faba6ca8945d7bc391566a1e5cfc64386e",
+      "bytes": 2674035,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/fuelmixHourly_2019.mat",
+      "source_sha256": "c89fe36786595adca7c0c59920a6bd42b28e3457e092591fe8da52602130367a",
+      "generated_sha256": "c89fe36786595adca7c0c59920a6bd42b28e3457e092591fe8da52602130367a",
+      "bytes": 229302,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/fuelPriceWeekly_2019.csv",
+      "source_sha256": "bd0cffb62310188c1569f65bd0410f85aeaf157deb0b9a319667902281a6d696",
+      "generated_sha256": "bd0cffb62310188c1569f65bd0410f85aeaf157deb0b9a319667902281a6d696",
+      "bytes": 3142,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/fuelPriceWeekly_2019.mat",
+      "source_sha256": "c8d498578f115ec0958654b94e153c8b69a06b84c83692391953346ecbeea268",
+      "generated_sha256": "c8d498578f115ec0958654b94e153c8b69a06b84c83692391953346ecbeea268",
+      "bytes": 2309,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/gen_bus_assignment.csv",
+      "source_sha256": "997475693f94747e89f40702601324d2a9bca1f7584ccd15ee7c35c947376629",
+      "generated_sha256": "997475693f94747e89f40702601324d2a9bca1f7584ccd15ee7c35c947376629",
+      "bytes": 19450,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/genParamAll.csv",
+      "source_sha256": "6ea7e699d22439b6cd40cf6c27fd9d24f7af5b2413a81263d7479d3adeada528",
+      "generated_sha256": "6ea7e699d22439b6cd40cf6c27fd9d24f7af5b2413a81263d7479d3adeada528",
+      "bytes": 43014,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/genParamAll.mat",
+      "source_sha256": "5cb4f91da21cfa08d6f14b4aa644891de8ee0540bc84985276578591e64900a4",
+      "generated_sha256": "5cb4f91da21cfa08d6f14b4aa644891de8ee0540bc84985276578591e64900a4",
+      "bytes": 17283,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/genParamAll_2019.csv",
+      "source_sha256": "6ea7e699d22439b6cd40cf6c27fd9d24f7af5b2413a81263d7479d3adeada528",
+      "generated_sha256": "6ea7e699d22439b6cd40cf6c27fd9d24f7af5b2413a81263d7479d3adeada528",
+      "bytes": 43014,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/genParamAll_newramp.csv",
+      "source_sha256": "b9617960c80dca2c01817149c031807c9da2b14b797dd048b205111bdf8e706f",
+      "generated_sha256": "b9617960c80dca2c01817149c031807c9da2b14b797dd048b205111bdf8e706f",
+      "bytes": 36184,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/genParamAll_newramp.mat",
+      "source_sha256": "cbbb0e130f77cdfb6d64b3b3c246fbb27d50b2d3bf75ce03b10ae9ce98e5e22f",
+      "generated_sha256": "cbbb0e130f77cdfb6d64b3b3c246fbb27d50b2d3bf75ce03b10ae9ce98e5e22f",
+      "bytes": 12763,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/hydroGenMonthly_2019.csv",
+      "source_sha256": "a9797753476bcfc6133f3e0b2b714e61447c14f8c467df7d47f2ad747c49eb1f",
+      "generated_sha256": "a9797753476bcfc6133f3e0b2b714e61447c14f8c467df7d47f2ad747c49eb1f",
+      "bytes": 769,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/hydroGenMonthly_2019.mat",
+      "source_sha256": "f03bc26e316d5800af10cacacf75ddd1a813a12ef666bbe28a767bf02174d280",
+      "generated_sha256": "f03bc26e316d5800af10cacacf75ddd1a813a12ef666bbe28a767bf02174d280",
+      "bytes": 1418,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/interflowHourly2019.csv",
+      "source_sha256": "2c0708ca318c6ff870ed1e398a966cbadd6004bfa712d55497ddcace380cddc3",
+      "generated_sha256": "2c0708ca318c6ff870ed1e398a966cbadd6004bfa712d55497ddcace380cddc3",
+      "bytes": 8448084,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/interflowHourly_2019.csv",
+      "source_sha256": "b872530b5704a57a17928ca2949511958e4de6bb31063d197d55af3b21e52754",
+      "generated_sha256": "b872530b5704a57a17928ca2949511958e4de6bb31063d197d55af3b21e52754",
+      "bytes": 8448514,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/interflowHourly_2019.mat",
+      "source_sha256": "18e9e0f5af35aaba7d1ce1773afdd352f051cb6c8d4d0da45562c919d5b2888d",
+      "generated_sha256": "18e9e0f5af35aaba7d1ce1773afdd352f051cb6c8d4d0da45562c919d5b2888d",
+      "bytes": 775885,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/loadHourly_2019.csv",
+      "source_sha256": "677ce71d73fc800b3b938a75b9f7797e4a3f8a97e992518d0d1f8f5f3bf96f62",
+      "generated_sha256": "677ce71d73fc800b3b938a75b9f7797e4a3f8a97e992518d0d1f8f5f3bf96f62",
+      "bytes": 3385078,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/loadHourly_2019.mat",
+      "source_sha256": "eb27dd628f67ae4ef79ff7f2a7b790920a07b3c446e2393daa0121cc08e6f02a",
+      "generated_sha256": "eb27dd628f67ae4ef79ff7f2a7b790920a07b3c446e2393daa0121cc08e6f02a",
+      "bytes": 344109,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/npcc.csv",
+      "source_sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d",
+      "generated_sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d",
+      "bytes": 10665,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/npcc.mat",
+      "source_sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb",
+      "generated_sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb",
+      "bytes": 8129,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/npcc_new.csv",
+      "source_sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042",
+      "generated_sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042",
+      "bytes": 10671,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/nuclearGenDaily_2019.csv",
+      "source_sha256": "bfe80d073a2c8f4641a89738ff02b0c923efc4173242b6be9869b3728b9e64f5",
+      "generated_sha256": "bfe80d073a2c8f4641a89738ff02b0c923efc4173242b6be9869b3728b9e64f5",
+      "bytes": 21598,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/nuclearGenDaily_2019.mat",
+      "source_sha256": "b701c1db718cc0497356d536cb5ee660eba1a1cbec8776e206c2754d8e58e8dd",
+      "generated_sha256": "b701c1db718cc0497356d536cb5ee660eba1a1cbec8776e206c2754d8e58e8dd",
+      "bytes": 4058,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/priceHourly_2019.csv",
+      "source_sha256": "acff3a50ce1be67f3614a8f8413a2730b0da356d738f0b559b7b4d579ca4016c",
+      "generated_sha256": "acff3a50ce1be67f3614a8f8413a2730b0da356d738f0b559b7b4d579ca4016c",
+      "bytes": 8205440,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/priceHourly_2019.mat",
+      "source_sha256": "f2d02689008a6b50e69749b65c4b727e89d493d47db6be2f8c3f440af18309b5",
+      "generated_sha256": "f2d02689008a6b50e69749b65c4b727e89d493d47db6be2f8c3f440af18309b5",
+      "bytes": 1475120,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/RenewableGen.csv",
+      "source_sha256": "270e44f264b7e9b2132b5efab5cdcca0561724f82d8581e41a9305eaa293dc53",
+      "generated_sha256": "270e44f264b7e9b2132b5efab5cdcca0561724f82d8581e41a9305eaa293dc53",
+      "bytes": 1749,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/solar_example.csv",
+      "source_sha256": "ade30995c7616b551874e4c580370e7d81a839edcbb2feb275ce5bee68a249d1",
+      "generated_sha256": "ade30995c7616b551874e4c580370e7d81a839edcbb2feb275ce5bee68a249d1",
+      "bytes": 3647,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/thermalGenHourly_2019.csv",
+      "source_sha256": "a6de40f9d9e9dba19302bfd0b1224f1a5617a18bfa03f257ab523f59d605116f",
+      "generated_sha256": "a6de40f9d9e9dba19302bfd0b1224f1a5617a18bfa03f257ab523f59d605116f",
+      "bytes": 54411514,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/thermalGenHourly_2019.mat",
+      "source_sha256": "328c9cb971c2af7f1827942f19be8338c84045deb1ae7b25fa4db8a31ba6d300",
+      "generated_sha256": "328c9cb971c2af7f1827942f19be8338c84045deb1ae7b25fa4db8a31ba6d300",
+      "bytes": 2243635,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/thermalGenMatched_2019.xlsx",
+      "source_sha256": "dbf3542eea2250305ec3139a6d125e96dc4f6c67923fb87c027123812363296f",
+      "generated_sha256": "dbf3542eea2250305ec3139a6d125e96dc4f6c67923fb87c027123812363296f",
+      "bytes": 39496,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/thermalGenMatched_2019_copy.xlsx",
+      "source_sha256": "dbf3542eea2250305ec3139a6d125e96dc4f6c67923fb87c027123812363296f",
+      "generated_sha256": "dbf3542eea2250305ec3139a6d125e96dc4f6c67923fb87c027123812363296f",
+      "bytes": 39496,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/thermalGenNotMatched_2019.csv",
+      "source_sha256": "46824bfa90f5f91940955aacf6e9b8bcde1052532568f7c351dd1543ce2e11d3",
+      "generated_sha256": "46824bfa90f5f91940955aacf6e9b8bcde1052532568f7c351dd1543ce2e11d3",
+      "bytes": 24655,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/thermalGenNotMatched_2019_copy.csv",
+      "source_sha256": "3687903ee358c7eaac002ab6b3baf4201ff8c39c179f8645a20a27bf9c796e3a",
+      "generated_sha256": "3687903ee358c7eaac002ab6b3baf4201ff8c39c179f8645a20a27bf9c796e3a",
+      "bytes": 24658,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Data/wind_example.csv",
+      "source_sha256": "7e03be9c671f594d63b2631b4ea744df272732badf83b9c5c06bc0999bfd647b",
+      "generated_sha256": "7e03be9c671f594d63b2631b4ea744df272732badf83b9c5c06bc0999bfd647b",
+      "bytes": 582,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "main.m",
+      "source_sha256": "b0b06106107c025fc665cd117f414abe7d3e1cb6394121d8fe3f393d6d2d602d",
+      "generated_sha256": "b0b06106107c025fc665cd117f414abe7d3e1cb6394121d8fe3f393d6d2d602d",
+      "bytes": 3032,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "modifyMPC.m",
+      "source_sha256": "a81ead508d7c9c3a7fa807236da2ee897357c92e8af0bb97d0c2c0125ffe3bbf",
+      "generated_sha256": "a81ead508d7c9c3a7fa807236da2ee897357c92e8af0bb97d0c2c0125ffe3bbf",
+      "bytes": 2783,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "NYgrid.prj",
+      "source_sha256": "c84d9ea37f1d0f53fb2e4352d221636e0f640eb732df30a2e88fd4933d14288c",
+      "generated_sha256": "c84d9ea37f1d0f53fb2e4352d221636e0f640eb732df30a2e88fd4933d14288c",
+      "bytes": 175,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "OPFtestcase.m",
+      "source_sha256": "9e5ddde880bd674a97a606dd1c8d1616d1af1286afc8015d75c422aab7e55a93",
+      "generated_sha256": "df4f37be2bae5ce6c9197bd5f7da7c4dcce4436debc82d536eca2fd47ebdaf14",
+      "bytes": 2512,
+      "modified": true,
+      "changes": [
+        {
+          "kind": "static_CSV_import_cache",
+          "reader": "importBusInfo",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "relative_path": "PFtestcase.m",
+      "source_sha256": "dc94eec2dd2c294d20c93057c4fd3360c1408c2128f0b8874e7c69ec4f90f83b",
+      "generated_sha256": "dc94eec2dd2c294d20c93057c4fd3360c1408c2128f0b8874e7c69ec4f90f83b",
+      "bytes": 2184,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "README.md",
+      "source_sha256": "497c35cab3ff54c95ac9e95273006752b2ec2ce7679913dbe384f023103ff95f",
+      "generated_sha256": "497c35cab3ff54c95ac9e95273006752b2ec2ce7679913dbe384f023103ff95f",
+      "bytes": 3931,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "updateOpCond.m",
+      "source_sha256": "12cd365b756612d46dc10f1ec5c9ff39a9b54f191b0c6db64e2d1aa990794520",
+      "generated_sha256": "7a1ebf0be5fe71e83d4002751d2b121fd26dd3d597d3db2ece959389ff655d5a",
+      "bytes": 20154,
+      "modified": true,
+      "changes": [
+        {
+          "kind": "static_CSV_import_cache",
+          "reader": "importRenewableGen",
+          "count": 1
+        },
+        {
+          "kind": "static_CSV_import_cache",
+          "reader": "importBusInfo",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "relative_path": "Utility/addRenewable.m",
+      "source_sha256": "aa74e297cc69bb6ecf2eb96e3b3eb2b5699e6dcc12d3a7d0cd8d01a704a6d2bd",
+      "generated_sha256": "aa74e297cc69bb6ecf2eb96e3b3eb2b5699e6dcc12d3a7d0cd8d01a704a6d2bd",
+      "bytes": 4773,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/allocateGen.m",
+      "source_sha256": "b959d66d495e1876811839ecb6ae11c556fd324fdb0f940717d4e211d8120897",
+      "generated_sha256": "3480740be986c0486cb6fb70530f3f6caf07225f15a698920ae8d3f7475469e2",
+      "bytes": 6972,
+      "modified": true,
+      "changes": [
+        {
+          "kind": "MAT_table_load_to_indexed_cache",
+          "count": 2
+        },
+        {
+          "kind": "static_CSV_import_cache",
+          "reader": "importNearestBus",
+          "count": 1
+        },
+        {
+          "kind": "static_CSV_import_cache",
+          "reader": "importFuelPrice",
+          "count": 1
+        },
+        {
+          "kind": "static_CSV_import_cache",
+          "reader": "importGenParam",
+          "count": 1
+        },
+        {
+          "kind": "timed_CSV_import_cache",
+          "reader": "importThermalGen",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "relative_path": "Utility/allocateLoad.m",
+      "source_sha256": "6eda67f10f47561dab120f18796a91b0477facc9732296be2a80ecfe7f2dbd29",
+      "generated_sha256": "20a14901339a60df08d501bf475fa4a04941af2286aba412bc69fc4b4958ae35",
+      "bytes": 5343,
+      "modified": true,
+      "changes": [
+        {
+          "kind": "MAT_table_load_to_indexed_cache",
+          "count": 1
+        },
+        {
+          "kind": "static_CSV_import_cache",
+          "reader": "importBusInfo",
+          "count": 1
+        },
+        {
+          "kind": "timed_CSV_import_cache",
+          "reader": "importLoad",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "relative_path": "Utility/createDir.m",
+      "source_sha256": "b525ad97384d3e275b3d301f7d9387cf7465bad6a45bd3b818504435ff776551",
+      "generated_sha256": "b525ad97384d3e275b3d301f7d9387cf7465bad6a45bd3b818504435ff776551",
+      "bytes": 312,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/downloadData.m",
+      "source_sha256": "6c1c152a4dfc98bc99ea53642846c45a40de1f09ac914e400d27a0afd668b2cd",
+      "generated_sha256": "6c1c152a4dfc98bc99ea53642846c45a40de1f09ac914e400d27a0afd668b2cd",
+      "bytes": 3660,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/flow4Plot.m",
+      "source_sha256": "924df00f371ee600b16db75e6f83cf6997731beae2502df6db094a112a5eeaec",
+      "generated_sha256": "924df00f371ee600b16db75e6f83cf6997731beae2502df6db094a112a5eeaec",
+      "bytes": 2862,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/fuel4Plot.m",
+      "source_sha256": "323e84bf257264a09d859917096b19ec0dd5e787118b5788c9a0b137bbe20810",
+      "generated_sha256": "323e84bf257264a09d859917096b19ec0dd5e787118b5788c9a0b137bbe20810",
+      "bytes": 1899,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/importBusInfo.m",
+      "source_sha256": "00557e23ff6aee15f8ae80d89136e1bfe8313d2a9c6aeab61000c08c39a4d057",
+      "generated_sha256": "00557e23ff6aee15f8ae80d89136e1bfe8313d2a9c6aeab61000c08c39a4d057",
+      "bytes": 1035,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/importGenData.m",
+      "source_sha256": "4225e2a9b6fc93ea256eb2c126b582b2361d4cd5f67656d0651ffa28c1909f99",
+      "generated_sha256": "4225e2a9b6fc93ea256eb2c126b582b2361d4cd5f67656d0651ffa28c1909f99",
+      "bytes": 2180,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/importGenParam.m",
+      "source_sha256": "c3d6f06f1c1ff934e331fcf19fa02ea0128c0bc195a0edb9f8ba6e46f29d1eac",
+      "generated_sha256": "c3d6f06f1c1ff934e331fcf19fa02ea0128c0bc195a0edb9f8ba6e46f29d1eac",
+      "bytes": 1848,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/importNearestBus.m",
+      "source_sha256": "d0d87d3fe37353e9a38fdee87fab509438b3e68f97075f1af905b9aa69c07bcc",
+      "generated_sha256": "d0d87d3fe37353e9a38fdee87fab509438b3e68f97075f1af905b9aa69c07bcc",
+      "bytes": 1242,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/importRefTable.m",
+      "source_sha256": "250c8dfb731f0ac1475a7e903b6515a805e0d976ecff5768a8f30a6c1ae290c3",
+      "generated_sha256": "250c8dfb731f0ac1475a7e903b6515a805e0d976ecff5768a8f30a6c1ae290c3",
+      "bytes": 2059,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/importRenewableGen.m",
+      "source_sha256": "6c31b5af3fcfb19380eb3f93852df2917200d682955aea420c0e466fe7351f57",
+      "generated_sha256": "6c31b5af3fcfb19380eb3f93852df2917200d682955aea420c0e466fe7351f57",
+      "bytes": 1615,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/plotFlow.m",
+      "source_sha256": "42a11402164614fdd7799c52fbc1a4f492ee0af36a6685c621d8772259b44e3e",
+      "generated_sha256": "42a11402164614fdd7799c52fbc1a4f492ee0af36a6685c621d8772259b44e3e",
+      "bytes": 1298,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/plotFuel.m",
+      "source_sha256": "f1b5eb701124d1204779542455bc9e155758706490e6585c30232136b5d7b29d",
+      "generated_sha256": "f1b5eb701124d1204779542455bc9e155758706490e6585c30232136b5d7b29d",
+      "bytes": 1282,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/plotPrice.m",
+      "source_sha256": "e7d70fe9d55ef54c4a6fa07ef24c02db6c8f9b9c7eb11be34050cd85bb842c20",
+      "generated_sha256": "e7d70fe9d55ef54c4a6fa07ef24c02db6c8f9b9c7eb11be34050cd85bb842c20",
+      "bytes": 1246,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/price4Plot.m",
+      "source_sha256": "ce68a3bb04452ba03def7243a64327f3fd71c39a9e91e6514402521b981be4b6",
+      "generated_sha256": "ce68a3bb04452ba03def7243a64327f3fd71c39a9e91e6514402521b981be4b6",
+      "bytes": 2698,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/readOpCond.m",
+      "source_sha256": "b75f5c8fb25814d33dbf0c5b2c6c10c57d2b6dc87347b1798a1e902cbb0b646f",
+      "generated_sha256": "5faa3f949c100a060e2df311ceaebbc931d4d4b032649626db3a382a7104dfcd",
+      "bytes": 7387,
+      "modified": true,
+      "changes": [
+        {
+          "kind": "MAT_table_load_to_indexed_cache",
+          "count": 5
+        },
+        {
+          "kind": "timed_CSV_import_cache",
+          "reader": "importFuelMix",
+          "count": 1
+        },
+        {
+          "kind": "timed_CSV_import_cache",
+          "reader": "importInterFlow",
+          "count": 1
+        },
+        {
+          "kind": "timed_CSV_import_cache",
+          "reader": "importZonalPrice",
+          "count": 1
+        },
+        {
+          "kind": "timed_CSV_import_cache",
+          "reader": "importNuclearGen",
+          "count": 1
+        },
+        {
+          "kind": "timed_CSV_import_cache",
+          "reader": "importHydroGen",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "relative_path": "Utility/standardHeatRate.m",
+      "source_sha256": "97c819c2f3ac0848c09b67e8f0406e85b0966ded6cc15a1a5e1d8303f813d656",
+      "generated_sha256": "97c819c2f3ac0848c09b67e8f0406e85b0966ded6cc15a1a5e1d8303f813d656",
+      "bytes": 1470,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/writeFuelmix.m",
+      "source_sha256": "3162d4f829e0d6217e164cbd743e4705e95618ee9b416097db4fea2939015166",
+      "generated_sha256": "3162d4f829e0d6217e164cbd743e4705e95618ee9b416097db4fea2939015166",
+      "bytes": 3203,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/writeFuelPrice.m",
+      "source_sha256": "c6c4f80783fd0817f818467c3c8fd7f57a54187549fe2fd5aa690c0682bacd15",
+      "generated_sha256": "c6c4f80783fd0817f818467c3c8fd7f57a54187549fe2fd5aa690c0682bacd15",
+      "bytes": 2993,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/writeGenParam.m",
+      "source_sha256": "d66c43ea0fac75e973870c3e1fe7bbd0a93f29e59dffa2e3b097cd49aa3da86d",
+      "generated_sha256": "d66c43ea0fac75e973870c3e1fe7bbd0a93f29e59dffa2e3b097cd49aa3da86d",
+      "bytes": 20025,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/writeHydroGen.m",
+      "source_sha256": "6dc68793296bf8d1eab0e252e9898b59e6eeb3b155ec3f37741b750fc85255ce",
+      "generated_sha256": "6dc68793296bf8d1eab0e252e9898b59e6eeb3b155ec3f37741b750fc85255ce",
+      "bytes": 2721,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/writeInterflow.m",
+      "source_sha256": "e83c4028b17a895a1669c79b48ad82aa376df8191fe15227a9dfa06c8c75cc32",
+      "generated_sha256": "e83c4028b17a895a1669c79b48ad82aa376df8191fe15227a9dfa06c8c75cc32",
+      "bytes": 3453,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/writeLoad.m",
+      "source_sha256": "11b2e93405dea63e242bb09a05b4b2a4fa02be000661d224ba3e9ed8a4bc724d",
+      "generated_sha256": "11b2e93405dea63e242bb09a05b4b2a4fa02be000661d224ba3e9ed8a4bc724d",
+      "bytes": 3760,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/writeNuclearGen.m",
+      "source_sha256": "a7f68338864d47f7645a1e808bfd8b268d930c618e493848a9f74d4065b2e4c2",
+      "generated_sha256": "a7f68338864d47f7645a1e808bfd8b268d930c618e493848a9f74d4065b2e4c2",
+      "bytes": 3480,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/writePrice.m",
+      "source_sha256": "45924039978bcf1426ed36eab52cbf8e0c59f59989f9bf26247635eabd3d999a",
+      "generated_sha256": "45924039978bcf1426ed36eab52cbf8e0c59f59989f9bf26247635eabd3d999a",
+      "bytes": 3250,
+      "modified": false,
+      "changes": []
+    },
+    {
+      "relative_path": "Utility/writeThermalGen.m",
+      "source_sha256": "dd38acc0dc82d2e567d245a4ae2de5d6bb2e6e4ac6ccc96f1ac7b9fba19b0f47",
+      "generated_sha256": "dd38acc0dc82d2e567d245a4ae2de5d6bb2e6e4ac6ccc96f1ac7b9fba19b0f47",
+      "bytes": 2509,
+      "modified": false,
+      "changes": []
+    }
+  ],
+  "added_helpers": [
+    {
+      "source_path": "scripts/nygrid_2019/cache_helpers/nygrid_cached_import.m",
+      "generated_path": "Utility/nygrid_cached_import.m",
+      "sha256": "de21754d85ca24cfa99cc653344549a4ef235ab4cfce84d4f34a60b009d09511"
+    },
+    {
+      "source_path": "scripts/nygrid_2019/cache_helpers/nygrid_cached_load.m",
+      "generated_path": "Utility/nygrid_cached_load.m",
+      "sha256": "11b244c37fa0f13f0734b28fd62f28c376db5c979c1f0d0a67d089ec5bfd2f34"
+    },
+    {
+      "source_path": "scripts/nygrid_2019/cache_helpers/nygrid_cached_table.m",
+      "generated_path": "Utility/nygrid_cached_table.m",
+      "sha256": "9b7c9df45d477e352a9298f1053d20e314dd47061fab788f9d1ae2715cc4ab02"
+    }
+  ]
+}

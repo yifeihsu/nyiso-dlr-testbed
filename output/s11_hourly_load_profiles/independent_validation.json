@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "bus_count": 49,
+  "hours": 4416,
+  "source_daily_files": 184,
+  "source_zone_hour_rows": 48576,
+  "positive_load_buses": 28,
+  "zero_load_bus_ids": [
+    37,
+    38,
+    40,
+    43,
+    44,
+    48,
+    50,
+    52,
+    60,
+    62,
+    63,
+    66,
+    67,
+    69,
+    70,
+    72,
+    75,
+    77,
+    9001,
+    9002,
+    9003
+  ],
+  "maximum_zonal_pd_error_mw": 1.8189894035458565e-12,
+  "maximum_statewide_pd_error_mw": 7.275957614183426e-12,
+  "maximum_independent_bus_pd_error_mw": 9.094947017729282e-13,
+  "maximum_independent_bus_qd_error_mvar": 3.552713678800501e-15,
+  "maximum_csv_mat_errors": {
+    "pd_mw.csv": 5.002220859751105e-12,
+    "qd_mvar.csv": 4.973799150320701e-14
+  },
+  "known_peak_pd_error_mw": 3.1927024792821612e-06,
+  "known_peak_qd_error_mvar": 0.0,
+  "complete_sampled_months": [
+    {
+      "month": "201901",
+      "hours": 744,
+      "minimum_pd_mw": 13353.2,
+      "maximum_pd_mw": 24727.6
+    },
+    {
+      "month": "201904",
+      "hours": 720,
+      "minimum_pd_mw": 11951.1,
+      "maximum_pd_mw": 18776.6
+    },
+    {
+      "month": "201907",
+      "hours": 744,
+      "minimum_pd_mw": 14721.5,
+      "maximum_pd_mw": 30396.9
+    },
+    {
+      "month": "202501",
+      "hours": 744,
+      "minimum_pd_mw": 13734.5859,
+      "maximum_pd_mw": 23521.3492
+    },
+    {
+      "month": "202504",
+      "hours": 720,
+      "minimum_pd_mw": 11060.559000000001,
+      "maximum_pd_mw": 18835.5101
+    },
+    {
+      "month": "202507",
+      "hours": 744,
+      "minimum_pd_mw": 14572.5486,
+      "maximum_pd_mw": 30644.9878
+    }
+  ],
+  "full_year_coverage": false,
+  "reactive_model": "saved_case_signed_constant_power_Qd_scaled_with_zonal_Pd",
+  "all_hours_power_flow_validated": false
+}

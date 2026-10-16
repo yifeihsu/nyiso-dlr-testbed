@@ -1,0 +1,602 @@
+{
+  "status": "complete_source_audit_with_categorical_quality_screen",
+  "created_utc": "2026-10-11T16:06:19.707943+00:00",
+  "year": 2025,
+  "source_mode": "official_EIA_six_month_bulk_CSV_with_cached_API_crosscheck",
+  "bulk_source_receipts": [
+    {
+      "file": "EIA930_INTERCHANGE_2025_Jan_Jun.csv.gz",
+      "url": "https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_INTERCHANGE_2025_Jan_Jun.csv",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:56:23.187721+00:00",
+      "content_type": "application/octet-stream",
+      "http_last_modified": "Sat, 10 Oct 2026 14:38:27 GMT",
+      "storage": "lossless_gzip_of_unmodified_published_CSV_bytes",
+      "bytes": 9099616,
+      "sha256": "d015f28d9e62ed9d38c6d83e1da37f7ff0582f09f240b2f4e58c72840235222c",
+      "original_csv_bytes": 101202449,
+      "original_csv_sha256": "26346191ea9b738a166f75eeb3291b16d2863c74c51986c7779e71f194a2c32d"
+    },
+    {
+      "file": "EIA930_BALANCE_2025_Jan_Jun.csv.gz",
+      "url": "https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2025_Jan_Jun.csv",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:56:26.109885+00:00",
+      "content_type": "application/octet-stream",
+      "http_last_modified": "Sat, 10 Oct 2026 14:38:27 GMT",
+      "storage": "lossless_gzip_of_unmodified_published_CSV_bytes",
+      "bytes": 8661771,
+      "sha256": "42722ae7ac095467a9a2ab8ec230455622ed0f62d53448f1ebcb6584a951c7ce",
+      "original_csv_bytes": 47565054,
+      "original_csv_sha256": "fac4bb991dfa1dab3b4b35300ccab54ac99be13a40ce91954db8ddafb2816242"
+    },
+    {
+      "file": "EIA930_INTERCHANGE_2025_Jul_Dec.csv.gz",
+      "url": "https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_INTERCHANGE_2025_Jul_Dec.csv",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:56:28.012267+00:00",
+      "content_type": "application/octet-stream",
+      "http_last_modified": "Sat, 10 Oct 2026 14:38:34 GMT",
+      "storage": "lossless_gzip_of_unmodified_published_CSV_bytes",
+      "bytes": 9329718,
+      "sha256": "c685e94b35a08a11c3ea4caca4eb9c067ad433c82b8fc642853965bfd23d24b1",
+      "original_csv_bytes": 104382552,
+      "original_csv_sha256": "6e9a627d9266975a65cf6a14f39a532332288d06c0ec1c228200585beecf13be"
+    },
+    {
+      "file": "EIA930_BALANCE_2025_Jul_Dec.csv.gz",
+      "url": "https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2025_Jul_Dec.csv",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:56:30.928027+00:00",
+      "content_type": "application/octet-stream",
+      "http_last_modified": "Sat, 10 Oct 2026 14:38:33 GMT",
+      "storage": "lossless_gzip_of_unmodified_published_CSV_bytes",
+      "bytes": 8838048,
+      "sha256": "2aa0cc3a9812068c890333b6a867620552088071371f5804f6b43c8c932e71ca",
+      "original_csv_bytes": 48256021,
+      "original_csv_sha256": "1146158b972439db7c7f4cc7d0491e07644ddbf244d03b8ecb44cb2c833d10f1"
+    }
+  ],
+  "api_overlap_verification": {
+    "cached_API_pages": 5,
+    "cached_API_records": 25000,
+    "exact_value_equality": true,
+    "maximum_absolute_difference_mw": 0.0,
+    "metadata_units_binding": "Published CSV explicitly labels Interchange (MW); one-hour API MWh values agree exactly."
+  },
+  "API_acquisition_limit": "DEMO_KEY returned HTTP429 after five bilateral pages; completed from separately published official bulk CSVs without further API calls.",
+  "reporting_balancing_authority": "NYIS",
+  "neighboring_BA_codes": {
+    "ISONE": "ISNE",
+    "ONTARIO": "IESO",
+    "PJM": "PJM",
+    "HQ": "HQT"
+  },
+  "source_record_count": 35040,
+  "expected_physical_hours": 8760,
+  "unique_region_hour_grid": true,
+  "no_neighbor_filter_applied": true,
+  "full_NYIS_neighbor_set": [
+    "HQT",
+    "IESO",
+    "ISNE",
+    "PJM"
+  ],
+  "source_units": "bulk_CSV_MW_hourly_average_with_API_one_hour_MWh_crosscheck",
+  "bulk_source_units": "MW_hourly_average",
+  "API_source_units": "megawatthours_per_one_hour_interval",
+  "output_units": "MW_hourly_average_public_unscaled",
+  "positive_direction": "neighbor_to_NewYork_import",
+  "sign_transform": "output_import_mw = -bulk_Interchange_MW = -NYIS_API_reported_value_MWh / 1_hour",
+  "time_transform": "timestamp_utc_start = bulk_UTC_Time_at_End_of_Hour - 1_hour = EIA_API_period_utc_hour_ending - 1_hour",
+  "first_source_period": "2025-01-01T06",
+  "last_source_period": "2026-01-01T05",
+  "source_sign_or_clock_fitted": false,
+  "physical_axis_matches_frozen_2025_UTC_axis": true,
+  "internal_interface_observations_consumed": false,
+  "no_dispatch_or_inventory_ND_replacement": true,
+  "original_schedule_and_DC_values_preserved": true,
+  "coverage_qualified_hours": 8754,
+  "original_schedule_qualified_hours": 8673,
+  "common_replay_hours": 8657,
+  "common_with_ontario_only_hours": 8651,
+  "region_zero_and_finite_checks": [
+    {
+      "region": "ISONE",
+      "exact_zero_hours": 3,
+      "finite_hours": 8760,
+      "qualified_hours": 8754
+    },
+    {
+      "region": "ONTARIO",
+      "exact_zero_hours": 2,
+      "finite_hours": 8760,
+      "qualified_hours": 8754
+    },
+    {
+      "region": "PJM",
+      "exact_zero_hours": 0,
+      "finite_hours": 8760,
+      "qualified_hours": 8754
+    },
+    {
+      "region": "HQ",
+      "exact_zero_hours": 5,
+      "finite_hours": 8760,
+      "qualified_hours": 8754
+    }
+  ],
+  "all_four_actual_zero_hours": 0,
+  "suspect_all_four_zero_with_nonzero_reported_total_hours": 0,
+  "frozen_report_quality_review": {
+    "rule": "Maximal run of at least three identical complete four-region NYIS actual vectors, corroborated by independently qualified IESO and ISNE actual ranges greater than2MW. Quarantine the whole run, including its first hour.",
+    "repeated_runs_at_least_three_hours": 2,
+    "quarantined_hours": 6,
+    "excluded_hour_indices": [
+      2999,
+      3000,
+      3001,
+      3007,
+      3008,
+      3009
+    ],
+    "corroboration_uses_internal_interface_observations": false,
+    "adjacent_transition_hours_automatically_excluded": false,
+    "counterparty_differences": {
+      "ISNE": {
+        "hours": 8760,
+        "mean": -1.0681506849315068,
+        "mae": 7.353082191780822,
+        "rmse": 14.195226382653942,
+        "minimum": -427.0,
+        "maximum": 309.0
+      },
+      "PJM": {
+        "hours": 8734,
+        "mean": 245.15731623540188,
+        "mae": 596.017861231967,
+        "rmse": 784.3774816130003,
+        "minimum": -1824.0,
+        "maximum": 3038.0
+      }
+    },
+    "PJM_reciprocity_limitation": "PJM-counterparty values show substantial disagreement with NYIS; reporting-scope/counterparty consistency is unestablished. They are diagnostic only, with no averaging, fitted shift or eligibility exclusions."
+  },
+  "quality_evidence_files": [
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/hourly_source_quality.csv",
+      "sha256": "aa78d148dd0d4d3d7659f4b7955cb86d47c9644d68c73330e236931d8b32fecc"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/frozen_report_runs.csv",
+      "sha256": "fa7afab96750eb7f2f40b405d42934b3e09a03c19dd3b48fc0f63eb986796b46"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/counterparty_actual_comparison.csv",
+      "sha256": "0405cd5e63a556dde5c3a0c09af98b09f4097f29651df93b79f7bf6f8e726a20"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/reported_total_sum_check.csv",
+      "sha256": "b400dff917c17d3bcac2c861b738d33fd79695271cfe12bb67d7bb161a5bf92c"
+    }
+  ],
+  "initial_unpromoted_finite_only_candidate": {
+    "path": "output/nygrid_2025_western_audit/boundary_actuals/hourly_regional_actuals_initial_finite_only.csv",
+    "sha256": "70d52293f50838e212db4c7cf26558e9e95a94324fe81ce6c243c4b93f0a4810"
+  },
+  "zero_policy": "Individual zeros retained. All-four actual zero with independent reported total nonzero beyond 2.5MW integer-rounding bound is quarantined; schedules are corroborative only. No clipping or imputation.",
+  "reported_total_sum_check": {
+    "hours": 8760,
+    "mean": 5.705022831050228,
+    "mae": 6.523059360730594,
+    "rmse": 141.4633582775406,
+    "minimum": -256.0,
+    "maximum": 3822.0
+  },
+  "total_sum_mismatch_over_integer_rounding_bound_2point5MW_hours": 26,
+  "total_sum_mismatch_over_10MW_hours": 26,
+  "reported_total_check_policy": "Diagnostic consistency check only; EIA permits method differences. No arbitrary total-difference threshold changes eligibility.",
+  "EIA_vs_independent_IESO_actual_common": {
+    "hours": 8651,
+    "mean": 0.5167032712981158,
+    "mae": 4.01780141024159,
+    "rmse": 12.366031607519968,
+    "minimum": -557.0,
+    "maximum": 265.0
+  },
+  "Ontario_delta_vs_other_three_delta": {
+    "common_hours": 8657,
+    "correlation": -0.6588105878029031,
+    "opposite_sign_hours": 6344,
+    "same_sign_hours": 2313
+  },
+  "source_proof": [
+    {
+      "id": "EIA930_hour_ending_UTC",
+      "source": "raw/EIA930_instructions.pdf",
+      "PDF_page": 3,
+      "finding": "Hourly integrated values, nearest-integer reporting, UTC hour-ending labels; example EST HE1 maps to 06UTC."
+    },
+    {
+      "id": "EIA930_FLOW_sign",
+      "source": "raw/EIA930_instructions.pdf",
+      "PDF_page": 5,
+      "finding": "FLOW is net metered tie-line flow; positive values leave the reporting balancing authority and negative values enter."
+    },
+    {
+      "id": "EIA930_physical_scope",
+      "source": "raw/EIA930_instructions.pdf",
+      "PDF_page": 9,
+      "finding": "Report physical tie-boundary operations; sums and counterparties should be consistent, with documented reporting-method exceptions."
+    },
+    {
+      "id": "API_hourly_units",
+      "source": "raw/interchange_route_metadata.json",
+      "finding": "API hourly frequency is UTC and values are in megawatthours. Divide each one-hour energy quantity by one hour to obtain average MW."
+    },
+    {
+      "id": "EIA_bulk_header_units_and_clock",
+      "source": "raw/EIA930_INTERCHANGE_2025_Jan_Jun.csv.gz",
+      "finding": "Published columns explicitly name Interchange (MW) and UTC Time at End of Hour. All cached API values agree exactly with the bulk average MW values."
+    }
+  ],
+  "source_receipts": [
+    {
+      "file": "EIA930_instructions.pdf",
+      "url": "https://www.eia.gov/survey/form/eia_930/instructions.pdf",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:49:13.005280+00:00",
+      "bytes": 1585169,
+      "sha256": "321ee0a8d93b15ca2fe206720615bb721c1b6eaf9d9fb06e9c11837ca5004d58",
+      "content_type": "application/pdf",
+      "http_last_modified": "Mon, 20 Jul 2026 18:03:49 GMT"
+    },
+    {
+      "file": "interchange_route_metadata.json",
+      "url": "https://api.eia.gov/v2/electricity/rto/interchange-data/?api_key=DEMO_KEY",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:49:13.419285+00:00",
+      "bytes": 1061,
+      "sha256": "cb02032c9fe4e3ac8e66b8b02798873481e0d8cf73a9933740c520f2a67646a2",
+      "content_type": "application/json",
+      "http_last_modified": ""
+    },
+    {
+      "file": "EIA930_File_List_Meta.csv",
+      "url": "https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_File_List_Meta.csv",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:56:23.090900+00:00",
+      "bytes": 9874,
+      "sha256": "16ed88ba43dd8c013e319f27e9fad3dc64f634f2eb5c822206e51cbfab296965",
+      "content_type": "application/octet-stream",
+      "http_last_modified": "Sat, 10 Oct 2026 14:38:45 GMT"
+    },
+    {
+      "file": "EIA930_INTERCHANGE_2025_Jan_Jun.csv.gz",
+      "url": "https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_INTERCHANGE_2025_Jan_Jun.csv",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:56:23.187721+00:00",
+      "content_type": "application/octet-stream",
+      "http_last_modified": "Sat, 10 Oct 2026 14:38:27 GMT",
+      "storage": "lossless_gzip_of_unmodified_published_CSV_bytes",
+      "bytes": 9099616,
+      "sha256": "d015f28d9e62ed9d38c6d83e1da37f7ff0582f09f240b2f4e58c72840235222c",
+      "original_csv_bytes": 101202449,
+      "original_csv_sha256": "26346191ea9b738a166f75eeb3291b16d2863c74c51986c7779e71f194a2c32d"
+    },
+    {
+      "file": "EIA930_BALANCE_2025_Jan_Jun.csv.gz",
+      "url": "https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2025_Jan_Jun.csv",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:56:26.109885+00:00",
+      "content_type": "application/octet-stream",
+      "http_last_modified": "Sat, 10 Oct 2026 14:38:27 GMT",
+      "storage": "lossless_gzip_of_unmodified_published_CSV_bytes",
+      "bytes": 8661771,
+      "sha256": "42722ae7ac095467a9a2ab8ec230455622ed0f62d53448f1ebcb6584a951c7ce",
+      "original_csv_bytes": 47565054,
+      "original_csv_sha256": "fac4bb991dfa1dab3b4b35300ccab54ac99be13a40ce91954db8ddafb2816242"
+    },
+    {
+      "file": "EIA930_INTERCHANGE_2025_Jul_Dec.csv.gz",
+      "url": "https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_INTERCHANGE_2025_Jul_Dec.csv",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:56:28.012267+00:00",
+      "content_type": "application/octet-stream",
+      "http_last_modified": "Sat, 10 Oct 2026 14:38:34 GMT",
+      "storage": "lossless_gzip_of_unmodified_published_CSV_bytes",
+      "bytes": 9329718,
+      "sha256": "c685e94b35a08a11c3ea4caca4eb9c067ad433c82b8fc642853965bfd23d24b1",
+      "original_csv_bytes": 104382552,
+      "original_csv_sha256": "6e9a627d9266975a65cf6a14f39a532332288d06c0ec1c228200585beecf13be"
+    },
+    {
+      "file": "EIA930_BALANCE_2025_Jul_Dec.csv.gz",
+      "url": "https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2025_Jul_Dec.csv",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:56:30.928027+00:00",
+      "content_type": "application/octet-stream",
+      "http_last_modified": "Sat, 10 Oct 2026 14:38:33 GMT",
+      "storage": "lossless_gzip_of_unmodified_published_CSV_bytes",
+      "bytes": 8838048,
+      "sha256": "2aa0cc3a9812068c890333b6a867620552088071371f5804f6b43c8c932e71ca",
+      "original_csv_bytes": 48256021,
+      "original_csv_sha256": "1146158b972439db7c7f4cc7d0491e07644ddbf244d03b8ecb44cb2c833d10f1"
+    },
+    {
+      "file": "NYIS_interchange_2025_00000.json",
+      "url": "https://api.eia.gov/v2/electricity/rto/interchange-data/data/?api_key=DEMO_KEY&frequency=hourly&data%5B0%5D=value&start=2025-01-01T06&end=2026-01-01T05&length=5000&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc&facets%5Bfromba%5D%5B%5D=NYIS&sort%5B1%5D%5Bcolumn%5D=toba&sort%5B1%5D%5Bdirection%5D=asc&offset=0",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:49:15.101100+00:00",
+      "bytes": 944904,
+      "sha256": "7ffd5bb2f5120c7ff479820431144236d8ed1e1b98feefd1b8c72b6bb8515da9",
+      "content_type": "application/json",
+      "http_last_modified": ""
+    },
+    {
+      "file": "NYIS_interchange_2025_05000.json",
+      "url": "https://api.eia.gov/v2/electricity/rto/interchange-data/data/?api_key=DEMO_KEY&frequency=hourly&data%5B0%5D=value&start=2025-01-01T06&end=2026-01-01T05&length=5000&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc&facets%5Bfromba%5D%5B%5D=NYIS&sort%5B1%5D%5Bcolumn%5D=toba&sort%5B1%5D%5Bdirection%5D=asc&offset=5000",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:49:17.518373+00:00",
+      "bytes": 943212,
+      "sha256": "aaacbf3e92b17129fa1c06324166b45f19640da977530476ac697221032d8c32",
+      "content_type": "application/json",
+      "http_last_modified": ""
+    },
+    {
+      "file": "NYIS_interchange_2025_10000.json",
+      "url": "https://api.eia.gov/v2/electricity/rto/interchange-data/data/?api_key=DEMO_KEY&frequency=hourly&data%5B0%5D=value&start=2025-01-01T06&end=2026-01-01T05&length=5000&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc&facets%5Bfromba%5D%5B%5D=NYIS&sort%5B1%5D%5Bcolumn%5D=toba&sort%5B1%5D%5Bdirection%5D=asc&offset=10000",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:49:19.622287+00:00",
+      "bytes": 943171,
+      "sha256": "07925e5af5d28790cb9a3cc77f6286955b275c115cd4800834a21e75bcd0978e",
+      "content_type": "application/json",
+      "http_last_modified": ""
+    },
+    {
+      "file": "NYIS_interchange_2025_15000.json",
+      "url": "https://api.eia.gov/v2/electricity/rto/interchange-data/data/?api_key=DEMO_KEY&frequency=hourly&data%5B0%5D=value&start=2025-01-01T06&end=2026-01-01T05&length=5000&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc&facets%5Bfromba%5D%5B%5D=NYIS&sort%5B1%5D%5Bcolumn%5D=toba&sort%5B1%5D%5Bdirection%5D=asc&offset=15000",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:49:21.804927+00:00",
+      "bytes": 943275,
+      "sha256": "20f3f7c3ee132008cff40f9714efd9397b2c1accd648f9f6f31d8162cbac1c45",
+      "content_type": "application/json",
+      "http_last_modified": ""
+    },
+    {
+      "file": "NYIS_interchange_2025_20000.json",
+      "url": "https://api.eia.gov/v2/electricity/rto/interchange-data/data/?api_key=DEMO_KEY&frequency=hourly&data%5B0%5D=value&start=2025-01-01T06&end=2026-01-01T05&length=5000&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=asc&facets%5Bfromba%5D%5B%5D=NYIS&sort%5B1%5D%5Bcolumn%5D=toba&sort%5B1%5D%5Bdirection%5D=asc&offset=20000",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-11T15:49:24.835901+00:00",
+      "bytes": 942663,
+      "sha256": "43af65b4a9b46c58972bf3991400976481e12ff4602a6d78e56c52a8bbb7968c",
+      "content_type": "application/json",
+      "http_last_modified": ""
+    }
+  ],
+  "original_source_hashes": [
+    {
+      "path": "output/nygrid_2025_inputs/load_source/hour_catalog.csv",
+      "sha256": "96d4a0db424cbe1062b7c6b51d5f244a4de699679ad89428a8db3a992980f86a",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/hourly_controls.csv",
+      "sha256": "ea359615f1ef94b9f2e0f0101a72a6d2cedd78f83bab4aa15646a85b465a345a",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/annual_external_summary.csv",
+      "sha256": "ce9b8019ff22edd3c17e13af78c5cee411858ceb666c3b5a717e3a0202936438",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/cross_format_probe_20261010.csv",
+      "sha256": "c14285e2a4bed1637d8df45b9b1c1a3c61d5d57b3ddbff0be068337b061efd07",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/external_quantity_comparison.csv",
+      "sha256": "d6bfec400e5377cff2348522836a11f2c53c328e62dbbf14156d21581df91b1e",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/external_schedule_timing_sanity.csv",
+      "sha256": "faf487098940b0c12ac94319750937b99ebf823eb73e2351c5b7d853a7f984dc",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/external_source_comparison_2025.csv",
+      "sha256": "f48de49e7a1cc8697db6b5e7db178327ced033dc5ff270e4e5abfb66a3cf3c6a",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/hourly_actual_exchange.csv",
+      "sha256": "e59408bf1296bd92eb6c562395d98d629c6b9784d50767c9a94956c8400aa6b4",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/hourly_exchange_quality.csv",
+      "sha256": "ae23b9a130773fece232c8bb84583a3fb2d16fe9c2533a13b525ab64ba788cde",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/ieso_new_york_hourly_2019.csv",
+      "sha256": "a03dd7d4fedd649d302f49a2dbd4fb18fd0ed39ff9757267a382f0476156aa57",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/ieso_new_york_hourly_2025.csv",
+      "sha256": "229774d88786315ff5138f5009a6bc63806c09f31dc77143e9442a0092c45501",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/ontario_audit_summary.json",
+      "sha256": "773ff7f90a655079e223c4177f2da0f57cd04a5a9f4629b323d5cbb64a244246",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_intertie_sign_source.pdf",
+      "sha256": "f9744dcaa0b1e35b7e8e31f04b086b391d47425ceaa09bf21c859a8679082f76",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_intertie_sign_source.pdf.receipt.json",
+      "sha256": "15404987b7f08074f059e2289b776a6ba1dd9384a1f3ec9e56d2e8317ec69801",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_intertie_sign_source.txt",
+      "sha256": "e97345ef42eb1846f24c615cc224e5d1ff2ea2c6a63a2184a47a56620396e920",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_TableB2_sign.pdf",
+      "sha256": "3d007c882969913a464a7f435b43adb2c7d6a5e80e1bdc0ff6a2d3160ec78484",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_TableB2_sign.png",
+      "sha256": "6fa9a62e41e4d98c9b49eb084bc6ecac168a3bb0fde3df0fd02a5a62b8f944f2",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_TableB2_sign.txt",
+      "sha256": "d7d12fd3315b4f8d716393bea76e5a7335607ae81cef28daa5b9c43fedbfa81e",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IESO2019_headers.txt",
+      "sha256": "dddb650cd52abbc4c4c585c44e5784f0876a1163ae964d8bd4950116b4a10c98",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IESO2025_headers.txt",
+      "sha256": "7eb6a8c51e92a075c659119a885935427ab0036f81bf95be670786c721363173",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IESO2025_v394_headers.txt",
+      "sha256": "2f5a2a59e4f9c3872710f6cdb33e25e3deb9802dea89b0fed00d6a59b7e466a7",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IESO2026_headers.txt",
+      "sha256": "6eecd57944d6c94c999f9aa8e2f9d61dcd049a9ac1d702c013f220107cacba3e",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_20261010.xml",
+      "sha256": "20934c240a81e687e997c4a83e533b4f3eaf83da08e8975ec749abbab51eacbc",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_20261010.xml.receipt.json",
+      "sha256": "128d29c0a4655e12ca5b59f3c8e9c20bee608cecb951c0790fabec9b0c656cb2",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_h1.pdf",
+      "sha256": "d945c5c55b105c5f375707a6f96b6e5bf689ac0ff1cfc68e6f1ffce40fdf7931",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_h1.pdf.receipt.json",
+      "sha256": "51523468a6143dadb43cdff232e319a71f3cee46ac207bc6c96fc90e2664eb78",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_HTML_t1-2.xsl",
+      "sha256": "4ccefe0481f1b9efc2c636e73119d79b1a669c5418083f40a035f04a53d591ad",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_HTML_t1-2.xsl.receipt.json",
+      "sha256": "beb874f6d9ff7ca05c7dadef90fdbe4760f5fdb9c9be34a187ad6d63966a327b",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_r2.xsd",
+      "sha256": "230ddc6af589f3a1dba542ce499005dc0b17c18789fb904f71f5db3c6b09f307",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_r2.xsd.receipt.json",
+      "sha256": "6d37923ebc525cf23b1f8757f989fa7294e6a2fe70649593d1284b482c1d529c",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2019.csv",
+      "sha256": "9b18b5c3fed8c9677399f32f76a788544d91f55c14b6fa6936ac17d16423acf2",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2019.csv.receipt.json",
+      "sha256": "3447103a8ac25ea2d79b28d92f81e439ad4ea0cc7a2dcb50abe4d118e3d0232a",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025.csv",
+      "sha256": "b4aa6a2a3fe142124115bd9f4710ea3bb46ac2635b47be08b729aaf405671b4d",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025.csv.receipt.json",
+      "sha256": "abfecc4d1da84d03dcf1428373c679f2e91e910fe3a657ed891dbf97cc831535",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025_v394.csv",
+      "sha256": "b4aa6a2a3fe142124115bd9f4710ea3bb46ac2635b47be08b729aaf405671b4d",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025_v394.csv.receipt.json",
+      "sha256": "fca84bb60537b94ce61391f2581335052e4df3d16414561917438f3ea29f9026",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2026.csv",
+      "sha256": "96ff644435c24886391747484968f9dbccfd2d6650033afd93c2c46c22d309f3",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2026.csv.receipt.json",
+      "sha256": "5d0354dd57ca53714b1994f37b1b3316c7778fbe1d6c504d7e2976ad45f4556a",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/source_manifest.csv",
+      "sha256": "59e41c8e1082fa06fc84d692c14af05890c622b3c598851f9e856cc349eecb14",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/source_quality_receipt.json",
+      "sha256": "0959c383d82ae34a413e9ecc97465843467d3e2e543ac7de8306a45d05710eaa",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/source_quality_suspect_hours.csv",
+      "sha256": "f7a4fd549c8bdea35879d0b84f23ed46d7fbb9d7073a70575a51100b7249c30c",
+      "unchanged": true
+    }
+  ],
+  "actual_input_path": "output/nygrid_2025_western_audit/boundary_actuals/hourly_regional_actuals.csv",
+  "actual_input_sha256": "eadd202b2a4a4f397215ab7a47d3abae25500008059d4879f14a9ab7829b3f50",
+  "audit_script_path": "scripts/nygrid_2025_western_audit/boundary_actuals_audit.py",
+  "audit_script_sha256": "15f7d2049e23fe3571f753f474ed40a2fbbbfcb8b0d7298b15c2fbe466e936d4",
+  "limitations": [
+    "NYIS-reported aggregate regional actuals do not identify individual circuit flows or recover actual native unit dispatch.",
+    "Six externally corroborated simultaneous four-region frozen-report hours are quarantined; adjacent transition hours retain discrepancies and remain uncertain rather than being expanded by a fitted threshold.",
+    "PJM counterpart reciprocity is not established; NYIS is used consistently as the reporting perspective and no counterpart averaging or data-driven clock shifts are applied.",
+    "Existing four DC schedules remain source schedules; matching aggregate regional totals leaves within-region AC/DC partition conditional.",
+    "EIA data are rounded operational reports, may be revised, and can reflect documented physical-boundary reporting agreements.",
+    "The current instructions PDF is the version retrieved with this audit; API raw source and exact transformations are archived.",
+    "No meter-quality metadata are exposed per API observation. Finite and source-wide-zero screening does not prove every observation physically exact."
+  ]
+}

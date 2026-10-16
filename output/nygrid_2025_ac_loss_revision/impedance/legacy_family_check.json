@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "scope": "Read-only S7 family identity check; no solve or model change",
+  "cases": [
+    {
+      "case_name": "npcc_original",
+      "case_file": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_original.m",
+      "buses": 140,
+      "branches": 233,
+      "matching_38_77_rows": [],
+      "matching_38_77_parameters": []
+    },
+    {
+      "case_name": "npcc_ny_lite_s7_seven_interface_perform_direct_candidate",
+      "case_file": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m",
+      "buses": 143,
+      "branches": 246,
+      "matching_38_77_rows": [],
+      "matching_38_77_parameters": []
+    },
+    {
+      "case_name": "npcc_ny_lite_s7_seven_interface_perform_tieline_candidate",
+      "case_file": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_ny_lite_s7_seven_interface_perform_tieline_candidate.m",
+      "buses": 143,
+      "branches": 246,
+      "matching_38_77_rows": [],
+      "matching_38_77_parameters": []
+    }
+  ],
+  "all_38_77_pairs_absent": true
+}

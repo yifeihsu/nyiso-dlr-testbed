@@ -1,0 +1,18 @@
+CE_ANNUAL_DC 100/8494 h 400 solves 2.0s allpass1 all33parity1.56e-10MW
+CE_ANNUAL_DC 1000/8494 h 4000 solves 9.4s allpass1 all33parity1.76e-10MW
+CE_ANNUAL_DC 2000/8494 h 8000 solves 17.0s allpass1 all33parity1.76e-10MW
+CE_ANNUAL_DC 3000/8494 h 12000 solves 24.6s allpass1 all33parity1.76e-10MW
+CE_ANNUAL_DC 4000/8494 h 16000 solves 32.5s allpass1 all33parity1.81e-10MW
+CE_ANNUAL_DC 5000/8494 h 20000 solves 40.4s allpass1 all33parity1.81e-10MW
+CE_ANNUAL_DC 6000/8494 h 24000 solves 48.1s allpass1 all33parity1.81e-10MW
+CE_ANNUAL_DC 7000/8494 h 28000 solves 56.1s allpass1 all33parity1.81e-10MW
+CE_ANNUAL_DC 8000/8494 h 32000 solves 64.0s allpass1 all33parity1.81e-10MW
+CE_ANNUAL_DC 8494/8494 h 33976 solves 67.6s allpass1 all33parity1.81e-10MW
+              variant               hours    DCPF_audits_passed    CE_mean_public_MW    CE_mean_minus_archived_DC_public_MW    CE_min_minus_archived_DC_public_MW    CE_max_minus_archived_DC_public_MW    max_nodal_P_residual_MW    max_branch_law_error_MW    total_DCPF_seconds
+    ____________________________    _____    __________________    _________________    ___________________________________    __________________________________    __________________________________    _______________________    _______________________    __________________
+
+    {'detailed_AC_network_DCPF'}    8494           true                 1984.6                           600.32                                 95.66                                1313.3                      2.3766e-10                 7.6567e-11                 14.054      
+    {'restore_parent224_X'     }    8494           true                   1403                           18.748                               -39.535                                97.764                      2.2419e-10                 7.8558e-11                  13.79      
+    {'restore_parent41_X'      }    8494           true                 1984.6                           600.32                                 95.66                                1313.3                      2.3766e-10                 7.7421e-11                 13.794      
+    {'restore_all33_X'         }    8494           true                 1384.3                      -1.2472e-10                           -2.2828e-10                           -5.9117e-12                      2.0572e-10                 7.7122e-11                 13.774      
+

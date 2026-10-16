@@ -1,0 +1,280 @@
+{
+  "passed": true,
+  "audit_complete": true,
+  "audit_scope": "bounded primary public-source audit; no internal-interface fit or model mutation",
+  "physical_unit_confirmed": false,
+  "raw_header": "Flow (MWH)",
+  "raw_quantity_unit_status": "unresolved_from_primary_native_product_definition",
+  "numeric_scale_selected_by_this_audit": null,
+  "scale_or_sign_selected_by_internal_fit": false,
+  "product_kind": {
+    "safe_label": "operator-reported P34 flow value",
+    "independent_metered_actual_confirmed": false,
+    "SCADA_origin_confirmed": false,
+    "calculated_RTD_origin_confirmed": false,
+    "status": "unresolved_native_publication_origin"
+  },
+  "native_timestamp_support_status": "unresolved_begin_end_instantaneous_or_average",
+  "guide_scope": "The September 2026 MPUG describes hourly SCUC and time-weighted hourly RTD reports. Native P34 CSV is subhourly, and the guide does not define its MWH label.",
+  "schedule_definition_scope": "P53A nominal PAR schedules explicitly use hourly MWs. This is not a P34 unit specification.",
+  "sign": {
+    "Dover": {
+      "ptids": [
+        625149,
+        625150
+      ],
+      "positive_direction": "ISONE_LongMountain_to_NYISO_CricketValley",
+      "documented_convention_confirmed": true,
+      "earliest_retrieved_operator_document_date": "2026-01-09",
+      "specific_2025_effective_date_confirmed": false,
+      "qualification": "near-contemporaneous official corroboration, not a2025-effective-date certificate"
+    },
+    "Ontario_StLawrence": {
+      "ptids": [
+        25118,
+        25119
+      ],
+      "positive_direction": "IESO_StLawrence_to_NYISO_Moses",
+      "documented_convention_confirmed": true,
+      "explicit_convention_date": "2024-12-03",
+      "applies_to_2025": true,
+      "qualification": "explicitnote onStLawrence/Mosespage7, not Dover"
+    }
+  },
+  "historical_search": {
+    "status": "bounded_search_completed",
+    "version1_0_actual_filename": "ParFlowDiagrams26.pdf",
+    "version1_0_content_date": "2026-01-09",
+    "version1_0_sha256": "98553ac3d45f1d836032180ea768ff1ad49ee61edf7bb4eaeabc3b69112ecac2",
+    "version1_1_same_payload": true,
+    "version2_0_content_date": "2026-07-17",
+    "version2_0_sha256": "c0647d2abc38f216ccf5c1f197ca679cf16358fde5f507659bcdcd80a6938ba4",
+    "older_by_filename25": "HTTP404",
+    "public_folder_listing": "HTTP404",
+    "targeted_2024_2025_archive_index": "empty_result; not proof that no other historical copy exists"
+  },
+  "current_OASIS_P34_metadata": {
+    "sidebarTitle": "PAR Flows",
+    "postingTitle": "Phase Angle Regulator (PAR) Flows",
+    "reportRef": "P-34",
+    "postingView": "TABLE",
+    "archiveMode": {
+      "daysVisibleOnIndexPage": 10,
+      "frontendName": "CURRENT"
+    },
+    "postingEnum": "PAR_FLOW",
+    "sidebarPath": {
+      "first": {
+        "displayName": "Power Grid Data",
+        "ordering": 2.0
+      },
+      "second": {
+        "displayName": "PAR",
+        "ordering": 2.4
+      }
+    },
+    "supportedFormats": [
+      "CSV"
+    ],
+    "preambleText": null,
+    "preambleHtml": null,
+    "maxZippableDays": 366,
+    "correctionWindowDuration": 0,
+    "currentFileDisplayName": "Most recent information"
+  },
+  "code_inspection": {
+    "public_bundle": "NYISO_OASIS_index-BcpghG6r.js",
+    "finding": "Generic posting/download UI only; no native P34 chart-unit or value-schema definition found.",
+    "definition_coverage": "public UI and metadata inspected, not private backend implementation"
+  },
+  "visual_verification": {
+    "completed": true,
+    "older_diagram_pages": [
+      1,
+      6,
+      7,
+      26
+    ],
+    "current_diagram_previously_verified_same_sha256": true
+  },
+  "unchanged_existing_model_and_artifacts": true,
+  "internal_interface_observations_read": false,
+  "register_sha256": "7e50fc5c0a02c6b4cde232712615300bd454209356b0652bd24df82aadbcd1d8",
+  "evidence_rows": 13,
+  "archived_files": [
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_MarketParticipants_UserGuide_Sep2026.pdf",
+      "bytes": 7095148,
+      "sha256": "83a76f2e51762798feb53b342266457991b153cde9489a52834c0fb148c80897"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_MarketParticipants_UserGuide_Sep2026.pdf.receipt.json",
+      "bytes": 376,
+      "sha256": "6bcdddcd02e2144a797f6e9beee410b7e6e4f4de7906ca4a025183e2fd1b60c8"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_MarketParticipants_UserGuide_Sep2026.txt",
+      "bytes": 634159,
+      "sha256": "974806620beb222dab9ea924abf9581cfb617a1d9b36842e4e75f81aedbc1a7e"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_MPUG_PAR_hourly_p90.png",
+      "bytes": 148218,
+      "sha256": "b4f2c7ec0750d551693bd7284b618ffd202282b4b3d6e3e1f5f653c8e101b728"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_OASIS_frontend_postings.json",
+      "bytes": 47551,
+      "sha256": "42381aecb71cc84601896899f4dfa98240c8d08128af9fef4dc117ab58db2b55"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_OASIS_frontend_postings.json.receipt.json",
+      "bytes": 1284,
+      "sha256": "8183229c578abcfaa8953bacb19221165fd8b923456f284bc8fe380137e318e6"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_OASIS_index-BcpghG6r.js",
+      "bytes": 652456,
+      "sha256": "3c61189b840652ff76fd294430786393633705e274f051271d73c2be15d52726"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_OASIS_index-BcpghG6r.js.receipt.json",
+      "bytes": 975,
+      "sha256": "77d8013ac7ae1f64474af950ffcd907f5938bbf9580fe47437bd646a9acadd3a"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_OASIS_index.html",
+      "bytes": 581,
+      "sha256": "0ef35dce1c13e13be93206199655d58a56720b141d31b556d5539edcbf2e3409"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_OASIS_index.html.receipt.json",
+      "bytes": 908,
+      "sha256": "9a18c802f5e07685ad549076fb85c5b15ba5ffb6d3b0cac6116dd2a7bbdd649e"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_OASIS_PAR_FLOW_postings_20251219.json",
+      "bytes": 280,
+      "sha256": "e9e9be5552a09bd66659afc48e44e20f3fd0809c61aba418f788cd85f0d62f14"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_OASIS_PAR_FLOW_postings_20251219.json.receipt.json",
+      "bytes": 892,
+      "sha256": "e8d78693594f0b7f6097859d69f7b987427398bf73447292fd3309d8a0b45a83"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_OASIS_ParFlows_20251219.csv",
+      "bytes": 672084,
+      "sha256": "0764881bf5cc798c8985909860a16d2b5c6450bdc9e5689416686d9766758bd7"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_OASIS_ParFlows_20251219.csv.receipt.json",
+      "bytes": 1221,
+      "sha256": "a3679790304fd14d0b6cba6929f1d20c4815c4203dd07a674b6a7939acb8e628"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_2024_2025_archive_index.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_2024_2025_archive_index.json.receipt.json",
+      "bytes": 1231,
+      "sha256": "a81e1afcef76d7e38735b20670859c6ee3e54f4c6edee13df91cf291bdd08cb6"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_byfilename25.pdf.failed.json",
+      "bytes": 181,
+      "sha256": "eca9d32b49b33c9e1bd89dc1c2bd4d21688969b41a551ed0fc82731458e95920"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_Jan2026_cover.png",
+      "bytes": 70889,
+      "sha256": "a43590bd48373c05f3d4401d2350e79b80a1229c26c1b1f614771b93874f4f01"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_Jan2026_Dover.png",
+      "bytes": 87183,
+      "sha256": "f1a4688acd6bdcf1d03a62e2004f749cb5b1c9e1097372e5c645642fb1374e2f"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_Jan2026_legend.png",
+      "bytes": 33274,
+      "sha256": "83cf432289a22ae236b6ed5462bb3df2e49f7b32f5ee7c62a65a5f6016709e4f"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_Jan2026_Moses.png",
+      "bytes": 80053,
+      "sha256": "f0ec9dea9b1a9f76d9438305e1b3ca4408896820de1d7f3d82989c04dadc990e"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version1_0.pdf",
+      "bytes": 217418,
+      "sha256": "98553ac3d45f1d836032180ea768ff1ad49ee61edf7bb4eaeabc3b69112ecac2"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version1_0.pdf.receipt.json",
+      "bytes": 3388,
+      "sha256": "e4fb556a3f1c3d3cfef0f673f4eade526973e96bbc913e0d6704ae62f7c4d799"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version1_0.txt",
+      "bytes": 17184,
+      "sha256": "48b7d6979e601bc128e3ffc75d0bdfb12a690e0ba544ae77d44f033e96c2cb46"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version1_1.pdf",
+      "bytes": 217418,
+      "sha256": "98553ac3d45f1d836032180ea768ff1ad49ee61edf7bb4eaeabc3b69112ecac2"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version1_1.pdf.receipt.json",
+      "bytes": 3388,
+      "sha256": "50e413aa2233ca4a3c79c6b6c5e892340e53571b6ce3bd0faea2237fb178d6bc"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version1_1.txt",
+      "bytes": 17184,
+      "sha256": "48b7d6979e601bc128e3ffc75d0bdfb12a690e0ba544ae77d44f033e96c2cb46"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version2_0.pdf",
+      "bytes": 219393,
+      "sha256": "c0647d2abc38f216ccf5c1f197ca679cf16358fde5f507659bcdcd80a6938ba4"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version2_0.pdf.receipt.json",
+      "bytes": 3387,
+      "sha256": "e173de87ef4d60c79e7e393de499ca995865c4444386531a56f3686b4c1428c5"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version2_0.txt",
+      "bytes": 17306,
+      "sha256": "defe8dfc6265cb13b1504cc304a268f6f4248a108fde074ed5db03feac5010bb"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARschedule_definition.doc",
+      "bytes": 22528,
+      "sha256": "bd6af75a7b867f36326be2ec0e2a9e8da4067a4506abe77d3c2285e983df674c"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARschedule_definition.doc.receipt.json",
+      "bytes": 679,
+      "sha256": "75e50a56c5d595575b8554d54470f11742efee96e550f69e9c9caa0d6f2f7b0d"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARschedule_definition_printable.txt",
+      "bytes": 487,
+      "sha256": "a5f02d9fedebee2a86770cdc5cfc2200fc187c123973f3a00cd6118cb43c9cc8"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_public_PARfolder_listing.json.failed.json",
+      "bytes": 202,
+      "sha256": "ad2e472f6eb2d0c48ced8c0180d1c092183395448e37389a5b05a3144e10c4f3"
+    }
+  ],
+  "reproducer": {
+    "path": "scripts/nygrid_2025_p34_qualification/build_primary_evidence.py",
+    "sha256": "a102a87162ea0f6b87b6f9946e427cefc3ffc9755f33051f21ff6592411396f9"
+  }
+}

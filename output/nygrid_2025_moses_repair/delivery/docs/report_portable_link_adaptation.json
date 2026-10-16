@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "source_path": "NYGRID_2025_MOSES_REPAIR.md",
+  "source_sha256": "3faabcb7380bd03996db6c5127474216f24bc20338f23a2c269dfc7025d35215",
+  "portable_path": "NYGRID_2025_MOSES_REPAIR.md",
+  "portable_sha256": "f381762fd6cae2abba5a9938aae2ebfa5bb78efe41316a525e6ad0aee300dc44",
+  "changes": "Only repository file references are adapted to included portable files; scientific prose and numerical content are unchanged.",
+  "replacements": {
+    "output/nygrid_2025_moses_repair/delivery/docs/START_HERE.md": "START_HERE.md",
+    "output/nygrid_2025_moses_repair/delivery/docs/DATA_DICTIONARY.md": "DATA_DICTIONARY.md",
+    "output/nygrid_2025_moses_repair/summary/moses_repair_comparison.png": "analysis/moses_repair_comparison.png",
+    "output/nygrid_2025_moses_repair/summary/moses_repair_comparison.pdf": "analysis/moses_repair_comparison.pdf",
+    "output/nygrid_2025_moses_repair/summary/annual_paired_comparison.csv": "analysis/annual_paired_comparison.csv",
+    "output/nygrid_2025_moses_repair/summary/monthly_moses_comparison.csv": "analysis/monthly_moses_comparison.csv",
+    "scripts/nygrid_2025_moses_repair/annual/README.md": "provenance/ANNUAL_REPLAY_README.md",
+    "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_receipt.json": "verification/annual_receipt.json",
+    "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/scoring_receipt.json": "verification/scoring_receipt.json",
+    "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_input_accounting_review.json": "verification/annual_input_accounting_review.json",
+    "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_physics_review.json": "verification/annual_physics_review.json",
+    "output/nygrid_2025_moses_repair/summary/report_receipt.json": "verification/report_receipt.json",
+    "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/independent_scoring_crosscheck.json": "analysis/independent_scoring_crosscheck.json",
+    "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv": "analysis/public_interface_metrics.csv",
+    "output/nygrid_2025_moses_repair/generation/candidate_receipt.json": "analysis/generation/candidate_receipt.json",
+    "output/nygrid_2025_moses_repair/generation/excluded_hour_energy_sensitivity.csv": "analysis/generation/excluded_hour_energy_sensitivity.csv",
+    "output/nygrid_2025_moses_repair/generation/generation_policy.json": "analysis/generation/generation_policy.json",
+    "output/nygrid_2025_moses_repair/generation/independent_generation_review.json": "analysis/generation/independent_generation_review.json",
+    "output/nygrid_2025_moses_repair/generation/StLawrence_monthly_energy_ledger.csv": "analysis/generation/StLawrence_monthly_energy_ledger.csv",
+    "output/nygrid_2025_moses_repair/boundary/boundary_verification_receipt.json": "analysis/boundary/boundary_verification_receipt.json",
+    "output/nygrid_2025_moses_repair/boundary/ISO_NE_PV20_disaggregation_contract.csv": "analysis/boundary/ISO_NE_PV20_disaggregation_contract.csv",
+    "output/nygrid_2025_moses_repair/boundary/PV20_hourly_source.csv": "analysis/boundary/PV20_hourly_source.csv",
+    "output/nygrid_2025_moses_repair/boundary/PV20_source_receipt.json": "analysis/boundary/PV20_source_receipt.json"
+  }
+}

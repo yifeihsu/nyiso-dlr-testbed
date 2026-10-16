@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "baseline": "148bus_hydro_corrected_and_verified_PAR_transfers",
+  "qualified_hours": 8663,
+  "maximum_A_balance_residual_mw": 1.318767317570746e-11,
+  "maximum_B_balance_residual_mw": 3.865352482534945e-12,
+  "annual": {
+    "month": 0,
+    "hours": 8663,
+    "error_correlation": 0.9983491210504247,
+    "common_fraction_pair_squared_error": 0.9991179137049581,
+    "difference_error_mae_mw": 14.852329043671801,
+    "Dysinger_mae_public_mw": 276.390104922015,
+    "Dysinger_rmse_public_mw": 342.22246632604515,
+    "Dysinger_bias_public_mw": 2.7278952583935974,
+    "Dysinger_wape_percent": 32.94204437281034,
+    "West_Central_mae_public_mw": 274.5280710974701,
+    "West_Central_rmse_public_mw": 340.0695024800643,
+    "West_Central_bias_public_mw": -1.9394862875381509,
+    "West_Central_wape_percent": 49.269305649637985
+  },
+  "observations_used_only_for_diagnostics": true,
+  "within_A_relocation_changes_Dysinger_or_West_Central_at_fixed_injections": false,
+  "interpretation": "Common residual accounting is not causal attribution or a fitted correction.",
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/corrected/model_generator_register.csv",
+      "sha256": "1211d0f632df2ccd6306ce299de5d24644d4d28d0d987af8421c8b7559a01e21"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/replay/dated_verified_PAR_flows.mat",
+      "sha256": "4f034589dc10418d391d99cacf5c062b30c5d82308f0c9b73c06e4ae9c8fe6d1"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "created_utc": "2026-10-12T17:08:39.471985+00:00",
+  "purpose": "numeric plausibility and comparability audit;not unit selection by fit",
+  "prior_knowledge": "Earlier audits already exposed raw values and maxima;this declaration precedes new alternate-unit/cross-operator calculations,not all prior knowledge of the data",
+  "hypotheses": [
+    {
+      "id": "power_sample_MW_forward_hold",
+      "native_multiplier": 1.0,
+      "hourly_view": "forward_hold",
+      "meaning": "numeric power sample held to next posting;timestamp support unproved"
+    },
+    {
+      "id": "hour_mean_MW_last_in_hour",
+      "native_multiplier": 1.0,
+      "hourly_view": "last_in_hour",
+      "meaning": "updated hourly-mean power;last posting before hour boundary;interval label unproved"
+    },
+    {
+      "id": "rolling_hour_MWh_at_hour_end",
+      "native_multiplier": 1.0,
+      "hourly_view": "at_hour_end",
+      "meaning": "one-hour rolling energy divided by one hour;numerically meanMW;rolling-window semantics unproved"
+    },
+    {
+      "id": "five_minute_interval_MWh",
+      "native_multiplier": 12.0,
+      "hourly_view": "forward_hold",
+      "meaning": "nominal five-minute interval energy divided by5/60h;mechanical alternative only"
+    }
+  ],
+  "signs": [
+    1,
+    -1
+  ],
+  "sign_meaning": {
+    "1": "documented external-to-NY direction;Ontario2025 source applicable,Dover historical effective date still unproved",
+    "-1": "deliberately reversed diagnostic;not a sign inferred from fit"
+  },
+  "scope_devices": {
+    "StLawrence": [
+      25118,
+      25119
+    ],
+    "Dover": [
+      625149,
+      625150
+    ]
+  },
+  "diagnostics": [
+    "native UTC cadence/duplicate/off-grid counts",
+    "factor1/factor12 conditional nominal-MVA screen per bank,includingnonzero record counts",
+    "weighted-hour versus last-in-hour and hour-boundary values",
+    "fixed independently sourced external-total clock/sign reciprocity with predeclared-1,0,+1hour lags",
+    "regional total minus candidatePARbank subtotal as unmeasured-other-path remainder;never bank prediction error"
+  ],
+  "measurement_kind": "operator-reported P34 product;SCADA versus calculatedRTD origin unresolved",
+  "rating_screen_scope": "only conditional |P|<=nominalS plausibility;ifreportedvaluesarephysicalactivepower;not certified operating/emergency limit or proof of unit",
+  "aggregate_identifiability": "T=s*m*P34+R_others;unmeasured R_others may vary hourly,so T does not identify multiplier m or sign s",
+  "prohibited": [
+    "internalP32numericvalues",
+    "PF/case/dispatchchanges",
+    "selectingunit/sign/lagsbyinternalerror",
+    "equatingDoverwithallNYISO-ISONEties",
+    "equatingtwoStLawrencePARswithallNYISO-IESOties"
+  ],
+  "inputs": {
+    "Dover_raw": {
+      "path": "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_raw_2025_with_endpoint.csv.gz",
+      "sha256": "736e2bff9a446e7e2ee00d0b01cd059fb26dcc6d59f288ab70f4f6febb0bc967"
+    },
+    "StLawrence_raw": {
+      "path": "output/nygrid_2025_moses_audit/exchanges/par_stlawrence_raw_2025.csv.gz",
+      "sha256": "9b0291944d3c70212bf9637877bb45116fa0a6ddcaacb9a4f23d7e8d7428d0a6"
+    },
+    "Dover_proof": {
+      "path": "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_input_receipt.json",
+      "sha256": "61423730e90bde37d2e0ed4d87cfff56657e7886e941b7397ef04d8a09bbae24"
+    },
+    "StLawrence_proof": {
+      "path": "output/nygrid_2025_par_controls/controls/input_receipt.json",
+      "sha256": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747"
+    },
+    "StLawrence_rating": {
+      "path": "output/nygrid_2025_par_controls/sources/limits/limits.json",
+      "sha256": "80f1f5f97e4dd5d5bb1f74211394fcea358ea5cbbff130d432f3103d5a1e01d8"
+    },
+    "Dover_rating": {
+      "path": "output/nygrid_2025_dover_parameters/engineering/conditional_impedance_basis.json",
+      "sha256": "574677e7571b1a2adb5611c07e45108f2fc5cebd86df1c1097fc0012e1aee0f3"
+    },
+    "primary_evidence": {
+      "path": "output/nygrid_2025_p34_qualification/sources/primary_evidence_conclusion.json",
+      "sha256": "8edcc7957deb51e6d9e3d8d3a467936efe28b4c8322567584e014e357721a2db"
+    },
+    "IESO_hourly": {
+      "path": "output/nygrid_2025_western_audit/ontario/ieso_new_york_hourly_2025.csv",
+      "sha256": "229774d88786315ff5138f5009a6bc63806c09f31dc77143e9442a0092c45501"
+    },
+    "IESO_raw": {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025.csv",
+      "sha256": "b4aa6a2a3fe142124115bd9f4710ea3bb46ac2635b47be08b729aaf405671b4d"
+    },
+    "IESO_source_manifest": {
+      "path": "output/nygrid_2025_western_audit/ontario/source_manifest.csv",
+      "sha256": "59e41c8e1082fa06fc84d692c14af05890c622b3c598851f9e856cc349eecb14"
+    },
+    "NYIS_regional": {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/hourly_regional_actuals.csv",
+      "sha256": "eadd202b2a4a4f397215ab7a47d3abae25500008059d4879f14a9ab7829b3f50"
+    },
+    "counterparty_regional": {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/counterparty_actual_comparison.csv",
+      "sha256": "0405cd5e63a556dde5c3a0c09af98b09f4097f29651df93b79f7bf6f8e726a20"
+    },
+    "regional_source_audit": {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/source_audit_receipt.json",
+      "sha256": "b880cb7e40a6707ec59958c624816243d78e921cb0bed0ce4eb356f48c7b95bf"
+    },
+    "P32_channel_metadata": {
+      "path": "output/nygrid_2025_inputs/load_source/channels.csv",
+      "sha256": "d151c3999afe8e73cf564a72936ecbeb4356a2483a93249780889cb480da8ee1"
+    }
+  }
+}

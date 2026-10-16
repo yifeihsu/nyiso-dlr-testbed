@@ -1,0 +1,169 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T05:46:33.599793+00:00",
+  "scope": "Independent nominal-pi R/X conductor inverse mathematics and synthetic acceptance review; no model, source case or prior artifact edited",
+  "installed_asset_identity_required_for_synthetic_eligibility": false,
+  "geographic_chord_required": false,
+  "fresh_electrical_or_thermal_solve_run": false,
+  "internal_interface_observations_read": false,
+  "independent_forward_inverse_current_cases": 504,
+  "max_errors": {
+    "bundle_product_radius_m": 2.220446049250313e-16,
+    "forward_parameter_pu": 1.3322676295501878e-15,
+    "inverse_GMD_m": 1.9539925233402755e-14,
+    "Joule_identity_MW": 4.440892098500626e-16
+  },
+  "equations": {
+    "R": "Rpu = rsub(T) L / (nc nb Zbase)",
+    "X": "Xpu = omega 2e-7 ln(GMD/GMRb) L / (nc Zbase)",
+    "B": "Bpu = nc omega [2 pi epsilon0 / ln(GMD/rbundle)] L Zbase",
+    "ratio": "X/R = nb omega 2e-7 ln(GMD/GMRb) / rsub(T)",
+    "inverse_GMD": "GMRb exp[(X/R) rsub(T)/(nb omega 2e-7)]",
+    "inverse_length": "L = Rpu Zbase nc nb/rsub(T)",
+    "current": "Isub = Iseries_phase/(nc nb); Ibase_A = baseMVA*1000/(sqrt(3)*basekV)",
+    "loss": "P_MW = 3 nc nb Isub^2 rsub L/1e6 = baseMVA Rpu |Iseries_pu|^2"
+  },
+  "identifiability": {
+    "R_X_uniquely_identify_conductor": false,
+    "parallel_circuits_can_repair_ratio": false,
+    "length_and_circuit_tradeoff": "At fixed conductor, bundle and GMD, same R/X permits L proportional to nc; B then scales as nc^2 and ampacity as nc.",
+    "temperature": "Reference conductor temperature is an explicit inversion assumption, not determined by R/X.",
+    "charging": "Trusted positive B supplies an additional constraint; source B=0 may mean omitted/net model charging and is not evidence for zero geometric capacitance.",
+    "mutual": "Equations assume transposed, identical uncoupled parallel circuits; unequal or mutually coupled circuits need a separate primitive model.",
+    "long_line": "R/X here are integrated nominal-pi series parameters. Long-line corrected equivalent-pi R/X are not interchangeable without conversion."
+  },
+  "parent224": {
+    "target_R_X_B_pu": [
+      0.02,
+      0.0147,
+      0.0
+    ],
+    "target_X_over_R": 0.735,
+    "geometry_GMD_interval_m": [
+      7,
+      14
+    ],
+    "declared_catalog_size": 14,
+    "bundle_counts": [
+      2,
+      3,
+      4
+    ],
+    "spacing_interval_m": [
+      0.3048,
+      0.6096
+    ],
+    "feasible_without_geographic_or_meaningful_length_limit": false,
+    "checked_circuits_1_through_64": true,
+    "minimum_achievable_X_over_R": 3.4738407748929263,
+    "minimum_ratio_candidate": {
+      "catalog_id": "PRYSMIAN_ACSR_LINNET_336_4_26_7",
+      "bundle_count": 2,
+      "bundle_spacing_m": 0.6096,
+      "required_GMD_m": 0.17928690964361302,
+      "GMD_min_m": 7.0,
+      "GMD_max_m": 14.0,
+      "target_X_over_R": 0.735,
+      "minimum_X_over_R": 3.4738407748929263,
+      "maximum_X_over_R": 3.9918725722194126,
+      "inferred_length_nc1_m": 235959.80487805707,
+      "inferred_length_nc4_m": 943839.2195122283,
+      "geometry_feasible": false
+    },
+    "maximum_required_GMD_over_declared_candidates_m": 0.3605168097652882,
+    "ratio_shortfall_fraction": 0.7884186272116473,
+    "counterexamples_outside_declared_catalog": 4,
+    "universal_physical_impossibility_claimed": false,
+    "recommendation": "Keep the released network R/X unchanged and leave224 without an accepted plain-OH thermal realization under the declared catalog. Do not add resistance or series compensation to manufacture a match."
+  },
+  "legacy_overhead_provenance": {
+    "total": 186,
+    "imported_or_source_design_R_X_preserved": 128,
+    "prior_engineering_R_X_redesigned": 58,
+    "interpretation": "An inverse fit to current redesigned R/X validates internal consistency of the synthetic engineering choice; it does not independently recover the original imported impedance."
+  },
+  "acceptance_metrics": [
+    "Declare catalog, frequency, baseMVA/kV, reference temperature, geometry, positive integer circuit/bundle choices and electrical-length bounds before examining loading or interface errors.",
+    "Accept only finite positive parameters whose independently recomputed R and X match each runtime section within relative1e-8 or absolute1e-10pu, whichever is larger; report both residuals.",
+    "Use manufacturer resistance interpolation only inside its temperature domain and check geometry against physical radius as well as GMR.",
+    "Preserve original/current R/X and provenance tier; no silent fallback redesign earns an inverse-inference label.",
+    "Report predicted geometric B, preserved model B and mismatch separately; B mismatch may remain a qualification on a one-way series-heating screen, never an exact R/X/B claim.",
+    "Keep all credible alternatives or summarize ampacity/current/length sensitivity; do not select circuit count by eliminating overload or matching interface observations.",
+    "Current must use recovered original runtime phasors and actual voltage base, with no gamma lift; material and electrical I-squared-R loss must agree.",
+    "Only one selected realization per parent per screen; alternative candidates are not parallel installed circuits. Homogeneous numerical sections must forward-match separately.",
+    "Known cable/device/transformer technology remains outside bare-overhead equations; missing installed identity by itself is not an exclusion.",
+    "An out-of-catalog tiny conductor fit requires an independent voltage/corona/mechanical design screen before transmission-study eligibility; exact R/X alone does not establish reasonableness."
+  ],
+  "primary_sources": [
+    {
+      "publisher": "PowerWorld",
+      "url": "https://www.powerworld.com/WebHelp/Content/MainDocumentation_HTML/Transmission_Line_Parameter_Calculator.htm",
+      "supports": "Forward conductor/tower/length/base inputs and R/X/B methods; local version2 PDF printed13-14 contains the formulas."
+    },
+    {
+      "publisher": "Prysmian",
+      "url": "https://na.prysmian.com/sites/na.prysmian.com/files/media/documents/TransPowr%C2%AE%20ACSR%20Bare%20Overhead%20Conductor%20%28US%29.pdf",
+      "supports": "Manufacturer diameter, GMR and AC resistance temperature points; page3 was visually inspected; small conductor entries are not voltage-class qualification."
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/geometry_defaults.csv",
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/line_equivalents.py",
+      "sha256": "f55c9c499f8ee8d7bf925a5a97c3c06c2be55f813d3a256796480cb5201183e6"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/impedance_recommendation.json",
+      "sha256": "8fa3c727c8ffa1e6bdeaed6e63c4830a046e421d339e8c0787cb67abec212ae5"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/sources/prysmian_acsr_us.txt",
+      "sha256": "153fbf6b7fa26845d9379341fca94e66bbedc460779f1b1f65146786487664d7"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/build_assignments.py",
+      "sha256": "4da333c789719e8dc1a17304a458cf0aab40aa075de4c4d2aef038d82f1f70ea"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_prepare_case.m",
+      "sha256": "dccf49daf9d62b20a1d2a3f282e290dd01a4f52ab7de33a2f51db0a71faacd39"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/sources/prysmian_acsr_us.pdf",
+      "sha256": "689963f44e8edbb8be50c8867d1a9a656d78638fe813bffe482b525e867ce8b5"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/sources/powerworld_translinecalc_v2.pdf",
+      "sha256": "317806c53546338c7299dc7f67c75b28feca636933447b461cc946f6097d47f0"
+    },
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/audit_inverse_physics.py",
+      "sha256": "120f08b5e81e8068c4155c15c98030010606765ee5ca09363301a93c3d83c04e"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_conductor_inference/independent/parent224_declared_catalog_feasibility.csv",
+      "sha256": "d9f47852f614aa95a81bdfee7822df09928f938ff33efa7ad1716c22dd851eb8"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/independent/parent224_small_conductor_counterexamples_NOT_ADMITTED.csv",
+      "sha256": "fdf7c0d413673e49ef21898aaea8fc14868c57023125b4e3cfa555dcf251d89e"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/independent/same_R_X_different_circuits_length_charging.csv",
+      "sha256": "c1598d1bea207c7d322c6fd9404279d7f6e42c6cab91a842b1e34e4020a8e7fc"
+    }
+  ]
+}

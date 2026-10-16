@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "status": "independent_residual_arithmetic_and_conditional_energy_review_passed",
+  "created_utc": "2026-10-16T00:52:20.823982+00:00",
+  "qualified_hours": 8651,
+  "primitive_current_balance_checks": {
+    "current_StLawrence_MW": 0.0,
+    "current_native_D_MW": 0.0,
+    "current_HQ_MW": 0.0,
+    "current_PV20_MW": 0.0,
+    "current_gross_D_MW": 0.0,
+    "current_Moses_primary_MW": 0.0,
+    "current_Moses_midpoint_MW": 0.0,
+    "current_Moses_terminal_MW": 0.0,
+    "Moses_observed_MW": 0.0
+  },
+  "conditional_energy_table_max_difference": 1.1641532182693481e-10,
+  "engineering_caps_tested_MW": [
+    855,
+    912
+  ],
+  "months_incompatible_at_each_tested_cap": 12,
+  "oracle_above_855_hours": 1403,
+  "energy_interval_scope": "Necessary aggregate compatibility test only; the distance divided by qualified hours is a lower bound on mean absolute other-balance change, not an attained optimum or a physical causal allocation.",
+  "exact_stl_only_condition": "Hold all other inputs, the comparison operator and the saved terminal correction fixed; StLawrence_required = StLawrence_current - current_residual.",
+  "physical_capability_certificate_claimed": false,
+  "physical_meter_certificate_claimed": false,
+  "qualified_oracle_values_are_not_observed_dispatch": true,
+  "unqualified_hour_energy_not_treated_as_observed": true,
+  "flat_control_D_delta_readback_max_difference_MW": 5.684341886080802e-14,
+  "flat_control_score_max_difference": 1.4210854715202004e-14,
+  "flat_control_scope": "The source-defined flat plant control also redistributes other hydro to preserve the hourly hydro total. The frozen-terminal Moses score uses total native-D change, not StLawrence change alone. This is not a fresh AC score.",
+  "flat_control_annual": {
+    "period": "annual",
+    "hours": 8651,
+    "MAE_MW": 90.18716947048169,
+    "bias_MW": 24.82058608246795,
+    "RMSE_MW": 116.35008409341624,
+    "WAPE_pct": 16.704168375562155
+  },
+  "TE_CE_identity_max_error_MW": 1.3642420526593924e-12,
+  "TE_CE_difference_scope": "Exact frozen model operator identity; the observed difference is not an observed parent224 circuit flow.",
+  "new_AC_solves": 0,
+  "default_model_map_package_changed": false,
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/boundary/northern_balance_identity.csv",
+      "sha256": "eb13bda65eb7582d022425d3956f670b3add7815ac81901d2fc0fdcc66025dd7"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/hourly_evidence.csv",
+      "sha256": "9926ac86a0a6fd3d333bb198693554d8c042755ab102f4a1e3303ec8d1235f2b"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/residual_review.json",
+      "sha256": "dcaea3decf43a29f0a3b48ec7899b5c0521cc6774fa242392140d0a632eaecb2"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/StLawrence_monthly_energy_ledger.csv",
+      "sha256": "e5375d977b2e5fea74dbacba04af5fa4fca331e022bf09b4434725cd8b2f956f"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/conditional_StLawrence_only_energy_compatibility.csv",
+      "sha256": "4192212b21bbd958e60bed70f490d0ac7219fed1b32d375832ac7366a5b0a19f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/latest_model.mat",
+      "sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/generation_candidate.mat",
+      "sha256": "f22c9d1aeef1c76a8ba8de5bb966f12c9504a5f7aac7c06a29e9af9e83115535"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/monthly_flat_generation_control.mat",
+      "sha256": "948cda16fd948471551016dc055e06ca45a824bf7257ccb81ebdcfd793b0131a"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/monthly_flat_hourly_injection_delta.csv",
+      "sha256": "970ec0314f3983bfb702ca8ea404a7c321225cf05e83bee97ec24f642463f443"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/monthly_flat_frozen_terminal_scores.csv",
+      "sha256": "382c512ccbf050e48fd85b14ae8441f2d7ce9809f29b5453c9e6740bbe8e22b6"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/TotalEast_CentralEast_proxy_identity.csv",
+      "sha256": "5bb8de3f05b91d1dedcd91303b7e2c114decf4ffb78aa306754d4444db8e8cab"
+    }
+  ],
+  "script_sha256": "d8e95456ee774fae5f0c045b026b150d0d1f85436279c30db79573855225b398"
+}

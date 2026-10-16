@@ -1,0 +1,103 @@
+{
+  "audit_complete": true,
+  "requested_conditions_all_satisfied": false,
+  "OPF_used": false,
+  "source_qualified_hours": 8651,
+  "default_NR_converged_hours": 8494,
+  "AC_equation_and_profile_qualified_hours": 8494,
+  "VQ_generator_gate_counts": {
+    "normal_voltage_gate": 0,
+    "generator_active_bound_gate": 0,
+    "generator_reactive_bound_gate": 0,
+    "generator_S_proxy_gate": 0,
+    "six_transfer_reactive_contract_gate": 0,
+    "VQ_and_generator_assumption_gate": 0
+  },
+  "ranges_on_equation_and_profile_qualified_hours_only": {
+    "min_voltage_pu": {
+      "min": 0.854424248978636,
+      "max": 0.965230000000001
+    },
+    "max_voltage_pu": {
+      "min": 1.10098416378987,
+      "max": 1.12005979032328
+    },
+    "reference_PG_change_MW": {
+      "min": 143.984008602451,
+      "max": 869.314308860955
+    },
+    "max_P_bound_violation_mw": {
+      "min": 141.606360116416,
+      "max": 867.918145242049
+    },
+    "max_Q_bound_violation_mvar": {
+      "min": 547.591905964304,
+      "max": 864.408641419158
+    },
+    "max_transfer_Q_bound_violation_mvar": {
+      "min": 608.708039502295,
+      "max": 821.917309785059
+    },
+    "max_nodal_P_residual_mw": {
+      "min": 2.3987922759261002e-11,
+      "max": 9.296996950070021e-09
+    },
+    "max_nodal_Q_residual_mvar": {
+      "min": 5.9657168094418e-11,
+      "max": 9.994508332056281e-09
+    }
+  },
+  "overloads_are_DLR_exposures_not_PF_convergence_rejections": true,
+  "physical_NYISO_flowgate_binding_established": false,
+  "zonal_load_exactness_is_construction_identity": true,
+  "within_zone_bus_loads_observed": false,
+  "cable_rows": 40,
+  "cable_correlated_current_overhead_rows": [
+    300,
+    309,
+    310,
+    386
+  ],
+  "current_bus_count_pre_Dover": 266,
+  "current_bus_count_post_Dover": 267,
+  "current_case_and_frozen_profiles_changed": false,
+  "Q_limit_sensitivity_converged_hours": 5,
+  "Q_limit_sensitivity_attempted_hours": 7,
+  "failed_NR_recovery_attempts": 314,
+  "recovered_NR_hours": 0,
+  "unresolved_NR_hours_after_retries": 157,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/annual_profile_PF_receipt.json",
+      "sha256": "8d02350f3bd285d95bd524b6508fcc2646161d74848412a50511b1f5cd71b490"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/annual_hour_quality.csv",
+      "sha256": "6d3e181b8695198dcfd51731026a567b4b015a77a97a4150722b1a0378c9866c"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/comparison/scoring_receipt.json",
+      "sha256": "62ec8165a2bec6d9100bcfcda8019bca43fcc71de469eb223c013bfb55899b13"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/comparison/interface_metrics.csv",
+      "sha256": "e98740385d299c107ba9288c61c95f0bfe11f215b0e249adb85e1d78368dfd9e"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/profile_alignment_summary.json",
+      "sha256": "20d1064c92aa382c76972f40b75a979bceff68c796a4e9861ee15b2408d12046"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/structure_audit.json",
+      "sha256": "cba17c3892d27cd761e534b75a03dac5198ec00fdc869a884db33d17d4f4c6bc"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/Q_limit_sensitivity/Q_limit_sensitivity_receipt.json",
+      "sha256": "5eb819a55d43a8bab171ae21839b9cacc89f7a44b0e4ee0809a358dab93bc40c"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/NR_recovery/NR_recovery_receipt.json",
+      "sha256": "1708ec0d3395ed7952892a01f90a85e9c76644b988a664fe2d992c0e5cd0c9fb"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+                                                    solver_success: 0
+                                                            finite: 1
+                                 max_branch_complex_flow_error_mva: 7.0526e-11
+                                           max_nodal_P_residual_mw: 0.0043
+                                         max_nodal_Q_residual_mvar: 3.3937e-07
+                                          max_P_bound_violation_mw: 586.2226
+                                        max_Q_bound_violation_mvar: 706.9053
+                       max_assumed_generator_S_bound_violation_mva: 695.3388
+                                    max_voltage_bound_violation_pu: 0.0632
+                                                    min_voltage_pu: 0.9652
+                                                    max_voltage_pu: 1.1132
+                                       max_equipment_MVA_violation: 409.3780
+                                 max_external_P_schedule_change_mw: 0
+                                    max_fixed_transfer_P_change_mw: 0
+                            max_transfer_loss_equation_residual_mw: 0
+                               max_transfer_Q_bound_violation_mvar: 750.4877
+                                     native_generation_increase_mw: 588.3144
+                   native_generation_change_from_supplied_point_mw: 588.3144
+                                                 AC_real_losses_mw: 694.6181
+                                                 DC_real_losses_mw: 0
+                                 max_series_loss_identity_error_mw: 2.3315e-13
+                                      global_P_balance_residual_mw: 5.9375e-04
+                                 gamma_division_applied_to_current: 0
+                                  thermal_conductor_limits_audited: 0
+                                                            passed: 0
+                                  OH_series_current_limits_audited: 0
+                                maximum_OH_series_current_fraction: 0
+                          hardware_terminal_current_limits_audited: 1
+                             hardware_terminal_current_limit_count: 333
+                        maximum_hardware_terminal_current_fraction: 1.9496
+                         max_terminal_current_crosscheck_error_amp: 2.1289e-10
+                      conductor_section_end_current_limits_audited: 0
+                    maximum_conductor_section_end_current_fraction: 0
+                    max_conductor_end_current_crosscheck_error_amp: 0
+                       cable_section_static_current_limits_audited: 1
+                     maximum_cable_section_static_current_fraction: 1.0332
+                    max_cable_section_current_crosscheck_error_amp: 1.7608e-10
+                                                        hour_index: 4860
+                                                     timestamp_utc: '2025-07-22T16:00:00Z'
+                                                      PF_converged: 0
+                                                  AC_equation_gate: 0
+                                              loss_allocation_gate: 0
+                                          loss_iteration_converged: 0
+                                                       loss_status: 'AC_NR_failed'
+                                                   loss_iterations: 21
+                                               total_NR_iterations: 826
+                                                   elapsed_seconds: 1.0293
+                                                           backend: 'compact'
+                                       no_full_network_Newton_used: 1
+                                        compact_retained_bus_count: 148
+                                         recovery_voltage_error_pu: 3.3307e-16
+                                         recovered_current_error_A: 3.7172e-10
+                                       reduction_and_equation_gate: 0
+                                 native_PG_change_from_original_MW: 588.3144
+                              reference_PG_change_from_original_MW: 588.3144
+                                    regional_NY_import_residual_MW: 67.9997
+                              NY_gross_load_accounting_residual_MW: 312.7618
+                                           loss_budget_residual_MW: 312.7618
+                                    maximum_NY_zonal_loss_fraction: 1.1525
+                                           minimum_NY_served_PD_MW: 102.5484
+                                  VQ_and_generator_assumption_gate: 0
+                                                    impedance_mode: 'released_equivalent'
+                            parent224_physical_impedance_validated: 0
+                                                          OPF_used: 0
+     P58_boundary_demand_equals_delivered_PD_plus_allocated_losses: 1
+    loss_ownership_is_declared_not_observed_NYISO_meter_assignment: 1
+                       source_internal_interface_observations_used: 0
+
+    loss_iteration    NR_iterations    NR_success    budget_residual_MW    reference_PG_change_MW    actual_total_loss_MW    applied_NY_loss_MW    applied_external_loss_MW    minimum_NY_served_fraction     damping      termination_reason
+    ______________    _____________    __________    __________________    ______________________    ____________________    __________________    ________________________    __________________________    __________    __________________
+
+           1               50            false                NaN                     NaN                      NaN                 367.16                   160.27                       0.22526                      1     {'AC_NR_failed'} 
+           2                6            true              309.17                  643.85                   643.85                      0                        0                             1                      1     {'iterate'     } 
+           3               50            false                NaN                     NaN                      NaN                 476.81                   167.04                      0.022818                      1     {'AC_NR_failed'} 
+           4               50            false                NaN                     NaN                      NaN                  238.4                   83.521                       0.51141                    0.5     {'AC_NR_failed'} 
+           5               50            false                NaN                     NaN                      NaN                  119.2                   41.761                        0.7557                   0.25     {'AC_NR_failed'} 
+           6                5            true               298.8                  586.32                    666.8                 59.601                    20.88                       0.87785                  0.125     {'iterate'     } 
+           7               50            false                NaN                     NaN                      NaN                 125.56                   42.868                       0.73619                   0.15     {'AC_NR_failed'} 
+           8               50            false                NaN                     NaN                      NaN                 92.581                   31.874                       0.80702                  0.075     {'AC_NR_failed'} 
+           9                5            true              304.96                  581.07                   683.54                 76.091                   26.377                       0.84244                 0.0375     {'iterate'     } 
+          10               50            false                NaN                     NaN                      NaN                 95.884                   32.732                       0.79906                  0.045     {'AC_NR_failed'} 
+          11               50            false                NaN                     NaN                      NaN                 85.987                   29.555                       0.82075                 0.0225     {'AC_NR_failed'} 
+          12               50            false                NaN                     NaN                      NaN                 81.039                   27.966                       0.83159                0.01125     {'AC_NR_failed'} 
+          13                5            true              310.07                  584.89                   690.63                 78.565                   27.172                       0.83702               0.005625     {'iterate'     } 
+          14               50            false                NaN                     NaN                      NaN                 81.565                    28.12                        0.8304                0.00675     {'AC_NR_failed'} 
+          15               50            false                NaN                     NaN                      NaN                 80.065                   27.646                       0.83371               0.003375     {'AC_NR_failed'} 
+          16               50            false                NaN                     NaN                      NaN                 79.315                   27.409                       0.83536              0.0016875     {'AC_NR_failed'} 
+          17                5            true               312.8                  587.59                   693.82                  78.94                    27.29                       0.83619             0.00084375     {'iterate'     } 
+          18               50            false                NaN                     NaN                      NaN                 79.393                   27.432                       0.83519              0.0010125     {'AC_NR_failed'} 
+          19               50            false                NaN                     NaN                      NaN                 79.166                   27.361                       0.83569             0.00050625     {'AC_NR_failed'} 
+          20               50            false                NaN                     NaN                      NaN                 79.053                   27.326                       0.83594             0.00025312     {'AC_NR_failed'} 
+          21               50            false                NaN                     NaN                      NaN                 78.996                   27.308                       0.83606             0.00012656     {'AC_NR_failed'} 
+

@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "tests_run": 13,
+  "failures": 0,
+  "errors": 0,
+  "scope": "independent physics invariants;no installed-line or network power-flow qualification",
+  "methods": [
+    "asymmetric_earth_image_potential_matrix_positive_sequence",
+    "height_to_infinity_limit",
+    "phase_permutation_and_geometry_scale_invariance",
+    "manufacturer_temperature_interpolation",
+    "single_vs_twin_parallel_resistance",
+    "per_unit_base_scaling",
+    "nominal_pi_total_charging_and_real_loss"
+  ],
+  "physics_code_sha256": "fd200cd43d715522d0da0a26f21263e878d1019b5d84d849a55eabf14f26d27f",
+  "test_code_sha256": "fc8a876ba5305df48202b7b1ec0779f56cf68ec348bf14f5a77a841fb6a87189",
+  "references": [
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/sources/powerworld_translinecalc_v2.pdf",
+      "printed_pages": "13-17"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/sources/epri_LineConstants.cpp",
+      "lines": "107-127"
+    }
+  ]
+}

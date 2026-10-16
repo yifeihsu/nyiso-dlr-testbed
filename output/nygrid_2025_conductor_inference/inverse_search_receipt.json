@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T05:54:40.235999+00:00",
+  "scope": "R/X-conditioned homogeneous synthetic overhead candidate search; not a new electrical model or installed-line identification",
+  "baseline_model_commit": "51e424a139e0d0ec42fcbbb35749deaf119cffc2",
+  "parent_targets": 186,
+  "target_rows": 372,
+  "feasible_candidate_rows": 11701,
+  "current_targets_with_candidates": 185,
+  "imported_targets_with_candidates": 141,
+  "source_identity_or_geographic_chord_required": false,
+  "selected_realizations_applied_to_electrical_or_thermal_model": false,
+  "existing_heterogeneous_design_segments_remain_a_separate_valid_realization_class": true,
+  "no_candidate_scope": "Only the archived14-conductor catalog, existing voltage geometry bounds, fixed catalog reference temperatures, integer circuits1..4 and lengths5m..the inherited250/500/700/1000km voltage-class cap were searched; no geographic chord is required.",
+  "original_vs_prior_engineered_parameters_kept_separate": true,
+  "parent224": {
+    "input_R_pu": 0.02,
+    "input_X_pu": 0.0147,
+    "input_B_pu": 0.0,
+    "base_kV": 345.0,
+    "base_MVA": 100.0,
+    "candidate_count": 0,
+    "status": "no_candidate_under_declared_catalog_and_bounds",
+    "targets_changed": false,
+    "installed_conductor_identified": false,
+    "geographic_chord_used": false,
+    "power_flow_or_interface_observations_used": false,
+    "circuits_allowed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "minimum_length_m": 5.0,
+    "maximum_length_m": 700000.0,
+    "length_cap_policy": "inherited_voltage_class_synthetic_cap_without_geographic_chord",
+    "resistance_temperature_policy": "catalog_reference_75C_ACSR_or95C_ACSS",
+    "B_used_for_ranking": false,
+    "candidate_set_is_conditional_not_a_statistical_confidence_interval": true,
+    "distinct_catalog_choices": 0,
+    "X_over_R": 0.735,
+    "declared_X_over_R_min": 3.4738407748928046,
+    "declared_X_over_R_max": 37.50334725388549,
+    "maximum_implied_GMD_m": 0.36051680976529454,
+    "required_GMD_min_m": 7.0,
+    "required_GMD_max_m": 14.0,
+    "no_candidate_is_not_universal_physical_impossibility": true
+  },
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/infer_conductors.py",
+      "bytes": 13714,
+      "sha256": "11fd9f52f939f2087be2616ffa885c6f63e3861a2b4f086209100e4739fc9b0b"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/line_equivalents.py",
+      "bytes": 12044,
+      "sha256": "f55c9c499f8ee8d7bf925a5a97c3c06c2be55f813d3a256796480cb5201183e6"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "bytes": 13436,
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/geometry_defaults.csv",
+      "bytes": 2282,
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "bytes": 395484,
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_conductor_inference/inverse_target_summary.csv",
+      "bytes": 189662,
+      "sha256": "32ee374171861653f155dc1986eeec13ee0bab9b94de1b1628bb6535670f5434"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/feasible_candidate_realizations.csv",
+      "bytes": 5419293,
+      "sha256": "d4b86519cba7cf8d544ab15cd32987963b41b79b3224a566b3b206c6baa2ef5b"
+    }
+  ]
+}

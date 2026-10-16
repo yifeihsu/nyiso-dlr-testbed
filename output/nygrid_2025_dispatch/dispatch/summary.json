@@ -1,0 +1,25 @@
+{
+  "hours": 8760,
+  "source_qualified_hours": 8663,
+  "dispatched_hours": 8663,
+  "missing_source_hours": 97,
+  "capacity_infeasible_hours": 0,
+  "native_generators": 1436,
+  "fixed_external_generators": 28,
+  "generators": 1464,
+  "maximum_nodal_residual_mw": 1.233502189279534e-11,
+  "maximum_slack_change_mw": 3.296918293926865e-11,
+  "maximum_generator_bound_violation_mw": 0.0,
+  "minimum_native_requirement_mw": 2718.8414792763197,
+  "maximum_native_requirement_mw": 8765.466511956172,
+  "dc_snapshot_qualified": true,
+  "all_source_qualified_hours_solved": true,
+  "ac_feasibility_validated": false,
+  "topology_changed": false,
+  "file_sha256": {
+    "dispatch.mat": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c",
+    "dispatch_bounds.mat": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab",
+    "dispatch_priors.mat": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883",
+    "dispatch_network.mat": "7fa16e2160edfe79b0ce26ae9262ecac9f1bd4dfde8196637d896e34567451d3"
+  }
+}

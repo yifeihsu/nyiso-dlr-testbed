@@ -1,0 +1,31 @@
+test_conflicting_samples_fail (test_generation_priors.GenerationSourceTests.test_conflicting_samples_fail) ... ok
+test_crosswalk_many_to_many_does_not_create_output_rows (test_generation_priors.GenerationSourceTests.test_crosswalk_many_to_many_does_not_create_output_rows) ... ok
+test_duplicate_equal_sample_does_not_double_energy (test_generation_priors.GenerationSourceTests.test_duplicate_equal_sample_does_not_double_energy) ... ok
+test_epa_partial_operation_and_blank (test_generation_priors.GenerationSourceTests.test_epa_partial_operation_and_blank) ... ok
+test_hydro_negative_net_pumping_not_used_as_generation (test_generation_priors.GenerationSourceTests.test_hydro_negative_net_pumping_not_used_as_generation) ... ok
+test_independent_epa_daily_quantity_fixture (test_generation_priors.GenerationSourceTests.test_independent_epa_daily_quantity_fixture) ... ok
+test_metered_interval_integration_and_gap (test_generation_priors.GenerationSourceTests.test_metered_interval_integration_and_gap) ... ok
+test_nrc_daily_parser_and_conflict (test_generation_priors.GenerationSourceTests.test_nrc_daily_parser_and_conflict) ... ok
+test_physical_hour_axis_and_dst (test_generation_priors.GenerationSourceTests.test_physical_hour_axis_and_dst) ... ok
+test_qualified_prior_conserves_independent_total (test_generation_priors.GenerationSourceTests.test_qualified_prior_conserves_independent_total) ... ok
+test_retirement_month_is_not_reactivated (test_generation_priors.GenerationSourceTests.test_retirement_month_is_not_reactivated) ... ok
+test_unqualified_prior_not_zero (test_generation_priors.GenerationSourceTests.test_unqualified_prior_not_zero) ... ok
+test_utc_clock_disambiguates_repeated_civil_hour (test_generation_priors.GenerationSourceTests.test_utc_clock_disambiguates_repeated_civil_hour) ... ok
+test_catalog_has_8760_physical_hours_and_both_fall_folds (test_load_sources.TestPhysicalSources.test_catalog_has_8760_physical_hours_and_both_fall_folds) ... ok
+test_conflicting_or_missing_load_keys_stay_unqualified (test_load_sources.TestPhysicalSources.test_conflicting_or_missing_load_keys_stay_unqualified) ... ok
+test_end_of_hour_requires_future_bracket_not_extrapolation (test_load_sources.TestPhysicalSources.test_end_of_hour_requires_future_bracket_not_extrapolation) ... ok
+test_explicit_load_timezone_keeps_folds_and_rejects_wrong_season (test_load_sources.TestPhysicalSources.test_explicit_load_timezone_keeps_folds_and_rejects_wrong_season) ... ok
+test_forward_mean_uses_durations_and_duplicate_timestamp_mean (test_load_sources.TestPhysicalSources.test_forward_mean_uses_durations_and_duplicate_timestamp_mean) ... ok
+test_long_gap_remains_nan_and_full_interval_is_disqualified (test_load_sources.TestPhysicalSources.test_long_gap_remains_nan_and_full_interval_is_disqualified) ... ok
+test_mixed_sentinel_duplicate_is_flagged_before_averaging (test_load_sources.TestPhysicalSources.test_mixed_sentinel_duplicate_is_flagged_before_averaging) ... ok
+test_p32_fold_uses_raw_clock_rewind_and_does_not_merge_two_hours (test_load_sources.TestPhysicalSources.test_p32_fold_uses_raw_clock_rewind_and_does_not_merge_two_hours) ... ok
+test_p32_spring_nonexistent_hour_is_not_imputed (test_load_sources.TestPhysicalSources.test_p32_spring_nonexistent_hour_is_not_imputed) ... ok
+test_invalid_load_is_rejected (test_operating_inputs.ScalingTests.test_invalid_load_is_rejected) ... ok
+test_missing_one_exchange_is_not_silently_counted_as_zero (test_operating_inputs.ScalingTests.test_missing_one_exchange_is_not_silently_counted_as_zero) ... ok
+test_peak_anchor_shapes_and_zonal_conservation (test_operating_inputs.ScalingTests.test_peak_anchor_shapes_and_zonal_conservation) ... ok
+test_zero_load_zone_fallback_is_explicit_and_conserves (test_operating_inputs.ScalingTests.test_zero_load_zone_fallback_is_explicit_and_conserves) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.433s
+
+OK

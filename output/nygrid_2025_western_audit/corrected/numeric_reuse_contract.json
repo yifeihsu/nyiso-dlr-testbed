@@ -1,0 +1,33 @@
+{
+  "numeric_artifacts_copied": false,
+  "numeric_artifacts_modified": false,
+  "PG_rebalanced_by_mapping_repair": false,
+  "parent_dispatch_will_handle_external_flow_reprojection_separately": true,
+  "artifacts": {
+    "fleet_bounds_npz": {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_bounds.npz",
+      "sha256": "7fdc0f26448d6333ba427f7d10535cff2eef993de21fae0794eba99b549e9c52"
+    },
+    "fleet_bounds_mat": {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_bounds.mat",
+      "sha256": "48da9450d2dbc265404232f481feb73cc4e3f971499a723afd7dce1ef7400b57"
+    },
+    "per_unit_source_priors_npz": {
+      "path": "output/nygrid_2025_dispatch/priors/dispatch_priors.npz",
+      "sha256": "6a99bee7ea8be1e63a6349b6a0e6fa781932525fab17dd3548ac1e11a304c66f"
+    },
+    "frozen_dispatch_mat": {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    "dispatch_priors_mat": {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    "dispatch_bounds_mat": {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    }
+  },
+  "reuse_basis": "Generator identities, per-unit priors, capacities and admission are unchanged; mapping is separate from the global bounded dispatch objective"
+}

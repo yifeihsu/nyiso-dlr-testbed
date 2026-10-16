@@ -1,0 +1,156 @@
+\documentclass[aspectratio=169,10pt]{beamer}
+\usepackage{default_latex_beamer_template}
+\usepackage{amsmath}
+\hypersetup{pdftitle={NYgrid 2019 interface-flow project update},pdfauthor={NPCC / New York modeling project},colorlinks=true,urlcolor=blue,linkcolor=muted}
+\pdfstringdefDisableCommands{\def\translate#1{#1}}
+\setbeamertemplate{itemize item}{\color{teal}\small\textbullet}
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\source}[1]{\par\vfill{\color{muted}\fontsize{6.5}{7.5}\selectfont Source: #1\par}}
+\newcommand{\lead}[1]{{\large\color{navy}\bfseries #1}\par\medskip}
+\newcommand{\minor}[1]{{\small\color{muted}#1}\par}
+\newcommand{\tightitems}{\setlength{\itemsep}{1em}}
+\title[NYgrid 2019 interface-flow update]{NYgrid 2019 interface flow}
+\subtitle{Compact-model calibration experiments}
+\author{NPCC / New York modeling project}
+\date{September 8, 2026}
+\begin{document}
+
+% 1: title
+\defaulttitleframe{Project update}
+
+% 2: scope and metric
+\begin{frame}{Models and comparison setup}
+\begin{center}
+\begin{tabular}{lrl}
+\toprule
+Model & Buses & Role \\
+\midrule
+Released NYgrid & 57 & Reproduce the paper's 2019 study \\
+NY-only reference & 46 & Exact replay with boundary injections \\
+Historical compact & 51 & Test matched 2019 inputs and Marcy paths \\
+Year-end 2025 variant & 71 & Unchanged in this experiment \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+\begin{itemize}\tightitems
+\item Compare all \textbf{8,760 hours} using common 2019 inputs and paper-role interface definitions.
+\item Scale all compact-model power inputs and targets once by $\gamma=0.35866$. Percentage errors are unchanged.
+\end{itemize}
+\medskip
+\[
+\mathrm{WAPE}=100\,\frac{\sum |F_{\rm model}-F_{\rm observed}|}{\sum |F_{\rm observed}|}
+\]
+\minor{We report error relative to actual flow. The paper's Eq. 11 instead divides by the positive interface limit.}
+\source{[1--3]. Historical compact is a research reconstruction, not an exact 2019 as-built network.}
+\end{frame}
+
+% 3: source baseline
+\begin{frame}{NYgrid annual performance}
+\begin{columns}[T,onlytextwidth]
+\column{0.57\textwidth}
+\small\input{data/annual_nygrid_table.tex}
+\par\medskip
+\minor{MAE uses actual-scale MW.}
+\column{0.39\textwidth}
+\lead{11.22\% pooled WAPE}
+\begin{itemize}\tightitems
+\item Corrected five stale plotting formulas using the released interface map.
+\item Same solved states: pooled WAPE changes from 60.66\% to 11.22\%.
+\item West Central remains weakest, with 1,006 opposite-direction hours.
+\end{itemize}
+\end{columns}
+\par\bigskip
+\textbf{The formula correction repairs measurement; it changes no electrical parameters.}
+\source{[2]. Corrected paper-role operators, all 8,760 prepared hours. DC convergence alone does not establish AC or thermal feasibility.}
+\end{frame}
+
+% 4: method
+\begin{frame}{How we adapted the paper's method}
+\begin{enumerate}\tightitems
+\item Transfer NYgrid's reconstructed generation, zonal load, and NY-side boundary injections to compact51.
+\item Align bus allocation roles and interface cuts across the networks.
+\item Test the paper-derived Marcy paths while retaining the inherited compact backbone.
+\end{enumerate}
+\medskip
+\begin{center}
+\begin{tikzpicture}[every node/.style={font=\small,align=center},bus/.style={circle,draw=navy,thick,minimum size=0.8cm}]
+\node[bus] (a) at (0,0) {43};
+\node[bus] (b) at (4.5,0) {38};
+\node[bus] (c) at (9,0) {77};
+\draw[teal,line width=1.7pt] (a) -- node[above=5pt]{$X=0.0427$ pu} (b);
+\draw[teal,line width=1.7pt] (b) -- node[above=5pt]{$X=0.0147$ pu} (c);
+\end{tikzpicture}
+\end{center}
+\minor{Two added AC-network branches in the DC approximation, on a 100 MVA base. The model remains at 51 buses.}
+\par\bigskip
+\textbf{This is a calibration diagnostic: no new shared-parameter or per-hour target fitting.}
+\source{[1,3]. Source-informed reactances; AC parameters and ratings remain unqualified. Earlier compact S4/S7 calibration history is inherited.}
+\end{frame}
+
+% 5: annual comparison
+\begin{frame}{Annual error improves, with a UPNY tradeoff}
+\begin{center}
+\includegraphics[height=4.95cm,keepaspectratio]{figures/02_annual_model_comparison.pdf}
+\end{center}
+\textbf{Pooled WAPE: 17.38\% to 12.32\%.} Improvement appears in all 12 months.
+\par\medskip
+Central East: \textcolor{teal}{\textbf{49.23\% to 7.09\%}}.\qquad UPNY--ConEd: \textcolor{red}{\textbf{10.55\% to 18.59\%}}.
+\source{[3]. Common paper-role cuts and 2019 inputs. Under current physical-zone cuts, pooled WAPE changes from 19.07\% to 19.67\%; operator choice matters.}
+\end{frame}
+
+% 6: selected-hour evidence
+\begin{frame}{Best examples: errors for every interface}
+\begin{center}
+\small
+\begin{tabular}{lrr}
+\toprule
+ & NYgrid reference & Compact + Marcy \\
+2019 local hour & Jan 8, 15:00 & Jul 3, 04:00 \\
+\midrule
+Dysinger East & 0.30\% & 1.46\% \\
+West Central & 3.63\% & 1.48\% \\
+Moses South & 4.07\% & 4.85\% \\
+Central East & 1.73\% & 4.22\% \\
+Total East & 2.49\% & 3.02\% \\
+UPNY--ConEd & 2.22\% & 3.75\% \\
+Dunwoodie/Sprain & 0.13\% & 2.45\% \\
+\midrule
+\textbf{Pooled error} & \textbf{2.03\%} & \textbf{3.28\%} \\
+\textbf{Worst interface} & \textbf{4.07\%} & \textbf{4.85\%} \\
+\bottomrule
+\end{tabular}
+\end{center}
+\minor{Each interface error is $100|F_{\rm model}-F_{\rm observed}|/|F_{\rm observed}|$. These are different, retrospectively selected hours, with no opposite directions or imputed observations.}
+\source{[2,3]. Both are best minimax examples, ranked by the largest interface error. Selection is development evidence, not held-out validation.}
+\end{frame}
+
+% 7: limits and next work
+\begin{frame}{What the results support and what comes next}
+\lead{A useful 2019 DC baseline and low-error compact examples}
+\begin{itemize}\tightitems
+\item \textbf{Main gaps:} West Central uncertainty and UPNY transfer sharing. Test bounded, shared allocation and network parameters.
+\item \textbf{AC qualification:} resolve Marcy line parameters, ratings, and controls. A separate three-hour AC checkpoint passed on compact51 \emph{without Marcy}.
+\item \textbf{Independent evaluation:} freeze parameters before testing new periods. Use consistent 2025 data to validate the 71-bus expansion for DLR inference.
+\end{itemize}
+\par\bigskip
+\minor{The selected 2019 snapshots do not establish accuracy of the 2025 model or AC/DLR feasibility of the Marcy variant.}
+\source{[3]. Next steps are proposed work. No new parameter fit or untouched predictive evaluation was completed in this experiment.}
+\end{frame}
+
+% 8: compact references
+\begin{frame}{References}
+\begin{enumerate}\setlength{\itemsep}{1.3em}
+\item M. V. Liu et al.\ (2023). \emph{An Open Source Representation for the NYS Electric Grid to Support Power Grid and Market Transition Studies}. IEEE Transactions on Power Systems, 38(4), 3293--3303.\par
+\href{https://doi.org/10.1109/TPWRS.2022.3200887}{Paper DOI}\qquad
+\href{https://github.com/AndersonEnergyLab-Cornell/NYgrid/tree/47698b6c7823ae7b1bc6935e5601d5b64b8f918e}{Pinned NYgrid source}
+\item \href{https://github.com/yifeihsu/nyiso-dlr-testbed/blob/c472e250753b441223d8c6e029aa86e6dd56db8e/NYGRID_2019_INTERFACE_VERIFICATION.md}{NYgrid 2019 interface verification}\par
+Annual results, formula audit, source-data checks, and selected hours.
+\item \href{https://github.com/yifeihsu/nyiso-dlr-testbed/blob/c472e250753b441223d8c6e029aa86e6dd56db8e/NYGRID_COMPACT_2019_COMPARISON.md}{Matched compact 2019 comparison}\par
+Network experiments, allocation tests, selected snapshots, and the separate AC checkpoint.
+\end{enumerate}
+\vfill
+\minor{Scientific evidence: project commit \texttt{c472e25}. Additional detail remains in the linked reports.}
+\end{frame}
+\end{document}

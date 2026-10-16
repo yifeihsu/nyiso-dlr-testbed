@@ -1,0 +1,45 @@
+{
+  "baseline_commit": "c7874aa90fec1d4e883814297e91bfcd3567bdf2",
+  "buses": 140,
+  "AC_branches": 225,
+  "DC_links": 4,
+  "generators": 1464,
+  "annual_hours": 8760,
+  "qualified_hours": 8663,
+  "gamma": 0.30012075175285535,
+  "refinement_parameters_fit_to_interface_observations": false,
+  "artifacts": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_network.mat",
+      "sha256": "7fa16e2160edfe79b0ce26ae9262ecac9f1bd4dfde8196637d896e34567451d3"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/model_generator_register.csv",
+      "sha256": "7c613350f8cb397dc80fbfffd78d1a5e6e8e956e46cccdb6fc3a238af0615dda"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/hour_status.csv",
+      "sha256": "295922124599aed8e249a2cd7aaca7bac2a5f24d4f7cf31be8a20728d77540ed"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/contract.json",
+      "sha256": "a31e1427567f525a78cea58ad8a90e51b1dd8a7856b5ba63abb1cbaa0342207d"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/summary.json",
+      "sha256": "9699f6ef6125540a626b76898f75a1605e503b2516e9858e35a9e74b26e246e1"
+    }
+  ]
+}

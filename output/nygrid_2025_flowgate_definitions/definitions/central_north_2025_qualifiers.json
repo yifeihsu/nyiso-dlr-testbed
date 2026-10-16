@@ -1,0 +1,181 @@
+{
+  "status": "literal_official_seasonal_definitions_no_model_operator_promotion",
+  "interfaces": [
+    "MOSES SOUTH",
+    "TOTAL EAST",
+    "CENTRAL EAST"
+  ],
+  "rows": 88,
+  "counts_per_season": {
+    "MOSES SOUTH": 7,
+    "TOTAL EAST": 29,
+    "CENTRAL EAST": 8
+  },
+  "source_table_membership_visually_verified": true,
+  "summer_visual_pages": [
+    37,
+    38,
+    39
+  ],
+  "source_PDFs": [
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.pdf",
+      "sha256": "32e4fb86cc8397ab458fdf790ab52decfcaa9e9686de7aa9bec7527eaf04b901"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.pdf",
+      "sha256": "bcf26e7ac908f43a29f34230067b5b1afc6e587845b26246d7ca39a41ef9f072"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.pdf",
+      "sha256": "546402b7e85f51441e64a6b68adac53579f83828f6bc8c1195ccc480e082dc0b"
+    }
+  ],
+  "exact_2025_operational_validity_established": false,
+  "fit_to_observations": false,
+  "model_files_modified": false,
+  "P32_binding_qualifier": {
+    "reported_channel": "CENTRAL EAST - VC",
+    "physical_definition_table_label": "CENTRAL EAST",
+    "VC_expansion": "Voltage Collapse",
+    "expansion_primary_source": "sources/central_north/NYISO_Dynamic_Reserves_20231213.pdf",
+    "expansion_PDF_pages": [
+      65,
+      66,
+      67
+    ],
+    "current_manual_classification": "Post Contingency Voltage IROL",
+    "current_manual_PDF_page": 127,
+    "current_manual_issue": "August2026; nomenclature corroboration, not2025effective-dateproof",
+    "exact_P32_meter_expression_or_weighted_adjustment_published_in_examined_sources": false,
+    "raw_flow_operator_identity_with_generic_Central_East": "not_independently_certified; do not assume a voltage-correction formula"
+  },
+  "essential_distinctions": [
+    "Summer Moses uses MA1/MA2 from Moses230; Winter uses HA1/HA2 from Haverstock345. This is a terminal/voltage/metering-point change, not an alias.",
+    "Inghams PAR/R81 are starred inTotalEast and unstarred inCentralEast. The single-station names do not identify a physical terminal pair.",
+    "2025TotalEastC3403 isMarion-Farragut; olderTE23listsHudson-Farragut. Do not substitute endpoints withoutsourcebridge.",
+    "2025TotalEastBK258meter is138kVside; TE23literalasteriskwas345kVside."
+  ],
+  "csv_sha256": "f795ccd2d2b09a12a66f73cde5eaa8ff103bdcec50e8b126e32ffc0c1a49892c",
+  "winter_visual_pages": [
+    36,
+    37,
+    38
+  ],
+  "winter_SPConnect_definition_change_source": {
+    "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_OperatingStudy_APPROVED.pdf",
+    "PDF_page": 9,
+    "finding": "Smart Path Connect impacts Moses South interface definition; Adirondack345/AustinRoad345/Haverstock345/WillisAnnex230 modeled in service."
+  },
+  "appendix_H_scope": {
+    "source": "Summer2025approvedappendix",
+    "PDF_pages": [
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ],
+    "content": "Transfer and outage distribution factors with TARA model endpoint labels. They are not interface membership coefficients or an explicit P32 CEVC telemetry expression.",
+    "TotalEast_table_PDF_page": 49,
+    "MosesSouth_table_PDF_page": 52,
+    "CentralEast_nested_expression_located": false,
+    "no_distribution_factor_as_meter_coefficient": true
+  },
+  "TotalEast_Neptune_scope": {
+    "source": "Summer2025approvedappendix",
+    "PDF_page": 44,
+    "finding": "The study explicitly says its TotalEast limits do not includeNeptune; not assumed universally equivalent to everyhistoricalP32 telemetrydefinition."
+  },
+  "seasonal_comparison": {
+    "CentralEast": "All8literalterms,voltages,asterisksunchangedSummer2025toWinter2025\u201326.",
+    "TotalEast": "All29literalterms,voltages,asterisksunchangedSummer2025toWinter2025\u201326.",
+    "MosesSouth": "MA1/MA2Moses230toAdirondack replaced byHA1/HA2Haverstock345toAdirondack;fiveothertermsunchanged."
+  },
+  "evidence_images": [
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/CEVC24_page13.png",
+      "sha256": "c172a7f80a2c07bf3f0dab58280cca7c7ee1a61a3c84f4072f2b16c7829a0b44"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/DynamicReserves2023_page66.png",
+      "sha256": "778e56ff53b2da359d0ce56305c85dc3dfa3a6afe3cb6f9d66cebfc351b1d4c5"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/MS24_page07.png",
+      "sha256": "acb7a9c8d325788e56c640cd7cc78d84c3c53d202b39a795151fee802eaf0bae"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Summer2025_page-37.png",
+      "sha256": "64b8f790dc0067936ee764966c834e34367bdc5c7e968fa6e9bd572c933f81b0"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Summer2025_page-38.png",
+      "sha256": "5a9cf9e5bbabf582322a9e2f8cadf8b9c81d45e9ffe7fa2719efa42b2b7622d4"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Summer2025_page-39.png",
+      "sha256": "7badfba038502d1e1e55124160e5c497a88c140d853e8a864f75d08e76ffeb94"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/TE23_page06.png",
+      "sha256": "8ab3d98aeb42906e80f9acb5f0ae0b6e7b0780d0d9c411175a74e0a8e5ad14b1"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2025_26_main_page09.png",
+      "sha256": "ed75985f0eaef3d0c7e144be5b90c263b5ebb29cc7c040d9242dcb12a855d2cb"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2025_26_page-36.png",
+      "sha256": "4f436e07942bd8fb0f3063dee886916f27453bfa5195953f112156e83f2b105a"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2025_26_page-37.png",
+      "sha256": "d1dcafb3c3b48757cffd7d4cb9bb0ee7f80cf5693392d7e1d3e80647f94595b5"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2025_26_page-38.png",
+      "sha256": "9422ef8874335b8c3329477bca7b352ef49bf5c1106edbf9de1d4ebb3b1cf136"
+    }
+  ],
+  "early_2025_season_source": {
+    "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.pdf",
+    "sha256": "546402b7e85f51441e64a6b68adac53579f83828f6bc8c1195ccc480e082dc0b",
+    "catalog_posted_date": "2024-10-24",
+    "definition_csv": "output/nygrid_2025_flowgate_definitions/definitions/central_north_winter2024_25.csv",
+    "csv_sha256": "11a3a4b3fb2fb1f608b97311575d0c79c3aa7c44a4bf8c9070e48877b485ce03",
+    "PDF_pages": [
+      36,
+      37,
+      38
+    ],
+    "printed_pages": [
+      63,
+      64,
+      65
+    ],
+    "visual_verified": true,
+    "source_creation_date": "2024-10-24"
+  },
+  "early_2025_differences": [
+    "MosesSouth winter2024-25 list matchesSummer2025 list; bothprecedeWinter2025-26HaverstockHA1/HA2replacement.",
+    "CentralEastwinter2024-25lists Inghams PAR* withLineID PAR 2 andInghamsBusTie* R81; Summer2025/nextWinterhaveunstarred PAR andR81. Do notinventactualimplementationdate orassumeequivalentports.",
+    "TotalEastwinter2024-25hasCloster-Sparkill751 versusSummer2025Cresskill-Sparkill751; endpointnamebridge unresolved.",
+    "Otherliteralchanges includeGordon Rdpunctuation andHillburn/Hilburnspelling; originaltokenspreserved."
+  ],
+  "examined_operating_seasons": [
+    "Winter2024-25",
+    "Summer2025",
+    "Winter2025-26"
+  ],
+  "all_three_seasons_cover_study_horizon_not_exact_operational_hours": true,
+  "study_basecase_status_not_definition_membership": {
+    "source": "Summer2025approvedappendix",
+    "PDF_page": 4,
+    "finding": "B3402 andC3403 aremodeled0MWout-of-service instudybase, yetAppendixE p38retainsbothasTotalEastmembers. Do notdroporzero-fillthemforall2025."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T01:51:27.330501+00:00",
+  "baseline_HEAD": "6dcc77f071a9ce4aaaa2fcba9a9aabc15f7d5dbc",
+  "hours": 8494,
+  "source_qualified_hours": 8651,
+  "matched_cohort_selected_before_diagnostics": true,
+  "construction_mean_delta_public_MW": 600.3217968864616,
+  "loss_loaded_mean_delta_public_MW": 442.5733529555929,
+  "remaining_mean_delta_public_MW": 3.754696868807998,
+  "remaining_MAE_public_MW": 4.2200125392399235,
+  "remaining_maximum_absolute_public_MW": 21.494611366739264,
+  "total_mean_delta_public_MW": 1046.6498467108627,
+  "parent224_X_restoration_mean_reduction_public_MW": 581.5740760932441,
+  "parent224_share_of_mean_construction_displacement_percent": 96.87705479120505,
+  "half_loss_reconstruction_share_of_mean_same_network_AC_DC_displacement_percent": 99.15875848038563,
+  "WAPE_original_DC_percent": 18.52682996933629,
+  "WAPE_AC_network_DC_percent": 19.863137801227968,
+  "WAPE_loss_loaded_DC_percent": 44.81197926550504,
+  "WAPE_AC_percent": 45.035918509404794,
+  "WAPE_construction_step_percentage_points": 1.336307831891677,
+  "WAPE_same_network_AC_step_percentage_points": 25.172780708176827,
+  "mean_baseline_AC_loss_model_MW": 312.3964683548999,
+  "nonunique_allocation_mean_effect_public_MW": [
+    439.9564357512899,
+    445.1902701598959
+  ],
+  "voltage_and_angle_remainder_is_not_unique_causal_decomposition": true,
+  "loss_loaded_DC_uses_solved_AC_losses": true,
+  "loss_reconstruction_not_independent_forecast": true,
+  "no_physical_meter_or_impedance_truth_established": true,
+  "no_production_model_changes": true,
+  "source_receipts": [
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/comparison/comparison_arrays.npz",
+      "sha256": "6033e200dde60e63bb9b12e123e085790975405dca0843482df9d0437faf7912"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/annual_DC_bridge/annual_DC_bridge_arrays.mat",
+      "sha256": "6421431f1ae94aead8fabf6b50a83b98e0acf6c397a57d10883deac0a7f9ed92"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/annual_loss_loaded_DCF/annual_loss_loaded_arrays.mat",
+      "sha256": "77e9a6fbf70b524ec6d32f864680191ff56a01b007c50d0d5e679ea615eae25e"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/build_diagnosis.py",
+      "sha256": "c4d703d6de30b49b191961baf19c79c83223e3cb63215685e88c5c2731101f30"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "source": "Natural Earth 1:10m vector data",
+  "publisher": "Natural Earth / NACIS",
+  "source_git_commit": "ca96624a56bd078437bca8184e78163e5039ad19",
+  "license": "public_domain",
+  "geographic_CRS": "EPSG:4326",
+  "clip_bounds_lonlat": [
+    -87.0,
+    37.5,
+    -67.5,
+    47.5
+  ],
+  "source_documentation": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
+  "purpose": "geographic_context_only_not_electrical_facility_or_route_evidence",
+  "layers": [
+    {
+      "name": "ne_10m_land",
+      "source_url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_land.geojson",
+      "download_sha256": "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416",
+      "downloaded_bytes": 10157965,
+      "clipped_path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_land_npcc.geojson",
+      "clipped_sha256": "149ff4f15aa36650d87726349c14e8eac5246638554e46ce86fd672b8c2a5bbe",
+      "clipped_features": 6,
+      "global_source_null_geometries_skipped": 0
+    },
+    {
+      "name": "ne_10m_lakes",
+      "source_url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_lakes.geojson",
+      "download_sha256": "2d036f53dedec578001c5c30c2959ee7d4eebc1306900fa4367c49929ec8f2d9",
+      "downloaded_bytes": 5043554,
+      "clipped_path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_lakes_npcc.geojson",
+      "clipped_sha256": "5647268771afe6b49e8de6620bd7aa4cca6b5976492090a7bcc1bceacf4c4737",
+      "clipped_features": 35,
+      "global_source_null_geometries_skipped": 0
+    },
+    {
+      "name": "ne_10m_admin_1_states_provinces_lines",
+      "source_url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_admin_1_states_provinces_lines.geojson",
+      "download_sha256": "1a1f30ccaaf4cc9c4bde34266f0b8cbb955d3a4cf254b756912255f2ec7c75b6",
+      "downloaded_bytes": 21092537,
+      "clipped_path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_admin_1_states_provinces_lines_npcc.geojson",
+      "clipped_sha256": "908078a62f09080b9100423639245459e0e91880a316a50399b8d5f38cb8e6f6",
+      "clipped_features": 61,
+      "global_source_null_geometries_skipped": 1
+    }
+  ]
+}

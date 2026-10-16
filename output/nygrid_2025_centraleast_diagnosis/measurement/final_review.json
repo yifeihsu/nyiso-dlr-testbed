@@ -1,0 +1,179 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T02:02:36.192859+00:00",
+  "scope": "Independent report, summary table, Sources payload, scientific figure and finalizer review against separately reconstructed benchmark/member accounting and separately scored annual bridge outputs.",
+  "baseline_HEAD": "6dcc77f071a9ce4aaaa2fcba9a9aabc15f7d5dbc",
+  "matched_hours": 8494,
+  "source_qualified_hours": 8651,
+  "root_stage_metric_rows_checked": 117,
+  "maximum_root_vs_independent_stage_metric_difference": 0.0,
+  "native_Sources_payload_rows_checked": 60,
+  "local_report_links_checked": 11,
+  "scientific_figure_visually_checked": true,
+  "figure_scope": "PNG reviewed for labels, units, complete bar/line layout, fixed-cohort caption, solved-loss conditioning, and numeric consistency with bound stage metrics; SVG companion bound.",
+  "narrative_checks": {
+    "fixed_cohort_reproduction_and_under_to_overprediction_switch_correct": true,
+    "benchmark_independently_reconstructed_from13_archives366_days_with_DST_rewind": true,
+    "source_units_and_physical_meter_binding_still_qualified": true,
+    "unchanged_CE_X_and_original_terminal_members_preserved": true,
+    "changed_bypass224_X_effect_supported_by_annual_controlled_DCF": true,
+    "restored224_share_is_mean_construction_displacement_not_WAPE_share": true,
+    "construction_plus1p3363_WAPE_points_distinct_from_AC_step_plus25p1728": true,
+    "solved_loss_reconstruction_is_conditional_not_forecast_or_unique_causal_decomposition": true,
+    "loss_allocation_sensitivity_not_confidence_interval": true,
+    "model312p396_MW_losses_distinguished_from_public_scale_interface_changes": true,
+    "mean_flow_shares_not_interchanged_with_absolute_error_or_WAPE_shares": true,
+    "fallback_preferred_length_behavior_supported_but_not_physical_route_truth": true,
+    "original_parent_and_R0_selected_hour_results_not_promoted_to_annual_claims": true,
+    "failed_trials_and_operating_limit_failures_remain_explicit": true,
+    "no_production_change_or_fit_recommended_from_lower_single_metric_alone": true,
+    "compact_reduction_not_the_source_of_the_metric_jump": true
+  },
+  "outstanding_actionable_findings": [],
+  "no_PF_OPF_or_parameter_change_by_measurement_review": true,
+  "earlier_bound_measurement_outputs_not_overwritten": true,
+  "finalizer_relative_failed_trial_receipt_resolution_reviewed": true,
+  "new_delivery_manifest_not_bound_to_avoid_hash_cycle": true,
+  "dependencies": [
+    {
+      "path": "NYGRID_2025_CENTRAL_EAST_DIAGNOSIS.md",
+      "sha256": "95eab25346a915781bcce34829f8b06da6e0a02bd2f1c6881b570007ca3a2123"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/summary/diagnosis_summary.json",
+      "sha256": "5b29dc4ced8c7e732bb5b12001fa37395a6184783c17044c63fb7a2555429c50"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/summary/stage_metrics.csv",
+      "sha256": "716979e7f3f2fee19ea25b403c094f3d990dbe9ac0d2556a8ecfae5d43fc7759"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/summary/hourly_stage_comparison.csv",
+      "sha256": "c04ef0dd38a999558cba003a887f9a0cd374f078a26193b9f1e5234c08b275cb"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/summary/centraleast_diagnosis.png",
+      "sha256": "8044e4399b5eb16c34dc692c2c11d66dbbe2d502d280c0f963591a9aab804575"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/summary/centraleast_diagnosis.svg",
+      "sha256": "1ec58c2b8986f573c45744e9564e7cb242db399b2b5dac0fc41220f4b8ea8bfa"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/summary/sources_receipt_input.json",
+      "sha256": "b166e7ba9d86f1a99bb323d81bcb5d1be76557ebffe722e0cf906ed6095f9342"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/measurement_receipt.json",
+      "sha256": "8e71d206933fb11437106ed97784ad433bb2675796e61175be062027ee509af1"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/raw_source_check.json",
+      "sha256": "d5a5747f0793aad63f5c465b84ca1cc975a254cbb716ab5799c8a3320832adb7"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/annual_bridges/annual_bridge_scoring_receipt.json",
+      "sha256": "c2d74491430d5e6a8028a7122183ad4ba110b33918369bd0b7e55d5e6337d118"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/annual_bridges/CE_stage_metrics.csv",
+      "sha256": "f2c6ffa1fc391e76d27c979cf71bf864128594dee968e4bb5a609aaf4363362d"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/annual_bridges/CE_ordered_stage_changes.csv",
+      "sha256": "d61ef8e9dd8115990f80efc922900bd8e2d79127880af1bde79019161c077597"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/annual_bridges/CE_loss_allocation_sensitivity.csv",
+      "sha256": "399a4f743345d11e1ac08b2b471bafb82e12c4b906dc51035eb4e08981920bf8"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/annual_bridges/CE_X_restoration_effects.csv",
+      "sha256": "68fbf5168a228a6ec9a624ed3d7f6ef31fe6acd9518305427d7e5e4e5071e8fa"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/experiment_summary.json",
+      "sha256": "89f35d51b5406b835e39f9ffc7711ce285ea672ed1d7c2eb055afe20ad4475d7"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/experiment_source_receipt.json",
+      "sha256": "fd578e63bd82da446bcddcc07ac4360dad5dcf9b787bda5728881748461791ee"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_receipt.json",
+      "sha256": "6ec339b9d37f1b8915f16eb89d437b1d7dd22131a25a8ac0d672477d97af2515"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/annual_DC_bridge/annual_DC_bridge_receipt.json",
+      "sha256": "6eb20ea023541d23aaeff4037291f5fbaf3f8d4abbe252c8400e186b33a69698"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/annual_loss_loaded_DCF/annual_loss_loaded_receipt.json",
+      "sha256": "c45f5f5848dee3092b15fed4cda270fd1bae231b975f2289a2ce40dd027d3ebf"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/model_delta_review.json",
+      "sha256": "814950cc1e3843e3d73d4158d6ae39ca55af5e2a4411e2731d1580e4def83b5d"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/fallback_provenance_review.json",
+      "sha256": "12e517c400111a68d9fc9e97ae112660e0829ee411b1298274e83d3a42901214"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/annual_DC_independent_review.json",
+      "sha256": "e6e951ae311c89d1efff9794f8950cf362807f2d5ce69f87569bd63346c5bb95"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/annual_loss_independent_review.json",
+      "sha256": "cce147537a677ac977c7f99dd01ccc8bbd6bbd9b3716727530f2040951700f9f"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/loss_parent_independent_review.json",
+      "sha256": "8a216dc09ebf243ceb3a7b836a88deffb3091fb5b61a04712893958c6a10eb0c"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/X_only_independent_review.json",
+      "sha256": "be5baa2bf118643418182968eb206d84cce6a01f88ee6cb4e6ea99e9929315f2"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/independent_review_closure.json",
+      "sha256": "afeb7649ec83830cb6e0ae33301c3cf6cc877f201a31e2db57509cd0e0fd9006"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/build_diagnosis.py",
+      "sha256": "c4d703d6de30b49b191961baf19c79c83223e3cb63215685e88c5c2731101f30"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/finalize_diagnosis.py",
+      "sha256": "f8bb98dfc934a07fd9247cb45820fa2e89850c29097149aab060a4caed14a9e5"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/measurement/account_central_east.py",
+      "sha256": "2c70af0f8dce67d68aaf6daaf9e2a955994e1a164092971d3d731b742a24aee5"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/measurement/recheck_raw_ce.py",
+      "sha256": "539969289e4c07332b4e5af0252ce6c6bbfeea177626d614185fbde1a71d5626"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/measurement/score_annual_bridges.py",
+      "sha256": "78e94eb1f41fe4ad8933b21a1bb62910f5696363c2610d161b25a7c53cade474"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/DELIVERY_MANIFEST.json",
+      "sha256": "3230c388c4b7129a1da0c89daf4be6eeb2a3ac2afc540a38a78b2e59e5451292"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/DELIVERY_MANIFEST.json",
+      "sha256": "4be2e0a78bde675fbf92891f397974afb3cd85dd58c6ff678f47d091968ceb8a"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/DELIVERY_MANIFEST.json",
+      "sha256": "154be7a2a29db4d9ca29bd937a5672ccee0f703c54527f1fee9df39da51d1c60"
+    }
+  ],
+  "read_only_finalizer_closure_passed": true,
+  "preserved_baseline_file_records": 739,
+  "proof_hash_checks_at_review": 510,
+  "finalizer_status_checked": "CENTRAL_EAST_model_regression_diagnosed_with_controlled_experiments"
+}

@@ -1,0 +1,102 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{default_latex_beamer_template}[2026/07/19 Default progress-update Beamer style]
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lmodern}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{tabularx}
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
+\RequirePackage{xcolor}
+\RequirePackage{hyperref}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamersize{text margin left=0.60cm,text margin right=0.60cm}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,shapes.misc}
+
+\definecolor{navy}{RGB}{18,42,66}
+\definecolor{blue}{RGB}{37,99,153}
+\definecolor{teal}{RGB}{15,132,128}
+\definecolor{green}{RGB}{42,133,91}
+\definecolor{amber}{RGB}{219,143,24}
+\definecolor{red}{RGB}{183,58,54}
+\definecolor{ink}{RGB}{36,48,58}
+\definecolor{muted}{RGB}{91,105,117}
+\definecolor{pale}{RGB}{241,246,249}
+\definecolor{paleblue}{RGB}{232,241,248}
+\definecolor{palegreen}{RGB}{232,246,239}
+\definecolor{paleamber}{RGB}{253,244,226}
+\definecolor{palered}{RGB}{251,235,233}
+
+\setbeamercolor{normal text}{fg=ink,bg=white}
+\setbeamercolor{structure}{fg=blue}
+\setbeamercolor{frametitle}{fg=white,bg=navy}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=paleblue}
+\setbeamercolor{block title}{fg=white,bg=blue}
+\setbeamercolor{block body}{fg=ink,bg=paleblue}
+\setbeamercolor{block title alerted}{fg=white,bg=red}
+\setbeamercolor{block body alerted}{fg=ink,bg=palered}
+\setbeamercolor{block title example}{fg=white,bg=green}
+\setbeamercolor{block body example}{fg=ink,bg=palegreen}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamerfont{title}{series=\bfseries,size=\LARGE}
+\setbeamerfont{subtitle}{size=\large}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.72cm,dp=0.20cm,leftskip=0.60cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.84\paperwidth,ht=2.7ex,dp=1.1ex,leftskip=.60cm]{author in head/foot}%
+      \color{muted}\scriptsize\insertshorttitle
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.16\paperwidth,ht=2.7ex,dp=1.1ex,rightskip=.60cm plus1fil]{date in head/foot}%
+      \color{muted}\scriptsize \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}%
+  }%
+}
+
+\newcommand{\pass}[1]{\textcolor{green}{\textbf{#1}}}
+\newcommand{\caution}[1]{\textcolor{amber}{\textbf{#1}}}
+\newcommand{\fail}[1]{\textcolor{red}{\textbf{#1}}}
+\newcommand{\source}[1]{\par\vfill{\color{muted}\tiny Source: #1}}
+\newcommand{\metric}[3]{%
+  \begin{beamercolorbox}[wd=\linewidth,sep=0.45em,rounded=true]{block body}%
+    {\color{#1}\Large\bfseries #2}\par
+    {\color{muted}\scriptsize #3}
+  \end{beamercolorbox}%
+}
+
+\newcommand{\defaulttitleframe}[1]{%
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[navy] (current page.south west) rectangle (current page.north east);
+    \fill[teal] (current page.south west) rectangle ([xshift=0.18cm]current page.north west);
+    \fill[blue,opacity=.22] ([xshift=10.9cm,yshift=-0.2cm]current page.north west)
+      circle[radius=3.4cm];
+    \fill[teal,opacity=.16] ([xshift=13.6cm,yshift=0.2cm]current page.south west)
+      circle[radius=2.7cm];
+  \end{tikzpicture}
+  \vspace{1.15cm}
+  {\usebeamerfont{title}\color{white}\inserttitle\par}
+  \vspace{0.35cm}
+  {\usebeamerfont{subtitle}\color{paleblue}\insertsubtitle\par}
+  \vspace{1.05cm}
+  {\color{white}\large\insertauthor\par}
+  \vspace{0.18cm}
+  {\color{paleblue}\normalsize\insertdate\par}
+  \vfill
+  {\color{paleblue}\small #1}
+\end{frame}%
+}

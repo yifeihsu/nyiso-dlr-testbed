@@ -1,0 +1,149 @@
+{
+  "passed": true,
+  "review_scope": "source_topology_metadata_and_independent_DC_algebra_for_post_cutover_cases",
+  "reviewed_utc": "2026-10-12T15:27:22.730574+00:00",
+  "source_observations_read": false,
+  "observed_flow_values_used": false,
+  "internal_interface_fitting_performed": false,
+  "physical_AC_or_factory_validation": false,
+  "checks": [
+    "All network dependency, scenario MAT and branch-register hashes match the current receipt.",
+    "Public parallel-bank topology and source qualifications agree: conditional no-load interpretation, unknown physical R/X and tap curve, R=0 only for the lossless DC model.",
+    "Conditional nominal X independently equals tan(8deg)*100/750; two equal parallel banks halve equivalent X, without converting the spare into an active path.",
+    "All 97 source circuits and original 191 bus, generator and DC templates are preserved; only Y17 and the old 398 status change among existing branch records.",
+    "Y17 row 393, inactive old 398 row 394, parallel banks 411/412 and regulated 398 row 413 match the public station port mapping.",
+    "The three MAT files contain the selected 95 C and 25.6 ft line estimates and explicitly conditional PAR reactance scenarios.",
+    "Each case carries a cutover timestamp of 2025-12-20T04:00:00Z and a policy to reuse the parent before cutover. This differs from first electrical energization.",
+    "Every eliminated node has zero injection and no generator or DC endpoint; branch identities are unique.",
+    "Fresh incidence matrices independently reproduce full flows, eliminated-node KCL, retained injections and exact interface maps under unequal bank phases."
+  ],
+  "scenarios": [
+    {
+      "scenario": "x_low",
+      "full_buses": 192,
+      "full_branches": 413,
+      "slim_buses": 148,
+      "slim_branches": 274,
+      "eliminated_zero_injection_buses": 44,
+      "checked_phase_vector_deg": [
+        7,
+        -3
+      ],
+      "max_branch_recovery_error_mw": 2.3927220358300785e-12,
+      "max_eliminated_kcl_mw": 7.764899834228345e-12,
+      "max_retained_injection_difference_mw": 5.4569682106375694e-12,
+      "max_exact_local_interface_difference_mw": 2.2737367544323206e-13
+    },
+    {
+      "scenario": "x_nominal",
+      "full_buses": 192,
+      "full_branches": 413,
+      "slim_buses": 148,
+      "slim_branches": 274,
+      "eliminated_zero_injection_buses": 44,
+      "checked_phase_vector_deg": [
+        7,
+        -3
+      ],
+      "max_branch_recovery_error_mw": 2.5295321393059567e-12,
+      "max_eliminated_kcl_mw": 7.764899834228345e-12,
+      "max_retained_injection_difference_mw": 5.4569682106375694e-12,
+      "max_exact_local_interface_difference_mw": 2.2737367544323206e-13
+    },
+    {
+      "scenario": "x_high",
+      "full_buses": 192,
+      "full_branches": 413,
+      "slim_buses": 148,
+      "slim_branches": 274,
+      "eliminated_zero_injection_buses": 44,
+      "checked_phase_vector_deg": [
+        7,
+        -3
+      ],
+      "max_branch_recovery_error_mw": 3.808509063674137e-12,
+      "max_eliminated_kcl_mw": 1.0118128557223827e-11,
+      "max_retained_injection_difference_mw": 5.9117155615240335e-12,
+      "max_exact_local_interface_difference_mw": 2.2737367544323206e-13
+    }
+  ],
+  "findings": [],
+  "resolved_findings": [
+    {
+      "issue": "The inherited count of 43 eliminated buses was stale after adding the regulated port.",
+      "resolution": "All MAT files now report 44 eliminated buses and a full reference count of 192 buses."
+    },
+    {
+      "issue": "Standalone post-cutover MAT files lacked an explicit valid-from timestamp.",
+      "resolution": "All MAT files now contain 2025-12-20T04:00:00Z and identify the full-service HB23 basis, without claiming first energization."
+    }
+  ],
+  "runtime_cutover_enforcement": {
+    "status": "pending_replay_audit",
+    "metadata_boundary_verified": true,
+    "pre_cutover_frozen_parent_hashes_verified": true,
+    "actual_hour_selection_and_replay_application_tested": false
+  },
+  "remaining_limitations": [
+    "Factory PAR resistance, reactance and tap-dependent characteristics remain unverified. Zero resistance is a lossless DC placeholder, not a claim of zero physical resistance.",
+    "The 40-to-32-degree conversion assumes 40 degrees is the no-load angle. Public SA2510 does not explicitly use that label.",
+    "The normal bypass-open topology is documented; these MAT files do not establish hourly breaker or tap states.",
+    "Phases inferred later from P34 targets are model controls, not measured physical taps.",
+    "Raw P34 has roughly five-minute records with a literal Flow(MWH) header. The Market Participants User Guide describes hourly reports and does not resolve the native subhourly unit label. The existing numeric-as-MW convention remains qualified, with no factor-of-12 rescaling.",
+    "The Dover direction diagram is from July 2026 and has no Dover-specific effective date. The December 3, 2024 note applies to Moses only."
+  ],
+  "checked_files": [
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/network_receipt.json",
+      "sha256": "c65358dc54875b6a945bf5ed194bb450be40be93924e6910555ee732a77e3d85"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/engineering/conditional_impedance_basis.json",
+      "sha256": "574677e7571b1a2adb5611c07e45108f2fc5cebd86df1c1097fc0012e1aee0f3"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/engineering/PST_parameter_scenarios.csv",
+      "sha256": "b951849bddca9699d6e33d2a2326f029a7b79f30358eaf4c21e887fb58acb514"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/sources/dover_source_register.csv",
+      "sha256": "f0f5d3109fce3395ebbdf76de246a12af2546b53e97c9dca4e885bf99fca8213"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/sources/dover_source_evidence_receipt.json",
+      "sha256": "c17bfa8b619cc55f92fa9ea66c6bf98f4fb916a1164eb5d59551cf7ea642f53c"
+    },
+    {
+      "path": "scripts/nygrid_2025_dover_parameters/build_dover_network.py",
+      "sha256": "fc2bc7cd373a6e6674da7ff1e7680dea96d4171f54e1e7b30e026c3fad43b8e9"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_input_receipt.json",
+      "sha256": "61423730e90bde37d2e0ed4d87cfff56657e7886e941b7397ef04d8a09bbae24"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_low.mat",
+      "sha256": "1c8534d7dd57214ba357ed5f349a685fac8808ba0597ac1b0ef28a56916d88cd"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_high.mat",
+      "sha256": "c003b2dec47b5f0914e7347129f4efb2767d4d698cfed7e0004c270018c363d0"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/Dover_applied_branch_register.csv",
+      "sha256": "ae6a10fded4635162e77c37516b77eb71caee445b516268144f1857555be6883"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/network_cases.mat",
+      "sha256": "5fb84104d527b2e26d22f3a772ebd4e56ff981325ea7490d349fa53758646320"
+    }
+  ]
+}

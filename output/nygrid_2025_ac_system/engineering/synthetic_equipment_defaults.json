@@ -1,0 +1,59 @@
+{
+  "status": "declared_finite_synthetic_equipment_choices_not_installed_asset_ratings",
+  "source_positive_RATE_A_preferred_as_hardware_limit": false,
+  "source_positive_RATE_A_policy": "Retain as source_static_rating_mva with a provenance role. Use as an equipment ceiling only when the source explicitly establishes an equipment/nameplate rating.",
+  "F84_static_rating_mva": 1323,
+  "F84_static_rating_role": "summer_conductor_design_capability_at95C;not_terminal_equipment_ceiling",
+  "required_ledger_rating_fields": [
+    "source_static_rating_mva",
+    "source_static_rating_kind",
+    "equipment_ceiling_mva",
+    "equipment_ceiling_basis"
+  ],
+  "overhead_terminal_current_per_physical_circuit_A": {
+    "69": 2000,
+    "115": 2000,
+    "138": 2000,
+    "220": 3000,
+    "230": 3000,
+    "345": 4000,
+    "500": 4000
+  },
+  "terminal_limit_formula": "sqrt(3)*nominal_kV*selected_terminal_A*nparallel/1000 MVA; bundle count does not multiply terminal hardware ampere rating",
+  "unrated_cable_selected_current_per_circuit_A": 1000,
+  "cable_scope": "Finite synthetic equipment ceiling only; not bare-conductor DLR or an IEC60287 soil/sheath assessment.",
+  "transformer_per_bank_MVA_pool": [
+    50,
+    75,
+    100,
+    150,
+    200,
+    300,
+    450,
+    600,
+    750,
+    1000,
+    1500
+  ],
+  "transformer_integer_parallel_bank_counts": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "transformer_own_base_impedance_screen_pu": [
+    0.04,
+    0.25
+  ],
+  "transformer_own_base_screen_status": "Broad declared engineering plausibility window, not a manufacturer or statutory requirement.",
+  "transformer_base_relation": "Z_pu_own=Z_pu_system*nparallel*S_bank/S_system for equal banks; outside the window requires separate aggregate-equivalent labeling or a versioned redesign.",
+  "station_reactance_equivalent_policy": "Same MVA pool may provide a finite study ceiling; do not claim actual reactor, transformer or breaker identity from a zero-R same-voltage branch.",
+  "station_rows_not_ideal_couplers": [
+    52,
+    213,
+    208
+  ],
+  "Dover_PAR_nameplate_per_bank_MVA": 750,
+  "no_fitting_to_OPF_loading": true,
+  "capacities_are_uncertain_synthetic_study_choices": true
+}

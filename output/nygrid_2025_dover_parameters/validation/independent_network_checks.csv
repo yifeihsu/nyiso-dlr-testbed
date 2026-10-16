@@ -1,0 +1,4 @@
+scenario,passed,original_buses_retained,slim_buses,full_buses,eliminated_added_buses,historical_circuits_unchanged,parallel_banks,model_bank_X_pu100,parallel_pair_X_pu100,maximum_Schur_B_error,maximum_Schur_phase_error,maximum_analytic_phase_basis_error,maximum_unequal_phase_recovery_error,controller_response_rank,controller_response_condition,differential_bank_circulation_preserved,original_six_transfer_substitution_respected_in_control_derivative
+x_low,True,140,148,192,44,97,2,0.012492518640212573,0.006246259320106287,7.639755494892597e-11,0.0,1.546140993013978e-11,4.547473508864641e-13,2,18.748991963110388,True,True
+x_nominal,True,140,148,192,44,97,2,0.01873877796031886,0.00936938898015943,7.275957614183426e-11,0.0,9.549694368615746e-12,3.5438318946034997e-13,2,12.832661308740263,True,True
+x_high,True,140,148,192,44,97,2,0.02810816694047829,0.014054083470239145,1.7462298274040222e-10,0.0,6.275513442233205e-11,4.263256414560601e-13,2,8.88844087249347,True,True

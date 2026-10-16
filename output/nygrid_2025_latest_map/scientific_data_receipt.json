@@ -1,0 +1,266 @@
+{
+  "passed": true,
+  "scope": "Current annual offline-map data export; full-axis masks and precision; no simulation",
+  "createdUTC": "2026-10-13T19:41:11.688597+00:00",
+  "output": {
+    "path": "output/nygrid_2025_latest_map/annual_data.json",
+    "bytes": 12268211,
+    "sha256": "786b4d5a585c374fc681289b4a28afc9fa0cc8a596b147e611d2ade781c69601"
+  },
+  "counts": {
+    "hours": 8760,
+    "sourceQualified": 8651,
+    "sourceExcluded": 109,
+    "qualified": 8170,
+    "failed": 481,
+    "operatingQualified": 0,
+    "publicObservationRows": 8673
+  },
+  "failureStatusCounts": {
+    "coupled_line_search_failed": 465,
+    "NY_delivered_load_domain_boundary": 16
+  },
+  "exactJSONRoundtrip": true,
+  "inputsUnchanged": true,
+  "PFRun": false,
+  "OPFRun": false,
+  "annualRerun": false,
+  "monthlyCoverage": [
+    {
+      "file": "profile_PF_2025_01.mat",
+      "hours": 744,
+      "source_qualified": 738,
+      "qualified": 738
+    },
+    {
+      "file": "profile_PF_2025_02.mat",
+      "hours": 672,
+      "source_qualified": 661,
+      "qualified": 661
+    },
+    {
+      "file": "profile_PF_2025_03.mat",
+      "hours": 743,
+      "source_qualified": 735,
+      "qualified": 735
+    },
+    {
+      "file": "profile_PF_2025_04.mat",
+      "hours": 720,
+      "source_qualified": 714,
+      "qualified": 712
+    },
+    {
+      "file": "profile_PF_2025_05.mat",
+      "hours": 744,
+      "source_qualified": 729,
+      "qualified": 729
+    },
+    {
+      "file": "profile_PF_2025_06.mat",
+      "hours": 720,
+      "source_qualified": 710,
+      "qualified": 694
+    },
+    {
+      "file": "profile_PF_2025_07.mat",
+      "hours": 744,
+      "source_qualified": 729,
+      "qualified": 519
+    },
+    {
+      "file": "profile_PF_2025_08.mat",
+      "hours": 744,
+      "source_qualified": 732,
+      "qualified": 522
+    },
+    {
+      "file": "profile_PF_2025_09.mat",
+      "hours": 720,
+      "source_qualified": 716,
+      "qualified": 673
+    },
+    {
+      "file": "profile_PF_2025_10.mat",
+      "hours": 744,
+      "source_qualified": 740,
+      "qualified": 740
+    },
+    {
+      "file": "profile_PF_2025_11.mat",
+      "hours": 721,
+      "source_qualified": 710,
+      "qualified": 710
+    },
+    {
+      "file": "profile_PF_2025_12.mat",
+      "hours": 744,
+      "source_qualified": 737,
+      "qualified": 737
+    }
+  ],
+  "maximumNumericalDifferences": {
+    "served_export_error_model_MW": 0,
+    "gross_input_error_model_MW": 0,
+    "NY_gross_served_loss_closure_model_MW": 3.765876499528531e-13,
+    "native_generation_input_vs_solved_model_MW": 1.8712853488977998e-10,
+    "fixed_control_input_vs_solved_model_MW": 0,
+    "global_generation_demand_loss_closure_model_MW": 1.8570744941825978e-10,
+    "legacy_signed_literal_from_frozen_scorer_error_public_MW": 0.0,
+    "oriented_source_side_frozen_scorer_error_public_MW": 0.0,
+    "oriented_target_side_frozen_scorer_error_public_MW": 0.0,
+    "legacy_signed_literal_from_independent_reconstruction_error_model_MW": 0.0,
+    "oriented_source_side_independent_reconstruction_error_model_MW": 4.547473508864641e-13,
+    "oriented_target_side_independent_reconstruction_error_model_MW": 2.2737367544323206e-13,
+    "frozen_gross_input_error_model_MW": 2.2737367544323206e-13,
+    "frozen_served_error_model_MW": 0.0,
+    "frozen_loss_error_model_MW": 2.425490919222284e-10
+  },
+  "savedMetricRowsCompared": 294,
+  "maximumSavedMetricDifference": 0.0,
+  "interfaceConvention": "legacy_signed_literal_from",
+  "publicScaleFormula": "model_MW/gamma",
+  "generationExcludesAllExternalEquivalents": true,
+  "sourceReceipts": [
+    {
+      "path": "scripts/nygrid_2025_latest_map/export_annual_data.py",
+      "bytes": 25497,
+      "sha256": "9e1f9feb51e7f6eca180dbb34340aa55b2da2260a6d1cbc0162c93117eaf5e78"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "bytes": 6349492,
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/public_interface_metrics.csv",
+      "bytes": 213868,
+      "sha256": "b3cd77cfd14ea1b0c7c7cd5ebcc4b453e1606976c3622556e8553994a581973a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/scoring_receipt.json",
+      "bytes": 9989,
+      "sha256": "08ed03da7ea4ab29669e7214f19022987f61dc9e936abb1ee0ab6fa3525e942c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/comparison_contract.json",
+      "bytes": 11427,
+      "sha256": "6a7b0f5171a9b9e4dbfcf2c5889c7625c80ce92c85c61778c3fdb131ac4988a7"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/frozen_comparison_cohort.csv",
+      "bytes": 743576,
+      "sha256": "2a8ac4b6eb3cfb7577d5e8f3ad864589b15acb8af4d1c642aa901dcf6e086332"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/annual_loss_policy_receipt.json",
+      "bytes": 45740,
+      "sha256": "7e7ff61c77b430b113d2e4cd70c27ac211ef555f0715c8ba7dd8f4cc4cbcfd2f"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/model_receipt.json",
+      "bytes": 4079,
+      "sha256": "0abce18bdcf9f6a28f1c93d7daa6358a0b319c98a8f310a54412266e43cbdac8"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "bytes": 802063,
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h0001_4380.mat",
+      "bytes": 54625507,
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h4381_8760.mat",
+      "bytes": 54767622,
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "bytes": 12874,
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_contract.json",
+      "bytes": 4872,
+      "sha256": "bb909130ecd61253819c2876f8d35347ca6bd3a9f4ce9507e82b79c7aee8b553"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_01.mat",
+      "bytes": 21070594,
+      "sha256": "c7de8f9f2d060a3ba91cf3f1a2ba8e0d7d7dd85abd8315ec4dbd2d28fe5a74e5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_02.mat",
+      "bytes": 18823036,
+      "sha256": "115158dc8dc00e1930e88ca446a03a038f584e379add3791e6065c8d598b813d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_03.mat",
+      "bytes": 21034773,
+      "sha256": "c259bce5e604773fe4b8d7c6364181ae346fb7803cebf95f1dca472a93bf690b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_04.mat",
+      "bytes": 20351354,
+      "sha256": "cee22944247e1ad1892461f83ca0053a99de9ceada64639064dd436a7b06119e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_05.mat",
+      "bytes": 20946244,
+      "sha256": "7f4c08f15f2363b8298ef90fd416f53ba42ee5522f54f9c341a5081be6672748"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_06.mat",
+      "bytes": 20534863,
+      "sha256": "55110d8509e12b2bd3a0fd6ed27f7e41d8f952066c56d638091ac17f99bd5ab1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_07.mat",
+      "bytes": 21258323,
+      "sha256": "b1fe05126664dab9a76c119a2573ec4317755144d361d00bf29f7a35346a4132"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_08.mat",
+      "bytes": 21265221,
+      "sha256": "6c43c4fa55e3bef47c576b9981a7dec232cc6590653e8f91dfe55b2e8d0d077e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_09.mat",
+      "bytes": 20577629,
+      "sha256": "a0faa5b5bffeb9847c00c7fdcbf5219b21ec7371c46ed40595d6cf87b340e82d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_10.mat",
+      "bytes": 21323964,
+      "sha256": "1cb54774324953bb500fe895f10bc40c20d026719e54dc8b7976f01b16b20849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_11.mat",
+      "bytes": 20432501,
+      "sha256": "0d44e45a44e464c04ac14c33eb90057e8efdf66523ca40e87a54d3b57aa784db"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_12.mat",
+      "bytes": 21304960,
+      "sha256": "f7102fdad75d7508ec922b66da3e9841035b9af286dfc01d840bc43d6abd0d8b"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/profile_alignment_summary.json",
+      "bytes": 7915,
+      "sha256": "20d1064c92aa382c76972f40b75a979bceff68c796a4e9861ee15b2408d12046"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/interface_flow_reference.npz",
+      "bytes": 1350648,
+      "sha256": "aade792da8b17889b938318636205e68bc4064cbe1cb600f617933c5d45774d7"
+    }
+  ],
+  "recomputedMetrics": {
+    "path": "output/nygrid_2025_latest_map/recomputed_interface_metrics.csv",
+    "bytes": 36443,
+    "sha256": "2b3b1a3077a9dc1ba36bcc16d364fcb69d8c3a68243b362345afb8d7e0e4b80b"
+  }
+}

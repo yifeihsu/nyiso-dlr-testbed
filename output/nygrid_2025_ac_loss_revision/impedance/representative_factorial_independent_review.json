@@ -1,0 +1,356 @@
+{
+  "passed": true,
+  "completed": true,
+  "created_utc": "2026-10-13T03:54:12.365556+00:00",
+  "scope": "Independent56saved-case factorial labels, qualification, original-terminal flows, branchphysics and selected-common-cohort arithmetic",
+  "cases": 56,
+  "per_cell_qualified_counts": [
+    14,
+    14,
+    11,
+    11
+  ],
+  "qualified_case_physics_checked": 50,
+  "common_success_hours": [
+    2630,
+    4194,
+    523,
+    4000,
+    8508,
+    8471,
+    8472,
+    3360,
+    4740,
+    3039,
+    3133
+  ],
+  "common_success_count": 11,
+  "invalid_cells": [
+    {
+      "hour_index": 4746,
+      "cell": 3,
+      "impedance_mode": "legacy_engineering",
+      "loss_mode": "boundary_consistent",
+      "status": "coupled_line_search_failed",
+      "raw_iterate_excluded": true
+    },
+    {
+      "hour_index": 4746,
+      "cell": 4,
+      "impedance_mode": "released_equivalent",
+      "loss_mode": "boundary_consistent",
+      "status": "coupled_line_search_failed",
+      "raw_iterate_excluded": true
+    },
+    {
+      "hour_index": 4213,
+      "cell": 3,
+      "impedance_mode": "legacy_engineering",
+      "loss_mode": "boundary_consistent",
+      "status": "coupled_line_search_failed",
+      "raw_iterate_excluded": true
+    },
+    {
+      "hour_index": 4213,
+      "cell": 4,
+      "impedance_mode": "released_equivalent",
+      "loss_mode": "boundary_consistent",
+      "status": "coupled_line_search_failed",
+      "raw_iterate_excluded": true
+    },
+    {
+      "hour_index": 4860,
+      "cell": 3,
+      "impedance_mode": "legacy_engineering",
+      "loss_mode": "boundary_consistent",
+      "status": "NY_delivered_load_domain_boundary",
+      "raw_iterate_excluded": true
+    },
+    {
+      "hour_index": 4860,
+      "cell": 4,
+      "impedance_mode": "released_equivalent",
+      "loss_mode": "boundary_consistent",
+      "status": "NY_delivered_load_domain_boundary",
+      "raw_iterate_excluded": true
+    }
+  ],
+  "legacy_single_slack_cells_are_diagnostic_not_loss_policy_qualified": true,
+  "failed_CE_values_are_NaN_and_excluded_from_attribution": true,
+  "complete224_R_X_B_overlay_and_other_parameters_preserved": true,
+  "maximum_manual_KCL_error_MVA": 7.025871322370968e-09,
+  "maximum_manual_branch_law_error_MVA": 1.7367182294017316e-10,
+  "maximum_interface_reconstruction_error_public_MW": 6.936051732964188e-11,
+  "maximum_factorial_CSV_recomputation_error_public_MW": 5.002220859751105e-12,
+  "mean_selected_common_hour_effects_public_MW": {
+    "legacy_public_MW": 2909.220112052124,
+    "impedance_only_public_MW": 2782.391456126191,
+    "loss_policy_only_public_MW": 2314.20918809158,
+    "combined_public_MW": 2124.2593461684464,
+    "impedance_effect_from_legacy_public_MW": -126.82865592593329,
+    "loss_policy_effect_from_legacy_public_MW": -595.0109239605439,
+    "interaction_public_MW": -63.121185997200584,
+    "combined_effect_public_MW": -784.9607658836776
+  },
+  "root_summary_means_verified": true,
+  "no_annual_WAPE_or_unique_causal_attribution_claim": true,
+  "physical_impedance_validation_not_established": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/factorial_receipt.json",
+      "sha256": "35e93ee9c7c00c7cd7b99bd0f78652959dc72b08f0a9d100e52ccbb5d7bec082"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/factorial_checks.csv",
+      "sha256": "fc5903198dbd1bec2b6178cf0fddb68613b50e208991375ad5c86b3f881044f3"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h2630_cell1.mat",
+      "sha256": "40095582b27c190340e79dc7019d0ed56c8f1e8bf74f0e616f7316da517fd9ce"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h2630_cell2.mat",
+      "sha256": "cde0cf6dc7c4c8ac03a4eab9cea188af4865a79c8928ff464d1448262fca1d64"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h2630_cell3.mat",
+      "sha256": "cf797633f9d9844637f7960396c72ffa3bc87b52e21ada441a99af8d51386861"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h2630_cell4.mat",
+      "sha256": "f7ecfadcc2e863079078722f30ea8bc8aede59a3ddbf9021396adb5ebcfe74e0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4194_cell1.mat",
+      "sha256": "3cd11647bd296ab1f7fb13c11522f379716ec4bc5126691fbc8a60e6df22af97"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4194_cell2.mat",
+      "sha256": "50aacbb4456449b6423a7847e10824dccf384a215c16c9885b03f85e63d3bc2f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4194_cell3.mat",
+      "sha256": "f69d4dd9a5f90e5b3391df9c51306b86cb330a0a590a00bc75acb83f3de026fb"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4194_cell4.mat",
+      "sha256": "495b29a12dc0d392dfa740b9a963a0868c9cf9004d82a3f1c9b6293516fc57d1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h0523_cell1.mat",
+      "sha256": "5bca9899d41620cca20ea6ee5bbba6fd8494d4fafd547bd370ab8d86f005fe49"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h0523_cell2.mat",
+      "sha256": "e42610f0c11a64ce1d11cc4e836642e2b745470ac9e3c7f5bac7a12a412fdbd6"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h0523_cell3.mat",
+      "sha256": "def3505b74de49caacddeed5a69c5caa401e79928b6a068b73911ba214522f84"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h0523_cell4.mat",
+      "sha256": "888d8f3b5989aefd3ec9ce0b53fe001c30a6b3786db0903a6f73154a7e984443"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4000_cell1.mat",
+      "sha256": "f5ac45a05281848d71e488a9b4165a2c6968b103c7640027f99faf535c7b271b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4000_cell2.mat",
+      "sha256": "c6026e5418b10fc179f9aa957985bc67c57b4c7ca1ce299e4fea4a57bc7885b9"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4000_cell3.mat",
+      "sha256": "8ace99ecc8e0bbe6843ea090c8027a94732c9ab6dee9eb07c847522b8e28ee06"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4000_cell4.mat",
+      "sha256": "35ec7503525d38c4735dc6edde2672dccb71b106242c6fccf8acb84f9b7c79b8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8508_cell1.mat",
+      "sha256": "add6f5de2f4a6109c1f969d89bdafa71ed135e5ec8d43f60d2e8cd0637d3a572"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8508_cell2.mat",
+      "sha256": "681892bdab19161d679288971d936cb87bef339fd2db0adc4e03f62b4ab6b606"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8508_cell3.mat",
+      "sha256": "379fc8e60437da655d067831aaf6ecf88654b8355b63253e2063435d23cafa1a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8508_cell4.mat",
+      "sha256": "ca9896d9a5c342deb0c53d6d23021fb558726c777d1316e8976783b86b2b3d3b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8471_cell1.mat",
+      "sha256": "c026c1440e39f8bbcc3670891b1ec50ca5df7a7e5a4bd188e435891b4810c9c6"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8471_cell2.mat",
+      "sha256": "a4305748c054ae7f29a738f7f1b1b813f0eaa1860312dd6dfdc71822547169a6"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8471_cell3.mat",
+      "sha256": "e4d942a53abf77a9542183c6f144c80c69a2f9a458cdfb15df2fa43a704b7a52"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8471_cell4.mat",
+      "sha256": "fd95043b34f83e6430f149fcc7bf20e447cc0b1e8f8d51ba90cccfd5e55e2f38"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8472_cell1.mat",
+      "sha256": "73c9b0e9f1038e4a4ea19e5ab9a1ff643e8e18e83e84b7e517ca0f10f7545145"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8472_cell2.mat",
+      "sha256": "86fc09d02c8ea64bb48949ed5d7cba991e2aad0b3989a20df0987e96f82425cb"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8472_cell3.mat",
+      "sha256": "3a72ef3096945a6d3c413fda1d2ea0619e951f029abcfa86945410a6586d3434"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8472_cell4.mat",
+      "sha256": "8fdd28507dcb1e12849f57e8038d2447d8928f09ad2af4500a17ddcd5441f6c1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3360_cell1.mat",
+      "sha256": "3c89dc8db9804f70f3e828168a62fd5c5904a8685d8ee642d02b988709436926"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3360_cell2.mat",
+      "sha256": "85495bff2e30d0f61325357ed9ab8f52a765e3dffc96a52b1c033d87d69669e0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3360_cell3.mat",
+      "sha256": "72c1f12c702e995f62e0740d2b1adbe1c2f795eb0e6212b17175af2b31bc162d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3360_cell4.mat",
+      "sha256": "b033d65150db0fc1bcc1e7b7090510b10d43412cbb89aa540acecec9f6d16768"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4746_cell1.mat",
+      "sha256": "b7699a79822f71150b177e72b2c6fbe6724f43b65b140247eb7689bdf1dba349"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4746_cell2.mat",
+      "sha256": "85c5a2a215a24aba887aac34c196477cc344a30870e409546f64fb32c24f395f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4746_cell3.mat",
+      "sha256": "c282525828b08badab310781dd86c84b4bd1190bc5117f3d906e39a14185346a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4746_cell4.mat",
+      "sha256": "62e6f932a5e1afcec8640307278fd18c8ec4cb56508268c2476220a09b7840e4"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4213_cell1.mat",
+      "sha256": "a25d3fff89bf8e948e09ab1e399a80e4957089848a8ec7f2074fe40fa07545a3"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4213_cell2.mat",
+      "sha256": "f418a6ff693f06db7ad9a9a513789576cd1856803e0731f39d2861e461d7cd22"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4213_cell3.mat",
+      "sha256": "1cd48e736ba16747b2265d020d93697aff61b968dd4f6583b19cb7236f737f17"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4213_cell4.mat",
+      "sha256": "094470e171ba9b234bd6e74691f7cdf23f91121134eaacdb2e618256061b262c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4740_cell1.mat",
+      "sha256": "d38a857f5caad83c5fad77b892163dbfdb2323d1cdea290d2c6ec928e68e79d0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4740_cell2.mat",
+      "sha256": "b90d174249de1b4ab2d79a8ecd925cde34b7e134b02f919877f4c47407cc8c60"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4740_cell3.mat",
+      "sha256": "190d68c14648eec6fc44f2dede24e5caf1160283268966354c75a5add149f313"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4740_cell4.mat",
+      "sha256": "8f49acaef41cbf2da48350d3f8590e90294d852d36a2cbad3813d52460f153cc"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3039_cell1.mat",
+      "sha256": "516eccf3aaf0991b1f37f23b6e9e0c1874f23eba39b9cc27acac7b0d53fc2dec"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3039_cell2.mat",
+      "sha256": "574be97baa7f03fd52f0d64de25bc616e37c3abf2f3bacc298b5175d046d1958"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3039_cell3.mat",
+      "sha256": "b62b232d78b63eb98b177b43dc448487199e4d4eec1e8bd5187ae1de4d5cea8f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3039_cell4.mat",
+      "sha256": "a6bc62b9c38f9789fc53a964c8771e6d2fb69e021cb6170288c406ee114a5c31"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4860_cell1.mat",
+      "sha256": "98c7294d47bddd65baeaf3095c38da09e279cbe693e9b57eaaead6d62981dda6"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4860_cell2.mat",
+      "sha256": "c06bdaa3d386747043b32d5c78b8921a4d22530c086881b13677a91b717d7e09"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4860_cell3.mat",
+      "sha256": "ff1d3dc994fd74f599d669bde47d4e239b2404ecdd360fba5a377f9be064a6c4"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4860_cell4.mat",
+      "sha256": "ff53d6a8d765b5262867254a6b239d84e1569c2b659e7688b24b25ab03abf99a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3133_cell1.mat",
+      "sha256": "adba78cacbf87ddbbcb0b64cd82750138b7e26a8dbadb7a7417ce1a794dd2bc1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3133_cell2.mat",
+      "sha256": "3fa084643fcab8f82bdb3c898ba4682c0674ee9d5cc726459424cdf8bc7077a3"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3133_cell3.mat",
+      "sha256": "c6a315ccd440841a973d65243cc635b418b2128db2641fd62fa61dab95de9566"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h3133_cell4.mat",
+      "sha256": "98ebe938631b4ae114146d362aa6c1ecc22b26b4ea3e1bdbe026be35477fae47"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/common_success_attribution.csv",
+      "sha256": "b885c9f2ab727f2fa51a55b12882b31672bd761fd1f93295af7561f687c81d2f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/summary/revision_summary.json",
+      "sha256": "9d76933c9071eb4ed7474a79ac43532040e3a0f99a2a0b1a8eef422942116a85"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/validation/run_representative_factorial.m",
+      "sha256": "324ac48a980031af735c8f1a2e1b358a659592ec63f69bb65948445ab5570940"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/review_bridge_outputs.py",
+      "sha256": "c0c99c9c86e734ba695b7f0f3f4aa01d97de08936935ab9a6148bee4248a7ab3"
+    }
+  ]
+}

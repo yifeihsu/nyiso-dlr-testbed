@@ -1,0 +1,193 @@
+{
+  "created_utc": "2026-10-12T23:53:17.113384+00:00",
+  "status": "source_and_comparison_contract_sealed_before_compact_result_inspection",
+  "baseline_HEAD": "3d2d3104879815180b82804861788dd132aed729",
+  "previous_detailed_audit_files_verified_unchanged": 156,
+  "model_or_profile_changes_performed_by_alignment": false,
+  "PF_or_OPF_executed_by_alignment": false,
+  "source_qualified_hours": 8651,
+  "retained_hour_positions": 8760,
+  "frozen_detailed_equation_and_profile_qualified_hours": 8494,
+  "frozen_detailed_VQ_generator_qualified_hours": 0,
+  "source_qualified_and_numerical_convergence_are_separate": true,
+  "baseline_detailed_monthly_directory": "output/nygrid_2025_acpf_profile_audit/acpf/monthly",
+  "public_observation_path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+  "public_quality_path": "output/nygrid_2025_inputs/load_source/interface_quality_wide.csv",
+  "interface_names": [
+    "DYSINGER EAST",
+    "WEST CENTRAL",
+    "TOTAL EAST",
+    "MOSES SOUTH",
+    "CENTRAL EAST - VC",
+    "UPNY CONED",
+    "SPR/DUN-SOUTH"
+  ],
+  "gamma": 0.30012075175285535,
+  "primary_terminal_convention": "legacy_signed_literal_from",
+  "alternative_terminal_conventions": [
+    "oriented_source_side",
+    "oriented_target_side"
+  ],
+  "inherited_operator_path": "scripts/nygrid_2025_acpf_profile_audit/alignment/interface_operator.py",
+  "physical_P32_meter_membership_or_units_certified": false,
+  "public_load_meaning": "NYISO measured grid load; not gross end-use demand before BTM solar and demand response",
+  "exact_zone_load_agreement_is_construction_identity": true,
+  "within_zone_bus_distribution_is_observed_2025": false,
+  "numerical_comparison_scope": "Compare compact recovered original bus voltages and full branch terminal powers/currents to the detailed case on identical source hours and declared initializations.",
+  "primary_public_comparison_cohort": "Intersection of frozen source eligibility, detailed equation/profile qualification and compact equation/profile qualification; report coverage losses and gains separately.",
+  "additional_compact_success_policy": "Report separately if compact converges on previously failed detailed hours; do not silently mix those hours into the paired detailed public-error comparison.",
+  "paired_reference_policy": "A new direct detailed solve, if supplied, is labelled separately from the frozen default annual reference; never replace a failed historical solve without a provenance label.",
+  "power_comparison_scale": "Aggregate model MW divided by gamma for public comparison only; paired compact/detailed numerical equality uses model MW.",
+  "current_comparison_scale": "Recovered physical branch terminal and series currents in amperes; never divide current by gamma.",
+  "flow_membership_policy": "Use original full-parent corridor identities and original from/to physical terminal powers, following section chains and current dated active masks; no reduced-network edge sums.",
+  "fitting_policy": "No internal-interface observations are used to fit profiles, retained-node choices, model parameters, signs, times, scaling or operator membership.",
+  "operating_gate_policy": "Inherited V/Q/generator assumptions and violations remain explicit; algebraic reduction or numerical agreement does not certify a feasible or observed NYISO operating state.",
+  "expected_compact_export_fields": [
+    "hour_index",
+    "timestamp_utc",
+    "gamma",
+    "source_qualified",
+    "AC_equation_gate",
+    "P_profile_preservation_gate",
+    "VQ_and_generator_assumption_gate",
+    "full_branch_keys",
+    "full_branch_parent_row",
+    "full_branch_from_bus",
+    "full_branch_to_bus",
+    "full_branch_present",
+    "full_branch_active",
+    "recovered_PF",
+    "recovered_PT",
+    "recovered_QF",
+    "recovered_QT",
+    "recovered_Iseries",
+    "recovered_Ifrom",
+    "recovered_Ito",
+    "full_bus_id",
+    "recovered_VM",
+    "recovered_VA"
+  ],
+  "export_API_status": "Proposed consumption contract; solver owner will confirm exact field names before numerical scoring.",
+  "source_receipts": [
+    {
+      "path": "scripts/nygrid_2025_compact_ac/alignment/prepare_sources.py",
+      "sha256": "34d9b77698eeaec065f0d7e89b06c9742a6b2ebfd8290058efdcb6e94f3942e1",
+      "bytes": 9180
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/alignment/frozen_comparison_cohort.csv",
+      "sha256": "2c7eaf48c45f54b85a90ee7ef053338957d12c8f112f3153bf689d5f18de9089",
+      "bytes": 743590
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/DELIVERY_MANIFEST.json",
+      "sha256": "4be2e0a78bde675fbf92891f397974afb3cd85dd58c6ff678f47d091968ceb8a",
+      "bytes": 32176
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/source_comparison_cohort.csv",
+      "sha256": "876d8a339928304cba6300e16ed5b5a27ebc0036ca5d10a4004b3ef418950cc0",
+      "bytes": 1094891
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/comparison/comparison_arrays.npz",
+      "sha256": "6033e200dde60e63bb9b12e123e085790975405dca0843482df9d0437faf7912",
+      "bytes": 2594995
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/profile_alignment_summary.json",
+      "sha256": "20d1064c92aa382c76972f40b75a979bceff68c796a4e9861ee15b2408d12046",
+      "bytes": 7915
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_contract.json",
+      "sha256": "bb909130ecd61253819c2876f8d35347ca6bd3a9f4ce9507e82b79c7aee8b553",
+      "bytes": 4872
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670",
+      "bytes": 12874
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/load_source_semantics.json",
+      "sha256": "e613ed6703ea37a46489b4f0ee62c6ffe62a0669e323851ff31fe01933c5b050",
+      "bytes": 1621
+    },
+    {
+      "path": "scripts/nygrid_2025_acpf_profile_audit/alignment/interface_operator.py",
+      "sha256": "944e63f827f46fd161e0a8da67473a2bb59cfdf3107f34ab984510cc0319a308",
+      "bytes": 5975
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/bounded_x_nominal.npz",
+      "sha256": "0b1c2075989ba715fe356eaef24a008a2d4196e11034dbc44fb193dc469b85f9",
+      "bytes": 10137747
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f",
+      "bytes": 2258117
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_quality_wide.csv",
+      "sha256": "4deee20774691c3193a5ecab239fc3d25878dec34c143ca90f1eb9d6ed158262",
+      "bytes": 1288521
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/load_wide.csv",
+      "sha256": "442435c39c3e1ca6ffdb867f5bbee34ba28d7ae764cf1777e83a84859d43c300",
+      "bytes": 1505796
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b",
+      "bytes": 19157492
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c",
+      "bytes": 70200265
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/interface_definitions.json",
+      "sha256": "e96c7d938cedeb7a65383ea94b85ad7fec8a7c7f79867b87c5c31fb0295be4fd",
+      "bytes": 3242
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/interface_membership.csv",
+      "sha256": "810bd49179ef58fa277f45ab76c12ef8ee71dd28dbbdf92f308c3951532412b0",
+      "bytes": 30477
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b",
+      "bytes": 240217
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1",
+      "bytes": 59195
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/pre_may_branch_map.csv",
+      "sha256": "54839b8bbd5ad7732649d29b098080d9aadb09e41d5eff2d9bbc190fb9a7e0b1",
+      "bytes": 48872
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may21_branch_map.csv",
+      "sha256": "ea891fc3459f5510e68c6c8f61466c63751c46c44015a4ff124e03de8174340c",
+      "bytes": 48871
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may30_branch_map.csv",
+      "sha256": "d6289c0fef222030f13e346025488a09acb98859f357a6d21e00358948cc5594",
+      "bytes": 48870
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/post_dover_branch_map.csv",
+      "sha256": "fa6e77ebd36d7336c11234c1fff1d50a5b930391d203653ba317adeefe08bf67",
+      "bytes": 49136
+    }
+  ]
+}

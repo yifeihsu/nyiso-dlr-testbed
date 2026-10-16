@@ -1,0 +1,183 @@
+{
+  "passed": true,
+  "checks_run": 13,
+  "checks": [
+    {
+      "name": "desktop_initial_current_model_labels",
+      "passed": true,
+      "observed": {
+        "hour": "8508",
+        "interfaces": "7",
+        "markers": 145,
+        "zones": "11"
+      }
+    },
+    {
+      "name": "native_interface_click_and_negative_orientation",
+      "passed": true,
+      "observed": {
+        "arrow": "reverse",
+        "members": 3,
+        "mode": "detailed",
+        "value": "-175.03950986688506"
+      }
+    },
+    {
+      "name": "native_power_selector_exact_gamma_conversion",
+      "passed": true,
+      "observed": {
+        "units": "public",
+        "value": "-583.2302792944731"
+      }
+    },
+    {
+      "name": "native_zone_click_opens_balance",
+      "passed": true,
+      "observed": {
+        "detail": "Zone C · Central\nModel accounting zone\nPublic scale MW\nGross boundary target\n1,828 MW\nDelivered load\n1,776 MW\nAssigned AC loss\n52.3 MW\nNet native generation\n4,317 MW\n\nGross load and native generation are supplied source inputs. Delivered load and assigned loss require a qualified AC solution. HQ and other external equivalents are excluded from native generation.\n\nThe label is derived from model bus locations; it does not trace an official zone boundary."
+      }
+    },
+    {
+      "name": "native_index_input_failed_hour_masks",
+      "passed": true,
+      "observed": {
+        "auxOption": false,
+        "hour": "2349",
+        "interfaceArrows": 0,
+        "status": "No qualified AC flow · solution_failed",
+        "values": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "zoneValues": [
+          "1,919 MW",
+          "— MW",
+          "— MW",
+          "3,296 MW"
+        ]
+      }
+    },
+    {
+      "name": "native_source_excluded_hour_masks_all_power",
+      "passed": true,
+      "observed": {
+        "hour": "154",
+        "interfaceArrows": 0,
+        "transferArrows": 0,
+        "values": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "zoneValues": [
+          "— MW",
+          "— MW",
+          "— MW",
+          "— MW"
+        ]
+      }
+    },
+    {
+      "name": "native_UTC_datetime_selects_may21_boundary",
+      "passed": true,
+      "observed": {
+        "auxOption": false,
+        "hour": "3360",
+        "markers": 188,
+        "state": "may21"
+      }
+    },
+    {
+      "name": "native_post_Dover_auxiliary_uses_declared_shared_anchor",
+      "passed": true,
+      "observed": {
+        "detail": "DOVER REGULATED PORT345\nBus 21001\n345 kV\nG\nDetailed passive port\nCoordinate basis\nco_located_model_auxiliary_anchor\nLocation quality\ndisplay_anchor_not_independent_station_coordinate\nRetained AC axis\nNo\n\nDisplay anchor colocated with bus 20003; no independent physical coordinate is claimed.\n\nCoordinate source: current_PAR_endpoint_topology_20003_to_21001",
+        "hour": "8472",
+        "markers": 189,
+        "mode": "detailed",
+        "state": "post_dover"
+      }
+    },
+    {
+      "name": "native_reverse_cutover_clears_absent_auxiliary",
+      "passed": true,
+      "observed": {
+        "auxOption": false,
+        "busSelection": "",
+        "detail": "Inspect the current model\n\nSelect an interface label to highlight its member corridors, a zone to inspect its hourly balance, or a bus for its geographic and electrical identity.\n\nColored markers show accounting-zone membership. Added retained ports are squares; other geographic buses are circles.",
+        "hour": "8471",
+        "state": "may30"
+      }
+    },
+    {
+      "name": "native_bus_marker_click_selects_CLAY",
+      "passed": true,
+      "observed": {
+        "busSelection": "50",
+        "detail": "CLAY\nBus 50\n345 kV\nC\nRetained\nCoordinate basis\npublished_NPCC_model_point\nLocation quality\napproximate_model_geography_not_verified_station\nRetained AC axis\nYes\n\nA station/model point; geographic connections are not surveyed routes.\n\nCoordinate source: output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv"
+      }
+    },
+    {
+      "name": "desktop_long_provenance_details_wrap_without_horizontal_overflow",
+      "passed": true,
+      "observed": {
+        "detail": {
+          "scrollWidth": 292,
+          "width": 292
+        },
+        "sidebar": {
+          "scrollWidth": 324,
+          "width": 324
+        }
+      }
+    },
+    {
+      "name": "final_mobile_compact_letters_keep_all_eleven_zones_and_seven_flows",
+      "passed": true,
+      "observed": {
+        "hour": "8508",
+        "interfaces": "7",
+        "pageScrollWidth": 345,
+        "pageWidth": 345,
+        "zoneNames": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K"
+        ],
+        "zones": "11"
+      }
+    },
+    {
+      "name": "default_viewport_restored_with_complete_current_map",
+      "passed": true,
+      "observed": {
+        "hour": "8508",
+        "interfaces": "7",
+        "markers": 145,
+        "zones": "11"
+      }
+    }
+  ],
+  "HTML_sha256": "077d297471ff17655f01bd9a163466c522817dae7df16cc90a95453e1f01fa51",
+  "method": "Actual Codex in-app browser native locator interactions and rendered screenshots; desktop1200x850 and mobile360x800 breakpoint checks; viewport override reset",
+  "visual_review": "All11NYzone names on desktop, compactA-Kletters withfulllegend on mobile, all7flow labels, no horizontal overflow, readable controls and no label overlaps requiring correction",
+  "data_source": "current saved annual results; no newPF/OPF",
+  "preliminary_failure_resolved": "two input-commit checks resolved by inputhandlers; narrow-screen two-zone label suppression resolved by compactzoneletters"
+}

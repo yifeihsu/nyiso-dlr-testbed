@@ -1,0 +1,213 @@
+{
+  "scope": "paired diagnostic counterfactuals, not new validated operating models",
+  "hours": 8760,
+  "models_modified": false,
+  "fitted_to_interface_targets": false,
+  "Niagara_annual_model_minus_EIA_nominal_mwh": -1202289.7076107357,
+  "Niagara_annual_model_minus_EIA_mean_mw": -137.24768351720726,
+  "shared_unit_records_1based": [
+    156,
+    157,
+    158
+  ],
+  "shared_profile_annual_nominal_mwh_each": 131391.0,
+  "conditional_reallocated_A_to_J_mean_mw": 29.997945205479454,
+  "conditional_reallocated_A_to_J_max_mw": 92.0,
+  "restored_external_ties": [
+    [
+      84,
+      116
+    ],
+    [
+      87,
+      115
+    ],
+    [
+      90,
+      114
+    ]
+  ],
+  "checks": [
+    {
+      "scenario": "released_57_baseline",
+      "maximum_nodal_residual_mw": 1.5148771126405336e-11,
+      "negative_generation_cells": 166,
+      "no_bounded_operating_feasibility_claimed": true
+    },
+    {
+      "scenario": "monthly_EIA_hydro_pool",
+      "maximum_nodal_residual_mw": 1.8189894035458565e-11,
+      "negative_generation_cells": 166,
+      "no_bounded_operating_feasibility_claimed": true
+    },
+    {
+      "scenario": "original_B_load_shares",
+      "maximum_nodal_residual_mw": 1.5006662579253316e-11,
+      "negative_generation_cells": 166,
+      "no_bounded_operating_feasibility_claimed": true
+    },
+    {
+      "scenario": "conditional_shared_unit_once",
+      "maximum_nodal_residual_mw": 1.6484591469634324e-11,
+      "negative_generation_cells": 166,
+      "no_bounded_operating_feasibility_claimed": true
+    },
+    {
+      "scenario": "full_140_baseline",
+      "maximum_nodal_residual_mw": 2.2438939595303964e-11,
+      "negative_generation_cells": 12,
+      "no_bounded_operating_feasibility_claimed": true
+    },
+    {
+      "scenario": "restored_raw_external_ties",
+      "maximum_nodal_residual_mw": 6.45741238258779e-11,
+      "negative_generation_cells": 12,
+      "no_bounded_operating_feasibility_claimed": true
+    }
+  ],
+  "limitations": [
+    "Monthly hydro inputs are from the released EIA-derived table, not newly retrieved unit telemetry; net/gross and pumped-storage scope are not independently reconciled.",
+    "Hydro pool disaggregation is hypothetical and preserves the released hourly statewide hydro total and StLawrence schedule; matching monthly totals does not establish true hourly Niagara output.",
+    "Nominal MWh are MW sums over the authors' prepared local labels, including DST handling.",
+    "The once-counted shared RGGI unit scenario is conditional on an aggregate-unit interpretation and capacity-weighted disaggregation; exact physical unit semantics remain unresolved.",
+    "Restoring raw external ties preserves all injections but changes each neighboring region's direct NY interchange; external inputs were originally scaled assuming those ties absent.",
+    "No scenario enforces generator or thermal capability bounds; metric improvement does not qualify a correction."
+  ],
+  "inputs": [
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/RenewableGen.csv",
+      "sha256": "270e44f264b7e9b2132b5efab5cdcca0561724f82d8581e41a9305eaa293dc53",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/loadHourly_2019.csv",
+      "sha256": "677ce71d73fc800b3b938a75b9f7797e4a3f8a97e992518d0d1f8f5f3bf96f62",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/fuelmixHourly_2019.csv",
+      "sha256": "e5a742ed76a91bb81989bd85da01b3faba6ca8945d7bc391566a1e5cfc64386e",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/nuclearGenDaily_2019.csv",
+      "sha256": "bfe80d073a2c8f4641a89738ff02b0c923efc4173242b6be9869b3728b9e64f5",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/hydroGenMonthly_2019.csv",
+      "sha256": "a9797753476bcfc6133f3e0b2b714e61447c14f8c467df7d47f2ad747c49eb1f",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/interflowHourly_2019.csv",
+      "sha256": "b872530b5704a57a17928ca2949511958e4de6bb31063d197d55af3b21e52754",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/updateOpCond.m",
+      "sha256": "12cd365b756612d46dc10f1ec5c9ff39a9b54f191b0c6db64e2d1aa990794520",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/allocateLoad.m",
+      "sha256": "6eda67f10f47561dab120f18796a91b0477facc9732296be2a80ecfe7f2dbd29",
+      "role": "pinned_source"
+    },
+    {
+      "path": "output/nygrid_2019/annual_1.mat",
+      "sha256": "314d817570b4edfd60b0970f25aee8d126bffd46aa70ceba8ee3bde10b05f274",
+      "role": "released_annual_case"
+    },
+    {
+      "path": "output/nygrid_2019/annual_1_cases.csv",
+      "sha256": "975024f20abfadbb42af807e41bb1b3d900bb781ee79b380e66ca539f4ba1f4e",
+      "role": "annual_completeness"
+    },
+    {
+      "path": "output/nygrid_2019/annual_1_interfaces.csv",
+      "sha256": "43bbe74b4f8562018bfe7de6f58346c87a3afe479acd04ee270f04776ed387dd",
+      "role": "observations_and_corrected_operators"
+    },
+    {
+      "path": "output/nygrid_2019/annual_2.mat",
+      "sha256": "e72ddd82be691ad4a46cd74c1316e450763944f259cce95e071b972b986383c6",
+      "role": "released_annual_case"
+    },
+    {
+      "path": "output/nygrid_2019/annual_2_cases.csv",
+      "sha256": "2ac37f02f919c6d20cf1fae95be25375868e21192d597e795ab823251a6fc734",
+      "role": "annual_completeness"
+    },
+    {
+      "path": "output/nygrid_2019/annual_2_interfaces.csv",
+      "sha256": "a4d4ca157fdf1c050f7c1bd32eb14645fbfbcebee22f0af4725a44481345d44f",
+      "role": "observations_and_corrected_operators"
+    },
+    {
+      "path": "output/nygrid_2019/annual_3.mat",
+      "sha256": "47375d88c36e2a3af33a85eeed461396186404fe9c7486ff43ed4aaec2988aab",
+      "role": "released_annual_case"
+    },
+    {
+      "path": "output/nygrid_2019/annual_3_cases.csv",
+      "sha256": "2df225949e193760fb40ed8e7670d5fa0f4fa4963ffd86476d9365c769eeb1cb",
+      "role": "annual_completeness"
+    },
+    {
+      "path": "output/nygrid_2019/annual_3_interfaces.csv",
+      "sha256": "c772c6b5e175493c6806cb881ccae1bb3f76984ff3f97b5361b96d6b6d3be21a",
+      "role": "observations_and_corrected_operators"
+    },
+    {
+      "path": "output/nygrid_2019/annual_4.mat",
+      "sha256": "795f57ce1ee3f483484da4f98461a9a47eaf15ca573a1dadca3bd3804a5f7431",
+      "role": "released_annual_case"
+    },
+    {
+      "path": "output/nygrid_2019/annual_4_cases.csv",
+      "sha256": "098405938b0f20d10bf969215961f8e79eb66d8188d8e56a649fc40b4cded863",
+      "role": "annual_completeness"
+    },
+    {
+      "path": "output/nygrid_2019/annual_4_interfaces.csv",
+      "sha256": "88b04d8569d359528e0e66ea987ecb109682d66dcc46b0359be8be5bbcb216fe",
+      "role": "observations_and_corrected_operators"
+    },
+    {
+      "path": "output\\nygrid_2019_full_stage1\\full_year.mat",
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0",
+      "role": "counterfactual_input_or_code"
+    },
+    {
+      "path": "tmp\\nygrid_2019_reproduction\\upstream\\Data\\thermalGenHourly_2019.csv",
+      "sha256": "a6de40f9d9e9dba19302bfd0b1224f1a5617a18bfa03f257ab523f59d605116f",
+      "role": "counterfactual_input_or_code"
+    },
+    {
+      "path": "tmp\\nygrid_2019_reproduction\\upstream\\Data\\npcc.mat",
+      "sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb",
+      "role": "counterfactual_input_or_code"
+    },
+    {
+      "path": "scripts\\nygrid_2019_diagnostics\\input_counterfactuals.py",
+      "sha256": "bb920dc079f0f7e1808eccdbe5a5eb1a79bd4f776b4f021cd1350a70ca1f0030",
+      "role": "counterfactual_input_or_code"
+    },
+    {
+      "path": "scripts\\nygrid_2019_diagnostics\\western_flow_diagnostics.py",
+      "sha256": "5f8b300ed3dc3d1036c415d5d413f1f03e1708e8378f3a45619e9be4830c9a10",
+      "role": "counterfactual_input_or_code"
+    }
+  ]
+}

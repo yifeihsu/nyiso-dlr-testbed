@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "datasettype": "load",
+  "dataset_type": "load",
+  "completed_utc": "2026-10-12T01:39:49.254550+00:00",
+  "head": "8290ced50354c81eb572a87f0f90eb87278c3cfe",
+  "plan_file": "output/nygrid_2025_western_counterfactuals/load_plan.json",
+  "plan_sha256": "20e7767ca8881a861c164f2adc74656c36827554e68a509901e9e0a06a825416",
+  "qualified_hours": 8651,
+  "scenarios": [
+    {
+      "name": "load_original_A",
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/load_original_A.npz",
+      "sha256": "926997964a93f743415878e179950460884d7d8a7413df67fd21638bb5cd55ea",
+      "qualified_hours": 8651,
+      "scope": "Original historical shares in A; same-zone totals and all generation/boundaries fixed"
+    },
+    {
+      "name": "load_original_B",
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/load_original_B.npz",
+      "sha256": "1be3b258bcfb5054ccf84822a02911f11cb9cd782e34ad69f52010ff276762d4",
+      "qualified_hours": 8651,
+      "scope": "Original historical shares in B; same-zone totals and all generation/boundaries fixed"
+    },
+    {
+      "name": "load_original_AB",
+      "file": "output/nygrid_2025_western_counterfactuals/inputs/load_original_AB.npz",
+      "sha256": "3b58340f508d6c9f8a4bd3b50d906c86398ba5c0a816d9540eae8c8bd20e3abb",
+      "qualified_hours": 8651,
+      "scope": "Original historical shares in A+B; same-zone totals and all generation/boundaries fixed"
+    }
+  ],
+  "baseline_uses_released_npcc_new_shares": true,
+  "original_A_is_exact_noop": true,
+  "original_AB_is_exact_alias_of_original_B": true,
+  "zoneA_and_zoneB_PQ_totals_preserved": true,
+  "all_other_bus_PD_QD_preserved": true,
+  "native_and_external_PG_and_all_six_transfers_preserved_by_reference": true,
+  "hourly_power_flow_or_posthoc_scoring_performed": false,
+  "no_internal_interface_observation_access": true,
+  "a_priori_linear_equation_max_residual_model_mw": 2.4424906541753444e-15,
+  "extreme_AB_bounds_public_equivalent_mw": {
+    "CENTRAL EAST - VC": 35.32076197854398,
+    "DYSINGER EAST": 1.7509407962309946e-12,
+    "MOSES SOUTH": 1.8498071131308574e-14,
+    "SPR/DUN-SOUTH": 1.5298134720582054e-12,
+    "TOTAL EAST": 55.807750924526445,
+    "UPNY CONED": 1.3114942987495991e-12,
+    "WEST CENTRAL": 1.4732117537460477e-12
+  },
+  "all_frozen_input_hashes_unchanged": true,
+  "unrelated_user_reports_or_annotations_modified": false,
+  "limitations": [
+    "Original and released bus shares are historical layout assumptions, not observed2025 nodal loads.",
+    "Extremal redistribution considers a full nonnegative within-zone simplex without bus demand-capacity or AC constraints.",
+    "Invariance/bounds apply to this frozen lossless DC network and its frozen interface operators."
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2019/upstream_manifest.json",
+      "sha256": "6ea267b07fa3fd0ca9c24f93b660b02ac4704b4a3bedf2b0fe34ce173cadd6da"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.mat",
+      "sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+      "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/provenance.json",
+      "sha256": "781b83d403e017c0dbc531a04989ba256afa4e696c752c582ec133bf37e1ba2b"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/bus_allocation.csv",
+      "sha256": "757fbe115e4ee517014dcda313d99005619cffa492cfb49f9c5e4226579489f1"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/design/experiment_plan.json",
+      "sha256": "173b9e745c1444e2ee138a4162e62edc116e1c0a498bc94dd7fc3c8089f6f51e"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/build_load_allocation.py",
+      "sha256": "86d485e4468e243717b9c39eb586fcdc2eb24ad3c19d6aab4f175cf1ad7b84d7"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/load_plan.json",
+      "sha256": "20e7767ca8881a861c164f2adc74656c36827554e68a509901e9e0a06a825416"
+    }
+  ]
+}

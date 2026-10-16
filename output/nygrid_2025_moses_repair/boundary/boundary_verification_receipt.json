@@ -1,0 +1,541 @@
+{
+  "status": "source_supported_PV20_missing_component_and_conditional_aggregate_repair_contract",
+  "created_utc": "2026-10-15T22:00:14.412201+00:00",
+  "source_bindings": [
+    {
+      "binding_id": "physical_Moses_definition",
+      "status": "verified",
+      "statement": "Official 2025 seasonal tables identify seven Moses South circuit entries, North Zone D to Mohawk Valley Zone E, with starred meter ends.",
+      "source_ids": "2025seasonaldefinitionCSV;MS24p7",
+      "limitation": "Operational P32 expressions and change hours are not supplied by these tables."
+    },
+    {
+      "binding_id": "PV20_additional_D_boundary",
+      "status": "verified",
+      "statement": "PV20 Plattsburgh-Sand Bar 115 kV is an additional North Zone D to ISO-NE Zone N path. It belongs to Central East and Total East, but not to the seven-term Moses South list.",
+      "source_ids": "2025seasonaldefinitionCSV;MS24p12",
+      "limitation": "Physical boundary existence is established; exact Plattsburgh hourly meter data are not."
+    },
+    {
+      "binding_id": "North_NYCA_pocket_components",
+      "status": "verified",
+      "statement": "NYISO MS24 Figure 2 shows North NYCA connections to HQ 7040, Cedars, Ontario PAR33/34, PV20 ISO-NE, and the seven Moses South paths to Main NYCA.",
+      "source_ids": "MS24p12",
+      "limitation": "The schematic is not a bus-by-bus source/load census or operational switching history."
+    },
+    {
+      "binding_id": "MMS_internal_scope",
+      "status": "verified",
+      "statement": "MS24 Table 3 identifies MMS1/MMS2 as Massena-Moses connections. Both stations are northern source ends in the 2025 D-to-E definition, making these links internal to the illustrated North NYCA pocket.",
+      "source_ids": "MS24p10;2025seasonaldefinitionCSV",
+      "limitation": "This inference uses documented endpoints and pocket topology. No model circuit identity or MMS flow is invented."
+    },
+    {
+      "binding_id": "NX2020_distinct_boundary",
+      "status": "verified",
+      "statement": "The 2020 Northern Export definition adds MMS1, MMS2, L33P, L34P and PV20, and subtracts MSU1, relative to Moses South. It studies a distinct boundary with local North Country generation and zero external imports.",
+      "source_ids": "NYISO_NX19_2020_indexed_table5A",
+      "limitation": "Primary search-index text only; direct PDF retrieval encountered a JavaScript/robot challenge. The 2020 formula is not promoted to 2025 P32 weights or net Zone D accounting."
+    },
+    {
+      "binding_id": "HQ_full_physical_aggregate",
+      "status": "verified",
+      "statement": "The HQ input is NYIS-HQT EIA930 net physical interchange counted once, import positive. The 2025 study identifies 7040 Chateauguay-Massena and Dennison/Cedars paths.",
+      "source_ids": "EIA930;Summer25p19",
+      "limitation": "The EIA aggregate does not separately measure Cedars and 7040. Merchant schedules must not be added again."
+    },
+    {
+      "binding_id": "HQ_inside_northern_pocket",
+      "status": "assumed",
+      "statement": "Treat all 2025 NYIS-HQT physical interchange as entering the North NYCA pocket, consistent with the 2025 named links and MS24 Figure 2. Retain its net aggregate for pocket balance.",
+      "source_ids": "MS24p12;Summer25p19",
+      "limitation": "Collapse at bus 48 is an engineering representation. The bus-level split and meter-end losses remain unverified."
+    },
+    {
+      "binding_id": "HQ_wheeling_no_subtraction",
+      "status": "verified",
+      "statement": "Summer25 distinguishes 7040 NYCA delivery of 1310 MW from 1800 MW total including wheeling. EIA records physical flow; wheeling must not be subtracted from HQT physical imports merely because its final destination is another BA.",
+      "source_ids": "EIA930;Summer25p19",
+      "limitation": "Limits provide context, not hourly telemetry or a numerical wheeling correction."
+    },
+    {
+      "binding_id": "Ontario_PAR_current_inputs",
+      "status": "verified",
+      "statement": "P34 inputs 25118/25119 have official positive Ontario-to-NY direction effective 2024-12-03 and reproducible 2025 hourly actuals. Preserve these values.",
+      "source_ids": "PAR27p7,p26;previousboundarysourceaudit",
+      "limitation": "An active-flow series does not resolve PAR reactive power, taps or losses."
+    },
+    {
+      "binding_id": "PV20_P34_identity",
+      "status": "verified",
+      "statement": "Native 2025 P34 archives contain PTID325270, labeled Sand Bar PAR PS01 on PV20 in the official diagram. The 105998 records provide 8673 fully covered hours, including all 8651 current qualified hours.",
+      "source_ids": "PAR27p8;PV20_source_receipt.json",
+      "limitation": "This is a Sand Bar meter, not the Plattsburgh physical gate meter."
+    },
+    {
+      "binding_id": "PV20_current_sign",
+      "status": "verified",
+      "statement": "The official PAR27 page 8 cyan plus arrow points from Sand Bar ISO-NE toward South Hero and Plattsburgh NYISO. The current raw sign is import positive to NY.",
+      "source_ids": "PAR27p8,p26",
+      "limitation": "No P32 fitting or residual-based sign choice is used."
+    },
+    {
+      "binding_id": "PV20_2025_sign_continuity",
+      "status": "assumed",
+      "statement": "Use the current official Sand Bar sign for 2025.",
+      "source_ids": "PAR27p8",
+      "limitation": "Page 8 has no dated 2025 effective note. A historical operator-sign record is needed to certify all 2025 sign semantics."
+    },
+    {
+      "binding_id": "PV20_meter_end_gap",
+      "status": "verified",
+      "statement": "The physical PV20 gate is metered at Plattsburgh. The P34 diagram places the Sand Bar PAR beyond South Hero. ISO-NE OP17 Appendix A identifies PV20-2 Plattsburgh-South Hero as the Vermont boundary.",
+      "source_ids": "2025seasonaldefinitionCSV;PAR27p8;ISONE_OP17A_boundaries_current",
+      "limitation": "Sand Bar PAR flow cannot silently be equated to Plattsburgh flow."
+    },
+    {
+      "binding_id": "SouthHero_load_exists",
+      "status": "verified",
+      "statement": "VELCO 2021 OC minutes describe VEC load at South Hero. VEC 2025 IRP page 71 gives a 6.66 MVA 2025 planning peak for feeder South Hero 29-1A.",
+      "source_ids": "VELCO_OC_minutes_SandBar_failure_20210318;VEC2025_IRP_section4_SouthHero",
+      "limitation": "This single-feeder planning value is not an hourly net-load series or a complete bound on meter error."
+    },
+    {
+      "binding_id": "PV20_proxy_approximation",
+      "status": "assumed",
+      "statement": "At existing aggregate Plattsburgh bus 49, use fixed P equal to the Sand Bar import proxy and Q=0. No Sand Bar bus or AC line is invented. South Hero net injection, segment losses and bypass contributions are omitted in this engineering approximation.",
+      "source_ids": "PV20_source_receipt.json;baseline_model",
+      "limitation": "The omission does not claim those physical terms are zero or establish reactive, thermal or physical meter equivalence."
+    },
+    {
+      "binding_id": "ISO_NE_no_double_count",
+      "status": "verified",
+      "statement": "Each hour must satisfy ISO_NE_total_import = PV20_proxy_import + ISO_NE_nonPV20_import_target. Pair the new Zone D proxy with the opposite redistribution of the ISO-NE pool/target, preserving the reported BA aggregate.",
+      "source_ids": "EIA930;ISO_NE_PV20_disaggregation_contract.csv",
+      "limitation": "Existing NNC/CSC disaggregation still applies to the remaining pool. Do not add or subtract PV20 twice."
+    },
+    {
+      "binding_id": "HA2_energization",
+      "status": "verified",
+      "statement": "NYPA formal PSC filing dated 2025-10-14 states HA2 was energized on 2025-10-13.",
+      "source_ids": "NYPA_HA2_in_service_20251014",
+      "limitation": "No energization hour or P32 meter-switch timestamp is provided."
+    },
+    {
+      "binding_id": "HA1_energization",
+      "status": "verified",
+      "statement": "NYPA formal PSC filing dated 2026-03-30 states HA1 was energized on 2026-03-27.",
+      "source_ids": "NYPA_HA1_in_service_20260330",
+      "limitation": "The winter 2025-26 planning definition does not establish HA1 operation in 2025."
+    },
+    {
+      "binding_id": "2025_gate_switching_history",
+      "status": "unresolved",
+      "statement": "Exact 2025 P32 weights, the MA2-to-HA2 meter-change hour and intermediate bypass topology are not supplied by seasonal tables or energization dates.",
+      "source_ids": "NYPA_HA2_in_service_20251014;NYPA_HA1_in_service_20260330;2025seasonaldefinitionCSV",
+      "limitation": "Do not switch both lines at a seasonal publication date. Distinguish documentary dates from measurement-effective intervals."
+    },
+    {
+      "binding_id": "physical_D_injection_census",
+      "status": "unresolved",
+      "statement": "A complete dated crosswalk does not yet certify every load, generator and allocated model loss inside the exact physical North NYCA meter boundary.",
+      "source_ids": "baseline_model;MS24p12",
+      "limitation": "The aggregate component diagram supports candidate scope, not complete injection equivalence."
+    },
+    {
+      "binding_id": "physical_to_model_loss_operator",
+      "status": "unresolved",
+      "statement": "Physical Moses meters combine northern from ends with the Colton target end. Their exact correspondence to model parents 46/51/52 and the signed terminal correction remains unverified.",
+      "source_ids": "2025seasonaldefinitionCSV;baseline_model",
+      "limitation": "Do not assign a physical circuit ID to an aggregate parent solely by name or voltage."
+    },
+    {
+      "binding_id": "whole_physical_meter_certificate",
+      "status": "unresolved",
+      "statement": "PV20 repairs a source-supported missing external component. Exact 2025 public Moses South meter equivalence remains unverified.",
+      "source_ids": "allbindings",
+      "limitation": "Missing evidence: dated P32 weights/switching history, Plattsburgh PV20 flow or South Hero net-load/loss/bypass data, and a complete pocket load/generator/loss mapping."
+    }
+  ],
+  "source_registry": [
+    {
+      "source_id": "MS24",
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_MS24_20240718.pdf",
+      "sha256": "b945e476a985dada832ccf2b017deeee24bf0a8a9464d45674e48acdaaa3e074",
+      "url": "https://www.nyiso.com/documents/20142/1411640/MS-24-StabReport-OC-07-18-2024-Approved.pdf/1c512118-6ef0-2092-5653-2f2807d3e380",
+      "pages_1based": [
+        7,
+        10,
+        12
+      ]
+    },
+    {
+      "source_id": "Summer25",
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Summer2025_OperatingStudy_APPROVED.pdf",
+      "sha256": "077c8b7c6c4703a0987784dbffc72a2213f33eb3501c340a10eb208fdf6ee1be",
+      "url": "https://www.nyiso.com/documents/20142/3691300/Summer2025-OperatingStudy-APPROVED.pdf/3aaa5eb6-9fa4-53b5-181a-189e3ac52fcb",
+      "pages_1based": [
+        16,
+        19
+      ]
+    },
+    {
+      "source_id": "PAR27",
+      "path": "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27.pdf",
+      "sha256": "c0647d2abc38f216ccf5c1f197ca679cf16358fde5f507659bcdcd80a6938ba4",
+      "url": "https://www.nyiso.com/documents/20142/2268519/ParFlowDiagrams27.pdf/7bd78df8-311c-0b29-fa3f-ba0c8a51d123",
+      "pages_1based": [
+        7,
+        8,
+        26
+      ]
+    },
+    {
+      "source_id": "EIA930",
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_instructions.pdf",
+      "sha256": "321ee0a8d93b15ca2fe206720615bb721c1b6eaf9d9fb06e9c11837ca5004d58",
+      "url": "https://www.eia.gov/survey/form/eia_930/instructions.pdf",
+      "pages_1based": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "source_id": "NYPA_HA1_in_service_20260330",
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_HA1_in_service_20260330.pdf",
+      "sha256": "2bfed6f027e96e21ca36cce152b5b521ca2c9d145891c69a76682335d0b9543b",
+      "url": "https://documents.dps.ny.gov/public/Common/ViewDoc.aspx?DocRefId=%7B101D3F9D-0000-CA6E-AF99-F8341FEECB4B%7D&DocTitle=NYPA+Smart+Path+Connect%3A+In-Service+Notification+for+HA1"
+    },
+    {
+      "source_id": "NYPA_HA2_in_service_20251014",
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_HA2_in_service_20251014.pdf",
+      "sha256": "383affbc77eb23294148efae52804270989c4f96985d7ec809c316574e7f90b7",
+      "url": "https://documents.dps.ny.gov/public/Common/ViewDoc.aspx?DocRefId=%7B7068E499-0000-C447-80CF-7A033EE81A59%7D"
+    },
+    {
+      "source_id": "NYPA_MH1_in_service_20260416",
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_MH1_in_service_20260416.pdf",
+      "sha256": "6a6b833531846936d845a7e97ba117d586c2b6a6868e7239a1dc2e4e8ddd41e5",
+      "url": "https://documents.dps.ny.gov/public/Common/ViewDoc.aspx?DocRefId=%7BE06E969D-0000-CE21-B946-CF365666B73B%7D&DocTitle=NYPA+SPC+In-Service+Notification+MH1"
+    },
+    {
+      "source_id": "NYISO_transfer_limitations_20251022",
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYISO_transfer_limitations_20251022.pdf",
+      "sha256": "ee319467971818235b70f3d8d094df15877b18b2fa6911fb21f81821944495fd",
+      "url": "https://mis.nyiso.com/public/pdf/ttcf/20251022ttcf.pdf"
+    },
+    {
+      "source_id": "VELCO_OC_minutes_SandBar_failure_20210318",
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/VELCO_OC_minutes_SandBar_failure_20210318.pdf",
+      "sha256": "6997235bf3ca9d4382b06ec4d4fb7082a8f4663e342eda249b00407566a30b11",
+      "url": "https://www.velco.com/sites/default/files/2023-12/III.%20DRAFT%20OC%20Minutes_210318.pdf"
+    },
+    {
+      "source_id": "ISONE_OP17A_boundaries_current",
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/ISONE_OP17A_boundaries_current.pdf",
+      "sha256": "3431ecbea9a667208419506d65ae0ea1ed49fa8628cf94b258f7b33c176e42d3",
+      "url": "https://www.iso-ne.com/static-assets/documents/rules_proceds/operating/isone/op17/op17a_rto_final.pdf"
+    },
+    {
+      "source_id": "ISONE_weekly_20251116",
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/ISONE_weekly_20251116.pdf",
+      "sha256": "ce46f36ffd8326883c9e28edbe4dbfa545c58e4aa8ea30ffb95249077d5f8183",
+      "url": "https://www.iso-ne.com/static-assets/documents/100029/we_2025_11_16_weekly_final.pdf"
+    },
+    {
+      "source_id": "VEC2025_IRP_section4_SouthHero",
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/VEC2025_IRP_section4_SouthHero.pdf",
+      "sha256": "8ffcf8f3442fc10e74d9a7798a08ae20e7eb722c24628cdfc1ca19b53ed1f016",
+      "url": "https://vermontelectric.coop/client_media/files/2025_IRP_Section_4_Engage_Members_1.pdf"
+    },
+    {
+      "source_id": "DPS_21_T_0340_public_documents",
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/DPS_21_T_0340_public_documents.json",
+      "sha256": "a6297e8603210d210f352e521c0394762a6500f1561b4dcbd73cfe160e4a8303",
+      "url": "https://documents.dps.ny.gov/public/CaseMaster/PublicDocuments/65705"
+    },
+    {
+      "source_id": "NYPA_Smart_Path_Connect_current",
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_Smart_Path_Connect_current.html",
+      "sha256": "06bcdebb851e42c0ed2ea3ba203c2aac5cc82b4ea4c47afb93b466e714e54a73",
+      "url": "https://www.nypa.gov/Power/Transmission/Transmission-Projects/Smart-Path-Connect"
+    },
+    {
+      "source_id": "2025seasonaldefinitionCSV",
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/all_seasonal_members.csv",
+      "sha256": "e4d3e1ba5511b18d6d3c8cc3c33429cfca0e590c4800d74c065bcf213e2a88c1"
+    },
+    {
+      "source_id": "baseline_model",
+      "path": "output/nygrid_2025_physical_repair/model/latest_model.mat",
+      "sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385"
+    },
+    {
+      "source_id": "previousboundarysourceaudit",
+      "path": "output/nygrid_2025_moses_source_diagnosis/boundary/boundary_audit_receipt.json",
+      "sha256": "15d25df561502cf791d89833fb3cc79dd5b2c6ee05c26a61ddfd7c60c64ff926"
+    },
+    {
+      "source_id": "PV20_source_receipt.json",
+      "path": "output/nygrid_2025_moses_repair/boundary/PV20_source_receipt.json",
+      "sha256": "74545707c320f7658d5ddceb6822a79ee18199f56db86fc3e6745e3dfe7744ed"
+    },
+    {
+      "source_id": "ISO_NE_PV20_disaggregation_contract.csv",
+      "path": "output/nygrid_2025_moses_repair/boundary/ISO_NE_PV20_disaggregation_contract.csv",
+      "sha256": "c489396be0f3b6c4306edb72f21e26108f6a1608165f6e66ddf18a909b386c98"
+    },
+    {
+      "source_id": "NYISO_NX19_2020_indexed_table5A",
+      "url": "https://www.nyiso.com/documents/20142/7321461/Northern-Export-and-Cedars-Import-Stability-Limit-Report-Final-OC-Approved.pdf/12e2c04a-1243-d6e3-5e88-018d083de111",
+      "reviewed_utc_date": "2026-10-15",
+      "source_section": "Printed page 9, interface summary and Table 5A",
+      "retrieval_status": "Primary document search-index text inspected; direct PDF access showed a JavaScript/robot challenge. No bypass attempted.",
+      "local_PDF_available": false,
+      "source_bytes_sha256": null
+    }
+  ],
+  "documentary_North_NYCA_component_scope_verified": true,
+  "specific_missing_external_component": "PV20 Plattsburgh-Sand Bar",
+  "whole_2025_physical_Moses_meter_equivalence_verified": false,
+  "source_sign_or_meter_end_fitted_to_P32": false,
+  "current_PV20_direction_verified": true,
+  "historical_2025_PV20_sign_continuity_assumed": true,
+  "baseline_model_state_checks": [
+    {
+      "state_index": 1,
+      "D_model_bus_ids": [
+        48,
+        49
+      ],
+      "active_D_AC_cut_parents": [
+        46,
+        51,
+        52
+      ],
+      "prescribed_D_transfer_rows": [
+        5,
+        6
+      ],
+      "PV20_external_path_present_in_baseline": false,
+      "Plattsburgh_model_bus49_kV": 115.0
+    },
+    {
+      "state_index": 2,
+      "D_model_bus_ids": [
+        48,
+        49
+      ],
+      "active_D_AC_cut_parents": [
+        46,
+        51,
+        52
+      ],
+      "prescribed_D_transfer_rows": [
+        5,
+        6
+      ],
+      "PV20_external_path_present_in_baseline": false,
+      "Plattsburgh_model_bus49_kV": 115.0
+    },
+    {
+      "state_index": 3,
+      "D_model_bus_ids": [
+        48,
+        49
+      ],
+      "active_D_AC_cut_parents": [
+        46,
+        51,
+        52
+      ],
+      "prescribed_D_transfer_rows": [
+        5,
+        6
+      ],
+      "PV20_external_path_present_in_baseline": false,
+      "Plattsburgh_model_bus49_kV": 115.0
+    },
+    {
+      "state_index": 4,
+      "D_model_bus_ids": [
+        48,
+        49
+      ],
+      "active_D_AC_cut_parents": [
+        46,
+        51,
+        52
+      ],
+      "prescribed_D_transfer_rows": [
+        5,
+        6
+      ],
+      "PV20_external_path_present_in_baseline": false,
+      "Plattsburgh_model_bus49_kV": 115.0
+    }
+  ],
+  "current_qualified_hours": 8651,
+  "PV20_additional_exclusions": 0,
+  "conditional_physical_balance": "Moses_DtoE_meter = G_D - served_D_load - internal_D_real_losses + HQ_import + Ontario_PAR_import + PV20_Platt_import + meter_end_loss_adjustment",
+  "SandBar_to_Platt_identity": "PV20_Platt_import = P34_SandBar_toward_Platt - SouthHero_net_load - intervening_real_losses + unmetered_bypass_or_parallel_transfer",
+  "model_candidate": "Fixed active boundary injection at aggregate Plattsburgh bus 49; Q=0 assumed; matching ISO-NE pool/target adjustment. No invented AC impedance, conductor, tap angle, physical ISO-NE bus or physical circuit identity.",
+  "region_disaggregation_max_abs_error_MW": 0.0,
+  "full_PV20_meter_error_numeric_bound_MW": null,
+  "partial_uncertainty_context": {
+    "SouthHero29_1A_2025_planning_peak_MVA": 6.66,
+    "is_total_substation_hourly_netload_or_full_meter_error_bound": false,
+    "source": "VEC2025IRPSection4page71",
+    "source_recorded_P34_native_range_MW": [
+      -167.9,
+      11.1
+    ]
+  },
+  "physical_staggered_upgrade_dates_verified": true,
+  "P32_switch_timestamps_verified": false,
+  "source_quality_policy": "Keep all 8760 physical UTC rows; require full native coverage; carry existing 8651-hour qualification; no imputation or promotion of additional hours.",
+  "operator_change_permitted_by_this_certificate": "Add an explicit PV20 aggregate boundary proxy with documented assumptions; do not rename it a verified physical P32 operator.",
+  "default_model_changed": false,
+  "new_AC_power_flows": 0,
+  "sources_preserved": true,
+  "input_manifest": [
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/all_seasonal_members.csv",
+      "sha256": "e4d3e1ba5511b18d6d3c8cc3c33429cfca0e590c4800d74c065bcf213e2a88c1"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.pdf",
+      "sha256": "32e4fb86cc8397ab458fdf790ab52decfcaa9e9686de7aa9bec7527eaf04b901"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.pdf",
+      "sha256": "546402b7e85f51441e64a6b68adac53579f83828f6bc8c1195ccc480e082dc0b"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.pdf",
+      "sha256": "bcf26e7ac908f43a29f34230067b5b1afc6e587845b26246d7ca39a41ef9f072"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/PV20_hourly_source.csv",
+      "sha256": "b9aa8d1da50f6f3374e0e9a571156b0123bcdf68f45f5cde269da34157fb0455"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/PV20_source_receipt.json",
+      "sha256": "74545707c320f7658d5ddceb6822a79ee18199f56db86fc3e6745e3dfe7744ed"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/hourly_regional_actuals.csv",
+      "sha256": "eadd202b2a4a4f397215ab7a47d3abae25500008059d4879f14a9ab7829b3f50"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/latest_model.mat",
+      "sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_MS24_20240718.pdf",
+      "sha256": "b945e476a985dada832ccf2b017deeee24bf0a8a9464d45674e48acdaaa3e074"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Summer2025_OperatingStudy_APPROVED.pdf",
+      "sha256": "077c8b7c6c4703a0987784dbffc72a2213f33eb3501c340a10eb208fdf6ee1be"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27.pdf",
+      "sha256": "c0647d2abc38f216ccf5c1f197ca679cf16358fde5f507659bcdcd80a6938ba4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_instructions.pdf",
+      "sha256": "321ee0a8d93b15ca2fe206720615bb721c1b6eaf9d9fb06e9c11837ca5004d58"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_HA1_in_service_20260330.pdf",
+      "sha256": "2bfed6f027e96e21ca36cce152b5b521ca2c9d145891c69a76682335d0b9543b"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_HA1_in_service_20260330.pdf.receipt.json",
+      "sha256": "4576aef28d0ec803d5ba1c55a17d6d2055242ac0766b0498301c5f7f967d77c4"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_HA2_in_service_20251014.pdf",
+      "sha256": "383affbc77eb23294148efae52804270989c4f96985d7ec809c316574e7f90b7"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_HA2_in_service_20251014.pdf.receipt.json",
+      "sha256": "e785902deb93ba98b212f6d5104e39df80fbc1779c5c0154768c9df2e954a8df"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_MH1_in_service_20260416.pdf",
+      "sha256": "6a6b833531846936d845a7e97ba117d586c2b6a6868e7239a1dc2e4e8ddd41e5"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_MH1_in_service_20260416.pdf.receipt.json",
+      "sha256": "efa47fc093302b32dba0eed77830e3b9cd7cb60d06bfe1d03250a493e4ec1101"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYISO_transfer_limitations_20251022.pdf",
+      "sha256": "ee319467971818235b70f3d8d094df15877b18b2fa6911fb21f81821944495fd"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYISO_transfer_limitations_20251022.pdf.receipt.json",
+      "sha256": "2c8048a81c0d49f9e1c6a9802b6b6a079c8e728d99c075ed0992ec5d6c46df5a"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/VELCO_OC_minutes_SandBar_failure_20210318.pdf",
+      "sha256": "6997235bf3ca9d4382b06ec4d4fb7082a8f4663e342eda249b00407566a30b11"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/VELCO_OC_minutes_SandBar_failure_20210318.pdf.receipt.json",
+      "sha256": "ee0c88fc966df122288ea8f48f504b7401226095266a3ebe1b181cb099d549a4"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/ISONE_OP17A_boundaries_current.pdf",
+      "sha256": "3431ecbea9a667208419506d65ae0ea1ed49fa8628cf94b258f7b33c176e42d3"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/ISONE_OP17A_boundaries_current.pdf.receipt.json",
+      "sha256": "4ceb0f67ec98d256cc235958cf1abe0621d86dcefe2f98f5fd0059c1c1148225"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/ISONE_weekly_20251116.pdf",
+      "sha256": "ce46f36ffd8326883c9e28edbe4dbfa545c58e4aa8ea30ffb95249077d5f8183"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/ISONE_weekly_20251116.pdf.receipt.json",
+      "sha256": "192330079b6ad663e766355185d94f935677df6dfcd16f3d236f1852a4ae1d57"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/VEC2025_IRP_section4_SouthHero.pdf",
+      "sha256": "8ffcf8f3442fc10e74d9a7798a08ae20e7eb722c24628cdfc1ca19b53ed1f016"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/VEC2025_IRP_section4_SouthHero.pdf.receipt.json",
+      "sha256": "b3ae8366fff0a28da3cca71d73d2ceb6a20a4c159a97f5b071fc982c57bcf7fb"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/DPS_21_T_0340_public_documents.json",
+      "sha256": "a6297e8603210d210f352e521c0394762a6500f1561b4dcbd73cfe160e4a8303"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/DPS_21_T_0340_public_documents.json.receipt.json",
+      "sha256": "9c4c18af552b633c2238c38946d04defe57fbf40e9504aed4118ef64c85177b3"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_Smart_Path_Connect_current.html",
+      "sha256": "06bcdebb851e42c0ed2ea3ba203c2aac5cc82b4ea4c47afb93b466e714e54a73"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/NYPA_Smart_Path_Connect_current.html.receipt.json",
+      "sha256": "b91b40fc41ca4ff90b72cf559b46465378084f0e2d910aa195819ced022ba4d2"
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/boundary/boundary_audit_receipt.json",
+      "sha256": "15d25df561502cf791d89833fb3cc79dd5b2c6ee05c26a61ddfd7c60c64ff926"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/ISO_NE_PV20_disaggregation_contract.csv",
+      "sha256": "c489396be0f3b6c4306edb72f21e26108f6a1608165f6e66ddf18a909b386c98"
+    }
+  ],
+  "script_sha256": "dd9ef4ad7467591a7cb5e3563422251f8eb749ca3c87419a9c610571d6931024"
+}

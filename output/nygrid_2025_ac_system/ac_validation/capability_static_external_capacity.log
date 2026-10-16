@@ -1,0 +1,122 @@
+
+MATPOWER Version 8.1, 12-Jul-2025
+Optimal Power Flow -- AC-polar-power formulation
+Total number of variables............................:     3240
+                     variables with only lower bounds:        0
+                variables with lower and upper bounds:     2997
+                     variables with only upper bounds:        0
+Total number of equality constraints.................:      435
+Total number of inequality constraints...............:      210
+        inequality constraints with only lower bounds:        0
+   inequality constraints with lower and upper bounds:        0
+        inequality constraints with only upper bounds:      210
+
+
+Number of Iterations....: 29
+
+                                   (scaled)                 (unscaled)
+Objective...............:   1.5538157795410731e+02    1.5538157795410734e+02
+Dual infeasibility......:   7.1725627447282137e-10    7.1725627447282158e-10
+Constraint violation....:   4.3523518122867699e-12    4.3523518122867699e-12
+Complementarity.........:   4.4780085779149691e-09    4.4780085779149699e-09
+Overall NLP error.......:   4.4780085779149691e-09    4.4780085779149699e-09
+
+
+Number of objective function evaluations             = 30
+Number of objective gradient evaluations             = 30
+Number of equality constraint evaluations            = 30
+Number of inequality constraint evaluations          = 30
+Number of equality constraint Jacobian evaluations   = 30
+Number of inequality constraint Jacobian evaluations = 30
+Number of Lagrangian Hessian evaluations             = 29
+Total CPU secs in IPOPT (w/o function evaluations)   =      0.117
+Total CPU secs in NLP function evaluations           =      0.300
+
+EXIT: Optimal Solution Found.
+OPF successful
+                                 solver_success: 1
+                                         finite: 1
+              max_branch_complex_flow_error_mva: 5.2436e-11
+                        max_nodal_P_residual_mw: 7.8679e-05
+                      max_nodal_Q_residual_mvar: 4.1853e-04
+                       max_P_bound_violation_mw: 1.1369e-13
+                     max_Q_bound_violation_mvar: 7.1054e-15
+    max_assumed_generator_S_bound_violation_mva: 4.4409e-16
+                 max_voltage_bound_violation_pu: 1.1102e-16
+                                 min_voltage_pu: 0.9500
+                                 max_voltage_pu: 1.0500
+                    max_equipment_MVA_violation: 1.5873e-07
+              max_external_P_schedule_change_mw: 1.1369e-13
+                 max_fixed_transfer_P_change_mw: 0
+         max_transfer_loss_equation_residual_mw: 0
+            max_transfer_Q_bound_violation_mvar: 0
+                  native_generation_increase_mw: 272.0507
+                              AC_real_losses_mw: 272.0512
+                              DC_real_losses_mw: 0
+              max_series_loss_identity_error_mw: 1.2879e-13
+                   global_P_balance_residual_mw: -5.1207e-04
+              gamma_division_applied_to_current: 0
+               thermal_conductor_limits_audited: 0
+                                         passed: 0
+
+
+MATPOWER Version 8.1, 12-Jul-2025
+Optimal Power Flow -- AC-polar-power formulation
+Total number of variables............................:     3328
+                     variables with only lower bounds:        0
+                variables with lower and upper bounds:     3084
+                     variables with only upper bounds:        0
+Total number of equality constraints.................:      437
+Total number of inequality constraints...............:      214
+        inequality constraints with only lower bounds:        0
+   inequality constraints with lower and upper bounds:        0
+        inequality constraints with only upper bounds:      214
+
+
+Number of Iterations....: 40
+
+                                   (scaled)                 (unscaled)
+Objective...............:   3.8117095933754165e+01    3.8117095933754172e+01
+Dual infeasibility......:   6.3703911085182632e-10    6.3703911085182643e-10
+Constraint violation....:   3.0072111467660534e-11    3.0072111467660534e-11
+Complementarity.........:   4.7847899171211005e-09    4.7847899171211013e-09
+Overall NLP error.......:   4.7847899171211005e-09    4.7847899171211013e-09
+
+
+Number of objective function evaluations             = 46
+Number of objective gradient evaluations             = 41
+Number of equality constraint evaluations            = 46
+Number of inequality constraint evaluations          = 46
+Number of equality constraint Jacobian evaluations   = 41
+Number of inequality constraint Jacobian evaluations = 41
+Number of Lagrangian Hessian evaluations             = 40
+Total CPU secs in IPOPT (w/o function evaluations)   =      0.097
+Total CPU secs in NLP function evaluations           =      0.271
+
+EXIT: Optimal Solution Found.
+OPF successful
+                                 solver_success: 1
+                                         finite: 1
+              max_branch_complex_flow_error_mva: 7.4901e-11
+                        max_nodal_P_residual_mw: 6.1750e-05
+                      max_nodal_Q_residual_mvar: 3.4406e-04
+                       max_P_bound_violation_mw: 1.1369e-13
+                     max_Q_bound_violation_mvar: 8.8818e-16
+    max_assumed_generator_S_bound_violation_mva: 1.7764e-15
+                 max_voltage_bound_violation_pu: 0
+                                 min_voltage_pu: 0.9500
+                                 max_voltage_pu: 1.0500
+                    max_equipment_MVA_violation: 2.4992e-07
+              max_external_P_schedule_change_mw: 1.1369e-13
+                 max_fixed_transfer_P_change_mw: 0
+         max_transfer_loss_equation_residual_mw: 0
+            max_transfer_Q_bound_violation_mvar: 0
+                  native_generation_increase_mw: 239.2141
+                              AC_real_losses_mw: 239.2147
+                              DC_real_losses_mw: 0
+              max_series_loss_identity_error_mw: 1.1990e-13
+                   global_P_balance_residual_mw: -6.2869e-04
+              gamma_division_applied_to_current: 0
+               thermal_conductor_limits_audited: 0
+                                         passed: 0
+

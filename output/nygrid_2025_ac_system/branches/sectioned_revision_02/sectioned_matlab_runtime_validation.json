@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "cross_language_topology_states": 4,
+  "wrapper_guards": 4,
+  "maximum_bus_matrix_error": 0,
+  "maximum_branch_matrix_error": 0,
+  "maximum_OH_segment_error": 0,
+  "maximum_cable_segment_error": 0,
+  "inactive_split_corridor_row": 185,
+  "inactive_split_internal_nodes_omitted": 5,
+  "inactive_split_reactor_mvar_omitted": 607.27946816380381,
+  "no_transfer_generator_or_original_PD_QD_GS_change": true,
+  "new_OPF_or_PF_run": false,
+  "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+  "dependencies": [
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\branches\\revision_02_complete_mapping\\engineering_overlay.mat",
+      "sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\overlays\\engineering_nominal\\full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dover_parameters\\network\\x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\branches\\sectioned_design_fixtures.mat",
+      "sha256": "81ae58a882a46629f6bd35868a709f58f38bc8601fa9e1f757b41e38069f9b67"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\branches\\sectioned_design_plan.mat",
+      "sha256": "3a37801335e301f5d09eeeb8ba38ec6334249836dfed8436b5af9be5b3c59522"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\branches\\sectioned_design_receipt.json",
+      "sha256": "74f3eb12a80b5f0e3375cc85e806911a55ce1066e05c66f30701e38b90f8ca89"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\branches\\nygrid_ac_apply_sections.m",
+      "sha256": "ce3de5ef5ab5774ac30a596c589dc67ffb5231b8ca276cdf518d83e8c5180416"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\branches\\validate_sectioned_runtime.m",
+      "sha256": "97915b3229c3b8f3a8216296a6296b26553ece0159b5dc9e2acd5c1c6104792d"
+    }
+  ]
+}

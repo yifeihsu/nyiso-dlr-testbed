@@ -1,0 +1,34 @@
+test_capacity_weighted_objective_is_split_invariant (test_dispatch.BoundedDispatchTests.test_capacity_weighted_objective_is_split_invariant) ... ok
+test_fixed_variable_and_exact_balance (test_dispatch.BoundedDispatchTests.test_fixed_variable_and_exact_balance) ... ok
+test_matches_independent_constrained_optimizer (test_dispatch.BoundedDispatchTests.test_matches_independent_constrained_optimizer) ... ok
+test_no_relaxation_for_insufficient_capacity (test_dispatch.BoundedDispatchTests.test_no_relaxation_for_insufficient_capacity) ... ok
+test_nonfinite_or_inverted_bounds_are_rejected (test_dispatch.BoundedDispatchTests.test_nonfinite_or_inverted_bounds_are_rejected) ... ok
+test_NJ_admission_uses_associated_generator_evidence_not_reporting_labels (test_dispatch_priors.PriorTests.test_NJ_admission_uses_associated_generator_evidence_not_reporting_labels) ... ok
+test_many_to_many_partition_conserves_each_reporting_unit_once (test_dispatch_priors.PriorTests.test_many_to_many_partition_conserves_each_reporting_unit_once) ... ok
+test_normalization_keeps_total_and_missing_masks (test_dispatch_priors.PriorTests.test_normalization_keeps_total_and_missing_masks) ... ok
+test_resource_caps_do_not_invent_storage_or_renewable_energy (test_dispatch_priors.PriorTests.test_resource_caps_do_not_invent_storage_or_renewable_energy) ... ok
+test_scope_exclusion_zeros_bounds_without_reallocating_preference (test_dispatch_priors.PriorTests.test_scope_exclusion_zeros_bounds_without_reallocating_preference) ... ok
+test_shared_steam_pool_owns_capacity_once_and_preserves_P63_total (test_dispatch_priors.PriorTests.test_shared_steam_pool_owns_capacity_once_and_preserves_P63_total) ... ok
+test_solar_daylight_is_zero_at_local_midnight (test_dispatch_priors.PriorTests.test_solar_daylight_is_zero_at_local_midnight) ... ok
+test_zero_weights_cannot_manufacture_positive_generation (test_dispatch_priors.PriorTests.test_zero_weights_cannot_manufacture_positive_generation) ... ok
+test_capacity_retains_source_season_not_nameplate (test_fleet.FleetTests.test_capacity_retains_source_season_not_nameplate) ... ok
+test_cricket_valley_reporting_label_is_not_eia_id (test_fleet.FleetTests.test_cricket_valley_reporting_label_is_not_eia_id) ... ok
+test_many_to_many_is_annotation_not_capacity_expansion (test_fleet.FleetTests.test_many_to_many_is_annotation_not_capacity_expansion) ... ok
+test_missing_seasonal_is_not_reported_zero (test_fleet.FleetTests.test_missing_seasonal_is_not_reported_zero) ... ok
+test_operating_grid_generator_in_other_ba_is_not_native_dispatch (test_fleet.FleetTests.test_operating_grid_generator_in_other_ba_is_not_native_dispatch) ... ok
+test_outside_state_requires_unit_market_corroboration (test_fleet.FleetTests.test_outside_state_requires_unit_market_corroboration) ... ok
+test_same_zone_landing_and_tie_are_deterministic (test_fleet.FleetTests.test_same_zone_landing_and_tie_are_deterministic) ... ok
+test_status_and_month_boundaries (test_fleet.FleetTests.test_status_and_month_boundaries) ... ok
+test_NJ_market_native_units_and_explicit_quarantine_pass (test_validate_dispatch.IndependentAuditTests.test_NJ_market_native_units_and_explicit_quarantine_pass) ... ok
+test_active_bound_inequalities_and_fixed_variables (test_validate_dispatch.IndependentAuditTests.test_active_bound_inequalities_and_fixed_variables) ... ok
+test_bad_saved_dual_is_detected (test_validate_dispatch.IndependentAuditTests.test_bad_saved_dual_is_detected) ... ok
+test_balanced_but_nonoptimal_dispatch_fails_stationarity (test_validate_dispatch.IndependentAuditTests.test_balanced_but_nonoptimal_dispatch_fails_stationarity) ... ok
+test_missing_corroborated_NJ_unit_is_detected (test_validate_dispatch.IndependentAuditTests.test_missing_corroborated_NJ_unit_is_detected) ... ok
+test_no_generator_can_hide_nodal_or_global_imbalance (test_validate_dispatch.IndependentAuditTests.test_no_generator_can_hide_nodal_or_global_imbalance) ... ok
+test_plant_BA_label_cannot_admit_Linden_GTG6 (test_validate_dispatch.IndependentAuditTests.test_plant_BA_label_cannot_admit_Linden_GTG6) ... ok
+test_quarantined_solar_cannot_gain_native_landing (test_validate_dispatch.IndependentAuditTests.test_quarantined_solar_cannot_gain_native_landing) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.166s
+
+OK

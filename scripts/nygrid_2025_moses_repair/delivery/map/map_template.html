@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>NYgrid corrected AC model and interface flows</title>
+<style>
+__MAP_CSS__
+</style>
+</head>
+<body>
+<header>
+  <div><p class="eyebrow">NYgrid 2025 corrected research model</p><h1>Network, zones and interface flows</h1></div>
+  <div class="model-summary">148 retained AC buses<span>Detailed network and exact current recovery</span></div>
+</header>
+<section class="timebar" aria-label="Operating hour">
+  <button id="prev-hour" aria-label="Previous hour">‹</button>
+  <label>UTC hour <input type="datetime-local" id="datetime" step="3600"></label>
+  <button id="next-hour" aria-label="Next hour">›</button>
+  <label class="hour-label">Index <input type="number" id="hour-index" min="1" max="8760" step="1"></label>
+  <input id="hour-slider" type="range" min="1" max="8760" step="1" aria-label="Hour in the 2025 model">
+  <label>Power <select id="power-units"><option value="model">Model MW</option><option value="public">Public scale MW ÷ γ</option></select></label>
+</section>
+<div class="statusbar"><span id="hour-status" aria-live="polite"></span><span id="topology-status"></span><span id="power-note"></span></div>
+<nav class="toolbar" aria-label="Map controls">
+  <div class="button-group"><button data-view="ny" aria-pressed="true">New York</button><button data-view="downstate" aria-pressed="false">Downstate</button><button data-view="fullNPCC" aria-pressed="false">Full NPCC</button></div>
+  <label>Network <select id="network-mode"><option value="retained">Retained AC 148</option><option value="detailed">Detailed corridors</option></select></label>
+  <button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit-view">Fit</button>
+  <label><input id="show-zones" type="checkbox" checked> Zones</label><label><input id="show-interfaces" type="checkbox" checked> Interface flows</label>
+  <label><input id="show-controls" type="checkbox" checked> Transfers</label><label><input id="show-inactive" type="checkbox"> Inactive</label>
+  <label>Bus labels <select id="bus-labels"><option value="none">None</option><option value="added">Added ports</option><option value="all">All as space allows</option></select></label>
+</nav>
+<main class="workspace">
+  <div class="map-wrap" id="map-wrap">
+    <svg id="map" role="img" tabindex="0" aria-label="Current AC network with accounting zones and signed interface flows. Drag to pan, scroll to zoom, select a label, bus or corridor."><defs><clipPath id="ny-mask"><path d="__NY_MASK_PATH__"/></clipPath></defs></svg>
+    <div class="map-hint">Drag to pan · scroll to zoom · select a zone, flow or bus</div>
+    <div class="map-tools"><select id="bus-select" aria-label="Select a bus"><option value="">Find bus…</option></select><button id="clear-selection">Clear</button></div>
+    <div class="map-caption">
+      <div class="map-legend" aria-hidden="true">
+        <span><svg width="30" height="12" viewBox="0 0 30 12"><path d="M1 6H20" stroke="#b45309" stroke-width="5"/><path d="M29 6L19 0.5V11.5Z" fill="#b45309"/></svg>Interface flow, width ∝ √|MW|</span>
+        <span><svg width="26" height="10" viewBox="0 0 26 10"><path d="M1 5H25" stroke="#7c2d12" stroke-width="3" stroke-dasharray="7 4"/></svg>Selected interface cut</span>
+        <span><svg width="16" height="12" viewBox="0 0 16 12"><rect x="0.5" y="0.5" width="15" height="11" rx="2" fill="#557eb4" fill-opacity=".3" stroke="#557eb4" stroke-opacity=".5"/></svg>Zone area (schematic: land nearest its model buses)</span>
+      </div>
+      <span id="map-caption"></span>
+    </div>
+    <div id="tooltip" class="tooltip" role="tooltip"></div>
+  </div>
+  <aside class="sidebar" aria-label="Interface flows and selected model details">
+    <div class="sidebar-title"><h2>Interface flows</h2><span class="unit-label">Model MW</span></div>
+    <p class="fine">Saved AC results · signed corridor from-terminal convention</p>
+    <div id="flow-list" class="flow-list"></div>
+    <section id="northern-inputs" class="northern-inputs" aria-label="North Country inputs"></section>
+    <div class="flow-chart"><svg id="flow-chart" role="img" aria-label="Selected interface flows over nearby hours"></svg><p id="chart-caption" class="fine"></p></div>
+    <section id="detail" class="detail" aria-live="polite"></section>
+    <section class="zone-section"><h2>NY accounting zones</h2><div id="zone-list" class="zone-list"></div></section>
+    <details class="reading"><summary>Model and map conventions</summary><p>Zone labels identify the model's accounting groups. Each shaded zone area is the land nearest to that zone's located model buses, within 100 km. Buses in neighbouring systems bound the areas. They are schematic, not official NYISO boundary polygons. Connections show model adjacency, not surveyed line routes.</p><p>Interface arrows run between the mean located member endpoints, centered on the cut. Short cuts are drawn at a minimum legible length. Width scales with the square root of |flow|. A selected interface's dashed line traces where the schematic zone areas of its source and target zones meet.</p><p>Retained AC couplings represent eliminated passive buses. Detailed corridors show the original parent records and their recovered branch identities.</p><p>Interface membership is the model's frozen diagnostic definition. Complete physical NYISO meter membership is unverified. Arrows follow the declared positive member orientation; negative totals reverse them.</p><p>Model MW uses the synthetic 100-MVA electrical base. Public scale divides aggregate power by γ = 0.30012075175285535. Recovered amperes are never rescaled by γ.</p><p>Equation/accounting qualification, operating limits and conductor eligibility are separate. This map displays the fresh annual validation of the St. Lawrence and northern-boundary correction.</p></details>
+  </aside>
+</main>
+<footer>Self-contained offline map · Repair candidate <span id="source-commit"></span> · Natural Earth basemap · PERFORM, owner/public station data and <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> · Coordinates and interface definitions retain their source qualifications.</footer>
+<script type="application/json" id="network-data">__NETWORK_DATA__</script>
+<script>
+__MAP_JS__
+</script>
+</body>
+</html>

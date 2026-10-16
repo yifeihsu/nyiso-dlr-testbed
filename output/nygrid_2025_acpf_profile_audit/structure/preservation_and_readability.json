@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "scope": "Read-only baseline delivery preservation and primary-source file readability; does not certify physical cable parameters",
+  "created_utc": "2026-10-12T22:40:47.895433+00:00",
+  "baseline_HEAD": "330be1d90e6faab8d6c32c3d6c174aa364a30c73",
+  "old_AC_scope_git_clean": true,
+  "baseline_delivery_read_only_verify": {
+    "passed": true,
+    "files": 454,
+    "bytes": 165481517,
+    "proof_checks": 520,
+    "report_links": 21
+  },
+  "model_or_sealed_report_modified": false,
+  "source_files_checked": [
+    {
+      "source_id": "CONED_2018_PSC",
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/sources/coned_2018_psc_annual.pdf",
+      "sha256": "9b7c60fff0a3f6858a9c0e971061811e2899db75836399bd9f0387d80a2826de",
+      "readable": true
+    },
+    {
+      "source_id": "NYPA_Y49_2022",
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/sources/nypa_y49_2022_notice.pdf",
+      "sha256": "e066a9859fda7b11c028b6b03d88a70f5cc9c8f28f08e2d44acdddbc0cdd0bee",
+      "readable": true
+    },
+    {
+      "source_id": "PSC_Y49_2025",
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/sources/psc_y49_2025_order.pdf",
+      "sha256": "5eb922f5fe0c0bf69b4d60ae06fa9d62a0e97b33c015f987945e4e400749d744",
+      "readable": true
+    },
+    {
+      "source_id": "LIPA_2018_DISCLOSURE",
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/sources/lipa_2018_annual_disclosure.pdf",
+      "sha256": "73cab7a62d3b4f78c2f6d27588f05c48999026949f2e30a5a94cdeb48eb502f5",
+      "readable": true
+    },
+    {
+      "source_id": "CONED_LTP_2023",
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/sources/coned_local_transmission_plan_2023.pdf",
+      "sha256": "f49cc17223b2d285d6ddbbffe474f0f1374eed6ebabd6705e23a4bf4a09ccb5e",
+      "readable": true
+    },
+    {
+      "source_id": "RCC_OWNER_FAQ",
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/sources/coned_rcc_owner_faq.html",
+      "sha256": "3bc7cb1b44d9bf3b22ab794ae182085a7a27d89cf942908330139a9b93032feb",
+      "readable": true
+    },
+    {
+      "source_id": "RCC_QUEENS_OWNER",
+      "path": "output/nygrid_2025_downstate/sources/raw/coned_rainey_corona_2023.html",
+      "sha256": "de57bdfc628035b4ab36838786d875d17fe396b84eded5961c9ab0d7aad0c0e8",
+      "readable": true
+    },
+    {
+      "source_id": "RCC_MAY_OWNER",
+      "path": "output/nygrid_2025_downstate/sources/raw/coned_rcc_may2025.html",
+      "sha256": "1bb7e2998876ecea0686a9ca46a47e2b6d2eedd2a2c1d0de98c17892ca013085",
+      "readable": true
+    },
+    {
+      "source_id": "NYISO_WINTER2023",
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_winter2023_24.pdf",
+      "sha256": "028bf56d03b0c30fd0f6418e08f53eb54fcab93f3d76367994dc674671a8588d",
+      "readable": true
+    },
+    {
+      "source_id": "NYISO_MAY2025_OPS",
+      "path": "output/nygrid_2025_downstate/sources/raw/nyiso_may2025_operations.pdf",
+      "sha256": "f0022bd03378836465e8d0085c92c83e02e7ed710179f02903d19e85acdcd2dd",
+      "readable": true
+    },
+    {
+      "source_id": "NEPTUNE_OWNER_CABLE",
+      "path": "output/nygrid_2025_downstate/sources/raw/neptune_owner_cables.html",
+      "sha256": "c223ca29dbaf5ed151183b64027c3e95b3cf0be770874b1a073587dfc8e4e5dc",
+      "readable": true
+    }
+  ],
+  "source_pages_visually_reviewed": {
+    "coned_2018_psc_annual.pdf": [
+      145,
+      147
+    ],
+    "nypa_y49_2022_notice.pdf": [
+      1
+    ],
+    "psc_y49_2025_order.pdf": [
+      1
+    ],
+    "lipa_2018_annual_disclosure.pdf": [
+      27
+    ],
+    "coned_local_transmission_plan_2023.pdf": [
+      12
+    ]
+  },
+  "raw_model_readability": {
+    "PERFORM_numeric_branch_matrix_parsed": true,
+    "source_rows_checked_against_current_preengineering_RXB": 34,
+    "archived_RAW_identity_records": 37,
+    "raw_numeric_record_identity_does_not_prove_physical_cable_type": true,
+    "archived_full_RAW_identity_records": 2371,
+    "exact_full_export_is_local_versioned_dependency": true
+  },
+  "added_bus_injection_checks": {
+    "all51_full_reference_additions_zero_P_Q": true,
+    "no_generation_relocated_to_those51_additions": true,
+    "all75_AC_numerical_nodes_zero_P_Q_GS_BS": true,
+    "Dover_regulated_port_zero_P_Q_GS_BS": true
+  },
+  "archived_full_RAW_identity_export": {
+    "path": "output/nygrid_2025_acpf_profile_audit/structure/sources/perform_ny_branch_inventory.csv",
+    "sha256": "09898f0857ca417c99ad19516578b9b7b15adef565529fe066ae7f5df6ecd97b"
+  },
+  "temporary_hash_dependency_paths_remaining": 0
+}

@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "buses": 148,
+  "added_buses": 8,
+  "geographic_buses": 145,
+  "unlocated_proxies": [
+    78,
+    79,
+    82
+  ],
+  "individual_branch_records": 278,
+  "branch_counts": {
+    "retained": 216,
+    "replaced": 9,
+    "source": 14,
+    "assumed": 5,
+    "equivalent": 30,
+    "dc": 4
+  },
+  "bundles": 268,
+  "html_bytes": 360232,
+  "offline_self_contained": true,
+  "external_runtime_requests": false,
+  "projection": "+proj=lcc +lat_1=40 +lat_2=45 +lat_0=42 +lon_0=-76 +datum=WGS84 +units=m +no_defs",
+  "physical_route_claim": false,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_slim/geography/geographic_nodes.geojson",
+      "sha256": "6fa9464dc69ce83da6bfc70c40c3d1ce31a05400b544fbe50d52c9b5fe4764c4"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/geographic_connections.geojson",
+      "sha256": "0aee54ad1073693be47de27d508914986a92d03519be71ba1eba16e5472bfb5d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_land_npcc.geojson",
+      "sha256": "149ff4f15aa36650d87726349c14e8eac5246638554e46ce86fd672b8c2a5bbe"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_lakes_npcc.geojson",
+      "sha256": "5647268771afe6b49e8de6620bd7aa4cca6b5976492090a7bcc1bceacf4c4737"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_admin_1_states_provinces_lines_npcc.geojson",
+      "sha256": "908078a62f09080b9100423639245459e0e91880a316a50399b8d5f38cb8e6f6"
+    },
+    {
+      "path": "scripts/nygrid_2025_slim/interactive_map_template.html",
+      "sha256": "c301bb1e470ba8a8acf5e1e0e0f48c8bb5a2dbecbd1c817e380b5d99a775389a"
+    },
+    {
+      "path": "scripts/nygrid_2025_slim/build_interactive_map.py",
+      "sha256": "fd48e354cb21e76817034993f7c531e25485dd1012eb1ae052c7fede03a0bff7"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_slim/interactive/network_map.html",
+      "sha256": "3c49b0d9c6bef5623b1150d9e85bd111d2666c7f0e3703ff0275b639d867832e"
+    },
+    {
+      "path": "output/nygrid_2025_slim/interactive/map_data.json",
+      "sha256": "f44c731519d9c3ea1656883611e3915ffc260d2821950b3378b66319c952dc72"
+    }
+  ]
+}

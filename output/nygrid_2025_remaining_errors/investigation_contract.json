@@ -1,0 +1,31 @@
+{
+  "question": "Identify and quantify the strongest supported explanations for remaining current-model interface-flow errors.",
+  "primary_source": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+  "primary_prediction": "revised_legacy_signed_literal_from",
+  "primary_cohort": "revised_qualified",
+  "hour_slots": 8760,
+  "source_qualified_hours": 8651,
+  "primary_qualified_hours": 8170,
+  "prediction_and_observation_units": "public_scale_MW_in_comparison_NPZ; do not divide a second time by gamma",
+  "physical_P32_meter_membership_certified": false,
+  "numeric_as_MW_P32_header_interpretation_independently_certified": false,
+  "ranking": [
+    "annual_MAE_public_MW",
+    "annual_WAPE_percent",
+    "signed_bias_and_temporal_shape"
+  ],
+  "hypothesis_families": [
+    "source_input_timing_and_spatial_allocation",
+    "complete_cut_accounting_and_external_landing",
+    "terminal_convention_and_loss_corrections",
+    "current_AC_versus_source_corrected_DC",
+    "physical_impedance_reactive_and_operating_assumptions",
+    "measurement_scope_or_clock_mismatch"
+  ],
+  "controlled_probe_policy": "Only small versioned diagnostics justified by saved-data findings; no arbitrary fitting or default-model promotion.",
+  "failed_solutions_are_not_predictions": true,
+  "source_masks_preserved": true,
+  "new_annual_PF_required": false,
+  "old_files_and_unrelated_work_preserved": true,
+  "claim_policy": "Separate exact arithmetic, controlled model responses, source-supported causes, plausible hypotheses, and unresolved physical attribution."
+}

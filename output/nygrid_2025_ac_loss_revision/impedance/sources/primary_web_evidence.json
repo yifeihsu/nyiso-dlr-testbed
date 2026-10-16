@@ -1,0 +1,31 @@
+{
+  "retrieved_utc": "2026-10-13T02:35:10.280379+00:00",
+  "utility_property_inventory": {
+    "url": "https://www.nypa.gov/-/media/nypa/documents/document-library/real-estate/2025/overview-of-all-nypa-holdings_12312024.pdf",
+    "source_asof": "2024-12-31",
+    "retrieval_scope": "Primary-source search-index text only; direct historical PDF endpoints returned404 and are not locally PDF-verified",
+    "entries": [
+      {
+        "line": "Gilboa-New Scotland",
+        "nominal_kV": 345,
+        "ROW_miles": 31
+      },
+      {
+        "line": "Gilboa-Leeds",
+        "nominal_kV": 345,
+        "ROW_miles": 36
+      },
+      {
+        "line": "Gilboa-Fraser",
+        "nominal_kV": 345,
+        "ROW_miles": 32
+      }
+    ],
+    "limitation": "ROW distances are not conductor impedance data or proof of a direct Gilboa-Buchanan circuit."
+  },
+  "live_author_source_url": "https://raw.githubusercontent.com/AndersonEnergyLab-Cornell/NYgrid/47698b6c7823ae7b1bc6935e5601d5b64b8f918e/modifyMPC.m",
+  "author_paper_url": "https://sustainable-power-energy-research.media.uconn.edu/wp-content/uploads/sites/3441/2023/11/An-Open-Source-Representation-for-the-NYS-Electric-Grid-to-Support-Power-Grid-and-Market-Transition-Studies.pdf",
+  "NYISO_historical_download_url": "https://www.nyiso.com/documents/20142/2964907/interface_stability_limit_analysis.pdf/2ed355de-8767-8cde-c397-eec7450439b8",
+  "exact_paper_reference43_public_document_recovered": false,
+  "direct_installed_pair_or_factory_R_X_B_source_found": false
+}

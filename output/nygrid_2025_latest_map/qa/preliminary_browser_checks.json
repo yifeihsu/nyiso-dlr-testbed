@@ -1,0 +1,127 @@
+{
+  "scope": "Earlier native input-commit attempt before input handlers were added",
+  "checks": [
+    {
+      "name": "initial_desktop_148_retained_view_and_all_zone_interface_labels",
+      "passed": true,
+      "observed": {
+        "flows": [
+          {
+            "direction": "positive",
+            "id": "dysinger_east",
+            "value": "238.85801549679252"
+          },
+          {
+            "direction": "positive",
+            "id": "west_central",
+            "value": "99.48593850192535"
+          },
+          {
+            "direction": "positive",
+            "id": "total_east",
+            "value": "965.3911652794706"
+          },
+          {
+            "direction": "reverse",
+            "id": "moses_south",
+            "value": "-175.03950986688506"
+          },
+          {
+            "direction": "positive",
+            "id": "central_east_vc",
+            "value": "675.2231485876976"
+          },
+          {
+            "direction": "positive",
+            "id": "upny_coned",
+            "value": "1095.497596744475"
+          },
+          {
+            "direction": "positive",
+            "id": "spr_dun_south",
+            "value": "700.8121429167714"
+          }
+        ],
+        "hour": "8508",
+        "interfaces": "7",
+        "markers": 145,
+        "mode": "retained",
+        "state": "post_dover",
+        "zones": "11"
+      }
+    },
+    {
+      "name": "native_pointer_click_selects_moses_south_current_cut",
+      "passed": true,
+      "observed": {
+        "arrow": "reverse",
+        "detail": "MOSES SOUTH\nModel MW\nReverse total\nSigned interface flow\n-175 MW\nPositive orientation\nD → E\nSigned members\n3\n\nSum of each frozen member coefficient times its original corridor from-terminal P. A negative aggregate reverses the arrow. Physical NYISO meter membership is unverified.\n\n− parent 46 · PORTER #44 → MOSES E #48\n− parent 51 · COLTON #46 → PLATTSBURGH #49\n− parent 52 · MOSES W #47 → MOSES E #48",
+        "markers": 189,
+        "members": 3,
+        "mode": "detailed"
+      }
+    },
+    {
+      "name": "native_public_scale_selector_keeps_negative_direction_and_exact_conversion",
+      "passed": true,
+      "observed": {
+        "detail": "MOSES SOUTH\nPublic scale MW\nReverse total\nSigned interface flow\n-583 MW\nPositive orientation\nD → E\nSigned members\n3\n\nSum of each frozen member coefficient times its original corridor from-terminal P. A negative aggregate reverses the arrow. Physical NYISO meter membership is unverified.\n\n− parent 46 · PORTER #44 → MOSES E #48\n− parent 51 · COLTON #46 → PLATTSBURGH #49\n− parent 52 · MOSES W #47 → MOSES E #48",
+        "units": "public",
+        "value": "-583.2302792944731"
+      }
+    },
+    {
+      "name": "native_zone_label_opens_current_hour_balance",
+      "passed": true,
+      "observed": {
+        "detail": "Zone C · Central\nModel accounting zone\nPublic scale MW\nGross boundary target\n1,828 MW\nDelivered load\n1,776 MW\nAssigned AC loss\n52.3 MW\nNet native generation\n4,317 MW\n\nGross load and native generation are supplied source inputs. Delivered load and assigned loss require a qualified AC solution. HQ and other external equivalents are excluded from native generation.\n\nThe label is derived from model bus locations; it does not trace an official zone boundary.",
+        "zoneMarkers": 11
+      }
+    },
+    {
+      "name": "native_failed_hour_has_no_computed_flows_but_retains_valid_inputs",
+      "passed": false,
+      "observed": {
+        "auxOption": true,
+        "detail": "Zone C · Central\nModel accounting zone\nPublic scale MW\nGross boundary target\n1,828 MW\nDelivered load\n1,776 MW\nAssigned AC loss\n52.3 MW\nNet native generation\n4,317 MW\n\nGross load and native generation are supplied source inputs. Delivered load and assigned loss require a qualified AC solution. HQ and other external equivalents are excluded from native generation.\n\nThe label is derived from model bus locations; it does not trace an official zone boundary.",
+        "flows": [
+          "795.8730414399611",
+          "331.4863698057455",
+          "3216.6758201194125",
+          "-583.2302792944731",
+          "2249.8382555823164",
+          "3650.1894332405236",
+          "2335.100584760227"
+        ],
+        "hour": "8508",
+        "status": "AC equations and loss balance passed · operating limits failed",
+        "visibleInterfaceArrows": 7
+      }
+    },
+    {
+      "name": "native_source_excluded_hour_has_no_model_or_source_power_values",
+      "passed": false,
+      "observed": {
+        "flows": [
+          "795.8730414399611",
+          "331.4863698057455",
+          "3216.6758201194125",
+          "-583.2302792944731",
+          "2249.8382555823164",
+          "3650.1894332405236",
+          "2335.100584760227"
+        ],
+        "hour": "8508",
+        "status": "AC equations and loss balance passed · operating limits failed",
+        "transferArrowCount": 5,
+        "visibleInterfaceArrows": 7,
+        "zoneValues": [
+          "1,828 MW",
+          "1,776 MW",
+          "52.3 MW",
+          "4,317 MW"
+        ]
+      }
+    }
+  ]
+}

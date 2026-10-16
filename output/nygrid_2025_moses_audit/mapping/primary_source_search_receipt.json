@@ -1,0 +1,31 @@
+{
+  "searched_utc": "2026-10-11T06:04:59.955607+00:00",
+  "purpose": "Moses South physical membership and 2025 changes",
+  "sources": [
+    {
+      "title": "NYISO Summer 2025 Operating Study",
+      "page": 22,
+      "url": "https://www.nyiso.com/documents/20142/3691300/Summer2025-OperatingStudy-APPROVED.pdf/3aaa5eb6-9fa4-53b5-181a-189e3ac52fcb",
+      "access": "official-domain indexed search excerpt; direct web open returned JavaScript verification page",
+      "finding": "Moses South transfer limits still reference Moses-Adirondack MA2, Massena-Marcy MSU1 and Marcy transformers. This table gives limiting facilities and contingencies, not the complete metered flowgate membership.",
+      "complete_2025_membership_established": false
+    },
+    {
+      "title": "New York STARS Phase 2 Final Report, April 30 2012",
+      "page": 34,
+      "url": "https://www.nyiso.com/documents/20142/1398242/Phase_2_Final_Report_4_30_2012.pdf",
+      "access": "official-domain indexed search excerpt; direct web open returned JavaScript verification page",
+      "finding": "Figure6-6 historically lists nine Moses South circuits: Massena-Marcy765, two Moses West-Adirondack230 circuits, Jay-Norton46, Alcoa-Brady115, AllensFalls-Colton115, two Dennison115 ties, and a Gilpin46 tie. The three-row NPCC zone functional is a coarse proxy, not this literal nine-circuit list.",
+      "complete_2025_membership_established": false
+    },
+    {
+      "title": "NYISO 2023 Q1 STAR Report",
+      "page": 39,
+      "url": "https://www.nyiso.com/documents/20142/16004172/2023-Q1-STAR-Report-Final.pdf",
+      "access": "official-domain indexed search excerpt",
+      "finding": "Earlier planning tables describe future Haverstock-Adirondack and Haverstock-Willis345 connections for project1125. A proposed 2025 date does not establish actual energization or a new 2025 meter definition.",
+      "complete_2025_membership_established": false
+    }
+  ],
+  "inference": "No current complete physical meter list was accessible; do not change the operator to fit observed flows."
+}

@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "qualified_hours": 8657,
+  "source_qualified_hours": 8657,
+  "previous_qualified_hours": 8663,
+  "source_excluded_additional_hours": 6,
+  "capacity_infeasible_hours": 0,
+  "native_priors_weights_and_bounds_unchanged": true,
+  "original_loads_and_other_external_exchanges_unchanged": true,
+  "original_P34_controls_unchanged": true,
+  "internal_interface_observations_used": false,
+  "sign_timing_or_weights_fit_to_internal_flows": false,
+  "boundary_policy": "IESO measured NEW-YORK aggregate replaces prior NYISO Ontario schedule; other regions keep their declared source basis",
+  "dispatch_policy": "same strictly convex bounded source-prior projection with corrected native balance target",
+  "dispatch_file_sha256": "29d5adb7db188e395e9b4b177107088e3e23a27ece8cb986309307e26e620566",
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/external_generator_allocation.csv",
+      "sha256": "471ea55dc77808137342df764e89be6e4cededefdaad798e8687ebbe9ea42615"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/hourly_actual_exchange.csv",
+      "sha256": "e59408bf1296bd92eb6c562395d98d629c6b9784d50767c9a94956c8400aa6b4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/hourly_exchange_quality.csv",
+      "sha256": "ae23b9a130773fece232c8bb84583a3fb2d16fe9c2533a13b525ab64ba788cde"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/source_quality_receipt.json",
+      "sha256": "0959c383d82ae34a413e9ecc97465843467d3e2e543ac7de8306a45d05710eaa"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/ontario_audit_summary.json",
+      "sha256": "773ff7f90a655079e223c4177f2da0f57cd04a5a9f4629b323d5cbb64a244246"
+    },
+    {
+      "path": "scripts/nygrid_2025_dispatch/build_dispatch.py",
+      "sha256": "3250a8f4b5052d97ebe9eee11129570c12b9fe5260b2181ad3add79a418d3f54"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/reconstruct_dispatch.py",
+      "sha256": "2e470d756ca9ab09a111fa875901be3cdf4b2abcc8e29335409648b9d8381b2e"
+    }
+  ]
+}

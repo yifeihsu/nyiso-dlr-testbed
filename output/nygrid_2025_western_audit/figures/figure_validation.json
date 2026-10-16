@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "paired_hours": 8651,
+  "score_rows": 42,
+  "source_values_checked": true,
+  "observed_internal_data_used_only_for_posthoc_scoring": true,
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_western_audit/comparison/interface_summary.csv",
+      "sha256": "dfdd37edbd179284762511f45ad813dff116e24b419f982075e25c598aba4409"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/build_figures.py",
+      "sha256": "dec76afcab80fc7390cda709ebc8773581aaed24a9f822c68e5126efba1442a5"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_western_audit/figures/western_source_comparison.png",
+      "sha256": "a31009d2eb6c83dab58b029d3b61994b97190562199b341139b656a633c7470d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/figures/western_source_comparison.pdf",
+      "sha256": "bcb93c8c26b26f9f5fd8bb506d12794d97211fc2772f187903953e0af470d14f"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/figures/western_source_comparison.svg",
+      "sha256": "94b8c3417ebf26322ebc1dee206c888ff5756f49a13291776445e6439b1cfd9c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/figures/plotted_paired_scores.csv",
+      "sha256": "16b07328dfb0d4e2a4f3cab19bf79983dabde43dff221ba21f1cb9eb0cc6f94c"
+    }
+  ]
+}

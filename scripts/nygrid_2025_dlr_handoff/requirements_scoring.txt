@@ -1,0 +1,9 @@
+# Python >=3.11 is required (hashlib.file_digest).
+# Installed environment used for the original full annual scoring:
+# Python3.13.7, NumPy1.26.4, SciPy1.15.2, pandas2.2.3 on Windows.
+# These ranges are installation constraints, not a guarantee that every
+# permitted combination has been tested. The portable re-score validates its
+# result against the packaged reference with a declared numeric tolerance.
+numpy>=1.26,<3
+scipy>=1.15,<2
+pandas>=2.2,<3

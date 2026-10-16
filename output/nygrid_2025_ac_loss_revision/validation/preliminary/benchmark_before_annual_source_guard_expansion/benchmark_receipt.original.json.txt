@@ -1,0 +1,1876 @@
+{
+  "completed": true,
+  "benchmark_hours": [
+    1,
+    88,
+    178,
+    266,
+    354,
+    442,
+    530,
+    619,
+    706,
+    793,
+    884,
+    971,
+    1061,
+    1153,
+    1241,
+    1329,
+    1416,
+    1507,
+    1595,
+    1682,
+    1771,
+    1859,
+    1947,
+    2036,
+    2123,
+    2210,
+    2298,
+    2387,
+    2475,
+    2564,
+    2652,
+    2740,
+    2828,
+    2916,
+    3011,
+    3098,
+    3187,
+    3277,
+    3365,
+    3454,
+    3541,
+    3629,
+    3718,
+    3806,
+    3893,
+    3981,
+    4070,
+    4162,
+    4251,
+    4338,
+    4428,
+    4515,
+    4602,
+    4691,
+    4782,
+    4870,
+    4961,
+    5052,
+    5140,
+    5228,
+    5315,
+    5405,
+    5494,
+    5585,
+    5672,
+    5761,
+    5851,
+    5938,
+    6025,
+    6115,
+    6202,
+    6290,
+    6377,
+    6465,
+    6554,
+    6643,
+    6730,
+    6818,
+    6906,
+    6994,
+    7081,
+    7169,
+    7257,
+    7344,
+    7431,
+    7519,
+    7608,
+    7699,
+    7789,
+    7877,
+    7967,
+    8055,
+    8142,
+    8233,
+    8320,
+    8409,
+    8496,
+    8585,
+    8673,
+    8760
+  ],
+  "warmup_hours": [
+    2630,
+    8508
+  ],
+  "count": 100,
+  "elapsed_seconds": 8.8373384,
+  "projected_8651_hours_seconds": 764.518144984,
+  "PF_converged": 95,
+  "policy_qualified": 95,
+  "physical_VQ_qualified": 0,
+  "mean_call_seconds": 0.087744502,
+  "mean_solver_with_context_seconds": 0.055438122000000006,
+  "mean_public_wrapper_overhead_seconds": 0.032306379999999996,
+  "mean_NR_updates": 4.68,
+  "source_records": [
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\add_dlr_series_current_constraints.m",
+      "sha256": "0c2fe8ebd452894188cb11cb7e37776eb5dbc837b52c6b156cbe75fd8f288183",
+      "bytes": 1419
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\dlr_series_constraint.m",
+      "sha256": "3e1a967e63b43ab6ee4bf9e555f0a04382abe27fcbaafd138b12815d933bf627",
+      "bytes": 641
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_ac.m",
+      "sha256": "b46962e1d966233d03ae30bfdd1ad4d0120a075940579d83f9ffd7e017c5efc3",
+      "bytes": 9621
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_compact_ac.m",
+      "sha256": "ef3f462d1dac27ddf41855c05603fd52f025b59e9f480b8fe19d3b0048278260",
+      "bytes": 567
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_dover_dc.m",
+      "sha256": "b0f4c23bc1e7cf4e3907411089b96efba5ea9bb77bf1fed6a03910e4134b0979",
+      "bytes": 7452
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_downstate_dc.m",
+      "sha256": "05274b555ef45351eaf05b3b7b7fa7316f684d115a5e0dd0583a6eb3e5893347",
+      "bytes": 4472
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_full_dc.m",
+      "sha256": "3acff6c7187607c54c8b8e9b4fb4f3ccfe86c2dd3d6c9e22ef8eee75c4ffb2de",
+      "bytes": 4412
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_line_estimated_dc.m",
+      "sha256": "de3935e1e9b9dd2b94078d5a19976648884eac0f883dcead7786d4d1a93b20db",
+      "bytes": 3724
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_moses_corrected_dc.m",
+      "sha256": "5971086fc019920f2a7c2317476cdce97945b585632a3136c73aec225d459c46",
+      "bytes": 2928
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_operating_inputs.m",
+      "sha256": "3fe5221148c55f92ea83d580684140050f519dc8f85efa6a8e031e62250dfb42",
+      "bytes": 2730
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_par_controlled_dc.m",
+      "sha256": "99e6778597e4f023ce967bd0ba9fec18a41ffa9a3139553138d7758e818879cd",
+      "bytes": 4083
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_slim_dc.m",
+      "sha256": "2b7a67418717b9b0faf6fc9571e302793a04bd36eb8d54e9af4ecd1ee59be23f",
+      "bytes": 3646
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_slim_interfaces.m",
+      "sha256": "c43fe312eda58b0a439d426a5eb05238a08115f07f6b7456b2a0e458cade2845",
+      "bytes": 919
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_western_corrected_dc.m",
+      "sha256": "6cf89f6076f2fa9e9c81e0d4da92d4a6bd930f99b644c2690c4ba9b63491ce01",
+      "bytes": 5020
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\run_nygrid_2025_ac_dlr.m",
+      "sha256": "abb55a96e326d3d747bd82de89ddd8d0c845094a3869d9ffc4850472e5df561f",
+      "bytes": 2795
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\run_nygrid_2025_compact_acpf.m",
+      "sha256": "9009265a6e6b09be11ee71a9b9ffa4b5b82208255ca32e46234a783d649d8c21",
+      "bytes": 896
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\run_nygrid_2025_loss_consistent_acpf.m",
+      "sha256": "11ee49bdb6d18923373b5940d1f5defad720e5ce41db269c3a455d68b613cb40",
+      "bytes": 1114
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\ac_validation\\external_capability_mapping.csv",
+      "sha256": "e14805484535e7bebd38e93071a86b9adafc365a2d73b2f4b2bb6b32c796439d",
+      "bytes": 11135
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\ac_validation\\generator_capability_policy.json",
+      "sha256": "5426aa3db79a2cada69393b52831f0083834a84b8d3097957ff723f5e13dfba6",
+      "bytes": 2908
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\branches\\engineering_overlay.mat",
+      "sha256": "89fbfe38138ffc007930b3fec4dd4dd02b55f3a6518f73be25be56b1f9014f8f",
+      "bytes": 17646
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\branches\\sectioned_design_plan.mat",
+      "sha256": "aee5d1a7f4e34a4bfafda7462af93b8245353775c9335f62ac158a21373d24b5",
+      "bytes": 37728
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\branches\\sectioned_design_receipt.json",
+      "sha256": "36d941861036b9eba5c6a39c916d33ca3f44ef9df4520b015838c0a6c6ba17b2",
+      "bytes": 10490
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\engineering\\final_branch_mapping_review.json",
+      "sha256": "9586191164f2a87c7ac63c84ce06d62f95c28a4973ce82185a4f85c9adbebd58",
+      "bytes": 5977
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\engineering\\sectioned_design_independent_review.json",
+      "sha256": "60e02280d71f85ac0ea64737d96996e9ba1200045bca1481671975ed4fa5444f",
+      "bytes": 6403
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\engineering\\thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8",
+      "bytes": 13436
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_ac_system\\thermal\\declared_weather_scenarios.csv",
+      "sha256": "ba6ee92302f00d21059561f1d8e01ec3be2e6ced577d0b1fc11e819bb6ce64b4",
+      "bytes": 139
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_01.mat",
+      "sha256": "f21059f24b6614e4100d4cf7e7dec13e94f844fd3edcd265067873b1bc8d2369",
+      "bytes": 1.9340539E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_02.mat",
+      "sha256": "06dd1ba4915daf839cc27905768141bdfbb228d8d7a6b9fb8cf23f1869c86443",
+      "bytes": 1.7280614E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_03.mat",
+      "sha256": "2d518a28264d1fcc4f2fb16082f9b3dee94ef3f60e349f564d3f7e5d662260b1",
+      "bytes": 1.9323691E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_04.mat",
+      "sha256": "9161554a02952e53da73b1c3dd933d77cdc6e5a5c3250826018973c9d9997ef2",
+      "bytes": 1.8688927E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_05.mat",
+      "sha256": "fdc012f78d2511b930fefa563f033647cb250f5ceb15a60e67481a11b1b1ddf0",
+      "bytes": 1.9251724E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_06.mat",
+      "sha256": "791ca8a79e3b2d2125aeea38482b0521cd8357c88b22b25ee661ee95f17f9b3c",
+      "bytes": 1.8849691E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_07.mat",
+      "sha256": "e292c36bd9255a53c9d7149845aa6fbdf7a097e9f18cf49558593e647ae1d1a6",
+      "bytes": 1.9498093E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_08.mat",
+      "sha256": "1c50cb51edf8854831fcc1da0d0bdfa5ba722bf47b05763fb08f70e352d3252b",
+      "bytes": 1.9528158E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_09.mat",
+      "sha256": "2da4ed8badebc8e80151c06b1eb22904d2ca2f8d256bdbc3e9c0ba53c3eae122",
+      "bytes": 1.8884174E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_10.mat",
+      "sha256": "2a3efa9c55e96119eb311fc5b6170edab5fe84beef7b813171951f2b922d7bb7",
+      "bytes": 1.9583478E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_11.mat",
+      "sha256": "43fc75780afc6ae46c15c840ef39bf8f6bfb5da9e8a6c89dcd469e2990348e87",
+      "bytes": 1.8761996E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_acpf_profile_audit\\acpf\\monthly\\profile_PF_2025_12.mat",
+      "sha256": "9ef53680a25405da10524df26cfc65d2e25828053c7b986d10f5b6d67329dbf8",
+      "bytes": 1.9563343E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dispatch\\dispatch\\dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c",
+      "bytes": 8.1336556E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dispatch\\dispatch\\dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab",
+      "bytes": 2.7343868E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dispatch\\dispatch\\model_generator_register.csv",
+      "sha256": "7c613350f8cb397dc80fbfffd78d1a5e6e8e956e46cccdb6fc3a238af0615dda",
+      "bytes": 190710
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dover_parameters\\replay\\operating_states.mat",
+      "sha256": "bea2fb35c44a3c9510b7c4a68cf4a5ea901e7df0b51567755a2a388942dd171a",
+      "bytes": 99254
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_downstate\\network\\bus_register.csv",
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27",
+      "bytes": 16126
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_inputs\\model\\operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b",
+      "bytes": 1.9157492E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_slim\\network\\bus_register.csv",
+      "sha256": "9a3359281f3b51daedcb2c2740e3d31c4eb4f62adffca5ea7819b1736c0dc660",
+      "bytes": 11558
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\dispatch\\all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c",
+      "bytes": 7.0200265E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\dispatch\\all_boundary_external_generator_shares.csv",
+      "sha256": "e0bef3a5c7c95fec628fb86410eb64f4ee5c3e3fd2a89e8eb5d42fa19289af7a",
+      "bytes": 1267
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\replay\\dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7",
+      "bytes": 2.7204183E+7
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_loss_revision\\core\\ac_loss_apply_budget.m",
+      "sha256": "ab62082de6bae0f08f0347456b5aa7ecf1b33a3c52f38f26cf32d8d11bbb2b85",
+      "bytes": 2182
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_loss_revision\\core\\ac_loss_budget.m",
+      "sha256": "4ee8f25d451e4f6e19355db1822ae2ad7263ce08bce5f34434732fd49b76a068",
+      "bytes": 909
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_loss_revision\\core\\ac_loss_coupled_context.m",
+      "sha256": "5efadb750f2a3d3ff46ef4f2be4cd339ce9d178888e8436f7d17306e49f21ec0",
+      "bytes": 2255
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_loss_revision\\core\\ac_loss_coupled_equations.m",
+      "sha256": "1bffeaefc8e6563bea2ee56c1343d42cbcc8d63a74ccc54a4f37bc73ad12d59a",
+      "bytes": 2369
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_loss_revision\\core\\ac_loss_coupled_solve.m",
+      "sha256": "0e9ce88b66610d04d702c64bfe55ee5b39560a3e208a5868c7e1e8dd4d2492e5",
+      "bytes": 4310
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_loss_revision\\core\\ac_loss_finalize.m",
+      "sha256": "8074c6bf91f4cc7cd29ae539de75ddd80e081088a0db5864c06636b8119c3272",
+      "bytes": 5056
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_loss_revision\\core\\ac_loss_inner_pf.m",
+      "sha256": "daa695505456987e3daf22ed112be8495dd6cb72ab9bbb01af74d7f0cf42aa3f",
+      "bytes": 2606
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_loss_revision\\core\\ac_loss_prepare_case.m",
+      "sha256": "dccf49daf9d62b20a1d2a3f282e290dd01a4f52ab7de33a2f51db0a71faacd39",
+      "bytes": 3567
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_loss_revision\\core\\ac_loss_prepare_policy.m",
+      "sha256": "d5fed7cf527b794f46a88ef0c3cced939d03375168135920b8dad38bde4d3cda",
+      "bytes": 4834
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_loss_revision\\core\\ac_loss_solve.m",
+      "sha256": "6bc2e1787e6cbec5427439678e0c797af017884c57f3c02642da5d0aa1051cf0",
+      "bytes": 6513
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_loss_revision\\validation\\loss_validation_source_records.m",
+      "sha256": "bb072ee3c482c52f5d2886a2e1949f7df71a0c856a5e017384c43035ead37372",
+      "bytes": 1739
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\ac_validation\\audit_ac_solution.m",
+      "sha256": "07fcd00ff9f525af02ed40a6ba82951f427b5827aa93ddf47c6a1afe7edfe1b2",
+      "bytes": 8163
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\ac_validation\\probe_solver_starts.m",
+      "sha256": "1cf5ac00eeb8cd7eb1afaa177a869f54737d7eecaf9c59f1b75c33543f4aa4b3",
+      "bytes": 3000
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\ac_validation\\replay_acpf_solution.m",
+      "sha256": "728266a00a0a4f6d70354e9fe34e4215d8613007e63c0534c84ba98a49c4ab08",
+      "bytes": 2357
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\ac_validation\\run_capability_probe.m",
+      "sha256": "32ef7ee2d89bcd3655da5f5cd357a32f458e2684bcff4928a61e3ade4eec5ff1",
+      "bytes": 2848
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\ac_validation\\run_current_diagnostic.m",
+      "sha256": "b0b50c6047fe7f37d9c3b301e260967a1699d77464aba88a97862505e0761f0c",
+      "bytes": 5028
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\ac_validation\\run_diagnostic_sectioned_pf.m",
+      "sha256": "8638b49c5d111783f0f33fccc43c618b9d56165fc0f240417a199fe2a55eeaf5",
+      "bytes": 2767
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\ac_validation\\run_electrical_validation.m",
+      "sha256": "99d71dc871beaa8c26cc1254093ca57f071d991392e4774eeebb633c5720ff75",
+      "bytes": 8303
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\ac_validation\\validate_thermal_snapshots.m",
+      "sha256": "7808523f09c6a187a55bd4a9e6e2ed6670a07fef73792da247dc90d2306b822d",
+      "bytes": 8040
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\branches\\nygrid_ac_apply_sections.m",
+      "sha256": "ce3de5ef5ab5774ac30a596c589dc67ffb5231b8ca276cdf518d83e8c5180416",
+      "bytes": 9640
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\branches\\validate_sectioned_runtime.m",
+      "sha256": "9e6d98a02e19f0130bd19860a10c23d13c2dffbcfbe919f6c8abb9560a2ce165",
+      "bytes": 6922
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\thermal\\ac_conductor_heat.m",
+      "sha256": "a70fdf123e90d99b91e206e20dd7fb1b5eacdfd91349b92a29e558f654de0538",
+      "bytes": 768
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\thermal\\ac_conductor_resistance.m",
+      "sha256": "b51b4bb4b7ac0d5cf4f886950ac44ee5d2284d2951e74f4c07a6e4ac70511624",
+      "bytes": 668
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\thermal\\ac_dlr_apply_resistance.m",
+      "sha256": "f3f15f91f1192138162d9ba87fb3c6f413f843b7bfa565fd9a5ec4c3f97fa2ac",
+      "bytes": 1193
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\thermal\\ac_dlr_current_audit.m",
+      "sha256": "f14301f156172f08611fe3cc028616e6d8f5158d8b3b7457cd22717f5c6ca234",
+      "bytes": 2766
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\thermal\\ac_dlr_limits.m",
+      "sha256": "926fcaf95dc169d31b55278062178d10b750cf0cdc64aeb5530f1b8ad6015832",
+      "bytes": 2965
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\thermal\\ac_dlr_prepare_case.m",
+      "sha256": "3e989e7a7ef8210b85ca9a496a8a1dda2f2ea0fbc8dd44251dc311278bf4ee85",
+      "bytes": 4428
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\thermal\\ac_terminal_current_audit.m",
+      "sha256": "e4733cc21ce0e6e2a8cd918bdfa510f739785aac75915e1c9f978ed7ac66cae0",
+      "bytes": 1054
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\thermal\\add_ac_terminal_current_limits.m",
+      "sha256": "550020e7da959b7f0b39a61d85ba7699fc8d7c509d57759f49711312c88237cd",
+      "bytes": 3139
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\thermal\\test_ac_dlr_adapter.m",
+      "sha256": "9744f1d5307ece0878821a7c039c3a83358fc243fe586d72a1e76131eb552504",
+      "bytes": 8555
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_ac_system\\thermal\\validate_ac_dlr_system.m",
+      "sha256": "f5a6c616ef7e9e63d06156d162fa8b1ffc64278d4d25e1f9bf281c4e1cb42d15",
+      "bytes": 6628
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_acpf_profile_audit\\acpf\\audit_profile_pf.m",
+      "sha256": "6ea3ae9d7d2f2b526986ba7f117a6333bf24bff3e857d1a9556efc3c8612a987",
+      "bytes": 3688
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_acpf_profile_audit\\acpf\\load_profile_cache.m",
+      "sha256": "dd191ea4ec1189c6f0c65cdec43219194c1f18917541802b48a02ec8c8be026c",
+      "bytes": 3072
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_acpf_profile_audit\\acpf\\profile_case_from_cache.m",
+      "sha256": "a6917c24b68cb243772a401b04879040b83f7d378d1853542e0d4bd2efae3459",
+      "bytes": 2487
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_acpf_profile_audit\\acpf\\retry_failed_profile_hours.m",
+      "sha256": "ef1f72b8179ade3eae3ecb8fc186e2ff7c6a3d0f6b2d052014df5384c8446e72",
+      "bytes": 7274
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_acpf_profile_audit\\acpf\\run_Q_limit_sensitivity.m",
+      "sha256": "aba286336dea73916b969d5dd8ad9d7438b0b0a421a43fa7456891416d2bad50",
+      "bytes": 6106
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_acpf_profile_audit\\acpf\\run_annual_profiles.m",
+      "sha256": "ae59dd9b4d7ea3a581141712545f2aa57a435028762de3d48c300bbb40b09537",
+      "bytes": 8634
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_acpf_profile_audit\\acpf\\run_representative_profiles.m",
+      "sha256": "84d10d913e0bc12f749328686d37fb9a866416b300613b1827952e5550dcb541",
+      "bytes": 4703
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_acpf_profile_audit\\acpf\\validate_cache_and_benchmark.m",
+      "sha256": "b256a49fc01a8c6976590ef382ef54e18d89aae486f624c7b4913ed02dfaae71",
+      "bytes": 3351
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\core\\compact_ac_build.m",
+      "sha256": "e501cd0fc009ba5542850add00eb99d57f242087adc59bfc525accf333efa3b2",
+      "bytes": 5824
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\core\\compact_ac_operator_fingerprint.m",
+      "sha256": "61da98261eabf176b3a997ad19812e7fe406dd1d882a6f62b34184c34edb3d3f",
+      "bytes": 1877
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\core\\compact_ac_solve.m",
+      "sha256": "df890361ac16f4607c89776cb69d71474934d2c4077c37163bc289fa9dcc3db1",
+      "bytes": 7581
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\core\\compact_ac_source_fingerprint.m",
+      "sha256": "a7496a7bbe5b7bb43f9b7b4c0d0cdbe2813f5aa254bbaeb8adec15b1158a2356",
+      "bytes": 616
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\validation\\benchmark_compact_runtime.m",
+      "sha256": "f39708f4bb10ae1cee00c2fcbc3417eb63cb89b881b7f5dc3c84d51eb5c35114",
+      "bytes": 3468
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\validation\\compact_reference_operators.m",
+      "sha256": "9d98d1d8305d46745ae1cfc57402e4f9c18151aabf73333bcd593ee48876cba9",
+      "bytes": 2546
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\validation\\run_Q_limit_pairs.m",
+      "sha256": "43c0f84d735efbb299505c604d675cbb246003b767d387e9f19fb2c9b55a5309",
+      "bytes": 5522
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\validation\\run_annual_compact_profiles.m",
+      "sha256": "cf76679a2eb1963d6c7d620d082c35c1c4f9c0b5267b8f8ddd5ba5491a936f8d",
+      "bytes": 14461
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\validation\\run_representative_pairs.m",
+      "sha256": "289c98ae2be86317b4e3d5b472f6c506a99e5f27414c73ff984f6a42eba63e4e",
+      "bytes": 6482
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\validation\\seal_compact_validation.py",
+      "sha256": "d2732283b81a20071a3bdc139e862ec466fd973d26fe7c5d38ab0e9173a437f5",
+      "bytes": 13287
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\validation\\validate_fingerprint_optimization.m",
+      "sha256": "2b1626d14bb2355029a46bdccb8c54fc9a61372fa95b8a6fa3f193d94a153bb1",
+      "bytes": 1136
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\validation\\validate_reference_recovery.m",
+      "sha256": "df91d642b9482a6bf9d16ff0c0169c6d795d10df88c1ab353f4fd947e3a6c158",
+      "bytes": 4023
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\bustypes.m",
+      "sha256": "c18fb5a579c6931c77e7abaf2c595e71ae17bf1e22bc40f8fe792e7d7cc1e72c",
+      "bytes": 2055
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\dSbus_dV.m",
+      "sha256": "bd86d31bbb66d51d32d1dc087d35192416db00c51492d0c011bcb9939285be6c",
+      "bytes": 4788
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\ext2int.m",
+      "sha256": "a43954979f94b42cde6b1b3bcfa565558012d91627426bb7279bf62156e4f3d0",
+      "bytes": 10926
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\int2ext.m",
+      "sha256": "82cbdcd17acc90cff40a6e527b85825744354f47e10f54948323148b39994d25",
+      "bytes": 6901
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\makeSbus.m",
+      "sha256": "52a0a983355c3875fdc5e7a9164756d3d3f75271d09ef66eacc41924083b0e07",
+      "bytes": 3013
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\makeYbus.m",
+      "sha256": "618717d4ab738fec24d6b6624ba4b56c7953cb2205af2197db5199317611c10e",
+      "bytes": 4708
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\mpver.m",
+      "sha256": "2978fecfc8b8926c867b4e3a083ba2fcbac4f70c447ab32a404f9a7e4d8b2def",
+      "bytes": 8232
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\newtonpf.m",
+      "sha256": "347220f6d83b4de31bc622c3a3cdc09ccccca52bfa770a81d9703aa28c860edc",
+      "bytes": 4598
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\pfsoln.m",
+      "sha256": "01bd2214f72beb3a2b32f1e55d8226ed298a89dbdadace5218590727dadc48b2",
+      "bytes": 5646
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\runpf.m",
+      "sha256": "467ffd918e106ca75b690fb50adc77ac4544f898753359485a65518f3db4a66a",
+      "bytes": 21088
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\toggle_dcline.m",
+      "sha256": "88109e1f2f4b3195930a39294cb054aaf7c22f5e0bf835b3d603a09f39473665",
+      "bytes": 22817
+    }
+  ],
+  "source_files_unchanged": true,
+  "MATLAB_profiler_enabled": false,
+  "benchmark_is_not_annual_coverage_evidence": true,
+  "rows": [
+    {
+      "hour_index": 1,
+      "input_seconds": 0.0014746,
+      "call_seconds": 0.1671878,
+      "solver_with_context_seconds": 0.1225868,
+      "public_wrapper_overhead_seconds": 0.044601,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 88,
+      "input_seconds": 0.0013976,
+      "call_seconds": 0.1146421,
+      "solver_with_context_seconds": 0.0798189,
+      "public_wrapper_overhead_seconds": 0.0348232,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 178,
+      "input_seconds": 0.0099209,
+      "call_seconds": 0.1954432,
+      "solver_with_context_seconds": 0.1275467,
+      "public_wrapper_overhead_seconds": 0.0678965,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 266,
+      "input_seconds": 0.0006547,
+      "call_seconds": 0.0838878,
+      "solver_with_context_seconds": 0.0516584,
+      "public_wrapper_overhead_seconds": 0.0322294,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 354,
+      "input_seconds": 0.0004838,
+      "call_seconds": 0.0792506,
+      "solver_with_context_seconds": 0.050405,
+      "public_wrapper_overhead_seconds": 0.028845600000000006,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 442,
+      "input_seconds": 0.000532,
+      "call_seconds": 0.0792848,
+      "solver_with_context_seconds": 0.0481415,
+      "public_wrapper_overhead_seconds": 0.031143300000000006,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 530,
+      "input_seconds": 0.0003374,
+      "call_seconds": 0.0840137,
+      "solver_with_context_seconds": 0.0549776,
+      "public_wrapper_overhead_seconds": 0.029036099999999995,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 619,
+      "input_seconds": 0.0003612,
+      "call_seconds": 0.0795422,
+      "solver_with_context_seconds": 0.0497984,
+      "public_wrapper_overhead_seconds": 0.029743799999999994,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 706,
+      "input_seconds": 0.0006288,
+      "call_seconds": 0.0935158,
+      "solver_with_context_seconds": 0.0631758,
+      "public_wrapper_overhead_seconds": 0.030339999999999992,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 793,
+      "input_seconds": 0.0003583,
+      "call_seconds": 0.0977093,
+      "solver_with_context_seconds": 0.0666286,
+      "public_wrapper_overhead_seconds": 0.031080700000000003,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 884,
+      "input_seconds": 0.0005083,
+      "call_seconds": 0.0911922,
+      "solver_with_context_seconds": 0.0498656,
+      "public_wrapper_overhead_seconds": 0.0413266,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 971,
+      "input_seconds": 0.0004034,
+      "call_seconds": 0.0805151,
+      "solver_with_context_seconds": 0.052093,
+      "public_wrapper_overhead_seconds": 0.028422100000000006,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 1061,
+      "input_seconds": 0.000351,
+      "call_seconds": 0.0758037,
+      "solver_with_context_seconds": 0.0478902,
+      "public_wrapper_overhead_seconds": 0.0279135,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 1153,
+      "input_seconds": 0.0003613,
+      "call_seconds": 0.0789691,
+      "solver_with_context_seconds": 0.0496646,
+      "public_wrapper_overhead_seconds": 0.029304499999999997,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 1241,
+      "input_seconds": 0.0004306,
+      "call_seconds": 0.0881105,
+      "solver_with_context_seconds": 0.0585386,
+      "public_wrapper_overhead_seconds": 0.029571899999999991,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 1329,
+      "input_seconds": 0.0004046,
+      "call_seconds": 0.0790538,
+      "solver_with_context_seconds": 0.0495358,
+      "public_wrapper_overhead_seconds": 0.029517999999999996,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 1416,
+      "input_seconds": 0.0003715,
+      "call_seconds": 0.0827406,
+      "solver_with_context_seconds": 0.0519611,
+      "public_wrapper_overhead_seconds": 0.030779499999999994,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 1507,
+      "input_seconds": 0.0005464,
+      "call_seconds": 0.0971857,
+      "solver_with_context_seconds": 0.0551015,
+      "public_wrapper_overhead_seconds": 0.0420842,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 1595,
+      "input_seconds": 0.0005192,
+      "call_seconds": 0.1018567,
+      "solver_with_context_seconds": 0.0604536,
+      "public_wrapper_overhead_seconds": 0.041403099999999991,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 1682,
+      "input_seconds": 0.0003713,
+      "call_seconds": 0.0833736,
+      "solver_with_context_seconds": 0.0523991,
+      "public_wrapper_overhead_seconds": 0.030974500000000009,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 1771,
+      "input_seconds": 0.0005294,
+      "call_seconds": 0.0946577,
+      "solver_with_context_seconds": 0.0515948,
+      "public_wrapper_overhead_seconds": 0.043062899999999994,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 1859,
+      "input_seconds": 0.0004174,
+      "call_seconds": 0.0759135,
+      "solver_with_context_seconds": 0.04762,
+      "public_wrapper_overhead_seconds": 0.028293499999999992,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 1947,
+      "input_seconds": 0.0004019,
+      "call_seconds": 0.0765775,
+      "solver_with_context_seconds": 0.0468582,
+      "public_wrapper_overhead_seconds": 0.029719300000000004,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 2036,
+      "input_seconds": 0.000354,
+      "call_seconds": 0.076686,
+      "solver_with_context_seconds": 0.0470624,
+      "public_wrapper_overhead_seconds": 0.029623600000000007,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 2123,
+      "input_seconds": 0.0004038,
+      "call_seconds": 0.0758834,
+      "solver_with_context_seconds": 0.0468336,
+      "public_wrapper_overhead_seconds": 0.0290498,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 2210,
+      "input_seconds": 0.0004054,
+      "call_seconds": 0.0833596,
+      "solver_with_context_seconds": 0.0535081,
+      "public_wrapper_overhead_seconds": 0.029851500000000003,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 2298,
+      "input_seconds": 0.0004119,
+      "call_seconds": 0.0785639,
+      "solver_with_context_seconds": 0.0481992,
+      "public_wrapper_overhead_seconds": 0.030364700000000008,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 2387,
+      "input_seconds": 0.0004342,
+      "call_seconds": 0.0830915,
+      "solver_with_context_seconds": 0.0545531,
+      "public_wrapper_overhead_seconds": 0.0285384,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 2475,
+      "input_seconds": 0.0003676,
+      "call_seconds": 0.0839123,
+      "solver_with_context_seconds": 0.0537265,
+      "public_wrapper_overhead_seconds": 0.030185799999999992,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 2564,
+      "input_seconds": 0.0004488,
+      "call_seconds": 0.0820018,
+      "solver_with_context_seconds": 0.0517773,
+      "public_wrapper_overhead_seconds": 0.0302245,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 2652,
+      "input_seconds": 0.0004355,
+      "call_seconds": 0.0783555,
+      "solver_with_context_seconds": 0.0485527,
+      "public_wrapper_overhead_seconds": 0.029802799999999997,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 2740,
+      "input_seconds": 0.0003486,
+      "call_seconds": 0.0778361,
+      "solver_with_context_seconds": 0.0500782,
+      "public_wrapper_overhead_seconds": 0.027757900000000002,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 2828,
+      "input_seconds": 0.0003613,
+      "call_seconds": 0.0767485,
+      "solver_with_context_seconds": 0.0469805,
+      "public_wrapper_overhead_seconds": 0.029767999999999996,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 2916,
+      "input_seconds": 0.0003973,
+      "call_seconds": 0.0786379,
+      "solver_with_context_seconds": 0.0493079,
+      "public_wrapper_overhead_seconds": 0.029329999999999995,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3011,
+      "input_seconds": 0.0004153,
+      "call_seconds": 0.0926048,
+      "solver_with_context_seconds": 0.0639539,
+      "public_wrapper_overhead_seconds": 0.028650900000000007,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3098,
+      "input_seconds": 0.0003583,
+      "call_seconds": 0.0907312,
+      "solver_with_context_seconds": 0.0596107,
+      "public_wrapper_overhead_seconds": 0.031120499999999995,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3187,
+      "input_seconds": 0.0004834,
+      "call_seconds": 0.0861116,
+      "solver_with_context_seconds": 0.0570637,
+      "public_wrapper_overhead_seconds": 0.029047899999999995,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3277,
+      "input_seconds": 0.0004074,
+      "call_seconds": 0.0773446,
+      "solver_with_context_seconds": 0.0491678,
+      "public_wrapper_overhead_seconds": 0.028176800000000002,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3365,
+      "input_seconds": 0.0004186,
+      "call_seconds": 0.0775529,
+      "solver_with_context_seconds": 0.0476965,
+      "public_wrapper_overhead_seconds": 0.029856399999999991,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3454,
+      "input_seconds": 0.0003482,
+      "call_seconds": 0.0829151,
+      "solver_with_context_seconds": 0.0529279,
+      "public_wrapper_overhead_seconds": 0.029987200000000006,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3541,
+      "input_seconds": 0.0004071,
+      "call_seconds": 0.078126,
+      "solver_with_context_seconds": 0.0474498,
+      "public_wrapper_overhead_seconds": 0.0306762,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3629,
+      "input_seconds": 0.0003591,
+      "call_seconds": 0.0792964,
+      "solver_with_context_seconds": 0.0497898,
+      "public_wrapper_overhead_seconds": 0.0295066,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3718,
+      "input_seconds": 0.0003536,
+      "call_seconds": 0.0774562,
+      "solver_with_context_seconds": 0.0474074,
+      "public_wrapper_overhead_seconds": 0.0300488,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3806,
+      "input_seconds": 0.0005431,
+      "call_seconds": 0.0957003,
+      "solver_with_context_seconds": 0.0548194,
+      "public_wrapper_overhead_seconds": 0.040880900000000005,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3893,
+      "input_seconds": 0.0005735,
+      "call_seconds": 0.0835329,
+      "solver_with_context_seconds": 0.0480211,
+      "public_wrapper_overhead_seconds": 0.035511799999999996,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 3981,
+      "input_seconds": 0.0003758,
+      "call_seconds": 0.0754534,
+      "solver_with_context_seconds": 0.0462306,
+      "public_wrapper_overhead_seconds": 0.029222800000000007,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 4070,
+      "input_seconds": 0.0004295,
+      "call_seconds": 0.0855486,
+      "solver_with_context_seconds": 0.0559762,
+      "public_wrapper_overhead_seconds": 0.029572400000000006,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 4162,
+      "input_seconds": 0.0004165,
+      "call_seconds": 0.0843396,
+      "solver_with_context_seconds": 0.0540359,
+      "public_wrapper_overhead_seconds": 0.030303700000000003,
+      "NR_updates": 6,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 4251,
+      "input_seconds": 0.0004888,
+      "call_seconds": 0.0898191,
+      "solver_with_context_seconds": 0.0502965,
+      "public_wrapper_overhead_seconds": 0.0395226,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 4338,
+      "input_seconds": 0.0004474,
+      "call_seconds": 0.0839373,
+      "solver_with_context_seconds": 0.0545192,
+      "public_wrapper_overhead_seconds": 0.02941810000000001,
+      "NR_updates": 6,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 4428,
+      "input_seconds": 0.0004151,
+      "call_seconds": 0.0787409,
+      "solver_with_context_seconds": 0.049105,
+      "public_wrapper_overhead_seconds": 0.0296359,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 4515,
+      "input_seconds": 0.0003652,
+      "call_seconds": 0.077207,
+      "solver_with_context_seconds": 0.0486346,
+      "public_wrapper_overhead_seconds": 0.028572399999999998,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 4602,
+      "input_seconds": 0.0004123,
+      "call_seconds": 0.080513,
+      "solver_with_context_seconds": 0.0511597,
+      "public_wrapper_overhead_seconds": 0.0293533,
+      "NR_updates": 6,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 4691,
+      "input_seconds": 0.0003978,
+      "call_seconds": 0.0847519,
+      "solver_with_context_seconds": 0.0558807,
+      "public_wrapper_overhead_seconds": 0.028871200000000007,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 4782,
+      "input_seconds": 0.0005614,
+      "call_seconds": 0.0856757,
+      "solver_with_context_seconds": 0.0505352,
+      "public_wrapper_overhead_seconds": 0.035140499999999991,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 4870,
+      "input_seconds": 0.0003589,
+      "call_seconds": 0.1079117,
+      "solver_with_context_seconds": 0.0773463,
+      "public_wrapper_overhead_seconds": 0.030565399999999993,
+      "NR_updates": 8,
+      "PF_converged": false,
+      "policy_qualified": false,
+      "physical_VQ_qualified": false,
+      "status": "coupled_line_search_failed"
+    },
+    {
+      "hour_index": 4961,
+      "input_seconds": 0.0004379,
+      "call_seconds": 0.1156412,
+      "solver_with_context_seconds": 0.0853266,
+      "public_wrapper_overhead_seconds": 0.030314599999999997,
+      "NR_updates": 10,
+      "PF_converged": false,
+      "policy_qualified": false,
+      "physical_VQ_qualified": false,
+      "status": "coupled_line_search_failed"
+    },
+    {
+      "hour_index": 5052,
+      "input_seconds": 0.0004494,
+      "call_seconds": 0.1023243,
+      "solver_with_context_seconds": 0.0725981,
+      "public_wrapper_overhead_seconds": 0.029726200000000008,
+      "NR_updates": 7,
+      "PF_converged": false,
+      "policy_qualified": false,
+      "physical_VQ_qualified": false,
+      "status": "coupled_line_search_failed"
+    },
+    {
+      "hour_index": 5140,
+      "input_seconds": 0.0003888,
+      "call_seconds": 0.0797613,
+      "solver_with_context_seconds": 0.0492741,
+      "public_wrapper_overhead_seconds": 0.030487199999999992,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 5228,
+      "input_seconds": 0.0003609,
+      "call_seconds": 0.0824815,
+      "solver_with_context_seconds": 0.052571,
+      "public_wrapper_overhead_seconds": 0.0299105,
+      "NR_updates": 6,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 5315,
+      "input_seconds": 0.0003994,
+      "call_seconds": 0.0792176,
+      "solver_with_context_seconds": 0.0492305,
+      "public_wrapper_overhead_seconds": 0.029987099999999996,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 5405,
+      "input_seconds": 0.0003628,
+      "call_seconds": 0.093572,
+      "solver_with_context_seconds": 0.0634867,
+      "public_wrapper_overhead_seconds": 0.030085300000000009,
+      "NR_updates": 6,
+      "PF_converged": false,
+      "policy_qualified": false,
+      "physical_VQ_qualified": false,
+      "status": "coupled_line_search_failed"
+    },
+    {
+      "hour_index": 5494,
+      "input_seconds": 0.000352,
+      "call_seconds": 0.1149966,
+      "solver_with_context_seconds": 0.0862325,
+      "public_wrapper_overhead_seconds": 0.0287641,
+      "NR_updates": 9,
+      "PF_converged": false,
+      "policy_qualified": false,
+      "physical_VQ_qualified": false,
+      "status": "coupled_line_search_failed"
+    },
+    {
+      "hour_index": 5585,
+      "input_seconds": 0.0004192,
+      "call_seconds": 0.0952105,
+      "solver_with_context_seconds": 0.0664917,
+      "public_wrapper_overhead_seconds": 0.028718800000000003,
+      "NR_updates": 8,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 5672,
+      "input_seconds": 0.0004484,
+      "call_seconds": 0.087225,
+      "solver_with_context_seconds": 0.0544287,
+      "public_wrapper_overhead_seconds": 0.032796299999999994,
+      "NR_updates": 6,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 5761,
+      "input_seconds": 0.0004121,
+      "call_seconds": 0.0859495,
+      "solver_with_context_seconds": 0.0533611,
+      "public_wrapper_overhead_seconds": 0.0325884,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 5851,
+      "input_seconds": 0.0005851,
+      "call_seconds": 0.0982071,
+      "solver_with_context_seconds": 0.0546369,
+      "public_wrapper_overhead_seconds": 0.0435702,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 5938,
+      "input_seconds": 0.0006128,
+      "call_seconds": 0.1050534,
+      "solver_with_context_seconds": 0.0603846,
+      "public_wrapper_overhead_seconds": 0.044668800000000008,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6025,
+      "input_seconds": 0.0004357,
+      "call_seconds": 0.0908814,
+      "solver_with_context_seconds": 0.0549577,
+      "public_wrapper_overhead_seconds": 0.0359237,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6115,
+      "input_seconds": 0.0005525,
+      "call_seconds": 0.089279,
+      "solver_with_context_seconds": 0.0539158,
+      "public_wrapper_overhead_seconds": 0.0353632,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6202,
+      "input_seconds": 0.0004775,
+      "call_seconds": 0.0859619,
+      "solver_with_context_seconds": 0.0512849,
+      "public_wrapper_overhead_seconds": 0.034676999999999993,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6290,
+      "input_seconds": 0.0003984,
+      "call_seconds": 0.0770467,
+      "solver_with_context_seconds": 0.0476514,
+      "public_wrapper_overhead_seconds": 0.0293953,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6377,
+      "input_seconds": 0.0004328,
+      "call_seconds": 0.0834811,
+      "solver_with_context_seconds": 0.0539488,
+      "public_wrapper_overhead_seconds": 0.029532300000000004,
+      "NR_updates": 7,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6465,
+      "input_seconds": 0.0004274,
+      "call_seconds": 0.0886234,
+      "solver_with_context_seconds": 0.0591409,
+      "public_wrapper_overhead_seconds": 0.029482500000000002,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6554,
+      "input_seconds": 0.0004022,
+      "call_seconds": 0.0875268,
+      "solver_with_context_seconds": 0.0548075,
+      "public_wrapper_overhead_seconds": 0.0327193,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6643,
+      "input_seconds": 0.0003904,
+      "call_seconds": 0.0828022,
+      "solver_with_context_seconds": 0.0522493,
+      "public_wrapper_overhead_seconds": 0.030552900000000008,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6730,
+      "input_seconds": 0.0004408,
+      "call_seconds": 0.0798829,
+      "solver_with_context_seconds": 0.0484028,
+      "public_wrapper_overhead_seconds": 0.031480100000000004,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6818,
+      "input_seconds": 0.0003768,
+      "call_seconds": 0.0776184,
+      "solver_with_context_seconds": 0.04807,
+      "public_wrapper_overhead_seconds": 0.029548400000000002,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6906,
+      "input_seconds": 0.0004665,
+      "call_seconds": 0.0780609,
+      "solver_with_context_seconds": 0.0482127,
+      "public_wrapper_overhead_seconds": 0.029848200000000005,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 6994,
+      "input_seconds": 0.0004413,
+      "call_seconds": 0.0782151,
+      "solver_with_context_seconds": 0.0484334,
+      "public_wrapper_overhead_seconds": 0.029781699999999994,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 7081,
+      "input_seconds": 0.0004376,
+      "call_seconds": 0.0795663,
+      "solver_with_context_seconds": 0.0486039,
+      "public_wrapper_overhead_seconds": 0.030962400000000008,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 7169,
+      "input_seconds": 0.0004428,
+      "call_seconds": 0.0799037,
+      "solver_with_context_seconds": 0.0500489,
+      "public_wrapper_overhead_seconds": 0.029854799999999994,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 7257,
+      "input_seconds": 0.0004405,
+      "call_seconds": 0.0930037,
+      "solver_with_context_seconds": 0.050545,
+      "public_wrapper_overhead_seconds": 0.042458699999999995,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 7344,
+      "input_seconds": 0.000372,
+      "call_seconds": 0.0791702,
+      "solver_with_context_seconds": 0.0485963,
+      "public_wrapper_overhead_seconds": 0.030573899999999994,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 7431,
+      "input_seconds": 0.0004448,
+      "call_seconds": 0.0770176,
+      "solver_with_context_seconds": 0.0480804,
+      "public_wrapper_overhead_seconds": 0.028937200000000003,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 7519,
+      "input_seconds": 0.0003934,
+      "call_seconds": 0.0796715,
+      "solver_with_context_seconds": 0.0491444,
+      "public_wrapper_overhead_seconds": 0.030527100000000008,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 7608,
+      "input_seconds": 0.0003771,
+      "call_seconds": 0.0906646,
+      "solver_with_context_seconds": 0.0596889,
+      "public_wrapper_overhead_seconds": 0.030975699999999995,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 7699,
+      "input_seconds": 0.0005542,
+      "call_seconds": 0.0806718,
+      "solver_with_context_seconds": 0.0495553,
+      "public_wrapper_overhead_seconds": 0.031116500000000005,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 7789,
+      "input_seconds": 0.0004471,
+      "call_seconds": 0.0888725,
+      "solver_with_context_seconds": 0.0576496,
+      "public_wrapper_overhead_seconds": 0.031222899999999991,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 7877,
+      "input_seconds": 0.0003758,
+      "call_seconds": 0.0919133,
+      "solver_with_context_seconds": 0.0600661,
+      "public_wrapper_overhead_seconds": 0.031847200000000006,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 7967,
+      "input_seconds": 0.0005032,
+      "call_seconds": 0.0987604,
+      "solver_with_context_seconds": 0.0561768,
+      "public_wrapper_overhead_seconds": 0.0425836,
+      "NR_updates": 4,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 8055,
+      "input_seconds": 0.0004328,
+      "call_seconds": 0.0797351,
+      "solver_with_context_seconds": 0.0494874,
+      "public_wrapper_overhead_seconds": 0.030247700000000002,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 8142,
+      "input_seconds": 0.0003675,
+      "call_seconds": 0.0772577,
+      "solver_with_context_seconds": 0.0483646,
+      "public_wrapper_overhead_seconds": 0.028893099999999998,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 8233,
+      "input_seconds": 0.0003546,
+      "call_seconds": 0.076161,
+      "solver_with_context_seconds": 0.0481727,
+      "public_wrapper_overhead_seconds": 0.027988300000000008,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 8320,
+      "input_seconds": 0.0004165,
+      "call_seconds": 0.0891952,
+      "solver_with_context_seconds": 0.0538243,
+      "public_wrapper_overhead_seconds": 0.035370900000000004,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 8409,
+      "input_seconds": 0.0004722,
+      "call_seconds": 0.0880946,
+      "solver_with_context_seconds": 0.0562016,
+      "public_wrapper_overhead_seconds": 0.031893,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 8496,
+      "input_seconds": 0.0012464,
+      "call_seconds": 0.0973616,
+      "solver_with_context_seconds": 0.0604029,
+      "public_wrapper_overhead_seconds": 0.036958700000000004,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 8585,
+      "input_seconds": 0.0007539,
+      "call_seconds": 0.1073982,
+      "solver_with_context_seconds": 0.0660902,
+      "public_wrapper_overhead_seconds": 0.041308,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 8673,
+      "input_seconds": 0.0006367,
+      "call_seconds": 0.0861893,
+      "solver_with_context_seconds": 0.0535695,
+      "public_wrapper_overhead_seconds": 0.0326198,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    },
+    {
+      "hour_index": 8760,
+      "input_seconds": 0.0017078,
+      "call_seconds": 0.0840484,
+      "solver_with_context_seconds": 0.0499245,
+      "public_wrapper_overhead_seconds": 0.0341239,
+      "NR_updates": 5,
+      "PF_converged": true,
+      "policy_qualified": true,
+      "physical_VQ_qualified": false,
+      "status": "loss_accounting_converged"
+    }
+  ]
+}

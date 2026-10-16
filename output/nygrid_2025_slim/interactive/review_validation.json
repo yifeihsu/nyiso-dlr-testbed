@@ -1,0 +1,174 @@
+{
+  "passed": true,
+  "reviewed_at_utc": "2026-10-11T05:13:30.500646+00:00",
+  "scope": "read_only_frontend_code_and_data_review_plus_existing_behavioral_receipt_hash_verification",
+  "changes_made": "only_this_review_validation_json",
+  "prior_findings": {
+    "selection_cannot_be_cleared": "Fixed: toolbar button, background click, Escape, and empty bus option clear selection.",
+    "selected_record_visibility_note_stale": "Fixed: layer changes refresh the selected record detail.",
+    "marker_convention": "Blue squares are consistent in the map, selector, legend, and static drawing code."
+  },
+  "checks_run": 30,
+  "checks": [
+    {
+      "name": "clear function resets selection selector detail tooltip and redraw",
+      "passed": true
+    },
+    {
+      "name": "clear button wired",
+      "passed": true
+    },
+    {
+      "name": "background click clears with drag suppression",
+      "passed": true
+    },
+    {
+      "name": "Escape handled before child-target guard",
+      "passed": true
+    },
+    {
+      "name": "empty bus selector clears",
+      "passed": true
+    },
+    {
+      "name": "layer changes refresh selected individual record details",
+      "passed": true
+    },
+    {
+      "name": "square convention consistent in map legend selector and static drawing",
+      "passed": true
+    },
+    {
+      "name": "embedded payload equals map_data",
+      "passed": true
+    },
+    {
+      "name": "148 unique buses",
+      "passed": true
+    },
+    {
+      "name": "exact eight additions all345kV",
+      "passed": true
+    },
+    {
+      "name": "exact three unlocated proxies",
+      "passed": true
+    },
+    {
+      "name": "278 unique branch records",
+      "passed": true
+    },
+    {
+      "name": "bundle partition covers each record once",
+      "passed": true
+    },
+    {
+      "name": "endpoint location classification accurate",
+      "passed": true
+    },
+    {
+      "name": "mapped versus unlocated record counts",
+      "passed": true
+    },
+    {
+      "name": "class counts match receipt",
+      "passed": true
+    },
+    {
+      "name": "build hash output/nygrid_2025_slim/geography/geographic_nodes.geojson",
+      "passed": true
+    },
+    {
+      "name": "build hash output/nygrid_2025_slim/geography/geographic_connections.geojson",
+      "passed": true
+    },
+    {
+      "name": "build hash output/nygrid_2025_downstate/geography/basemap/ne_10m_land_npcc.geojson",
+      "passed": true
+    },
+    {
+      "name": "build hash output/nygrid_2025_downstate/geography/basemap/ne_10m_lakes_npcc.geojson",
+      "passed": true
+    },
+    {
+      "name": "build hash output/nygrid_2025_downstate/geography/basemap/ne_10m_admin_1_states_provinces_lines_npcc.geojson",
+      "passed": true
+    },
+    {
+      "name": "build hash scripts/nygrid_2025_slim/interactive_map_template.html",
+      "passed": true
+    },
+    {
+      "name": "build hash scripts/nygrid_2025_slim/build_interactive_map.py",
+      "passed": true
+    },
+    {
+      "name": "build hash output/nygrid_2025_slim/network/network_cases.mat",
+      "passed": true
+    },
+    {
+      "name": "build hash output/nygrid_2025_slim/interactive/network_map.html",
+      "passed": true
+    },
+    {
+      "name": "build hash output/nygrid_2025_slim/interactive/map_data.json",
+      "passed": true
+    },
+    {
+      "name": "existing18behavioralchecks passed",
+      "passed": true
+    },
+    {
+      "name": "behavioral receipt matches current HTML and test code",
+      "passed": true
+    },
+    {
+      "name": "DOM receipt does not claim browser verification",
+      "passed": true
+    },
+    {
+      "name": "no external runtime assets",
+      "passed": true
+    }
+  ],
+  "files": [
+    {
+      "path": "scripts/nygrid_2025_slim/interactive_map_template.html",
+      "sha256": "c301bb1e470ba8a8acf5e1e0e0f48c8bb5a2dbecbd1c817e380b5d99a775389a"
+    },
+    {
+      "path": "output/nygrid_2025_slim/interactive/network_map.html",
+      "sha256": "3c49b0d9c6bef5623b1150d9e85bd111d2666c7f0e3703ff0275b639d867832e"
+    },
+    {
+      "path": "output/nygrid_2025_slim/interactive/map_data.json",
+      "sha256": "f44c731519d9c3ea1656883611e3915ffc260d2821950b3378b66319c952dc72"
+    },
+    {
+      "path": "output/nygrid_2025_slim/interactive/build_receipt.json",
+      "sha256": "25f83ad0343398b624d1d701bac90492b7fefc32f2e7162c9380db9843546528"
+    },
+    {
+      "path": "output/nygrid_2025_slim/interactive/interaction_validation.json",
+      "sha256": "a23f57d8563cabc76a0bb8f3d68e2c91d95ed713ae5270315d54f23ba1a1f436"
+    },
+    {
+      "path": "scripts/nygrid_2025_slim/test_interactive_map.cjs",
+      "sha256": "b2e1c889b6ac8a02cdf12e43c059f9074bfd41fc3a181ec5ccbba97db8ae01a5"
+    },
+    {
+      "path": "scripts/nygrid_2025_slim/build_slim_geography.py",
+      "sha256": "f0daa02e29ed0cae49f0c0f802a4dfce05b4ee49acf88c7c6980b31e505d7e6c"
+    }
+  ],
+  "existing_behavioral_checks_verified": 18,
+  "behavioral_tests_rerun_by_reviewer": false,
+  "browser_UI_or_rendering_test_performed": false,
+  "native_pointer_hit_testing_performed": false,
+  "server_or_network_or_file_URL_attempted": false,
+  "remaining_limitations": [
+    "Actual browser rendering, native pointer hit-testing, font metrics, and browser-specific SVG behavior remain unverified.",
+    "LinkeDOM tests use explicit geometry/layout stubs and are not visual browser QA."
+  ],
+  "approval_review_limitation": "Automatic approval review blocked the loopback HTTP preview-server launch; no alternate access route was attempted."
+}

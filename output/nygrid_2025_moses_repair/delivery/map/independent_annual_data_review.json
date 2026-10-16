@@ -1,0 +1,192 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T22:07:44.439979+00:00",
+  "scope": "Independent current offline-map annual JSON values, masks, axes, units and native-zone semantics",
+  "check_count": 14,
+  "checks": [
+    {
+      "name": "full_time_interface_zone_axes",
+      "passed": true,
+      "details": {
+        "hours": 8760,
+        "interfaces": 7,
+        "zones": 11
+      }
+    },
+    {
+      "name": "source_equation_and_operating_masks",
+      "passed": true,
+      "details": {
+        "source_qualified": 8651,
+        "flow_qualified": 8651,
+        "operating_qualified": 0
+      }
+    },
+    {
+      "name": "effective_date_state_axis",
+      "passed": true,
+      "details": {
+        "pre_may": 3359,
+        "may21": 216,
+        "may30": 4896,
+        "post_dover": 289
+      }
+    },
+    {
+      "name": "all_default_interface_values_from_independent_reconstruction",
+      "passed": true,
+      "details": {
+        "maximum_model_MW_error": 0.0,
+        "qualified_hour_interface_values": 60557
+      }
+    },
+    {
+      "name": "failed_and_excluded_interface_values_remain_null",
+      "passed": true,
+      "details": {
+        "unavailable_rows": 109,
+        "zero_filled_rows": 0
+      }
+    },
+    {
+      "name": "observations_keep_independent_public_availability",
+      "passed": true,
+      "details": {
+        "all_seven_observations_available_rows": 8673,
+        "model_unavailable_but_some_observation_available_rows": 22
+      }
+    },
+    {
+      "name": "power_scale_and_no_current_rescaling",
+      "passed": true,
+      "details": {
+        "gamma": 0.30012075175285535,
+        "public_scale": "model_MW/gamma",
+        "current_rescaling": false
+      }
+    },
+    {
+      "name": "gross_demand_and_native_generation_match_current_profiles",
+      "passed": true,
+      "details": {
+        "maximum_gross_model_MW_error": 0.0,
+        "maximum_native_generation_model_MW_error": 0.0,
+        "native_generator_rows": 1437,
+        "excluded_external_generator_rows": 29,
+        "HQ_generator_row_excluded": 1464,
+        "HQ_is_native": false
+      }
+    },
+    {
+      "name": "zone_field_availability_masks",
+      "passed": true,
+      "details": {
+        "gross_and_native_generation_mask": "sourceQualified",
+        "served_and_loss_mask": "qualified"
+      }
+    },
+    {
+      "name": "P58_gross_served_and_loss_semantics",
+      "passed": true,
+      "details": {
+        "maximum_served_model_MW_difference": 0.0,
+        "maximum_loss_model_MW_difference": 0.0,
+        "maximum_gross_equals_served_plus_loss_residual_MW": 3.808064974464287e-13
+      }
+    },
+    {
+      "name": "northern_source_inputs_match_compiled_profiles_and_P34",
+      "passed": true,
+      "details": {
+        "maximum_model_MW_difference": 0.0,
+        "maximum_P34_public_MW_difference": 1.4210854715202004e-14,
+        "StLawrence_unit_rows": 16,
+        "PV20_is_native": false,
+        "physical_meter_equivalence_certified": false
+      }
+    },
+    {
+      "name": "fixed_transfer_values_and_input_mask",
+      "passed": true,
+      "details": {
+        "records": 6,
+        "physical_kind": "four original DC and two ideal PAR controls",
+        "mask": "sourceQualified"
+      }
+    },
+    {
+      "name": "failure_statuses_are_distinct_from_source_exclusions",
+      "passed": true,
+      "details": {
+        "equation_loss_qualified": 8651,
+        "source_excluded": 109
+      }
+    },
+    {
+      "name": "diagnostic_scope_and_observation_units_disclosed",
+      "passed": true,
+      "details": {
+        "observations": "Preserved frozen numeric-as-MW interpretation of published NYISO P32 Flow(MWH); no unit factor fitted and no independent physical meter certification.",
+        "generation": "Source-informed reconstructed net native generator PG aggregated by current NY accounting zone, not measured unit dispatch; excludes all 29 external equivalents including HQ and the fixed-PQ PV20 proxy; negative storage pumping is preserved."
+      }
+    }
+  ],
+  "model_flow_values_compared": 60557,
+  "fresh_simulation_run": false,
+  "old_artifacts_modified": false,
+  "browser_test_fixtures": {
+    "default_hour": 8508,
+    "default_Moses_South_model_MW": -171.95023122562813,
+    "default_Moses_South_public_scale_MW": -572.936826998309,
+    "default_Moses_arrow": "reverse",
+    "source_eligible_failed_hour": null,
+    "source_excluded_hour": 154
+  },
+  "sources": [
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/annual_data.json",
+      "sha256": "b2bb4d7f3125553c2d4e114edae52fcc8d08a9e8aa7ea5e05da46c6e42829d91",
+      "bytes": 12947535
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/interface_definitions.json",
+      "sha256": "8a48315611fc4a44cb3b14821928b69080763883178b7a5018850bbdf0dde6eb",
+      "bytes": 96846
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/interface_flow_reference.npz",
+      "sha256": "21c0bc01ed7b6a424ba0b58fb0ea5aca322e49bf2da6b3ae417de6f777642490",
+      "bytes": 1427332
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079",
+      "bytes": 6391233
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/latest_model.mat",
+      "sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8",
+      "bytes": 848957
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h0001_4380.mat",
+      "sha256": "197a6bbb5909a61dc227f779805d07d76d8d5a7f3b7e1d77974e12c6375c91e6",
+      "bytes": 54282573
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h4381_8760.mat",
+      "sha256": "ccd92f0560427d78ade6861d34182cf64a8b3c76b46744eb80e4a99edb6ffe61",
+      "bytes": 53594616
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/PV20_hourly_source.csv",
+      "sha256": "b9aa8d1da50f6f3374e0e9a571156b0123bcdf68f45f5cde269da34157fb0455",
+      "bytes": 1284760
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/map/audit_annual_payload.py",
+      "sha256": "7f4c9200f7564b93e78053320e973d036ae798dbb8b258437af669ab1618e3c4",
+      "bytes": 11135
+    }
+  ]
+}

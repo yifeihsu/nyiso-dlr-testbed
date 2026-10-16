@@ -1,0 +1,179 @@
+{
+  "status": "native_actual_PTID325270_extracted_with_explicit_meter_and_historical_sign_assumptions",
+  "created_utc": "2026-10-15T21:48:01.414278+00:00",
+  "physical_hours": 8760,
+  "current_qualified_hours": 8651,
+  "source_records": 105998,
+  "coverage_qualified_hours": 8673,
+  "current_and_PV20_qualified_hours": 8651,
+  "current_qualified_hours_missing_PV20": 0,
+  "native_metadata": [
+    {
+      "ptid": 325270,
+      "native_records": 105998,
+      "unique_timestamps": 105998,
+      "repeated_timestamp_records": 0,
+      "max_duplicate_spread_MW": 0.0,
+      "min_native_MW": -167.9,
+      "max_native_MW": 11.1,
+      "intervals_longer_than_600_seconds": 75
+    }
+  ],
+  "source_statistics": [
+    {
+      "cohort": "all_PV20_covered",
+      "hours": 8673,
+      "mean_MW": -75.96768054114301,
+      "mean_absolute_MW": 75.96768054114301,
+      "standard_deviation_MW": 27.843781727968302,
+      "minimum_MW": -148.25,
+      "maximum_MW": 0.0,
+      "p95_absolute_MW": 108.55633333333334,
+      "max_absolute_MW": 148.25
+    },
+    {
+      "cohort": "fixed8651_if_available",
+      "hours": 8651,
+      "mean_MW": -75.98852598928833,
+      "mean_absolute_MW": 75.98852598928833,
+      "standard_deviation_MW": 27.831839846914775,
+      "minimum_MW": -148.25,
+      "maximum_MW": 0.0,
+      "p95_absolute_MW": 108.54833333333335,
+      "max_absolute_MW": 148.25
+    }
+  ],
+  "observed_PTID": 325270,
+  "observed_device": "Sand Bar PAR PS01",
+  "current_direction_source": "Official ParFlowDiagrams27 page8 cyanplus arrow from SandBarISO-NE toward SouthHeroISO-NE and PlattsburghNYISO; page26legend",
+  "positive_direction": "SandBar toward Plattsburgh, import-positive to NewYork in the engineering proxy",
+  "historical_2025_direction_effective_date_verified": false,
+  "physical_PV20_boundary_meter": "Plattsburgh, per official2025AppendixE D-to-N table",
+  "intervening_station": "South Hero115kV ISO-NE",
+  "exact_physical_identity": "PV20_Platt_import = P34_SandBar_toward_Platt - SouthHero_net_load - intervening_real_losses + bypass_or_other_unmetered_parallel_transfer",
+  "historical_direction_and_meter_equivalence_assumptions_required": true,
+  "required_global_balance_rule": "PV20 is a component of the existing NYIS-ISNE physical aggregate. Reroute this share intoZoneD and subtract it from the remainingISO-NE exchange target; never add it on top of the unchanged total.",
+  "physical_circuit_ID_to_model_AC_branch_mapping_claimed": false,
+  "model_inputs_changed": false,
+  "internal_P32_observations_used_to_select_values": false,
+  "aggregation": "Exactforwardhold overlap; reject any nativegapover600s; noimputation; keepallphysicalUTChours; alternateconventionsretained",
+  "source_manifest": [
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/balance_hourly.csv",
+      "sha256": "6ae19f7c7fcf93f5e3ca853dbf47304596f07494b249e8a6e9f1bb674ee83326"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_source_diagnosis/boundary/audit_sources.py",
+      "sha256": "a150cc56d067e71f124b369a393031f71b743ef411d2091d34eaf1bb09c017dd"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27.pdf",
+      "sha256": "c0647d2abc38f216ccf5c1f197ca679cf16358fde5f507659bcdcd80a6938ba4"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250101ParFlows_csv.zip",
+      "sha256": "bb760c2b1c15bc59e907e28ba0eaec5715260179dce513ee43cd2c2c9e2ec076"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250101ParFlows_csv.zip.receipt.json",
+      "sha256": "17bfbf22183eb4b1be821fd8a7f8e0e468ca1e8bbb49ede9cc561cd37d77a2ba"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250201ParFlows_csv.zip",
+      "sha256": "5466d3ed258b133b0c7296228ac1087c3dc2c73e74b72dfeaf0ea7e0195faaf7"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250201ParFlows_csv.zip.receipt.json",
+      "sha256": "8932d9e40ae80f6eb74d05363be396e76b1b992105ce8b6c9eadf104eec61f6d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250301ParFlows_csv.zip",
+      "sha256": "5b011a11c73b2f31779da5bd2a80e3fbcccaf6d685fb1cacc92c8c3a98c7199a"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250301ParFlows_csv.zip.receipt.json",
+      "sha256": "1981e44bf0b20656a6f6823ccd108f04367ecf901ac3dc5938781db12613697c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250401ParFlows_csv.zip",
+      "sha256": "e5d349be83ce17ce7a8767e88c91c9d5a66a55f3391ea401abe01555d1f94efb"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250401ParFlows_csv.zip.receipt.json",
+      "sha256": "847a41c9d4a0b268f691d366858ebd7c4791b74ee631e13222b4db9431b35bd2"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250501ParFlows_csv.zip",
+      "sha256": "805cd14d79b7234d82856fa72f9a71acdcd70a4534c5d7bab11e73fd98d8be8f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250501ParFlows_csv.zip.receipt.json",
+      "sha256": "ee447cc63c3e399ac305934a1532385f116aac8c859665d4eb8d3ba30cc10d49"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250601ParFlows_csv.zip",
+      "sha256": "4fcfc99c76ce1cd8f04548088004b57fdc73266b8bb3d053c2177397ad6517e9"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250601ParFlows_csv.zip.receipt.json",
+      "sha256": "269b7a2a403f8a0c854f6494829beae40cb06a3568583f45e729f34a81e0aa87"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250701ParFlows_csv.zip",
+      "sha256": "05f572827945a51003dc5b744cc533cc7464a3e99a457bc3340df84c93066fe2"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250701ParFlows_csv.zip.receipt.json",
+      "sha256": "9156a0c868bf3f7b871c3d08abe255fb217799df798a1286e6d59e659ad47b56"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250801ParFlows_csv.zip",
+      "sha256": "6c0501a90e001d781daffadd5286adc2b1188a77157cd44fac73de8b5309e98b"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250801ParFlows_csv.zip.receipt.json",
+      "sha256": "95b4323d8c7177b85b3f324d1b9debe4a1cd870c66711ee182dfa9b843e55313"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250901ParFlows_csv.zip",
+      "sha256": "3ddf7f4708b783abbc3b6c8bc0494482356538ab5adbf1cb7010e06f25c2e76e"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250901ParFlows_csv.zip.receipt.json",
+      "sha256": "63f09e2580ce57964a7bfce37daa2a9a92cb2570fbdf3bfae716a27dacb5af4b"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251001ParFlows_csv.zip",
+      "sha256": "7e739cda35caac38deea8f8bc024e8845f9cc76aa1ddb715680a168193f9ea7e"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251001ParFlows_csv.zip.receipt.json",
+      "sha256": "6c7b6eb5802945cdf4feb09a516b8c0c7444b5fbfe7e692fe2e2f39a1e371e96"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251101ParFlows_csv.zip",
+      "sha256": "df8734666414d51aa04319565cb0f1377e069cef04bff623b8d92de6cde74644"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251101ParFlows_csv.zip.receipt.json",
+      "sha256": "868e54d3346f816f0f59bb1a5a29cff5008e565801a4fad327d50687b2f1f744"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251201ParFlows_csv.zip",
+      "sha256": "6e08b8e43669c5d97348842c107c3043812167eb505018e3eac44977a2a639ef"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251201ParFlows_csv.zip.receipt.json",
+      "sha256": "aa293f94ca9e03bca33e8f5f303eaee3f6eb036620ee126c46df5c4cf96159b2"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20260101ParFlows_csv.zip",
+      "sha256": "0bda820cf2c06bc5da05787f13399b79ef6a698452c037e32f3feec3ba7ff085"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20260101ParFlows_csv.zip.receipt.json",
+      "sha256": "b2c19a89a0af39933ca6b0210cf60e495c2dda697308312db9d095afaac234c4"
+    }
+  ],
+  "script_sha256": "6b9ff084942c431049d706b463a8746716973f1e63398f4793709bfdd736c1ab"
+}

@@ -1,0 +1,81 @@
+{
+  "receipt_scope": "current capture artifacts and reproducible runner code; execution inputs are bound by preparation and annual source manifests",
+  "source_preparation_verified": {
+    "upstream_files": 73,
+    "reduction_files": 20,
+    "instrumentation_reverse_exact": true
+  },
+  "fresh_full_loader_validation": {
+    "passed": true,
+    "fresh_matpower_hours": 13,
+    "invalid_index_guards": 8,
+    "tolerance_mw": 1e-07,
+    "tolerance_angle_deg": 1e-07,
+    "max_branch_error_mw": 4.1382008930668235e-11,
+    "max_generation_error_mw": 6.94626578479074e-11,
+    "max_angle_error_deg": 2.7284841053187847e-12,
+    "max_nodal_balance_residual_mw": 2.1948665107629495e-11,
+    "matlab_version": "26.1.0.3276743 (R2026a) Update 3",
+    "matpower_version": "8.1",
+    "validation_scope": "fresh MATPOWER full final-device solve agrees with independent annual DC reconstruction",
+    "released_reduced_model_equivalence_claimed": false,
+    "ac_or_equipment_feasibility_claimed": false
+  },
+  "files": [
+    {
+      "path": "output/nygrid_2019_full_stage1/captured_stages.mat",
+      "bytes": 1558592,
+      "sha256": "8edf15551ed7b87b0f5bb4672b90a3702a78c2f881d57154d7f0f4081fc1c56d"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_inventory.csv",
+      "bytes": 1342,
+      "sha256": "851182ede0bbe7211b38633b33ff182ffd374412c12fdd2665d306cfa9fd7d37"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_preparation_manifest.json",
+      "bytes": 12385,
+      "sha256": "323aeeb349d38dd8ade02cba8933dfdfae90961b37d1558314c971f67ea4bf4a"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_instrumentation.patch",
+      "bytes": 788,
+      "sha256": "93db7db685c25074cbde8cfc97738264f895587a3beacc9bc12e143d01661abc"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_run_summary.json",
+      "bytes": 327,
+      "sha256": "38292edca5bd574855afa49849647ac1424f330953c827b0edf3b19b395c6f96"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_loader_validation.csv",
+      "bytes": 1568,
+      "sha256": "53a361862874fd0f5730183420a3b1ec95b07a63b07840cdaff4ca9770858368"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_loader_validation.json",
+      "bytes": 644,
+      "sha256": "b91c412a753dec4c79d74df72ee75322d4bb27e543115e382d7971f1b7d44f40"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/prepare_capture.py",
+      "bytes": 6867,
+      "sha256": "2ae2ab13e72c9080408c5bdc7f37be9c7b38dd803b85dbef4bd3bc82d12ada6d"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/capture_full_stages.m",
+      "bytes": 5375,
+      "sha256": "aee80f7a736b71a4b56267140bbc501676afdec6acdf9b9b5543ee58fb3f6425"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/validate_full_loader.m",
+      "bytes": 4020,
+      "sha256": "63d8dea104f4a3de96cbb3b2bc1ab1af4aa3b55ad527935407eb6f28ba6e9280"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2019_full_dc.m",
+      "bytes": 2604,
+      "sha256": "57a4538c19fbc80c9333a548c22d53c33d61970a8bb115664d7e44c4ccd70bf9"
+    }
+  ]
+}

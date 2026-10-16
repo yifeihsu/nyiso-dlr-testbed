@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "fresh_rebuild_path": "tmp/nygrid_slim_rebuild_3c00c77d35",
+  "network_payload_exact": true,
+  "canonical_network_file_not_replaced": true,
+  "network_sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58",
+  "source_manifest_hashes_all_valid": true,
+  "checks": [
+    {
+      "artifact": "network_cases.mat",
+      "method": "recursive_exact_all_saved_payload_fields_MAT_header_ignored",
+      "passed": true
+    },
+    {
+      "artifact": "branch_register.csv",
+      "method": "byte_exact_or_new_derivative_generated_by_final_builder",
+      "passed": true
+    },
+    {
+      "artifact": "bus_register.csv",
+      "method": "byte_exact_or_new_derivative_generated_by_final_builder",
+      "passed": true
+    },
+    {
+      "artifact": "construction_checks.csv",
+      "method": "byte_exact_or_new_derivative_generated_by_final_builder",
+      "passed": true
+    },
+    {
+      "artifact": "eliminated_bus_register.csv",
+      "method": "byte_exact_or_new_derivative_generated_by_final_builder",
+      "passed": true
+    },
+    {
+      "artifact": "eliminated_component_register.csv",
+      "method": "byte_exact_or_new_derivative_generated_by_final_builder",
+      "passed": true
+    },
+    {
+      "artifact": "equivalent_contribution_register.csv",
+      "method": "byte_exact_or_new_derivative_generated_by_final_builder",
+      "passed": true
+    },
+    {
+      "artifact": "retained_station_rationale.csv",
+      "method": "byte_exact_or_new_derivative_generated_by_final_builder",
+      "passed": true
+    },
+    {
+      "artifact": "source_manifest.csv",
+      "method": "byte_exact_or_new_derivative_generated_by_final_builder",
+      "passed": true
+    }
+  ],
+  "focused_tests_passed": 7,
+  "python": "3.13.7",
+  "numpy": "1.26.4",
+  "scipy": "1.15.2"
+}

@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "fresh_MATPOWER_snapshots": 82,
+  "scenarios": 16,
+  "predetermined_state_and_season_hours": true,
+  "internal_observation_selected_hours": false,
+  "maximum_branch_error_model_mw": 1.6854073692229576E-11,
+  "maximum_interface_error_model_mw": 1.9554136088117957E-11,
+  "maximum_generation_error_model_mw": 1.2168044349891716E-11,
+  "maximum_six_transfer_error_model_mw": 0,
+  "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+  "MATPOWER_solver": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\rundcpf.m",
+  "dependencies": [
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_counterfactuals\\replay\\matlab_fixtures.mat",
+      "sha256": "0f68e316c21a4a0b8a88fc153686efae64567c5aaf44e9db25f1d5789db841d1"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_counterfactuals\\replay\\replay_receipt.json",
+      "sha256": "65fd2fe1ebc9384e85e3dbb5195d6a0e8dfe0d880d1bfaa952dba5ff0115d4c2"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_western_corrected_dc.m",
+      "sha256": "6cf89f6076f2fa9e9c81e0d4da92d4a6bd930f99b644c2690c4ba9b63491ce01"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_slim_interfaces.m",
+      "sha256": "c43fe312eda58b0a439d426a5eb05238a08115f07f6b7456b2a0e458cade2845"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_western_counterfactuals\\validate_matlab_counterfactuals.m",
+      "sha256": "701f59069b6faa8349667df70d21f8883c65b1ab5e424e886c8dea1ec53ed31f"
+    }
+  ]
+}

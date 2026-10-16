@@ -1,0 +1,322 @@
+{
+  "passed": true,
+  "validation_gates": 188,
+  "annual_hours": 8760,
+  "matched_matrix_rows": 30,
+  "allocation_ablation_rows": 25,
+  "selected_candidate_count": 6,
+  "selected_quality_hour_count": 21,
+  "source_hashes_checked": 69,
+  "July3_minimax": {
+    "timestamp": "2019-07-03 04:00:00",
+    "pooled_error_pct": 3.278728917322877,
+    "worst_interface_error_pct": 4.851828603526109,
+    "wrong_direction_interfaces": 0
+  },
+  "annual_metrics": [
+    {
+      "experiment": "reference_NY46__paper_roles",
+      "pooled_error_pct": 11.218076930625259,
+      "wrong_direction_count": 1092
+    },
+    {
+      "experiment": "compact51__paper_roles",
+      "pooled_error_pct": 17.382508250283916,
+      "wrong_direction_count": 1092
+    },
+    {
+      "experiment": "compact51__current_roles",
+      "pooled_error_pct": 19.072096095592318,
+      "wrong_direction_count": 1090
+    },
+    {
+      "experiment": "compact51_marcy__paper_roles",
+      "pooled_error_pct": 12.31721500207545,
+      "wrong_direction_count": 1092
+    },
+    {
+      "experiment": "compact51_marcy__current_roles",
+      "pooled_error_pct": 19.670485236703183,
+      "wrong_direction_count": 1090
+    }
+  ],
+  "monthly_improvement_count": 12,
+  "zero_observation_counts": {
+    "Dysinger East": 0,
+    "West Central": 0,
+    "Total East": 0,
+    "Moses South": 0,
+    "Central East": 0,
+    "UpNY-Coned": 0,
+    "Dun/SPR-South": 0
+  },
+  "selected_hour_quality": [
+    {
+      "timestamp": "2019-01-08 15:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-02-01 15:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-03-02 08:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-03-02 14:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-03-02 15:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-03-02 16:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-03-21 14:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-05-21 14:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-05-21 16:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-05-21 20:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-05-30 09:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-06-30 01:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-07-03 04:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-07-22 04:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-07-25 03:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-09-02 13:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-09-06 02:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-09-06 03:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-09-08 05:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-10-10 16:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    },
+    {
+      "timestamp": "2019-10-30 12:00:00",
+      "interfaces": 7,
+      "imputed_interface_observations": 0,
+      "ambiguous_interface_observations": 0,
+      "minimum_sample_count": 12,
+      "minimum_distinct_timestamp_count": 12,
+      "all_exactly_12_unique_samples": true
+    }
+  ],
+  "matpower_replay": [
+    {
+      "timestamp": "2019-09-06 02:00:00",
+      "pf_success": 1,
+      "branch_rows": 94,
+      "row_identity_preserved": 1,
+      "max_branch_error_mw": 9.539036227579339e-13,
+      "max_interface_error_mw": 1.59161572810262e-12,
+      "max_angle_error_deg": 5.32907051820075e-14,
+      "virtual_balance_pg_mw": 2.3980817331903397e-12
+    },
+    {
+      "timestamp": "2019-09-08 05:00:00",
+      "pf_success": 1,
+      "branch_rows": 94,
+      "row_identity_preserved": 1,
+      "max_branch_error_mw": 1.36424205265939e-12,
+      "max_interface_error_mw": 2.72848410531878e-12,
+      "max_angle_error_deg": 5.6843418860808e-14,
+      "virtual_balance_pg_mw": 8.88178419700125e-13
+    },
+    {
+      "timestamp": "2019-09-06 03:00:00",
+      "pf_success": 1,
+      "branch_rows": 94,
+      "row_identity_preserved": 1,
+      "max_branch_error_mw": 1.4139800441625998e-12,
+      "max_interface_error_mw": 2.50111042987555e-12,
+      "max_angle_error_deg": 5.6843418860808e-14,
+      "virtual_balance_pg_mw": 1.5099033134902099e-12
+    },
+    {
+      "timestamp": "2019-07-03 04:00:00",
+      "pf_success": 1,
+      "branch_rows": 94,
+      "row_identity_preserved": 1,
+      "max_branch_error_mw": 1.6697754290362399e-12,
+      "max_interface_error_mw": 2.2737367544323198e-12,
+      "max_angle_error_deg": 6.3948846218409e-14,
+      "virtual_balance_pg_mw": 5.32907051820075e-13
+    },
+    {
+      "timestamp": "2019-07-22 04:00:00",
+      "pf_success": 1,
+      "branch_rows": 94,
+      "row_identity_preserved": 1,
+      "max_branch_error_mw": 2.07833750209829e-12,
+      "max_interface_error_mw": 2.95585778076202e-12,
+      "max_angle_error_deg": 7.105427357600999e-14,
+      "virtual_balance_pg_mw": 1.7763568394002499e-12
+    },
+    {
+      "timestamp": "2019-01-08 15:00:00",
+      "pf_success": 1,
+      "branch_rows": 94,
+      "row_identity_preserved": 1,
+      "max_branch_error_mw": 2.1174173525650998e-12,
+      "max_interface_error_mw": 2.50111042987555e-12,
+      "max_angle_error_deg": 6.3948846218409e-14,
+      "virtual_balance_pg_mw": 2.04281036531029e-12
+    }
+  ],
+  "no_internal_interface_input_fitting": true,
+  "untouched_holdout": false,
+  "all_source_allocation_truth_established": false,
+  "AC_feasibility_established": false,
+  "thermal_validation_established": false,
+  "interpretation_limits": [
+    "The seven scored interfaces overlap; pooled WAPE is a pooled comparison error, not independent statewide energy error.",
+    "All rankings are retrospective selections from 8760 already examined hours; there is no untouched holdout.",
+    "Paper allocation roles and compact physical-zone roles define different measurement operators; matching names do not prove identical physical membership.",
+    "Kron bus9003 maps one-half to78 and one-half to80 as exact DC injection equivalence conditioned on compact topology, not measured generation or a physical site crosswalk.",
+    "The load-placement ablation changes the zonal role crosswalk and within-zone weights jointly; hydro combines current zonal priors with generic capacity weighting.",
+    "NYgrid native solved generation includes source slack; fixed NY boundary injections are model-derived, not measured individual tie telemetry.",
+    "The Marcy variant adds two source reactances for DC diagnosis; its AC resistance/charging/ratings and upgrade disposition are not established.",
+    "Source-hour quality pertains to interface sampling, not independently observed nodal generation.",
+    "Paper-style signed errors use placeholder limit values for some channels and are not physical thermal-rating error measures."
+  ]
+}

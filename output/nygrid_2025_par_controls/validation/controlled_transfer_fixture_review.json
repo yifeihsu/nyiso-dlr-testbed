@@ -1,0 +1,189 @@
+{
+  "status": "passed_bounded_transfer_fixtures",
+  "checked_utc": "2026-10-11T14:01:34.438093+00:00",
+  "checks": 44,
+  "tests": [
+    {
+      "check": "positive_over_limit",
+      "passed": true
+    },
+    {
+      "check": "negative_over_limit",
+      "passed": true
+    },
+    {
+      "check": "opposite_sign_cancellation",
+      "passed": true
+    },
+    {
+      "check": "NaN_target",
+      "passed": true
+    },
+    {
+      "check": "infinite_target",
+      "passed": true
+    },
+    {
+      "check": "one_device",
+      "passed": true
+    },
+    {
+      "check": "three_devices",
+      "passed": true
+    },
+    {
+      "check": "infinite_limit",
+      "passed": true
+    },
+    {
+      "check": "NaN_limit",
+      "passed": true
+    },
+    {
+      "check": "negative_limit",
+      "passed": true
+    },
+    {
+      "check": "zero_limit",
+      "passed": true
+    },
+    {
+      "check": "accepted_target_[90.03622552585661, 90.03622552585661]",
+      "passed": true
+    },
+    {
+      "check": "four_original_DC_unchanged",
+      "passed": true
+    },
+    {
+      "check": "two_ideal_ports_positive_Ontario_to_NY",
+      "passed": true
+    },
+    {
+      "check": "new_port_fixed_signed_PF_PT_PMIN_PMAX",
+      "passed": true
+    },
+    {
+      "check": "only_passive_record_status_substituted",
+      "passed": true
+    },
+    {
+      "check": "no_phase_invented",
+      "passed": true
+    },
+    {
+      "check": "only_confirmed_generator_terminals_changed",
+      "passed": true
+    },
+    {
+      "check": "original_case_not_mutated",
+      "passed": true
+    },
+    {
+      "check": "accepted_target_[-90.03622552585661, -90.03622552585661]",
+      "passed": true
+    },
+    {
+      "check": "four_original_DC_unchanged",
+      "passed": true
+    },
+    {
+      "check": "two_ideal_ports_positive_Ontario_to_NY",
+      "passed": true
+    },
+    {
+      "check": "new_port_fixed_signed_PF_PT_PMIN_PMAX",
+      "passed": true
+    },
+    {
+      "check": "only_passive_record_status_substituted",
+      "passed": true
+    },
+    {
+      "check": "no_phase_invented",
+      "passed": true
+    },
+    {
+      "check": "only_confirmed_generator_terminals_changed",
+      "passed": true
+    },
+    {
+      "check": "original_case_not_mutated",
+      "passed": true
+    },
+    {
+      "check": "accepted_target_[0.0, 0.0]",
+      "passed": true
+    },
+    {
+      "check": "four_original_DC_unchanged",
+      "passed": true
+    },
+    {
+      "check": "two_ideal_ports_positive_Ontario_to_NY",
+      "passed": true
+    },
+    {
+      "check": "new_port_fixed_signed_PF_PT_PMIN_PMAX",
+      "passed": true
+    },
+    {
+      "check": "only_passive_record_status_substituted",
+      "passed": true
+    },
+    {
+      "check": "no_phase_invented",
+      "passed": true
+    },
+    {
+      "check": "only_confirmed_generator_terminals_changed",
+      "passed": true
+    },
+    {
+      "check": "original_case_not_mutated",
+      "passed": true
+    },
+    {
+      "check": "accepted_target_[10.504226311349937, -12.605071573619925]",
+      "passed": true
+    },
+    {
+      "check": "four_original_DC_unchanged",
+      "passed": true
+    },
+    {
+      "check": "two_ideal_ports_positive_Ontario_to_NY",
+      "passed": true
+    },
+    {
+      "check": "new_port_fixed_signed_PF_PT_PMIN_PMAX",
+      "passed": true
+    },
+    {
+      "check": "only_passive_record_status_substituted",
+      "passed": true
+    },
+    {
+      "check": "no_phase_invented",
+      "passed": true
+    },
+    {
+      "check": "only_confirmed_generator_terminals_changed",
+      "passed": true
+    },
+    {
+      "check": "original_case_not_mutated",
+      "passed": true
+    },
+    {
+      "check": "public_target_mask_rejects_each_bad_device",
+      "passed": true
+    }
+  ],
+  "helper_sha256": "c8440375fed95c88915e2df45f44c8db4b60982048b2875119ba8ae88f2eba91",
+  "helper_path": "scripts/nygrid_2025_par_controls/controlled_equivalent.py",
+  "full_physical_PAR_feasibility_claimed": false,
+  "notes": [
+    "make_controlled_case correctly rejects nonfinite/nonpositive limits; qualification helper hardening separately reported to root."
+  ]
+}

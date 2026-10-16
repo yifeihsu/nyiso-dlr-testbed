@@ -1,0 +1,34 @@
+{
+  "verified_utc": "2026-10-07T05:25:41.176965+00:00",
+  "passed": true,
+  "scope": "documented separate-folder pipeline rebuilt source captures, annual states, register, MATLAB loader checks, thermal scenarios and final receipts",
+  "rebuild_directory": "tmp\\nygrid_full_rebuild_check",
+  "annual_numeric_array_max_differences": {
+    "bus_pd": 0.0,
+    "bus_qd": 0.0,
+    "input_pg": 0.0,
+    "result_pg": 0.0,
+    "gen_pmax": 0.0,
+    "dc_pf": 0.0,
+    "branch_pf": 0.0,
+    "bus_va": 0.0,
+    "pre_hvdc_branch_pf": 0.0,
+    "pre_hvdc_bus_va": 0.0,
+    "pre_hvdc_result_pg": 0.0,
+    "interface_mw": 0.0,
+    "pre_hvdc_interface_mw": 0.0,
+    "gross_ny_load_mw": 0.0
+  },
+  "thermal_csvs_identical": true,
+  "original_full_year_sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0",
+  "fresh_rebuild_final_checks": {
+    "verified_utc": "2026-10-07T05:25:28.252091+00:00",
+    "passed": true,
+    "input_and_component_manifest_entries_verified": 116,
+    "independent_thermal_exposure_recounts": 4,
+    "annual_hours": 8760,
+    "synthetic_branches": 39,
+    "physical_DLR_qualified": false,
+    "full_vs_reduced_exact_equivalence": false
+  }
+}

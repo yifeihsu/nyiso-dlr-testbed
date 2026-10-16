@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "source_path": "NYGRID_2025_PHYSICAL_REPAIR.md",
+  "source_sha256": "c072005540da7468f4c1caa0ebfef72e8600587ad46e2426244f8a176c9a0907",
+  "portable_path": "NYGRID_2025_PHYSICAL_REPAIR.md",
+  "portable_sha256": "b8c31aadde7c9cc37a76610719b5d8aff8258ba9e441d517338387f6dc5c9e60",
+  "changes": "Only relative package paths and the linked setup-instruction label are adapted; scientific prose and numerical content are unchanged.",
+  "replacements": {
+    "output/nygrid_2025_physical_repair/summary/physical_repair_comparison.png": "analysis/physical_repair_comparison.png",
+    "output/nygrid_2025_physical_repair/annual/physical_repair_v1/annual_receipt.json": "verification/annual_receipt.json",
+    "output/nygrid_2025_physical_repair/annual/physical_repair_v1/validation/annual_input_accounting_review.json": "verification/annual_input_accounting_review.json",
+    "output/nygrid_2025_physical_repair/independent/annual_physics_review.json": "verification/annual_physics_review.json",
+    "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/scoring_receipt.json": "verification/scoring_receipt.json",
+    "output/nygrid_2025_physical_repair/independent/target_parent_metrics.csv": "analysis/target_parent_metrics.csv",
+    "[Reproduction instructions](scripts/nygrid_2025_physical_repair/README.md)": "[Portable setup and run instructions](START_HERE.md)"
+  }
+}

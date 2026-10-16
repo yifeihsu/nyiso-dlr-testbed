@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T06:06:03.889844+00:00",
+  "qualified_cases": 30,
+  "rejected_cases": 0,
+  "same_previously_verified_15_calendar_hours": true,
+  "target_generator_rows_1based": [
+    1458,
+    1460
+  ],
+  "minimum_original_finite_P_bound_margin_model_MW": 187.13199755226833,
+  "minimum_recomputed_target_Q_cap_model_MVAr": 1163.4422767909539,
+  "changed_generator_status_or_PV_bus_required": false,
+  "maximum_independent_PJM_P_conservation_error_model_MW": 0.0,
+  "maximum_independent_score_difference_MW": 5.684341886080802e-14,
+  "mean_responses_public_MW": {
+    "pjm_130_to134_100MW": {
+      "DYSINGER EAST": -0.0033464824978980067,
+      "WEST CENTRAL": -0.029769854920245583,
+      "TOTAL EAST": 18.663209714951,
+      "MOSES SOUTH": 0.004528254564299061,
+      "CENTRAL EAST - VC": 10.313104018099937,
+      "UPNY CONED": 0.014677618717360019,
+      "SPR/DUN-SOUTH": 1.0818878763529938e-06
+    },
+    "pjm_134_to130_100MW": {
+      "DYSINGER EAST": 0.003402227351594788,
+      "WEST CENTRAL": 0.03001723032005472,
+      "TOTAL EAST": -18.647945310045635,
+      "MOSES SOUTH": -0.004510635703721277,
+      "CENTRAL EAST - VC": -10.307810006073593,
+      "UPNY CONED": -0.014635563335226228,
+      "SPR/DUN-SOUTH": -1.092215522173016e-06
+    }
+  },
+  "maximum_response_outside_TotalEast_CentralEast_public_MW": 0.06392411393539987,
+  "unused_result_field": "maximum_flow_response_public_MW remains NaN; response is independently derived from saved current primary baseline.",
+  "source_hashes_unchanged": true,
+  "new_PF_run": false,
+  "limitations": [
+    "The30cases establish local model sensitivity, not the historical correctness of a PJM allocation.",
+    "The\u00b1100publicMW redistribution is an analyst-selected finite-bound perturbation; no source-supported hourly allocation is inferred.",
+    "No annual error improvement, physical meter certification or full operating qualification is established.",
+    "Supplement reruns retain the existing frozen plan after a timestamp-independent equality check."
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/pjm_partition_results.csv",
+      "sha256": "10c95794913961a666ed56c404bf3d229d6749cf2d5d60734e48fcb791fe57e2"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/pjm_partition_plan.json",
+      "sha256": "df2fd98bac42f3b18cc0d3171b9033d587c235ab62657053427f5b82966eafa9"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/pjm_partition_responses.csv",
+      "sha256": "d7afd02e09b00ef5dba72a0e1f94fed137526f1b045af151bea40a319a53e287"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/pjm_partition_receipt.json",
+      "sha256": "8ae94bf67dabc6a8f4b0c919a9f85ac9ab92ce3d71b07770bf1a4a5c7091d8c3"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_plan.json",
+      "sha256": "1b9af6b5e17a4c7ed267e0f458ec4a31149bd4775f4d85be2c3d5167c6246b2a"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_inputs.mat",
+      "sha256": "cad92dfc0468fe534669896bbac708be4db35a05498cf95a535b36bd1a7e4523"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/run_pjm_partition_probe.m",
+      "sha256": "b358b501ee4fcff65d204c4ae51d927bca899bc19fdee2befb0df14789de6780"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/score_pjm_partition.py",
+      "sha256": "97afd164627d85300e5e8c59e2616b83644541f3f250f0c95a25f84ca201af37"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/independent_probe_review.json",
+      "sha256": "582ab455c470e7a020cbf2c298e793d593f7aa11e67c7a00ee009819d8d899fd"
+    }
+  ],
+  "producer": {
+    "path": "scripts/nygrid_2025_remaining_errors/baseline/review_pjm_partition.py",
+    "sha256": "b18184686f4f20542ccbb8c1fcb5f2cf139ed8528e017a96680973eb3c169a2a"
+  }
+}

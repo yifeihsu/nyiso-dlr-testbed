@@ -1,0 +1,55 @@
+{
+  "full_buses": 140,
+  "raw_source_ac_branches": 227,
+  "full_ac_branches": 225,
+  "full_dc_links": 4,
+  "current_device_register_rows": 229,
+  "source_lineage_rows": 229,
+  "reduced_device_crosswalk_rows": 98,
+  "reduced_ac_rows_with_full_DC_template_match": 78,
+  "structural_thermal_candidates_only": 39,
+  "real_DLR_eligible_rows": 0,
+  "candidates_by_kv": {
+    "345.0": 14,
+    "230.0": 10,
+    "115.0": 15
+  },
+  "rate_a_unconstrained_candidate_rows": 39,
+  "thermal_parameters_assigned": false,
+  "weather_assigned": false,
+  "coordinates_interpretation": "npcc.csv bus metadata only; not surveyed routes or line directions",
+  "parallel_identity_policy": "canonical_endpoint_pair_and_ordinal_in_raw_source_order; no physical circuit IDs supplied",
+  "reduced_crosswalk_scope": "DC electrical templates only; no claim that reduced R/B or equivalents are physical overhead lines",
+  "source_count_discrepancy": {
+    "paper_reported_original_npcc_branches": 233,
+    "released_raw_npcc_mat_branches": 227,
+    "released_raw_minus_paper": -6,
+    "unresolved_count_difference": 6,
+    "explanation_status": "unresolved_source_version_difference_no_missing_branches_invented",
+    "raw_branch_sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb",
+    "released_modifyMPC_deleted_raw_rows": [
+      99,
+      103,
+      110
+    ],
+    "released_modifyMPC_added_aggregate_endpoints": [
+      [
+        38,
+        77
+      ],
+      [
+        43,
+        38
+      ]
+    ],
+    "modified_full_pre_hvdc_branches": 226,
+    "final_full_ac_branches": 225,
+    "final_full_dc_links": 4,
+    "final_reduced_ac_branches": 94,
+    "final_reduced_dc_links": 4,
+    "removed_full_pre_hvdc_branch_rows_for_DC_stage": [
+      96
+    ],
+    "arithmetic": "227 - 3 remote ties + 2 aggregate AC rows - 1 AC-to-DC-stage deletion = 225 final full AC rows; 4 DC links are separate"
+  }
+}

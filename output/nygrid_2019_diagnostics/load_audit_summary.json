@@ -1,0 +1,96 @@
+{
+  "scope": "2019 official NYISO palIntegrated load source-preparation reproduction; no bus-level demand or electrical-flow validation",
+  "official_archive_index": "https://mis.nyiso.com/public/P-58Clist.htm",
+  "started_utc": "2026-10-10T03:19:38.306386+00:00",
+  "completed_utc": "2026-10-10T03:19:48.804478+00:00",
+  "status": "reproduced",
+  "official_monthly_archives": 12,
+  "daily_csv_members": 365,
+  "raw_rows": 96360,
+  "raw_timezone_row_counts": {
+    "EDT": 62821,
+    "EST": 33539
+  },
+  "unique_raw_timestamp_zone_keys": 96349,
+  "diagnostic_unique_utc_timestamp_zone_keys": 96360,
+  "diagnostic_utc_timestamp_range": [
+    "2019-01-01 05:00:00",
+    "2020-01-01 04:00:00"
+  ],
+  "duplicate_timestamp_zone_groups": 11,
+  "duplicate_raw_rows_in_groups": 22,
+  "conflicting_duplicate_groups": 11,
+  "non_fall_dst_duplicate_groups": 0,
+  "raw_missing_load_values": 0,
+  "raw_negative_load_values": 0,
+  "prepared_hour_zone_keys": 96360,
+  "nominal_local_hours": 8760,
+  "zones": 11,
+  "interpolated_hour_zone_keys": 11,
+  "imputed_hour_labels": [
+    "2019-03-10 02:00:00"
+  ],
+  "fall_dst_ambiguous_hour_zone_keys": 11,
+  "csv_comparison": {
+    "rows": 96360,
+    "matched_keys": 96360,
+    "missing_published_keys": 0,
+    "missing_reconstructed_keys": 0,
+    "rows_above_tolerance_or_missing": 0,
+    "max_absolute_difference_mw": 2.2737367544323206e-13,
+    "mae_mw": 8.848601939727275e-18,
+    "rmse_mw": 1.228395033845964e-15,
+    "reproduced_within_tolerance": true,
+    "tolerance_mw": 1e-08
+  },
+  "mat_comparison": {
+    "rows": 96360,
+    "matched_keys": 96360,
+    "missing_published_keys": 0,
+    "missing_reconstructed_keys": 0,
+    "rows_above_tolerance_or_missing": 0,
+    "max_absolute_difference_mw": 2.2737367544323206e-13,
+    "mae_mw": 8.848601939727275e-18,
+    "rmse_mw": 1.228395033845964e-15,
+    "reproduced_within_tolerance": true,
+    "tolerance_mw": 1e-08
+  },
+  "max_actual_mat_vs_csv_difference_mw": 0.0,
+  "archive_acquisition_counts": {
+    "fresh_official_download": 12
+  },
+  "archive_access_this_run_counts": {
+    "verified_existing_receipt": 12
+  },
+  "first_archive_retrieved_utc": "2026-10-10T03:16:02.175207+00:00",
+  "last_archive_retrieved_utc": "2026-10-10T03:18:10.563657+00:00",
+  "matlab_export": {
+    "source_mat": "tmp/nygrid_2019_reproduction/upstream/Data/loadHourly_2019.mat",
+    "source_sha256": "eb27dd628f67ae4ef79ff7f2a7b790920a07b3c446e2393daa0121cc08e6f02a",
+    "export": "output/nygrid_2019_diagnostics/load_audit_mat_export.csv",
+    "export_sha256": "677ce71d73fc800b3b938a75b9f7797e4a3f8a97e992518d0d1f8f5f3bf96f62",
+    "export_script": "tmp/nygrid_2019_diagnostics/export_released_load.m",
+    "export_script_sha256": "4613e48423848f631b818baa0e1cf897370bbc668ed5c612ffa3eb8cc15e07e8",
+    "exported_utc": "2026-10-10T03:19:42.359815+00:00",
+    "rows": 96360,
+    "matlab_version": "26.1.0.3276743 (R2026a) Update 3",
+    "linear_endpoint_extrapolation_passed": true,
+    "duplicate_sample_mean_passed": true
+  },
+  "algorithm": {
+    "timestamps": "timezone-naive published local labels; EST/EDT retained separately for diagnosis",
+    "hourly_aggregation": "left-closed hourly arithmetic mean of every raw sample, without deduplication or time weighting",
+    "missing_values": "linear interpolation with linear endpoint extrapolation, matching MATLAB fillmissing defaults",
+    "comparison": "no timestamp shifts, scale changes, or data alterations to force a match"
+  },
+  "limits": [
+    "Current archive bytes describe historical 2019 loads; download freshness does not establish the original publication version",
+    "Matching zonal source inputs is not independent validation of within-zone bus allocation",
+    "The released naive chronology combines the autumn repeated local hour and interpolates missing bins, including spring DST"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "pandas": "2.2.3",
+    "numpy": "1.26.4"
+  }
+}

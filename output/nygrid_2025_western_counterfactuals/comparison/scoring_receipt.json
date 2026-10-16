@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "scenarios": 19,
+  "fixed_hours": 8651,
+  "annual_rows": 133,
+  "monthly_rows": 1596,
+  "internal_observations_posthoc_only": true,
+  "no_infeasible_literal_hypothesis_scored": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/replay_receipt.json",
+      "sha256": "65fd2fe1ebc9384e85e3dbb5195d6a0e8dfe0d880d1bfaa952dba5ff0115d4c2"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/operator_replay_receipt.json",
+      "sha256": "5f30b51add3cf35a25ec48fb037c3e1a58b0246c0eed6f46687195e6665c457a"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/run_experiments.py",
+      "sha256": "5c62bfc2312b0033491e9709aa19c330d83ff663523dcdfdf52be202ffe8e528"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/comparison/annual_metrics.csv",
+      "sha256": "843eab724ecb57a4ae79bb011bfb0c62037437536e0666a80590cbce63666cb2"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/comparison/monthly_metrics.csv",
+      "sha256": "e9e59c196e1dfb36d31f57c392b573a81f4cb01f8e480fde94af29e4f43fcac6"
+    }
+  ]
+}

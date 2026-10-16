@@ -1,0 +1,142 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T15:01:55.594727+00:00",
+  "scope": "Final exact-ZIP independent clean extraction, public MATLAB smoke, standalone integrity verification and dependency-path proof",
+  "archive_sha256": "b349bfc5587162fd8d945dd0e81485ed6748c205d432f4ce93e2ad42e2732f6a",
+  "archive_bytes": 111481630,
+  "archive_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\deliverables\\nygrid_2025_latest_model_20261013\\nygrid_latest_model_20261013.zip",
+  "source_model_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+  "package_file_count": 668,
+  "payload_file_count": 666,
+  "payload_bytes": 116093501,
+  "vendor_file_count": 609,
+  "current_model_data_file_count": 3,
+  "model_variants": 1,
+  "effective_date_states": 4,
+  "historical_content_findings": [],
+  "old_runtime_reference_findings": [],
+  "clean_extraction": {
+    "root": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_latest_independent_i5bp6nx1\\package",
+    "outside_source_checkout": true,
+    "under_OS_temporary_root": true,
+    "git_ancestors": [],
+    "preexisting_artifacts_overwritten": false,
+    "all_archive_bytes_verified": true
+  },
+  "standalone_verifier": {
+    "passed": true,
+    "kind": "latest_model_only",
+    "files": 666,
+    "bytes": 116093501,
+    "source_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+    "checksum_table_and_manifest_digest_verified": true
+  },
+  "MATLAB_process": {
+    "fresh_process": true,
+    "working_directory": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_latest_independent_i5bp6nx1\\package",
+    "executable": "C:/Program Files/MATLAB/R2026a/bin/matlab.exe",
+    "batch_command": "restoredefaultpath; clear functions; addpath(fullfile(pwd,'runtime')); check=smoke_nygrid_latest('<fresh temporary smoke directory>'); assert(check.passed);",
+    "exit_code": 0,
+    "runtime_smoke_checks": 20,
+    "loaded_hours": [
+      523,
+      3360,
+      4000,
+      8508
+    ],
+    "fresh_PF_hours": [
+      8508
+    ],
+    "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+    "license_features_in_use": {
+      "feature": "matlab",
+      "user": ""
+    }
+  },
+  "dependency_proof": {
+    "executed_file_counts_by_scope": {
+      "current_runtime": 27,
+      "selected_vendor": 67,
+      "MATLAB_distribution": 170
+    },
+    "unapproved_files": [],
+    "unapproved_search_paths": [],
+    "original_checkout_used_by_runtime": false,
+    "bundled_vendor_used": true
+  },
+  "fresh_numerical_results": {
+    "independent_detailed_voltage_error_pu": 1.0105514471030439e-12,
+    "independent_KCL_error_MW_MVAr": 1.850821718107909e-10,
+    "maximum_Joule_identity_error_MW": 4.655632173181101e-11,
+    "maximum_terminal_current_identity_error_A": 1.13473674900888e-10,
+    "thermal_candidate_parent_count": 180,
+    "thermal_candidate_segment_count": 253,
+    "maximum_series_utilization": 1.4790761974014723,
+    "VQ_operating_gate": false
+  },
+  "all_sealed_package_files_unchanged_after_smoke": true,
+  "post_smoke_payload_hash_mismatches": [],
+  "fresh_annual_solution_replay_run": false,
+  "OPF_run": false,
+  "installed_asset_or_whole_system_operating_qualification_claimed": false,
+  "included_payload_source_files_modified_by_this_review": false,
+  "supporting_reviews": [
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\independent\\archive_inventory_review.json",
+      "bytes": 139171,
+      "sha256": "3e3474a0d41a37629a96a17d9da62f4507bd464b29274ba9d09937543a9854c8"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\independent\\current_data_review.json",
+      "bytes": 13948,
+      "sha256": "e75f567a27e3932f14c1452ce3feb45d86cb60cce71803e0ba25c4d8c5e493f4"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\independent\\kernel_source_review.json",
+      "bytes": 12261,
+      "sha256": "ca1da3dfd8a2845afc968e73064b4b2efe6b06eb17f5067e9193918109d57c0f"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\independent\\portable_evidence\\compact_numerical_witness.mat",
+      "bytes": 135246,
+      "sha256": "5c864c5cc1c0dbf9ff83303aa847ecb5cd7e9f71ec594d9b57b821170d9c88ab"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\independent\\portable_evidence\\loaded_function_dependencies.csv",
+      "bytes": 49638,
+      "sha256": "dde6889eff677f5c15b6a53b46208650fb231998f3bc41908ef284e436ee2209"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\independent\\portable_evidence\\matlab_smoke.log",
+      "bytes": 3505,
+      "sha256": "f53f87c2b8046eef1e3a61e365684964e8c87b15b8ecdc53351531f3bb642560"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\independent\\portable_evidence\\smoke_receipt.json",
+      "bytes": 129869,
+      "sha256": "c6bfedc6242dfa7b5230a779d37479627cca3f803021c675089709d018b934f9"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\independent\\portable_evidence\\smoke_tests.csv",
+      "bytes": 939,
+      "sha256": "cbeb35a5609d646fb17584638afa79a799a2ff0ff824894da050b34b04e93891"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\independent\\portable_evidence\\standalone_verifier_review.json",
+      "bytes": 767,
+      "sha256": "b76baa4708be0fbbf09089052d9c5a0dda312aa425e37693a1afe5540efb0bcd"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\independent\\portable_evidence\\thermal_branch_screen.csv",
+      "bytes": 57032,
+      "sha256": "faebcae146f7aa4c5fb2c4b93e9fd789f3bdc0e07655be423b6753c611956cb6"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\independent\\portable_evidence\\thermal_candidate_and_exclusion_ledger.csv",
+      "bytes": 157489,
+      "sha256": "10c23b85179f1a02940dbcfeb161b682a426c41895da58d71bbf95f0a59b98a3"
+    }
+  ]
+}

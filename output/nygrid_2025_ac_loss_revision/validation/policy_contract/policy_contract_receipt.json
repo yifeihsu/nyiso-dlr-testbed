@@ -1,0 +1,154 @@
+{
+  "completed": true,
+  "passed": true,
+  "checks": [
+    {
+      "name": "zero_budget_preserves_PD_QD_PG",
+      "passed": true,
+      "error_identifier": "",
+      "error_message": ""
+    },
+    {
+      "name": "NY_fraction_preserves_each_bus_power_factor",
+      "passed": true,
+      "error_identifier": "",
+      "error_message": ""
+    },
+    {
+      "name": "outside_delivered_load_and_native_HQ_profiles_preserved",
+      "passed": true,
+      "error_identifier": "",
+      "error_message": ""
+    },
+    {
+      "name": "network_and_six_DC_controls_preserved",
+      "passed": true,
+      "error_identifier": "",
+      "error_message": ""
+    },
+    {
+      "name": "passive_interiors_keep_zero_PQ",
+      "passed": true,
+      "error_identifier": "",
+      "error_message": ""
+    },
+    {
+      "name": "region12_single_saturation_exact_budget_and_independent_projection",
+      "passed": true,
+      "error_identifier": "",
+      "error_message": ""
+    },
+    {
+      "name": "region12_all_saturated_at_exact_capacity",
+      "passed": true,
+      "error_identifier": "",
+      "error_message": ""
+    },
+    {
+      "name": "region12_capacity_exhaustion_rejected",
+      "passed": true,
+      "error_identifier": "acLoss:ExternalCapacity",
+      "error_message": "Regional losses exceed finite original external capability."
+    },
+    {
+      "name": "region13_single_saturation_exact_budget_and_independent_projection",
+      "passed": true,
+      "error_identifier": "",
+      "error_message": ""
+    },
+    {
+      "name": "region13_all_saturated_at_exact_capacity",
+      "passed": true,
+      "error_identifier": "",
+      "error_message": ""
+    },
+    {
+      "name": "region13_capacity_exhaustion_rejected",
+      "passed": true,
+      "error_identifier": "acLoss:ExternalCapacity",
+      "error_message": "Regional losses exceed finite original external capability."
+    },
+    {
+      "name": "region14_single_saturation_exact_budget_and_independent_projection",
+      "passed": true,
+      "error_identifier": "",
+      "error_message": ""
+    },
+    {
+      "name": "region14_all_saturated_at_exact_capacity",
+      "passed": true,
+      "error_identifier": "",
+      "error_message": ""
+    },
+    {
+      "name": "region14_capacity_exhaustion_rejected",
+      "passed": true,
+      "error_identifier": "acLoss:ExternalCapacity",
+      "error_message": "Regional losses exceed finite original external capability."
+    },
+    {
+      "name": "nonpositive_NY_served_load_rejected",
+      "passed": true,
+      "error_identifier": "acLoss:NegativeServedDemand",
+      "error_message": "Allocated NY losses exhaust a zonal gross-load target."
+    },
+    {
+      "name": "negative_budget_rejected",
+      "passed": true,
+      "error_identifier": "MATLAB:assertion:failed",
+      "error_message": "Assertion failed."
+    },
+    {
+      "name": "nonfinite_budget_rejected",
+      "passed": true,
+      "error_identifier": "MATLAB:assertion:failed",
+      "error_message": "Assertion failed."
+    },
+    {
+      "name": "unowned_bus_conductance_rejected",
+      "passed": true,
+      "error_identifier": "acLoss:Conductance",
+      "error_message": "Add explicit ownership before modeling nonzero GS."
+    },
+    {
+      "name": "nonzero_DC_losses_rejected",
+      "passed": true,
+      "error_identifier": "acLoss:DCLoss",
+      "error_message": "Current policy requires zero modeled DC losses."
+    },
+    {
+      "name": "stale_network_operator_reuse_rejected",
+      "passed": true,
+      "error_identifier": "acLoss:ChangedNetwork",
+      "error_message": "Rebuild the reduction after changing network, status or voltage/transfer controls."
+    },
+    {
+      "name": "stale_VG_control_reuse_rejected",
+      "passed": true,
+      "error_identifier": "acLoss:ChangedNetwork",
+      "error_message": "Rebuild the reduction after changing network, status or voltage/transfer controls."
+    },
+    {
+      "name": "stale_DC_control_reuse_rejected",
+      "passed": true,
+      "error_identifier": "acLoss:ChangedNetwork",
+      "error_message": "Rebuild the reduction after changing network, status or voltage/transfer controls."
+    },
+    {
+      "name": "new_passive_interior_PQ_rejected",
+      "passed": true,
+      "error_identifier": "acLoss:InteriorInjection",
+      "error_message": "Rebuild and promote any newly loaded interior bus."
+    },
+    {
+      "name": "double_impedance_revision_rejected",
+      "passed": true,
+      "error_identifier": "acLoss:AlreadyApplied",
+      "error_message": "Use an unrevised source case."
+    }
+  ],
+  "count": 24,
+  "fixture_hour": 8508,
+  "synthetic_capacity_fixtures_are_tests_not_production_changes": true,
+  "annual_replay_run": false
+}

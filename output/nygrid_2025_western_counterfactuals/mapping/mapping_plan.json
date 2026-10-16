@@ -1,0 +1,240 @@
+{
+  "frozen_utc": "2026-10-12T01:49:13.437039+00:00",
+  "dataset_type": "operator",
+  "qualified_hours": 8651,
+  "source_only": true,
+  "internal_observation_files_read": false,
+  "operator_fit_to_internal_observations": false,
+  "scenarios": [
+    {
+      "name": "baseline_corrected_full191_operator",
+      "key": "baseline_corrected_full191_operator",
+      "dc_key": "baseline_corrected_full191_operator_dc",
+      "label": "Preferred baseline operator reconstructed on full191",
+      "is_diagnostic_only": false,
+      "source_basis": "Current recovery operator; Western rows exactly preserve corrected released2019 interface maps"
+    },
+    {
+      "name": "independent_zone_cuts",
+      "key": "independent_zone_cuts",
+      "dc_key": "independent_zone_cuts_dc",
+      "label": "Independent accounting-zone A/A+B cuts with external-border removal",
+      "is_diagnostic_only": true,
+      "source_basis": "Bus-zone membership plus complete active AC and6DC boundary enumeration; exact conservation null control"
+    },
+    {
+      "name": "literal_released_plot_negative_control",
+      "key": "literal_released_plot_negative_control",
+      "dc_key": "literal_released_plot_negative_control_dc",
+      "label": "Known-bug released Western plotting formulas; negative control",
+      "is_diagnostic_only": true,
+      "source_basis": "Original57-bus flow4Plot Western formulas remapped by unique exact electrical-row lineage; not a correction candidate"
+    }
+  ],
+  "only_first_two_rows_changed": true,
+  "retained_other_five_rows": "Current baseline, including refined downstate definitions; not stale2019downstate formulas",
+  "branch_axis": "full191 current410branchorder",
+  "DC_axis": "original4DC_then_P34_25118_25119",
+  "operator_shape": [
+    7,
+    410
+  ],
+  "DC_operator_shape": [
+    7,
+    6
+  ],
+  "topology_states": [
+    "refined_2025_pre_may_case",
+    "refined_2025_may21_case",
+    "refined_2025_may30_case",
+    "refined_2025_case"
+  ],
+  "operators_state_invariant": true,
+  "cut_formula": "interface = raw native-zone outward AC/DC cut minus explicitly external outward AC/DC part; all6DCterms carried even whenzero",
+  "physical_mapping": {
+    "official2019_Dysinger_member_entries": 10,
+    "dated2014_WestCentral_member_entries": 14,
+    "certified_complete_full191_physical_alternatives": 0,
+    "exactly_crosswalked_physical_member_entries": 0,
+    "unexecutable_physical_scenarios": [
+      {
+        "name": "physical2019_Dysinger",
+        "reason": "No complete circuit/terminal lineage into aggregate full191 network"
+      },
+      {
+        "name": "physical2014_WestCentral",
+        "reason": "Historical fourteen source entries include compound low-voltage terms with missing retained circuits and some unspecified meter terminals"
+      },
+      {
+        "name": "physical2025_western_gates",
+        "reason": "Complete2025 as-built member/terminal definitions and exact lineage are not established"
+      }
+    ],
+    "missing_evidence": [
+      "Circuit/PTID plus meter-terminal orientation mapped to each retained or recovered branch",
+      "Treatment of compound/low-voltage physical members and shared A-C paths",
+      "Complete2025 membership including any post2019 station/PAR reconfiguration"
+    ],
+    "no_guessed_alias_or_zero_filled_operator": true,
+    "scope": "No executable physical alternative is emitted; zero certified coverage means unknown mapping, not zero physical flow."
+  },
+  "primary_sources": [
+    {
+      "name": "2019_Dysinger",
+      "pdf_path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.pdf",
+      "pdf_sha256": "5a08d0c8501df096806506df79fb1b8ded77e6da8c4fe9c82ef405a71c3cf140",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.txt",
+      "source_url": "https://www.nyiso.com/documents/20142/3691300/Summer2019-Operating-Study-Appendices-OC-Approved.pdf/7923fe3b-579b-a48d-bda8-8063b309dc08",
+      "examined_page": 44
+    },
+    {
+      "name": "2014_WestCentral",
+      "pdf_path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.pdf",
+      "pdf_sha256": "094f26c8b268b432567cf5a4b62f3b8699f53d3220e7180971dc595b6ad5d7be",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.txt",
+      "source_url": "https://www.nyiso.com/documents/20142/1394656/DE_WC_Stability_Limit_Report_final-3.pdf/b461b192-f51d-7bf7-340e-d424b60c84fa",
+      "examined_page": 6
+    },
+    {
+      "name": "undated_planning",
+      "pdf_path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.pdf",
+      "pdf_sha256": "87cf3ecaa2b80c8851b79951437e190a0e0eb2aba542cc028ce5351831bdc5f7",
+      "text_path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.txt",
+      "source_url": "https://www.nyiso.com/documents/20142/1410707/CRPP_Appendix_5.1_Interface_Definitions.pdf/6bd50d60-bfd2-4572-31bf-634fbb6c8ddf",
+      "examined_page": 2
+    }
+  ],
+  "forbidden": [
+    "No observed interface inputs",
+    "No tuning signs/scales/memberweights",
+    "No guessed alias or zero-filled missing physical member",
+    "No physical-topology or PG changes"
+  ],
+  "selected_mat_variables": [
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "variables": [
+        "base_case",
+        "reduced_final_case"
+      ]
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "variables": [
+        "refined_2025_pre_may_case",
+        "refined_2025_may21_case",
+        "refined_2025_may30_case",
+        "refined_2025_case",
+        "bus_ids",
+        "bus_zones",
+        "branch_keys"
+      ]
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "variables": [
+        "recovery",
+        "kept_bus_ids",
+        "gamma"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/design/experiment_plan.json",
+      "sha256": "173b9e745c1444e2ee138a4162e62edc116e1c0a498bc94dd7fc3c8089f6f51e"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_dispatch_receipt.json",
+      "sha256": "1ec2caef4fd0324d8b9aeceeed96f26aaf295d2b7ae3a0ffb6c5fbdade01a623"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/provenance.json",
+      "sha256": "781b83d403e017c0dbc531a04989ba256afa4e696c752c582ec133bf37e1ba2b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+      "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/common.py",
+      "sha256": "c005e17c59ebd797cfeef386cfacdbcc8aa4df39f2ee873cecc5af97e582217d"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/freeze_design.py",
+      "sha256": "135ebc3fa570d217f40388c27c00c1bd9ed5a5c895b3af6b10520d99742db7fa"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/flow4Plot.m",
+      "sha256": "924df00f371ee600b16db75e6f83cf6997731beae2502df6db094a112a5eeaec"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.pdf",
+      "sha256": "5a08d0c8501df096806506df79fb1b8ded77e6da8c4fe9c82ef405a71c3cf140"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.txt",
+      "sha256": "731da35565c15b1d460a48cf8331782b9c3e2d5d797668587370a72b9906175f"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.pdf",
+      "sha256": "094f26c8b268b432567cf5a4b62f3b8699f53d3220e7180971dc595b6ad5d7be"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.txt",
+      "sha256": "8734cd72ee75d70328e0bf5229834beca3719c8a2466e599d05d2189411590d6"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.pdf",
+      "sha256": "87cf3ecaa2b80c8851b79951437e190a0e0eb2aba542cc028ce5351831bdc5f7"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.txt",
+      "sha256": "52ce521985529b7a2cd569634eba1ee05e925e3bc8c57b8d645f1d91fd4e52ae"
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+check,passed,maximum_absolute_error,detail
+pinned_source:npcc.mat,True,,
+pinned_source:npcc_new.csv,True,,
+pinned_source:npcc.csv,True,,
+operating_artifact_fingerprint,True,,
+frozen_parent:bus,True,0.0,tolerance 0
+frozen_parent:gen,True,0.0,tolerance 0
+frozen_parent:branch,True,0.0,tolerance 0
+frozen_parent:dcline,True,0.0,tolerance 0
+frozen_parent_baseMVA,True,0.0,tolerance 0
+frozen_generator_categories,True,,
+original_140_bus_IDs,True,,
+annual_hour_indices,True,,
+preserved_model_inventory,True,,
+MAT_unqualified:ny_generation_dispatch_available,True,,
+MAT_unqualified:ready_for_dc_power_flow,True,,
+manifest_unqualified:topology_modified,True,,
+manifest_unqualified:reference_is_measured_peak,True,,
+manifest_unqualified:ny_generation_dispatch_available,True,,
+manifest_unqualified:ready_for_dc_power_flow,True,,
+manifest_unqualified:ac_feasibility_validated,True,,
+manifest_unqualified:interface_calibration_performed,True,,
+source_exact_physical_year_axis,True,,
+MAT_exact_UTC_axis,True,,
+hour_catalog_preserved,True,,
+source_local_labels,True,,
+source_time_zones,True,,
+source_UTC_offsets_minutes,True,0.0,tolerance 0
+source_DST_folds,True,0.0,tolerance 0
+one_repeated_fall_label,True,,
+no_nonexistent_spring_label,True,,
+load_wide_UTC_order,True,,
+interfaces_wide_UTC_order,True,,
+complete_finite_positive_load_source,True,,
+NY_original_identity_count,True,,
+source_mat_snapshot_anchor_9561,True,0.0,tolerance 0
+one_annual_scale_factor,True,0.0,tolerance 1e-14
+manifest_scale_factor,True,0.0,tolerance 1e-14
+manifest_reference_anchor,True,0.0,tolerance 0
+manifest_annual_peak,True,0.0,tolerance 1e-06
+public_load_preserved,True,0.0,tolerance 1e-06
+model_zonal_load_common_gamma,True,0.0,tolerance 1e-06
+model_peak_equals_snapshot_anchor,True,1.8189894035458565e-12,tolerance 1e-06
+all_NY_allocation_records_once,True,,
+allocation_weights:A,True,9.71445146547012e-17,tolerance 1e-12
+allocation_policy:A,True,,
+bus_gross_allocation:A,True,0.0,tolerance 1e-06
+zone_gross_conservation:A,True,2.2737367544323206e-13,tolerance 1e-06
+allocation_weights:B,True,0.0,tolerance 1e-12
+allocation_policy:B,True,,
+bus_gross_allocation:B,True,0.0,tolerance 1e-06
+zone_gross_conservation:B,True,1.1368683772161603e-13,tolerance 1e-06
+allocation_weights:C,True,6.938893903907228e-17,tolerance 1e-12
+allocation_policy:C,True,,
+bus_gross_allocation:C,True,0.0,tolerance 1e-06
+zone_gross_conservation:C,True,1.1368683772161603e-13,tolerance 1e-06
+allocation_weights:D,True,0.0,tolerance 1e-12
+allocation_policy:D,True,,
+bus_gross_allocation:D,True,0.0,tolerance 1e-06
+zone_gross_conservation:D,True,0.0,tolerance 1e-06
+allocation_weights:E,True,9.367506770274758e-17,tolerance 1e-12
+allocation_policy:E,True,,
+bus_gross_allocation:E,True,0.0,tolerance 1e-06
+zone_gross_conservation:E,True,5.684341886080802e-14,tolerance 1e-06
+allocation_weights:F,True,5.551115123125783e-17,tolerance 1e-12
+allocation_policy:F,True,,
+bus_gross_allocation:F,True,0.0,tolerance 1e-06
+zone_gross_conservation:F,True,1.1368683772161603e-13,tolerance 1e-06
+allocation_weights:G,True,0.0,tolerance 1e-12
+allocation_policy:G,True,,
+bus_gross_allocation:G,True,0.0,tolerance 1e-06
+zone_gross_conservation:G,True,1.1368683772161603e-13,tolerance 1e-06
+allocation_weights:H,True,0.0,tolerance 1e-12
+allocation_policy:H,True,,
+bus_gross_allocation:H,True,0.0,tolerance 1e-06
+zone_gross_conservation:H,True,0.0,tolerance 1e-06
+allocation_weights:I,True,0.0,tolerance 1e-12
+allocation_policy:I,True,,
+bus_gross_allocation:I,True,0.0,tolerance 1e-06
+zone_gross_conservation:I,True,0.0,tolerance 1e-06
+allocation_weights:J,True,0.0,tolerance 1e-12
+allocation_policy:J,True,,
+bus_gross_allocation:J,True,0.0,tolerance 1e-06
+zone_gross_conservation:J,True,0.0,tolerance 1e-06
+allocation_weights:K,True,5.551115123125783e-17,tolerance 1e-12
+allocation_policy:K,True,,
+bus_gross_allocation:K,True,0.0,tolerance 1e-06
+zone_gross_conservation:K,True,2.2737367544323206e-13,tolerance 1e-06
+only_J_uniform_fallback,True,,
+NY_reactive_assumption,True,0.0,tolerance 1e-06
+external_shape_ratio,True,3.3306690738754696e-16,tolerance 1e-06
+external_gross_PD,True,6.821210263296962e-13,tolerance 1e-06
+external_QD_constant_snapshot_power_factor,True,1.7053025658242404e-13,tolerance 1e-06
+full_gross_peak_at_modified_NPCC_snapshot,True,3.637978807091713e-12,tolerance 1e-06
+nonnegative_gross_PD,True,,
+boundary_public_preserved,True,0.0,tolerance 1e-06
+boundary_common_gamma,True,0.0,tolerance 1e-06
+regional_schedule_accounting,True,0.0,tolerance 1e-06
+four_DC_schedules_order_and_scale,True,0.0,tolerance 1e-06
+four_DC_endpoint_identity,True,0.0,tolerance 0
+boundary_validity_mask,True,,
+boundary_validity_count,True,,
+243_NY_native_generation_rows_pending,True,,
+external_generator_bus_lineage:ISONE,True,0.0,tolerance 0
+external_generator_allocation:ISONE,True,3.410605131648481e-13,tolerance 1e-06
+external_region_net_export:ISONE,True,2.2737367544323206e-12,tolerance 1e-06
+external_generator_share_register:ISONE,True,8.326672684688674e-17,tolerance 1e-12
+external_generator_bus_lineage:ONTARIO,True,0.0,tolerance 0
+external_generator_allocation:ONTARIO,True,6.821210263296962e-13,tolerance 1e-06
+external_region_net_export:ONTARIO,True,2.2737367544323206e-12,tolerance 1e-06
+external_generator_share_register:ONTARIO,True,8.326672684688674e-17,tolerance 1e-12
+external_generator_bus_lineage:PJM,True,0.0,tolerance 0
+external_generator_allocation:PJM,True,9.094947017729282e-13,tolerance 1e-06
+external_region_net_export:PJM,True,3.865352482534945e-12,tolerance 1e-06
+external_generator_share_register:PJM,True,8.326672684688674e-17,tolerance 1e-12
+single_HQ_proxy,True,,
+HQ_Cedars_not_double_counted,True,0.0,tolerance 1e-06
+28_external_and_HQ_rows_once,True,,
+external_generator_register_coverage,True,,
+load_hourly_row_count_preserved,True,,
+load_hourly_source_columns_preserved,True,,
+load_hourly_source_UTC_indices,True,,
+load_hourly_model_UTC_indices,True,,
+load_hourly:source:timestamp_utc,True,,
+load_hourly:source:zone,True,,
+load_hourly:source:load_mw,True,0.0,tolerance 1e-06
+load_hourly:scaled:load_mw,True,4.547473508864641e-13,tolerance 1e-06
+load_hourly:source:minimum_source_load_mw,True,0.0,tolerance 1e-06
+load_hourly:scaled:minimum_source_load_mw,True,4.547473508864641e-13,tolerance 1e-06
+load_hourly:source:maximum_source_load_mw,True,0.0,tolerance 1e-06
+load_hourly:scaled:maximum_source_load_mw,True,4.547473508864641e-13,tolerance 1e-06
+load_hourly:source:source_rows,True,0.0,tolerance 1e-06
+load_hourly:source:coverage_qualified,True,,
+load_hourly:source:zone_name,True,,
+load_hourly:source:hour_index,True,0.0,tolerance 1e-06
+load_hourly:source:local_timestamp,True,,
+load_hourly:source:time_zone,True,,
+load_hourly:source:utc_offset_minutes,True,0.0,tolerance 1e-06
+load_hourly:source:dst_fold,True,0.0,tolerance 1e-06
+load_hourly_gamma,True,5.551115123125783e-17,tolerance 1e-14
+load_long_complete_hour_zone_grid,True,,
+all_load_hours_source_qualified,True,,
+source_long_wide_load_agreement,True,0.0,tolerance 1e-06
+interface_hourly_row_count_preserved,True,,
+interface_hourly_source_columns_preserved,True,,
+interface_hourly_source_UTC_indices,True,,
+interface_hourly_model_UTC_indices,True,,
+interface_hourly:source:timestamp_utc,True,,
+interface_hourly:source:coverage_qualified,True,,
+interface_hourly:source:coverage_seconds,True,0.0,tolerance 1e-06
+interface_hourly:source:bracketed_seconds,True,0.0,tolerance 1e-06
+interface_hourly:source:maximum_bracketing_gap_seconds,True,0.0,tolerance 1e-06
+interface_hourly:source:interval_pieces_touching_duplicate_timestamp,True,0.0,tolerance 1e-06
+interface_hourly:source:maximum_duplicate_spread_mw,True,0.0,tolerance 1e-06
+interface_hourly:scaled:maximum_duplicate_spread_mw,True,5.684341886080802e-14,tolerance 1e-06
+interface_hourly:source:positive_limit_contains_sentinel,True,,
+interface_hourly:source:negative_limit_contains_sentinel,True,,
+interface_hourly:source:flow_mw,True,0.0,tolerance 1e-06
+interface_hourly:scaled:flow_mw,True,4.547473508864641e-13,tolerance 1e-06
+interface_hourly:source:flow_mw_covered_seconds,True,0.0,tolerance 1e-06
+interface_hourly:source:positive_limit_mw,True,0.0,tolerance 1e-06
+interface_hourly:positive_limit_model_usable,True,,
+interface_hourly:scaled:positive_limit_mw,True,4.547473508864641e-13,tolerance 1e-06
+interface_hourly:source:positive_limit_mw_covered_seconds,True,0.0,tolerance 1e-06
+interface_hourly:source:negative_limit_mw,True,0.0,tolerance 1e-06
+interface_hourly:negative_limit_model_usable,True,,
+interface_hourly:scaled:negative_limit_mw,True,5.684341886080802e-14,tolerance 1e-06
+interface_hourly:source:negative_limit_mw_covered_seconds,True,0.0,tolerance 1e-06
+interface_hourly:source:positive_limit_usable,True,,
+interface_hourly:source:negative_limit_usable,True,,
+interface_hourly:source:paper_arithmetic_mean_flow_mw,True,0.0,tolerance 1e-06
+interface_hourly:scaled:paper_arithmetic_mean_flow_mw,True,2.2737367544323206e-13,tolerance 1e-06
+interface_hourly:source:raw_samples_in_hour,True,0.0,tolerance 1e-06
+interface_hourly:source:distinct_source_timestamps_in_hour,True,0.0,tolerance 1e-06
+interface_hourly:source:coverage_failure,True,,
+interface_hourly:source:channel,True,,
+interface_hourly:source:point_id,True,0.0,tolerance 1e-06
+interface_hourly:source:channel_kind,True,,
+interface_hourly:source:hour_index,True,0.0,tolerance 1e-06
+interface_hourly:source:local_timestamp,True,,
+interface_hourly:source:time_zone,True,,
+interface_hourly:source:utc_offset_minutes,True,0.0,tolerance 1e-06
+interface_hourly:source:dst_fold,True,0.0,tolerance 1e-06
+interface_hourly_gamma,True,5.551115123125783e-17,tolerance 1e-14
+P32_long_hour_channel_keys_unique,True,,
+P32_long_complete_hour_channel_grid,True,,
+source_long_wide_P32_agreement,True,0.0,tolerance 1e-06
+P32_primary_missingness_follows_coverage,True,,
+statewide_fuelmix_hourly_row_count_preserved,True,,
+statewide_fuelmix_hourly_source_columns_preserved,True,,
+statewide_fuelmix_hourly_source_UTC_indices,True,,
+statewide_fuelmix_hourly_model_UTC_indices,True,,
+statewide_fuelmix_hourly:source:hour_index,True,0.0,tolerance 1e-06
+statewide_fuelmix_hourly:source:timestamp_utc,True,,
+statewide_fuelmix_hourly:source:timestamp_local,True,,
+statewide_fuelmix_hourly:source:time_zone,True,,
+statewide_fuelmix_hourly:source:fuel_category,True,,
+statewide_fuelmix_hourly:source:generation_mw,True,9.094947017729282e-13,tolerance 1e-06
+statewide_fuelmix_hourly:scaled:generation_mw,True,4.547473508864641e-13,tolerance 1e-06
+statewide_fuelmix_hourly:source:coverage_seconds,True,0.0,tolerance 1e-06
+statewide_fuelmix_hourly:source:coverage_qualified,True,0.0,tolerance 1e-06
+statewide_fuelmix_hourly:source:max_gap_seconds,True,0.0,tolerance 1e-06
+statewide_fuelmix_hourly:source:interval_count,True,0.0,tolerance 1e-06
+statewide_fuelmix_hourly:source:covered_portion_mean_mw,True,9.094947017729282e-13,tolerance 1e-06
+statewide_fuelmix_hourly:scaled:covered_portion_mean_mw,True,4.547473508864641e-13,tolerance 1e-06
+statewide_fuelmix_hourly:source:quantity_role,True,,
+statewide_fuelmix_hourly:source:interval_policy,True,,
+statewide_fuelmix_hourly_gamma,True,5.551115123125783e-17,tolerance 1e-14
+zonal_generation_priors_row_count_preserved,True,,
+zonal_generation_priors_source_columns_preserved,True,,
+zonal_generation_priors_source_UTC_indices,True,,
+zonal_generation_priors_model_UTC_indices,True,,
+zonal_generation_priors:source:hour_index,True,0.0,tolerance 1e-06
+zonal_generation_priors:source:timestamp_utc,True,,
+zonal_generation_priors:source:timestamp_local,True,,
+zonal_generation_priors:source:time_zone,True,,
+zonal_generation_priors:source:zone,True,,
+zonal_generation_priors:source:fuel_category,True,,
+zonal_generation_priors:source:prior_actual_mw,True,9.094947017729282e-13,tolerance 1e-06
+zonal_generation_priors:scaled:prior_actual_mw,True,4.547473508864641e-13,tolerance 1e-06
+zonal_generation_priors:source:statewide_actual_mw,True,9.094947017729282e-13,tolerance 1e-06
+zonal_generation_priors:scaled:statewide_actual_mw,True,9.094947017729282e-13,tolerance 1e-06
+zonal_generation_priors:source:allocation_share,True,3.3881317890172014e-21,tolerance 1e-06
+zonal_generation_priors:source:allocation_qualified,True,0.0,tolerance 1e-06
+zonal_generation_priors:source:source_coverage_qualified,True,0.0,tolerance 1e-06
+zonal_generation_priors:source:allocation_method,True,,
+zonal_generation_priors:source:observed_zonal_generation,True,0.0,tolerance 1e-06
+zonal_generation_priors_gamma,True,5.551115123125783e-17,tolerance 1e-14
+epa_zonal_hourly_row_count_preserved,True,,
+epa_zonal_hourly_source_columns_preserved,True,,
+epa_zonal_hourly_source_UTC_indices,True,,
+epa_zonal_hourly_model_UTC_indices,True,,
+epa_zonal_hourly:source:hour_index,True,0.0,tolerance 1e-06
+epa_zonal_hourly:source:timestamp_utc,True,,
+epa_zonal_hourly:source:timestamp_local,True,,
+epa_zonal_hourly:source:time_zone,True,,
+epa_zonal_hourly:source:zone,True,,
+epa_zonal_hourly:source:all_reported_gross_clock_hour_mw,True,4.547473508864641e-13,tolerance 1e-06
+epa_zonal_hourly:scaled:all_reported_gross_clock_hour_mw,True,4.547473508864641e-13,tolerance 1e-06
+epa_zonal_hourly:source:grid_eligible_gross_clock_hour_mw,True,4.547473508864641e-13,tolerance 1e-06
+epa_zonal_hourly:scaled:grid_eligible_gross_clock_hour_mw,True,4.547473508864641e-13,tolerance 1e-06
+epa_zonal_hourly:source:source_unit_rows,True,0.0,tolerance 1e-06
+epa_zonal_hourly:source:gross_present_rows,True,0.0,tolerance 1e-06
+epa_zonal_hourly:source:gross_missing_rows,True,0.0,tolerance 1e-06
+epa_zonal_hourly:source:reported_offline_gross_blank_rows,True,0.0,tolerance 1e-06
+epa_zonal_hourly:source:active_unknown_gross_rows,True,0.0,tolerance 1e-06
+epa_zonal_hourly:source:fuel_category,True,,
+epa_zonal_hourly:source:observed_net_generation,True,0.0,tolerance 1e-06
+epa_zonal_hourly:source:complete_grid_generation_coverage,True,0.0,tolerance 1e-06
+epa_zonal_hourly_gamma,True,5.551115123125783e-17,tolerance 1e-14
+fuelmix_category_inventory,True,,
+fuelmix_complete_hour_category_grid,True,,
+fuelmix_primary_missingness_follows_coverage,True,,
+fuelmix_qualified_coverage_seconds,True,0.0,tolerance 1e-06
+prior_zone_category_inventory,True,,
+prior_complete_hour_zone_category_grid,True,,
+no_observed_zonal_generation_claim,True,,
+unqualified_priors_remain_missing,True,,
+qualified_priors_finite,True,,
+MAT_prior_fuel_order,True,,
+MAT_statewide_fuel_inventory,True,,
+MAT_source_zonal_generation_priors,True,0.0,tolerance 1e-06
+MAT_scaled_zonal_generation_priors,True,0.0,tolerance 1e-06
+MAT_generation_qualification_masks,True,,
+MAT_source_statewide_generation,True,0.0,tolerance 1e-06
+MAT_scaled_statewide_generation,True,0.0,tolerance 1e-06
+prior_statewide_source_identity:Combined Fossil,True,3.637978807091713e-12,tolerance 1e-06
+prior_coverage_identity:Combined Fossil,True,,
+prior_statewide_source_identity:Nuclear,True,0.0,tolerance 1e-06
+prior_coverage_identity:Nuclear,True,,
+prior_statewide_source_identity:Hydro,True,0.0,tolerance 1e-06
+prior_coverage_identity:Hydro,True,,
+prior_statewide_source_identity:Wind,True,0.0,tolerance 1e-06
+prior_coverage_identity:Wind,True,,
+prior_statewide_source_identity:Other Renewables,True,0.0,tolerance 1e-06
+prior_coverage_identity:Other Renewables,True,,
+qualified_prior_sums_match_statewide_source,True,3.637978807091713e-12,tolerance 1e-06
+qualified_allocation_shares_sum_to_one,True,8.881784197001252e-16,tolerance 1e-10
+allocation_shares_nonnegative,True,,
+allocation_shares_at_most_one,True,,
+EPA_hour_zone_rows_unique,True,,
+EPA_zone_inventory,True,,
+EPA_gross_not_claimed_as_observed_net,True,,
+EPA_panel_not_claimed_as_complete_grid_generation,True,,
+EPA_nonnegative_counts:source_unit_rows,True,,
+EPA_nonnegative_counts:gross_present_rows,True,,
+EPA_nonnegative_counts:gross_missing_rows,True,,
+EPA_nonnegative_counts:reported_offline_gross_blank_rows,True,,
+EPA_nonnegative_counts:active_unknown_gross_rows,True,,
+EPA_present_missing_count_identity,True,0.0,tolerance 0

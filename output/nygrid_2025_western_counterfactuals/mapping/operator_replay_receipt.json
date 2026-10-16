@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T02:09:35.550038+00:00",
+  "cases": [
+    {
+      "name": "mapping_baseline_corrected_full191_operator",
+      "family": "mapping",
+      "file": "output/nygrid_2025_western_counterfactuals/mapping/mapping_baseline_corrected_full191_operator.npz",
+      "sha256": "85b325496caec095f213ab0f7115fa91abba28ef17cf9ab43791abcd25a53d28",
+      "operator_key": "baseline_corrected_full191_operator",
+      "operator_dc_key": "baseline_corrected_full191_operator_dc",
+      "qualified_hours": 8651,
+      "interpretation": "equivalence_check",
+      "maximum_interface_change_public_mw": [
+        1.1364109651628022e-12,
+        7.576073101085347e-13,
+        3.788036550542674e-12,
+        2.0834201027984704e-12,
+        3.4092328954884063e-12,
+        4.166840205596941e-11,
+        4.697165322672916e-11
+      ],
+      "generation": null,
+      "demand": null
+    },
+    {
+      "name": "mapping_independent_zone_cuts",
+      "family": "mapping",
+      "file": "output/nygrid_2025_western_counterfactuals/mapping/mapping_independent_zone_cuts.npz",
+      "sha256": "85b325496caec095f213ab0f7115fa91abba28ef17cf9ab43791abcd25a53d28",
+      "operator_key": "independent_zone_cuts",
+      "operator_dc_key": "independent_zone_cuts_dc",
+      "qualified_hours": 8651,
+      "interpretation": "equivalence_check",
+      "maximum_interface_change_public_mw": [
+        1.1364109651628022e-12,
+        7.576073101085347e-13,
+        3.788036550542674e-12,
+        2.0834201027984704e-12,
+        3.4092328954884063e-12,
+        4.166840205596941e-11,
+        4.697165322672916e-11
+      ],
+      "generation": null,
+      "demand": null
+    },
+    {
+      "name": "mapping_literal_released_plot_negative_control",
+      "family": "mapping",
+      "file": "output/nygrid_2025_western_counterfactuals/mapping/mapping_literal_released_plot_negative_control.npz",
+      "sha256": "928905775ad70cfebced6593c149ace719e473d76112bc65408bf0f12af0cd05",
+      "operator_key": "literal_released_plot_negative_control",
+      "operator_dc_key": "literal_released_plot_negative_control_dc",
+      "qualified_hours": 8651,
+      "interpretation": "known_bug_negative_control",
+      "maximum_interface_change_public_mw": [
+        2223.224838126471,
+        2735.185521339381,
+        3.788036550542674e-12,
+        2.0834201027984704e-12,
+        3.4092328954884063e-12,
+        4.166840205596941e-11,
+        4.697165322672916e-11
+      ],
+      "generation": null,
+      "demand": null
+    }
+  ],
+  "fixed_hour_count": 8651,
+  "identical_injections_network_angles_and_boundary_flows": true,
+  "physical_as_built_2025_operator_identified": false,
+  "internal_observations_read": false,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/mapping_receipt.json",
+      "sha256": "e11b852efe5fb16f85fbab11528eb0fb2d1fb5c7d4267a35bce3c72ea575c091"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/operators.npz",
+      "sha256": "6da5ac3cead2bc1bca474297e709406eb9dfb98d82d361bec5e2e76aa4f60edc"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/replay_receipt.json",
+      "sha256": "65fd2fe1ebc9384e85e3dbb5195d6a0e8dfe0d880d1bfaa952dba5ff0115d4c2"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/baseline.npz",
+      "sha256": "9b5f3deb8bf6d13a3fdc879628f45dde6a8812498c9f8a53089d014ce681c160"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/evaluate_operators.py",
+      "sha256": "990fffd2f537a59627a4a2eab13cb04a86d148aefbbfed02ab58445b5448ae4a"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/run_experiments.py",
+      "sha256": "5c62bfc2312b0033491e9709aa19c330d83ff663523dcdfdf52be202ffe8e528"
+    }
+  ]
+}

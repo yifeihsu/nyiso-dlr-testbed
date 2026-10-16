@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-11T06:28:43.028664+00:00",
+  "annual_2025_common_hours": 8663,
+  "annual_2019_historical_hours": 8760,
+  "common_denominators_verified": true,
+  "WAPE_equals_100_MAE_over_mean_absolute_observation": true,
+  "confirmed_variant": "dated_hydro_zone_corrected",
+  "unpromoted_symmetric_display_variants": [
+    "dated_hydro_zone_par_from_moses",
+    "dated_hydro_zone_par_toward_moses"
+  ],
+  "diagnostic_orientation_selected": false,
+  "diagnostics_are_confidence_intervals": false,
+  "physical_PAR_tap_qualification_claimed": false,
+  "all_rendered_text_inside_canvas": true,
+  "inputs": [
+    {
+      "role": "input",
+      "path": "output/nygrid_2025_moses_audit/comparison/interface_summary.csv",
+      "sha256": "8195b088a607474f985d26b3561c429dbf012c99df143d59c90de7f79578c416"
+    },
+    {
+      "role": "input",
+      "path": "output/nygrid_2019_full_stage1/full_year_interface_metrics.csv",
+      "sha256": "e9f089793924b9f5f2ae533bc98bd61f9e481cca17bf6ef9943693e9bf66de23"
+    },
+    {
+      "role": "input",
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0"
+    },
+    {
+      "role": "input",
+      "path": "scripts/nygrid_2025_moses_audit/build_figures.py",
+      "sha256": "3f8db0e93aabd15e64378584cdb6f08dfda6469575e90dbf81ab4a8b06f72cf0"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_moses_audit/figures/moses_repair_and_diagnostics.png",
+      "sha256": "a1abccb3ae6066594778b1086b2027e5bf9841f51afe5939c114cdfb50a39932"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/figures/moses_repair_and_diagnostics.pdf",
+      "sha256": "1ea8de32c70186c8a8b61e633ad3c738fe60c3e15276c259974e49d34ee8a0c2"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/figures/moses_repair_and_diagnostics.svg",
+      "sha256": "cd1654594595cbf3ac650f904e44dbbb2106ae36b7ecb584e71a8ab0385c5ef5"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/figures/moses_historical_context.png",
+      "sha256": "7f3913d3305bd4f5f06715904c1098309eba4fdb2a792dbdb67be37f3fcb9433"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/figures/moses_historical_context.pdf",
+      "sha256": "5c95475b98babdeb71cbec19094ffc689758a4f4f8746c22c894e514800a3297"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/figures/moses_historical_context.svg",
+      "sha256": "757ca24e7b8a9c8e1f78b2ba8e8e08b63014d5e6d2ca7969f2c3298c161a28c2"
+    }
+  ],
+  "visual_QA": "Both rendered PNGs inspected; corrected historical chart left-label clipping; final layout has readable bars, values, status labels, notes and no observed clipping or overlap.",
+  "SVG_exact_value_and_status_text_checks_passed": true
+}

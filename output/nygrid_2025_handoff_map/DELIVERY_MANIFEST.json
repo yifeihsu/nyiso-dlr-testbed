@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "latest_model_handoff_with_current_interactive_map_verified",
+  "baseline_HEAD": "de9a0e3bc5d588bde157c0877d03a08f06743b10",
+  "archive": {
+    "path": "deliverables/nygrid_2025_latest_model_20261013/nygrid_latest_model_with_map_20261013.zip",
+    "bytes": 116111250,
+    "sha256": "7e6d13ea54f49aa141bd1d6bcfc77ef4e1ba64cbe2542c4675a3e9dd1cb16810"
+  },
+  "payload_files": 669,
+  "unchanged_base_files": 665,
+  "map_path_in_package": "map/network_map.html",
+  "START_HERE_links_to_map": true,
+  "old_archive_byte_preserved": true,
+  "source_deliveries_preserved": {
+    "nygrid_2025_latest_handoff": {
+      "files": 140,
+      "manifest_sha256": "aa1f2c3553e0d03fdeb317f15dc11bc7bc1a326a1bb720e6e3d693e400a9dc96"
+    },
+    "nygrid_2025_latest_map": {
+      "files": 41,
+      "manifest_sha256": "eb663457598a17d21350b49080d8e59b77ae85e823df9e6e4d7b8b67712cd342"
+    }
+  },
+  "new_simulation_run": false,
+  "files": {
+    "output/nygrid_2025_handoff_map/build_receipt.json": {
+      "bytes": 1847,
+      "sha256": "cf2b0d5459bd57ad39bce2c481b42c9d7333b8685b56790783d6bdbb51a107eb"
+    },
+    "output/nygrid_2025_handoff_map/independent_package_review.json": {
+      "bytes": 3289,
+      "sha256": "1c65f445cd85506f1b21159a4a6cbeaa29b83cdddef0d0e09fc7601e0b3057ed"
+    },
+    "output/nygrid_2025_handoff_map/MAP_PROVENANCE.json": {
+      "bytes": 1266,
+      "sha256": "62d8787859d4e5a50fdd540c178c6992f6a40bd070be9ca48d4a62dc318b8dd5"
+    },
+    "output/nygrid_2025_handoff_map/MAP_README.md": {
+      "bytes": 2215,
+      "sha256": "fee91b6677fe5d0279c49f9218a69e7187e99f64e4182549a77b09619f18fe64"
+    },
+    "output/nygrid_2025_handoff_map/PACKAGE_MANIFEST.json": {
+      "bytes": 136108,
+      "sha256": "d7cd388ad491ee5fb4c089b205ab82626cd51ee083ea6d29798e58e81a231d94"
+    },
+    "output/nygrid_2025_handoff_map/START_HERE.md": {
+      "bytes": 6107,
+      "sha256": "d73644ac8756b242f2beb92d3ce597c09b5ec8faa826f03e4b6a5f3fec4ad8ae"
+    },
+    "scripts/nygrid_2025_handoff_map/audit_map_inclusion.py": {
+      "bytes": 8680,
+      "sha256": "9b1f21de01f1a7c8777ed3313fefdab0ea49123755ee29dc8e1294f19077e521"
+    },
+    "scripts/nygrid_2025_handoff_map/build_package.py": {
+      "bytes": 10310,
+      "sha256": "767fa06818b66c95d0a0815138bce12459e07d10d1413ee74a8668784dddf5a7"
+    },
+    "scripts/nygrid_2025_handoff_map/finalize_package.py": {
+      "bytes": 2826,
+      "sha256": "3dd1d6a96dceb7357e489eabd08f96a2c13baf488cc0a61c9e61912c00989859"
+    }
+  }
+}

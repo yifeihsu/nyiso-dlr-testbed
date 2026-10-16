@@ -1,0 +1,383 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T20:48:58.892149+00:00",
+  "HEAD": "d4aea78c1b042158d7e295edc4cb33cffa5b0341",
+  "baseline_model": "Repaired2025 model; original source profiles unchanged",
+  "plant_id": 2694,
+  "current_native_generator_rows_1based": [
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323
+  ],
+  "source_fullcalendar_hours": 8760,
+  "qualified_cohort_hours": 8651,
+  "EIA_plant_months": 12,
+  "monthly_inventory_snapshots": 12,
+  "early_vs_final_EIA860_plant_status_capability_identical": true,
+  "early_vs_final_EIA923_plant_month_energy_identical": true,
+  "monthly_inventory_status_disagreements_with_annual_freeze": 4,
+  "monthly_inventory_changes_aggregate_stlawrence_seasonal_capability": false,
+  "EIA_month_energy_incompatible_with_current_hourly_cap_months": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "maximum_independent_P63_plant_projection_reproduction_error_MW": 3.410605131648481e-13,
+  "maximum_independent_statewide_Hydro_conservation_error_MW": 2.7284841053187847e-12,
+  "maximum_saved_plant_prior_vs_unit_prior_aggregate_difference_MW": 4.547473508864641e-13,
+  "monthly_plant_energy_preserved_by_frozen_P63_projection": false,
+  "annual_energy_bounds": {
+    "EIA_final_full_year_net_MWh": 6726939.0,
+    "NYPA_official_OpenNY_full_year_net_MWh": 6730000.0,
+    "NYPA_minus_EIA_MWh": 3061.0,
+    "NYPA_minus_EIA_percent_of_EIA": 0.045503608699291015,
+    "qualified_model_hours": 8651,
+    "unmodeled_hours": 109,
+    "known_qualified_model_energy_MWh": 5866786.725205954,
+    "maximum_unmodeled_energy_at_frozen_cap_MWh": 87472.5,
+    "full_year_completion_upper_bound_holding_qualified_model_MWh": 5954259.225205954,
+    "minimum_EIA_gap_after_allowing_missing_hours_at_cap_MWh": 772679.7747940458,
+    "minimum_EIA_gap_after_missing_hours_percent": 11.48635025223279,
+    "current_profile_finite_hours": 8657,
+    "current_profile_known_energy_MWh": 5870576.191053434,
+    "current_profile_all_missing_completion_upper_bound_MWh": 5953233.691053434,
+    "missing_hour_bound_uses_full_nominal_admitted_cap_even_where_available_cap_metadata_is_missing": true,
+    "frozen_prior_finite_hours": 8750,
+    "current_qualified_mean_MW": 678.1628395799277,
+    "frozen_prior_qualified_mean_MW": 677.7764741475298,
+    "current_minus_prior_qualified_mean_MW": 0.38636543239782545,
+    "current_minus_prior_mean_absolute_MW": 0.6554304338572939,
+    "current_at_cap_qualified_hours": 1226,
+    "calendar_denominator_mean_effect_MW": -0.007455821057358846,
+    "cap_clipping_mean_effect_MW": -11.133857129658274,
+    "below_P63_mean_effect_MW": -82.55790253800426,
+    "above_P63_mean_effect_MW": 3.6438316316516937,
+    "qualified_hours_below_statewide_clipped_baseline": 4631,
+    "oracle_StL_qualified_mean_if_all_other_terms_correct_MW": 665.5383430277678
+  },
+  "conditional_annual_scores": [
+    {
+      "scenario": "baseline",
+      "month": 0,
+      "hours": 8651,
+      "MAE_public_MW": 118.82092402208407,
+      "RMSE_public_MW": 147.84790732168128,
+      "bias_public_MW": 12.624496552159801,
+      "WAPE_percent": 22.007617414519235,
+      "MAE_change_from_baseline_MW": 0.0,
+      "StLawrence_mean_MW": 678.1628395799277,
+      "StLawrence_mean_change_MW": 0.0,
+      "StLawrence_above_frozen_Pmax_hours": 0,
+      "StLawrence_below_frozen_Pmin_hours": 0,
+      "maximum_upper_bound_violation_MW": 0.0,
+      "AC_or_global_dispatch_feasibility_claimed": false,
+      "hourly_generation_observed": false,
+      "cohort_unchanged": true
+    },
+    {
+      "scenario": "EIA_month_mean_preserve_qualified_shape",
+      "month": 0,
+      "hours": 8651,
+      "MAE_public_MW": 148.61367647606878,
+      "RMSE_public_MW": 177.97693841133832,
+      "bias_public_MW": 102.29351497683018,
+      "WAPE_percent": 27.525732200522008,
+      "MAE_change_from_baseline_MW": 29.792752453984704,
+      "StLawrence_mean_MW": 767.8318580045982,
+      "StLawrence_mean_change_MW": 89.66901842467038,
+      "StLawrence_above_frozen_Pmax_hours": 4160,
+      "StLawrence_below_frozen_Pmin_hours": 0,
+      "maximum_upper_bound_violation_MW": 131.57472679681177,
+      "AC_or_global_dispatch_feasibility_claimed": false,
+      "hourly_generation_observed": false,
+      "cohort_unchanged": true
+    },
+    {
+      "scenario": "EIA_month_constant",
+      "month": 0,
+      "hours": 8651,
+      "MAE_public_MW": 125.18351066583466,
+      "RMSE_public_MW": 154.1829912661598,
+      "bias_public_MW": 102.29351497683015,
+      "WAPE_percent": 23.186074607768866,
+      "MAE_change_from_baseline_MW": 6.362586643750589,
+      "StLawrence_mean_MW": 767.8318580045982,
+      "StLawrence_mean_change_MW": 89.66901842467036,
+      "StLawrence_above_frozen_Pmax_hours": 2882,
+      "StLawrence_below_frozen_Pmin_hours": 0,
+      "maximum_upper_bound_violation_MW": 50.62777777777751,
+      "AC_or_global_dispatch_feasibility_claimed": false,
+      "hourly_generation_observed": false,
+      "cohort_unchanged": true
+    },
+    {
+      "scenario": "current_month_mean_constant_shape_ablation",
+      "month": 0,
+      "hours": 8651,
+      "MAE_public_MW": 91.86870327284561,
+      "RMSE_public_MW": 118.13385581156601,
+      "bias_public_MW": 12.624496552159778,
+      "WAPE_percent": 17.015616488733944,
+      "MAE_change_from_baseline_MW": -26.952220749238464,
+      "StLawrence_mean_MW": 678.1628395799277,
+      "StLawrence_mean_change_MW": -2.3286680897318645e-14,
+      "StLawrence_above_frozen_Pmax_hours": 0,
+      "StLawrence_below_frozen_Pmin_hours": 0,
+      "maximum_upper_bound_violation_MW": 0.0,
+      "AC_or_global_dispatch_feasibility_claimed": false,
+      "hourly_generation_observed": false,
+      "cohort_unchanged": true
+    }
+  ],
+  "scope_conclusions": [
+    "The aggregate802.5MW cap comes from15eligible units at53.5MW seasonal capability; finalannual inventory does not fix it.",
+    "Monthly inventories swap the excluded unit from26 to21 afterFebruary, while aggregate seasonal capability remains802.5MW.",
+    "April-July EIA monthly energy cannot be generated under an802.5MW hard hourly ceiling; this is a capability-interpretation conflict, not proof the16th unit was available.",
+    "The main current monthly-energy suppression is already present in the P63-constrained plant prior; final dispatch changes the plant mean only slightly.",
+    "Neither EIA monthly-mean diagnostic improves annual Moses MAE. The shape-only control improves conditional MAE but is not observed plant output or a source-validated correction.",
+    "Other D native allocation, HQ/PAR sources, load boundary and interface-meter scope can offset or confound a missing StLawrence energy component; one residual cannot identify it."
+  ],
+  "new_PF_or_optimization_run": false,
+  "default_model_changed": false,
+  "no_source_files_mutated": true,
+  "raw_national_workbook_cache_required_for_this_analysis": false,
+  "authenticated_plant_extract_required": true,
+  "limitations": [
+    "Full-calendar EIA means transferred to the qualified subset require a representative-missing-hours assumption.",
+    "Energy bounds use the frozen model cap only; seasonal/net/nameplate/dependable ratings are not interchangeable physical hourly maxima.",
+    "Conditional generation variants hold terminal loss corrections fixed and do not rebalance statewide Hydro or other generation.",
+    "No verified public2025 StLawrence hourly electrical-output series is asserted."
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/balance_hourly.csv",
+      "sha256": "6ae19f7c7fcf93f5e3ca853dbf47304596f07494b249e8a6e9f1bb674ee83326",
+      "bytes": 4051060
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/balance_contract.json",
+      "sha256": "0479fb6e84ef6ce8d5ec4460c686c627b1633b857650adee845c5dd4a83b9c22",
+      "bytes": 10411
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/fleet_register.csv",
+      "sha256": "d025a1994c9a1c19cb62c6b4ae61a1e0bb62ae2060158592c61f6ecf19546d89",
+      "bytes": 3043498
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05",
+      "bytes": 190996
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883",
+      "bytes": 56579710
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_monthly_plant_allocation_register.csv",
+      "sha256": "0dd1f050175848be679e7c180f48df9d886efcdc6e082e13ac0db822fda9b13d",
+      "bytes": 126815
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/eia923_monthly_hydro_2025.csv",
+      "sha256": "4300839e430267ebf8cf92e202a5fdf0acb2a010771c122a85526cd744da2876",
+      "bytes": 486187
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/final_EIA923_NY_hydro_scope.csv",
+      "sha256": "36a93312fe0ebba12b84e437026599247011873c8515b16437ddfc4b848cd0cf",
+      "bytes": 298988
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/statewide_fuelmix_hourly.csv",
+      "sha256": "489638be51300391d808a39b829a85d09eb9a1997423fe2f24e684b024764ec8",
+      "bytes": 14688252
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/monthly_P63_EIA_projection_reconciliation.csv",
+      "sha256": "c6858422da29f717953cfb5d1bf708b8389e8d16124a1f6fdb9cb9671222d945",
+      "bytes": 4032
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/EIA860_plant2694_inventory_source_rows.csv",
+      "sha256": "b81c1547ac7a00bcb9a53bb0c4a809d7d1716fcefd9018fbedeeaa7c0b0e7518",
+      "bytes": 85833
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/inventory_source_receipt.json",
+      "sha256": "0ce6372c7ab3eaf2f0b8afceeb5bc8b032a1564a32aaddd2ec520bdf9c4123b9",
+      "bytes": 9678
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/sources/nypa_openny_net_generation.json",
+      "sha256": "2c416c963af58af2f42e7233db059c6fd16f590842138d992f233ebb172eef0f",
+      "bytes": 7844
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/sources/nypa_openny_metadata.json",
+      "sha256": "354e70a06a22d445988b4f7eac39184117100ce096df614527a8226f1966a2a1",
+      "bytes": 9141
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "3297f564d35b7cc1d132eeaa4d1f4054ecc49681b67478b957d6ca5752191245",
+      "bytes": 6290016
+    },
+    {
+      "path": "scripts/nygrid_2025_inputs/generation_priors.py",
+      "sha256": "5f92ac838610def5ca0335c5dc990f5f529e46a08f1041d0832b530ac230925c",
+      "bytes": 43305
+    },
+    {
+      "path": "build_compact_nonfossil_generation_inputs.py",
+      "sha256": "c544744554fd10ce4c5049e58b128d2f6cb5e2e19d1e555620c69ddfc8c72807",
+      "bytes": 37551
+    },
+    {
+      "path": "scripts/nygrid_2025_dispatch/build_dispatch_priors.py",
+      "sha256": "6a7406b017c468bc9822ad4648978cf467cc03f141af31f9a1688694ec608513",
+      "bytes": 53509
+    },
+    {
+      "path": "scripts/nygrid_2025_dispatch/build_fleet.py",
+      "sha256": "11f78973810b5bc9843d5f6c59fc2a82e7c2199277559c6679ccb6b9ae131184",
+      "bytes": 39127
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4",
+      "bytes": 54625507
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf",
+      "bytes": 54767622
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_01.npz",
+      "sha256": "bb4213ad98e322fd9f8d1e9d14b6c02f6ae3ef19e01c6a2297f978a05f20f67f",
+      "bytes": 807010
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_02.npz",
+      "sha256": "66b7e68ef2b719a4e26a490492bbde06bb613f7c762bc24477cd4139717189ee",
+      "bytes": 724078
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_03.npz",
+      "sha256": "9ab5e9549153feda2f5218228758f6487a9516765c908d2d7981aae086fff260",
+      "bytes": 801890
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_04.npz",
+      "sha256": "6e2a0a8c7037ae31d06b7020353d1546a5e78d70a059f318f407c9edd4c36d2c",
+      "bytes": 750091
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_05.npz",
+      "sha256": "723c45bdbce2108cf62b3f671c281b7e421e602ed3d278b5f303ba0119c9051b",
+      "bytes": 771523
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_06.npz",
+      "sha256": "6bec246f52c99ba313dd56dea12b0cd16d54b6241234657f2e78b183f744837e",
+      "bytes": 783273
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_07.npz",
+      "sha256": "0037a667bcf1c0b0f818c6e425dc6800ed085a4903c680e3316184b2e045ec5c",
+      "bytes": 792151
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_08.npz",
+      "sha256": "6ca9dfb4b7f3e4f4cf057ed7dea69072ffcc640457be6597b079aa068376ba8c",
+      "bytes": 720434
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_09.npz",
+      "sha256": "1c8ea79210bd6556da75561a65e272f81f9db27d4f1348c91024b149a8309a05",
+      "bytes": 704740
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_10.npz",
+      "sha256": "c315386198e4373d1790eeea01bea1ce1153ce06bc5e337d561572b95db1d079",
+      "bytes": 739274
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_11.npz",
+      "sha256": "b8b6a1897b1316a290c7218fd66d56b21be83f94c988a57c200455e705785000",
+      "bytes": 767417
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/hydro_plant_priors_12.npz",
+      "sha256": "af41568ae3c5f4136995d999e87221dd9907689010722b94010180f5b4ff90f1",
+      "bytes": 804675
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_frozen_unit_scope.csv",
+      "sha256": "36e50da368b94d458ecfbf94e9b9b217d54798cd7f4c28db98597397604b0362",
+      "bytes": 23450
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_inventory_status_by_month.csv",
+      "sha256": "112f85c96a41bc9923ad24ec799748b85d9f74ddbea0245b82f0f337cc548099",
+      "bytes": 30099
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_inventory_monthly_summary.csv",
+      "sha256": "5c0cd3fdac0183d7cc9d021d219b54851aea7d653309faf04be5fcf209ebcbad",
+      "bytes": 634
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_monthly_source_energy_and_allocation.csv",
+      "sha256": "bd89961d539c84f0ace79158adf2c7ddb1c7f6e00b8d018e7e7c8966269a868f",
+      "bytes": 7276
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_hourly_source_trace.csv",
+      "sha256": "6419399f82dff3c51861f5631e5a754753effd27ce930f6d6c15f2f287ad294c",
+      "bytes": 1954368
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/conditional_generation_plan.json",
+      "sha256": "972ed996b413b89380a639912cbd80283ffd4ef1dcfd61bc20c6054e609a8fc9",
+      "bytes": 1565
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/conditional_generation_scores.csv",
+      "sha256": "a065d0ebe750ec03c0238316d4c92c50367a410a310b390011db91c509559121",
+      "bytes": 10216
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/conditional_generation_variants.npz",
+      "sha256": "b9e0e8e4e87754e3438cfe12ec5d6531d2322d9d4e9490a431e6d7946d3ca64d",
+      "bytes": 458231
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/StLawrence_annual_energy_bounds.json",
+      "sha256": "ada8c5fc15807ebc2b9ee2adb7252d6c511b5704f35cfc50f9aa779b797a47f1",
+      "bytes": 1576
+    }
+  ],
+  "producer": {
+    "path": "scripts/nygrid_2025_moses_source_diagnosis/generation/audit_stlawrence.py",
+    "sha256": "e22d74bd4584b2ad80ae83861349ec13449e841a6a30e70bdf163fd211d9f579",
+    "bytes": 26830
+  }
+}

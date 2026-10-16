@@ -1,0 +1,168 @@
+{
+  "signed_HQ_injection_preserved": true,
+  "signed_four_DC_schedules_preserved": true,
+  "channels_counted_once": [
+    "SCH - HQ - NY",
+    "SCH - HQ_CEDARS",
+    "SCH - OH - NY",
+    "SCH - NE - NY",
+    "SCH - NPX_1385",
+    "SCH - NPX_CSC",
+    "SCH - PJ - NY",
+    "SCH - PJM_HTP",
+    "SCH - PJM_NEPTUNE",
+    "SCH - PJM_VFT"
+  ],
+  "HQ_IMPORT_EXPORT_is_not_added": true,
+  "HQ_NY_minus_HQ_IMPORT_EXPORT_2025_public_mw": {
+    "hours": 8673,
+    "mean": 17.935483761866337,
+    "mean_absolute": 18.0277469541489,
+    "minimum": -192.5833333333337,
+    "maximum": 300.00000000000307,
+    "negative_hours": 6
+  },
+  "source_qualified_dispatch_hours": 8663,
+  "gamma": 0.30012075175285535,
+  "HQ_channel_interpretation": "HQ-NY includes Chateaugay wheel-through; HQ_IMPORT_EXPORT overlaps that channel; Cedars is a distinct path. Independently corroborated by provider2019 annual scheduled transaction table, not Moses fitting.",
+  "HQ_primary_annual_source": "https://www.nyiso.com/documents/20142/2226333/2020-Gold-Book-Final-Public.pdf/9ff426ab-e325-28bc-97cf-106d792593a1",
+  "prescribed_regional_generation_policy": "snapshot regional PG proportions of regional load plus signed aggregate schedule; no north/west Ontario tie split observation",
+  "Ontario_D_control_representation": "single aggregate branch211 bus48(MOSES E) to bus100(PHAS); fixed zero phase shift; no hourly StLawrence PAR control",
+  "north_tie_branch211": [
+    48.0,
+    100.0,
+    0.001,
+    0.1595,
+    0.0,
+    450.0,
+    450.0,
+    450.0,
+    1.0,
+    0.0,
+    1.0,
+    -360.0,
+    360.0
+  ],
+  "modeled_yearly_means": {
+    "2019": {
+      "D_native_generation_public_mw": 928.2028940394754,
+      "HQ_Cedars_signed_public_mw": 1247.5742600564388,
+      "D_load_public_mw": 401.5044279800653,
+      "Ontario_northern_to_D_public_mw": 27.92573392965145,
+      "Ontario_western_to_A_public_mw": 690.1570684196253,
+      "modeled_Moses_D_to_E_public_mw": 1802.198460045501,
+      "D_cutset_identity_residual_mw": -1.9518836065446404e-13,
+      "ISONE_net_export_public_mw": -655.6663474973197,
+      "ONTARIO_net_export_public_mw": 718.0828023492631,
+      "PJM_net_export_public_mw": 1331.0316458996483
+    },
+    "2025": {
+      "D_native_generation_public_mw": 1050.0571377438328,
+      "HQ_Cedars_signed_public_mw": -546.983046596637,
+      "D_load_public_mw": 601.2963304859749,
+      "Ontario_northern_to_D_public_mw": 420.3099471230281,
+      "Ontario_western_to_A_public_mw": 340.0824153668698,
+      "modeled_Moses_D_to_E_public_mw": 322.08770778424906,
+      "D_cutset_identity_residual_mw": -1.426086433200189e-13,
+      "ISONE_net_export_public_mw": -499.06013183141584,
+      "ONTARIO_net_export_public_mw": 760.3923624898991,
+      "PJM_net_export_public_mw": 2482.2756215321865
+    }
+  },
+  "P34": [
+    {
+      "year": 2019,
+      "ptid_sum_original_sign": {
+        "hours": 8445,
+        "mean": 6.602208407341622,
+        "mean_absolute": 51.527851983422146,
+        "minimum": -234.30833333333334,
+        "maximum": 230.86666666666667,
+        "negative_hours": 3818
+      },
+      "source_gap_hours": 315,
+      "sign_not_selected_by_Moses_observations": true
+    },
+    {
+      "year": 2025,
+      "ptid_sum_original_sign": {
+        "hours": 8673,
+        "mean": 24.39042834082786,
+        "mean_absolute": 96.67145220800184,
+        "minimum": -333.1166666666667,
+        "maximum": 365.43333333333334,
+        "negative_hours": 3664
+      },
+      "source_gap_hours": 87,
+      "sign_not_selected_by_Moses_observations": true
+    }
+  ],
+  "P53A_January_probe": {
+    "scope": "January2025 only; full-year download not performed because zero-target hypothesis failed",
+    "files": 31,
+    "records": 1488,
+    "nonzero_values": 1026,
+    "minimum": -25.0,
+    "maximum": 25.0,
+    "mean": -8.871908602150539,
+    "sign_still_unverified": true,
+    "source_url": "https://mis.nyiso.com/public/txt/parSchedule/20250101parSchedule_txt.zip",
+    "definition_url": "https://mis.nyiso.com/public/txt/parSchedule/defineParSchedule.doc",
+    "definition_finding": "Header specifies starting time/date, minute step, number of steps and PARs; data rows contain PTID, Control(L or G), and hourly MWs. Definition labels the control code but does not define geographic positive-flow direction."
+  },
+  "created_utc": "2026-10-11T06:20:10.836114+00:00",
+  "audit_script_sha256": "e9fa5fbbfdabc9734e2b893377bd292d9631a50a476496d005cdaeafd84a4f27",
+  "source_extraction_focused_checks": {
+    "constant_hour_and_next_hour_boundary": true,
+    "unbracketed_hour_remains_NaN": true,
+    "long_gap_rejected_without_interpolation": true,
+    "two_fall_folds_preserved_from_raw_rewind": true,
+    "unsupported_fold_fails_closed": true
+  },
+  "primary_sources": [
+    {
+      "url": "https://mis.nyiso.com/public/P-34list.htm",
+      "role": "official PAR archive index"
+    },
+    {
+      "url": "https://www.nyiso.com/documents/20142/3691300/Winter2016-17_Operating_Study_Approved_OC_12-15-2016_Appendices.pdf/abf1af25-5b11-8303-4a42-273c60867fef",
+      "role": "page57 maps PTID25118/25119 to StLawrence PS33/PS34 and distinguishes physical line PTID25026/25037"
+    },
+    {
+      "url": "https://www.nyiso.com/documents/20142/3691300/Summer2025-OperatingStudy-APPROVED.pdf/3aaa5eb6-9fa4-53b5-181a-189e3ac52fcb",
+      "role": "2025 operating context; separate Chateaugay wheel-through and Cedars paths"
+    },
+    {
+      "url": "https://ieso.ca/-/media/Files/IESO/Document-Library/planning-forecasts/reliability-outlook/TTCMethodology.pdf",
+      "role": "section5.5 two230kVStLawrencecircuits controlled by PARs"
+    }
+  ],
+  "frozen_inputs": [
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58",
+      "unchanged": true
+    }
+  ],
+  "source_direction_promotion_status": "pending independent P34 direction evidence; no model changes or sign tuning performed"
+}

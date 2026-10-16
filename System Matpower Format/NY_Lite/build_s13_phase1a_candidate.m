@@ -2,7 +2,10 @@ function out = build_s13_phase1a_candidate(options)
 %BUILD_S13_PHASE1A_CANDIDATE Build registers and structural-gate evidence.
 
 if nargin < 1, options = struct(); end
-if ~isfield(options, 'write_outputs'), options.write_outputs = true; end
+% Phase 1A is an immutable checkpoint.  The advancing cumulative S13 case
+% owns the canonical register sidecars, so a standalone Phase 1A rebuild is
+% read-only unless a caller explicitly requests output regeneration.
+if ~isfield(options, 'write_outputs'), options.write_outputs = false; end
 if ~isfield(options, 'verbose'), options.verbose = true; end
 
 helper_dir = fileparts(mfilename('fullpath'));

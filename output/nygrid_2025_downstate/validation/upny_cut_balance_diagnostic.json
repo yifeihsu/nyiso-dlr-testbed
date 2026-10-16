@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "scope": "UPNY legacy accounting cut only; does not certify physical2025 flowgate membership",
+  "equation": "UPNY AC import = gross load(H,I,J,K) - generator output(H,I,J,K) - net scheduled DC injection(H,I,J,K); fixed shunt GS is zero.",
+  "consequence": "With these exact zonal quantities and signed DC channels held fixed, branch R/X, added station detail, project topology, PAR settings and within-zone landing changes cannot improve or worsen this UPNY proxy. Its unchanged WAPE is a cut-balance invariant, not evidence that topology is accurate.",
+  "variants": [
+    {
+      "variant": "expanded_identity",
+      "hours": 8663,
+      "maximum_cut_balance_error_model_mw": 3.637978807091713e-11,
+      "mean_downstream_need_public_equivalent_mw": 2967.5550946525373
+    },
+    {
+      "variant": "source_detail_2019",
+      "hours": 8663,
+      "maximum_cut_balance_error_model_mw": 9.026734915096313e-11,
+      "mean_downstream_need_public_equivalent_mw": 2967.5550946525373
+    },
+    {
+      "variant": "upgrades_year_end",
+      "hours": 8663,
+      "maximum_cut_balance_error_model_mw": 2.544311428209767e-10,
+      "mean_downstream_need_public_equivalent_mw": 2967.5550946525373
+    },
+    {
+      "variant": "upgrades_dated",
+      "hours": 8663,
+      "maximum_cut_balance_error_model_mw": 2.0395418687257916e-10,
+      "mean_downstream_need_public_equivalent_mw": 2967.5550946525373
+    },
+    {
+      "variant": "assets_year_end",
+      "hours": 8663,
+      "maximum_cut_balance_error_model_mw": 2.88082446786575e-10,
+      "mean_downstream_need_public_equivalent_mw": 2967.5550946525364
+    },
+    {
+      "variant": "assets_dated",
+      "hours": 8663,
+      "maximum_cut_balance_error_model_mw": 2.2328094928525388e-10,
+      "mean_downstream_need_public_equivalent_mw": 2967.5550946525364
+    },
+    {
+      "variant": "nyes_assumption_year_end",
+      "hours": 8663,
+      "maximum_cut_balance_error_model_mw": 2.014530764427036e-10,
+      "mean_downstream_need_public_equivalent_mw": 2967.5550946525364
+    }
+  ],
+  "network_sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+}

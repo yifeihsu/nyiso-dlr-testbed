@@ -1,0 +1,252 @@
+{
+  "passed": true,
+  "review_kind": "fresh_runtime_loader_and_policy_without_PF",
+  "model_sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8",
+  "setup": {
+    "package_root": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems",
+    "runtime_root": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_moses_repair\\delivery\\runtime",
+    "model_file": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_moses_repair\\model\\latest_model.mat",
+    "model_sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8",
+    "matpower_root": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower",
+    "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+    "MATPOWER_version": "8.1",
+    "source_model_commit": "f6c124a97b16f45a98a538c121c6006556255005",
+    "hours": 8760,
+    "source_qualified_hours": 8651,
+    "topology_states": 4,
+    "retained_bus_count": 148,
+    "generator_count": 1466,
+    "fixed_transfer_records": 6,
+    "historical_model_loader_required": false,
+    "persistent_user_path_changed": false,
+    "function_resolution": [
+      {
+        "function": "setup_nygrid_latest",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_moses_repair\\delivery\\runtime\\setup_nygrid_latest.m"
+      },
+      {
+        "function": "load_nygrid_latest",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_moses_repair\\delivery\\runtime\\load_nygrid_latest.m"
+      },
+      {
+        "function": "run_nygrid_latest_acpf",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_moses_repair\\delivery\\runtime\\run_nygrid_latest_acpf.m"
+      },
+      {
+        "function": "screen_nygrid_latest_dlr",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_moses_repair\\delivery\\runtime\\screen_nygrid_latest_dlr.m"
+      },
+      {
+        "function": "nylatest_coupled_solve",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_moses_repair\\delivery\\runtime\\kernels\\nylatest_coupled_solve.m"
+      },
+      {
+        "function": "nylatest_compact_build",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_moses_repair\\delivery\\runtime\\kernels\\nylatest_compact_build.m"
+      },
+      {
+        "function": "nylatest_thermal_candidates",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_moses_repair\\delivery\\runtime\\kernels\\nylatest_thermal_candidates.m"
+      },
+      {
+        "function": "runpf",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\runpf.m"
+      },
+      {
+        "function": "makeYbus",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\makeYbus.m"
+      },
+      {
+        "function": "pfsoln",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\pfsoln.m"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "hour_index": 1,
+      "month_local": 1,
+      "PV20_PG_model_MW": -19.377796538176025,
+      "PV20_PG_public_MW": -64.566666666666663,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 19.377796538176025,
+      "unit26_active_status": 0,
+      "unit21_active_status": 1,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 745,
+      "month_local": 2,
+      "PV20_PG_model_MW": -18.990140567161923,
+      "PV20_PG_public_MW": -63.275,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 18.990140567161923,
+      "unit26_active_status": 0,
+      "unit21_active_status": 1,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 1417,
+      "month_local": 3,
+      "PV20_PG_model_MW": -19.935520935183416,
+      "PV20_PG_public_MW": -66.425,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 19.935520935183416,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 2160,
+      "month_local": 4,
+      "PV20_PG_model_MW": -29.406831659250606,
+      "PV20_PG_public_MW": -97.98333333333332,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 29.406831659250606,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 2880,
+      "month_local": 5,
+      "PV20_PG_model_MW": -20.03806219203231,
+      "PV20_PG_public_MW": -66.766666666666666,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 20.03806219203231,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 3624,
+      "month_local": 6,
+      "PV20_PG_model_MW": -27.511068910678414,
+      "PV20_PG_public_MW": -91.666666666666686,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 27.511068910678414,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 4087,
+      "month_local": 6,
+      "PV20_PG_model_MW": 0,
+      "PV20_PG_public_MW": 0,
+      "PV20_active_status": 0,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 0,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 4344,
+      "month_local": 7,
+      "PV20_PG_model_MW": -17.897200829528607,
+      "PV20_PG_public_MW": -59.633333333333333,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 17.897200829528607,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 5088,
+      "month_local": 8,
+      "PV20_PG_model_MW": -22.118899404185441,
+      "PV20_PG_public_MW": -73.7,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 22.118899404185441,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 5832,
+      "month_local": 9,
+      "PV20_PG_model_MW": -21.163515011105517,
+      "PV20_PG_public_MW": -70.516666666666666,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 21.163515011105517,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 6552,
+      "month_local": 10,
+      "PV20_PG_model_MW": -29.899529893378215,
+      "PV20_PG_public_MW": -99.625,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 29.899529893378215,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 6726,
+      "month_local": 10,
+      "PV20_PG_model_MW": -44.492901447360808,
+      "PV20_PG_public_MW": -148.25,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 44.492901447360808,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 7296,
+      "month_local": 11,
+      "PV20_PG_model_MW": -28.428938209789223,
+      "PV20_PG_public_MW": -94.725,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 28.428938209789223,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    },
+    {
+      "hour_index": 8017,
+      "month_local": 12,
+      "PV20_PG_model_MW": -26.153022508996738,
+      "PV20_PG_public_MW": -87.141666666666666,
+      "PV20_active_status": 1,
+      "PV20_Qcap_MVAr": 0,
+      "PV20_assumed_Scap_MVA": 26.153022508996738,
+      "unit26_active_status": 1,
+      "unit21_active_status": 0,
+      "external_loss_budget_MW": 3,
+      "fixed_boundary_unchanged_under_loss_allocation": true
+    }
+  ],
+  "source_extreme_and_monthly_first_qualified_selection": true,
+  "all_thermal_tables_and_prior_physical_repair_metadata_unchanged": true,
+  "new_AC_solves": 0
+}

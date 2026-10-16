@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "checks_run": 18,
+  "checks": [
+    {
+      "name": "initial render has148records/145geographic nodes/eight additions",
+      "passed": true
+    },
+    {
+      "name": "all branch classes and263mapped/15unlocated counts match source",
+      "passed": true
+    },
+    {
+      "name": "full andDownstate framing work without changing nodes",
+      "passed": true
+    },
+    {
+      "name": "zoom buttons/wheel modify viewport andpreserve geographic centers",
+      "passed": true
+    },
+    {
+      "name": "each layer toggles geometry, hit targets andcounts",
+      "passed": true
+    },
+    {
+      "name": "layer combinations survive view changes",
+      "passed": true
+    },
+    {
+      "name": "all eight station selections showcorrectnamesIDsand345kV",
+      "passed": true
+    },
+    {
+      "name": "every branch type is inspectable includingparallel bundles",
+      "passed": true
+    },
+    {
+      "name": "record visibility message stayscurrent withlayer toggles",
+      "passed": true
+    },
+    {
+      "name": "clearbutton restores normalopacity andempty busselection",
+      "passed": true
+    },
+    {
+      "name": "Escape/background/empty busoption clear selection",
+      "passed": true
+    },
+    {
+      "name": "three proxies have no inventedmarkers andincidentlinks areinspectable",
+      "passed": true
+    },
+    {
+      "name": "labels off/on andall-label mode update",
+      "passed": true
+    },
+    {
+      "name": "hover tooltip clamps toviewport andhides",
+      "passed": true
+    },
+    {
+      "name": "buskeyboardactivation andmapkeyboardzoom work",
+      "passed": true
+    },
+    {
+      "name": "drag pans withcapture andnext deliberateclick stillselects",
+      "passed": true
+    },
+    {
+      "name": "resize preserves geographic geometry andfiniteviewport",
+      "passed": true
+    },
+    {
+      "name": "no runtimeconsoleerrors or external runtime assets",
+      "passed": true
+    }
+  ],
+  "method": "Behavioral DOM events with LinkeDOM and explicit geometry/layout stubs; no browser or network server",
+  "browser_visual_verification": false,
+  "native_pointer_hit_testing": false,
+  "reason": "Automatic approval review blocked starting the local HTTP preview server; no alternate server or browser workaround attempted",
+  "html_sha256": "3c49b0d9c6bef5623b1150d9e85bd111d2666c7f0e3703ff0275b639d867832e",
+  "test_code_sha256": "b2e1c889b6ac8a02cdf12e43c059f9074bfd41fc3a181ec5ccbba97db8ae01a5",
+  "node_version": "v22.19.0",
+  "linkedom_version": "0.18.12"
+}

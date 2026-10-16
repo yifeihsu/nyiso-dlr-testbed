@@ -1,0 +1,276 @@
+{
+  "scope": "full2019 source reproduction plus derived DC thermal screening",
+  "created_utc": "2026-10-07T05:26:09.989845+00:00",
+  "checks": {
+    "verified_utc": "2026-10-07T05:26:09.989845+00:00",
+    "passed": true,
+    "input_and_component_manifest_entries_verified": 116,
+    "independent_thermal_exposure_recounts": 4,
+    "annual_hours": 8760,
+    "synthetic_branches": 39,
+    "physical_DLR_qualified": false,
+    "full_vs_reduced_exact_equivalence": false
+  },
+  "files": [
+    {
+      "path": "NYGRID_2019_DLR_REBUILD.md",
+      "bytes": 12401,
+      "sha256": "fdf46d06ab618b3e696632442475da20f2d73757b466bc0f35824b7b2b2eccd7"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/branch_register.csv",
+      "bytes": 75337,
+      "sha256": "9d193aaa8db0cbdfe163486ced8596748dfbf87f2689b32af7f7d8d5707c852a"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/branch_register_manifest.csv",
+      "bytes": 2404,
+      "sha256": "680d7e69430f2d87263ad15a69917d96775b8e964db9e1681b77108bb020d24d"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/branch_register_summary.json",
+      "bytes": 1952,
+      "sha256": "0b08067386a1c1af8a57762f2898a4e39a1d99ef99546a354cdb272324f622cc"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_instrumentation.patch",
+      "bytes": 788,
+      "sha256": "93db7db685c25074cbde8cfc97738264f895587a3beacc9bc12e143d01661abc"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_inventory.csv",
+      "bytes": 1342,
+      "sha256": "851182ede0bbe7211b38633b33ff182ffd374412c12fdd2665d306cfa9fd7d37"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_preparation_manifest.json",
+      "bytes": 12385,
+      "sha256": "323aeeb349d38dd8ade02cba8933dfdfae90961b37d1558314c971f67ea4bf4a"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_run_summary.json",
+      "bytes": 327,
+      "sha256": "38292edca5bd574855afa49849647ac1424f330953c827b0edf3b19b395c6f96"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/capture_validation_manifest.json",
+      "bytes": 3162,
+      "sha256": "0e373c65320fcf311f3aee779576ba781c2283f3b7761a64b5de5c9556d632a3"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/captured_stages.mat",
+      "bytes": 1558592,
+      "sha256": "8edf15551ed7b87b0f5bb4672b90a3702a78c2f881d57154d7f0f4081fc1c56d"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/clean_rebuild_verification.json",
+      "bytes": 1172,
+      "sha256": "1bebcee7a2be485b2d5e057927294b0714b7378dacd7d1cc83093a47096dd659"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/delivery_checks.json",
+      "bytes": 320,
+      "sha256": "83b4bf2b0d6da57b09328602281fa31c7e28fde0b65bd4a6dd8b4df89ff11cf1"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_loader_validation.csv",
+      "bytes": 1568,
+      "sha256": "53a361862874fd0f5730183420a3b1ec95b07a63b07840cdaff4ca9770858368"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_loader_validation.json",
+      "bytes": 644,
+      "sha256": "b91c412a753dec4c79d74df72ee75322d4bb27e543115e382d7971f1b7d44f40"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "bytes": 67880039,
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year_branch_correspondence.csv",
+      "bytes": 2609,
+      "sha256": "a418cc0ef05576ef0acc47c6a3f46b6b75574da35aa967ba30e7e4777ac71fc0"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year_capture_checks.csv",
+      "bytes": 2759,
+      "sha256": "97c6d96e40a4934c56917be8f75d54f7e44033f23d00724118b09db699ba98dd"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year_hourly.csv",
+      "bytes": 2154837,
+      "sha256": "c3cc91317e97dbb5034af05080a7f95e9a63787bec2dd31f69657e9a543db462"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year_interface_metrics.csv",
+      "bytes": 1349,
+      "sha256": "e9f089793924b9f5f2ae533bc98bd61f9e481cca17bf6ef9943693e9bf66de23"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year_source_manifest.csv",
+      "bytes": 18408,
+      "sha256": "907a5bc1b2dd71ccc57e1fb5d9732d8b008316b0f09b6ebba5ae3ba84123630a"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year_summary.json",
+      "bytes": 6460,
+      "sha256": "f2356db0d857accb05e58adfb6406e4ab0fa337485e372a87b524a132f9ffc0c"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/matlab_capture.log",
+      "bytes": 1479,
+      "sha256": "95b297993478015c4932ee96924cae12397fe061ef59afe6f3911ef2a35380d6"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/matlab_full_loader_validation.log",
+      "bytes": 2399,
+      "sha256": "87bf325ef9bdf7893ac4b12093a411578c65175a84e362a523f2e457f318bc2d"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/matlab_thermal.log",
+      "bytes": 2576,
+      "sha256": "4e3d2e5dd9c45f2e9c04036ee832bf6a6c35d2836a507260f76004e56e2ba593"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/paper_source_discrepancy.json",
+      "bytes": 945,
+      "sha256": "a44f8288d4519f98ffaeb305d1a8a2d61a82936fd90b253b2edd8f4507e8c6ab"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/reduced_branch_crosswalk.csv",
+      "bytes": 10821,
+      "sha256": "15a1415bd80c3d6c3b4441f2ca2245489d9f7db7cea7405d3af538ba6832b569"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/reduced_source_recheck.csv",
+      "bytes": 1741777,
+      "sha256": "008f8e318a96b9339e2d6a2dfc88086984f680bcfa486b07fc38b365e0ad8a4a"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/reduced_source_recheck.json",
+      "bytes": 6492,
+      "sha256": "bb1950380b42ee7d4ab9dfb497c0b3196adf039c43146181ae49059f83f6f7c3"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/source_branch_lineage.csv",
+      "bytes": 35432,
+      "sha256": "70cff6f739ade199e558bbab1b10add551a49cec8cb1ba10d898628330281136"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/synthetic_conductor.csv",
+      "bytes": 605,
+      "sha256": "db536dc0f98078a6b81a0efbf2129fe778c4f38dd02608e64b1696c01b06603f"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/synthetic_dlr_capacities.csv",
+      "bytes": 18424,
+      "sha256": "f59f1f7ceafd0a6fde518774996742969545de913afe6ac5fb4d2ac74cbc4090"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/synthetic_dlr_hourly.csv",
+      "bytes": 1981052,
+      "sha256": "fe148f9b9cc76eecfe913d17070600e2d87b15b470158edba6c5421fc61f6cac"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/synthetic_dlr_scope.json",
+      "bytes": 863,
+      "sha256": "65fa114b6b583e8fc884d3dab417b23ba15b4fc64a223830f128e74286debb42"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/synthetic_dlr_selection.csv",
+      "bytes": 4965,
+      "sha256": "13e6b21d6d3ca8faef2852fa11b90e1375eb358b3798d45498c5a372a71c92e3"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/synthetic_dlr_summary.csv",
+      "bytes": 533,
+      "sha256": "355397a785990a8a35a4a0425154df2759d39249a67e4ec95711f155476c1b4a"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/synthetic_thermal_tests.csv",
+      "bytes": 521,
+      "sha256": "6b3ef653cb511db8dfa97646514e202578055ed4b17c4fd6450e1c2092db2b85"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/synthetic_weather_scenarios.csv",
+      "bytes": 227,
+      "sha256": "7c74c3a34743c6cf6c64674f5c7ebf3da77b5ebb8773e176dcedcb8c1ea4ebad"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/build_branch_register.py",
+      "bytes": 21013,
+      "sha256": "81763f4c8a7b67742a008ad1d353018959964ba178e8a7e1d8010113653183ef"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/capture_full_stages.m",
+      "bytes": 5375,
+      "sha256": "aee80f7a736b71a4b56267140bbc501676afdec6acdf9b9b5543ee58fb3f6425"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/finalize_evidence.py",
+      "bytes": 8133,
+      "sha256": "127b469ef1ca0f8f93855d4457ca53f04ec52c2ba5f3f0a4e76c21418ee84cbf"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/prepare_capture.py",
+      "bytes": 6867,
+      "sha256": "2ae2ab13e72c9080408c5bdc7f37be9c7b38dd803b85dbef4bd3bc82d12ada6d"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/README.md",
+      "bytes": 4786,
+      "sha256": "6ba910c986b376c4d4d1b0f5eef940f4892a4dd4ee33c0e569b075b02b6a64ee"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/replay_full_year.py",
+      "bytes": 29720,
+      "sha256": "f1e9fbced8a577e3fff3df54ca9029e743caac2bfcec726103b1e56e64612538"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/run_dc_thermal_scenarios.m",
+      "bytes": 7207,
+      "sha256": "8fe5af41847f80c09a8cb1cc2fa24e6422976617f647de7825ce5b432e44a15c"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/validate_full_loader.m",
+      "bytes": 4020,
+      "sha256": "63d8dea104f4a3de96cbb3b2bc1ab1af4aa3b55ad527935407eb6f28ba6e9280"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2019_full_dc.m",
+      "bytes": 2604,
+      "sha256": "57a4538c19fbc80c9333a548c22d53c33d61970a8bb115664d7e44c4ccd70bf9"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/dlr_conductor_library.m",
+      "bytes": 1654,
+      "sha256": "1e2f233c615c4605b09f60c2358632b11d75b58f0a0aa86b90e413ed6c21736d"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/dlr_heat_balance.m",
+      "bytes": 3183,
+      "sha256": "9a17663131eabae61c3d4cefff5a7d726c9ae81711c21992836411062416fed1"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/dlr_steady_ampacity.m",
+      "bytes": 660,
+      "sha256": "413f4e1ab85d076f2678873ecc3361a46919020819dd304e051755008caf5fa4"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/dlr_temperature_trace.m",
+      "bytes": 2062,
+      "sha256": "a1c40f431ba0703576ef2c5d797fbb1a89f83bd96d85fa52cb203f5c0d4719ee"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/fixtures/dlr_nrel_reference.csv",
+      "bytes": 2348,
+      "sha256": "081a85f8598016667c16372897aebda986a1ada937ab096b4c8dba02da3a9c0b"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/test_dlr_thermal_model.m",
+      "bytes": 3338,
+      "sha256": "7b8b265ac3d161423ebc906cf1f09148447093221238608272e9721f4f5ae0ca"
+    }
+  ]
+}

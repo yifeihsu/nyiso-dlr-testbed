@@ -29,7 +29,9 @@ generation_prior = readtable(fullfile(helper_dir, ...
     'VariableNamingRule', 'preserve');
 
 source = loadcase('nyiso_On_Peak_v23_shunts_as_z_load');
-s13 = loadcase('npcc_ny_lite_s13_npcc_augmented_2019');
+checkpoint = build_s13_phase1a_candidate(struct( ...
+    'write_outputs', false, 'verbose', false));
+s13 = checkpoint.candidate;
 s13 = attach_nyiso_zone_metadata(s13);
 s7 = loadcase('npcc_ny_lite_s7_seven_interface_perform_direct_candidate');
 s12_data = load(fullfile(helper_dir, 's12_case.mat'), 's12');

@@ -1,0 +1,54 @@
+{
+  "reviewed_date_utc": "2026-10-15",
+  "status": "source_conventions_verified_with_explicit_unresolved_physical_meter_scope",
+  "sources": [
+    {
+      "title": "EIA930 reporting instructions",
+      "url": "https://www.eia.gov/survey/form/eia_930/instructions.pdf",
+      "local_path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_instructions.pdf",
+      "inspected_pages_1based": [3, 5, 7],
+      "supports": "Hourly integrated MW, nearest integer, UTC hour ending. FLOW is net metered tie line flow, positive outward from reporting BA. Bilateral codes identify directly physically connected BAs. This supports hour-ending minus1hour and negative NYIS-to-HQT as imports to NY. It does not provide a Chateauguay/Cedars split."
+    },
+    {
+      "title": "NYISO PAR Flow Direction Diagrams",
+      "url": "https://www.nyiso.com/documents/20142/2268519/ParFlowDiagrams27.pdf/7bd78df8-311c-0b29-fa3f-ba0c8a51d123",
+      "local_path": "output/nygrid_2025_par_controls/sources/direction/direction_verification_receipt.json",
+      "inspected_pages_1based": [7, 26],
+      "supports": "Existing visual verification receipt establishes positive PTID25118/L33P/PS33 and PTID25119/L34P/PS34 as IESO StLawrence230kV to NYISO Moses230kV, effective2024-12-03. Current document was published2026-07-17 but explicitly states the2024effective date. No observation-fit sign is used."
+    },
+    {
+      "title": "NYISO Phase Angle Regulator Flows public P34 archive",
+      "url": "https://mis.nyiso.com/public/P-34list.htm",
+      "supports": "Public daily and monthly source archive for actual PAR flows. Native2025 CSV fields Timestamp, PointID and Flow(MWH) are preserved. The public index inspected does not establish preceding-versus-following sample-interval semantics."
+    },
+    {
+      "title": "NYISO Summer2025 Operating Study",
+      "url": "https://www.nyiso.com/documents/20142/3691300/Summer2025-OperatingStudy-APPROVED.pdf/3aaa5eb6-9fa4-53b5-181a-189e3ac52fcb",
+      "local_path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Summer2025_OperatingStudy_APPROVED.pdf",
+      "printed_page": 19,
+      "supports": "Identifies Chateauguay-Massena MSC7040 and Dennison ties. Distinguishes NYCA-delivery limit from larger7040 real-time capability with wheel-through; lists separate Cedars/Dennison capabilities. These are operating limits and connection evidence, not hourly meter telemetry, allocation fractions or complete MosesSouth meter membership."
+    },
+    {
+      "title": "Hydro Quebec New York market connections",
+      "url": "https://www.hydroquebec.com/clean-energy-provider/markets/new-york.html",
+      "supports": "Primary history identifies LesCedres-Dennison intertie and Chateauguay-Marcy765kV connection with ChateauguayDC conversion. It does not validate2025hourly interchange measurements or the reduced model's bus-level distribution."
+    },
+    {
+      "title": "Hydro Quebec imports and exports by market with wheeling",
+      "url": "https://hydroquebec.opendatasoft.com/explore/dataset/importations-exportations-avec-transits/?flg=fr-fr",
+      "supports": "Dataset description states hourly updates, net imports/exports including transits, only48hours temporal coverage, and extraction/modeling from public sources external to HydroQuebec. It is not an independent annual2025counterparty meter series."
+    },
+    {
+      "title": "NYISO P930B daily EIA submission index",
+      "url": "https://mis.nyiso.com/public/P-930Blist.htm",
+      "supports": "Direct NYISO daily submissions are a possible same-respondent version crosscheck. The rolling public index is not a complete2025archive as of2026-10-15 and has not been used as a replacement."
+    }
+  ],
+  "HQ_channel_accounting": {
+    "current_actual": "NYIS HQT physical BA aggregate once",
+    "historical_schedule_comparator": "SCH-HQ-NY plus SCH-HQ_CEDARS",
+    "do_not_sum_overlapping_channel": "SCH-HQ_IMPORT_EXPORT overlaps SCH-HQ-NY and excludes wheel-through in the existing P32 channel interpretation; adding all3would double count",
+    "physical_landing": "Existing2025 HQ-NewYork paths enter the northern NY area, but the current generator collapses them to a coarse areaD injection. Aggregate EIA930cannot validate separate bus allocations or the public MosesSouth cut."
+  },
+  "replacement_decision": "No independently established source correction found or promoted. Preserve signs, physical UTC hours, current boundary inputs and source-quality cohort."
+}

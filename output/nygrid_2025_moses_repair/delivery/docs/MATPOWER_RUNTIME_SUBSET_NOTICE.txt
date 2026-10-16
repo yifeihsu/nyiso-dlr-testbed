@@ -1,0 +1,10 @@
+This folder is a code-only runtime subset of MATPOWER 8.1, MIPS 1.5.2,
+MP-Opt-Model 5.0, and MP-Test 8.1 for the current NYGRID model.
+It is not the complete MATPOWER distribution. Distributed case data, examples,
+tests, docs, MOST, and optional solver binaries are omitted.
+Unmodified component source code and retained LICENSE/AUTHORS/CITATION files
+govern redistribution. The separate model data are this package's synthetic
+study model, not MATPOWER-distributed case data.
+MATLAB and MathWorks toolboxes are external prerequisites and are not bundled.
+Use setup_nygrid_latest; the full MATPOWER installer/test suite is not shipped.
+Official sources: https://matpower.org/license/ and https://github.com/MATPOWER/matpower

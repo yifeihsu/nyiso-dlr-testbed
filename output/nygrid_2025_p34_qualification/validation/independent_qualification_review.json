@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "reviewed_utc": "2026-10-12T17:11:08.492907+00:00",
+  "scope": "Independent qualification consumer/producer/test and finalizer code review; report and DLR claim-scope review; no new numerical model replay",
+  "qualification_tests_independently_passed": 7,
+  "corrupt_contract_variants_in_test_suite": 12,
+  "previously_accepted_promotions_independently_rechecked_and_rejected": [
+    "native_MW_flag_changed_without_primary_evidence",
+    "Dover_historical_sign_flag_changed_without_date_evidence",
+    "empty_evidence_dependency_set"
+  ],
+  "resolved_findings": [
+    {
+      "finding": "Consumer gate trusted qualification flags without validating their relationship to pinned primary evidence.",
+      "resolution": "Required evidence dependencies plus source-bound unit/origin/time-support/device-sign checks now reject unsupported promotions; gamma/time policy and endpoint identity are also checked."
+    },
+    {
+      "finding": "Bound-active hour count could be confused with total bounded-controller hours.",
+      "resolution": "Contract names49 nominal phase-bound-active hours; report qualifies nominal impedance."
+    },
+    {
+      "finding": "Readiness claim scope needed current topology and conditional source semantics.",
+      "resolution": "Assessment and report explicitly bind post-Dover branch ledger, P34 conditional semantics, DC-only current proxy, and claim-specific AC/N-1 requirements."
+    }
+  ],
+  "open_actionable_code_or_scientific_wording_findings": [],
+  "report_numeric_claims_checked_against_saved_numeric_ledgers": true,
+  "independent_raw_data_reaggregation_performed_by_this_review": false,
+  "report_retains_unresolved_native_units_timestamp_origin_and_Dover_2025_sign_date": true,
+  "current_physical_DLR_readiness_not_promoted": true,
+  "readiness_verification": {
+    "hash_entries": 42,
+    "read_only_verify_exit": 0,
+    "physical_DLR_guard_exit": 2,
+    "all6_readiness_outputs_byte_unchanged": true
+  },
+  "finalizer_review": {
+    "passed": true,
+    "checks_required_receipts_and_scope": true,
+    "verifies_preserved_Dover_delivery_bytes": true,
+    "manifest_excludes_itself_and_verification_does_not_rebuild_models": true,
+    "full_sealing_execution_owned_by_parent": true,
+    "publication_drift_proof_required_and_script_output_hashes_checked": true,
+    "publication_comparison_cardinality_and_values_independently_inspected": "Four required PTIDs,288 records each in both2025-12-19 releases, identical timestamps and values; no native-unit or measurement-origin proof inferred."
+  },
+  "dependencies": {
+    "scripts/nygrid_2025_p34_qualification/qualification.py": "b10c2e5c14cb8ec25fe53df908e4fd28d12cc1672c2dc5e56242a3aef040574a",
+    "scripts/nygrid_2025_p34_qualification/build_contract.py": "7e65311c707e1834289936499839a0f8af855413ea6260fc192ad389620e5997",
+    "scripts/nygrid_2025_p34_qualification/test_qualification.py": "740ce65276ebb63cd8766d69e03e3a0d928f6aecf069bcb82c61ef50aa5dce33",
+    "scripts/nygrid_2025_p34_qualification/finalize_qualification.py": "c7926c24edf345e6efaf170328fd254e5ffa832bcc97367a832a55f54d432e5f",
+    "output/nygrid_2025_p34_qualification/P34_qualification_contract.json": "8434501069ca1e2766a42313ecede00d45f4c2637141412955c79f90b302c0ec",
+    "output/nygrid_2025_p34_qualification/qualification_validation.json": "09eb58fa35fbd520f3fd4d72a4cf94b8b22d9584e4b2a39b8b653bdb7da3e55c",
+    "output/nygrid_2025_p34_qualification/sources/primary_evidence_conclusion.json": "8edcc7957deb51e6d9e3d8d3a467936efe28b4c8322567584e014e357721a2db",
+    "output/nygrid_2025_p34_qualification/numeric_audit/unit_scale_plausibility.csv": "9fb3ed941eca55bb8c5606af1ebb09d69aeef6f5cb6b7a9f00e0349e94aaf8e0",
+    "output/nygrid_2025_p34_qualification/numeric_audit/hourly_aggregation_sensitivity.csv": "8d7a62fde281e59433f09bfd9161b1194c4b59e8d40a5944627be6767fd20752",
+    "NYGRID_2025_P34_QUALIFICATION_AND_DLR_READINESS.md": "c5d731f26861b07d4a1afa99cb4d116f3ddf85635b27cd89ca3d374cdeab5189",
+    "scripts/nygrid_2025_dlr_readiness/audit_readiness.py": "4aa25f81b61e283a5120ca754a14e444d51572b1931b1fbb35315dce88e9bb33",
+    "output/nygrid_2025_dlr_readiness/readiness_assessment.json": "ec848b0100c795a5c280a68de019ba1bdd7c250da53280551898b156a25f8b05",
+    "output/nygrid_2025_dlr_readiness/capability_matrix.csv": "10e7ecd615d6bb3c98c74fbb7d87151a208fc740b25766ead12ee7749d6be825",
+    "output/nygrid_2025_dlr_readiness/branch_readiness.csv": "218106c2fb0d06da4bb0ac00b1380da3aef67aa470a6034f5046e21b09047d17",
+    "output/nygrid_2025_dlr_readiness/code_and_data_gaps.csv": "9d1e53827cbe03cc2d5bcf049a4217a99634626df39f237db363864df8a668ee",
+    "output/nygrid_2025_p34_qualification/numeric_audit/publication_drift_check.json": "d2d183799c8000e521fecd9698fd90016b748396510d72b9594ef6bc5dd621f8",
+    "scripts/nygrid_2025_p34_qualification/numeric_audit/compare_dec19_publication.py": "7a9eb87a4284b958b8658e8e8f3c9ee3b0187f0c646c224d85b92f400d2889bf",
+    "output/nygrid_2025_p34_qualification/numeric_audit/December19_publication_comparison.csv": "2541b822dad9df6bd57f366a249a40b553864f599eeaf571b54cd6c93f5e70fd"
+  },
+  "numeric_review_binding": "Published numbers are bound to the two reviewed numeric CSV ledgers; the separately changing fresh-versus-frozen audit receipt is verified by the finalizer, not covered by this code/report review."
+}

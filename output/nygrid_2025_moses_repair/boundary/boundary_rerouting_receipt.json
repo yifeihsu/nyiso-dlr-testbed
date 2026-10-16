@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "hours": 8760,
+  "qualified_hours": 8651,
+  "external_region": "ISONE",
+  "original_ISONE_generator_rows_1based": [
+    1437,
+    1438,
+    1439,
+    1440,
+    1441,
+    1442,
+    1443,
+    1444,
+    1445
+  ],
+  "boundary_generator_row_1based": 1466,
+  "boundary_NY_bus_id": 49,
+  "boundary_positive_direction": "import into New York",
+  "fixed_Q_MVAr": 0,
+  "maximum_regional_total_preservation_error_public_MW": 7.275957614183426e-12,
+  "baseline_global_P_balance_preserved": true,
+  "preserved_other_fuels": true,
+  "preserved_native_generation": true,
+  "per_hour_source_values_fitted_to_internal_interfaces": false,
+  "physical_PV20_meter_equivalence_certified": false,
+  "meter_proxy_assumption": "Sand Bar PAR reading used at the Plattsburgh aggregate port; South Hero net load, intervening losses and bypass differences remain unresolved.",
+  "redistribution": "Bounded weighted least-squares change in the existing ISONE pool, using its unchanged loss-allocation shares as positive weights.",
+  "excluded_hours_modified_in_existing_pool": false,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/PV20_hourly_source.csv",
+      "sha256": "b9aa8d1da50f6f3374e0e9a571156b0123bcdf68f45f5cde269da34157fb0455"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/latest_model.mat",
+      "sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    }
+  ],
+  "output": {
+    "path": "output/nygrid_2025_moses_repair/boundary/boundary_rerouting.mat",
+    "sha256": "60cf14f347b40ff50c8471e9797d8766907db9a44126b6e2b94a55c8afffa0c6"
+  }
+}

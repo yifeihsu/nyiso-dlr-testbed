@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "paired_hours": 8651,
+  "remaining_error_correlation": 0.9982384748333045,
+  "remaining_common_fraction_pair_squared_error": 0.9990755717923301,
+  "component_mean_absolute_values_are_not_additive_error_attributions": true,
+  "internal_observations_used_only_after_reconstruction": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/replay/dated_verified_PAR_flows.mat",
+      "sha256": "4f034589dc10418d391d99cacf5c062b30c5d82308f0c9b73c06e4ae9c8fe6d1"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/corrected/model_generator_register.csv",
+      "sha256": "1211d0f632df2ccd6306ce299de5d24644d4d28d0d987af8421c8b7559a01e21"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+      "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/analyze_effects.py",
+      "sha256": "ab1ded12aa569e8346d782ba1b8883e3eb27a18f2830c59f47229683e15398e6"
+    }
+  ]
+}

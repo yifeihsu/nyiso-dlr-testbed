@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T14:32:48.019053+00:00",
+  "independent_raw_physics_metric_rows_compared": 28,
+  "maximum_MAE_RMSE_bias_difference_MW": 0.0,
+  "maximum_WAPE_recalculation_difference_percentage_points": 1.7763568394002505e-15,
+  "all_8760_rows_and_8651_8170_481_cohorts_verified": true,
+  "no_additional_PF_or_source_mutation": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_physical_repair/independent/interface_metrics.csv",
+      "sha256": "88c633cf67dda7becf9a1067e4b6ac71f562b5de31afa52cef5ea6978d69e6e7",
+      "bytes": 2835
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/public_interface_metrics.csv",
+      "sha256": "6cb5dd4792ce306227cdd8a38c0003f95bf730c997bed79dd19ac49cc8578fc2",
+      "bytes": 270287
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "3297f564d35b7cc1d132eeaa4d1f4054ecc49681b67478b957d6ca5752191245",
+      "bytes": 6290016
+    }
+  ],
+  "producer": {
+    "path": "scripts/nygrid_2025_physical_repair/annual/crosscheck_scoring.py",
+    "sha256": "32e2093db59227d2d3594d111130a210a88c39895a264783f84bbc1632f9f36f",
+    "bytes": 3385
+  }
+}

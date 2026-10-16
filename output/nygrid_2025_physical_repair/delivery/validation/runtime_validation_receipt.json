@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "scope": "Four-state source-repair versus compiled derivative runtime; fresh coupled PF and thermal identity checks",
+  "profile_shards_byte_identical": true,
+  "source_mask_preserved": true,
+  "candidate_receipt_sha256": "3ea77c854ffff4e8eb30fa72fc92296e024cb23eb3744010e276bff49e3fc08f",
+  "model_sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385",
+  "setup": {
+    "package_root": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems",
+    "runtime_root": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_physical_repair\\delivery\\runtime",
+    "model_file": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_physical_repair\\model\\latest_model.mat",
+    "model_sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385",
+    "matpower_root": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower",
+    "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+    "MATPOWER_version": "8.1",
+    "source_model_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+    "hours": 8760,
+    "source_qualified_hours": 8651,
+    "topology_states": 4,
+    "retained_bus_count": 148,
+    "generator_count": 1464,
+    "fixed_transfer_records": 6,
+    "historical_model_loader_required": false,
+    "persistent_user_path_changed": false,
+    "function_resolution": [
+      {
+        "function": "setup_nygrid_latest",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_physical_repair\\delivery\\runtime\\setup_nygrid_latest.m"
+      },
+      {
+        "function": "load_nygrid_latest",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_physical_repair\\delivery\\runtime\\load_nygrid_latest.m"
+      },
+      {
+        "function": "run_nygrid_latest_acpf",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_physical_repair\\delivery\\runtime\\run_nygrid_latest_acpf.m"
+      },
+      {
+        "function": "screen_nygrid_latest_dlr",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_physical_repair\\delivery\\runtime\\screen_nygrid_latest_dlr.m"
+      },
+      {
+        "function": "nylatest_coupled_solve",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_physical_repair\\delivery\\runtime\\kernels\\nylatest_coupled_solve.m"
+      },
+      {
+        "function": "nylatest_compact_build",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_physical_repair\\delivery\\runtime\\kernels\\nylatest_compact_build.m"
+      },
+      {
+        "function": "nylatest_thermal_candidates",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_physical_repair\\delivery\\runtime\\kernels\\nylatest_thermal_candidates.m"
+      },
+      {
+        "function": "runpf",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\runpf.m"
+      },
+      {
+        "function": "makeYbus",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\makeYbus.m"
+      },
+      {
+        "function": "pfsoln",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\pfsoln.m"
+      }
+    ]
+  },
+  "points": [
+    {
+      "hour_index": 523,
+      "passed": true,
+      "loader_arrays_and_metadata_exact": true,
+      "operator_max_error": 0,
+      "voltage_error_pu": 0,
+      "branch_PQ_error_MVA": 0,
+      "generator_PQ_error_MVA": 0,
+      "current_error_A": 0,
+      "loss_budget_error_MW": 0,
+      "thermal_parent_count": 179,
+      "thermal_identity_error_MW": 2.0218543419353585E-11,
+      "VQ_generator_gate": false,
+      "full_operating_gate": false
+    },
+    {
+      "hour_index": 3360,
+      "passed": true,
+      "loader_arrays_and_metadata_exact": true,
+      "operator_max_error": 0,
+      "voltage_error_pu": 0,
+      "branch_PQ_error_MVA": 0,
+      "generator_PQ_error_MVA": 0,
+      "current_error_A": 0,
+      "loss_budget_error_MW": 0,
+      "thermal_parent_count": 179,
+      "thermal_identity_error_MW": 1.4841106208557386E-11,
+      "VQ_generator_gate": false,
+      "full_operating_gate": false
+    },
+    {
+      "hour_index": 4000,
+      "passed": true,
+      "loader_arrays_and_metadata_exact": true,
+      "operator_max_error": 0,
+      "voltage_error_pu": 0,
+      "branch_PQ_error_MVA": 0,
+      "generator_PQ_error_MVA": 0,
+      "current_error_A": 0,
+      "loss_budget_error_MW": 0,
+      "thermal_parent_count": 179,
+      "thermal_identity_error_MW": 1.109914308898563E-11,
+      "VQ_generator_gate": false,
+      "full_operating_gate": false
+    },
+    {
+      "hour_index": 8508,
+      "passed": true,
+      "loader_arrays_and_metadata_exact": true,
+      "operator_max_error": 0,
+      "voltage_error_pu": 0,
+      "branch_PQ_error_MVA": 0,
+      "generator_PQ_error_MVA": 0,
+      "current_error_A": 0,
+      "loss_budget_error_MW": 0,
+      "thermal_parent_count": 180,
+      "thermal_identity_error_MW": 1.383205529281728E-11,
+      "VQ_generator_gate": false,
+      "full_operating_gate": false
+    }
+  ],
+  "annual_replay_claimed": false
+}

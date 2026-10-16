@@ -1,0 +1,69 @@
+{
+  "completed": true,
+  "qualified_fixed_annual_hours": 8494,
+  "original_eight_representatives": [
+    2630,
+    4194,
+    523,
+    4000,
+    8508,
+    8471,
+    8472,
+    3360
+  ],
+  "additional_posthoc_extremes": [
+    4746,
+    4213,
+    4740
+  ],
+  "mean_AC_minus_archived_DC_CE_public_MW": 1046.6498467108627,
+  "mean_same_network_construction_delta_public_MW": 600.3217968864616,
+  "mean_loss_allocation_delta_public_MW": 442.5733529555929,
+  "mean_remaining_after_half_loss_public_MW": 3.754696868807998,
+  "half_loss_remaining_mean_absolute_public_MW": 4.2200125392399235,
+  "half_loss_remaining_maximum_absolute_public_MW": 21.494611366739264,
+  "mean_row224_X_restoration_effect_on_DCF_public_MW": 581.5740760932441,
+  "row224_share_of_mean_construction_difference": 0.9687705479120505,
+  "allocation_convention_sensitivity": [
+    {
+      "allocation": "half_each_runtime_branch_end",
+      "mean_loss_contribution_public_MW": 442.5733529555929,
+      "mean_remaining_public_MW": 3.754696868807998
+    },
+    {
+      "allocation": "all_at_runtime_from_end",
+      "mean_loss_contribution_public_MW": 445.1902701598959,
+      "mean_remaining_public_MW": 1.1377796645049854
+    },
+    {
+      "allocation": "all_at_runtime_to_end",
+      "mean_loss_contribution_public_MW": 439.9564357512899,
+      "mean_remaining_public_MW": 6.3716140731110125
+    }
+  ],
+  "baseline_AC_vs_frozen_compact_interface_maximum_public_MW": 1.9335175238666125e-08,
+  "R0_qualified_hours": [
+    2630,
+    523,
+    4000,
+    8508,
+    3360
+  ],
+  "R0_failed_hours": [
+    4194,
+    8471,
+    8472,
+    4746,
+    4213,
+    4740
+  ],
+  "coherent_old_parent_AC_qualified_hours": 11,
+  "original_DC_vs_fresh_full_parent_parity_model_MW": 2.572733137640171e-10,
+  "all33_X_restored_DCF_vs_archived_all_seven_interfaces_maximum_model_MW": 1.8144419300369918e-10,
+  "findings_are_controlled_model_diagnostics_not_physical_validation": true,
+  "X_only_AC_interventions_create_hybrid_R_X_ratios_and_are_not_repair_candidates": true,
+  "half_loss_allocation_is_nonunique_not_unique_causal_attribution": true,
+  "from_to_allocation_sensitivity_is_not_confidence_interval": true,
+  "no_fit_to_NYISO_observations_performed": true,
+  "production_models_profiles_and_existing_outputs_unchanged": true
+}

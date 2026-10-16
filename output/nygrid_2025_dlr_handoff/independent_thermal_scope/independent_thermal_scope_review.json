@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "scope": "Independent read-only cached-point thermal eligibility/current/heating review; no electrical solve",
+  "all_source_and_operating_qualifications_preserved": true,
+  "source_helper_hashes_stable": true,
+  "fresh_PF_or_OPF_run": false,
+  "physical_asset_DLR_or_feasible_operating_case_claimed": false,
+  "checks": [
+    {
+      "hour_index": 4000,
+      "candidate_parents": 44,
+      "candidate_runtime_rows": 44,
+      "candidate_segments": 44,
+      "excluded_parents": 366,
+      "maximum_series_utilization": 0.13162560950563637,
+      "maximum_section_end_utilization": 0.13216635135275606,
+      "all_candidate_conductor_envelopes_satisfied": true,
+      "inherited_operating_qualified": false,
+      "maximum_independent_Joule_value_error_MW": 9.0205620750793969E-15,
+      "maximum_independent_terminal_current_error_A": 6.1859850575274322E-11,
+      "input_preservation_and_explicit_weather_qualification_key_guards_passed": true,
+      "passed": true
+    },
+    {
+      "hour_index": 8508,
+      "candidate_parents": 46,
+      "candidate_runtime_rows": 46,
+      "candidate_segments": 47,
+      "excluded_parents": 367,
+      "maximum_series_utilization": 0.159493554049539,
+      "maximum_section_end_utilization": 0.15970861221203836,
+      "all_candidate_conductor_envelopes_satisfied": true,
+      "inherited_operating_qualified": false,
+      "maximum_independent_Joule_value_error_MW": 7.4662498406041777E-15,
+      "maximum_independent_terminal_current_error_A": 1.13473674900888E-10,
+      "input_preservation_and_explicit_weather_qualification_key_guards_passed": true,
+      "passed": true
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h4000_cell4.mat",
+      "sha256": "35ec7503525d38c4735dc6edde2672dccb71b106242c6fccf8acb84f9b7c79b8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/h8508_cell4.mat",
+      "sha256": "ca9896d9a5c342deb0c53d6d23021fb558726c777d1316e8976783b86b2b3d3b"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/runtime/nygrid_handoff_thermal_candidates.m",
+      "sha256": "44d5682fa3e8a87c1bec45066d381bcd0cff4d8517efa7904f52bb84e4e2706f"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/runtime/screen_nygrid_2025_loss_pf_thermal.m",
+      "sha256": "535893689a0052cc08b7b604789fead2374c9ff6904792cb312490a8a8663fc9"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/audit_handoff_thermal_scope.m",
+      "sha256": "c50ae00a0fe29cbbf59c23506f853e1f1c5a29101f203eca0046d07a93ce1b5a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_current_audit.m",
+      "sha256": "f14301f156172f08611fe3cc028616e6d8f5158d8b3b7457cd22717f5c6ca234"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_limits.m",
+      "sha256": "926fcaf95dc169d31b55278062178d10b750cf0cdc64aeb5530f1b8ad6015832"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_dlr_handoff/independent_thermal_scope/candidate_ledger_h4000.csv",
+      "sha256": "66d26609c3a05ab5a4d6d119117a4f16ab38d9186604b83b065b332c8e3b2234"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/independent_thermal_scope/independent_segment_currents_h4000.csv",
+      "sha256": "e49547ba4efdb20ace461357a9515ce191b06040c99fff75b86a559307690155"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/independent_thermal_scope/candidate_ledger_h8508.csv",
+      "sha256": "92bae1b0091da164945fb3a96456b2f1ba39a2e4ec52e40fdbe816ecd680f800"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/independent_thermal_scope/independent_segment_currents_h8508.csv",
+      "sha256": "c0051d97b712ff88e65969e9a66ccc9a1821a671b183ca293738415856a194d7"
+    }
+  ]
+}

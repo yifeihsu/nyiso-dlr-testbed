@@ -1,0 +1,79 @@
+{
+  "recommended_representation": "two_ideal_PAR_controlled_transfer_equivalents_with_retained_passive_branch_inactive",
+  "retained_branch": {
+    "row": 211,
+    "from_bus": 48,
+    "from_name": "MOSES E",
+    "to_bus": 100,
+    "to_name": "PHAS"
+  },
+  "mathematical_variable": "two fixed lossless active-power transfers in the dcline mathematical container; not physical HVDC",
+  "phase_parameter_policy": "Do not export an invented aggregate phase as a physical tap; equivalent SHIFT belongs only in separate diagnostic evidence",
+  "passive_branch_policy": "Retain original branch211 record with identical parameters and inactive status as an explicit representation substitution, not an observed physical outage",
+  "ideal_transfer_direction": "100 PHAS -> 48 MOSES E; positive raw source direction must be independently confirmed before promotion",
+  "logical_aggregate_flow_reporting": "AC PF211 is0 for the inactive record; report logical original48->100 transfer separately as -(PF_new33+PF_new34)",
+  "preserve": [
+    "all 140 original buses",
+    "all 8 retained added buses",
+    "original retained branch R/X/B/tap",
+    "native and external generation",
+    "load",
+    "total external exchanges",
+    "other branch records",
+    "seven fixed internal interface observation operators"
+  ],
+  "source_input_contract": [
+    "Resolve PS33/PTID25118 and PS34/PTID25119 direction from independent primary sources.",
+    "Keep two source series and their identities; combine only after direction and coverage checks.",
+    "Distinguish measured flow from operating setpoint; if flow telemetry is used, label replay as boundary-conditioned.",
+    "Check source-established per-device and aggregate limits in PUBLIC MW before applying gamma exactly once.",
+    "An MVA nameplate is not a verified active-power operating limit without Q/voltage/context; do not silently substitute.",
+    "Reject or separately qualify missing, stale, out-of-bound, or unavailable-device inputs; do not silently clip evidence.",
+    "Hourly averages cannot certify 5-minute operating-limit compliance; perform source-resolution checks where data exist.",
+    "For confirmed raw Ontario->Moses sign, apply P33_model=gamma*raw33 and P34_model=gamma*raw34 on100->48 ideal transfers; preserve original generation and loads.",
+    "Store source provenance, validity mask, bound provenance and maximum target/KCL residual per hour.",
+    "Do not compare reconstructed aggregate SHIFT to individual-device physical angle limits.",
+    "Do not impose physical tap feasibility or contingency-operating claims without device impedances, discrete tap map, topology and limits.",
+    "Nameplate-MVA-derived active-power envelopes are necessary outer bounds only; unknownQ prevents apparent-power qualification.",
+    "Keep PAR equivalents out of physical HVDC inventory, new-generation capacity, conductor DLR, and equipment thermal claims.",
+    "Verify the residual AC network remains connected when passive branch211 is represented by controlled transfers."
+  ],
+  "explicit_two_PAR_branch_alternative": {
+    "ready": false,
+    "missing": [
+      "source electrical endpoints on both sides",
+      "per-device R/X and MVA base",
+      "winding orientation",
+      "tap angle map and control sign",
+      "normal and contingency status",
+      "current applicable limits",
+      "defensible projection between source terminals and retained NPCC terminal angles"
+    ],
+    "restriction": "Do not duplicate the already retained boundary path or replace its passive admittance with a guessed two-device network.",
+    "why_parallel_equivalence_is_not_enough": "For real parallel devices K=sum(K_i), phi_eq=sum(K_i*phi_i)/K, but this only holds at the same physical terminals. Retained NPCC aggregate endpoints/impedance have not been proven to equal those terminals/parameters."
+  },
+  "algebra": {
+    "branch": "f = K C theta + q0 + e_j lambda, K=baseMVA/(X*tap)",
+    "nodal": "B theta + C.T q0 + c_j lambda = p, B=C.T K C",
+    "flow_constraint": "K_j c_j.T theta + q0_j + lambda = gamma * t_public",
+    "ideal_transfer_equivalence": "With f211=t fixed, B_without211*theta=p-c211*t; two100->48 injections with P33+P34=-t give the same equation. All other AC flows and angle-based interfaces are identical.",
+    "equivalent_phase": "delta_SHIFT_deg = -lambda/K_j * 180/pi = (target_model - f0_j)/h_jj",
+    "phase_derivative": "h_jj = -K_j * (1 - K_j*c_j.T*B_ref_inverse*c_j) * pi/180",
+    "current_gain": "-3.36964316845 model MW/degree; direct=-10.9425031473; mesh feedback=0.6920592004",
+    "units": "gamma=0.30012075175285535 scales MW once. Impedances and 100MVA model base stay frozen. Output public-equivalent MW=f_model/gamma.",
+    "scale_caution": "If the same physical B were retained, P_model=gamma*P_physical would require phi_model=gamma*phi_physical for proportional solutions; X_model=X_physical/gamma instead preserves angles. Neither identifies physical angles after an unproved network aggregation."
+  },
+  "tests_required_for_operational_promotion": [
+    "Independent signed PTID mapping and source limit checks at native resolution.",
+    "Per-device limits before aggregation; invalid source masks remain invalid.",
+    "MW scale applied once and invertible output conversion.",
+    "All buses, branch parameters and input injections preserved except explicit affine control offsets.",
+    "Independent constrained linear solve versus phase-export implementation, including reversed and zero flow.",
+    "A bridge/singular control path rejects infeasible fixed-flow requests.",
+    "Fresh MATLAB/MATPOWER replay agrees at extrema, DST boundaries and topology states.",
+    "All seven interfaces scored only after controls and source sign/limits are frozen."
+  ],
+  "physical_device_feasibility_proved": false,
+  "internal_interface_observations_read": false,
+  "source_direction_or_limit_selected_from_model_fit": false
+}

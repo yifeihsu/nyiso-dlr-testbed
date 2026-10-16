@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "source_rows": 12,
+  "conditional_scenarios": 36,
+  "manufacturer_charging_identity_max_error_a_per_kft": 0.004878334893146485,
+  "source_page_visually_reviewed": true,
+  "source_page": 19,
+  "installed_conductor_or_field_rating_verified": false,
+  "no_conductor_selected_by_voltage_or_interface_error": true,
+  "applied_to_network": false,
+  "unknowns": [
+    "conductor_material_and_area",
+    "sheath_bonding",
+    "installation_geometry",
+    "R_temperature",
+    "series_inductance",
+    "thermal_environment",
+    "terminal_limits"
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/cables/Southwire_HV_underground_catalog.pdf",
+      "sha256": "2c96119f84511fd366f7a03e37fea222034e163792e4cb102a023f96cf0607ca"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/cables/Southwire_HV_underground_catalog.txt",
+      "sha256": "4a3ff2c21c30d7e1c14a14743e05fef27598198cce124191e6c4a7e2714cbf7b"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/cables/Southwire_HV_underground_catalog.receipt.json",
+      "sha256": "2d87c830a939a77fffdced04b26e14631691964f71f9c008db62d215817f598d"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/cables/Southwire_138kV_laminate_page19.png",
+      "sha256": "974d3b2b3b55017ee5257596298215f510740aca8c4380a96b11c6bcbe131518"
+    },
+    {
+      "path": "scripts/nygrid_2025_line_parameters/audit_cable_catalog.py",
+      "sha256": "a0fb9bd1575ff41d3392d3ccda075b82ec44becc8e0e7126572451c2426fdaee"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/cables/Haugland_Goethals_FoxHills.html",
+      "sha256": "05e14f8fbb172d9f3f75150d907acd4fff421c2eb211fa3656b976f229097cde"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/RCC_charging_catalog_scenarios_not_applied.csv",
+      "sha256": "264039b453e8663174fd3a0ad8af78719f609d210e6ef221e0ab83080fa2d277"
+    }
+  ]
+}

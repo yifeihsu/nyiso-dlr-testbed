@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "fixture": "three_bus_equalX_triangle_with_nonzero_initial4degree_SHIFT",
+  "independent_derivation": "KCL gives F12=t,F23=t-80,F13=200-t;KVL gives SHIFT_rad=(280-3t)/1000",
+  "targets_MW": [
+    140.0,
+    -20.0,
+    50.0
+  ],
+  "expected_absolute_SHIFT_degree": [
+    -8.021409131831525,
+    19.48056503444799,
+    7.448451336700702
+  ],
+  "maximum_errors": {
+    "flow_MW": 5.684341886080802e-14,
+    "shift_degree": 3.552713678800501e-15,
+    "angle_degree": 3.552713678800501e-15,
+    "generation_MW": 2.842170943040401e-14
+  },
+  "root_control_code_sha256": "ad7794d749f0bcda792fb824a389768064002d7866c6b8f3ca727da194541812",
+  "full_annual_replay_performed": false
+}

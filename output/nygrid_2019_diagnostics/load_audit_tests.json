@@ -1,0 +1,16 @@
+{
+  "completed_utc": "2026-10-10T03:19:36.489685+00:00",
+  "tests_run": 6,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "test_cases": [
+    "__main__.TestRawLoadAudit.test_comparison_detects_value_changes_missing_keys_and_duplicates",
+    "__main__.TestRawLoadAudit.test_fall_fold_keeps_both_timezone_samples_and_averages_without_dedup",
+    "__main__.TestRawLoadAudit.test_linear_fill_extrapolates_endpoints_and_rejects_underdetermined_slope",
+    "__main__.TestRawLoadAudit.test_missing_numeric_samples_have_distinct_counts",
+    "__main__.TestRawLoadAudit.test_sample_weighting_and_hour_boundaries_are_literal",
+    "__main__.TestRawLoadAudit.test_spring_gap_is_visible_and_linearly_filled"
+  ],
+  "test_script_sha256": "f8b418130c6ac74146dc0225f7143daa2c5ebe4af31049e8d0952bfd6ea30a50"
+}

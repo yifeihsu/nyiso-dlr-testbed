@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T02:07:32.375074+00:00",
+  "datasettype": "generation_input_validation",
+  "tests": 8,
+  "failures": 0,
+  "errors": 0,
+  "source_receipt_sha256": "b70d364ff96d7702162370c11d85cbb3841ec89293d234e8775340ccfb35e01a",
+  "validation_code_sha256": "b7f04987364b5149b73160f221057fc500343611adfd88c8e427cadf5a2d213b",
+  "internal_interface_observations_read": false,
+  "power_flow_run": false,
+  "meaningful_checks": [
+    "sealed source/output hashes",
+    "fixed cohort and unavailable rows",
+    "electrical donor landing and held-fixed units",
+    "all-hour bounds and hydro/global conservation",
+    "P63 rather than reconstructed-H legacy target",
+    "literal infeasibility versus explicit bounded hypothesis",
+    "physical DST month means and partial-cohort energy scope",
+    "original-weight current-reference projection KKT"
+  ],
+  "legacy_feasibility_causes": [
+    {
+      "donor_policy": "outside_ab",
+      "adjusted_hours": 277,
+      "request_above_RMN_capacity_hours": 277,
+      "request_below_RMN_minimum_hours": 0,
+      "request_above_donor_balance_maximum_hours": 4,
+      "request_below_donor_balance_minimum_hours": 0,
+      "RMN_capacity_is_tighter_binding_upper_bound_every_adjusted_hour": true
+    },
+    {
+      "donor_policy": "all_other",
+      "adjusted_hours": 277,
+      "request_above_RMN_capacity_hours": 277,
+      "request_below_RMN_minimum_hours": 0,
+      "request_above_donor_balance_maximum_hours": 3,
+      "request_below_donor_balance_minimum_hours": 0,
+      "RMN_capacity_is_tighter_binding_upper_bound_every_adjusted_hour": true
+    }
+  ],
+  "largest_adjusted_targets": [
+    {
+      "donor_policy": "outside_ab",
+      "hour_index": 4171,
+      "timestamp_utc": "2025-06-23T23:00:00Z",
+      "requested_public_mw": 3174.534666666666,
+      "applied_public_mw": 2434.9000000000005,
+      "original_RMN_upper_public_mw": 2434.9000000000005,
+      "donor_balance_maximum_public_mw": 3156.6100459968234,
+      "hypothesis_reduction_public_mw": 739.6346666666655
+    },
+    {
+      "donor_policy": "outside_ab",
+      "hour_index": 4170,
+      "timestamp_utc": "2025-06-23T22:00:00Z",
+      "requested_public_mw": 3162.7111111111103,
+      "applied_public_mw": 2434.9000000000005,
+      "original_RMN_upper_public_mw": 2434.9000000000005,
+      "donor_balance_maximum_public_mw": 3149.1420135250305,
+      "hypothesis_reduction_public_mw": 727.8111111111097
+    },
+    {
+      "donor_policy": "outside_ab",
+      "hour_index": 4195,
+      "timestamp_utc": "2025-06-24T23:00:00Z",
+      "requested_public_mw": 3143.0999999999995,
+      "applied_public_mw": 2434.9000000000005,
+      "original_RMN_upper_public_mw": 2434.9000000000005,
+      "donor_balance_maximum_public_mw": 3136.657418152819,
+      "hypothesis_reduction_public_mw": 708.1999999999989
+    },
+    {
+      "donor_policy": "outside_ab",
+      "hour_index": 4699,
+      "timestamp_utc": "2025-07-15T23:00:00Z",
+      "requested_public_mw": 3080.945999999999,
+      "applied_public_mw": 2434.9000000000005,
+      "original_RMN_upper_public_mw": 2434.9000000000005,
+      "donor_balance_maximum_public_mw": 3070.202507109004,
+      "hypothesis_reduction_public_mw": 646.0459999999986
+    },
+    {
+      "donor_policy": "outside_ab",
+      "hour_index": 4193,
+      "timestamp_utc": "2025-06-24T21:00:00Z",
+      "requested_public_mw": 3078.7153333333335,
+      "applied_public_mw": 2434.9000000000005,
+      "original_RMN_upper_public_mw": 2434.9000000000005,
+      "donor_balance_maximum_public_mw": 3097.3024191678965,
+      "hypothesis_reduction_public_mw": 643.8153333333329
+    },
+    {
+      "donor_policy": "all_other",
+      "hour_index": 4171,
+      "timestamp_utc": "2025-06-23T23:00:00Z",
+      "requested_public_mw": 3174.534666666666,
+      "applied_public_mw": 2434.9000000000005,
+      "original_RMN_upper_public_mw": 2434.9000000000005,
+      "donor_balance_maximum_public_mw": 3163.901286866369,
+      "hypothesis_reduction_public_mw": 739.6346666666655
+    },
+    {
+      "donor_policy": "all_other",
+      "hour_index": 4170,
+      "timestamp_utc": "2025-06-23T22:00:00Z",
+      "requested_public_mw": 3162.7111111111103,
+      "applied_public_mw": 2434.9000000000005,
+      "original_RMN_upper_public_mw": 2434.9000000000005,
+      "donor_balance_maximum_public_mw": 3156.414055619287,
+      "hypothesis_reduction_public_mw": 727.8111111111097
+    },
+    {
+      "donor_policy": "all_other",
+      "hour_index": 4195,
+      "timestamp_utc": "2025-06-24T23:00:00Z",
+      "requested_public_mw": 3143.0999999999995,
+      "applied_public_mw": 2434.9000000000005,
+      "original_RMN_upper_public_mw": 2434.9000000000005,
+      "donor_balance_maximum_public_mw": 3143.8973872827028,
+      "hypothesis_reduction_public_mw": 708.1999999999989
+    },
+    {
+      "donor_policy": "all_other",
+      "hour_index": 4699,
+      "timestamp_utc": "2025-07-15T23:00:00Z",
+      "requested_public_mw": 3080.945999999999,
+      "applied_public_mw": 2434.9000000000005,
+      "original_RMN_upper_public_mw": 2434.9000000000005,
+      "donor_balance_maximum_public_mw": 3076.9512154072013,
+      "hypothesis_reduction_public_mw": 646.0459999999986
+    },
+    {
+      "donor_policy": "all_other",
+      "hour_index": 4193,
+      "timestamp_utc": "2025-06-24T21:00:00Z",
+      "requested_public_mw": 3078.7153333333335,
+      "applied_public_mw": 2434.9000000000005,
+      "original_RMN_upper_public_mw": 2434.9000000000005,
+      "donor_balance_maximum_public_mw": 3104.4409146153125,
+      "hypothesis_reduction_public_mw": 643.8153333333329
+    }
+  ],
+  "all_old_dependency_hashes_unchanged": true
+}

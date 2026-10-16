@@ -1,0 +1,213 @@
+{
+  "passed": true,
+  "checks_run": 32,
+  "checks": [
+    {
+      "name": "built page embeds exactly the frozen annual, geography and interface JSON",
+      "passed": true
+    },
+    {
+      "name": "actual inline application initializes without substitution",
+      "passed": true
+    },
+    {
+      "name": "northern source inputs preserve signs, unit conversion, exclusions and transfer control",
+      "passed": true
+    },
+    {
+      "name": "initial hour8508 has145 geographic markers,7 flow labels and11 zone labels",
+      "passed": true
+    },
+    {
+      "name": "four dated state boundaries preserve148axis and update188/189 detailed markers",
+      "passed": true
+    },
+    {
+      "name": "each interface selection lists and highlights the exact frozen signed parent members in every state",
+      "passed": true
+    },
+    {
+      "name": "zone selection displays the correct11zone source/results values and highlights correct buses",
+      "passed": true
+    },
+    {
+      "name": "model/public power switch preserves exact unrounded DOM flow values",
+      "passed": true
+    },
+    {
+      "name": "a negative interface total reverses arrow endpoints and remains reversed after public conversion",
+      "passed": true
+    },
+    {
+      "name": "unavailable annual hours expose no computed interface values or arrows",
+      "passed": true
+    },
+    {
+      "name": "failed hour retains only known zone inputs; excluded hour blanks all zone quantities",
+      "passed": true
+    },
+    {
+      "name": "nearby flow chart breaks its path at unavailable hours instead of interpolating",
+      "passed": true
+    },
+    {
+      "name": "prescribed control popup and source masks follow six input records without inventing unlocated links",
+      "passed": true
+    },
+    {
+      "name": "datetime, index and slider navigation honor UTC year limits and reject invalid hours",
+      "passed": true
+    },
+    {
+      "name": "hour-index input events immediately navigate valid hours without applying partial or invalid edits",
+      "passed": true
+    },
+    {
+      "name": "UTC datetime input events navigate the exact cutover and ignore incomplete or unmatched dates",
+      "passed": true
+    },
+    {
+      "name": "three unlocated proxies remain inspectable with no fabricated geographic markers",
+      "passed": true
+    },
+    {
+      "name": "interactive bus, flow, zone and edge pointer targets never capture a background pan",
+      "passed": true
+    },
+    {
+      "name": "regulated port21001 is offered only in its post-Dover dated topology",
+      "passed": true
+    },
+    {
+      "name": "selecting a nonretained port opens detailed mode and clears when that port becomes absent",
+      "passed": true
+    },
+    {
+      "name": "latest parent224 data and mathematical retained couplings are distinguished in popups",
+      "passed": true
+    },
+    {
+      "name": "zone, interface, inactive and bus-label toggles change only their intended layers",
+      "passed": true
+    },
+    {
+      "name": "view presets, zoom buttons and wheel preserve geographic marker coordinates",
+      "passed": true
+    },
+    {
+      "name": "keyboard activation, pan, zoom, Home and Escape operate the actual controls",
+      "passed": true
+    },
+    {
+      "name": "drag captures pointer, pans, suppresses accidental click and allows the next deliberate selection",
+      "passed": true
+    },
+    {
+      "name": "tooltip is clamped to the stub viewport and clears on pointer leave",
+      "passed": true
+    },
+    {
+      "name": "mobile-like resize stubs keep finite aspect-correct geometry and visible labels within viewport",
+      "passed": true
+    },
+    {
+      "name": "eleven schematic zone areas contain exactly their own located buses inside the land and New York clips",
+      "passed": true
+    },
+    {
+      "name": "selecting or hovering an interface shows only its own source/target cut and dims unrelated zones and arrows",
+      "passed": true
+    },
+    {
+      "name": "interface arrow width follows the square root of |model MW| and ignores the display-unit switch",
+      "passed": true
+    },
+    {
+      "name": "no external runtime assets, requests or console errors occurred",
+      "passed": true
+    },
+    {
+      "name": "all tested map inputs and previous map/test files remained unchanged",
+      "passed": true
+    }
+  ],
+  "method": "Actual built inline HTML/JavaScript executed with LinkeDOM DOM events and explicit viewport/IDL stubs; no application replacement or network server",
+  "final_ui_freeze_confirmed": false,
+  "browser_visual_verification": false,
+  "native_pointer_hit_testing": false,
+  "separate_browser_QA_expected": true,
+  "layout_stubs": {
+    "initial_width": 1024,
+    "initial_height": 720,
+    "mobile_width": 360,
+    "mobile_height": 540,
+    "tooltip_width": 260,
+    "tooltip_height": 100,
+    "select_value_IDL": true,
+    "checkbox_checked_IDL": true,
+    "requestAnimationFrame": "synchronous",
+    "ResizeObserver": "explicit callback"
+  },
+  "network_requests": [],
+  "console_errors": [],
+  "console_messages": [],
+  "html_sha256": "a3e718f5097d82d10b329e59a1872d242eb38c42e651537e366be4e36f268b34",
+  "test_code_sha256": "cb6840425f45d77ac080e6cd2b54b523a8e065c7682281b1fc44d826684b0dee",
+  "node_version": "v24.19.0",
+  "linkedom_version": "0.18.12",
+  "input_files": [
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/network_map.html",
+      "bytes": 14953543,
+      "sha256": "a3e718f5097d82d10b329e59a1872d242eb38c42e651537e366be4e36f268b34"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/map/map.js",
+      "bytes": 45391,
+      "sha256": "eec5d2c28b313143325e2567ba99329b7a62c9c76e0eb17d07ebc9d995da1b0f"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/map/map.css",
+      "bytes": 11009,
+      "sha256": "312f63a8fda6900938852ba1f065943b8a4940003dd9c3d6a850201d25a0883a"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/map/map_template.html",
+      "bytes": 6588,
+      "sha256": "475a8933bf84124ceffc31ce42f883f9d2f9602199c66f057741bdccfa928191"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/annual_data.json",
+      "bytes": 12947535,
+      "sha256": "b2bb4d7f3125553c2d4e114edae52fcc8d08a9e8aa7ea5e05da46c6e42829d91"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/geography_data.json",
+      "bytes": 2764239,
+      "sha256": "2f9ee668e8c01b29996a14587769acb46757bd02e73508b53a1fac4467e96e75"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/interface_definitions.json",
+      "bytes": 96846,
+      "sha256": "8a48315611fc4a44cb3b14821928b69080763883178b7a5018850bbdf0dde6eb"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "bytes": 12874,
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    }
+  ],
+  "previous_artifacts_preserved": [
+    {
+      "path": "scripts/nygrid_2025_slim/test_interactive_map.cjs",
+      "bytes": 11677,
+      "sha256": "b2e1c889b6ac8a02cdf12e43c059f9074bfd41fc3a181ec5ccbba97db8ae01a5"
+    },
+    {
+      "path": "output/nygrid_2025_slim/interactive/network_map.html",
+      "bytes": 360232,
+      "sha256": "3c49b0d9c6bef5623b1150d9e85bd111d2666c7f0e3703ff0275b639d867832e"
+    }
+  ],
+  "generated_utc": "2026-10-15T22:09:18.702Z"
+}

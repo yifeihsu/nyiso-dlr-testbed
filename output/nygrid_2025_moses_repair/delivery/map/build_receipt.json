@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "scope": "Current-model offline map build and identity/availability contracts",
+  "sourceModelCommit": "f6c124a97b16f45a98a538c121c6006556255005",
+  "sourceElectricalModelCommit": "f6c124a97b16f45a98a538c121c6006556255005",
+  "sourceElectricalModelCommitRole": "preserved_baseline",
+  "physicalRepairCandidateSha256": "3ea77c854ffff4e8eb30fa72fc92296e024cb23eb3744010e276bff49e3fc08f",
+  "mosesRepairCandidateSha256": "7d465d2bf86027fa28d58bfadce109d283f96ae0fd2a32b85850b8933992ae35",
+  "compiledModelSha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8",
+  "offlineSelfContained": true,
+  "externalRuntimeRequests": false,
+  "modelParametersChanged": true,
+  "annualPFOrOPFRerun": true,
+  "annualReplayReceipt": "moses_repair_v1",
+  "retainedBuses": 148,
+  "detailedBusesByState": [
+    266,
+    266,
+    266,
+    267
+  ],
+  "parentRecordsByState": [
+    410,
+    410,
+    410,
+    413
+  ],
+  "hours": 8760,
+  "sourceQualifiedHours": 8651,
+  "equationLossQualifiedHours": 8651,
+  "operatingQualifiedHours": 0,
+  "interfaceCount": 7,
+  "zoneCount": 11,
+  "stateHours": {
+    "pre_may": 3359,
+    "may21": 216,
+    "may30": 4896,
+    "post_dover": 289
+  },
+  "failedFlowValuesAreNull": true,
+  "defaultHour": 8508,
+  "defaultPowerUnits": "model_MW",
+  "sources": [
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/geography_data.json",
+      "sha256": "2f9ee668e8c01b29996a14587769acb46757bd02e73508b53a1fac4467e96e75"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/annual_data.json",
+      "sha256": "b2bb4d7f3125553c2d4e114edae52fcc8d08a9e8aa7ea5e05da46c6e42829d91"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/interface_definitions.json",
+      "sha256": "8a48315611fc4a44cb3b14821928b69080763883178b7a5018850bbdf0dde6eb"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/map/map_template.html",
+      "sha256": "475a8933bf84124ceffc31ce42f883f9d2f9602199c66f057741bdccfa928191"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/map/map.css",
+      "sha256": "312f63a8fda6900938852ba1f065943b8a4940003dd9c3d6a850201d25a0883a"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/map/map.js",
+      "sha256": "eec5d2c28b313143325e2567ba99329b7a62c9c76e0eb17d07ebc9d995da1b0f"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/map/build_network_map.py",
+      "sha256": "834a16558100d7a6107c57b441182c9661719fcc561ac9b7ce62ca04bd305fb7"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/ny_display_mask.json",
+      "sha256": "fea811359b014b316ca371097a09b79277a96e09675852f040f266fc732b35fd"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/network_map.html",
+      "sha256": "a3e718f5097d82d10b329e59a1872d242eb38c42e651537e366be4e36f268b34",
+      "bytes": 14953543
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/map_data.json",
+      "sha256": "6c3e8c908aa7b86bb6b078f4ff917aaa35e383808d959103cbaac139f5ae66db",
+      "bytes": 14885032
+    }
+  ]
+}

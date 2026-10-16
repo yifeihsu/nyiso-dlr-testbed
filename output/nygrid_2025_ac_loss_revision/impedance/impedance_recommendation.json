@@ -1,0 +1,300 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T02:35:10.280759+00:00",
+  "baseline_HEAD": "a7c90215b22f688acea9ee8a08a08fc4385be494",
+  "branch_row": 224,
+  "branch_key": "PARENT:224",
+  "from_bus": 38,
+  "to_bus": 77,
+  "baseMVA": 100,
+  "nominal_kV": 345,
+  "classification": "released_EG_network_equivalent_with_unresolved_physical_identity",
+  "source_family": "Cornell_NYgrid_added_MarcySouth_representation_not_original_NPCC_or_S7_branch",
+  "accepted_scope": "Source-reproducible passive network-equivalent baseline for a separately versioned synthetic AC study",
+  "accepted_variant": "released_equivalent_nominal",
+  "accepted_R_X_B_pu": [
+    0.02,
+    0.0147,
+    0.0
+  ],
+  "physical_impedance_validated": false,
+  "installed_direct_line_identified": false,
+  "physical_route_identified": false,
+  "factory_or_utility_sequence_impedance_found": false,
+  "source_R_derivation_found": false,
+  "source_B_derivation_found": false,
+  "exact_source_code_tuple_verified": true,
+  "paper_X_approximation_reproduced": true,
+  "paper_literal_X_pu": 0.014649863474060072,
+  "released_X_minus_paper_literal_percent": 0.3422320353271724,
+  "source_R_ohm": 23.805,
+  "source_X_ohm": 17.496675,
+  "rejection_of_177km_literal_OH_mapping": "The model endpoints stand for an added aggregate route; no source-backed installed conductor, circuit or route supports converting their geographic chord into a literal single-line realization.",
+  "required_metadata_changes": [
+    "Classify parent224 and its numerical sections as a network equivalent.",
+    "Exclude224 from IEEE738 conductor/R(T)/DLR claims and installed-conductor/route/equipment assertions.",
+    "Retain original parent identity and interface membership; the case remains an inherited diagnostic interface model.",
+    "If canonical axes are retained, use the existing two zero-injection numerical sections whose R/X sum to the accepted tuple and set their totalB tozero.",
+    "Do not add/remove busGS/BS as part of this correction; no reactor was associated with224.",
+    "Do not promote sourceRATEA0 or the former synthetic ampere envelope to a verified facility rating."
+  ],
+  "parameter_sensitivity_scope": {
+    "X_arithmetic_interval_pu": [
+      0.014649863474060072,
+      0.0147
+    ],
+    "R_declared_sensitivity_points_pu": [
+      0.0,
+      0.02
+    ],
+    "B_nominal_pu": 0.0,
+    "interpretation": "These points separate source arithmetic and unresolved aggregate-loss assumptions. They are not physical confidence bounds or measured operating limits."
+  },
+  "numerical_proposal_checks": [
+    {
+      "hour_index": 1,
+      "full_buses": 266,
+      "full_branches": 485,
+      "retained_buses": 148,
+      "numerical_sections": 2,
+      "topology_and_every_other_branch_unchanged": true,
+      "proposed_equivalent_passive": true,
+      "maximum_complex_Y_Schur_vs_single_released_equivalent_error_pu": 0.0,
+      "actual_revised_model_built_by_this_script": false
+    },
+    {
+      "hour_index": 3360,
+      "full_buses": 266,
+      "full_branches": 485,
+      "retained_buses": 148,
+      "numerical_sections": 2,
+      "topology_and_every_other_branch_unchanged": true,
+      "proposed_equivalent_passive": true,
+      "maximum_complex_Y_Schur_vs_single_released_equivalent_error_pu": 0.0,
+      "actual_revised_model_built_by_this_script": false
+    },
+    {
+      "hour_index": 3576,
+      "full_buses": 266,
+      "full_branches": 485,
+      "retained_buses": 148,
+      "numerical_sections": 2,
+      "topology_and_every_other_branch_unchanged": true,
+      "proposed_equivalent_passive": true,
+      "maximum_complex_Y_Schur_vs_single_released_equivalent_error_pu": 0.0,
+      "actual_revised_model_built_by_this_script": false
+    },
+    {
+      "hour_index": 8472,
+      "full_buses": 267,
+      "full_branches": 488,
+      "retained_buses": 148,
+      "numerical_sections": 2,
+      "topology_and_every_other_branch_unchanged": true,
+      "proposed_equivalent_passive": true,
+      "maximum_complex_Y_Schur_vs_single_released_equivalent_error_pu": 0.0,
+      "actual_revised_model_built_by_this_script": false
+    },
+    {
+      "hour_index": 8508,
+      "full_buses": 267,
+      "full_branches": 488,
+      "retained_buses": 148,
+      "numerical_sections": 2,
+      "topology_and_every_other_branch_unchanged": true,
+      "proposed_equivalent_passive": true,
+      "maximum_complex_Y_Schur_vs_single_released_equivalent_error_pu": 0.0,
+      "actual_revised_model_built_by_this_script": false
+    }
+  ],
+  "visual_source_page_checks": [
+    {
+      "file": "output/nygrid_2025_ac_loss_revision/impedance/sources/NYgrid_paper_p7.png",
+      "PDF_pages_one_based": [
+        7
+      ],
+      "visually_checked": true,
+      "finding": "Visually confirms added two-segment representation, Eq10,137/47mile assumptions and0.371reactance coefficient."
+    },
+    {
+      "file": "output/nygrid_2025_ac_loss_revision/impedance/sources/NYgrid_paper_p11.png",
+      "PDF_pages_one_based": [
+        11
+      ],
+      "visually_checked": true,
+      "finding": "Visually confirms reference43 NYPA CommunicationbackboneOPGW expansion Sep18,2018; exact underlying document not recovered."
+    },
+    {
+      "file": "output/nygrid_2025_ac_loss_revision/impedance/sources/NYISO_stability_p6.png",
+      "PDF_pages_one_based": [
+        6
+      ],
+      "visually_checked": true,
+      "finding": "Visually confirms historical TotalEast andUPNYConEd physical circuit names differ from the aggregate endpoint pair."
+    },
+    {
+      "file": "output/nygrid_2025_ac_loss_revision/impedance/sources/NYISO_stability_p8.png",
+      "PDF_pages_one_based": [
+        8
+      ],
+      "visually_checked": true,
+      "finding": "Visually confirms Fraser-Gilboa, Gilboa-LeedsGL3 andGilboa-NewScotland contingency names."
+    }
+  ],
+  "limitations": [
+    "The source-backed result is the identity/classification and released model tuple, not validation of physical AC impedance.",
+    "A lower NYISO WAPE does not determine physically correct R/X/B; no interface observations or score tables are read here.",
+    "Historical PERFORM andNYISO documents establish context, not a complete2025 as-built topology certificate.",
+    "NYPA indexed property records corroborate the named Gilboa connections, but fullPDF download/visual verification was unavailable for those specific historical URLs.",
+    "The sibling43-38 aggregate is recorded as context only; this recommendation changes no other branch.",
+    "Actual implementation requires an independent comparison against this proposal; this script has not changed or solved a production model."
+  ],
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/impedance/build_impedance_review.py",
+      "sha256": "00d9ebf2f5fcca9f9dae2e5dee7617dd1404dc605d6ef47458db29f8678baa6c"
+    },
+    {
+      "path": "output/nygrid_2019/upstream_manifest.json",
+      "sha256": "6ea267b07fa3fd0ca9c24f93b660b02ac4704b4a3bedf2b0fe34ce173cadd6da"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/Cornell_NYgrid_modifyMPC.m",
+      "sha256": "a81ead508d7c9c3a7fa807236da2ee897357c92e8af0bb97d0c2c0125ffe3bbf"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/Cornell_NYgrid_original_npcc.mat",
+      "sha256": "3075e139f09731676bac5c57a5746eb9239fa3d932362456c2a3fb752e2fecfb"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/Cornell_NYgrid_original_npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/legacy_family_check.json",
+      "sha256": "ac431111ab97ee295471c8c90dea87cab4a8a752c5b72d5b1f146f9fd2bf9b57"
+    },
+    {
+      "path": "System Matpower Format/npcc_original.m",
+      "sha256": "c861676a4d84cab5a95a08b12b597aff0b821732bab72f6b37947ce0ba274416"
+    },
+    {
+      "path": "System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m",
+      "sha256": "46fa9b1df133832ee22d4ed63205ca48a1012f7eaa5799379f6a7b5c3358e953"
+    },
+    {
+      "path": "System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_tieline_candidate.m",
+      "sha256": "7088eeacebee867a4107f9864b182b533dffd67841274f7cf101e117567a4786"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/sources/perform_ny_branch_inventory.csv",
+      "sha256": "09898f0857ca417c99ad19516578b9b7b15adef565529fe066ae7f5df6ecd97b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h0001.mat",
+      "sha256": "ca590aa089c883a6bb273f0763344023cda4e5c6342fd2260fe66b1f2f6824be"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h3360.mat",
+      "sha256": "fb9dec35082653e7690ff841727515b2c322f85ec92d13b86482cbbcc5e0da1c"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h3576.mat",
+      "sha256": "f38324de7355c2dd9498eba9ebc2cd80857c83295e79653905d3d7e4e21cedf0"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h8472.mat",
+      "sha256": "0bf999f20d50ac9e398cc47a58d127e02f59c3ac251a18159cac5700dfb7116d"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h8508.mat",
+      "sha256": "c9beabd35ac69c33a85a8aed4d985a3936fc69628443b328663b62487bb779bc"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/NYgrid_published_paper.pdf",
+      "sha256": "d0c5da107cd38304f9a235862c54ee9cf5147a28a3999008be2214b8d7b29f8a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/NYgrid_paper_p7.png",
+      "sha256": "0d35f55d3d7b8922832dcde6a1b6d66c762fd9890203e869c945441ddf25dd7c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/NYgrid_paper_p11.png",
+      "sha256": "c963440c5750bacce0bec4c26a513693a3a53c55953e6a5737425ebcb9f0de7a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/NYISO_stability_p6.png",
+      "sha256": "fd12a79e7972e6ec39dbf15b7550b8dce7eaddedf0814e4e7bbeeb13b3ed06c1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/NYISO_stability_p8.png",
+      "sha256": "7a04f7b84eba5c902ca3fb4614dac4977856f9a078bea7cf15e86b828bce9eb9"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/NYISO_interface_stability_2004.pdf",
+      "sha256": "168eb360f2705bcd51337ef5e4cf4cc8aa1fb0937dc60aeb0b4ad3adad1bbc50"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/primary_web_evidence.json",
+      "sha256": "0c493d6c35500abfc3095300e708a8502c35684153177267dcedb785cdcb4a9b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/source_download_receipt.json",
+      "sha256": "e51e6daf42dd8f97b7a27b8e11511bd2037821090e625ac296f348664dd18325"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/additional_download_attempts.json",
+      "sha256": "295ed0c397a66fefdc4ac148ab5f27de94642d395424303c307330042b7a54aa"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/build_branch_register.py",
+      "sha256": "81763f4c8a7b67742a008ad1d353018959964ba178e8a7e1d8010113653183ef"
+    },
+    {
+      "path": "scripts/nygrid_2019_full/audit_marcy_parameters.py",
+      "sha256": "c151bde3ceaabdc4abb6cf7162cf452c5f948c19fb2e68cd4bde9970b5aa1289"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/line_equivalents.py",
+      "sha256": "f55c9c499f8ee8d7bf925a5a97c3c06c2be55f813d3a256796480cb5201183e6"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/impedance/audit_legacy_family.m",
+      "sha256": "11a4af38210e62c4f1585c4bb080e5a853bcd7770d7cbc58b4da16e0d5519542"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/branch224_lineage.csv",
+      "sha256": "9a7ab14ba1a0e1e7ef1b4fd1fb6e93ae6fdeb9c8ef67ba94937823c8424fdab2"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/historical_PERFORM_Gilboa_incident_circuits.csv",
+      "sha256": "ea2ed79ce53cb019396e0b09e99c9f314da38708a24634232c3d07677f6c6e0a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/parameter_ledger.csv",
+      "sha256": "3c496774b53caefa11e2eb23a17a03275afccfc89ebacfaded591fdbb1c1f56e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/proposed_runtime_parameter_changes.csv",
+      "sha256": "a62cca4b4f36c89902cabf724e331152c0961ca56fc64327826e65f4e7de788f"
+    }
+  ]
+}

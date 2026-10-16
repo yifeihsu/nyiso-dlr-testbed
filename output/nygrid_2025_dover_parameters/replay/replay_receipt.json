@@ -1,0 +1,372 @@
+{
+  "passed": true,
+  "preferred_scenario": "bounded_x_nominal",
+  "internal_interface_observations_read": false,
+  "impedances_not_estimated_from_flows": true,
+  "external_P34_posted_numeric_convention_conditional": true,
+  "factory_R_X_or_taps_certified": false,
+  "fixed_annual_cohort": 8651,
+  "post_cutover_source_hours": 287,
+  "new_source_cohort_loss": 0,
+  "cutover_utc": "2025-12-20T04:00:00Z",
+  "pre_cutover_parent_preserved_exactly": true,
+  "original_six_transfers_and_dispatch_preserved": true,
+  "bounded_controller_policy": "box-constrained external-target tracking;rawtargets unchanged;residuals retained;no internal-interface fitting",
+  "zero_channel_policy": "18 ambiguous hours retain normal topology with explicit neutral-phase assumption;no bypass-state or zero-intertie inference",
+  "model_angle_limit_policy": "40deg times gamma;uniform-power-scaled coarse-network assumption,not measured physical tap",
+  "exact_tracking_is_diagnostic_only": true,
+  "scenarios": [
+    {
+      "scenario": "prior_line_parameters",
+      "mode": "prior",
+      "impedance": null,
+      "path": "output/nygrid_2025_dover_parameters/replay/prior_line_parameters.npz",
+      "sha256": "d0558af16b34f3e49469eddd353307da242fba508b5ba36deb4daa4f6f031ffc",
+      "matched_annual_hours": 8651,
+      "new_Dover_applied_hours": 0,
+      "max_nodal_residual_model_mw": 2.5124791136477143e-11,
+      "max_change_from_parent_public_mw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "scenario": "neutral_x_nominal",
+      "mode": "neutral",
+      "impedance": "x_nominal",
+      "path": "output/nygrid_2025_dover_parameters/replay/neutral_x_nominal.npz",
+      "sha256": "08bdf65631e3818dc74df2c0c452ecbe556e38f1b303da6474ad9d7fb71929e7",
+      "matched_annual_hours": 8651,
+      "new_Dover_applied_hours": 287,
+      "max_nodal_residual_model_mw": 2.5124791136477143e-11,
+      "max_change_from_parent_public_mw": [
+        9.470091376356684e-12,
+        8.333680411193882e-12,
+        0.010006944140293541,
+        5.303251170759744e-12,
+        0.0746198782444124,
+        1.1401990017133448e-10,
+        2.727386316390725e-11
+      ],
+      "bank_target_error_model_mw": 125.64529145625522,
+      "control_response_condition_number": 12.832661308740496,
+      "target_tracking_hours": 0,
+      "ambiguous_zero_mode_hours": 18,
+      "neutral_fallback_hours": 0,
+      "phase_bound_active_hours": 0,
+      "maximum_known_mode_tracking_residual_model_mw": 113.04937942385034,
+      "angle_proxy_exceeds_40deg_hours": 0,
+      "maximum_abs_model_shift_deg": 0.0,
+      "maximum_abs_unscaled_angle_proxy_deg": 0.0,
+      "actual_hardware_tap_trajectory_established": false
+    },
+    {
+      "scenario": "neutral_x_low",
+      "mode": "neutral",
+      "impedance": "x_low",
+      "path": "output/nygrid_2025_dover_parameters/replay/neutral_x_low.npz",
+      "sha256": "b115ae2011fdded5cd80158ec36ecaf533c4e385ae23f862a61d0ee93e9725ff",
+      "matched_annual_hours": 8651,
+      "new_Dover_applied_hours": 287,
+      "max_nodal_residual_model_mw": 2.773958840407431e-11,
+      "max_change_from_parent_public_mw": [
+        9.091287721302417e-12,
+        7.19726944603108e-12,
+        1.1352542922878701,
+        5.39795208452331e-12,
+        8.465375236203645,
+        6.439662135922545e-11,
+        2.2728219303256043e-11
+      ],
+      "bank_target_error_model_mw": 128.99601270312223,
+      "control_response_condition_number": 18.748991963110818,
+      "target_tracking_hours": 0,
+      "ambiguous_zero_mode_hours": 18,
+      "neutral_fallback_hours": 0,
+      "phase_bound_active_hours": 0,
+      "maximum_known_mode_tracking_residual_model_mw": 116.10011467465922,
+      "angle_proxy_exceeds_40deg_hours": 0,
+      "maximum_abs_model_shift_deg": 0.0,
+      "maximum_abs_unscaled_angle_proxy_deg": 0.0,
+      "actual_hardware_tap_trajectory_established": false
+    },
+    {
+      "scenario": "neutral_x_high",
+      "mode": "neutral",
+      "impedance": "x_high",
+      "path": "output/nygrid_2025_dover_parameters/replay/neutral_x_high.npz",
+      "sha256": "cbb1f13fa0a589859f3de4c77e0e033d8cb27fc3c7edee6552da9c0542e5e947",
+      "matched_annual_hours": 8651,
+      "new_Dover_applied_hours": 287,
+      "max_nodal_residual_model_mw": 2.5124791136477143e-11,
+      "max_change_from_parent_public_mw": [
+        5.682054825814011e-12,
+        5.871456653341145e-12,
+        1.5723668219741485,
+        3.977438378069808e-12,
+        11.72484019413378,
+        1.0530741610508633e-10,
+        2.424343392347311e-11
+      ],
+      "bank_target_error_model_mw": 120.93335553638417,
+      "control_response_condition_number": 8.888440872493673,
+      "target_tracking_hours": 0,
+      "ambiguous_zero_mode_hours": 18,
+      "neutral_fallback_hours": 0,
+      "phase_bound_active_hours": 0,
+      "maximum_known_mode_tracking_residual_model_mw": 109.64093866948241,
+      "angle_proxy_exceeds_40deg_hours": 0,
+      "maximum_abs_model_shift_deg": 0.0,
+      "maximum_abs_unscaled_angle_proxy_deg": 0.0,
+      "actual_hardware_tap_trajectory_established": false
+    },
+    {
+      "scenario": "bounded_x_nominal",
+      "mode": "bounded",
+      "impedance": "x_nominal",
+      "path": "output/nygrid_2025_dover_parameters/replay/bounded_x_nominal.npz",
+      "sha256": "0b1c2075989ba715fe356eaef24a008a2d4196e11034dbc44fb193dc469b85f9",
+      "matched_annual_hours": 8651,
+      "new_Dover_applied_hours": 287,
+      "max_nodal_residual_model_mw": 2.5124791136477143e-11,
+      "max_change_from_parent_public_mw": [
+        9.470091376356684e-12,
+        7.954876756139615e-12,
+        26.706494262967475,
+        5.492652998286877e-12,
+        199.1452458812408,
+        1.1818674037693143e-10,
+        2.727386316390725e-11
+      ],
+      "bank_target_error_model_mw": 125.64529145625522,
+      "control_response_condition_number": 12.832661308740496,
+      "target_tracking_hours": 269,
+      "ambiguous_zero_mode_hours": 18,
+      "neutral_fallback_hours": 18,
+      "phase_bound_active_hours": 49,
+      "maximum_known_mode_tracking_residual_model_mw": 25.91783998207929,
+      "angle_proxy_exceeds_40deg_hours": 0,
+      "maximum_abs_model_shift_deg": 12.004830070114215,
+      "maximum_abs_unscaled_angle_proxy_deg": 40.0,
+      "actual_hardware_tap_trajectory_established": false
+    },
+    {
+      "scenario": "bounded_x_low",
+      "mode": "bounded",
+      "impedance": "x_low",
+      "path": "output/nygrid_2025_dover_parameters/replay/bounded_x_low.npz",
+      "sha256": "a178a8c9d2494fa2cf77e72cedbb1820af05c77d4ec1c0aee460c71d690c5a44",
+      "matched_annual_hours": 8651,
+      "new_Dover_applied_hours": 287,
+      "max_nodal_residual_model_mw": 3.0240698833949864e-11,
+      "max_change_from_parent_public_mw": [
+        8.71248406624815e-12,
+        7.007867618503947e-12,
+        26.77219824102801,
+        5.303251170759744e-12,
+        199.63518794293068,
+        7.651833832096201e-11,
+        1.9697790062821903e-11
+      ],
+      "bank_target_error_model_mw": 128.99601270312223,
+      "control_response_condition_number": 18.748991963110818,
+      "target_tracking_hours": 269,
+      "ambiguous_zero_mode_hours": 18,
+      "neutral_fallback_hours": 18,
+      "phase_bound_active_hours": 50,
+      "maximum_known_mode_tracking_residual_model_mw": 26.64494259137844,
+      "angle_proxy_exceeds_40deg_hours": 0,
+      "maximum_abs_model_shift_deg": 12.004830070114215,
+      "maximum_abs_unscaled_angle_proxy_deg": 40.0,
+      "actual_hardware_tap_trajectory_established": false
+    },
+    {
+      "scenario": "bounded_x_high",
+      "mode": "bounded",
+      "impedance": "x_high",
+      "path": "output/nygrid_2025_dover_parameters/replay/bounded_x_high.npz",
+      "sha256": "1ef0603102d111a26a70bd1dff36d5a41b8b315af4d75429269444b98fb2bdce",
+      "matched_annual_hours": 8651,
+      "new_Dover_applied_hours": 287,
+      "max_nodal_residual_model_mw": 2.944489096989855e-11,
+      "max_change_from_parent_public_mw": [
+        5.682054825814011e-12,
+        6.060858480868278e-12,
+        27.282852227309032,
+        4.356242033124075e-12,
+        203.44303754923348,
+        1.0265579051970646e-10,
+        2.727386316390725e-11
+      ],
+      "bank_target_error_model_mw": 120.93335553638417,
+      "control_response_condition_number": 8.888440872493673,
+      "target_tracking_hours": 269,
+      "ambiguous_zero_mode_hours": 18,
+      "neutral_fallback_hours": 18,
+      "phase_bound_active_hours": 43,
+      "maximum_known_mode_tracking_residual_model_mw": 25.776996649714704,
+      "angle_proxy_exceeds_40deg_hours": 0,
+      "maximum_abs_model_shift_deg": 12.004830070114215,
+      "maximum_abs_unscaled_angle_proxy_deg": 40.0,
+      "actual_hardware_tap_trajectory_established": false
+    },
+    {
+      "scenario": "exact_tracking_x_nominal",
+      "mode": "exact",
+      "impedance": "x_nominal",
+      "path": "output/nygrid_2025_dover_parameters/replay/exact_tracking_x_nominal.npz",
+      "sha256": "185749ba307acfd5d13478c83eaaeda86333c76c9ba6ac7287e8bef7da199394",
+      "matched_annual_hours": 8651,
+      "new_Dover_applied_hours": 287,
+      "max_nodal_residual_model_mw": 2.5124791136477143e-11,
+      "max_change_from_parent_public_mw": [
+        9.470091376356684e-12,
+        7.954876756139615e-12,
+        38.51041610001219,
+        5.492652998286877e-12,
+        287.1648449141337,
+        1.1818674037693143e-10,
+        2.727386316390725e-11
+      ],
+      "bank_target_error_model_mw": 6.181721801112872e-13,
+      "control_response_condition_number": 12.832661308740496,
+      "target_tracking_hours": 287,
+      "ambiguous_zero_mode_hours": 18,
+      "neutral_fallback_hours": 0,
+      "phase_bound_active_hours": 0,
+      "maximum_known_mode_tracking_residual_model_mw": 6.181721801112872e-13,
+      "angle_proxy_exceeds_40deg_hours": 60,
+      "maximum_abs_model_shift_deg": 17.311187001927436,
+      "maximum_abs_unscaled_angle_proxy_deg": 57.68073983828656,
+      "actual_hardware_tap_trajectory_established": false
+    }
+  ],
+  "fixture_hours": [
+    8472,
+    8508,
+    8542,
+    8551,
+    8617,
+    8637,
+    8760
+  ],
+  "fixture_file": {
+    "path": "output/nygrid_2025_dover_parameters/replay/matlab_fixtures.mat",
+    "sha256": "f153654d02e7e1ab0fed1416775d21ee458251f8bd937cf6e26914efcdd692f9"
+  },
+  "operating_state_file": {
+    "path": "output/nygrid_2025_dover_parameters/replay/operating_states.mat",
+    "sha256": "bea2fb35c44a3c9510b7c4a68cf4a5ea901e7df0b51567755a2a388942dd171a"
+  },
+  "bank_states_file": {
+    "path": "output/nygrid_2025_dover_parameters/replay/Dover_bank_states.csv",
+    "sha256": "839d28add2df6dfcf8e146d38fffc0d52be31500b62f5d534bdd13a769f77421"
+  },
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_dispatch_receipt.json",
+      "sha256": "1ec2caef4fd0324d8b9aeceeed96f26aaf295d2b7ae3a0ffb6c5fbdade01a623"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/provenance.json",
+      "sha256": "781b83d403e017c0dbc531a04989ba256afa4e696c752c582ec133bf37e1ba2b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+      "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/common.py",
+      "sha256": "c005e17c59ebd797cfeef386cfacdbcc8aa4df39f2ee873cecc5af97e582217d"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/network_cases.mat",
+      "sha256": "5fb84104d527b2e26d22f3a772ebd4e56ff981325ea7490d349fa53758646320"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/replay/engineering_nominal.npz",
+      "sha256": "1f75d90c83789912fac1e0008ee553e0980d11c61dee82019236f387a1e63e31"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/network_receipt.json",
+      "sha256": "c65358dc54875b6a945bf5ed194bb450be40be93924e6910555ee732a77e3d85"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_inputs.npz",
+      "sha256": "31b5a0bf77f4664ca1ab4b6660e6737d78201bfdd2c566f413f664e25b1ffb1a"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_input_receipt.json",
+      "sha256": "61423730e90bde37d2e0ed4d87cfff56657e7886e941b7397ef04d8a09bbae24"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_independent_validation.json",
+      "sha256": "fb097009061a25e2d811573f396147c471c60c95b9e13f8fbcc028434d19b576"
+    },
+    {
+      "path": "scripts/nygrid_2025_dover_parameters/run_dover_replay.py",
+      "sha256": "022dc62e6a09a7c2dfda80318a3a2233c87717a6bff0d005ca67af471214edb2"
+    },
+    {
+      "path": "scripts/nygrid_2025_dover_parameters/build_dover_network.py",
+      "sha256": "fc2bc7cd373a6e6674da7ff1e7680dea96d4171f54e1e7b30e026c3fad43b8e9"
+    },
+    {
+      "path": "scripts/nygrid_2025_line_parameters/run_parameter_replay.py",
+      "sha256": "c4bfa13e018a27fcccf6b2f5c5aa51c240cc29da28436d30c2ca647ecdc41540"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_low.mat",
+      "sha256": "1c8534d7dd57214ba357ed5f349a685fac8808ba0597ac1b0ef28a56916d88cd"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_high.mat",
+      "sha256": "c003b2dec47b5f0914e7347129f4efb2767d4d698cfed7e0004c270018c363d0"
+    }
+  ]
+}

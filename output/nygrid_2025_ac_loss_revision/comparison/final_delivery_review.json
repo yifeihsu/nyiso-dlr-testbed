@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "completed": true,
+  "created_utc": "2026-10-13T03:51:31.644069+00:00",
+  "scope": "Final report, source disclosure and selected-cohort arithmetic review; root finalizer owns the delivery seal",
+  "reviewed_metric_rows": 1302,
+  "maximum_metric_arithmetic_error": 2.2737367544323206e-13,
+  "paired_table_rows": 7,
+  "source_disclosure_rows": 22,
+  "factorial_common_hours": 11,
+  "original_detailed_and_compact_files_freshly_verified": {
+    "nygrid_2025_acpf_profile_audit": 156,
+    "nygrid_2025_compact_ac": 129
+  },
+  "exact_frozen_cohorts_verified": true,
+  "common8170_vs_old8494_distinction_explicit": true,
+  "no_annual_attribution_inferred_from_representative_factorial": true,
+  "physical_and_source_qualification_limits_prominent": true,
+  "manual2025_definition_verified_and_model_loss_ownership_distinguished": true,
+  "corrected_minimum_served_fraction_summary_verified": true,
+  "all_report_table_and_source_payload_values_match_underlying_metrics": true,
+  "plot_visually_reviewed": true,
+  "local_report_links_checked": 16,
+  "deferred_delivery_manifest_links": [
+    "output/nygrid_2025_ac_loss_revision/DELIVERY_MANIFEST.json"
+  ],
+  "delivery_manifest_not_bound_to_avoid_hash_cycle": true,
+  "report_or_root_builder_modified_by_this_review": false,
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/comparison/review_final_delivery.py",
+      "sha256": "ee5e72cd2626386c311a7d53ba5655464a66871c564db858f7030a44c405757f"
+    },
+    {
+      "path": "NYGRID_2025_AC_LOSS_REVISION.md",
+      "sha256": "69bec7ee43a9a9c28c607626de181113e620d6d86fec522380c66f03112d860d"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/build_summary.py",
+      "sha256": "8d46bd44c69ed24bb1215b83f9173fde48fd80aed882259717eb3d02e8c1685e"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/build_sources_receipt.py",
+      "sha256": "566ddae15c55cc129c109d8c36b9fd9de249843657cf537e1eb3dbe5e42cd8a0"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/README.md",
+      "sha256": "c14cdcc583eb7bf048cc6ff7dffb8964c3586914b904ca4fa50a3c24794c878d"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/comparison/score_revised_profiles.py",
+      "sha256": "43281ace83cfaa97628bbddb746263c8157adf0cd79f545e4383abb81cc0953a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/comparison_contract.json",
+      "sha256": "6a7b0f5171a9b9e4dbfcf2c5889c7625c80ce92c85c61778c3fdb131ac4988a7"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_cohort.csv",
+      "sha256": "d62536ab7bc148d015e8fff773f835df40fc0ad53e8191b0297841af961c1778"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/public_interface_metrics.csv",
+      "sha256": "b3cd77cfd14ea1b0c7c7cd5ebcc4b453e1606976c3622556e8553994a581973a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/summary/revision_summary.json",
+      "sha256": "9d76933c9071eb4ed7474a79ac43532040e3a0f99a2a0b1a8eef422942116a85"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/summary/paired_annual_interfaces.csv",
+      "sha256": "4edbeb029783d4fa041c27b51f3c7fab9becad878a6fb5160f5faa172cc16f8b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/scoring_receipt.json",
+      "sha256": "08ed03da7ea4ab29669e7214f19022987f61dc9e936abb1ee0ab6fa3525e942c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/summary/sources_receipt_input.json",
+      "sha256": "59b7212907161fd65afdb8dded2cb23ff7c613ea3a44538e383528390c295cc3"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/NY_zonal_loss_accounting.csv",
+      "sha256": "56794ad2e379cd58d668cba9ea0f0788a5e779d1056976ef0f638f9d4267002b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/factorial_receipt.json",
+      "sha256": "35e93ee9c7c00c7cd7b99bd0f78652959dc72b08f0a9d100e52ccbb5d7bec082"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/factorial_checks.csv",
+      "sha256": "fc5903198dbd1bec2b6178cf0fddb68613b50e208991375ad5c86b3f881044f3"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/common_success_attribution.csv",
+      "sha256": "b885c9f2ab727f2fa51a55b12882b31672bd761fd1f93295af7561f687c81d2f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/released_equivalent_boundary_consistent_annual_arrays_independent_review.json",
+      "sha256": "b3fa164e2c2dcfd9a4519381a3393a864555eb8ca5991500bb45d6ea1214f3c9"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/independent/final_scoring_independent_review.json",
+      "sha256": "06706b064a7ef676136f9ca6695b8f9e7832ff47360ff7290c32ad8a82b3ee70"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/historical/historical_comparison_records.json",
+      "sha256": "9fec92c829bc4d2d510b3c9c8826326d19ddf675b69cdeca270467472ed3834e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/historical_definition_supplement.json",
+      "sha256": "28df3cc27c0c0d8a61fcc9795147120c3f2923184f0ffcce4b54c97c4ce3381c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/summary/annual_interface_comparison.png",
+      "sha256": "32998300bdbf88a10cc28519c0d295d0bb780710cfed2ca276f9ec588f190431"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/summary/annual_interface_comparison.svg",
+      "sha256": "45fc2da2328e38f246bfb04f602a54cef18a41fe004d3f263fc0cbc241fac6cf"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/impedance_recommendation.json",
+      "sha256": "8fa3c727c8ffa1e6bdeaed6e63c4830a046e421d339e8c0787cb67abec212ae5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_implementation_review.json",
+      "sha256": "3577bb12869b06a95b11c0c0340f155202dfb615c418b5f48f9608803d39cf1e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/sources/NYgrid_published_paper.pdf",
+      "sha256": "d0c5da107cd38304f9a235862c54ee9cf5147a28a3999008be2214b8d7b29f8a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/loss_accounting_policy_contract.json",
+      "sha256": "b05ed3956c6ab606af6b9d8985b81d7c78f2fb76726da461f2b007a9b33dce23"
+    },
+    {
+      "path": "System Matpower Format/run_nygrid_2025_loss_consistent_acpf.m",
+      "sha256": "11ee49bdb6d18923373b5940d1f5defad720e5ce41db269c3a455d68b613cb40"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/annual_loss_policy_receipt.json",
+      "sha256": "7e7ff61c77b430b113d2e4cd70c27ac211ef555f0715c8ba7dd8f4cc4cbcfd2f"
+    }
+  ]
+}

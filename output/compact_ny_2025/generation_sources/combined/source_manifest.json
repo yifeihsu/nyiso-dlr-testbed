@@ -1,0 +1,23 @@
+{
+  "method": "independent_zonal_generation_reconstruction_v1",
+  "internal_targets_used_to_form_prior": false,
+  "observed_zonal_generation": false,
+  "geographic_reconciliation": "covered_EPA_combined_fossil_shares_normalized_to_P63_net_total",
+  "missing_report_policy": "missing_gross_never_measured_zero; covered_unit_geography_estimates_uncovered_net_output",
+  "gross_net_policy": "no_single_plant_net_conversion_is_claimed",
+  "hourly_policy": "EPA_clock_hour;P63_backward_sample_hold_over_same_hour_beginning_window",
+  "sources": [
+    {
+      "path": "output\\compact_ny_2025\\generation_sources\\epa\\epa_generation_hourly.csv",
+      "sha256": "7615ce98ed103214cf9e08d56917c42793f19eda5b3307a10efb41b625c2cc70"
+    },
+    {
+      "path": "output\\compact_ny_2025\\generation_sources\\nonfossil\\zonal_nonfossil_priors.csv",
+      "sha256": "1a76450833d8e69011680713d7df43b2343991489acf948928ef3dd2b5337594"
+    },
+    {
+      "path": "output\\compact_ny_2025\\generation_sources\\nonfossil\\statewide_fuelmix_hourly.csv",
+      "sha256": "cc74520bc911a850d439bb3a98a6d5e94824648a173893101c7cc0411bb6fdbf"
+    }
+  ]
+}

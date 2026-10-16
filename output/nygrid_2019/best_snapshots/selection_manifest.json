@@ -1,0 +1,72 @@
+{
+  "ranked_hours": 8760,
+  "interfaces_per_hour": 7,
+  "selected_hours": 3,
+  "primary_criterion": "minimum pooled actual-flow proportional error, then timestamp",
+  "alternative_criterion": "minimum worst defined individual interface percentage error, then pooled error and timestamp",
+  "operator": "previously verified corrected released if.map",
+  "selection_uses_observed_errors": true,
+  "representative_or_heldout": false,
+  "new_model_solves": false,
+  "best_timestamp": "2019-01-08 15:00:00",
+  "best_pooled_error_pct": 2.0320931121223036,
+  "best_max_interface_error_pct": 4.0682819199357345,
+  "best_is_also_minimax": true,
+  "denominator_floor_mw": null,
+  "source_inputs": [
+    {
+      "path": "output/nygrid_2019/annual_1_interfaces.csv",
+      "sha256": "43bbe74b4f8562018bfe7de6f58346c87a3afe479acd04ee270f04776ed387dd"
+    },
+    {
+      "path": "output/nygrid_2019/annual_2_interfaces.csv",
+      "sha256": "a4d4ca157fdf1c050f7c1bd32eb14645fbfbcebee22f0af4725a44481345d44f"
+    },
+    {
+      "path": "output/nygrid_2019/annual_3_interfaces.csv",
+      "sha256": "c772c6b5e175493c6806cb881ccae1bb3f76984ff3f97b5361b96d6b6d3be21a"
+    },
+    {
+      "path": "output/nygrid_2019/annual_4_interfaces.csv",
+      "sha256": "88b04d8569d359528e0e66ea987ecb109682d66dcc46b0359be8be5bbcb216fe"
+    },
+    {
+      "path": "output/nygrid_2019/nyiso_source_audit_hourly_quality.csv",
+      "sha256": "15ffd7f78d1d716d8d2a04ab6783aee2f2659ccac50cf3d81b791825791d1677"
+    },
+    {
+      "path": "scripts/nygrid_2019/select_best_snapshots.py",
+      "sha256": "5870dd262d8244f9d9c83703b5913347c521f8ea00d46750006a31e75e165228"
+    },
+    {
+      "path": "scripts/nygrid_2019/summarize_reproduction.py",
+      "sha256": "6788d56bb9f1ffa60fc1b64b5547e19e66c478dda5e067071a60e720b89e0d71"
+    },
+    {
+      "path": "output/nygrid_2019/verification_manifest.json",
+      "sha256": "7c8195017078f4ee707be11f0dbf2a813575b146870f5f9cafad16c27a0d4127"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "all_hour_rankings.csv",
+      "sha256": "c82c8bd89b98cfc1f5be1c965ffeda06193c2081f628b9f2a3085c6ee0311733"
+    },
+    {
+      "path": "BEST_SNAPSHOTS.md",
+      "sha256": "f21490cbe99477f2d919fd9b28511f0711726ac271c04a0d1a67c35b160b2937"
+    },
+    {
+      "path": "top_three_interface_errors.csv",
+      "sha256": "ae8a93b81770d16ad85bbe997fc84659bb043481c20c47c7d5431cf7d1226128"
+    },
+    {
+      "path": "top_three_minimax_snapshots.csv",
+      "sha256": "796c563f81cb3635c9a6420af1195b7158e863464f6aa51f415b0dae12956e37"
+    },
+    {
+      "path": "top_three_snapshots.csv",
+      "sha256": "c95aa57ed208558a6d87f85b86c52c4af8e34ac30086d285648ba53eb610eb34"
+    }
+  ]
+}

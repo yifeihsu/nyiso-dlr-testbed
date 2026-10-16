@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "qualified_hours": 8170,
+  "rows": 57190,
+  "scope": "Current saved gate terminal conventions and conditional oracle terms",
+  "important_interpretation": "Observed-minus-midpoint assumes a midpoint measurement convention. If the frozen primary terminal correction is held, the required net-input correction is observed-minus-primary. Neither is a causal attribution or verified physical meter mapping.",
+  "source": {
+    "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+    "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad"
+  },
+  "output": {
+    "path": "output/nygrid_2025_remaining_errors/accounting/current_gate_terms.csv",
+    "sha256": "4d6ba41f3b9544830701cd3784d59601068e712fab295fa25c729b86a4a23a92"
+  },
+  "new_PF_or_annual_run": false,
+  "raw_monthly_zonal_balance_validation": "separate accounting analysis"
+}
