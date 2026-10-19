@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T03:45:09.782645+00:00",
+  "reason": "Corrected receipt summary extrema after first annual scoring; no cohort or metric values changed. Historical review dates and source hashes preserved verbatim.",
+  "historical_only": true,
+  "prior_source_reconstruction_sha256": "6b172368b2179a0c5339babfac610e0c75e6860965341ade907b568fed9b512e",
+  "snapshots": [
+    {
+      "role": "exact_prior_scorer_bytes_reconstructed_and_hash_verified",
+      "original_path": "scripts/nygrid_2025_ac_loss_revision/comparison/score_revised_profiles.py",
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/historical/score_revised_profiles_before_fraction_summary_fix.py.txt",
+      "sha256": "6b172368b2179a0c5339babfac610e0c75e6860965341ade907b568fed9b512e",
+      "bytes": 29825
+    },
+    {
+      "role": "unaltered_historical_receipt_not_current_source_proof",
+      "original_path": "output/nygrid_2025_ac_loss_revision/comparison/independent/pre_result_consumer_review.json",
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/historical/pre_result_consumer_review.json.txt",
+      "sha256": "e8c6b3a8b4c6ca98ed71c851cbe7f7135f56dcf71b263eb00a3ace5420a12f8e",
+      "bytes": 6569
+    },
+    {
+      "role": "unaltered_historical_receipt_not_current_source_proof",
+      "original_path": "output/nygrid_2025_ac_loss_revision/comparison/month_01_export_readback.json",
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/historical/month_01_export_readback.json.txt",
+      "sha256": "df2f9e0d9e7c38c95f32546873430a0ec646f0989ab51479ae09972b4e7e4eb1",
+      "bytes": 2177
+    }
+  ],
+  "current_source": {
+    "path": "scripts/nygrid_2025_ac_loss_revision/comparison/score_revised_profiles.py",
+    "sha256": "43281ace83cfaa97628bbddb746263c8157adf0cd79f545e4383abb81cc0953a",
+    "bytes": 30087
+  }
+}

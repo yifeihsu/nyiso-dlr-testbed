@@ -1,0 +1,16 @@
+{
+  "gamma2019": 0.358662225381536,
+  "gamma_policy": "one_fixed_2019_summer_peak_public_to_benchmark_factor",
+  "network_bus_count": 51,
+  "branch_records": 92,
+  "active_branches": 87,
+  "parent_generator_records": 35,
+  "historical_generator_records": 37,
+  "current_2025_bus_count": 71,
+  "power_scale": "benchmark_MW_all_transferred_public_P_and_targets_multiply_gamma_once",
+  "reactive_policy": "inherited_benchmark_load_Q_and_controls_new_nuclear_Q_assumed_0.95pf_at_Pmax",
+  "source_time_policy": "existing_P32_forward_hold_hour_mean_maxgap600s_not_paper_raw_arithmetic_sample_mean",
+  "target_policy": "no_interface_values_read_or_used_by_export_source_prior_adapter_targets_NaN",
+  "fleet_policy": "paper74_primary_literal_allocation_physical77_separate_spatial_sensitivity",
+  "qualification": "raw_source_inputs_preserved_even_outside_bounds_no_new_AC_or_historical_topology_qualification"
+}

@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T05:59:18.304953+00:00",
+  "planned_cases": 150,
+  "baseline_hours": 15,
+  "qualified_cases": 142,
+  "rejected_cases": 8,
+  "maximum_baseline_vs_saved_annual_flow_difference_public_MW": 0.0,
+  "maximum_native_or_PJM_group_P_conservation_error_model_MW": 1.51345602716901e-12,
+  "design_selected_without_interface_observations": true,
+  "annual_error_improvement_claimed": false,
+  "parent41_probe_conductor_or_DLR_metadata_validated": false,
+  "default_model_changed": false,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_results.mat",
+      "sha256": "ea5c5758e95a2dff85384e7e2d73d865b40f6c29ecf6ef3df10055a2885a4317"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_audit.csv",
+      "sha256": "6e03cc6510162fb1fb6675f44d2bff48f467c01e22121f9829c1142cc59c9950"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_plan.json",
+      "sha256": "1b9af6b5e17a4c7ed267e0f458ec4a31149bd4775f4d85be2c3d5167c6246b2a"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_inputs.mat",
+      "sha256": "cad92dfc0468fe534669896bbac708be4db35a05498cf95a535b36bd1a7e4523"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/run_probes.m",
+      "sha256": "808efa93f97d5eaf16cd11506ba15d62535618aec3229bf81f477f4d2defaeb3"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/prepare_probes.py",
+      "sha256": "96920b037a4003680367e6d2d50a25be820142bff633e85b3f83a69baa57569d"
+    }
+  ],
+  "source_plan_hashes_still_match": true
+}

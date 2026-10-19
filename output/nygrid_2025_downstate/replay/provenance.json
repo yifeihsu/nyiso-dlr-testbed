@@ -1,0 +1,159 @@
+{
+  "status": "completed_fixed_dispatch_DC_replay",
+  "qualified_hours": 8663,
+  "missing_source_hours": 97,
+  "frozen_gamma": 0.30012075175285535,
+  "plotted_MW_conversion": "public_equivalent_MW = model_MW / frozen_gamma",
+  "per_device_generation_and_bounds": "referenced_unchanged_from_frozen_baseline",
+  "bus_PD_QD": "baseline_hourly_arrays multiplied by declared allocation transpose",
+  "DC_schedules_and_endpoints": "unchanged_four_signed_channels",
+  "observation_data_read": false,
+  "physical_2025_flowgate_membership_verified": false,
+  "project_status_precision": "RCC day-only dates activate next local midnight; Dover HB23 activates2025-12-20T04Z",
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_network.mat",
+      "sha256": "7fa16e2160edfe79b0ce26ae9262ecac9f1bd4dfde8196637d896e34567451d3"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/replay_refinement.py",
+      "sha256": "3d68006e5d5583de88dd4bcf667d73e1568ad2ee654e02dbaea777de825a7207"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/validate_refinement.py",
+      "sha256": "e56b89900a38e0f212fe3ef20be28012cc52ea7e4704a0c05e64750d83e78630"
+    },
+    {
+      "path": "scripts/nygrid_2019/replay_dc.py",
+      "sha256": "bf48540453c4ab8191b6b8e2cb65d8248acaae425b154ab85f6d182be3e57434"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/validation/metadata_only_transition_validation.json",
+      "sha256": "51f824094166ecee4921b5e2bdb061aee81eb3e9072edb3325efae1d37f69199"
+    }
+  ],
+  "variants": [
+    {
+      "variant": "expanded_identity",
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "buses": 191,
+      "branch_records": 410,
+      "generator_count": 1464,
+      "dc_channels": 4,
+      "maximum_nodal_residual_model_mw": 1.3596945791505277e-10,
+      "maximum_hypothetical_slack_change_model_mw": 6.502887117676437e-11,
+      "injection_mapping": "identity",
+      "chronology": "fixed_topology",
+      "file": "output/nygrid_2025_downstate/replay/expanded_identity.mat",
+      "sha256": "e62a4ec0e003bf0394a486d78a8d6398445004db6c01bbfc2ce19628a1f7f289"
+    },
+    {
+      "variant": "source_detail_2019",
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "buses": 191,
+      "branch_records": 410,
+      "generator_count": 1464,
+      "dc_channels": 4,
+      "maximum_nodal_residual_model_mw": 1.966345988837894e-10,
+      "maximum_hypothetical_slack_change_model_mw": 6.787104211980477e-11,
+      "injection_mapping": "identity",
+      "chronology": "fixed_topology",
+      "file": "output/nygrid_2025_downstate/replay/source_detail_2019.mat",
+      "sha256": "8892b5d3ab9cfe31b3e64ca5020a15759d0d61b8ec2f5cdc3fbc1c4bc449e218"
+    },
+    {
+      "variant": "upgrades_year_end",
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "buses": 191,
+      "branch_records": 410,
+      "generator_count": 1464,
+      "dc_channels": 4,
+      "maximum_nodal_residual_model_mw": 2.1935875338385813e-10,
+      "maximum_hypothetical_slack_change_model_mw": 2.219167072325945e-10,
+      "injection_mapping": "identity",
+      "chronology": "fixed_topology",
+      "file": "output/nygrid_2025_downstate/replay/upgrades_year_end.mat",
+      "sha256": "2c28b3331310eabf471f1981a0f0f8a386ae841cd0bf3b69e214880e9ce243bc"
+    },
+    {
+      "variant": "upgrades_dated",
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "buses": 191,
+      "branch_records": 410,
+      "generator_count": 1464,
+      "dc_channels": 4,
+      "maximum_nodal_residual_model_mw": 2.1856294551980682e-10,
+      "maximum_hypothetical_slack_change_model_mw": 1.8053469830192626e-10,
+      "injection_mapping": "identity",
+      "chronology": "dated_2025",
+      "file": "output/nygrid_2025_downstate/replay/upgrades_dated.mat",
+      "sha256": "c9da03615b3bcbff1eaa7ddf1031e1f5c26c82587774ba29dc964afac2bcaf5e"
+    },
+    {
+      "variant": "assets_year_end",
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "buses": 191,
+      "branch_records": 410,
+      "generator_count": 1464,
+      "dc_channels": 4,
+      "maximum_nodal_residual_model_mw": 2.686135758267483e-10,
+      "maximum_hypothetical_slack_change_model_mw": 2.5920599000528455e-10,
+      "injection_mapping": "asset",
+      "chronology": "fixed_topology",
+      "file": "output/nygrid_2025_downstate/replay/assets_year_end.mat",
+      "sha256": "5f376a07b90360f1807123d7350288a7e3bbcfcfa5ce699684020fa2657ca023"
+    },
+    {
+      "variant": "assets_dated",
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "buses": 191,
+      "branch_records": 410,
+      "generator_count": 1464,
+      "dc_channels": 4,
+      "maximum_nodal_residual_model_mw": 2.973479240608867e-10,
+      "maximum_hypothetical_slack_change_model_mw": 1.9872459233738482e-10,
+      "injection_mapping": "asset",
+      "chronology": "dated_2025",
+      "file": "output/nygrid_2025_downstate/replay/assets_dated.mat",
+      "sha256": "7501308c9ae2555819c795658caf10da1cdda00f53dd53ccaad474d040c148a4"
+    },
+    {
+      "variant": "nyes_assumption_year_end",
+      "qualified_hours": 8663,
+      "source_gap_hours": 97,
+      "buses": 191,
+      "branch_records": 410,
+      "generator_count": 1464,
+      "dc_channels": 4,
+      "maximum_nodal_residual_model_mw": 2.814033450704301e-10,
+      "maximum_hypothetical_slack_change_model_mw": 1.7348611436318606e-10,
+      "injection_mapping": "asset",
+      "chronology": "fixed_topology",
+      "file": "output/nygrid_2025_downstate/replay/nyes_assumption_year_end.mat",
+      "sha256": "e7d1aaa3dc0cc048c9a5c65c9acd397b859cb6d8e9b31cb7cbf7fb6157acf871"
+    }
+  ],
+  "metadata_only_transition": "Electrical and injection payloads independently verified identical; raw case interface maps corrected. Annual electrical replay remains unchanged."
+}

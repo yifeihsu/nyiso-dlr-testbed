@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "scope": "independent_saved_NPZ_readback_only_no_interface_observations_or_power_flow",
+  "fixed_hours": 8651,
+  "scenarios_checked": [
+    {
+      "scenario": "niagara_legacy_literal_outside_ab",
+      "qualified_hours": 8374,
+      "max_global_PG_difference_model_mw": 3.637978807091713e-12,
+      "max_native_bound_violation_model_mw": 0.0,
+      "fixed_unit_values_bit_identical": true,
+      "max_hypothesis_adjustment_public_mw": 0.0,
+      "donor_count": 314
+    },
+    {
+      "scenario": "niagara_legacy_bounded_outside_ab",
+      "qualified_hours": 8651,
+      "max_global_PG_difference_model_mw": 7.275957614183426e-12,
+      "max_native_bound_violation_model_mw": 0.0,
+      "fixed_unit_values_bit_identical": true,
+      "max_hypothesis_adjustment_public_mw": 739.6346666666655,
+      "donor_count": 314
+    },
+    {
+      "scenario": "niagara_month_shape_literal_outside_ab",
+      "qualified_hours": 8651,
+      "max_global_PG_difference_model_mw": 7.275957614183426e-12,
+      "max_native_bound_violation_model_mw": 0.0,
+      "fixed_unit_values_bit_identical": true,
+      "max_hypothesis_adjustment_public_mw": 0.0,
+      "donor_count": 314
+    },
+    {
+      "scenario": "niagara_month_shape_constrained_outside_ab",
+      "qualified_hours": 8651,
+      "max_global_PG_difference_model_mw": 7.275957614183426e-12,
+      "max_native_bound_violation_model_mw": 0.0,
+      "fixed_unit_values_bit_identical": true,
+      "max_hypothesis_adjustment_public_mw": 3.7880365505426736e-13,
+      "donor_count": 314
+    },
+    {
+      "scenario": "niagara_legacy_literal_all_other",
+      "qualified_hours": 8374,
+      "max_global_PG_difference_model_mw": 3.637978807091713e-12,
+      "max_native_bound_violation_model_mw": 0.0,
+      "fixed_unit_values_bit_identical": true,
+      "max_hypothesis_adjustment_public_mw": 0.0,
+      "donor_count": 320
+    },
+    {
+      "scenario": "niagara_legacy_bounded_all_other",
+      "qualified_hours": 8651,
+      "max_global_PG_difference_model_mw": 3.637978807091713e-12,
+      "max_native_bound_violation_model_mw": 0.0,
+      "fixed_unit_values_bit_identical": true,
+      "max_hypothesis_adjustment_public_mw": 739.6346666666655,
+      "donor_count": 320
+    },
+    {
+      "scenario": "niagara_month_shape_literal_all_other",
+      "qualified_hours": 8651,
+      "max_global_PG_difference_model_mw": 7.275957614183426e-12,
+      "max_native_bound_violation_model_mw": 0.0,
+      "fixed_unit_values_bit_identical": true,
+      "max_hypothesis_adjustment_public_mw": 0.0,
+      "donor_count": 320
+    },
+    {
+      "scenario": "niagara_month_shape_constrained_all_other",
+      "qualified_hours": 8651,
+      "max_global_PG_difference_model_mw": 7.275957614183426e-12,
+      "max_native_bound_violation_model_mw": 0.0,
+      "fixed_unit_values_bit_identical": true,
+      "max_hypothesis_adjustment_public_mw": 3.7880365505426736e-13,
+      "donor_count": 320
+    }
+  ],
+  "source_receipt_sha256": "d3c9ed1e300d50be59b1b839cd0791a1f2e3ebf9eec24905a359def413e23cdf",
+  "all_receipt_dependencies_unchanged": true
+}

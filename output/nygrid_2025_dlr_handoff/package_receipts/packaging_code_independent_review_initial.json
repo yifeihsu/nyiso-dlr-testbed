@@ -1,0 +1,61 @@
+{
+  "completed": true,
+  "code_gate_passed": false,
+  "actual_staged_manifest_gate_passed": true,
+  "created_utc": "2026-10-13T04:51:28.282791+00:00",
+  "scope": "Bounded independent review of handoff-only package selection, exact snapshot materialization, deduplicated aliases, line-ending variants, checksum validation and ZIP member names; no frozen model modifications",
+  "findings": [
+    {
+      "id": "checksum_table_unverified",
+      "priority": 2,
+      "file": "scripts/nygrid_2025_dlr_handoff/verify_package.py",
+      "line": 21,
+      "observed": "verify_root accepts missing SHA256SUMS; verify_zip accepts corrupt SHA256SUMS because neither reads its contents.",
+      "impact": "The delivered integrity utility does not cover one advertised checksum artifact or its manifest binding. Actual package tables independently checked correct.",
+      "recommendation": "Require exact checksum-table membership and matching digest for every manifested file plus PACKAGE_MANIFEST.json, in both root and ZIP paths."
+    },
+    {
+      "id": "restage_overwrites_changed_retained_file",
+      "priority": 2,
+      "file": "scripts/nygrid_2025_dlr_handoff/build_packages.py",
+      "line": 160,
+      "observed": "A fixture modified a retained packaged file after the first build; the second build overwrote it rather than rejecting.",
+      "impact": "Future use can destroy user edits within a staging tree; no current package-user edit was observed. Old checkout files are not written.",
+      "recommendation": "Before replacement, require existing target to match previous manifest (or already equal incoming bytes); reject unowned collisions and resolve targets inside stage."
+    }
+  ],
+  "verified_properties": [
+    "All 6424 frozen inventory files appear in research with committed baseline hashes.",
+    "38 line-ending variants are separate from committed primary files.",
+    "342 research aliases and 12 runtime aliases resolve to exact bytes; the runtime edition explicitly lacks one nonruntime external reference.",
+    "Actual member sets contain no Windows case/trailing-dot collisions, reserved names or resolved paths outside stage.",
+    "No node_modules, .git or __pycache__ source trees entered the sealed member sets.",
+    "Current SHA256SUMS tables have exact membership and manifest hashes.",
+    "Builder copies matching worktree bytes or explicitly pinned Git blobs and never rewrites historical receipts."
+  ],
+  "current_archive_readback": "Root builder owns full every-member SHA readback; this bounded review inspected exact manifest/alias/checksum structures and safe resolved staged paths.",
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/build_packages.py",
+      "sha256": "84667b5f26217c90e2d9dd1dde7ff57ce785b7b7e6b98237c42618adc8e8de08"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/verify_package.py",
+      "sha256": "7b06390647ba7f43877e61c62537549c75939dc780facb632e5bdc33d8d3cf06"
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/build_package_inventory.py",
+      "sha256": "3db34954fa20ebd8cdbcd3fb18dec974bbe1a455640cb635db93e8c4be7d4b18"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/package_receipts/code_review_fixtures/fixture_results.json",
+      "sha256": "1250dec7a093d8cbbf4e5813390e578ac922f13c2ab45b6fd489a7b52d76ecf5"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/package_receipts/packaging_manifest_independent_review.json",
+      "sha256": "ba2bcbed14f642a5b1ad9b9b343e85daad6f7ccf78b88ee70acc7a645e4a0986"
+    }
+  ],
+  "old_sources_written": false,
+  "builder_edited": false
+}

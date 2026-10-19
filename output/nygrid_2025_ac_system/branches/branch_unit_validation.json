@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "tests_run": 11,
+  "created_utc": "2026-10-12T21:45:33.490114+00:00",
+  "scope": "conductor_and_cable_electrical_units_integer_multiplicity_Joule_identity_gamma_policy_and_composite_capacity_semantics",
+  "new_network_PF_or_OPF_run": false,
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/line_equivalents.py",
+      "sha256": "f55c9c499f8ee8d7bf925a5a97c3c06c2be55f813d3a256796480cb5201183e6"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/build_assignments.py",
+      "sha256": "4da333c789719e8dc1a17304a458cf0aab40aa075de4c4d2aef038d82f1f70ea"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/test_line_equivalents.py",
+      "sha256": "051fad77aa3dcd8fa5cce43e0f08bd66d6d85ac31cd736c06e8de8558d55bcdf"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/engineering_overlay.mat",
+      "sha256": "89fbfe38138ffc007930b3fec4dd4dd02b55f3a6518f73be25be56b1f9014f8f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/thermal_segments.csv",
+      "sha256": "3be6298e619f6b2680f7d2dccc69bea75783d26a172e40b8993366042eae0b1e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/cable_segments.csv",
+      "sha256": "1673ea1dba11ac057af2af18873971cc024c7de2a104a0172ed8ed5d776c52cd"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/cable_candidates.csv",
+      "sha256": "2a9aea8fd233e42d0a4a3c7c0a3677e06715ab3aa7ae92a00bd8c341e6d4774c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/voltage_changing_classification_review.csv",
+      "sha256": "c76f5684062a870dc9f72687c2cbc6ff9bf42a6f1a5ca88a2cfdea9aa05fff39"
+    }
+  ]
+}

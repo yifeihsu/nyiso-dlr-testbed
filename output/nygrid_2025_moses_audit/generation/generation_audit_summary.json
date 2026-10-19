@@ -1,0 +1,27 @@
+{
+  "status": "confirmed_site_zone_defect_with_independent_allocation_audit",
+  "confirmed_wrong_zone_plants": 26,
+  "confirmed_wrong_zone_inventory_rows": 55,
+  "confirmed_wrong_zone_dispatch_rows": 46,
+  "affected_preferred_mean_public_mw": 94.42479624592187,
+  "affected_dispatch_mean_public_mw": 94.56507031298868,
+  "maximum_hydro_plant_to_unit_conservation_error_mw": 9.094947017729282e-13,
+  "duplicate_nonfossil_unit_keys": 0,
+  "duplicate_hydro_plant_month_keys": 0,
+  "HQ_native_double_count": false,
+  "HQ_fixed_external_2025_mean_public_mw": -546.983046596637,
+  "HQ_fixed_external_2019_mean_public_mw": 1247.5742600564388,
+  "hydro_monthly_energy_is_constraint": false,
+  "StLawrence_generation_rows_US_EIA_2694_once": true,
+  "interpretation": [
+    "Confirmed correction is site-specific D-to-E hydro zone and model bus landing, not a whole StLawrence county reassignment",
+    "Plant-to-unit hydro allocation conserves source MW; the bounded projection changes ZoneD hydro by less than1MW in mean",
+    "EIA monthly hydro means are allocation baselines, not enforced energy budgets; differences are a declared allocation limitation, not evidence for duplicate generation",
+    "Annual OA exclusion for StLawrenceunit21 makes assumed activecap802.5MW; some monthly source means exceed it; no hourly unit availability correction is asserted",
+    "HQ remains one fixed external import/export equivalent, outside native P63 generation",
+    "2019 wind and other renewables were negative loads; they are separately accounted rather than falsely reported as absent"
+  ],
+  "files_written_only_under": "output\\nygrid_2025_moses_audit\\generation",
+  "annual_power_flow_replayed": false,
+  "frozen_inputs_unchanged": true
+}

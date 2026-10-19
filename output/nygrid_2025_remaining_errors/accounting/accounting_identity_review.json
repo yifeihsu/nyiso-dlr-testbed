@@ -1,0 +1,355 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T06:05:21.631645+00:00",
+  "source_checkout_commit": "303b626bcab43215c839ad7e175e7274f25b4bdc",
+  "scope": "Exact saved AC zonal-cut accounting and conditional residual modes on the current matched8170 cohort",
+  "qualified_hours": 8170,
+  "gamma": 0.30012075175285535,
+  "cohort_mask_sha256": "343a19c5f72373e531efa1c98fb3777ebbf1c346c421753ea204c0b41d60648f",
+  "independent_source_and_loss_checks_max_model_MW": {
+    "source_native_vs_solved": 1.8712853488977998e-10,
+    "source_gross_vs_saved": 0.0,
+    "fixed_DC": 0.0,
+    "regional_target": 0.0,
+    "allocated_loss_ownership": 2.438280688465966e-10,
+    "NY_gross_equals_served_plus_loss": 4.547473508864641e-13
+  },
+  "exact_identity_max_errors_model_MW": {
+    "DY_midpoint_fixed_inputs_plus_passive_stub": 1.4258788594290195e-11,
+    "WC_midpoint_fixed_inputs_plus_passive_stub": 1.4599849107455043e-11,
+    "MS_midpoint_fixed_inputs": 1.6200374375330284e-12,
+    "UPNY_midpoint_fixed_inputs": 1.823536877054721e-10,
+    "ZoneB_primary_difference": 1.156408302449563e-12,
+    "TE_midpoint_fixed_inputs_plus_PJM_north": 1.8604850993142463e-10,
+    "PJM_north_south_DC_target_closure": 1.432454155292362e-11,
+    "CE_equals_TE_minus_parent224_PF": 1.1368683772161603e-13,
+    "CE_midpoint_equals_TE_midpoint_minus_224_midpoint": 1.1368683772161603e-13,
+    "shared_plus_incremental_residual_equals_WC": 3.410605131648481e-13
+  },
+  "scope_closure_summary": [
+    {
+      "scope": "Dysinger_A",
+      "interface": "DYSINGER EAST",
+      "n": 8170,
+      "bias_public_MW": 4.990789969398163,
+      "MAE_public_MW": 258.6435468479029,
+      "RMSE_public_MW": 319.9820838908112,
+      "WAPE_percent": 29.963813291686247,
+      "signed_half_loss_mean_public_MW": 0.14759446022386893,
+      "signed_half_loss_mean_abs_public_MW": 0.5720904222000022,
+      "signed_half_loss_max_abs_public_MW": 4.397894175354779,
+      "omitted_midpoint_mean_public_MW": 0.0,
+      "maximum_primary_identity_error_model_MW": 4.149569576838985e-12,
+      "maximum_complete_midpoint_error_model_MW": 4.149569576838985e-12,
+      "maximum_nodal_sum_error_model_MW": 4.149569576838985e-12,
+      "maximum_loss_ownership_error_model_MW": 8.104628079763643e-13
+    },
+    {
+      "scope": "WestCentral_AB",
+      "interface": "WEST CENTRAL",
+      "n": 8170,
+      "bias_public_MW": 2.293614246175742,
+      "MAE_public_MW": 255.04359964653355,
+      "RMSE_public_MW": 315.7714498530995,
+      "WAPE_percent": 45.85808760392107,
+      "signed_half_loss_mean_public_MW": -0.2602142420332498,
+      "signed_half_loss_mean_abs_public_MW": 0.9364432321004745,
+      "signed_half_loss_max_abs_public_MW": 8.975447701712026,
+      "omitted_midpoint_mean_public_MW": 0.0,
+      "maximum_primary_identity_error_model_MW": 3.183231456205249e-12,
+      "maximum_complete_midpoint_error_model_MW": 3.069544618483633e-12,
+      "maximum_nodal_sum_error_model_MW": 3.126388037344441e-12,
+      "maximum_loss_ownership_error_model_MW": 1.0080825063596421e-12
+    },
+    {
+      "scope": "TotalEast_ABCDE",
+      "interface": "TOTAL EAST",
+      "n": 8170,
+      "bias_public_MW": -326.00357546476704,
+      "MAE_public_MW": 472.6937939054189,
+      "RMSE_public_MW": 580.4848371513924,
+      "WAPE_percent": 14.695426068123675,
+      "signed_half_loss_mean_public_MW": 59.329652957487276,
+      "signed_half_loss_mean_abs_public_MW": 59.3341670568715,
+      "signed_half_loss_max_abs_public_MW": 270.1261256423306,
+      "omitted_midpoint_mean_public_MW": 0.0,
+      "maximum_primary_identity_error_model_MW": 1.857642928371206e-10,
+      "maximum_complete_midpoint_error_model_MW": 1.8599166651256382e-10,
+      "maximum_nodal_sum_error_model_MW": 1.8599166651256382e-10,
+      "maximum_loss_ownership_error_model_MW": 4.369837824924616e-12
+    },
+    {
+      "scope": "Moses_D",
+      "interface": "MOSES SOUTH",
+      "n": 8170,
+      "bias_public_MW": 11.832741550488656,
+      "MAE_public_MW": 120.78014023391529,
+      "RMSE_public_MW": 149.82316276951255,
+      "WAPE_percent": 22.94359860253754,
+      "signed_half_loss_mean_public_MW": -10.533327114914457,
+      "signed_half_loss_mean_abs_public_MW": 10.533327114914457,
+      "signed_half_loss_max_abs_public_MW": 91.99907477320315,
+      "omitted_midpoint_mean_public_MW": 0.0,
+      "maximum_primary_identity_error_model_MW": 1.6200374375330284e-12,
+      "maximum_complete_midpoint_error_model_MW": 1.6200374375330284e-12,
+      "maximum_nodal_sum_error_model_MW": 1.7337242752546445e-12,
+      "maximum_loss_ownership_error_model_MW": 3.97015753605956e-13
+    },
+    {
+      "scope": "CentralEast_ABCDE",
+      "interface": "CENTRAL EAST - VC",
+      "n": 8170,
+      "bias_public_MW": 172.43266464312788,
+      "MAE_public_MW": 233.06226951428897,
+      "RMSE_public_MW": 284.964720663809,
+      "WAPE_percent": 13.703768329560342,
+      "signed_half_loss_mean_public_MW": -5.871547219212184,
+      "signed_half_loss_mean_abs_public_MW": 5.871547219212184,
+      "signed_half_loss_max_abs_public_MW": 20.76767954220354,
+      "omitted_midpoint_mean_public_MW": 950.9956318288286,
+      "maximum_primary_identity_error_model_MW": 1.858779796748422e-10,
+      "maximum_complete_midpoint_error_model_MW": 1.8599166651256382e-10,
+      "maximum_nodal_sum_error_model_MW": 1.8599166651256382e-10,
+      "maximum_loss_ownership_error_model_MW": 4.369837824924616e-12
+    },
+    {
+      "scope": "UPNY_ABCDEFG",
+      "interface": "UPNY CONED",
+      "n": 8170,
+      "bias_public_MW": -15.788771551885834,
+      "MAE_public_MW": 224.32720519932337,
+      "RMSE_public_MW": 283.14606903590493,
+      "WAPE_percent": 7.5628817732573514,
+      "signed_half_loss_mean_public_MW": -0.031648810873774906,
+      "signed_half_loss_mean_abs_public_MW": 0.4548067824741217,
+      "signed_half_loss_max_abs_public_MW": 4.239545599562988,
+      "omitted_midpoint_mean_public_MW": 0.0,
+      "maximum_primary_identity_error_model_MW": 1.0280700735165738e-09,
+      "maximum_complete_midpoint_error_model_MW": 1.0279563866788521e-09,
+      "maximum_nodal_sum_error_model_MW": 1.0539906725171022e-09,
+      "maximum_loss_ownership_error_model_MW": 9.870859685179312e-11
+    },
+    {
+      "scope": "SprainDunwoodie_I",
+      "interface": "SPR/DUN-SOUTH",
+      "n": 8170,
+      "bias_public_MW": -62.3959314642373,
+      "MAE_public_MW": 168.4243805725506,
+      "RMSE_public_MW": 214.37352920163426,
+      "WAPE_percent": 9.176816455415125,
+      "signed_half_loss_mean_public_MW": -1.1117558059812165,
+      "signed_half_loss_mean_abs_public_MW": 1.1117558059812165,
+      "signed_half_loss_max_abs_public_MW": 3.470622173705255,
+      "omitted_midpoint_mean_public_MW": -2426.950278514266,
+      "maximum_primary_identity_error_model_MW": 6.400568963726982e-11,
+      "maximum_complete_midpoint_error_model_MW": 6.417621989385225e-11,
+      "maximum_nodal_sum_error_model_MW": 1.2173018149042036e-10,
+      "maximum_loss_ownership_error_model_MW": 9.369505171719084e-11
+    },
+    {
+      "scope": "WestCentral_B_declared",
+      "interface": "WEST CENTRAL",
+      "n": 8170,
+      "bias_public_MW": 2.293614246175742,
+      "MAE_public_MW": 255.04359964653355,
+      "RMSE_public_MW": 315.7714498530995,
+      "WAPE_percent": 45.85808760392107,
+      "signed_half_loss_mean_public_MW": -0.2602142420332498,
+      "signed_half_loss_mean_abs_public_MW": 0.9364432321004745,
+      "signed_half_loss_max_abs_public_MW": 8.975447701712026,
+      "omitted_midpoint_mean_public_MW": -840.8322168678035,
+      "maximum_primary_identity_error_model_MW": 1.1368683772161603e-12,
+      "maximum_complete_midpoint_error_model_MW": 1.0800249583553523e-12,
+      "maximum_nodal_sum_error_model_MW": 1.2505552149377763e-12,
+      "maximum_loss_ownership_error_model_MW": 4.813927034774679e-13
+    },
+    {
+      "scope": "CentralEast_E_declared",
+      "interface": "CENTRAL EAST - VC",
+      "n": 8170,
+      "bias_public_MW": 172.43266464312788,
+      "MAE_public_MW": 233.06226951428897,
+      "RMSE_public_MW": 284.964720663809,
+      "WAPE_percent": 13.703768329560342,
+      "signed_half_loss_mean_public_MW": -5.871547219212184,
+      "signed_half_loss_mean_abs_public_MW": 5.871547219212184,
+      "signed_half_loss_max_abs_public_MW": 20.76767954220354,
+      "omitted_midpoint_mean_public_MW": -2226.5359422772485,
+      "maximum_primary_identity_error_model_MW": 4.888534022029489e-12,
+      "maximum_complete_midpoint_error_model_MW": 4.803268893738277e-12,
+      "maximum_nodal_sum_error_model_MW": 7.702283255639486e-12,
+      "maximum_loss_ownership_error_model_MW": 4.227729277772596e-12
+    }
+  ],
+  "PJM_bus140_passive_leaf_checks": [
+    {
+      "state": "pre_may",
+      "bus": 140,
+      "active_parent": 71,
+      "zero_PD_QD_GS_BS": true,
+      "no_generator_or_DC_terminal": true
+    },
+    {
+      "state": "may21",
+      "bus": 140,
+      "active_parent": 71,
+      "zero_PD_QD_GS_BS": true,
+      "no_generator_or_DC_terminal": true
+    },
+    {
+      "state": "may30",
+      "bus": 140,
+      "active_parent": 71,
+      "zero_PD_QD_GS_BS": true,
+      "no_generator_or_DC_terminal": true
+    },
+    {
+      "state": "post_dover",
+      "bus": 140,
+      "active_parent": 71,
+      "zero_PD_QD_GS_BS": true,
+      "no_generator_or_DC_terminal": true
+    }
+  ],
+  "western_residual_statistics": {
+    "DY_WC_error_correlation": 0.9982557071224563,
+    "incremental_B_MAE_public_MW": 14.393481147407968,
+    "incremental_B_bias_public_MW": -2.6971757232224167,
+    "PJM_A_import_mean_public_MW": -0.006280019592152174,
+    "PJM_A_import_range_public_MW": [
+      -0.006280019593082842,
+      -0.006280019591011837
+    ]
+  },
+  "Moses_conditional_passivity_bound": {
+    "description": "All three frozen member coefficients are negative; primary <= fixed complete-cut midpoint for nonnegative member losses",
+    "observed_above_model_midpoint_hours": 3329,
+    "mean_positive_observed_gap_above_midpoint_MW": 49.363988428565
+  },
+  "measurement_scope": "Frozen modeled zone cuts; physical P32 meter correspondence and inherited numeric-as-MW interpretation are not certified. Residual differences are accounting identities, not causal diagnoses.",
+  "source_input_vs_physical_gate_distinction": true,
+  "new_PF_OPF_or_annual_run": false,
+  "within_zone_or_impedance_scenario_executed": false,
+  "old_inputs_and_artifacts_modified": false,
+  "source_files_unchanged": true,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/baseline.npz",
+      "sha256": "9b5f3deb8bf6d13a3fdc879628f45dde6a8812498c9f8a53089d014ce681c160"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure/runtime_branch_map.csv",
+      "sha256": "f6d85aeacb799a4aec2f89965f09ebe970c27d1e3567aad2f2a30c673df4bf24"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/replay/interface_definitions.json",
+      "sha256": "e96c7d938cedeb7a65383ea94b85ad7fec8a7c7f79867b87c5c31fb0295be4fd"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_01.mat",
+      "sha256": "c7de8f9f2d060a3ba91cf3f1a2ba8e0d7d7dd85abd8315ec4dbd2d28fe5a74e5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_02.mat",
+      "sha256": "115158dc8dc00e1930e88ca446a03a038f584e379add3791e6065c8d598b813d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_03.mat",
+      "sha256": "c259bce5e604773fe4b8d7c6364181ae346fb7803cebf95f1dca472a93bf690b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_04.mat",
+      "sha256": "cee22944247e1ad1892461f83ca0053a99de9ceada64639064dd436a7b06119e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_05.mat",
+      "sha256": "7f4c08f15f2363b8298ef90fd416f53ba42ee5522f54f9c341a5081be6672748"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_06.mat",
+      "sha256": "55110d8509e12b2bd3a0fd6ed27f7e41d8f952066c56d638091ac17f99bd5ab1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_07.mat",
+      "sha256": "b1fe05126664dab9a76c119a2573ec4317755144d361d00bf29f7a35346a4132"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_08.mat",
+      "sha256": "6c43c4fa55e3bef47c576b9981a7dec232cc6590653e8f91dfe55b2e8d0d077e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_09.mat",
+      "sha256": "a0faa5b5bffeb9847c00c7fdcbf5219b21ec7371c46ed40595d6cf87b340e82d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_10.mat",
+      "sha256": "1cb54774324953bb500fe895f10bc40c20d026719e54dc8b7976f01b16b20849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_11.mat",
+      "sha256": "0d44e45a44e464c04ac14c33eb90057e8efdf66523ca40e87a54d3b57aa784db"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_12.mat",
+      "sha256": "f7102fdad75d7508ec922b66da3e9841035b9af286dfc01d840bc43d6abd0d8b"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_prepare_policy.m",
+      "sha256": "d5fed7cf527b794f46a88ef0c3cced939d03375168135920b8dad38bde4d3cda"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_apply_budget.m",
+      "sha256": "ab62082de6bae0f08f0347456b5aa7ecf1b33a3c52f38f26cf32d8d11bbb2b85"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_remaining_errors/accounting/hourly_cut_drivers.csv",
+      "sha256": "6191ca5ac8e5f38b0dda37e5b7335b24069d47c8962d0bdd3e04c9b46fc4d493"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/accounting/cut_completeness_and_bypass.csv",
+      "sha256": "64954c0d54f05b2f5cc2e56e07c743dac8a7eb057b7f69461f302e14d4b7e44b"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/accounting/cut_identity_summary.csv",
+      "sha256": "7c23bc3b840390180fe16d7cbe032aff5accde1bc3a0b05b2a3c805ee61a0112"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/accounting/hourly_residual_modes.csv",
+      "sha256": "146d276d2964db42df3fa83826904c60f3f5088db8ee95d827369f2a1d19200a"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/accounting/matched_AC_DC_terminal_decomposition.csv",
+      "sha256": "f6e19d75541118ca414f786c7f104357d0c4a8a20b747cc9c71d120369820c5a"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/accounting/accounting_arrays.npz",
+      "sha256": "1e19440c8e218f65b3d6cdf578f7a1af5ef8d811109819eb3b25a7fd5a25fb12"
+    }
+  ],
+  "analysis_script": {
+    "path": "scripts/nygrid_2025_remaining_errors/accounting/analyze_cut_accounting.py",
+    "sha256": "f4263796b2f0109b79aa93fc68daab8914fc57b4459d25e3ef9bff5c271814af"
+  }
+}

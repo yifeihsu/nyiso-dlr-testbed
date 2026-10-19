@@ -1,2 +1,235 @@
 # Evidence CSVs are serialized and validated byte-for-byte with canonical LF.
 *.csv text eol=lf
+# Original NYISO archive members retain their raw bytes and published-source
+# fingerprints. Generated evidence CSVs above still use canonical LF.
+"System Matpower Format/NY_Lite/contemporary_source_data/*.csv" -text !eol whitespace=cr-at-eol
+# S11 interchange handoff keeps original NYISO bytes for source verification.
+output/s11_hourly_generation/sources/interchange/*.csv -text !eol whitespace=cr-at-eol
+# These saved diagnostic JSON summaries are byte-fingerprinted outputs.
+# Preserve their original serializer bytes across operating systems.
+output/compact_ny_2025/generation_sources/epa/epa_generation_input_tests.json -text whitespace=cr-at-eol
+output/compact_ny_2025/generation_sources/nonfossil/nonfossil_input_summary.json -text whitespace=cr-at-eol
+# Paper-reproduction manifests and logs preserve serializer bytes for hashes.
+output/nygrid_2019/*.json -text whitespace=cr-at-eol
+output/nygrid_2019/*.md -text whitespace=cr-at-eol
+output/nygrid_2019/*.log -text whitespace=cr-at-eol
+# Exact patches include original upstream blank-line whitespace as evidence.
+output/nygrid_2019/*.patch -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+
+# Matched-comparison evidence and its code are fingerprinted as exact bytes.
+output/nygrid_compact_2019/** -text whitespace=cr-at-eol
+scripts/nygrid_compact_2019/** -text whitespace=cr-at-eol
+# Preserve the exact MATLAB table display captured by the independent replay.
+output/nygrid_compact_2019/verification/*.log whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Presentation evidence and source manifests preserve their exact hashed bytes.
+output/pdf/nygrid_interface_update_2026-09-08/** -text whitespace=cr-at-eol
+# Full2019 source capture and derived DC screening use byte-fingerprinted code.
+scripts/nygrid_2019_full/** -text whitespace=cr-at-eol
+"System Matpower Format/npcc_nygrid_2019_full_dc.m" -text whitespace=cr-at-eol
+output/nygrid_2019_full_stage1/*.json -text whitespace=cr-at-eol
+output/nygrid_2019_full_stage1/*.log -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+output/nygrid_2019_full_stage1/*.patch -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Fingerprinted load-source and western-interface research diagnostics.
+scripts/nygrid_2019_diagnostics/** -text whitespace=cr-at-eol
+NYGRID_2019_LOAD_AND_WESTERN_DIAGNOSTICS.md -text whitespace=cr-at-eol
+output/nygrid_2019_diagnostics/*.json -text whitespace=cr-at-eol
+output/nygrid_2019_diagnostics/*.ipynb -text whitespace=cr-at-eol
+output/nygrid_2019_diagnostics/raw_archives/*.json -text whitespace=cr-at-eol
+output/nygrid_2019_diagnostics/*.log -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# 2025 source/input manifests fingerprint exact bytes across platforms.
+scripts/nygrid_2025_inputs/** -text whitespace=cr-at-eol
+output/nygrid_2025_inputs/** -text whitespace=cr-at-eol
+output/nygrid_2025_inputs/**/*.log whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_operating_inputs.m" -text whitespace=cr-at-eol
+# Frozen fleet/dispatch evidence and code retain exact fingerprinted bytes.
+scripts/nygrid_2025_dispatch/** -text whitespace=cr-at-eol
+output/nygrid_2025_dispatch/** -text whitespace=cr-at-eol
+output/nygrid_2025_dispatch/**/*.log whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Raw primary documents and pinned parent-source copies retain publisher bytes.
+output/nygrid_2025_dispatch/fleet/source_parent/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_dispatch/fleet/source_scope/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_full_dc.m" -text whitespace=cr-at-eol
+NYGRID_2025_BOUNDED_DISPATCH.md -text whitespace=cr-at-eol
+NYGRID_2025_OPERATING_INPUTS.md -text whitespace=cr-at-eol
+# Full-NPCC Downstate construction, paired replay and provenance retain bytes.
+scripts/nygrid_2025_downstate/** -text whitespace=cr-at-eol
+output/nygrid_2025_downstate/** -text whitespace=cr-at-eol
+output/nygrid_2025_downstate/sources/raw/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_downstate_dc.m" -text whitespace=cr-at-eol
+NYGRID_2025_DOWNSTATE_REFINEMENT.md -text whitespace=cr-at-eol
+# Preserve native matplotlib SVG path whitespace and audited render bytes.
+output/nygrid_2025_downstate/geography/figures/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Separate small-bus DC alternative and its exact-byte validation evidence.
+scripts/nygrid_2025_slim/** -text whitespace=cr-at-eol
+output/nygrid_2025_slim/** -text whitespace=cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_slim_dc.m" -text whitespace=cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_slim_interfaces.m" -text whitespace=cr-at-eol
+NYGRID_2025_SLIM_DOWNSTATE.md -text whitespace=cr-at-eol
+output/nygrid_2025_slim/geography/figures/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Versioned Moses South diagnosis preserves audited source and result bytes.
+scripts/nygrid_2025_moses_audit/** -text whitespace=cr-at-eol
+output/nygrid_2025_moses_audit/** -text whitespace=cr-at-eol
+output/nygrid_2025_moses_audit/exchanges/raw/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_moses_audit/generation/goldbook2025_layout.txt -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_moses_audit/figures/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+output/nygrid_2025_moses_audit/corrected/fleet/source_parent/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_moses_audit/validation/*.log -diff whitespace=-blank-at-eof,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_moses_corrected_dc.m" -text whitespace=cr-at-eol
+NYGRID_2025_MOSES_SOUTH_DIAGNOSIS.md -text whitespace=cr-at-eol
+# Official PAR source receipts, controlled-transfer cases and exact replay bytes.
+scripts/nygrid_2025_par_controls/** -text whitespace=cr-at-eol
+output/nygrid_2025_par_controls/** -text whitespace=cr-at-eol
+output/nygrid_2025_par_controls/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_par_controls/figures/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+output/nygrid_2025_par_controls/validation/*.log -diff whitespace=-blank-at-eof,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_par_controlled_dc.m" -text whitespace=cr-at-eol
+NYGRID_2025_VERIFIED_PAR_CONTROLS.md -text whitespace=cr-at-eol
+# Western source audit preserves exact publisher and validated serializer bytes.
+scripts/nygrid_2025_western_audit/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_western_audit/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_western_audit/ontario/raw/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_western_audit/boundary_actuals/raw/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_western_audit/generation/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_western_audit/figures/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+output/nygrid_2025_western_audit/validation/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_western_corrected_dc.m" -text !eol whitespace=cr-at-eol
+NYGRID_2025_WESTERN_SOURCE_AUDIT.md -text !eol whitespace=cr-at-eol
+# Matched 2025 western counterfactuals retain sealed source and numeric bytes.
+scripts/nygrid_2025_western_counterfactuals/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_western_counterfactuals/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_western_counterfactuals/figures/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+output/nygrid_2025_western_counterfactuals/replay/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+NYGRID_2025_WESTERN_CONTROLLED_TESTS.md -text !eol whitespace=cr-at-eol
+# Preserve the reviewed seasonal flowgate sources and literal registry bytes.
+scripts/nygrid_2025_flowgate_definitions/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_flowgate_definitions/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_flowgate_definitions/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_2025_PHYSICAL_FLOWGATE_DEFINITIONS.md -text !eol whitespace=cr-at-eol
+# Source-informed physical-line estimates and independently checked replay bytes.
+scripts/nygrid_2025_line_parameters/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_line_parameters/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_line_parameters/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_line_parameters/conductors/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_line_estimated_dc.m" -text !eol whitespace=cr-at-eol
+NYGRID_2025_LINE_PARAMETER_ESTIMATION.md -text !eol whitespace=cr-at-eol
+# Applied Dover line/PAR source evidence and phase-affine DC reconstruction.
+scripts/nygrid_2025_dover_parameters/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_dover_parameters/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_dover_parameters/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_dover_parameters/engineering/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_dover_dc.m" -text !eol whitespace=cr-at-eol
+NYGRID_2025_DOVER_PARAMETERS_APPLIED.md -text !eol whitespace=cr-at-eol
+# P34 source qualifications and current-model DLR readiness evidence.
+scripts/nygrid_2025_p34_qualification/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_p34_qualification/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_p34_qualification/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+scripts/nygrid_2025_dlr_readiness/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_dlr_readiness/** -text !eol whitespace=cr-at-eol
+NYGRID_2025_P34_QUALIFICATION_AND_DLR_READINESS.md -text !eol whitespace=cr-at-eol
+# Whole-system synthetic AC construction, current constraints and scoped evidence.
+scripts/nygrid_2025_ac_system/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_ac_system/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_ac_system/engineering/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_ac_system/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_ac.m" -text !eol whitespace=cr-at-eol
+"System Matpower Format/run_nygrid_2025_ac_dlr.m" -text !eol whitespace=cr-at-eol
+NYGRID_2025_AC_SYSTEM.md -text !eol whitespace=cr-at-eol
+# Read-only profile-driven ACPF audit and exact-byte source evidence.
+scripts/nygrid_2025_acpf_profile_audit/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_acpf_profile_audit/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_acpf_profile_audit/**/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_acpf_profile_audit/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_2025_ACPF_PROFILE_AUDIT.md -text !eol whitespace=cr-at-eol
+# Compact AC operators and paired validation evidence retain exact hash bytes.
+scripts/nygrid_2025_compact_ac/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_compact_ac/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_compact_ac/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+"System Matpower Format/npcc_nygrid_2025_compact_ac.m" -text !eol whitespace=cr-at-eol
+"System Matpower Format/run_nygrid_2025_compact_acpf.m" -text !eol whitespace=cr-at-eol
+NYGRID_2025_COMPACT_AC.md -text !eol whitespace=cr-at-eol
+# CENTRAL EAST controlled diagnostics preserve prior models and exact evidence bytes.
+scripts/nygrid_2025_centraleast_diagnosis/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_centraleast_diagnosis/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_centraleast_diagnosis/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_centraleast_diagnosis/summary/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+NYGRID_2025_CENTRAL_EAST_DIAGNOSIS.md -text !eol whitespace=cr-at-eol
+# Versioned AC loss policy, source receipts and annual replay preserve exact bytes.
+scripts/nygrid_2025_ac_loss_revision/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_ac_loss_revision/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_ac_loss_revision/**/sources/** -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_ac_loss_revision/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_ac_loss_revision/summary/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+"System Matpower Format/run_nygrid_2025_loss_consistent_acpf.m" -text !eol whitespace=cr-at-eol
+NYGRID_2025_AC_LOSS_REVISION.md -text !eol whitespace=cr-at-eol
+# Colleague handoff source, proof receipts and readable manual retain exact bytes.
+scripts/nygrid_2025_dlr_handoff/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_dlr_handoff/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_dlr_handoff/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_2025_DLR_HANDOFF.md -text !eol whitespace=-blank-at-eof,cr-at-eol
+NYGRID_2025_DLR_HANDOFF.docx -text -diff
+# R/X-conditioned synthetic-conductor policy and additive handoff supplement.
+scripts/nygrid_2025_conductor_inference/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_conductor_inference/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_conductor_inference/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_2025_CONDUCTOR_INFERENCE.md -text !eol whitespace=cr-at-eol
+# Current-model-only colleague package and structure description.
+scripts/nygrid_2025_latest_handoff/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_latest_handoff/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_latest_handoff/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_latest_handoff/structure/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+NYGRID_2025_LATEST_MODEL_STRUCTURE.md -text !eol whitespace=cr-at-eol
+NYGRID_2025_LATEST_MODEL_STRUCTURE.docx -text -diff
+# Updated offline AC map, embedded annual data and inspectable validation.
+scripts/nygrid_2025_latest_map/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_latest_map/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_latest_map/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+# Map-inclusive latest-model handoff build and archive proof.
+scripts/nygrid_2025_handoff_map/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_handoff_map/** -text !eol whitespace=cr-at-eol
+# Additive remaining-error investigation preserves source-bound evidence bytes.
+scripts/nygrid_2025_remaining_errors/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_remaining_errors/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_remaining_errors/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_2025_REMAINING_ERROR_DIAGNOSIS.md -text !eol whitespace=cr-at-eol
+# Versioned physical repair, annual replay, map and portable delivery evidence.
+scripts/nygrid_2025_physical_repair/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_physical_repair/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_physical_repair/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_physical_repair/delivery/structure/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+NYGRID_2025_PHYSICAL_REPAIR.md -text !eol whitespace=cr-at-eol
+deliverables/CURRENT_NYGRID_MODEL.json -text !eol whitespace=cr-at-eol
+# Author-release-only 2019 comparison and provenance correction.
+scripts/nygrid_released_2019_comparison/** -text !eol whitespace=cr-at-eol
+output/nygrid_released_2019_comparison/** -text !eol whitespace=cr-at-eol
+output/nygrid_released_2019_comparison/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_RELEASED_2019_COMPARISON.md -text !eol whitespace=cr-at-eol
+# Additive Moses source diagnosis; preserve source and numerical evidence bytes.
+scripts/nygrid_2025_moses_source_diagnosis/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_moses_source_diagnosis/** -text !eol whitespace=cr-at-eol
+NYGRID_2025_MOSES_SOURCE_DIAGNOSIS.md -text !eol whitespace=cr-at-eol
+# Preserve whitespace in native source pages and literal workbook cell extracts.
+output/nygrid_2025_moses_source_diagnosis/generation/sources/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_moses_source_diagnosis/generation/EIA860_plant2694_inventory_source_rows.csv whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+# Versioned St. Lawrence/PV20 repair and reproducible annual/delivery evidence.
+scripts/nygrid_2025_moses_repair/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_moses_repair/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_moses_repair/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_moses_repair/**/sources/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_2025_MOSES_REPAIR.md -text !eol whitespace=cr-at-eol
+output/nygrid_2025_moses_repair/delivery/structure/*.svg -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+# Additive controlled diagnosis; immutable numerical and source evidence.
+scripts/nygrid_2025_postrepair_diagnosis/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_postrepair_diagnosis/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_postrepair_diagnosis/**/*.log -diff whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+output/nygrid_2025_postrepair_diagnosis/**/sources/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+NYGRID_2025_POSTREPAIR_DIAGNOSIS.md -text !eol whitespace=cr-at-eol
+# Keep the editable deck and its audit/data hashes byte-stable.
+scripts/nygrid_weekly_20261015/** -text !eol whitespace=cr-at-eol
+output/nygrid_weekly_20261015/evidence/** -text !eol whitespace=cr-at-eol
+output/pdf/nygrid_weekly_2026-10-15/** -text !eol whitespace=cr-at-eol
+# Additive cable-review map and source-evidence fingerprints.
+scripts/nygrid_2025_cable_review_map/** -text !eol whitespace=cr-at-eol
+output/nygrid_2025_cable_review_map/** -text !eol whitespace=cr-at-eol
+# Broader saved-run error comparison and reproducible source fingerprints.
+scripts/nygrid_2019_2025_error_metrics/** -text !eol whitespace=cr-at-eol
+output/nygrid_2019_2025_error_metrics/** -text !eol whitespace=cr-at-eol

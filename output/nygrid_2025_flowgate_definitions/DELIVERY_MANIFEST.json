@@ -1,0 +1,500 @@
+{
+  "status": "verified_source_definitions_model_calibration_unresolved",
+  "model_operators_promoted": 0,
+  "interface_observations_used": false,
+  "scientific_status": "documentary_membership_usable; contemporary_model_identity_P32_binding_and_effective_hours_unestablished",
+  "source_counts": {
+    "interfaces": 7,
+    "editions": 3,
+    "definitions": 21,
+    "printed_entries": 269
+  },
+  "proof_hash_checks": 172,
+  "report_local_links_checked": 17,
+  "files": {
+    "NYGRID_2025_PHYSICAL_FLOWGATE_DEFINITIONS.md": {
+      "sha256": "da37085028bbc8ce8672e294a7c5da9f4dbdb10abad88078a3fe3fddcc1c3e3d",
+      "bytes": 15602
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/all_seasonal_members.csv": {
+      "sha256": "e4d3e1ba5511b18d6d3c8cc3c33429cfca0e590c4800d74c065bcf213e2a88c1",
+      "bytes": 158523
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/central_north_2025.csv": {
+      "sha256": "f795ccd2d2b09a12a66f73cde5eaa8ff103bdcec50e8b126e32ffc0c1a49892c",
+      "bytes": 49265
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/central_north_2025_qualifiers.json": {
+      "sha256": "baabbef45f6be710b9cfebd1f1da763e00218ff9d48b541eb9366d58008f30c7",
+      "bytes": 8218
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/central_north_source_receipt.json": {
+      "sha256": "d4a49fa49f29c2ff7534553f8fc2e6f23062b1ae31943af8a44046a78f7c4f07",
+      "bytes": 9230
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/central_north_winter2024_25.csv": {
+      "sha256": "11a3a4b3fb2fb1f608b97311575d0c79c3aa7c44a4bf8c9070e48877b485ce03",
+      "bytes": 25108
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/definition_summary.csv": {
+      "sha256": "f3eb7ca763e8079757ca51ce5fef1542661017fe7821be7d18924515707d468d",
+      "bytes": 2472
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/downstate_2025.csv": {
+      "sha256": "835f7fe7c3fd81bdc46225c710fb5db4f711787e6d1bcff115e6bbdec97e1c60",
+      "bytes": 30812
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/downstate_2025.receipt.json": {
+      "sha256": "0cc16daa85bafe04c695787639e921487d028e15c059f8ef94d25f5ad584c344",
+      "bytes": 12031
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/model_binding_template.csv": {
+      "sha256": "e9e0d7a799c071927eaadf0b7be3c90e72a994e16959a2bba5f617014f76fe02",
+      "bytes": 23826
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/physical_flowgate_registry.json": {
+      "sha256": "7d7c2714176644a2638f5e0d077c53de853e3c79b4f776f3d7dd33e52bab6d5d",
+      "bytes": 398005
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/registry_receipt.json": {
+      "sha256": "856c9e9ed5a17f2567de5ea7bd64aacb107597193a891e25ca8c7839ca7d3501",
+      "bytes": 2316
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/western_2025.csv": {
+      "sha256": "382667ec1989f126558381171227824ae3fbfcae523f7264f100c029902aab22",
+      "bytes": 11151
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/western_2025.receipt.json": {
+      "sha256": "575d433b9e436a91d82cf9583d545bc1b9f83b5d8c35e1cefe4be70af76de1b3",
+      "bytes": 4811
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/western_seasonal_comparison.json": {
+      "sha256": "167a8cd38210a962115fdeb182e90d6ae1d4e18c6f368684b1c8b8fcf206a715",
+      "bytes": 6195
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/western_winter2024_25.csv": {
+      "sha256": "1949563de67b230fe8b554bcb33e1697b4a36e91a00c435150a5529a89d21163",
+      "bytes": 13019
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/western_winter2024_25.receipt.json": {
+      "sha256": "c0580941f2015b7fb5ebf10ed748b272eda02895dd3c0c8623047bd7e6270867",
+      "bytes": 5681
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/western_winter2025_26.csv": {
+      "sha256": "a9a4d409ba1833c68de4796a39617a1f1930225fd7904a8bd020cef0f4daf95b",
+      "bytes": 11604
+    },
+    "output/nygrid_2025_flowgate_definitions/definitions/western_winter2025_26.receipt.json": {
+      "sha256": "c7bef978e88798a72b985112324e54ba8484a527689beab711f2f516b3f015a4",
+      "bytes": 4804
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/affine_recovery_checks.csv": {
+      "sha256": "6906aef6a6524218c2ca1c44db8213c89942ea8d891c3270a0dc883ca4572c19",
+      "bytes": 701
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/candidates/embedded_source_vs_accounting_zone_differences.csv": {
+      "sha256": "a4b6110e8af374b0e81f0d09d488fa2f8f42d025efd1d9ad2e7e86ccd7555588",
+      "bytes": 180
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/candidates/gate_model_coverage.csv": {
+      "sha256": "42b0f4eed9ad9460267de2f2df3192a7aafbe3e57af2a0e727bedc7455cc1539",
+      "bytes": 1288
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/candidates/historical_candidate_numeric_checks.csv": {
+      "sha256": "f0a6d4914b47113867f03aa3edfaae33a9721493d52d7587c3280a3a159f4d9c",
+      "bytes": 42468
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/candidates/historical_circuit_candidates.csv": {
+      "sha256": "17670e5f57049a3fbff2e444fc12c9a6ea9a30af938756fc6aacd4027c727fa1",
+      "bytes": 20863
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/candidates/legacy_AC_operator_provenance.csv": {
+      "sha256": "7468dc3a5933f83ce9cd5a89d4fbc1fa9f520069764d1caed64459e3fcfe4382",
+      "bytes": 8512
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/candidates/legacy_AC_operator_terms.csv": {
+      "sha256": "bb91a700ed84135019618beca9778eb57e5f234929de5580af0d5b2e0d16d93d",
+      "bytes": 21609
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/candidates/model_term_candidate_receipt.json": {
+      "sha256": "aa5054c258283454b2d2cf2290d050ca622ceccb400784d7929c8045025ac87d",
+      "bytes": 11615
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/candidates/physical_term_model_identifiability.csv": {
+      "sha256": "965224ce9d702796c73899e05a6e2e0f457436ecc08752c229d6a34556b5ac6e",
+      "bytes": 245723
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/candidates/unverified_station_search_candidates.csv": {
+      "sha256": "22c3737f13378fa9ec694fda5e37829b78767c48192c6d549a19df4673d53ac6",
+      "bytes": 88765
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/full191_physical_identity_boundaries.csv": {
+      "sha256": "5360be032d10a11977e2d282d177dee17a5b0156f089320415007903004d5ea0",
+      "bytes": 109804
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/historical_2019_planning_2030_workbook_rows.csv": {
+      "sha256": "89237141731f718dd0428acd869f5da1ccc084ba10a374ec4babaaec512e6f7f",
+      "bytes": 836801
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/historical_parallel_identity_checks.csv": {
+      "sha256": "3ea5830bc400262b1426b6118914c8ef146228f5bb49c62ebf4c724305779240",
+      "bytes": 30908
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/historical_workbook_sheet_inventory.csv": {
+      "sha256": "0b33d4f607d47e3f821f21c74573b472d858cb00c7294e9e45b63c8d67dea0d8",
+      "bytes": 624
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/identifiability_fixtures.json": {
+      "sha256": "6afd2e7b04fc7dce28824123b662e071d76a1d8d67ebd6416e6bd8cf6653d189",
+      "bytes": 1543
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/parallel_identity_receipt.json": {
+      "sha256": "1a582062e0d56b20596e1644f38933174fa2a475ace8d70f9ae468b4def59416",
+      "bytes": 2440
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/PERFORM_source_to_model.csv": {
+      "sha256": "718a8ebe99223678faf23238c8d74f500be985e7767dbdaec75623bf5be6096d",
+      "bytes": 1049472
+    },
+    "output/nygrid_2025_flowgate_definitions/local_model/source_crosswalk_receipt.json": {
+      "sha256": "cb972562c785e4a420ec8b240d19c3b4869517b101226c073c493a05067ff120",
+      "bytes": 5978
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/CEVC24_page13.png": {
+      "sha256": "c172a7f80a2c07bf3f0dab58280cca7c7ee1a61a3c84f4072f2b16c7829a0b44",
+      "bytes": 189808
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/DynamicReserves2023_page66.png": {
+      "sha256": "778e56ff53b2da359d0ce56305c85dc3dfa3a6afe3cb6f9d66cebfc351b1d4c5",
+      "bytes": 162469
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/MS24_page07.png": {
+      "sha256": "acb7a9c8d325788e56c640cd7cc78d84c3c53d202b39a795151fee802eaf0bae",
+      "bytes": 162284
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_CEVC24_2024.pdf": {
+      "sha256": "42358fbf03847610a7da52fe66abac13ca269c29294309ac8743be22cba9527f",
+      "bytes": 792032
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_CEVC24_2024.receipt.json": {
+      "sha256": "9eb03c2256eea6b350b2adce44e110856693f4b0ac05762b62a93380434fe60f",
+      "bytes": 339
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_CEVC24_2024.txt": {
+      "sha256": "8d80796e96eeb6bc12ff9b3bf24a91bd14efb6f39c44aa64632d75f97db6a390",
+      "bytes": 37556
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Dynamic_Reserves_20231213.pdf": {
+      "sha256": "b70bc69fc0bd822609fadf32b73265c5e6455755d8c784db122e2e70c4a6739f",
+      "bytes": 478392
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Dynamic_Reserves_20231213.receipt.json": {
+      "sha256": "a0ca460f87babddf30018d1110ddc1d3f15e528e461098dbedfae56668ba0d55",
+      "bytes": 351
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Dynamic_Reserves_20231213.txt": {
+      "sha256": "8a041738668666e7a78883633ee3537c229ea8b362922bddedd15d6e8926fda2",
+      "bytes": 54199
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Emergency_Operations_Manual_current.pdf": {
+      "sha256": "80dfcf47e99bc571d76f7f9fa6de541aed768dddb46ab1596b55b0b9e803d070",
+      "bytes": 2264453
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Emergency_Operations_Manual_current.receipt.json": {
+      "sha256": "1c2799a0163ac11186424a4e862a5cae758fe16b861a39b4dd9fd96ec6116235",
+      "bytes": 296
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Emergency_Operations_Manual_current.txt": {
+      "sha256": "5a782137a7d4da1f7e387cb86924bebe6221767484cd445ec7bc9692342e162d",
+      "bytes": 288959
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_MS24_20240718.pdf": {
+      "sha256": "b945e476a985dada832ccf2b017deeee24bf0a8a9464d45674e48acdaaa3e074",
+      "bytes": 1102366
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_MS24_20240718.receipt.json": {
+      "sha256": "71f35de4d2d9ae9e1ff172b3212d6e21d1f1365c726557c6811280ec4533468c",
+      "bytes": 373
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_MS24_20240718.txt": {
+      "sha256": "97870696c62664563b1f5fd158e5e7d86b953a15894ffafb4877860477702983",
+      "bytes": 20808
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Summer2025_OperatingStudy_APPROVED.pdf": {
+      "sha256": "077c8b7c6c4703a0987784dbffc72a2213f33eb3501c340a10eb208fdf6ee1be",
+      "bytes": 727962
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Summer2025_OperatingStudy_APPROVED.receipt.json": {
+      "sha256": "65d2e1c426ed0a864f3652144218f9b3438b8e4d4f387b0e8490925d37b4eb4a",
+      "bytes": 525
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Summer2025_OperatingStudy_APPROVED.txt": {
+      "sha256": "cceb609e91a63f4a025a79c0dfd25353741330e7d5b9ef76f9572b1d4c1675e3",
+      "bytes": 56585
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_TE23_20230915.pdf": {
+      "sha256": "001a4188b56af703181ad95b70745783ea8cdae880743361b7d30dbd69595c8d",
+      "bytes": 1368288
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_TE23_20230915.receipt.json": {
+      "sha256": "8b9f544e0d04f953c8f0640598b261cac6fdac3a91edd8a3feca20cf8128f170",
+      "bytes": 326
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_TE23_20230915.txt": {
+      "sha256": "e663fa57175ffddcec41379b88ce7a7413a5504bbe2180326a1cfa24d701b7b1",
+      "bytes": 22058
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.pdf": {
+      "sha256": "546402b7e85f51441e64a6b68adac53579f83828f6bc8c1195ccc480e082dc0b",
+      "bytes": 1823393
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.receipt.json": {
+      "sha256": "17e3d72d3e505c423a4893fcb58acb1a72261b06e2afe2197562ba50d858c99d",
+      "bytes": 511
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.txt": {
+      "sha256": "00f8d95782b71591e89cdea9c73e229e6f86d2bf1e88d926461961158c0640b4",
+      "bytes": 96979
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_OperatingStudy_APPROVED.pdf": {
+      "sha256": "ca605a2a49b5677fcca88d146b2ce7048d6f7f736f5c03608ee29dcc328382b5",
+      "bytes": 957589
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_OperatingStudy_APPROVED.receipt.json": {
+      "sha256": "a0ef127a9db59c35fc85926dc9305789acf70fa455ca19ae584afb7f466b0408",
+      "bytes": 508
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_OperatingStudy_APPROVED.txt": {
+      "sha256": "59f184352c6487e24092549121a815bb80120aa71e22128fcc5b4ffb094c080b",
+      "bytes": 58563
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.pdf": {
+      "sha256": "bcf26e7ac908f43a29f34230067b5b1afc6e587845b26246d7ca39a41ef9f072",
+      "bytes": 1849386
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.receipt.json": {
+      "sha256": "623fe65c20581a825d48b1453a728f15df8f9ad0099810068122a469d82f6732",
+      "bytes": 504
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.txt": {
+      "sha256": "a1b7919df113de8ab169691a48ee6b2a9cbf4ce2ae35c2c88567d6226b4a3847",
+      "bytes": 95891
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_OperatingStudy_APPROVED.pdf": {
+      "sha256": "8e0ec07085d06d02240df60c425d48f15c7281cf4abf5feb9cdb88a09c79d01e",
+      "bytes": 764265
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_OperatingStudy_APPROVED.receipt.json": {
+      "sha256": "74a79e455fc4eb8c78a53d2c717148287d4f90d8e1410332de498ed9c8d0d8fa",
+      "bytes": 506
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_OperatingStudy_APPROVED.txt": {
+      "sha256": "bcbdcad2127a6299613d0fb03958578e971b7a85911766a44fa99f311e54e336",
+      "bytes": 56739
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/Summer2025_page-37.png": {
+      "sha256": "64b8f790dc0067936ee764966c834e34367bdc5c7e968fa6e9bd572c933f81b0",
+      "bytes": 191808
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/Summer2025_page-38.png": {
+      "sha256": "5a9cf9e5bbabf582322a9e2f8cadf8b9c81d45e9ffe7fa2719efa42b2b7622d4",
+      "bytes": 190681
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/Summer2025_page-39.png": {
+      "sha256": "7badfba038502d1e1e55124160e5c497a88c140d853e8a864f75d08e76ffeb94",
+      "bytes": 161190
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/TE23_page06.png": {
+      "sha256": "8ab3d98aeb42906e80f9acb5f0ae0b6e7b0780d0d9c411175a74e0a8e5ad14b1",
+      "bytes": 187447
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2024_25_page-36.png": {
+      "sha256": "db00f68917de49d6197b06cd4bbeca706a9f33971669ecad9c4d2159d536edb8",
+      "bytes": 191962
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2024_25_page-37.png": {
+      "sha256": "970a52507e488ce1702ac75da4a4d2e33bd233f9c432b3b4be8ee6bf95dc9d9a",
+      "bytes": 190621
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2024_25_page-38.png": {
+      "sha256": "64b02c059a2931bd47049d53cd1632eb326d284c13fef9e915a85120e28f8730",
+      "bytes": 169549
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2025_26_main_page09.png": {
+      "sha256": "ed75985f0eaef3d0c7e144be5b90c263b5ebb29cc7c040d9242dcb12a855d2cb",
+      "bytes": 131170
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2025_26_page-36.png": {
+      "sha256": "4f436e07942bd8fb0f3063dee886916f27453bfa5195953f112156e83f2b105a",
+      "bytes": 193383
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2025_26_page-37.png": {
+      "sha256": "d1dcafb3c3b48757cffd7d4cb9bb0ee7f80cf5693392d7e1d3e80647f94595b5",
+      "bytes": 190704
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2025_26_page-38.png": {
+      "sha256": "9422ef8874335b8c3329477bca7b352ef49bf5c1106edbf9de1d4ebb3b1cf136",
+      "bytes": 161335
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/Locality_2025_26_Final.pdf": {
+      "sha256": "f71e825d32183e102d7b002d3406666dc492685081086338d1b3ff3042425fa1",
+      "bytes": 389538
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/Locality_2025_26_Final.receipt.json": {
+      "sha256": "85d715eb21d262a169c438d00b411db91e55ee667b4e9480466373b9037cec9a",
+      "bytes": 389
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/Locality_2025_26_Final.txt": {
+      "sha256": "7c5384a025c7ab32e45afed5dc6bd78d3a0a1a5aa0f4849deee0cfa22b58d92e",
+      "bytes": 57313
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/Locality_2025_26_Final_page9.png": {
+      "sha256": "f8ac51cb807db1277ee7c8797a70a8ee32058e8727d4209ec82033386bcc64cf",
+      "bytes": 271946
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/Summer2025_definitions_page36.png": {
+      "sha256": "8f83ee8c55bcc7cdcad2ffd548b3b5d4e1737749c9f3547968c0dcdbf5cd9af9",
+      "bytes": 223202
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/Summer2025_definitions_page37.png": {
+      "sha256": "11107cd7e7de51de0c639a09e84882374cf45d4fa7c01f2c6f3d48009719771d",
+      "bytes": 248683
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/UPNY_ConEd_VCAP_2024_OC_approved.pdf": {
+      "sha256": "9de00982234f491ae70b9b463d83c49f35cb94d1dc2560e4349866a32d684b54",
+      "bytes": 1112191
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/UPNY_ConEd_VCAP_2024_OC_approved.receipt.json": {
+      "sha256": "1cae545a47bef216295ac661d97cfaf7cb6652f22af3364d6c2a8825e85db79a",
+      "bytes": 382
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/UPNY_ConEd_VCAP_2024_OC_approved.txt": {
+      "sha256": "12acb34958f3ef4e3fc4439057fa789d146aa3ecc5254f2d669ff1225834df19",
+      "bytes": 172576
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/UPNY_ConEd_VCAP_2024_OC_approved_page12.png": {
+      "sha256": "d9a27f0092591dbcd814083cbedc14a7fa9a20a3b27005ebc35245f53ce84538",
+      "bytes": 513571
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/Winter2024_definitions-35.png": {
+      "sha256": "d7a5d3c86a4329d1877393cebdb6e44b9a080c30d01d55f8c6cb2736655fe205",
+      "bytes": 179327
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/Winter2024_definitions-36.png": {
+      "sha256": "2e26b756efd04ff79937e175d2825c94c8925480d024be396621f9f61efe060c",
+      "bytes": 201276
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/Winter2025_definitions-35.png": {
+      "sha256": "93ed06df0ab754bf7f5e6c87f591a14ea90eea8e37611221095c834b7be575f2",
+      "bytes": 177809
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/downstate/Winter2025_definitions-36.png": {
+      "sha256": "a83040c178218253b59cf757e165b01c99a6d1ca23d3c5733b402d9c997debf0",
+      "bytes": 200505
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.pdf": {
+      "sha256": "32e4fb86cc8397ab458fdf790ab52decfcaa9e9686de7aa9bec7527eaf04b901",
+      "bytes": 1866358
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.receipt.json": {
+      "sha256": "aaf4e2fdd6a3ff4cb1b050af718473f6223704948933d959703125658aa913c2",
+      "bytes": 1024
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.txt": {
+      "sha256": "649f35825d207a2d30f89b7272b00610937e75a4421e5decb9d9204e83efd428",
+      "bytes": 174110
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/western/P32_expression_search_review.json": {
+      "sha256": "39ab9cc40315aeeb83e40797e40c84f27befd115dce0fe97a96afefacc4a5969",
+      "bytes": 1581
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/western/Summer2025_Appendix_page036.png": {
+      "sha256": "cbcf5711f2eaa3be69bc2d04e511799eadf04f73f2f8bdb6b97dba2b6e1b5adb",
+      "bytes": 203592
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/western/Summer2025_Appendix_page042.png": {
+      "sha256": "762df2ec7be45c3fb90d25c6d82616e40fe13a8e337ba734a7a57d2b173a95ac",
+      "bytes": 171190
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/western/Winter2024_25_Appendix_page035.png": {
+      "sha256": "f9cf7377b06c189fb8d805d4f0679f8ebcb82732aaa2fb9b5cdbebc6ebf89947",
+      "bytes": 165729
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/western/Winter2024_25_Appendix_page041.png": {
+      "sha256": "d3b0c54f9be4af54f5779fe2a27795159e222b0e602270dcc573d4bc8831b782",
+      "bytes": 143038
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/western/Winter2025_26_Appendix_page035.png": {
+      "sha256": "3c97e6a55f3aa31fd18e6e73c573c570afa54eebef861f41c1a222b4d5331cd4",
+      "bytes": 164293
+    },
+    "output/nygrid_2025_flowgate_definitions/sources/western/Winter2025_26_Appendix_page041.png": {
+      "sha256": "e170aca42814b10dad4135ca7a2f6b3d0791b02bb830ee521719644151a5f1e1",
+      "bytes": 135778
+    },
+    "output/nygrid_2025_flowgate_definitions/validation/model_lineage_independent_review.json": {
+      "sha256": "8c5fb08ff769c99cbf6346006826f0f1e8e87eee557e420a68789677fc1c4b96",
+      "bytes": 5330
+    },
+    "output/nygrid_2025_flowgate_definitions/validation/registry_guard_tests.json": {
+      "sha256": "f980de1d067f36127dba5ed693f7d4ff0231e238073f94809a539713e6466471",
+      "bytes": 12735
+    },
+    "output/nygrid_2025_flowgate_definitions/validation/registry_independent_review.json": {
+      "sha256": "662fdbabba0bb4a5b56e263ba04300d6bd29b2dbe0394b0bf3d165da10e0170a",
+      "bytes": 245931
+    },
+    "scripts/nygrid_2025_flowgate_definitions/audit_model_term_candidates.py": {
+      "sha256": "a2e22a27c60bd9a49572078ac99919e4a5be3917299b055cd96d73cf55e96929",
+      "bytes": 18917
+    },
+    "scripts/nygrid_2025_flowgate_definitions/audit_parallel_identity.py": {
+      "sha256": "1f7c4011d13b0fdf3efbfabf7c6b9d9ff0b81f46805e2cbe992485f5021531e5",
+      "bytes": 4720
+    },
+    "scripts/nygrid_2025_flowgate_definitions/audit_source_crosswalk.py": {
+      "sha256": "2b68ba803ab2f601ea386772eb7562e79bf07772468bc42e0e41ab53009df792",
+      "bytes": 19786
+    },
+    "scripts/nygrid_2025_flowgate_definitions/build_central_north_definitions.py": {
+      "sha256": "1ad74f45b241ecd72beaa3152d21ba8d5902df47e392a490cb3f8b0e5b22763b",
+      "bytes": 12478
+    },
+    "scripts/nygrid_2025_flowgate_definitions/build_downstate_source_ledger.py": {
+      "sha256": "8e4978249cf1aad2a132ec05ad28d4578a6870f4ca475e678cf83b16809346e5",
+      "bytes": 7300
+    },
+    "scripts/nygrid_2025_flowgate_definitions/build_registry.py": {
+      "sha256": "27bad379f709a33ee2f7a72c490b56b24e318d59f17aeb0d60598cc1bac180dd",
+      "bytes": 8936
+    },
+    "scripts/nygrid_2025_flowgate_definitions/build_western_source_ledger.py": {
+      "sha256": "a6794578b05b849a53c7ddd8038e8d9fdf34894571b89ce830fc3522203301bd",
+      "bytes": 8287
+    },
+    "scripts/nygrid_2025_flowgate_definitions/build_western_winter_ledgers.py": {
+      "sha256": "ec313c826af0278a6bb3629720087d09ab3af28a7324d71043bf087a419ab960",
+      "bytes": 8884
+    },
+    "scripts/nygrid_2025_flowgate_definitions/compare_western_seasons.py": {
+      "sha256": "9bed34c7be85e191c1387bd71ee45bb2bf15a6ea567ca67dde505bd6e94597f9",
+      "bytes": 4206
+    },
+    "scripts/nygrid_2025_flowgate_definitions/finalize_definitions.py": {
+      "sha256": "4a853c2940e1f175e4a1b6c35ed7e35040397a5e12193fe0b1d3ff05f88009f7",
+      "bytes": 4690
+    },
+    "scripts/nygrid_2025_flowgate_definitions/inspect_definition.py": {
+      "sha256": "a0f608dde8ce4ebd94cf85812f1f4b427fe50fd73abab7cc805875efce278e70",
+      "bytes": 4531
+    },
+    "scripts/nygrid_2025_flowgate_definitions/review_registry.py": {
+      "sha256": "83a5c7ecc83e7b3965b53c4fce695c1c786d204fb05bb369be4f951167b3370b",
+      "bytes": 10279
+    },
+    "scripts/nygrid_2025_flowgate_definitions/test_registry.py": {
+      "sha256": "2ce0df0a7e4c5210ddd0428b7dcf8d3c0f7081329568eee9a8c96f1928b00ff7",
+      "bytes": 5125
+    }
+  }
+}

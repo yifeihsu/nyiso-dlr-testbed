@@ -1,0 +1,35 @@
+{
+  "status": "confirmed_site_zone_mapping_repair_created",
+  "created_utc": "2026-10-11T06:19:09.686979+00:00",
+  "checkout_HEAD_at_creation": "addc656be53308e6a62e4011a7266a05203f2104",
+  "source_GoldBook_sha256": "cc43665b9344a04b4c9355edd1dc7e31d42a6bb759ffe027ad867221556aea8e",
+  "inventory_rows": 2245,
+  "corrected_plants": 26,
+  "corrected_inventory_generator_rows": 55,
+  "changed_field_cells": 330,
+  "corrected_admitted_dispatch_rows": 46,
+  "destination_bus_counts": {
+    "46": 31,
+    "47": 24
+  },
+  "all_fleet_ids_device_keys_capacity_availability_admission_fields_unchanged": true,
+  "hourly_PG_prior_bounds_modified": false,
+  "optimization_weights_and_statewide_balance_target_modified": false,
+  "original_builders_modified": false,
+  "original_outputs_unchanged": true,
+  "source_hashes": {
+    "output/nygrid_2025_dispatch/fleet/fleet_register.csv": "6d27fc788fd90454c8b92d29115fe059783979b0063992ffe29d313bec405d45",
+    "output/nygrid_2025_dispatch/fleet/fleet_bounds.npz": "7fdc0f26448d6333ba427f7d10535cff2eef993de21fae0794eba99b549e9c52",
+    "output/nygrid_2025_dispatch/fleet/fleet_bounds.mat": "48da9450d2dbc265404232f481feb73cc4e3f971499a723afd7dce1ef7400b57",
+    "output/nygrid_2025_dispatch/priors/dispatch_priors.npz": "6a99bee7ea8be1e63a6349b6a0e6fa781932525fab17dd3548ac1e11a304c66f",
+    "output/nygrid_2025_dispatch/dispatch/dispatch.mat": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c",
+    "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883",
+    "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+  },
+  "scope": "only26_primary_source_confirmed_stations;otherStLawrenceCountyplants_not_reassigned",
+  "existing_bus_landing_policy": "same-zone nearest original retained parent bus; geography remains a coarse model proxy",
+  "fleet_register_sha256": "f7266a08faac3d65442482f8e5c3f2facfbf0c25960419820c7f2eb514710d13",
+  "changed_fields_sha256": "df07f2d7f47c20462751ca67f326973790dd26364c6642fcea3134db9a25b909",
+  "fleet_bounds_npz_sha256": "7fdc0f26448d6333ba427f7d10535cff2eef993de21fae0794eba99b549e9c52",
+  "no_power_flow_or_annual_dispatch_run": true
+}

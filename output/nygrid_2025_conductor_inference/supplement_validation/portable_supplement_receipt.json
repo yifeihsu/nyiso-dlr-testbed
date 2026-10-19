@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "actual_archive_extracted_and_installed": true,
+  "no_git_ancestor": true,
+  "supplement_archive": {
+    "path": "deliverables/nygrid_rx_conductor_supplement_20261013/nygrid_rx_conductor_supplement_20261013.zip",
+    "bytes": 5561032,
+    "sha256": "208e05d2cf2c6663a7283183dbff7648eb8d5a5e61fb029a4dc9a23231f50723"
+  },
+  "Python_candidates": 112,
+  "MATLAB_eligible_parents": 180,
+  "runtime_branches": 252,
+  "conductor_segments": 253,
+  "old_v1_files_verified_after_execution": 770,
+  "supplement_payload_files_verified_after_execution": 81,
+  "idempotent_install_passed": true,
+  "conflicting_destination_refused_before_writes": true,
+  "electrical_parameters_changed": false,
+  "OPF_run": false,
+  "original_VQ_gate": false,
+  "initial_validation_harness_slash_comparison_failure_was_corrected_without_product_code_changes": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_conductor_inference/supplement_validation/installation_receipt.json",
+      "sha256": "ee26b51476e3b6c910e81d127dd0f0477d4a84b0e293c67f88942479cfcb731c"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/supplement_validation/matlab_portable_receipt.json",
+      "sha256": "7e6d27e1629f95b2912a8e4b84c6fe351bc86b83421152bb5f9facedf8d9391b"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/supplement_validation/matlab_portable.log",
+      "sha256": "e3213ba9c993be97a05c08da78d7a4ee8a4d8ffd008265bdcae09c89ba46c3ea"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/supplement_validation/candidate_ledger.csv",
+      "sha256": "10c23b85179f1a02940dbcfeb161b682a426c41895da58d71bbf95f0a59b98a3"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/supplement_validation/branch_screen.csv",
+      "sha256": "faebcae146f7aa4c5fb2c4b93e9fd789f3bdc0e07655be423b6753c611956cb6"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/supplement_validation/validate_rx_supplement.m",
+      "sha256": "6c5b064dd3cd73b84c14c291db627976f9954a1f9d44cfc877f30734eecd62a7"
+    }
+  ]
+}

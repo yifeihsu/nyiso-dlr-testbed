@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "fresh_MATPOWER_snapshots": 95,
+  "modes": [
+    "mapping_only",
+    "Ontario_actual_only",
+    "Ontario_actual_and_mapping",
+    "all_boundary_actual_only",
+    "combined"
+  ],
+  "maximum_branch_error_model_mw": 1.5432988220709376E-11,
+  "maximum_angle_error_degree": 4.7606363295926712E-13,
+  "maximum_generation_change_model_mw": 1.7763568394002505E-11,
+  "maximum_bound_violation_model_mw": 2.2737367544323206E-13,
+  "maximum_interface_error_model_mw": 2.6716406864579767E-11,
+  "maximum_six_transfer_error_model_mw": 1.4210854715202004E-14,
+  "missing_hour_rejected": true,
+  "invalid_mode_rejected": true,
+  "invalid_topology_rejected": true,
+  "IESO_suspect_hours_rejected": 6,
+  "AC_or_physical_PAR_tap_feasibility_verified": false,
+  "MATPOWER_solver": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\rundcpf.m",
+  "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+  "dependencies": [
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dispatch\\dispatch\\dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dispatch\\dispatch\\dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\dispatch\\actual_Ontario_dispatch.mat",
+      "sha256": "29d5adb7db188e395e9b4b177107088e3e23a27ece8cb986309307e26e620566"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\dispatch\\all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_western_corrected_dc.m",
+      "sha256": "6cf89f6076f2fa9e9c81e0d4da92d4a6bd930f99b644c2690c4ba9b63491ce01"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_par_controlled_dc.m",
+      "sha256": "99e6778597e4f023ce967bd0ba9fec18a41ffa9a3139553138d7758e818879cd"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_slim_interfaces.m",
+      "sha256": "c43fe312eda58b0a439d426a5eb05238a08115f07f6b7456b2a0e458cade2845"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_western_audit\\validate_matlab_western.m",
+      "sha256": "ec614061ded270545c7ff7d9e2127b307e8dd4e6aba0f9ee0a1eedf7ed856faa"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\replay\\dated_mapping_only.mat",
+      "sha256": "cdb87e1fe32f266083fe9edf74b1c87fc55ad797a7e03e866834c123e9255a4a"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\replay\\dated_Ontario_actual_only.mat",
+      "sha256": "c88fece5c0a6ca03c94d8799739843db120ecd6bf586df9c4ac24e4f0da8751e"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\replay\\dated_Ontario_actual_and_mapping.mat",
+      "sha256": "204d3fef233d9965f8fe9f51be37f8160b370d58a5c004b2c857292dcdccbaca"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\replay\\dated_all_boundary_actual_only.mat",
+      "sha256": "254302a067d7f89490be2bb23d1168a6b2ec667ac565800654ba7731665ff7e8"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\replay\\dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\replay\\year_end_mapping_only.mat",
+      "sha256": "5d3b9766b54714c94a7e142dbf22a752b908217f5d8fbc326655b7ed7a342e41"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\replay\\year_end_Ontario_actual_only.mat",
+      "sha256": "c3165b5af1e5430e1f48c5b290a0899e9c9eda5d401d3d48f57ab991dc350448"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\replay\\year_end_Ontario_actual_and_mapping.mat",
+      "sha256": "786a962dfe14ec119cf2a7e1ffcf6682bb0e8f88b5232e1ab5142c1838978d3f"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\replay\\year_end_all_boundary_actual_only.mat",
+      "sha256": "8a966d29d6c5581425fcefbb7d1662cfe435a0bf32c737e2b8526d7099326559"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\replay\\year_end_combined.mat",
+      "sha256": "e574f5a4b049bd7a78fc3106f2db8130264b40438c358d31fec0ea2641e4920e"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_western_audit\\ontario\\hourly_exchange_quality.csv",
+      "sha256": "ae23b9a130773fece232c8bb84583a3fb2d16fe9c2533a13b525ab64ba788cde"
+    }
+  ]
+}

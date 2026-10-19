@@ -1,0 +1,319 @@
+{
+  "id" : "isux-jnrn",
+  "name" : "New York Power Authority Net Generation (MWh) Produced by Facility: Beginning 2013",
+  "assetType" : "dataset",
+  "attribution" : "New York Power Authority",
+  "attributionLink" : "https://www.nypa.gov/",
+  "averageRating" : 0,
+  "category" : "Energy & Environment",
+  "createdAt" : 1362511476,
+  "description" : "The New York Power Authority is America's largest state power organization, with 16 generating facilities and more than 1,400 circuit-miles of transmission lines.The data provided includes megawatt-hours produced net of station service by each NYPA facility.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 3380,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 36362470,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1612393222,
+  "publicationGroup" : 715571,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1770994937,
+  "rowsUpdatedBy" : "xzik-pf59",
+  "tableId" : 17996867,
+  "totalTimesRated" : 0,
+  "viewCount" : 39518,
+  "viewLastModified" : 1776183608,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1551913227,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 3194461,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1551913227,
+    "targetAudience" : "public",
+    "workflowId" : 2254,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "xzik-pf59",
+      "displayName" : "NY Open Data"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 522701729,
+    "name" : "Year",
+    "dataTypeName" : "number",
+    "description" : "Calendar year for production, YYYY format",
+    "fieldName" : "year",
+    "position" : 1,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8375518,
+    "width" : 157,
+    "cachedContents" : {
+      "non_null" : "91",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2021",
+        "count" : "7"
+      }, {
+        "item" : "2022",
+        "count" : "7"
+      }, {
+        "item" : "2018",
+        "count" : "7"
+      }, {
+        "item" : "2016",
+        "count" : "7"
+      }, {
+        "item" : "2015",
+        "count" : "7"
+      }, {
+        "item" : "2025",
+        "count" : "7"
+      }, {
+        "item" : "2024",
+        "count" : "7"
+      }, {
+        "item" : "2019",
+        "count" : "7"
+      }, {
+        "item" : "2023",
+        "count" : "7"
+      }, {
+        "item" : "2014",
+        "count" : "7"
+      }, {
+        "item" : "2013",
+        "count" : "7"
+      }, {
+        "item" : "2017",
+        "count" : "7"
+      }, {
+        "item" : "2020",
+        "count" : "7"
+      } ],
+      "smallest" : "2013",
+      "count" : "91",
+      "cardinality" : "91"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "center"
+    }
+  }, {
+    "id" : 522701730,
+    "name" : "NYPA Facility Name",
+    "dataTypeName" : "text",
+    "description" : "The name of the NYPA facility or producer type:\n\n•\t500 MW: Astoria facility\n•\tBlenheim-Gilboa**\n•\tNiagara\n•\tRichard M. Flynn\n•\tSmall Clean Power Plants: Brentwood, Gowanus, Harlem, Hellgate, Kent, Pouch, and Vernon facilities\n•\tSmall Hydro Facilities: Ashokan Project, Crescent Plant, Gregory B. Jarvis Plant, Vischer Ferry Plant\n•\tSt. Lawrence\n",
+    "fieldName" : "nypa_facility_name",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8375520,
+    "width" : 263,
+    "cachedContents" : {
+      "non_null" : "91",
+      "largest" : "ST. LAWRENCE",
+      "null" : "0",
+      "top" : [ {
+        "item" : "ST. LAWRENCE",
+        "count" : "13"
+      }, {
+        "item" : "500 MW",
+        "count" : "13"
+      }, {
+        "item" : "RICHARD M. FLYNN",
+        "count" : "13"
+      }, {
+        "item" : "NIAGARA",
+        "count" : "13"
+      }, {
+        "item" : "BLENHEIM-GILBOA",
+        "count" : "13"
+      }, {
+        "item" : "SMALL HYDRO FACILITIES",
+        "count" : "13"
+      }, {
+        "item" : "SMALL CLEAN POWER PLANTS",
+        "count" : "13"
+      } ],
+      "smallest" : "500 MW",
+      "count" : "91",
+      "cardinality" : "91"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 522701731,
+    "name" : "Net Generation (MWh)",
+    "dataTypeName" : "number",
+    "description" : "Net generation in megawatt-hours\n** Pump storage facility is reported as Gross Generation in megawatt-hours",
+    "fieldName" : "net_generation_mwh",
+    "position" : 3,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8375521,
+    "width" : 210,
+    "cachedContents" : {
+      "non_null" : "91",
+      "largest" : "17230000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "300000",
+        "count" : "3"
+      }, {
+        "item" : "380000",
+        "count" : "3"
+      }, {
+        "item" : "170000",
+        "count" : "3"
+      }, {
+        "item" : "350000",
+        "count" : "3"
+      }, {
+        "item" : "130000",
+        "count" : "3"
+      }, {
+        "item" : "440000",
+        "count" : "2"
+      }, {
+        "item" : "470000",
+        "count" : "2"
+      }, {
+        "item" : "140000",
+        "count" : "2"
+      }, {
+        "item" : "420000",
+        "count" : "2"
+      }, {
+        "item" : "400000",
+        "count" : "2"
+      }, {
+        "item" : "160000",
+        "count" : "1"
+      }, {
+        "item" : "15050000",
+        "count" : "1"
+      }, {
+        "item" : "14320000",
+        "count" : "1"
+      }, {
+        "item" : "640000",
+        "count" : "1"
+      }, {
+        "item" : "7680000",
+        "count" : "1"
+      }, {
+        "item" : "15470000",
+        "count" : "1"
+      }, {
+        "item" : "3410000",
+        "count" : "1"
+      }, {
+        "item" : "7780000",
+        "count" : "1"
+      }, {
+        "item" : "7330000",
+        "count" : "1"
+      }, {
+        "item" : "1010000",
+        "count" : "1"
+      } ],
+      "smallest" : "100000",
+      "count" : "91",
+      "cardinality" : "91"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "rdfSubject" : "0",
+    "attachments" : [ {
+      "filename" : "NYPA_NetGenerationProducedByFacility_Overview.pdf",
+      "assetId" : "077a5efe-0644-4a6c-997d-f0d00b096cae",
+      "name" : "NYPA_NetGenerationProducedByFacility_Overview.pdf"
+    }, {
+      "filename" : "NYPA_NetGenerationProducedByFacility_DataDictionary.pdf",
+      "assetId" : "f8f17ada-5ccb-4ea3-8d1d-a8e0c408d234",
+      "name" : "NYPA_NetGenerationProducedByFacility_DataDictionary.pdf"
+    } ],
+    "custom_fields" : {
+      "Dataset Summary" : {
+        "Posting Frequency" : "Annually",
+        "Organization" : "Energy Resource Management",
+        "Contact Information" : "Paul.Tartaglia@nypa.gov",
+        "Time Period" : "Beginning 2013",
+        "Coverage" : "Statewide with exclusions",
+        "Granularity" : "Facility grouping",
+        "Dataset Owner" : "New York Power Authority"
+      },
+      "Additional Resources" : {
+        "See Also " : "www.nyiso.com",
+        "See Also" : "www.nypa.gov"
+      },
+      "Disclaimers" : {
+        "Limitations" : "This dataset excludes power generated by non-NYPA owned assets in which NYPA may have a contract with to provide power to its customers."
+      },
+      "Dataset Information" : {
+        "Agency" : "Power Authority"
+      }
+    },
+    "rowLabel" : "Row",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "xzik-pf59",
+    "displayName" : "NY Open Data",
+    "profileImageUrlLarge" : "/api/users/xzik-pf59/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/xzik-pf59/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/xzik-pf59/profile_images/TINY",
+    "screenName" : "NY Open Data",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "xzik-pf59",
+    "displayName" : "NY Open Data",
+    "profileImageUrlLarge" : "/api/users/xzik-pf59/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/xzik-pf59/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/xzik-pf59/profile_images/TINY",
+    "screenName" : "NY Open Data",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "energy", "power", "generation" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

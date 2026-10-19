@@ -1,0 +1,26 @@
+OPERATOR_FINGERPRINT_OPTIMIZATION 5/5 unchanged
+COMPACT_PAIR h2630 full1 compact1 pass1 V1.03e-13 PQ1.65e-10 I6.89e-10 build1.183s full0.184s compact0.233s
+COMPACT_PAIR h4194 full1 compact1 pass1 V3.77e-14 PQ7.63e-11 I3.33e-10 build0.107s full0.034s compact0.140s
+COMPACT_PAIR h523 full1 compact1 pass1 V4.07e-14 PQ6.63e-11 I7.1e-10 build0.117s full0.038s compact0.121s
+COMPACT_PAIR h4000 full1 compact1 pass1 V1.01e-12 PQ1.17e-09 I2.12e-09 build0.060s full0.009s compact0.106s
+COMPACT_PAIR h8508 full1 compact1 pass1 V1.27e-12 PQ1.5e-09 I2.66e-09 build0.182s full0.018s compact0.106s
+COMPACT_PAIR h8471 full1 compact1 pass1 V5.49e-14 PQ9.12e-11 I1.35e-09 build0.024s full0.011s compact0.079s
+COMPACT_PAIR h8472 full1 compact1 pass1 V3.63e-14 PQ2.73e-10 I5.53e-10 build0.019s full0.007s compact0.078s
+COMPACT_PAIR h3360 full1 compact1 pass1 V1.16e-12 PQ1.37e-09 I2.8e-09 build0.021s full0.006s compact0.079s
+COMPACT_BENCHMARK 100hours 7.18s annual621.3s build0.014 solve0.057 NR0.0079 converge97
+                 function_name                  calls    total_seconds    self_seconds
+    ________________________________________    _____    _____________    ____________
+
+    {'path'                                }     100         3.4637           2.5885  
+    {'general\private\parsedirs'           }     200        0.85382          0.85382  
+    {'java.security.MessageDigest$Delegate'}    3000        0.60078          0.60078  
+    {'compact_ac_operator_fingerprint'     }     200        0.89342          0.58669  
+    {'compact_ac_build'                    }     100         1.4174          0.57884  
+    {'newtonpf'                            }     100          0.602          0.25184  
+    {'compact_ac_solve'                    }     100         5.6669          0.15604  
+    {'audit_ac_solution'                   }     100        0.31939          0.14042  
+    {'mplinsolve'                          }     588        0.11979          0.11979  
+    {'pfsoln'                              }     100        0.13381           0.1032  
+    {'dSbus_dV'                            }     588       0.084211         0.084211  
+    {'makeSbus'                            }    1276        0.12609          0.07027  
+

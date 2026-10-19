@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-16T21:21:50.685959+00:00",
+  "kind": "Additive cable-review visualization of current Moses-repair AC model",
+  "entry": "network_map.html",
+  "selfContainedOffline": true,
+  "currentModelPointerAndPriorArtifactsPreserved": true,
+  "modelParametersChanged": false,
+  "annualPowerFlowRerun": false,
+  "highPriorityModelParents": 19,
+  "totalReviewModelParents": 44,
+  "nativeBrowserVerification": false,
+  "nativeBrowserLimitation": "Browser URL policy rejected local file protocol; no workaround or alternate browser was used.",
+  "validationScope": "41 actual inline-code DOM-event checks and static vector preview; full HTML layout/native pointer hit testing not certified.",
+  "files": [
+    {
+      "path": "output/nygrid_2025_cable_review_map/network_map.html",
+      "sha256": "c27872ed2f678224b19699dac8926dc5c7f3303252e2bd063e14e7b62f875284",
+      "bytes": 15173341
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/README.md",
+      "sha256": "b4c846777cb3a3af1ee4dfdd610e55c88ef044bb955a60d23d06b83ab2b92ad0",
+      "bytes": 4051
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/cable_review.csv",
+      "sha256": "f2001b2c7bb6d0f0c198480b7f23f8bd0cea67617170089dd18aca9f13ddf463",
+      "bytes": 140193
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/cable_review.json",
+      "sha256": "079a1c21f8027d7762ced330013ae0185eb53b683d0104c2e5dd4bf24d018d3f",
+      "bytes": 274535
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/cable_audit_recommendations.json",
+      "sha256": "c5211c65eea4675debd117663f3fc2397fc8bcc496233c5e65c25cdce93d6d70",
+      "bytes": 289295
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/cable_audit_recommendations.md",
+      "sha256": "ff86a7b15d18d98f13d6c8358c4a4b3e9447c2f82194a15662194825496e027d",
+      "bytes": 5611
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/build_receipt.json",
+      "sha256": "2682f70f8461f39043201b5986dd771a8673f8def4d630b0350875234ae44642",
+      "bytes": 5875
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/interaction_validation.json",
+      "sha256": "1dba89c20443afbc0df9ccec7160c145df5e23f7bbcfd8f93bacc9122c32f9a2",
+      "bytes": 8561
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/static_preview_receipt.json",
+      "sha256": "3a312ae07c50f96a7f46aff14bca1f08f7394036841f654fb016933977c82581",
+      "bytes": 1825
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/validation.json",
+      "sha256": "8690ab10769852dd1463eac1074c1552a2a5bd08c3b39391e74faec7d41cd8c0",
+      "bytes": 1270
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/qa/classification_conflicts_static.png",
+      "sha256": "43d819c6f53caf7912398284691d4df757d2d7cb7d27e5b4fb0280d06e9b2c80",
+      "bytes": 209809
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/qa/default_review_static.png",
+      "sha256": "3f00a2b30c8b96513c00b0bd39e77d83705862f3f6e251af144b47698b92c472",
+      "bytes": 201102
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/qa/mobile_review_static.png",
+      "sha256": "30d8c4f657a9fa4157a55e5950ef2988e34f3e26a49f7d6f9296de51e0e41198",
+      "bytes": 97798
+    },
+    {
+      "path": "output/nygrid_2025_cable_review_map/qa/selected_y50_static.png",
+      "sha256": "23502132905586542e3b746c8043b0cc5ead27d790e29d75d93ebdae499ca59b",
+      "bytes": 150088
+    }
+  ],
+  "source_files": [
+    {
+      "path": "scripts/nygrid_2025_cable_review_map/audit_review_map.py",
+      "sha256": "110f10e666e11f8706e1f767cc8737e63ac9c7c95fee4cbc3c891fb92cca2631",
+      "bytes": 4380
+    },
+    {
+      "path": "scripts/nygrid_2025_cable_review_map/build_review_map.py",
+      "sha256": "7ead1795917ac42e8a8c5fa39685fc7aed99ec19ab003f54235601c19c3145ac",
+      "bytes": 7134
+    },
+    {
+      "path": "scripts/nygrid_2025_cable_review_map/map.css",
+      "sha256": "f99c56f1ae87ea927c8fe0f30a533ded0a8515d4fb5fd6dca88c0d3a0f4743e1",
+      "bytes": 14649
+    },
+    {
+      "path": "scripts/nygrid_2025_cable_review_map/map.js",
+      "sha256": "b36720c2763ddf3d4d70bc48eb6365b62630dd16a73ec8d2b8806d535db0256d",
+      "bytes": 56410
+    },
+    {
+      "path": "scripts/nygrid_2025_cable_review_map/map_template.html",
+      "sha256": "4f7c91c799326c1d050a97146c2b39ef5b26d03ba66a4dc6f1d8785fb05d7e70",
+      "bytes": 8977
+    },
+    {
+      "path": "scripts/nygrid_2025_cable_review_map/render_static_preview.cjs",
+      "sha256": "11589cea3a43b2258782ae9fdf9a7b66743abacfcb12914ab7ed5369766476db",
+      "bytes": 3670
+    },
+    {
+      "path": "scripts/nygrid_2025_cable_review_map/seal_review_map.py",
+      "sha256": "80c5305bafd0a02a509be1319c94db3690930e8df04ed1b6e4fe7a2450bb736e",
+      "bytes": 2406
+    },
+    {
+      "path": "scripts/nygrid_2025_cable_review_map/test_interactive_map.cjs",
+      "sha256": "9d3b649428f82116352dfa54a0f3252abb2ae4c5639d302999cc35921f74ed7d",
+      "bytes": 46243
+    }
+  ]
+}

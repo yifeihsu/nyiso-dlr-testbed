@@ -1,0 +1,11 @@
+REPAIRED_RUNTIME h523 exact1 Verror0 Ierror0 thermal179
+REPAIRED_RUNTIME h3360 exact1 Verror0 Ierror0 thermal179
+REPAIRED_RUNTIME h4000 exact1 Verror0 Ierror0 thermal179
+REPAIRED_RUNTIME h8508 exact1 Verror0 Ierror0 thermal180
+{Error using jsonencode
+Unable to encode sparse objects of class double as JSON-formatted text.
+
+Error in validate_repaired_runtime (line 57)
+fid=fopen(fullfile(out,'runtime_validation_receipt.json'),'w');assert(fid>=0);cleanup=onCleanup(@()fclose(fid));fprintf(fid,'%s\n',jsonencode(report,'PrettyPrint',true));
+                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

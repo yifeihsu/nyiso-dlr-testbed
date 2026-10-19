@@ -1,0 +1,160 @@
+caseformat — MATPOWER Documentation 8.1 documentation (https://matpower.org/documentation/ref-manual/legacy/functions/caseformat.html)
+citeturn302view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://matpower.org/documentation/ref-manual/legacy/functions/caseformat.html","lineno":null}); Total lines: 160
+L0: cite0†MATPOWER Documentation L1: 
+L2: [Input: Search docs] [Input] [Input]
+L3: 
+L4: cite0†MATPOWER Documentation L5: # caseformatcite1† L6: 
+L7: caseformat
+L8: caseformat - Defines the M ATPOWER case file format.
+L9: 
+L10:     A MATPOWER case file is an M-file or MAT-file that defines or returns
+L11:     a struct named mpc, referred to as a "MATPOWER case struct". The fields
+L12:     of this struct are baseMVA, bus, gen, branch, and (optional) gencost. With
+L13:     the exception of baseMVA, a scalar, each data variable is a matrix, where
+L14:     a row corresponds to a single bus, branch, gen, etc. The format of the
+L15:     data is similar to the PTI format described in
+L16:         https://labs.ece.uw.edu/pstca/formats/pti.txt
+L17:     except where noted. An item marked with (+) indicates that it is included
+L18:     in this data but is not part of the PTI format. An item marked with (-) is
+L19:     one that is in the PTI format but is not included here. Those marked with
+L20:     (2) were added for version 2 of the case file format. The columns for
+L21:     each data matrix are given below.
+L22: 
+L23:     MATPOWER Case Version Information:
+L24:     There are two versions of the MATPOWER case file format. The current
+L25:     version of MATPOWER uses version 2 of the MATPOWER case format
+L26:     internally, and includes a 'version' field with a value of '2' to make
+L27:     the version explicit. Earlier versions of MATPOWER used the version 1
+L28:     case format, which defined the data matrices as individual variables,
+L29:     as opposed to fields of a struct. Case files in version 1 format with
+L30:     OPF data also included an (unused) 'areas' variable. While the version 1
+L31:     format has now been deprecated, it is still be handled automatically by
+L32:     LOADCASE and SAVECASE which are able to load and save case files in both
+L33:     version 1 and version 2 formats.
+L34: 
+L35:     See IDX_BUS, IDX_BRCH, IDX_GEN, IDX_AREA and IDX_COST regarding
+L36:     constants which can be used as named column indices for the data matrices.
+L37:     Also described in the first three are additional results columns that
+L38:     are added to the bus, branch and gen matrices by the power flow and OPF
+L39:     solvers.
+L40: 
+L41:     The case struct also allows for additional fields to be included.
+L42:     The OPF is designed to recognize fields named A, l, u, H, Cw, N,
+L43:     fparm, z0, zl and zu as parameters used to directly extend the OPF
+L44:     formulation (see OPF for details). Additional standard optional fields
+L45:     include bus_name, gentype and genfuel. Other user-defined fields may also
+L46:     be included and will be automatically loaded by the LOADCASE function
+L47:     and, given an appropriate 'savecase' callback function (see
+L48:     ADD_USERFCN), saved by the SAVECASE function.
+L49: 
+L50:     Bus Data Format
+L51:         1   bus number (positive integer)
+L52:         2   bus type
+L53:                 PQ bus          = 1
+L54:                 PV bus          = 2
+L55:                 reference bus   = 3
+L56:                 isolated bus    = 4
+L57:         3   Pd, real power demand (MW)
+L58:         4   Qd, reactive power demand (MVAr)
+L59:         5   Gs, shunt conductance (MW demanded at V = 1.0 p.u.)
+L60:         6   Bs, shunt susceptance (MVAr injected at V = 1.0 p.u.)
+L61:         7   area number, (positive integer)
+L62:         8   Vm, voltage magnitude (p.u.)
+L63:         9   Va, voltage angle (degrees)
+L64:     (-)     (bus name)
+L65:         10  baseKV, base voltage (kV)
+L66:         11  zone, loss zone (positive integer)
+L67:     (+) 12  maxVm, maximum voltage magnitude (p.u.)
+L68:     (+) 13  minVm, minimum voltage magnitude (p.u.)
+L69: 
+L70:     Generator Data Format
+L71:         1   bus number
+L72:     (-)     (machine identifier, 0-9, A-Z)
+L73:         2   Pg, real power output (MW)
+L74:         3   Qg, reactive power output (MVAr)
+L75:         4   Qmax, maximum reactive power output (MVAr)
+L76:         5   Qmin, minimum reactive power output (MVAr)
+L77:         6   Vg, voltage magnitude setpoint (p.u.)
+L78:     (-)     (remote controlled bus index)
+L79:         7   mBase, total MVA base of this machine, defaults to baseMVA
+L80:     (-)     (machine impedance, p.u. on mBase)
+L81:     (-)     (step up transformer impedance, p.u. on mBase)
+L82:     (-)     (step up transformer off nominal turns ratio)
+L83:         8   status,  >  0 - machine in service
+L84:                      <= 0 - machine out of service
+L85:     (-)     (% of total VAr's to come from this gen in order to hold V at
+L86:                 remote bus controlled by several generators)
+L87:         9   Pmax, maximum real power output (MW)
+L88:         10  Pmin, minimum real power output (MW)
+L89:     (2) 11  Pc1, lower real power output of PQ capability curve (MW)
+L90:     (2) 12  Pc2, upper real power output of PQ capability curve (MW)
+L91:     (2) 13  Qc1min, minimum reactive power output at Pc1 (MVAr)
+L92:     (2) 14  Qc1max, maximum reactive power output at Pc1 (MVAr)
+L93:     (2) 15  Qc2min, minimum reactive power output at Pc2 (MVAr)
+L94:     (2) 16  Qc2max, maximum reactive power output at Pc2 (MVAr)
+L95:     (2) 17  ramp rate for load following/AGC (MW/min)
+L96:     (2) 18  ramp rate for 10 minute reserves (MW)
+L97:     (2) 19  ramp rate for 30 minute reserves (MW)
+L98:     (2) 20  ramp rate for reactive power (2 sec timescale) (MVAr/min)
+L99:     (2) 21  APF, area participation factor
+L100: 
+L101:     Branch Data Format
+L102:         1   f, from bus number
+L103:         2   t, to bus number
+L104:     (-)     (circuit identifier)
+L105:         3   r, resistance (p.u.)
+L106:         4   x, reactance (p.u.)
+L107:         5   b, total line charging susceptance (p.u.)
+L108:         6   rateA, MVA rating A (long term rating), set to 0 for unlimited
+L109:         7   rateB, MVA rating B (short term rating), set to 0 for unlimited
+L110:         8   rateC, MVA rating C (emergency rating), set to 0 for unlimited
+L111:         9   tap, transformer off nominal turns ratio, if non-zero
+L112:             (taps at "from" bus, impedance at "to" bus, i.e. if r = x = b = 0,
+L113:              then tap = Vf / Vt; tap = 0 used to indicate transmission
+L114:             line rather than transformer, i.e. mathematically equivalent to
+L115:             transformer with tap = 1)
+L116:         10  shift, transformer phase shift angle (degrees), positive => delay
+L117:     (-)     (Gf, shunt conductance at from bus p.u.)
+L118:     (-)     (Bf, shunt susceptance at from bus p.u.)
+L119:     (-)     (Gt, shunt conductance at to bus p.u.)
+L120:     (-)     (Bt, shunt susceptance at to bus p.u.)
+L121:         11  initial branch status, 1 - in service, 0 - out of service
+L122:     (2) 12  minimum angle difference, angle(Vf) - angle(Vt) (degrees)
+L123:     (2) 13  maximum angle difference, angle(Vf) - angle(Vt) (degrees)
+L124:             (The voltage angle difference is taken to be unbounded below
+L125:              if ANGMIN < -360 and unbounded above if ANGMAX > 360.
+L126:              If both parameters are zero, it is unconstrained.)
+L127: 
+L128:     (+) Generator Cost Data Format
+L129:         NOTE: If gen has ng rows, then the first ng rows of gencost contain
+L130:         the cost for active power produced by the corresponding generators.
+L131:         If gencost has 2*ng rows then rows ng+1 to 2*ng contain the reactive
+L132:         power costs in the same format.
+L133:         1   model, 1 - piecewise linear, 2 - polynomial
+L134:         2   startup, startup cost in US dollars
+L135:         3   shutdown, shutdown cost in US dollars
+L136:         4   N (= n+1), number of data points to follow defining an n-segment
+L137:             piecewise linear cost function, or of cost coefficients defining
+L138:             an n-th order polynomial cost function
+L139:         5 and following, parameters defining total cost function f(p),
+L140:             units of f and p are $/hr and MW (or MVAr), respectively.
+L141:             (MODEL = 1) : p1, f1, p2, f2, ..., pN, fN
+L142:                 where p1 < p2 < ... < pN and the cost f(p) is defined by
+L143:                 the coordinates (p1,f1), (p2,f2), ..., (pN,fN) of the
+L144:                 end/break-points of the piecewise linear cost function
+L145:             (MODEL = 2) : cn, ..., c1, c0
+L146:                 N coefficients of an n-th order polynomial cost function,
+L147:                 starting with highest order, where cost is
+L148:                 f(p) = cn*p^n + ... + c1*p + c0
+L149: 
+L150:     (+) Area Data Format (deprecated)
+L151:       (this data is not used by MATPOWER and is no longer necessary for
+L152:        version 2 case files with OPF data).
+L153:         1   i, area number
+L154:         2   price_ref_bus, reference bus for that area
+L155: See also `loadcase()`, `savecase()`, cite2†`idx_bus()` , cite3†`idx_brch()` , cite4†`idx_gen()` , `idx_area` cite5†`idx_cost()` .
+L156: 
+L157: * * *
+L158: 
+L159: Built with cite6†Sphinx†www.sphinx-doc.org using a cite7†theme†github.com provided by cite8†Read the Docs†readthedocs.org .
+

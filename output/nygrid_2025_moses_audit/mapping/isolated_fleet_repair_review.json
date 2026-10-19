@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "captured_utc": "2026-10-11T06:20:19.378497+00:00",
+  "changed_rows": 55,
+  "changed_cells": 330,
+  "changed_columns": [
+    "zone",
+    "zone_mapping_policy",
+    "bus_id",
+    "parent_bus_name",
+    "parent_bus_zone",
+    "mapping_distance_km"
+  ],
+  "all_other_cells_unchanged": true,
+  "capacity_status_admission_and_identity_columns_unchanged": [
+    "plant_id",
+    "eia_generator_id",
+    "nameplate_capacity_mw",
+    "summer_capacity_mw",
+    "winter_capacity_mw",
+    "summer_capacity_reported",
+    "winter_capacity_reported",
+    "source_status",
+    "release_status",
+    "capacity_observed",
+    "fleet_id",
+    "capacity_duplicated_by_associations",
+    "native_market_scope_status",
+    "effective_summer_capacity_mw",
+    "effective_winter_capacity_mw",
+    "seasonal_capacity_assumption",
+    "combined_cycle_capacity_aggregation_possible"
+  ],
+  "changed_plant_set_matches_26_reviewed_sites": true,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_register.csv",
+      "sha256": "6d27fc788fd90454c8b92d29115fe059783979b0063992ffe29d313bec405d45"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/corrected/fleet/fleet_register.csv",
+      "sha256": "f7266a08faac3d65442482f8e5c3f2facfbf0c25960419820c7f2eb514710d13"
+    }
+  ]
+}

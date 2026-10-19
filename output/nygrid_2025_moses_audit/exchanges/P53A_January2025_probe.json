@@ -1,0 +1,13 @@
+{
+  "scope": "January2025 only; full-year download not performed because zero-target hypothesis failed",
+  "files": 31,
+  "records": 1488,
+  "nonzero_values": 1026,
+  "minimum": -25.0,
+  "maximum": 25.0,
+  "mean": -8.871908602150539,
+  "sign_still_unverified": true,
+  "source_url": "https://mis.nyiso.com/public/txt/parSchedule/20250101parSchedule_txt.zip",
+  "definition_url": "https://mis.nyiso.com/public/txt/parSchedule/defineParSchedule.doc",
+  "definition_finding": "Header specifies starting time/date, minute step, number of steps and PARs; data rows contain PTID, Control(L or G), and hourly MWs. Definition labels the control code but does not define geographic positive-flow direction."
+}

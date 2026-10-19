@@ -1,0 +1,351 @@
+{
+  "status": "completed_native_source_reconstruction_and_explicit_aggregation_diagnostics",
+  "created_utc": "2026-10-15T20:36:51.767682+00:00",
+  "physical_hours": 8760,
+  "qualified_hours": 8651,
+  "new_AC_power_flows_run": 0,
+  "defaults_changed": false,
+  "source_sign_fitted_to_internal_observations": false,
+  "source_replacement_promoted": false,
+  "checks": {
+    "native_P34_rows_match_frozen_raw": 211996,
+    "PAR_25118_native_vs_compiled_max_absolute_MW": 2.842170943040401e-14,
+    "PAR_25118_native_vs_current_model_max_absolute_MW": 2.842170943040401e-14,
+    "PAR_25119_native_vs_compiled_max_absolute_MW": 1.4210854715202004e-14,
+    "PAR_25119_native_vs_current_model_max_absolute_MW": 2.842170943040401e-14,
+    "HQ_native_vs_compiled_max_absolute_MW": 0.0,
+    "HQ_native_vs_current_model_max_absolute_MW": 2.2737367544323206e-13
+  },
+  "HQ_clock": "native UTC Time at End of Hour minus one hour; numeric interchange negated to make NY imports positive",
+  "PAR_clock": "native America/New_York timestamps with explicit fall fold from observed clock rewind; all8760UTCslots retained",
+  "PAR_positive_direction": "Ontario to New York; official diagram effective2024-12-03",
+  "PAR_native_metadata": [
+    {
+      "ptid": 25118,
+      "native_records": 105998,
+      "unique_timestamps": 105998,
+      "repeated_timestamp_records": 0,
+      "max_duplicate_spread_MW": 0.0,
+      "min_native_MW": -245.8,
+      "max_native_MW": 244.4,
+      "intervals_longer_than_600_seconds": 75
+    },
+    {
+      "ptid": 25119,
+      "native_records": 105998,
+      "unique_timestamps": 105998,
+      "repeated_timestamp_records": 0,
+      "max_duplicate_spread_MW": 0.0,
+      "min_native_MW": -252.6,
+      "max_native_MW": 247.3,
+      "intervals_longer_than_600_seconds": 75
+    }
+  ],
+  "HQT_counterpart_reported_in_archived_bulk": false,
+  "EIA_quality_rejected_hours": 6,
+  "EIA_rejected_hours_in_fixed_cohort": 0,
+  "P34_incomplete_coverage_hours": 87,
+  "fixed_cohort_P34_non12_sample_hours": 737,
+  "fixed_cohort_bilateral_total_discrepancies_above_2_5MW": 26,
+  "source_scope": {
+    "reviewed_date_utc": "2026-10-15",
+    "status": "source_conventions_verified_with_explicit_unresolved_physical_meter_scope",
+    "sources": [
+      {
+        "title": "EIA930 reporting instructions",
+        "url": "https://www.eia.gov/survey/form/eia_930/instructions.pdf",
+        "local_path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_instructions.pdf",
+        "inspected_pages_1based": [
+          3,
+          5,
+          7
+        ],
+        "supports": "Hourly integrated MW, nearest integer, UTC hour ending. FLOW is net metered tie line flow, positive outward from reporting BA. Bilateral codes identify directly physically connected BAs. This supports hour-ending minus1hour and negative NYIS-to-HQT as imports to NY. It does not provide a Chateauguay/Cedars split."
+      },
+      {
+        "title": "NYISO PAR Flow Direction Diagrams",
+        "url": "https://www.nyiso.com/documents/20142/2268519/ParFlowDiagrams27.pdf/7bd78df8-311c-0b29-fa3f-ba0c8a51d123",
+        "local_path": "output/nygrid_2025_par_controls/sources/direction/direction_verification_receipt.json",
+        "inspected_pages_1based": [
+          7,
+          26
+        ],
+        "supports": "Existing visual verification receipt establishes positive PTID25118/L33P/PS33 and PTID25119/L34P/PS34 as IESO StLawrence230kV to NYISO Moses230kV, effective2024-12-03. Current document was published2026-07-17 but explicitly states the2024effective date. No observation-fit sign is used."
+      },
+      {
+        "title": "NYISO Phase Angle Regulator Flows public P34 archive",
+        "url": "https://mis.nyiso.com/public/P-34list.htm",
+        "supports": "Public daily and monthly source archive for actual PAR flows. Native2025 CSV fields Timestamp, PointID and Flow(MWH) are preserved. The public index inspected does not establish preceding-versus-following sample-interval semantics."
+      },
+      {
+        "title": "NYISO Summer2025 Operating Study",
+        "url": "https://www.nyiso.com/documents/20142/3691300/Summer2025-OperatingStudy-APPROVED.pdf/3aaa5eb6-9fa4-53b5-181a-189e3ac52fcb",
+        "local_path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Summer2025_OperatingStudy_APPROVED.pdf",
+        "printed_page": 19,
+        "supports": "Identifies Chateauguay-Massena MSC7040 and Dennison ties. Distinguishes NYCA-delivery limit from larger7040 real-time capability with wheel-through; lists separate Cedars/Dennison capabilities. These are operating limits and connection evidence, not hourly meter telemetry, allocation fractions or complete MosesSouth meter membership."
+      },
+      {
+        "title": "Hydro Quebec New York market connections",
+        "url": "https://www.hydroquebec.com/clean-energy-provider/markets/new-york.html",
+        "supports": "Primary history identifies LesCedres-Dennison intertie and Chateauguay-Marcy765kV connection with ChateauguayDC conversion. It does not validate2025hourly interchange measurements or the reduced model's bus-level distribution."
+      },
+      {
+        "title": "Hydro Quebec imports and exports by market with wheeling",
+        "url": "https://hydroquebec.opendatasoft.com/explore/dataset/importations-exportations-avec-transits/?flg=fr-fr",
+        "supports": "Dataset description states hourly updates, net imports/exports including transits, only48hours temporal coverage, and extraction/modeling from public sources external to HydroQuebec. It is not an independent annual2025counterparty meter series."
+      },
+      {
+        "title": "NYISO P930B daily EIA submission index",
+        "url": "https://mis.nyiso.com/public/P-930Blist.htm",
+        "supports": "Direct NYISO daily submissions are a possible same-respondent version crosscheck. The rolling public index is not a complete2025archive as of2026-10-15 and has not been used as a replacement."
+      }
+    ],
+    "HQ_channel_accounting": {
+      "current_actual": "NYIS HQT physical BA aggregate once",
+      "historical_schedule_comparator": "SCH-HQ-NY plus SCH-HQ_CEDARS",
+      "do_not_sum_overlapping_channel": "SCH-HQ_IMPORT_EXPORT overlaps SCH-HQ-NY and excludes wheel-through in the existing P32 channel interpretation; adding all3would double count",
+      "physical_landing": "Existing2025 HQ-NewYork paths enter the northern NY area, but the current generator collapses them to a coarse areaD injection. Aggregate EIA930cannot validate separate bus allocations or the public MosesSouth cut."
+    },
+    "replacement_decision": "No independently established source correction found or promoted. Preserve signs, physical UTC hours, current boundary inputs and source-quality cohort."
+  },
+  "algebraic_probe_policy": "All predetermined alternatives retained; hold native PG, gross demand and terminal correction fixed; no AC rerun or source promotion",
+  "limitations": [
+    "NYIS HQT is one physical BA-to-BA net aggregate; it does not independently resolve Chateauguay, Cedars or through wheeling.",
+    "No HQT-to-NYIS or IESO-to-NYIS reporter is present in the two archived EIA bulk files; ISNE and PJM are present. The separate IESO yearly report supplies its comparison. Absence is not proof of inaccurate NYIS HQT telemetry.",
+    "Native P34 CSV header says Flow (MWH); treatment as a power-flow snapshot follows the existing P34 contract and published PAR flow identity. The inspected public source does not specify whether a timestamp labels an instantaneous point or preceding/following averaging interval.",
+    "Backward hold and linear interpolation are explicit interval-convention sensitivity probes, not source-validated replacements or evidence that the frozen forward hold is wrong.",
+    "HQ P32 schedules are distinct from actual metered flow. HQ_IMPORT_EXPORT overlaps HQ-NY; it must not be added to HQ-NY plus Cedars.",
+    "A public regional actual series and a source-verified PAR sign do not certify the reduced model's geographical cut or the public Moses South meter membership.",
+    "All source-quality defects already excluded by the frozen mask remain excluded. Internal observations only score predetermined algebraic alternatives; they do not select source interpretations or promote replacements.",
+    "Bilateral-versus-total reporting discrepancies are real source inconsistencies, but their allocation to HQ or any other individual neighbor is not identifiable from the sum. No source-quality mask is changed here."
+  ],
+  "frozen_sources_preserved": true,
+  "source_manifest": [
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/balance_hourly.csv",
+      "sha256": "6ae19f7c7fcf93f5e3ca853dbf47304596f07494b249e8a6e9f1bb674ee83326",
+      "bytes": 4051060
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/direction_verification_receipt.json",
+      "sha256": "70591310ccf0ef85058cb7e92a385594c103a6c717a477db807def1601d4a55e",
+      "bytes": 3314
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/hourly_controls.csv",
+      "sha256": "ea359615f1ef94b9f2e0f0101a72a6d2cedd78f83bab4aa15646a85b465a345a",
+      "bytes": 2074840
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/hourly_regional_actuals.csv",
+      "sha256": "eadd202b2a4a4f397215ab7a47d3abae25500008059d4879f14a9ab7829b3f50",
+      "bytes": 685767
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/hourly_source_quality.csv",
+      "sha256": "aa78d148dd0d4d3d7659f4b7955cb86d47c9644d68c73330e236931d8b32fecc",
+      "bytes": 945132
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/reported_total_sum_check.csv",
+      "sha256": "b400dff917c17d3bcac2c861b738d33fd79695271cfe12bb67d7bb161a5bf92c",
+      "bytes": 385104
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f",
+      "bytes": 2258117
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/latest_model.mat",
+      "sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385",
+      "bytes": 846610
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4",
+      "bytes": 54625507
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf",
+      "bytes": 54767622
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_INTERCHANGE_2025_Jan_Jun.csv.gz",
+      "sha256": "d015f28d9e62ed9d38c6d83e1da37f7ff0582f09f240b2f4e58c72840235222c",
+      "bytes": 9099616
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_INTERCHANGE_2025_Jan_Jun.csv.gz.receipt.json",
+      "sha256": "e0adbd0711dad122134fbb41a24aa216dacc877dbf5268894796ee210552c836",
+      "bytes": 646
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_INTERCHANGE_2025_Jul_Dec.csv.gz",
+      "sha256": "c685e94b35a08a11c3ea4caca4eb9c067ad433c82b8fc642853965bfd23d24b1",
+      "bytes": 9329718
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_INTERCHANGE_2025_Jul_Dec.csv.gz.receipt.json",
+      "sha256": "e01ec5723e92283fa47dcf5586ad5998f5c54bd3bbc90540bd2fca35daa08eb9",
+      "bytes": 646
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250101ParFlows_csv.zip",
+      "sha256": "bb760c2b1c15bc59e907e28ba0eaec5715260179dce513ee43cd2c2c9e2ec076",
+      "bytes": 2539506
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250101ParFlows_csv.zip.receipt.json",
+      "sha256": "17bfbf22183eb4b1be821fd8a7f8e0e468ca1e8bbb49ede9cc561cd37d77a2ba",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250201ParFlows_csv.zip",
+      "sha256": "5466d3ed258b133b0c7296228ac1087c3dc2c73e74b72dfeaf0ea7e0195faaf7",
+      "bytes": 2322882
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250201ParFlows_csv.zip.receipt.json",
+      "sha256": "8932d9e40ae80f6eb74d05363be396e76b1b992105ce8b6c9eadf104eec61f6d",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250301ParFlows_csv.zip",
+      "sha256": "5b011a11c73b2f31779da5bd2a80e3fbcccaf6d685fb1cacc92c8c3a98c7199a",
+      "bytes": 2578184
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250301ParFlows_csv.zip.receipt.json",
+      "sha256": "1981e44bf0b20656a6f6823ccd108f04367ecf901ac3dc5938781db12613697c",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250401ParFlows_csv.zip",
+      "sha256": "e5d349be83ce17ce7a8767e88c91c9d5a66a55f3391ea401abe01555d1f94efb",
+      "bytes": 2524859
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250401ParFlows_csv.zip.receipt.json",
+      "sha256": "847a41c9d4a0b268f691d366858ebd7c4791b74ee631e13222b4db9431b35bd2",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250501ParFlows_csv.zip",
+      "sha256": "805cd14d79b7234d82856fa72f9a71acdcd70a4534c5d7bab11e73fd98d8be8f",
+      "bytes": 2638321
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250501ParFlows_csv.zip.receipt.json",
+      "sha256": "ee447cc63c3e399ac305934a1532385f116aac8c859665d4eb8d3ba30cc10d49",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250601ParFlows_csv.zip",
+      "sha256": "4fcfc99c76ce1cd8f04548088004b57fdc73266b8bb3d053c2177397ad6517e9",
+      "bytes": 2594445
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250601ParFlows_csv.zip.receipt.json",
+      "sha256": "269b7a2a403f8a0c854f6494829beae40cb06a3568583f45e729f34a81e0aa87",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250701ParFlows_csv.zip",
+      "sha256": "05f572827945a51003dc5b744cc533cc7464a3e99a457bc3340df84c93066fe2",
+      "bytes": 2719299
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250701ParFlows_csv.zip.receipt.json",
+      "sha256": "9156a0c868bf3f7b871c3d08abe255fb217799df798a1286e6d59e659ad47b56",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250801ParFlows_csv.zip",
+      "sha256": "6c0501a90e001d781daffadd5286adc2b1188a77157cd44fac73de8b5309e98b",
+      "bytes": 2681653
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250801ParFlows_csv.zip.receipt.json",
+      "sha256": "95b4323d8c7177b85b3f324d1b9debe4a1cd870c66711ee182dfa9b843e55313",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250901ParFlows_csv.zip",
+      "sha256": "3ddf7f4708b783abbc3b6c8bc0494482356538ab5adbf1cb7010e06f25c2e76e",
+      "bytes": 2578025
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250901ParFlows_csv.zip.receipt.json",
+      "sha256": "63f09e2580ce57964a7bfce37daa2a9a92cb2570fbdf3bfae716a27dacb5af4b",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251001ParFlows_csv.zip",
+      "sha256": "7e739cda35caac38deea8f8bc024e8845f9cc76aa1ddb715680a168193f9ea7e",
+      "bytes": 2648211
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251001ParFlows_csv.zip.receipt.json",
+      "sha256": "6c7b6eb5802945cdf4feb09a516b8c0c7444b5fbfe7e692fe2e2f39a1e371e96",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251101ParFlows_csv.zip",
+      "sha256": "df8734666414d51aa04319565cb0f1377e069cef04bff623b8d92de6cde74644",
+      "bytes": 2538244
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251101ParFlows_csv.zip.receipt.json",
+      "sha256": "868e54d3346f816f0f59bb1a5a29cff5008e565801a4fad327d50687b2f1f744",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251201ParFlows_csv.zip",
+      "sha256": "6e08b8e43669c5d97348842c107c3043812167eb505018e3eac44977a2a639ef",
+      "bytes": 2692159
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251201ParFlows_csv.zip.receipt.json",
+      "sha256": "aa293f94ca9e03bca33e8f5f303eaee3f6eb036620ee126c46df5c4cf96159b2",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20260101ParFlows_csv.zip",
+      "sha256": "0bda820cf2c06bc5da05787f13399b79ef6a698452c037e32f3feec3ba7ff085",
+      "bytes": 2690399
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20260101ParFlows_csv.zip.receipt.json",
+      "sha256": "b2c19a89a0af39933ca6b0210cf60e495c2dda697308312db9d095afaac234c4",
+      "bytes": 324
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/par_stlawrence_raw_2025.csv.gz",
+      "sha256": "9b0291944d3c70212bf9637877bb45116fa0a6ddcaacb9a4f23d7e8d7428d0a6",
+      "bytes": 1184488
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/counterparty_actual_comparison.csv",
+      "sha256": "0405cd5e63a556dde5c3a0c09af98b09f4097f29651df93b79f7bf6f8e726a20",
+      "bytes": 816130
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_source_diagnosis/boundary/source_scope.json",
+      "sha256": "3d152620658038e197ba811a9a1c46098f87be84253699b57abdff601c61091f",
+      "bytes": 4504
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/boundary_actuals/raw/EIA930_instructions.pdf",
+      "sha256": "321ee0a8d93b15ca2fe206720615bb721c1b6eaf9d9fb06e9c11837ca5004d58",
+      "bytes": 1585169
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Summer2025_OperatingStudy_APPROVED.pdf",
+      "sha256": "077c8b7c6c4703a0987784dbffc72a2213f33eb3501c340a10eb208fdf6ee1be",
+      "bytes": 727962
+    }
+  ],
+  "audit_script_sha256": "a150cc56d067e71f124b369a393031f71b743ef411d2091d34eaf1bb09c017dd"
+}

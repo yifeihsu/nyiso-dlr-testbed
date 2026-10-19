@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T01:48:43.344811+00:00",
+  "scope": "Independent saved-array audit of eleven representative loss-loading and coherent-parent AC diagnostics",
+  "loss_loaded_DC_checked": 11,
+  "coherent_original_parent_AC_checked": 11,
+  "R0_qualified_hours": [
+    2630,
+    523,
+    4000,
+    8508,
+    3360
+  ],
+  "R0_unqualified_failed_hours": [
+    4194,
+    8471,
+    8472,
+    4746,
+    4213,
+    4740
+  ],
+  "failed_R0_points_excluded_from_valid_recomputed_values": true,
+  "original_R_X_B_GS_BS_and_same_generator_converter_controls_verified_for_parent_AC": true,
+  "half_end_loss_demand_exactly_reconstructed": true,
+  "loss_loaded_DC_preserves_R_X_B_shunts_gen_and_transfer_inputs": true,
+  "source_target_difference_in_loaded_DC_includes_artificial_section_interior_demand": true,
+  "maximum_nodal_loss_loading_reconstruction_error_MW": 8.881784197001252e-16,
+  "maximum_report_value_reconstruction_error": 1.0231815394945443e-12,
+  "primary_eight_hour_mean_loss_allocation_shift_public_MW": 597.4676971988551,
+  "primary_eight_hour_mean_remaining_AC_minus_loss_loaded_DC_public_MW": 8.472424841100345,
+  "primary_eight_hour_mean_original_parent_AC_minus_archived_DC_public_MW": 821.596177545318,
+  "limitations": [
+    "Half of each baseline AC line loss is assigned to each terminal as an explicitly chosen DC load perturbation; it is a diagnostic decomposition rather than unique causal attribution.",
+    "ZeroingR changes voltage and angle behavior as well as real losses, and6of11 zeroR cases failedNR; their raw saved iterates are not valid predictions.",
+    "The coherent original-parent AC cases use original electrical parameters and the same controlled-VG assumptions, but numerical convergence does not establish physical asset or operating feasibility.",
+    "Representative eleven-hour results must not be generalized to annual metrics."
+  ],
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/review_loss_parent_outputs.py",
+      "sha256": "d48b087d17e51526495bc18e3dfbee8eab8fa8c02e95f908c69666d228b88f6f"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/model_delta/review_bridge_outputs.py",
+      "sha256": "c0c99c9c86e734ba695b7f0f3f4aa01d97de08936935ab9a6148bee4248a7ab3"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/diagnostic_receipt.json",
+      "sha256": "87907a3b1f65e41678dfce55ea34500305301feec7dcfcb65a219a7eac7ea024"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/h2630.mat",
+      "sha256": "053956309ccf42b211d200a77d6551024c33e966df2de55a020b5b48558b2e80"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_h2630.mat",
+      "sha256": "0c3e5d14868bd23ecdb981aabd5d519f1d4f89dde5999a7c36be2cb322bb5a68"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/h4194.mat",
+      "sha256": "ca0911b2723216636ec59f2627305d811af837591a8f1f88ab422386bb75be97"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_h4194.mat",
+      "sha256": "b54cecc4662037166fea84cda932105ca770dd4496be708d02b989499b924c58"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/h0523.mat",
+      "sha256": "b84873825ec18edd570c6c4895ab8dad5875cb36319502a325639f8e675017bf"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_h0523.mat",
+      "sha256": "152429a56eeae3cd32b6ecd8a403b2d31e5feda4ced8ef9796e16fcdca6c13ae"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/h4000.mat",
+      "sha256": "5eff0485077ea6e50b81dfc98bdd1334deb7492b43a2120e8e5e51d2c94f1ec4"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_h4000.mat",
+      "sha256": "3dc2ae39fecfb9baa4d2bc898d9360369475783d202f6012159fda61c0608cdc"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/h8508.mat",
+      "sha256": "787738c4aa23781ef3993c55f9a115a519ec12266addd995fee2e7251f7d9afc"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_h8508.mat",
+      "sha256": "9ab8acd0906aca0e3d197ba669dbe2e18b8cc000b36a499c84f024dc37ad8066"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/h8471.mat",
+      "sha256": "2771c104b24a7fc734bb0cd83811d09e1d38fe7120355fbfbbcf30f398985416"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_h8471.mat",
+      "sha256": "530fefa6531127941a5fe389c6e6860cc16334577c5cf2e086c76145d883fcfa"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/h8472.mat",
+      "sha256": "8ddbc4147cdd162623e1d4d74396f4baf9cc4c7f3b9314d71c87b969fef54674"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_h8472.mat",
+      "sha256": "fcfaa5ea7554713ca604603397f2ec9fdf4f80423f4d6b56cd49ed9d7e04e3de"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/h3360.mat",
+      "sha256": "bf37a598522b654f4c4b4e164864c417faeb99dfee45de59254e8fcddb86e328"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_h3360.mat",
+      "sha256": "ef666f92ebe15fdf11ac3a5f033fd1116c7f7c4b10726153c108145660431e7b"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/h4746.mat",
+      "sha256": "87ed72f8cc7862849185cbbaf8b49903d0cdf822e144d480fd9f5db95a287524"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_h4746.mat",
+      "sha256": "dc01f31fbd514c37086c5fe704eb0a0c576a0c99988cd83f93d7e15453d47037"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/h4213.mat",
+      "sha256": "21d0a494bb11d3d3a3166acc473a2d8794964dcbf85bfb461f6da19855522961"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_h4213.mat",
+      "sha256": "7cde21e90df5979d9d2779421e3a1266c11af46c0c1056fef5b7e82c2a108549"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/loss_and_parent_diagnostics/h4740.mat",
+      "sha256": "4f41266d2a7ad2140ff64c67a9305e8b032deb127a1c5ef42ff0738d696b6731"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/experiments/representative_bridge/bridge_h4740.mat",
+      "sha256": "7819d0708cf1742ab7b0207ce3c895a2fe83c71b621152b60717c4354245c018"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/experiments/run_loss_and_parent_diagnostics.m",
+      "sha256": "5df7fbb7f684062f7d61c82e78a4661964923c3c75e2ee39d92bb10937dae782"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/experiments/audit_bridge_AC_solution.m",
+      "sha256": "c9c8ab2c416dae8d4f45c738e5507a5ba34b02d8e9023ac07f2ca99e0bc7fb22"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/experiments/audit_diagnostic_DCPF.m",
+      "sha256": "030c04bb9f73d1e98e500dcced8fd4509e743880d1f1694bbcbe2a86ec82fb8a"
+    },
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/experiments/physical_interface_flows.m",
+      "sha256": "7bb239fd92ce1544301747ca9e8a97c1dde07440ebbe09c0b84f3b44d9c87bce"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/model_delta/loss_parent_independent_checks.csv",
+      "sha256": "eefa545cf57586dbe73191790b75319bc5c07a8f30e4a999179a83fac664c57b"
+    }
+  ]
+}

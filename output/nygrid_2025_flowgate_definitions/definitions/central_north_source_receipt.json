@@ -1,0 +1,202 @@
+{
+  "passed": true,
+  "status": "literal_three_season_source_definitions_verified_not_promoted_to_model_operators",
+  "source_only": true,
+  "no_observed_flow_or_metric_reads": true,
+  "no_fitted_signs_weights_or_parameters": true,
+  "old_reports_models_and_case_artifacts_modified": false,
+  "literal_terms_checked_against_source_PDF_text": 132,
+  "distinct_seasonal_definitions": 9,
+  "counts_per_season": {
+    "MOSES SOUTH": 7,
+    "TOTAL EAST": 29,
+    "CENTRAL EAST": 8
+  },
+  "visual_PDF_pages": {
+    "Winter2024-25": [
+      36,
+      37,
+      38
+    ],
+    "Summer2025": [
+      37,
+      38,
+      39
+    ],
+    "Winter2025-26": [
+      36,
+      37,
+      38
+    ]
+  },
+  "visual_printed_pages": {
+    "Winter2024-25": [
+      63,
+      64,
+      65
+    ],
+    "Summer2025": [
+      37,
+      38,
+      39
+    ],
+    "Winter2025-26": [
+      36,
+      37,
+      38
+    ]
+  },
+  "metered_end_policy": "Only identifiable named endpoints receive from/to. Allsingle-stationInghamsPAR/bus-tie ports remainunspecified; literalasteriskplacement remainsin source_name/verbatimterm.",
+  "exact_operational_cutover_hours_established": false,
+  "P32_CEVC_exact_expression_established": false,
+  "physical_model_operator_promotion_allowed": false,
+  "structural_delta_summary": {
+    "late_2025_Moses": "Moses230 MA1/MA2 toHaverstock345 HA1/HA2;fiveothermembersunchanged.",
+    "early_2025_CentralEast": "Inghams PAR 2 withtrailingstar andR81trailingstar versuslaterPAR/R81unstarred.",
+    "early_2025_TotalEast": "Closter/Cresskillcircuit751nameconflict andHillburn/Hilburnspelling; noautomaticalias."
+  },
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_flowgate_definitions/build_central_north_definitions.py",
+      "sha256": "1ad74f45b241ecd72beaa3152d21ba8d5902df47e392a490cb3f8b0e5b22763b"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.pdf",
+      "sha256": "32e4fb86cc8397ab458fdf790ab52decfcaa9e9686de7aa9bec7527eaf04b901"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.pdf",
+      "sha256": "bcf26e7ac908f43a29f34230067b5b1afc6e587845b26246d7ca39a41ef9f072"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.pdf",
+      "sha256": "546402b7e85f51441e64a6b68adac53579f83828f6bc8c1195ccc480e082dc0b"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/central_north_2025_qualifiers.json",
+      "sha256": "baabbef45f6be710b9cfebd1f1da763e00218ff9d48b541eb9366d58008f30c7"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Summer2025_page-37.png",
+      "sha256": "64b8f790dc0067936ee764966c834e34367bdc5c7e968fa6e9bd572c933f81b0"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Summer2025_page-38.png",
+      "sha256": "5a9cf9e5bbabf582322a9e2f8cadf8b9c81d45e9ffe7fa2719efa42b2b7622d4"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Summer2025_page-39.png",
+      "sha256": "7badfba038502d1e1e55124160e5c497a88c140d853e8a864f75d08e76ffeb94"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2025_26_page-36.png",
+      "sha256": "4f436e07942bd8fb0f3063dee886916f27453bfa5195953f112156e83f2b105a"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2025_26_page-37.png",
+      "sha256": "d1dcafb3c3b48757cffd7d4cb9bb0ee7f80cf5693392d7e1d3e80647f94595b5"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2025_26_page-38.png",
+      "sha256": "9422ef8874335b8c3329477bca7b352ef49bf5c1106edbf9de1d4ebb3b1cf136"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2024_25_page-36.png",
+      "sha256": "db00f68917de49d6197b06cd4bbeca706a9f33971669ecad9c4d2159d536edb8"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2024_25_page-37.png",
+      "sha256": "970a52507e488ce1702ac75da4a4d2e33bd233f9c432b3b4be8ee6bf95dc9d9a"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/Winter2024_25_page-38.png",
+      "sha256": "64b02c059a2931bd47049d53cd1632eb326d284c13fef9e915a85120e28f8730"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_CEVC24_2024.pdf",
+      "sha256": "42358fbf03847610a7da52fe66abac13ca269c29294309ac8743be22cba9527f"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Dynamic_Reserves_20231213.pdf",
+      "sha256": "b70bc69fc0bd822609fadf32b73265c5e6455755d8c784db122e2e70c4a6739f"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Emergency_Operations_Manual_current.pdf",
+      "sha256": "80dfcf47e99bc571d76f7f9fa6de541aed768dddb46ab1596b55b0b9e803d070"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_MS24_20240718.pdf",
+      "sha256": "b945e476a985dada832ccf2b017deeee24bf0a8a9464d45674e48acdaaa3e074"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Summer2025_OperatingStudy_APPROVED.pdf",
+      "sha256": "077c8b7c6c4703a0987784dbffc72a2213f33eb3501c340a10eb208fdf6ee1be"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_TE23_20230915.pdf",
+      "sha256": "001a4188b56af703181ad95b70745783ea8cdae880743361b7d30dbd69595c8d"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_OperatingStudy_APPROVED.pdf",
+      "sha256": "ca605a2a49b5677fcca88d146b2ce7048d6f7f736f5c03608ee29dcc328382b5"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_OperatingStudy_APPROVED.pdf",
+      "sha256": "8e0ec07085d06d02240df60c425d48f15c7281cf4abf5feb9cdb88a09c79d01e"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_CEVC24_2024.receipt.json",
+      "sha256": "9eb03c2256eea6b350b2adce44e110856693f4b0ac05762b62a93380434fe60f"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Dynamic_Reserves_20231213.receipt.json",
+      "sha256": "a0ca460f87babddf30018d1110ddc1d3f15e528e461098dbedfae56668ba0d55"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Emergency_Operations_Manual_current.receipt.json",
+      "sha256": "1c2799a0163ac11186424a4e862a5cae758fe16b861a39b4dd9fd96ec6116235"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_MS24_20240718.receipt.json",
+      "sha256": "71f35de4d2d9ae9e1ff172b3212d6e21d1f1365c726557c6811280ec4533468c"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Summer2025_OperatingStudy_APPROVED.receipt.json",
+      "sha256": "65d2e1c426ed0a864f3652144218f9b3438b8e4d4f387b0e8490925d37b4eb4a"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_TE23_20230915.receipt.json",
+      "sha256": "8b9f544e0d04f953c8f0640598b261cac6fdac3a91edd8a3feca20cf8128f170"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.receipt.json",
+      "sha256": "17e3d72d3e505c423a4893fcb58acb1a72261b06e2afe2197562ba50d858c99d"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_OperatingStudy_APPROVED.receipt.json",
+      "sha256": "a0ef127a9db59c35fc85926dc9305789acf70fa455ca19ae584afb7f466b0408"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.receipt.json",
+      "sha256": "623fe65c20581a825d48b1453a728f15df8f9ad0099810068122a469d82f6732"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_OperatingStudy_APPROVED.receipt.json",
+      "sha256": "74a79e455fc4eb8c78a53d2c717148287d4f90d8e1410332de498ed9c8d0d8fa"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.receipt.json",
+      "sha256": "aaf4e2fdd6a3ff4cb1b050af718473f6223704948933d959703125658aa913c2"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/central_north_2025.csv",
+      "sha256": "f795ccd2d2b09a12a66f73cde5eaa8ff103bdcec50e8b126e32ffc0c1a49892c"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/central_north_winter2024_25.csv",
+      "sha256": "11a3a4b3fb2fb1f608b97311575d0c79c3aa7c44a4bf8c9070e48877b485ce03"
+    }
+  ]
+}

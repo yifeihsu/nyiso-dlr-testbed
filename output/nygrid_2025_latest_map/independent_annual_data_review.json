@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T19:46:21.231719+00:00",
+  "scope": "Independent current offline-map annual JSON values, masks, axes, units and native-zone semantics",
+  "check_count": 13,
+  "checks": [
+    {
+      "name": "full_time_interface_zone_axes",
+      "passed": true,
+      "details": {
+        "hours": 8760,
+        "interfaces": 7,
+        "zones": 11
+      }
+    },
+    {
+      "name": "source_equation_and_operating_masks",
+      "passed": true,
+      "details": {
+        "source_qualified": 8651,
+        "flow_qualified": 8170,
+        "operating_qualified": 0
+      }
+    },
+    {
+      "name": "effective_date_state_axis",
+      "passed": true,
+      "details": {
+        "pre_may": 3359,
+        "may21": 216,
+        "may30": 4896,
+        "post_dover": 289
+      }
+    },
+    {
+      "name": "all_default_interface_values_from_independent_reconstruction",
+      "passed": true,
+      "details": {
+        "maximum_model_MW_error": 0.0,
+        "qualified_hour_interface_values": 57190
+      }
+    },
+    {
+      "name": "failed_and_excluded_interface_values_remain_null",
+      "passed": true,
+      "details": {
+        "unavailable_rows": 590,
+        "zero_filled_rows": 0
+      }
+    },
+    {
+      "name": "observations_keep_independent_public_availability",
+      "passed": true,
+      "details": {
+        "all_seven_observations_available_rows": 8673,
+        "model_unavailable_but_some_observation_available_rows": 503
+      }
+    },
+    {
+      "name": "power_scale_and_no_current_rescaling",
+      "passed": true,
+      "details": {
+        "gamma": 0.30012075175285535,
+        "public_scale": "model_MW/gamma",
+        "current_rescaling": false
+      }
+    },
+    {
+      "name": "gross_demand_and_native_generation_match_current_profiles",
+      "passed": true,
+      "details": {
+        "maximum_gross_model_MW_error": 0.0,
+        "maximum_native_generation_model_MW_error": 0.0,
+        "native_generator_rows": 1436,
+        "excluded_external_generator_rows": 28,
+        "HQ_generator_row_excluded": 1464,
+        "HQ_is_native": false
+      }
+    },
+    {
+      "name": "zone_field_availability_masks",
+      "passed": true,
+      "details": {
+        "gross_and_native_generation_mask": "sourceQualified",
+        "served_and_loss_mask": "qualified"
+      }
+    },
+    {
+      "name": "P58_gross_served_and_loss_semantics",
+      "passed": true,
+      "details": {
+        "maximum_served_model_MW_difference": 0.0,
+        "maximum_loss_model_MW_difference": 2.425490919222284e-10,
+        "maximum_gross_equals_served_plus_loss_residual_MW": 3.765876499528531e-13
+      }
+    },
+    {
+      "name": "fixed_transfer_values_and_input_mask",
+      "passed": true,
+      "details": {
+        "records": 6,
+        "physical_kind": "four original DC and two ideal PAR controls",
+        "mask": "sourceQualified"
+      }
+    },
+    {
+      "name": "failure_statuses_are_distinct_from_source_exclusions",
+      "passed": true,
+      "details": {
+        "equation_loss_qualified": 8170,
+        "source_excluded": 109,
+        "solution_failed": 481
+      }
+    },
+    {
+      "name": "diagnostic_scope_and_observation_units_disclosed",
+      "passed": true,
+      "details": {
+        "observations": "Preserved frozen numeric-as-MW interpretation of published NYISO P32 Flow(MWH); no unit factor fitted and no independent physical meter certification.",
+        "generation": "Source-informed reconstructed net native generator PG aggregated by current NY accounting zone, not measured unit dispatch; excludes all28 external equivalents including HQ; negative storage pumping is preserved."
+      }
+    }
+  ],
+  "model_flow_values_compared": 57190,
+  "fresh_simulation_run": false,
+  "old_artifacts_modified": false,
+  "browser_test_fixtures": {
+    "default_hour": 8508,
+    "default_Moses_South_model_MW": -175.03950986688506,
+    "default_Moses_South_public_scale_MW": -583.2302792944731,
+    "default_Moses_arrow": "E_to_D",
+    "source_eligible_failed_hour": 2349,
+    "source_excluded_hour": 154
+  },
+  "sources": [
+    {
+      "path": "output/nygrid_2025_latest_map/annual_data.json",
+      "sha256": "786b4d5a585c374fc681289b4a28afc9fa0cc8a596b147e611d2ade781c69601",
+      "bytes": 12268211
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/interface_definitions.json",
+      "sha256": "1e84dd46e8120688b5d866457c97d51673ad721a38f7d91ae1b7c26c87dc64ed",
+      "bytes": 96784
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/interface_flow_reference.npz",
+      "sha256": "aade792da8b17889b938318636205e68bc4064cbe1cb600f617933c5d45774d7",
+      "bytes": 1350648
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad",
+      "bytes": 6349492
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171",
+      "bytes": 802063
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4",
+      "bytes": 54625507
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf",
+      "bytes": 54767622
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/audit_annual_payload.py",
+      "sha256": "a54820501ec195d07da2e69513215a8b3eff2f76012ac4b3505f255585c93433",
+      "bytes": 9557
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+test_interior_injections_and_nonpassive_edges_are_rejected (test_slim_network.ComponentPhysics.test_interior_injections_and_nonpassive_edges_are_rejected) ... ok
+test_nonunity_taps_phase_shifts_and_retained_direct_row (test_slim_network.ComponentPhysics.test_nonunity_taps_phase_shifts_and_retained_direct_row) ... ok
+test_single_port_phase_leaf_has_no_port_effect_but_offset_recovers (test_slim_network.ComponentPhysics.test_single_port_phase_leaf_has_no_port_effect_but_offset_recovers) ... ok
+test_weak_structural_edge_is_never_threshold_pruned (test_slim_network.ComponentPhysics.test_weak_structural_edge_is_never_threshold_pruned) ... ok
+test_Dunwoodie_local_cut_is_not_mislabeled_as_recovered_operator (test_slim_network.DeliveredSlim.test_Dunwoodie_local_cut_is_not_mislabeled_as_recovered_operator) ... ok
+test_original_grid_devices_and_direct_source_rows_unchanged (test_slim_network.DeliveredSlim.test_original_grid_devices_and_direct_source_rows_unchanged) ... ok
+test_random_retained_injections_reproduce_full_solution_and_all_flows (test_slim_network.DeliveredSlim.test_random_retained_injections_reproduce_full_solution_and_all_flows) ... ok
+test_affine_series_reduction_is_exact (test_validate_slim.SlimAuditTests.test_affine_series_reduction_is_exact) ... ok
+test_dropping_phase_offset_fails_even_when_B_matches (test_validate_slim.SlimAuditTests.test_dropping_phase_offset_fails_even_when_B_matches) ... ok
+test_equivalent_cannot_claim_resistance_or_thermal_rating (test_validate_slim.SlimAuditTests.test_equivalent_cannot_claim_resistance_or_thermal_rating) ... ok
+test_equivalent_documentation_cannot_omit_a_source_circuit (test_validate_slim.SlimAuditTests.test_equivalent_documentation_cannot_omit_a_source_circuit) ... ok
+test_generic_operator_preserves_internal_source_flow (test_validate_slim.SlimAuditTests.test_generic_operator_preserves_internal_source_flow) ... ok
+test_interior_load_or_asset_landing_is_rejected (test_validate_slim.SlimAuditTests.test_interior_load_or_asset_landing_is_rejected) ... ok
+test_naive_zone_operator_loses_eliminated_boundary (test_validate_slim.SlimAuditTests.test_naive_zone_operator_loses_eliminated_boundary) ... ok
+test_parallel_retained_direct_circuit_must_be_subtracted_once (test_validate_slim.SlimAuditTests.test_parallel_retained_direct_circuit_must_be_subtracted_once) ... ok
+test_redundant_parallel_equivalents_do_not_hide_line_expansion (test_validate_slim.SlimAuditTests.test_redundant_parallel_equivalents_do_not_hide_line_expansion) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.263s
+
+OK

@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T06:14:59.919005+00:00",
+  "numerical_baseline_HEAD": "303b626bcab43215c839ad7e175e7274f25b4bdc",
+  "branch": "codex/s13-phase1b-upny-coned",
+  "critical_numerical_sources_unchanged": 53,
+  "unrelated_map_working_files_preserved": 21,
+  "receipt_hash_references_verified": 201,
+  "component_receipts": [
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/baseline_receipt.json",
+      "bytes": 6045,
+      "sha256": "7d86404773e963670760d6dfd6adf9c166334cdd30a2de7f704ffc518623928d"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/niagara_prior_consistency_receipt.json",
+      "bytes": 7933,
+      "sha256": "b1fd0e279dc093e309e367593f999fc68755bdba839e99447a48b750bb2faacf"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/independent_probe_review.json",
+      "bytes": 5264,
+      "sha256": "582ab455c470e7a020cbf2c298e793d593f7aa11e67c7a00ee009819d8d899fd"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/independent_pjm_partition_review.json",
+      "bytes": 4337,
+      "sha256": "d2392c1c306f4ed1e29e85e2c923d6b9fb127cee124221b1a9fcd373e2964106"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/accounting/gate_terms_receipt.json",
+      "bytes": 930,
+      "sha256": "360ea109d04d55cb4323a10414008390556e0752f313afebdfa45470dced7d8d"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/accounting/accounting_identity_review.json",
+      "bytes": 16771,
+      "sha256": "a17dabffd13efd2fea495be5afa14f532cd56800eff24d1c4009e9f544388290"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/physics_review.json",
+      "bytes": 20105,
+      "sha256": "c8bba130e7e041a5a816b17c5c30086d0b58f5a25fec3df248d84a4fda309c00"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_receipt.json",
+      "bytes": 1649,
+      "sha256": "a90a148dbaa5823d9f9a70fabf928890721120d683a702b71cccd9b66e2b14ca"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/pjm_partition_receipt.json",
+      "bytes": 1334,
+      "sha256": "8ae94bf67dabc6a8f4b0c919a9f85ac9ab92ce3d71b07770bf1a4a5c7091d8c3"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/accounting/independent_baseline_review.json",
+      "bytes": 2625,
+      "sha256": "f56965d1117415d6bbe9df63b8fbdd64b09cef7d3229c930dd07ea881de59775"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/report_review.json",
+      "bytes": 4852,
+      "sha256": "e243a5ea8d7db574150b817f733ae9274d2bad47358039bf3b7d76b21b1a93d5"
+    }
+  ],
+  "scientific_figures_visually_inspected": true,
+  "inspection": "Two PNGexports checked for readablelabels,completeaxes,nooverlap orclipping; PDFexports useidenticalfigureobjects.",
+  "new_annual_PF_run": false,
+  "baseline_probe_hours": 15,
+  "planned_initial_cases": 150,
+  "initial_qualified_cases": 142,
+  "initial_rejected_cases": 8,
+  "supplementary_PJM_cases": 30,
+  "supplementary_PJM_qualified_cases": 30,
+  "default_model_promoted": false,
+  "handoff_is_additive_diagnostic_supplement": true,
+  "large_frozen_sources_require_existing_repository": true
+}

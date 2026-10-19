@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T06:04:25.136652+00:00",
+  "planned_cases": 30,
+  "qualified_cases": 30,
+  "rejected_cases": 0,
+  "same_15_calendar_hours": true,
+  "annual_candidate_or_improvement_claimed": false,
+  "default_model_changed": false,
+  "maximum_PJM_baseline_PG_conservation_error_model_MW": 0.0,
+  "maximum_regional_import_residual_model_MW": 4.3598902266239696e-11,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/pjm_partition_results.csv",
+      "sha256": "10c95794913961a666ed56c404bf3d229d6749cf2d5d60734e48fcb791fe57e2"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/pjm_partition_plan.json",
+      "sha256": "df2fd98bac42f3b18cc0d3171b9033d587c235ab62657053427f5b82966eafa9"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_plan.json",
+      "sha256": "1b9af6b5e17a4c7ed267e0f458ec4a31149bd4775f4d85be2c3d5167c6246b2a"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/run_pjm_partition_probe.m",
+      "sha256": "b358b501ee4fcff65d204c4ae51d927bca899bc19fdee2befb0df14789de6780"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/score_pjm_partition.py",
+      "sha256": "97afd164627d85300e5e8c59e2616b83644541f3f250f0c95a25f84ca201af37"
+    }
+  ]
+}

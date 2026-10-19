@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T22:12:58.478094+00:00",
+  "scope": "Final HTML exact embedded canonical datasets and metadata, matching inline UI/CSS, and current source-bound math proof",
+  "HTML_sha256": "a3e718f5097d82d10b329e59a1872d242eb38c42e651537e366be4e36f268b34",
+  "HTML_bytes": 14953543,
+  "map_data_sha256": "6c3e8c908aa7b86bb6b078f4ff917aaa35e383808d959103cbaac139f5ae66db",
+  "component_checks": [
+    {
+      "component": "geography",
+      "path": "output/nygrid_2025_moses_repair/delivery/map/geography_data.json",
+      "file_sha256": "2f9ee668e8c01b29996a14587769acb46757bd02e73508b53a1fac4467e96e75",
+      "canonical_JSON_sha256": "880c22396850d8cd571f4ae44c3cc5f54950e1e7b3b846cccf233742e7a22bfe",
+      "exact_complete_component_and_metadata_match": true,
+      "no_fields_dropped_or_changed": true
+    },
+    {
+      "component": "annual",
+      "path": "output/nygrid_2025_moses_repair/delivery/map/annual_data.json",
+      "file_sha256": "b2bb4d7f3125553c2d4e114edae52fcc8d08a9e8aa7ea5e05da46c6e42829d91",
+      "canonical_JSON_sha256": "6179fad7234ad8846cd02c3435a1345014ca9062a2ac31778b9d3c557af07bfa",
+      "exact_complete_component_and_metadata_match": true,
+      "no_fields_dropped_or_changed": true
+    },
+    {
+      "component": "interfaces",
+      "path": "output/nygrid_2025_moses_repair/delivery/map/interface_definitions.json",
+      "file_sha256": "8a48315611fc4a44cb3b14821928b69080763883178b7a5018850bbdf0dde6eb",
+      "canonical_JSON_sha256": "b21e1aa4c97217775c2d001e8511c21379e237fd159be296420196a3a7e31fe1",
+      "exact_complete_component_and_metadata_match": true,
+      "no_fields_dropped_or_changed": true
+    }
+  ],
+  "complete_top_level_payload_exact": true,
+  "map_data_JSON_exact": true,
+  "inline_JS_exact_source_match": true,
+  "inline_CSS_exact_source_match": true,
+  "JS_sha256": "eec5d2c28b313143325e2567ba99329b7a62c9c76e0eb17d07ebc9d995da1b0f",
+  "CSS_sha256": "312f63a8fda6900938852ba1f065943b8a4940003dd9c3d6a850201d25a0883a",
+  "script_blocks": 2,
+  "external_script_sources": [],
+  "external_stylesheets": [],
+  "UI_math_checks_passed": 11,
+  "UI_math_review_sha256": "03a5b9d3f719e5420c18ec8589b5c6e12120a7d1ee2a072cb928446697b2ba9b",
+  "build_receipt_sha256": "d3f95871e1fd797d84faa64bd408a34bc048c70b1f172fc6ee44d43959c6cf60",
+  "build_source_and_output_hash_mismatches": [],
+  "real_browser_visual_review_is_separate": true,
+  "new_simulation_run": false,
+  "canonical_data_or_UI_sources_modified": false,
+  "audit_script": {
+    "path": "scripts/nygrid_2025_moses_repair/delivery/map/audit_embedded_payload.py",
+    "sha256": "b34bec7b9ae85b7ae620fb7c69cf13753f1a05f6834ad1c7b101537da2720746"
+  }
+}

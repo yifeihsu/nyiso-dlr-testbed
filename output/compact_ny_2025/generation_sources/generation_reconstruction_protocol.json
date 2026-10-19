@@ -1,0 +1,20 @@
+{
+  "protocol_version": "independent_generation_prior_v1",
+  "registered_before_new_interface_scoring": true,
+  "baseline_commit": "ebfd9fea4bf61019c8200f4e6f6d4422b64407f0",
+  "network": "66-bus NPCC-derived NY-only 2025 year-end scenario; 200-bus ceiling",
+  "scale_policy": "fixed_year_peak",
+  "source_prior_policy": "EPA hourly fossil gross output with explicit net conversion or system-fuel reconciliation; NRC daily nuclear status; EIA monthly hydro; stated renewable capacity shares; no internal interface observations",
+  "original_12_hour_use": "Historical and revisited diagnostic comparison; prior interface errors motivated this independent-data method",
+  "new_calendar_selected_2025_validation_hours": [
+    {"scenario_id": "V1_2025_JAN15_EVENING", "timestamp": "2025-01-15 18:00", "timestamp_utc": "2025-01-15T23:00:00Z", "source_time_zone": "EST"},
+    {"scenario_id": "V2_2025_APR15_MIDDAY", "timestamp": "2025-04-15 13:00", "timestamp_utc": "2025-04-15T17:00:00Z", "source_time_zone": "EDT"},
+    {"scenario_id": "V3_2025_JUL15_EVENING", "timestamp": "2025-07-15 18:00", "timestamp_utc": "2025-07-15T22:00:00Z", "source_time_zone": "EDT"},
+    {"scenario_id": "V4_2025_JUL25_NIGHT", "timestamp": "2025-07-25 04:00", "timestamp_utc": "2025-07-25T08:00:00Z", "source_time_zone": "EDT"}
+  ],
+  "validation_selection": "Calendar-selected quarter/month-day and time-of-day variety; no interface values consulted for selection. Exact-time absence must be reported, not silently replaced.",
+  "new_validation_target_access": "Extract and score internal-interface observations only after source-to-zone rules, solver objective and any fitting coefficients are frozen",
+  "allowed_inputs": ["zonal load", "external boundary flows", "EPA/EIA/NRC plant observations and metadata", "statewide NYISO fuel mix", "fixed topology and generator capabilities"],
+  "forbidden_prior_inputs": ["internal NYISO interface observations", "interface-derived zonal generation", "heldout fitted generator participation"],
+  "reporting": "Distinguish observed source coverage, estimated zonal generation, plant identity assumptions, fleet capacity limits, and interface prediction; no inferred zonal estimate is relabeled observed telemetry"
+}

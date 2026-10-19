@@ -1,0 +1,224 @@
+{
+  "passed": true,
+  "completed": true,
+  "created_utc": "2026-10-13T05:58:57.903034+00:00",
+  "scope": "Independent new infer_conductors.py API, exact saved372target/candidate audit and original-RX recovery attribution; no electrical solve or target edits",
+  "test_count": 29,
+  "tests": [
+    {
+      "name": "same_physical_ohms_100_and_200_MVA_same_candidate_keys",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "base_conversion_preserves_geometry_length_and_physical_RXB",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "name": "all_four_integer_circuit_alternatives_visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same_RX_length_linear_B_quadratic_in_circuit_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ranking_is_declared_conditional_not_unique_identification",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "B_is_explicit_secondary_ranking_not_RX_change",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single_bundle_unused_spacing_duplicates_removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "zero_R_returns_explicit_no_fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "negative_R_returns_explicit_no_fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "zero_X_returns_explicit_no_fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "negative_X_returns_explicit_no_fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing_voltage_geometry_returns_explicit_no_fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "parent224_no_fit_is_not_a_geographic_length_restriction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "too_short_declared_length_window_returns_explicit_no_fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLI_rejects_nonempty_output_without_overwriting",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLI_writes_new_output",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLI_repeat_preserves_existing_inference_bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLI_no_fit_writes_summary_without_fake_candidates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "372_target_rows_are_unique_parent_basis_pairs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "186_parents_each_have_imported_and_current_target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_saved_candidates_independently_reproduce_target_RX_and_B",
+      "passed": true,
+      "detail": {
+        "candidate_rows": 11701,
+        "maximum_RX_error_pu": 8.554268404736831e-14,
+        "maximum_B_error_pu": 2.1316282072803006e-14
+      }
+    },
+    {
+      "name": "B_absolute_and_optional_signed_diagnostics_correct",
+      "passed": true,
+      "detail": 2.1316282072803006e-14
+    },
+    {
+      "name": "saved_targets_are_actual_imported_or_current_values_and_counts_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "producer_counts_match_actual_tables",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_candidate_physical_hypotheses_not_duplicated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_extended_window_recoveries_are_prior_redesigns_not_mixed_designs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "13_default_geography_only_recoveries_and3_explicit_global_cap_recoveries",
+      "passed": true,
+      "detail": [
+        152,
+        163,
+        164
+      ]
+    },
+    {
+      "name": "default_uses_original_voltage_caps_and_labels_override",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed_code_and_source_tables_unchanged_during_audit",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "summary_target_rows": 372,
+  "candidate_rows": 11701,
+  "current_targets_with_candidates": 185,
+  "imported_targets_with_candidates": 141,
+  "recovered_prior_redesign_imported_targets_default": 13,
+  "recovered_under_explicit_1000km_override": 16,
+  "geography_only_recoveries": 13,
+  "also_requires_expanded_global_length_cap": [
+    152,
+    163,
+    164
+  ],
+  "maximum_saved_candidate_RX_error_pu": 8.554268404736831e-14,
+  "maximum_saved_candidate_B_error_pu": 2.1316282072803006e-14,
+  "independent_physics_functions": "Explicit conductor-pair distance products and directly derived resistance/reactance/charging equations, not the new inference forward helper",
+  "no_unique_conductor_or_installed_asset_claim": true,
+  "no_old_model_or_handoff_artifact_modified": true,
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/infer_conductors.py",
+      "sha256": "11fd9f52f939f2087be2616ffa885c6f63e3861a2b4f086209100e4739fc9b0b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/geometry_defaults.csv",
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/inverse_target_summary.csv",
+      "sha256": "32ee374171861653f155dc1986eeec13ee0bab9b94de1b1628bb6535670f5434"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/feasible_candidate_realizations.csv",
+      "sha256": "d4b86519cba7cf8d544ab15cd32987963b41b79b3224a566b3b206c6baa2ef5b"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/inverse_search_receipt.json",
+      "sha256": "416e085bec67570c299d010325da09d37b8b540e00a5720edb7cba99014a790b"
+    },
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/audit_inverse_physics.py",
+      "sha256": "120f08b5e81e8068c4155c15c98030010606765ee5ca09363301a93c3d83c04e"
+    },
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/audit_inference_api.py",
+      "sha256": "7bedf636840ef6ec7302814d52be1fd3a2df6f519a2808f63739487da3b07dad"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_conductor_inference/independent/recovered_imported_RX_attribution.csv",
+      "sha256": "1437eeda68c46b0a63fd715326dcb00f349f3cce0d4446a27bd3acb677a3597b"
+    }
+  ],
+  "fixture_directory": "output/nygrid_2025_conductor_inference/independent/api_cli_checks/42b743090299403a9ab421abde713409"
+}

@@ -1,0 +1,1698 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T04:27:47.181423+00:00",
+  "baseline_HEAD": "8188cbec1172219a0414881121ad042b405a4044",
+  "branch": "codex/s13-phase1b-upny-coned",
+  "scope": "Read-only model-history, modification, publicAPI and DLR scientific-scope inventory; no new solver runs or priorfile edits",
+  "observed_evidence_status": "Freshly inspected saved artifacts at the pinned handoffHEAD; numerical outcomes are preserved historical runs, not rerun in this inventory.",
+  "historical_S7_S13_S14_family": [
+    {
+      "id": "s7_structural",
+      "title": "Separate NPCC/S7 structural provenance",
+      "counts": {
+        "buses": 143,
+        "branches": 246,
+        "generators": 62,
+        "baseMVA": 100
+      },
+      "major_change": "Original local233-branch NPCC plus S4 delivery/capability assumptions and direct PERFORM corridor parameters.",
+      "scientific_status": "Structural/historical baseline; not a certified operating case. Do not substitute its bus/zone roles or fitted priors into the Cornell NYgrid branch.",
+      "evidence": [
+        {
+          "path": "PROJECT_HANDOFF.md",
+          "line_start": 76,
+          "line_end": 79,
+          "excerpt": "The S7 structural provenance case, which remains the ancestor of S13-FULL, has:\n\n```text\n143 buses"
+        },
+        {
+          "path": "PROJECT_HANDOFF.md",
+          "line_start": 76,
+          "line_end": 84,
+          "excerpt": "The S7 structural provenance case, which remains the ancestor of S13-FULL, has:\n\n```text\n143 buses\n246 branches\n62 generators\n100 MVA base\n```\n"
+        }
+      ],
+      "lineage": "local_ENLITEN_NPCC_to_S7"
+    },
+    {
+      "id": "s13_checkpoints",
+      "title": "Preserved S13-FULL construction checkpoints",
+      "counts": {
+        "phase1a_buses": 147,
+        "phase1a_branches": 253,
+        "phase1b_buses": 149,
+        "phase1b_branches": 262,
+        "generators": 62
+      },
+      "major_change": "Source-backed physical corridor overlays with provenance/overlap registers; cumulative construction preserves full-NPCC identities.",
+      "scientific_status": "Historical construction/validation parent; no DLR promotion follows from structural or local identity checks.",
+      "evidence": [
+        {
+          "path": "PROJECT_HANDOFF.md",
+          "line_start": 188,
+          "line_end": 191,
+          "excerpt": "The current cumulative Phase 1B checkpoint adds E. Fishkill and Ladentown plus\nnine exact PERFORM 345-kV physical/support circuits. It has 149 buses, 262\nbranches, and 62 generators. Its six-circuit UPNY-ConEd 345-kV proxy is a\ngraph-validated nonintersecting local cut: F36/F37, F30/F31, Y88, and Y94 are"
+        },
+        {
+          "path": "LATEST_MODEL_CONFIGURATION.csv",
+          "line_start": 33,
+          "line_end": 33,
+          "excerpt": "s13_phase1a,case_size,147 buses / 253 branches / 62 generators,S7 plus four PERFORM terminals and seven direct physical branches"
+        },
+        {
+          "path": "LATEST_MODEL_CONFIGURATION.csv",
+          "line_start": 57,
+          "line_end": 57,
+          "excerpt": "s13_phase1b,case_size,149 buses / 262 branches / 62 generators,Phase 1A plus E. Fishkill and Ladentown and nine exact PERFORM physical/support branches"
+        }
+      ]
+    },
+    {
+      "id": "s11_s12_s14",
+      "title": "S11 diagnostic, S12 oracle and unpromoted S14 roles",
+      "counts": {
+        "S11_buses": 49,
+        "S12_buses": 317,
+        "S12_branches": 3531,
+        "S12_generators": 615,
+        "S14_external_reduction_diagnostic_buses": 86
+      },
+      "major_change": "Reduced diagnostics and a PERFORM comparison oracle. The named S14-NYISO promoted operating model remains pending; an86-bus S14-labelled diagnostic is a different artifact.",
+      "scientific_status": "Do not use S12 dense equivalent branches as physical construction inputs or treat an S14-named diagnostic as a promoted DLR model.",
+      "evidence": [
+        {
+          "path": "PROJECT_HANDOFF.md",
+          "line_start": 93,
+          "line_end": 96,
+          "excerpt": "### 1.1 Governing model hierarchy\n\n| Model | Repository role |\n|---|---|"
+        },
+        {
+          "path": "LATEST_MODEL_CONFIGURATION.csv",
+          "line_start": 16,
+          "line_end": 16,
+          "excerpt": "reference_s12,case_size,317 buses / 3531 branches / 615 generators,359 physical branches plus 3172 Kron equivalent branches; oracle only"
+        }
+      ]
+    },
+    {
+      "id": "historical_ny_only",
+      "title": "Separate51/66/71-bus NY-only research families",
+      "counts": {
+        "compact2019_buses": 51,
+        "calibrated2025_buses": 66,
+        "source_generation2025_buses": 66,
+        "partial_SPC2025_buses": 71,
+        "partial_SPC_branch_records": 135,
+        "partial_SPC_active_branches": 117,
+        "partial_SPC_generators": 37
+      },
+      "major_change": "Historical NY-only boundary-equivalent studies, an interface-fitted66-bus baseline, source-generation alternative, and71-bus year-end partial-SPC synthetic DLR study.",
+      "scientific_status": "Preserved historical experiments. Their snapshots, gamma, optimization policy and thermal proofs do not transfer to the current148-bus NYgrid replay.",
+      "evidence": [
+        {
+          "path": "PROJECT_HANDOFF.md",
+          "line_start": 21,
+          "line_end": 24,
+          "excerpt": "**Preferred preliminary model \u2014 2026-09-08:** [71-bus year-end infrastructure and synthetic DLR baseline](COMPACT_NY_PARTIAL_SPC_BASELINE.md). Use `npcc_ny_2025_partial_spc` for the source-estimated electrical state and `npcc_ny_2025_partial_spc_dlr` for a separately qualified synthetic weather state. The case retains all46 original NPCC NY buses, with135 branch records/117 active and37 generators. All15 electrical operating/sensitivity cases and four thermal cases pass fresh replay; 25 explicitly assumed overhead realizations have121 physics/implementation checks. Two electrical hours require strict IPOPT fallback; no physical bounds or prior weights are relaxed. Zonal gross-load shares exactly match scaled NYISO inputs, but four revisited calendar hours have interface MAE133\u2013185MW and maximum471MW. The fixed year-end topology applied to earlier demand/generation hours is a counterfactual stress study, not historical as-operated or new holdout validation. The former calibrated/source/thermal cases remain preserved.\n\n**Preserved independent generation experiment:** [Source reconstruction and originally reserved-hour results](COMPACT_NY_GENERATION_RECONSTRUCTION.md) provides the separate66-bus `npcc_ny_2025_source_generation` case. Its four reserved hours had interface MAE134\u2013185MW;14/14 source-qualified snapshots pass bounded AC and fresh replay, with two hours skipped for boundary-data gaps. Generation is independently estimated, not observed zonal telemetry. Its commissioning audit motivated the implemented71-bus alternative above.\n"
+        },
+        {
+          "path": "COMPACT_NPCC_NY_TESTBED.md",
+          "line_start": 5,
+          "line_end": 6,
+          "excerpt": "The active direction is a **small NY-only testbed that retains the NPCC backbone and adds a few explicit source corridors**. The operating case has a hard limit of **200 buses**. The selected design has **51 buses, 92 branch records, 87 active branches, and 35 generator records**. It preserves all 46 original NPCC NY bus IDs, the three S7 transit buses, and two additional corridor terminals.\n"
+        },
+        {
+          "path": "COMPACT_NY_2025_DLR_METHODOLOGY.md",
+          "line_start": 5,
+          "line_end": 6,
+          "excerpt": "The new preliminary model has **66 New York buses, 125 branch records (112 active), and 37 generator records**. It retains all 46 original NPCC New York bus IDs, stays below the 200-bus ceiling, and represents neighboring systems through ten fixed scheduled injection channels. External NPCC buses remain in the construction for provenance; the operating case contains only New York. The earlier 51-bus benchmark and larger Package A/B artifacts remain separate references.\n"
+        },
+        {
+          "path": "COMPACT_NY_PARTIAL_SPC_BASELINE.md",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "This separate variant updates the northern part of the compact NPCC-derived New York model for selected Smart Path Connect equipment energized during 2025. It has **71 New York buses, 135 branch records, 117 active branches and 37 generator records**, retaining the NPCC benchmark load scale and all 46 original New York bus identities. The previous 66-bus electrical cases, source-generation experiment, and thermal experiment remain reproducible through their original loaders and frozen artifacts.\n"
+        }
+      ],
+      "legacy_latest_csv_is_not_current_nygrid_selector": true
+    },
+    {
+      "id": "phase1c_external_diagnostic",
+      "title": "Historical Phase 1C and external reduction",
+      "counts": {
+        "phase1c_buses": 170,
+        "phase1c_branches": 315,
+        "inherited_generators": 62,
+        "reduced_buses": 86,
+        "reduced_branches": 182,
+        "eliminated_external_buses": 84
+      },
+      "major_change": "Adds source terminals and electrical elements, then tests a separate external reduction and bounded reconstruction workflow.",
+      "scientific_status": "130 implementation checks passed, but all six bounded reconstruction attempts failed. Same-state reduction identity is not operating qualification or DLR readiness.",
+      "evidence": [
+        {
+          "path": "ELECTRICAL_MODEL_IMPLEMENTATION.md",
+          "line_start": 30,
+          "line_end": 33,
+          "excerpt": "The verified run passes **130 registered implementation checks** and the\nhistorical Phase 1A/1B artifact checks. The 170-bus Phase 1C inherited snapshot\nreduces to **86 buses and 182 branches**, eliminating 84 external buses. Its\nindependent same-state replay has maximum voltage error about `1.1e-16 pu`."
+        },
+        {
+          "path": "LATEST_MODEL_CONFIGURATION.csv",
+          "line_start": 151,
+          "line_end": 151,
+          "excerpt": "s13_phase1c,case_size,170 buses / 315 branches / 62 generators,21 source terminals and 53 exact source electrical elements including transformers"
+        }
+      ]
+    },
+    {
+      "id": "package_a_reference",
+      "title": "Package A historical NY-only foundation",
+      "counts": {
+        "immutable_source_buses": 1576,
+        "immutable_source_branches": 2371,
+        "immutable_source_generator_records": 615,
+        "fixed_boundary_PQ_proxies": 20
+      },
+      "major_change": "Qualifies one assumed 2019 PERFORM reference using fixed NY-side boundary injections, bounded prior-based reconstruction and independent PF; retains a declared Marcy Q-only support assumption.",
+      "scientific_status": "One historical electrical reference, not contemporary coverage, physical thermal qualification or a promoted S14 case.",
+      "evidence": [
+        {
+          "path": "output/ny_only_package_a/NY_ONLY_FOUNDATION_RESULTS.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "Electrical qualification: **true**, scoped to one assumed 2019 PERFORM source reference. Final S14 candidate, contemporary coverage and DLR readiness remain unqualified.\n\nThe immutable source contains 1576 buses, 2371 branches and 615 generator records (not physical-unit count). Its reproduced PF converges, with 1 generator limit violation(s); maximum active violation 47.787356 MW.\n"
+        }
+      ]
+    },
+    {
+      "id": "package_b_reference",
+      "title": "Package B historical regional replacement",
+      "counts": {
+        "buses": 878,
+        "branches": 1375,
+        "generator_records": 595,
+        "source_D_to_K_buses": 855,
+        "retained_NPCC_A_to_C_buses": 23
+      },
+      "major_change": "Replaces regional network and device functions with explicitly mapped PERFORM source records while preserving zone demand and fixed boundary schedules.",
+      "scientific_status": "One bounded historical AC candidate with fresh PF replay; optional reference, not the preferred compact testbed or current NYgrid model.",
+      "evidence": [
+        {
+          "path": "NY_ONLY_PACKAGE_B_IMPLEMENTATION.md",
+          "line_start": 8,
+          "line_end": 11,
+          "excerpt": "Package B replaces inherited regional network functions with a connected, explicitly mapped part of the original PERFORM NY model. The resulting historical electrical candidate contains **878 buses, 1,375 branch records, and 595 generator records**: 855 original-source buses in NY zones D\u2013K and 23 retained NPCC buses in zones A\u2013C. The construction follows the electrical boundary and device-accounting requirements; it does not force a predetermined reduced bus count.\n\nThe accepted operating route is bounded AC reconstruction using **MATPOWER MIPS with its default initialization (`opf.start=0`)**, followed by a fresh power flow with fixed operating inputs and an independent physical-limit audit. This establishes one assumed historical operating candidate. It does not establish contemporary validation, thermal readiness, or completion of the later research packages.\n"
+        }
+      ]
+    }
+  ],
+  "current_NYgrid_evolution": [
+    {
+      "id": "paper_reproduction",
+      "title": "Pinned Cornell NYgrid2019 reproduction",
+      "counts": {
+        "raw_buses": 140,
+        "raw_branches": 227,
+        "raw_generators": 48,
+        "released_modified_branches": 226,
+        "paper_reduced_buses": 57,
+        "paper_reduced_branches": 94,
+        "generators": 271,
+        "DC_records": 4,
+        "hour_labels": 8760
+      },
+      "major_change": "Pinned author commit47698b6c7823ae7b1bc6935e5601d5b64b8f918e; release removes3remote ties, adds38-77 and43-38 E-G aggregates, then substitutes one AC row with4controlled DC records. Five of seven plotting expressions had wrong branch indices; measurement repair leaves the solved network unchanged.",
+      "scientific_status": "Retrospective DC reproduction. Original227-versus-paper/local233-branch discrepancy remains.2019hour labels use author preparation, not the later2025physical UTC/DST axis.",
+      "evidence": [
+        {
+          "path": "NYGRID_2019_INTERFACE_VERIFICATION.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "The released **57-bus NYgrid DC model** was run for all **8,760 prepared local-hour labels in 2019**, giving **61,320 interface comparisons**. Every DC case passed; an independent Python nodal solver reproduces all 94 branch flows to within **1.21e-11 MW**. The case contains 94 AC branch records, four DC-link records, and 271 generator records.\n\n**Five of the seven released plotting formulas use incorrect branch indices.** After correcting measurement using the model's own interface map, the pooled actual-flow weighted absolute error is **11.22%**. Literal execution of the plotting formulas gives **60.66%**. Both measurements use exactly the same solved network and dispatch; no model parameter, generation allocation, or observation target was fitted to obtain the correction.\n"
+        },
+        {
+          "path": "NYGRID_2019_DLR_REBUILD.md",
+          "line_start": 23,
+          "line_end": 30,
+          "excerpt": "| Downloaded `Data/npcc.mat` | 140 | 227 | 48 | 0 |\n| Released `modifyMPC()` base | 140 | 226 | 48 | 0 |\n| Released full hourly case immediately before reduction | 140 | 226 | 271 | 0 |\n| Released reduced case before DC-device changes | 57 | 95 | 271 | 0 |\n| Released final model validated in the earlier annual reproduction | 57 | 94 | 271 | 4 |\n| New derived full model with the same final-device changes | 140 | 225 | 271 | 4 |\n\nThe paper describes an original **233-branch** NPCC network, while its pinned"
+        }
+      ]
+    },
+    {
+      "id": "full_2019",
+      "title": "Unreduced full2019 DC counterpart and first thermal exposure",
+      "counts": {
+        "buses": 140,
+        "AC_branch_records": 225,
+        "generators": 271,
+        "DC_records": 4,
+        "prepared_hours": 8760,
+        "structural_DLR_candidates": 39
+      },
+      "major_change": "Restores the unreduced author-derived network, registers raw/modified/reduced branch lineage, and creates first explicitly synthetic fixed-dispatch thermal screens.",
+      "scientific_status": "DC and declared exposure-method use; not bounded AC, installed ampacity, observed weather or economic DLR-benefit validation.",
+      "evidence": [
+        {
+          "path": "NYGRID_2019_DLR_REBUILD.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "**Verified 2026-10-07.** The new `npcc_nygrid_2019_full_dc` loader provides an\nunreduced, paper-derived 2019 research network with **140 buses, 225 AC branch\nrecords, 271 generator records, and four controllable DC-link records**. A\ncomplete **8,760-hour** baseline and a first synthetic thermal exposure screen"
+        }
+      ]
+    },
+    {
+      "id": "historical_comparison",
+      "title": "Separate compact2019 comparison and western diagnostic studies",
+      "counts": {
+        "historical_compact_buses": 51,
+        "branch_records": 94,
+        "active_branches": 89,
+        "NY_only_reference_buses": 46
+      },
+      "major_change": "Tests source-role/operator crosswalk and NY-side boundary accounting on the older compact family; diagnoses shared Dysinger/WestCentral errors and verifies raw2019load preparation.",
+      "scientific_status": "Historical cross-family diagnostic, not an ancestor that replaces the present full-NPCC NYgrid case; selected snapshots are retrospective, not holdouts.",
+      "evidence": [
+        {
+          "path": "NYGRID_COMPACT_2019_COMPARISON.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "**The matched-2019 experiment succeeds as a DC diagnostic.** A separate 51-bus historical compact variant, using the paper's reconstructed bus injections, explicit NY-side boundary conditions, paper-role interface definitions, and its two Marcy South reactances, has a best balanced snapshot with **3.28% pooled error and every interface within 4.86%**. It retains the NPCC benchmark power scale and every original NY bus. No new branch or injection parameter was fitted to an interface target in this experiment; the compact model retains its previously documented S4/S7 construction history.\n\nThis is a **pre-2025 historical comparison variant of our revised model**: 51 buses, 94 branch records, 89 active branches. It precedes the selected 2025 additions in the existing 71-bus model. The 71-bus preferred AC/DLR baseline and its frozen results remain unchanged. The new best cases are **DC-only, retrospectively selected examples**, not a calibrated 2025 model or untouched predictive validation.\n"
+        }
+      ]
+    },
+    {
+      "id": "inputs_2025",
+      "title": "2025source and clock reconstruction",
+      "counts": {
+        "original_buses": 140,
+        "physical_hour_positions": 8760,
+        "NY_zones": 11,
+        "combined_operating_source_qualified_hours": 8673
+      },
+      "major_change": "Builds P58load, generation priors and external schedules on a UTC physical-hour axis with source-quality masks. Scales aggregate public powers once by gamma=0.30012075175285535.",
+      "scientific_status": "Input struct only; not yet a balanced MATPOWER case. Missingness, assumptions and imputed/source-quality status remain explicit.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_OPERATING_INPUTS.md",
+          "line_start": 8,
+          "line_end": 11,
+          "excerpt": "## Scale and accounting\n\nThe user requested the existing load-scaling strategy because the NPCC\nbenchmark demand differs from actual NYISO demand. The new package uses one"
+        }
+      ]
+    },
+    {
+      "id": "bounded_dispatch",
+      "title": "2025fleet mapping and bounded DC dispatch",
+      "counts": {
+        "buses": 140,
+        "AC_branch_records": 225,
+        "DC_records": 4,
+        "fleet_inventory_identities": 2245,
+        "native_generator_rows": 1436,
+        "external_plus_HQ_rows": 28,
+        "total_generator_rows": 1464,
+        "qualified_hours": 8663,
+        "gap_hours": 97
+      },
+      "major_change": "Maps unique EIA identities and source-derived priors to retained proxies, then projects hourly PG into finite active-power bounds to close lossless DC balance without load shedding/free generation.",
+      "scientific_status": "Hourly average reconstruction; not observed unit dispatch, commitment, ramps, reserves, hydro/storage energy or AC/thermal feasibility.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_BOUNDED_DISPATCH.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "The requested operating-model stage is complete. All **8,663 source-qualified\n2025 hours** have a capacity-bounded, balanced DC state on the preserved\n**140-bus, 225-AC-branch, four-DC-link modified 2019 network**. There are no\ncapacity-infeasible qualified hours and no load shedding or free balancing"
+        },
+        {
+          "path": "NYGRID_2025_BOUNDED_DISPATCH.md",
+          "line_start": 28,
+          "line_end": 33,
+          "excerpt": "The final case contains **1,436 native records with positive admitted capacity\nin at least one hour**, plus the **27 inherited external equivalents and one\nHQ equivalent**, for **1,464 generator rows**. Inactive, excluded, retired and\nunresolved records remain in the full inventory and audit ledgers. There are\n1,429 default-eligible records and 15 separately eligible pumped-hydro records;\neight nominally eligible combined-cycle component rows have no independently"
+        }
+      ]
+    },
+    {
+      "id": "downstate_191",
+      "title": "Detailed Downstate construction on all140original buses",
+      "counts": {
+        "buses": 191,
+        "added_station_terminals": 51,
+        "branch_records": 410,
+        "historical_PERFORM_circuits": 97,
+        "year_end_core_active_AC_branches": 336,
+        "generators": 1464,
+        "DC_records": 4
+      },
+      "major_change": "Adds38historical-source and13project/plant/proxy terminals; registers replacements for9old aggregates; includes dated RCC/Dover states and separate NYES/asset-placement diagnostics.",
+      "scientific_status": "DC construction with many explicit attachments/project assumptions.97historical circuits are source detail, not97newly constructed lines. Default retains original injection landings.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_DOWNSTATE_REFINEMENT.md",
+          "line_start": 32,
+          "line_end": 35,
+          "excerpt": "## What was constructed\n\nThe parent is commit `c7874aa90fec1d4e883814297e91bfcd3567bdf2`: the modified-2019\nfull NPCC network with the new 2025 fleet and dispatch. Its 1,436 native"
+        },
+        {
+          "path": "NYGRID_2025_DOWNSTATE_REFINEMENT.md",
+          "line_start": 41,
+          "line_end": 49,
+          "excerpt": "The expansion adds 51 station terminals: 38 from historical electrical source\ndetail and 13 public project/plant or explicit proxy terminals. The common\nbranch axis has **410 records**. The core refined cases deactivate nine\npredecessor aggregate rows\u201432, 87, 88, 89, 91\u201395\u2014while retaining their records\nand all original buses. Replacement paths are registered rather than adding\nfull detailed paths in parallel with the old aggregate. The year-end core has\n**336 active AC branches**; the separate NYES assumption case has 337.\n\nThere are **97 exact historical PERFORM circuit rows**, with R, X, B, ratings,"
+        }
+      ]
+    },
+    {
+      "id": "slim_148_dc",
+      "title": "148-bus DC alternative",
+      "counts": {
+        "buses": 148,
+        "original_buses": 140,
+        "retained_additions": 8,
+        "NY_buses": 54,
+        "external_buses": 94,
+        "eliminated_added_buses": 43,
+        "branch_records": 274,
+        "derived_DC_equivalent_edges": 30,
+        "year_end_active_branch_records_before_PAR_substitution": 265
+      },
+      "major_change": "Keeps the eight named345kV transmission ports and eliminates only43zero-injection added nodes using DC Schur/affine recovery. Retains all225original branch records in provenance.",
+      "scientific_status": "Exact tested DC response; equivalent R/B/rating zeros are placeholders. It is not a physical conductor network or a usable AC model merely because MATPOWER accepts it.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_SLIM_DOWNSTATE.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "**Completed 2026-10-11.** This is the preferred smaller DC research case for\nthe requested scope: **eight added buses**, instead of 51. It retains all\n140 original NPCC buses, including all **46 original New York buses**, and\nadds eight critical 345-kV transmission stations. The result is **148 buses"
+        },
+        {
+          "path": "NYGRID_2025_SLIM_DOWNSTATE.md",
+          "line_start": 26,
+          "line_end": 43,
+          "excerpt": "## Eight retained additions\n\nEvery retained addition is **345 kV**. Stations already present in NPCC,\nincluding Pleasant Valley, Millwood, Buchanan, Ramapo and Goethals, remain at\ntheir original bus IDs.\n\n| Added station | Model bus | Reason to retain it |\n|---|---:|---|\n| East Fishkill | 10858 | Separates the parallel Pleasant Valley\u2013East Fishkill and East Fishkill\u2013Wood Street circuits. |\n| Wood Street | 10902 | Retains the junction among Pleasant Valley, East Fishkill and Millwood. |\n| Ladentown | 10774 | Preserves the distinct Ramapo\u2013Ladentown and Ladentown\u2013Buchanan sections. |\n| Dunwoodie | 10593 | Keeps a named Westchester bulk receiving port. |\n| East Garden City | 10589 | Keeps a named Long Island bulk receiving port. |\n| Gowanus | 11129 | Retains a Brooklyn receiving port and its connection to the Goethals area. |\n| Rainey | 11130 | Keeps the Queens receiving port distinct from Gowanus. |\n| Cricket Valley | 20001 | Preserves the F83/F84 junction toward Pleasant Valley and the New England corridor. |\n\nEast Fishkill, Ladentown and Cricket Valley have only two distinct neighbors"
+        }
+      ]
+    },
+    {
+      "id": "moses_repair",
+      "title": "Moses hydro-zone correction",
+      "counts": {
+        "corrected_plants": 26,
+        "admitted_rows_relocated": 46,
+        "qualified_hours": 8663
+      },
+      "major_change": "Moves explicitly documented hydro sites from incorrect county-based ZoneD to ZoneE, preserving their PG and bounds.",
+      "scientific_status": "Source-backed placement repair; substantial residual remains. Initial Ontario-sign/control alternatives remained diagnostics until separate documentary confirmation.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_MOSES_SOUTH_DIAGNOSIS.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "The versioned correction moves 26 hydro plants from the incorrect county-based\nZone D assignment to their explicitly reported Zone E sites. The confirmed\n148-bus repair reduces Moses South WAPE from **95.36% to 78.89%**, and mean\nabsolute error from **514.77 to 425.82 public-equivalent MW**, over the same"
+        }
+      ]
+    },
+    {
+      "id": "ontario_PAR",
+      "title": "Direction-qualified PS33/PS34 controls",
+      "counts": {
+        "retained_buses": 148,
+        "fixed_transfer_records": 6,
+        "physical_HVDC_containers_original": 4,
+        "additional_PAR_transfer_equivalents": 2,
+        "nominal_MVA_per_replacement_PAR": 300
+      },
+      "major_change": "Replaces aggregate branch211 electrically with two separate lossless controlled transfers from Ontario to Moses; keeps211inactive as provenance. Positive reportedflow direction applies from2024-12-03.",
+      "scientific_status": "External P34conditioned DC reconstruction, not physical tap telemetry or fullP/Q/thermal limits. Two extra dcline records are PAR equivalents, not two newHVDC assets.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_VERIFIED_PAR_CONTROLS.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "The official NYISO diagram resolves the 2025 sign: **positive PS33/PTID 25118\nand PS34/PTID 25119 flow is from St. Lawrence, Ontario, toward Moses, New York**.\nThe source's explicit effective date is **December 3, 2024**. The new DC case\nuses the two measured external transfers separately, with per-device checks"
+        }
+      ]
+    },
+    {
+      "id": "western_inputs",
+      "title": "Confirmed western placement repairs and actual regional exchanges",
+      "counts": {
+        "inventory_rows_corrected": 40,
+        "admitted_rows_changed": 36,
+        "western_admitted_bus_moves": 35,
+        "combined_generator_landings_different_from_raw_template": 81,
+        "source_qualified_hours": 8651,
+        "source_excluded_hours": 109
+      },
+      "major_change": "Adds eight site-zone corrections and Lewiston project-voltage landing; adopts NYIS EIA930 bilateral actuals consistently for ISONE/Ontario/PJM/HQ and reprojects the same bounded native priors. Earlier Moses corrections remain.",
+      "scientific_status": "Source-conditioned reconstruction. Individual unit output and within-region AC/DC partition are not observed. Counterparty reporting differences, storage accounting and western physical gates remain unresolved.",
+      "evidence": [
+        {
+          "path": "output/nygrid_2025_dlr_handoff/sources/NYGRID_2025_WESTERN_SOURCE_AUDIT_committed_8188cbec.md",
+          "line_start": 56,
+          "line_end": 59,
+          "excerpt": "## Confirmed mapping corrections\n\nEight site-specific zone corrections follow the 2025 Gold Book: Glenwood, Waterport, Mill Seat, Hyland LFGE, United States Gypsum, Synergy Biogas and Batavia GEN3 belong to zone B; High Acres belongs to zone C. Existing same-zone landing rules are reused only for unanchored proxy records. Valid Batavia GEN1/GEN2 controls and existing legacy electrical anchors are preserved. The aggregate bus62 is not relabeled wholesale: its physical station name and inherited accounting zone represent different levels of aggregation.\n",
+          "original_repository_path": "NYGRID_2025_WESTERN_SOURCE_AUDIT.md",
+          "source_snapshot_commit": "8188cbec1172219a0414881121ad042b405a4044"
+        }
+      ]
+    },
+    {
+      "id": "western_tests",
+      "title": "Controlled Niagara/load/operator counterfactuals",
+      "counts": {
+        "fixed_cohort_hours": 8651,
+        "PF_scenarios": 16,
+        "scenario_hours": 138416
+      },
+      "major_change": "Separates Niagara monthly-energy/legacy-rule tests, within-zone load reshaping, and independent zone-cut operators with held-fixed controls.",
+      "scientific_status": "Diagnostic only; no alternative was promoted by a better interface score and the western residual is not uniquely assigned to mapping error.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_WESTERN_CONTROLLED_TESTS.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "The controlled tests use **the same 8,651 physical 2025 hours and boundary flows in every scored case**. The bounded legacy Niagara rule yields only modest western MAE improvements; matching Niagara's source monthly mean produces no material annual improvement. Within-zone load redistribution has no effect on these two modeled gate totals. Independent operators reproduce the current gates exactly, but the true physical 2025 meter mapping remains unidentified.\n\nThese are conditional sensitivity results. No operating case is promoted, no interface observation is used to choose a target or parameter, and the unexplained residual is not automatically assigned to mapping error. Existing numerical artifacts and the annotation in the previous report are preserved.\n"
+        }
+      ]
+    },
+    {
+      "id": "physical_gates",
+      "title": "Physical flowgate and P34 semantics audits",
+      "counts": {
+        "seasonal_gate_definitions": 21,
+        "printed_entries": 269,
+        "interfaces": 7,
+        "complete_physical_model_gate_mappings_verified": 0
+      },
+      "major_change": "Archives three seasonal editions, metered-end/source identities and model gaps. Separately qualifies P34direction, headerunits, nativecadence and signal origin without changing numerical conventions.",
+      "scientific_status": "Official definitions do not identify a complete2025model operator. Flow(MWH)\u2192numeric-as-MW and forward-hold time semantics remain conditional; never introduce a factor12fromcadence alone.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_PHYSICAL_FLOWGATE_DEFINITIONS.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "The source definitions have been reconstructed for all seven interfaces from the official Winter 2024-25, Summer 2025 and Winter 2025-26 operating-study appendices. The deliverable contains **269 printed entries in 21 seasonal definitions**, with circuit identifiers, terminal names, voltage levels, metered-end asterisks, PDF pages and source hashes.\n\n**Numerical calibration of the current model remains unestablished.** The available network does not have a verified, complete physical mapping for any of the seven gates. No interface observations were used to choose members, signs, weights, aliases or parameters. No new numerical operator, annual replay or improved error claim is being promoted from this audit.\n"
+        }
+      ]
+    },
+    {
+      "id": "line_estimates",
+      "title": "Applied F84 and Staten route-based parameter corrections",
+      "counts": {
+        "retained_buses": 148,
+        "retained_branch_records": 274,
+        "detailed_buses": 191,
+        "detailed_branch_records": 410,
+        "changed_detailed_rows": [
+          391,
+          410
+        ],
+        "annual_scenarios": 5,
+        "scenario_hours": 43255
+      },
+      "major_change": "Replaces F84aggregate-budget R/X/B with a conductor/geometry estimate and Staten cable9.2mi prior with9.4mi source route; preserves otherprojectpaths and97historical circuits. RecomputesDCreduction/recovery.",
+      "scientific_status": "Engineering estimates, not as-builtAC/thermal certification. F84energization wasJuly28,2019; missing-from-frozen2019doesnotmeanbuilt-after2019.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_LINE_PARAMETER_ESTIMATION.md",
+          "line_start": 5,
+          "line_end": 8,
+          "excerpt": "This work traced the six activated project-path records relative to `refined_2019`, matched the public conductor evidence, replaced the F84 aggregate-budget impedance with an engineering estimate, corrected the Staten cable route length, and validated the resulting five network scenarios. The earlier models and results are preserved.\n\n**The implemented parameter changes have passed source, arithmetic, DC network and independent solver validation. This does not establish an as-built AC model or complete thermal qualification.** Dover line-only estimates are saved separately because the PAR series impedances and operating states remain unresolved. RCC conductor dimensions, bonding and charging remain unresolved; an underground cable does not receive an overhead ACSR/ACSS model.\n"
+        }
+      ]
+    },
+    {
+      "id": "dover_controls",
+      "title": "Dover two-bank device and phase-state model",
+      "counts": {
+        "retained_buses": 148,
+        "retained_branch_records": 274,
+        "post_full_buses": 192,
+        "post_full_branch_records": 413,
+        "additional_regulated_port": 1,
+        "parallel_PAR_banks": 2,
+        "fixed_transfers_preserved": 6,
+        "qualified_annual_hours": 8651,
+        "qualified_post_cutover_hours": 287,
+        "ambiguous_zero_hours": 18,
+        "bounded_hours": 49
+      },
+      "major_change": "SeparatesY17, parallelT398-A/B banks and heterogeneous398line sections. Uses conditional leakage estimateX=.01873877796pu per750MVA bank on100MVA base; tracks externalP34targets with gamma*40degree modelbounds.",
+      "scientific_status": "Bank impedance/taps/bypass are not observed. Exacttracking is diagnostic. Two bank phase controls are inAC branches and do not add moredcline records.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_DOVER_PARAMETERS_APPLIED.md",
+          "line_start": 20,
+          "line_end": 23,
+          "excerpt": "The post-cutover detailed reference has **192 buses and 413 branch records**. One added, zero-injection regulated port separates the line from the two banks. Exact DC reduction retains the same **148 buses and 274 branch records**, including every original NPCC bus. It carries two independent phase-input columns through the reduction, preserving parallel-bank circulation as well as the net transfer.\n\n| Detailed record | Treatment | R pu | X pu | Total B pu |\n|---|---|---:|---:|---:|"
+        }
+      ]
+    },
+    {
+      "id": "engineering_AC",
+      "title": "Whole-system engineering AC and current-constrained DLR snapshots",
+      "counts": {
+        "reference_parent_branches": 413,
+        "active_in_any_source_state": 339,
+        "inactive_reference_records": 74,
+        "OH_corridors": 186,
+        "OH_conductor_segments_before_numerical_split": 187,
+        "cable_equivalent_rows": 40,
+        "transformer_compatible_rows": 38,
+        "mixed_voltage_composite_equivalents": 65,
+        "OH_exact_RX": 128,
+        "OH_RX_replacements": 58,
+        "thermal_catalog_entries": 14,
+        "numerical_added_buses": 75
+      },
+      "major_change": "Builds finiteR/X/B, conductor/cable/equipment metadata, current limits, Q/S capability proxies, numericalpi sections and declared75%reactors. Keeps the existing power scale and interprets ACcurrent directly.",
+      "scientific_status": "Fourofseven bounded electrical snapshots and fourofeight weather-constrained OPF/PFreplays qualified. Uniform syntheticweather and fixedreferenceR do not establish annual electrothermal operation or installed ratings.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_AC_SYSTEM.md",
+          "line_start": 5,
+          "line_end": 8,
+          "excerpt": "The numerical qualification has a precise boundary: **four of seven preselected electrical snapshots pass bounded ACOPF and fresh ACPF replay. Four of eight whole-network weather/current-constrained snapshots pass.** The other attempted operating points remain failed qualifications; they are retained in the results. This is a usable synthetic AC/DLR research case with identified feasible operating points, not a demonstrated full-year historical AC replay or an as-built NYISO asset model.\n\n## Direct answer about the earlier case\n"
+        },
+        {
+          "path": "NYGRID_2025_AC_SYSTEM.md",
+          "line_start": 19,
+          "line_end": 32,
+          "excerpt": "| Reference-model class | Records | Treatment in the AC study |\n|---|---:|---|\n| Overhead corridors | 186 | 187 conductor sections before numerical subdivision; explicit catalog, length, integer circuits, bundle count, geometry, R(T), X and B |\n| Cable/urban cable equivalents | 40 | Explicit synthetic copper/XLPE equivalents and static current limits; excluded from the overhead heat balance |\n| Transformer-compatible station paths | 38 | Same-station labels and zero line charging; finite engineering transformer assumptions, not verified nameplates |\n| Composite voltage-changing equivalents | 65 | Regional or mixed line/transformer equivalents; finite voltage-class terminal envelopes, with unresolved physical interiors |\n| PAR, station-reactance and accounting links | 10 | Separate equipment models and limits |\n| Inactive provenance | 74 | Retained; not silently promoted to active physical assets |\n\nFor the 186 overhead corridors, **128 retain their inherited R/X exactly** and **58 receive explicit engineering replacements** where the inherited values cannot support a plausible conductor/geometry realization. All overhead B values come from the selected geometry. For cables, 37 retain inherited R/X and three use route-anchored replacements. These are versioned model changes; the earlier cases and source records are unchanged.\n\nThe [overhead segment ledger](output/nygrid_2025_ac_system/branches/thermal_segments.csv), [cable segment ledger](output/nygrid_2025_ac_system/branches/cable_segments.csv), and [R/X replacement ledger](output/nygrid_2025_ac_system/branches/explicit_R_X_replacements.csv) provide the actual values. The [14-conductor thermal catalog](output/nygrid_2025_ac_system/engineering/thermal_conductors.csv) uses manufacturer AC resistance points, dimensions and GMR, with declared heat-capacity and surface assumptions. An inferred equivalent length or conductor match does not identify installed equipment uniquely.\n\nCircuit multiplicity and bundle multiplicity are separate integers. In an identical parallel-circuit model, length and circuit count cancel from X/R; adding circuits cannot repair an impossible X/R ratio. The builder therefore checks conductor, bundle geometry and phase spacing before selecting circuit count and length. It does not read dispatch results or internal interface errors. The basic identities are:"
+        }
+      ]
+    },
+    {
+      "id": "profile_AC_audit",
+      "title": "Unchanged-profile detailed ACPF and asset audit",
+      "counts": {
+        "source_hours": 8651,
+        "equation_profile_qualified_hours": 8494,
+        "failed_NR_hours": 157,
+        "physical_assumption_qualified_hours": 0,
+        "additional_NR_recovery_attempts": 314,
+        "recovered_failures": 0,
+        "cable_like_parent_rows": 40,
+        "OH_cable_conflict_rows": [
+          300,
+          309,
+          310,
+          386
+        ]
+      },
+      "major_change": "Runs the frozen lossless operating profiles through detailedACPF; the first original reference generator supplies losses. Inventories cable evidence and every bus lineage.",
+      "scientific_status": "Numeric currents available for8494hours but zero jointV/Q/generator/converter qualification. FourOH/cableconflicts and65mixed-device interiors prevent physicalwhole-NYISO DLR claims.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_ACPF_PROFILE_AUDIT.md",
+          "line_start": 69,
+          "line_end": 72,
+          "excerpt": "## Underground cables and the current classification problem\n\nThe current branch ledger contains **40 cable-like AC equivalent rows**, expanded to 42 numerical cable sections. This is not an inventory of 40 individually verified physical cables. A primary-source and identity review distinguishes:\n"
+        }
+      ]
+    },
+    {
+      "id": "compact_AC",
+      "title": "Exact148-retained-bus complex-admittance AC solver",
+      "counts": {
+        "retained_buses": 148,
+        "pre_eliminated_nodes": 118,
+        "post_eliminated_nodes": 119,
+        "annual_attempts": 8651,
+        "qualified_paired_hours": 8494,
+        "new_successes": 0,
+        "lost_successes": 0,
+        "physical_assumption_qualified_hours": 0
+      },
+      "major_change": "Forms generalcomplexYred and exact voltage/current lift includingR,B,shunts,taps,phase. Retains all specified injections/controlports; automaticallypromotesnewports; fingerprints reject stale/edited operators.",
+      "scientific_status": "Exact validatedmatrix reduction, not physicalreduced edges; dedicatedPFonly. Numeric equivalence doesnotrepair calibration or operatingbounds;148isrequestedinterface not globallyminimal proof.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_COMPACT_AC.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "The delivered model solves AC power flow on **148 retained buses** and recovers all detailed bus voltages and original branch currents algebraically. It eliminates all 118 pre-Dover or 119 post-Dover passive interior nodes. No additional node is necessary for the current fixed-control model. No AC OPF, parameter fitting or profile correction was performed.\n\nThe compact model is numerically equivalent to the detailed AC model on the validated paired solutions. It inherits that model's limitations: its source profiles do not yet produce operating-limit-qualified states, its bus load distribution is assumed within each NYISO zone, and several interface-flow errors remain substantial. Reduction accuracy and physical calibration are separate conclusions.\n"
+        }
+      ]
+    },
+    {
+      "id": "CE_diagnosis",
+      "title": "CentralEast model-change and loss diagnostics",
+      "counts": {
+        "fixed_matched_hours": 8494,
+        "annual_DCPF_variant_solves": 33976,
+        "annual_loss_allocation_DCPF_solves": 25482
+      },
+      "major_change": "Separates DCnetwork-construction shift fromsame-networkAC effects; identifies224bypassX fallback as dominantDCrerouting and reconstructs effects of already-solved losses.",
+      "scientific_status": "After-the-fact diagnostics, not uniquephysicalcause or additiveWAPE attribution; no baseline tuning or production modification.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_CENTRAL_EAST_DIAGNOSIS.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "The increase is a systematic switch from underprediction to overprediction. Two effects explain almost all of the mean flow change: **reactance-driven rerouting adds 600.32 public MW**, and **a reconstruction that explicitly supplies the solved AC losses adds 442.57 public MW**. The remaining mean difference is 3.75 MW. The observed hourly benchmark, cohort, interface signs and compact reduction do not explain the increase.\n\nThe earlier DC and AC results used different network parameterizations. A same-network DC intermediate is therefore necessary to separate network construction from AC effects. All results below use the **same 8,494 hours** and the inherited receiving-side CENTRAL EAST functional. Source data and all production model/evidence files remain unchanged; these are separate diagnostic cases, with no OPF or observation fitting.\n"
+        }
+      ]
+    },
+    {
+      "id": "loss_revision",
+      "title": "Latest source-equivalent and boundary-consistent148-bus ACPF",
+      "counts": {
+        "source_eligible_hours": 8651,
+        "qualified_hours": 8170,
+        "paired_hours": 8170,
+        "new_hours": 0,
+        "old_successes_lost": 324,
+        "rejected_source_hours": 481,
+        "source_excluded_hours": 109,
+        "solver_exceptions": 0,
+        "physical_assumption_qualified_hours": 0,
+        "representative_factorial_cases": 56,
+        "common_factorial_hours": 11
+      },
+      "major_change": "Restores224completeR/X/B(.02,.0147,0) as explicitunvalidatednetworkequivalent and removesitsconductor/DLRclaims. SolvesACvoltageswithloss-dependentP/Q: NYgross=served+allocatedloss, externalfinitegenerators supplyregional/borderlosses, nativePG/HQ/6transfersfixed.",
+      "scientific_status": "CurrentPF-only syntheticaccountingresearchbaseline. No physical224impedance validation, no fulloperatingqualification, no integrated revisedDLROPFor temperaturecoupling. Extremezonal allocatedlossfractions remain.",
+      "evidence": [
+        {
+          "path": "NYGRID_2025_AC_LOSS_REVISION.md",
+          "line_start": 3,
+          "line_end": 6,
+          "excerpt": "The versioned 148-bus replay is complete: **8,170 of 8,651 source-eligible hours** pass the revised AC equations, exact recovery and declared loss accounting. The fair old/new comparison uses **8,170 common hours**, with 0 newly qualified hours and 324 prior successes lost. There were 0 solver exceptions. **0 hours pass the joint voltage/reactive/generator-capability gate.** These are conditional synthetic AC results, not a fully feasible or as-built NYISO model.\n\n## Impedance finding and implemented scope\n"
+        }
+      ]
+    }
+  ],
+  "exact_saved_dated_case_counts": [
+    {
+      "hour_index": 1,
+      "full_buses": 266,
+      "full_branch_records": 485,
+      "active_branch_records": 408,
+      "real_generator_rows": 1464,
+      "controlled_transfer_records": 6,
+      "retained_buses": 148,
+      "eliminated_buses": 118,
+      "prior_OH_segment_metadata_rows": 257,
+      "remaining_segment_metadata_rows_after224_exclusion": 255,
+      "remaining_unique_OH_electrical_rows_after224_exclusion": 255,
+      "remaining_metadata_is_not_physical_DLR_qualification": true
+    },
+    {
+      "hour_index": 3360,
+      "full_buses": 266,
+      "full_branch_records": 485,
+      "active_branch_records": 409,
+      "real_generator_rows": 1464,
+      "controlled_transfer_records": 6,
+      "retained_buses": 148,
+      "eliminated_buses": 118,
+      "prior_OH_segment_metadata_rows": 257,
+      "remaining_segment_metadata_rows_after224_exclusion": 255,
+      "remaining_unique_OH_electrical_rows_after224_exclusion": 255,
+      "remaining_metadata_is_not_physical_DLR_qualification": true
+    },
+    {
+      "hour_index": 3576,
+      "full_buses": 266,
+      "full_branch_records": 485,
+      "active_branch_records": 410,
+      "real_generator_rows": 1464,
+      "controlled_transfer_records": 6,
+      "retained_buses": 148,
+      "eliminated_buses": 118,
+      "prior_OH_segment_metadata_rows": 257,
+      "remaining_segment_metadata_rows_after224_exclusion": 255,
+      "remaining_unique_OH_electrical_rows_after224_exclusion": 255,
+      "remaining_metadata_is_not_physical_DLR_qualification": true
+    },
+    {
+      "hour_index": 8472,
+      "full_buses": 267,
+      "full_branch_records": 488,
+      "active_branch_records": 412,
+      "real_generator_rows": 1464,
+      "controlled_transfer_records": 6,
+      "retained_buses": 148,
+      "eliminated_buses": 119,
+      "prior_OH_segment_metadata_rows": 259,
+      "remaining_segment_metadata_rows_after224_exclusion": 257,
+      "remaining_unique_OH_electrical_rows_after224_exclusion": 256,
+      "remaining_metadata_is_not_physical_DLR_qualification": true
+    },
+    {
+      "hour_index": 8508,
+      "full_buses": 267,
+      "full_branch_records": 488,
+      "active_branch_records": 412,
+      "real_generator_rows": 1464,
+      "controlled_transfer_records": 6,
+      "retained_buses": 148,
+      "eliminated_buses": 119,
+      "prior_OH_segment_metadata_rows": 259,
+      "remaining_segment_metadata_rows_after224_exclusion": 257,
+      "remaining_unique_OH_electrical_rows_after224_exclusion": 256,
+      "remaining_metadata_is_not_physical_DLR_qualification": true
+    }
+  ],
+  "public_APIs": [
+    {
+      "name": "npcc_nygrid_2019_full_dc",
+      "signature": "function mpc=npcc_nygrid_2019_full_dc(hour_index,artifact_folder)",
+      "role": "Historical unreduced2019DC; author-prepared local-hour labels.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2019_full_dc.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function mpc=npcc_nygrid_2019_full_dc(hour_index,artifact_folder)\n%NPCC_NYGRID_2019_FULL_DC Full140-bus paper-derived2019 DC research case.\n% hour_index1 is the authors' prepared2019-01-01 00:00 local label.\n% This loader preserves full-system topology and paper DC-device semantics.\n% It does not qualify AC capability, installed conductors, or hourly economics.\n% Optional artifact_folder selects an alternate full_year.mat reproduction.\nif nargin<1,hour_index=1;end\nassert(isnumeric(hour_index)&&isscalar(hour_index)&&isfinite(hour_index) ...\n    &&hour_index==fix(hour_index)&&hour_index>=1&&hour_index<=8760, ...\n    'nygrid:HourIndex','Use an integer prepared2019 hour index from1 through8760.');\nroot=fileparts(fileparts(mfilename('fullpath')));\nif nargin<2||isempty(artifact_folder),artifact_folder=fullfile(root,'output','nygrid_2019_full_stage1');end\nfolder=artifact_folder;\nfile=fullfile(folder,'full_year.mat');\nassert(isfile(file),'nygrid:MissingBaseline','Run scripts/nygrid_2019_full reproduction first.');\nd=load(file,'base_case','hour_index','bus_pd','bus_qd','input_pg','gen_pmax','dc_pf');\nassert(isequal(d.hour_index(:),(1:8760)')&&size(d.bus_pd,1)==8760, ...\n    'nygrid:Coverage','Saved full-year baseline is incomplete.');"
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_operating_inputs",
+      "signature": "function inputs = npcc_nygrid_2025_operating_inputs(hour_index, artifact_folder)",
+      "role": "Input struct only; not a runnable case.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_operating_inputs.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function inputs = npcc_nygrid_2025_operating_inputs(hour_index, artifact_folder)\n%NPCC_NYGRID_2025_OPERATING_INPUTS Scaled annual source inputs for full NPCC.\n% Returns an input struct, not a runnable MATPOWER case. The 2025 fleet landing\n% and a bounded balanced generator dispatch are subsequent build stages.\n% Hours are ordered by UTC; local 2025 spring/fall DST hours remain distinct.\nif nargin < 1, hour_index = 1; end\nassert(isnumeric(hour_index) && isscalar(hour_index) && isfinite(hour_index) ...\n    && hour_index == fix(hour_index) && hour_index >= 1 && hour_index <= 8760, ...\n    'nygrid2025:HourIndex', 'Use an integer physical-hour index from 1 through 8760.');\nroot = fileparts(fileparts(mfilename('fullpath')));\nif nargin < 2 || isempty(artifact_folder)\n    artifact_folder = fullfile(root, 'output', 'nygrid_2025_inputs', 'model');\nend\nfile = fullfile(artifact_folder, 'operating_inputs.mat');\nassert(isfile(file), 'nygrid2025:MissingInputs', 'Build the 2025 operating-input package first.');\nd = load(file);\nassert(isequal(d.hour_index(:), (1:8760)') && size(d.bus_gross_pd, 1) == 8760, ...\n    'nygrid2025:Coverage', 'Expected the complete physical 2025 hour axis.');"
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_full_dc",
+      "signature": "function mpc = npcc_nygrid_2025_full_dc(hour_index, artifact_folder)",
+      "role": "Bounded2025DC on140-bus/225-branch parent.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_full_dc.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function mpc = npcc_nygrid_2025_full_dc(hour_index, artifact_folder)\n%NPCC_NYGRID_2025_FULL_DC Capacity-bounded 2025 DC snapshot on full2019 NPCC.\n% The 140 buses, 225 AC branches and four DC endpoints retain the modified\n% 2019 topology. Native generators use the2025 EIA fleet and source priors.\n% Missing-source or infeasible hours are rejected, never silently substituted.\n% Pmin=0 is an hourly-average/off-on relaxation. AC, minimum-stable loading,\n% commitment, ramping, branch thermal limits and storage energy are unverified.\nif nargin < 1, hour_index = 1; end\nassert(isnumeric(hour_index) && isscalar(hour_index) && isfinite(hour_index) ...\n    && hour_index == fix(hour_index) && hour_index >= 1 && hour_index <= 8760, ...\n    'nygrid2025:HourIndex', 'Use an integer physical-hour index from 1 through 8760.');\nroot = fileparts(fileparts(mfilename('fullpath')));\nif nargin < 2 || isempty(artifact_folder)\n    artifact_folder = fullfile(root, 'output', 'nygrid_2025_dispatch', 'dispatch');\nend\nmain_file = fullfile(artifact_folder, 'dispatch.mat');\nbounds_file = fullfile(artifact_folder, 'dispatch_bounds.mat');\nassert(isfile(main_file) && isfile(bounds_file), 'nygrid2025:MissingDispatch', ..."
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_downstate_dc",
+      "signature": "function mpc = npcc_nygrid_2025_downstate_dc(hour_index, variant, artifact_folder)",
+      "role": "191-bus detailedDC; defaults upgrades_dated, retains source injection landings.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_downstate_dc.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function mpc = npcc_nygrid_2025_downstate_dc(hour_index, variant, artifact_folder)\n%NPCC_NYGRID_2025_DOWNSTATE_DC Expanded full-NPCC fixed-dispatch DC research case.\n% Default: dated2025 topology with the frozen baseline injection landings.\n% Asset mapping variants are diagnostic, pending load/flowgate qualification.\n% Public station/project facts and assumed impedances are in the registers.\n% Neither AC feasibility nor physical2025 flowgate membership is certified.\nif nargin < 1, hour_index = 1; end\nif nargin < 2 || isempty(variant), variant = 'upgrades_dated'; end\nroot = fileparts(fileparts(mfilename('fullpath')));\nif nargin < 3 || isempty(artifact_folder)\n    artifact_folder = fullfile(root, 'output', 'nygrid_2025_downstate');\nend\nallowed = {'expanded_identity', 'source_detail_2019', 'upgrades_year_end', ...\n    'upgrades_dated', 'assets_year_end', 'assets_dated', 'nyes_assumption_year_end'};\nassert(any(strcmp(variant, allowed)), 'nygridDownstate:Variant', 'Unknown refinement variant.');\n% This loader enforces the source cohort and restores the frozen hourly PG,\n% PMIN/PMAX, DC schedules and reference policy before applying network changes.\nmpc = npcc_nygrid_2025_full_dc(hour_index);"
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_slim_dc",
+      "signature": "function mpc = npcc_nygrid_2025_slim_dc(hour_index, variant, artifact_folder)",
+      "role": "148-bus DC equivalent; defaults topology_dated.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_slim_dc.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function mpc = npcc_nygrid_2025_slim_dc(hour_index, variant, artifact_folder)\n%NPCC_NYGRID_2025_SLIM_DC Full NPCC plus eight critical345kV transmission buses.\n% All140 original buses remain. Only43 zero-injection added buses from the\n% detailed reference are eliminated. Equivalent branches are DC response\n% representations and have no certified conductor, thermal rating or AC model.\n% Use npcc_nygrid_2025_slim_interfaces(result) after a successful rundcpf to\n% recover the same seven interface functionals as the191bus reference.\nif nargin<1, hour_index=1; end\nif nargin<2 || isempty(variant), variant='topology_dated'; end\nroot=fileparts(fileparts(mfilename('fullpath')));\nif nargin<3 || isempty(artifact_folder)\n    artifact_folder=fullfile(root,'output','nygrid_2025_slim');\nend\nassert(any(strcmp(variant,{'topology_dated','topology_year_end'})), ...\n    'nygridSlim:Variant','Choose topology_dated or topology_year_end. Asset-remapping diagnostics are not supported.');\n% Reuse frozen source qualification, per-generatorPG/bounds, signedDC schedules.\nmpc=npcc_nygrid_2025_full_dc(hour_index);\nreference=mpc.bus(mpc.bus(:,2)==3,1);"
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_moses_corrected_dc",
+      "signature": "function mpc = npcc_nygrid_2025_moses_corrected_dc(hour_index, control, topology)",
+      "role": "Confirmed hydro-zone correction only.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_moses_corrected_dc.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function mpc = npcc_nygrid_2025_moses_corrected_dc(hour_index, control, topology)\n%NPCC_NYGRID_2025_MOSES_CORRECTED_DC Versioned source-backed allocation repair.\n% The frozen148bus topology, generator outputs/bounds, loads and regional\n% exchanges remain. Plant-specific Gold Book evidence corrects generator bus\n% assignments. Any enabled PAR target must come from an independently verified\n% source, never from a scored Moses South observation.\nif nargin<1, hour_index=1; end\nif nargin<2 || isempty(control), control='hydro_zone_corrected'; end\nif nargin<3 || isempty(topology), topology='dated'; end\nassert(any(strcmp(topology,{'dated','year_end'})), ...\n    'mosesCorrection:Topology','Choose dated or year_end.');\nassert(strcmp(control,'hydro_zone_corrected'), ...\n    'mosesCorrection:Control','Only the confirmed hydro-zone repair is promoted. PAR orientation diagnostics are not operational cases.');\nmpc=npcc_nygrid_2025_slim_dc(hour_index,['topology_',char(topology)]);\nroot=fileparts(fileparts(mfilename('fullpath')));\nfile=fullfile(root,'output','nygrid_2025_moses_audit','replay', ...\n    [char(topology),'_',char(control),'.mat']);\nassert(isfile(file),'mosesCorrection:MissingReplay','Build and validate this corrected variant first.');"
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_par_controlled_dc",
+      "signature": "function mpc = npcc_nygrid_2025_par_controlled_dc(hour_index, topology)",
+      "role": "Adds two Ontario PAR transfer equivalents, total6dcline records.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_par_controlled_dc.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function mpc = npcc_nygrid_2025_par_controlled_dc(hour_index, topology)\n%NPCC_NYGRID_2025_PAR_CONTROLLED_DC Direction-verified external PAR-flow replay.\n% Two ideal lossless PAR transfer equivalents use the dcline container. They\n% are NOT new physical HVDC links or a simulation of measured physical taps.\n% The original branch211 stays as a provenance record, inactive only because\n% its transfer is represented by the two source-identified controlled ports.\n% Each input passes the nominal300MVA-derived |P| screen. UnknownQ, actual tap\n% states and emergency envelopes prevent complete hardware-feasibility claims.\nif nargin<1, hour_index=1; end\nif nargin<2 || isempty(topology), topology='dated'; end\nassert(any(strcmp(topology,{'dated','year_end'})), ...\n    'nygridPAR:Topology','Choose dated or year_end.');\nmpc=npcc_nygrid_2025_moses_corrected_dc(hour_index,'hydro_zone_corrected',topology);\nroot=fileparts(fileparts(mfilename('fullpath')));\nfile=fullfile(root,'output','nygrid_2025_par_controls','replay', ...\n    [char(topology),'_verified_PAR_flows.mat']);\nassert(isfile(file),'nygridPAR:MissingArtifact','Build and validate the source-controlled replay first.');\npersistent cached_file cached_signature r"
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_western_corrected_dc",
+      "signature": "function mpc = npcc_nygrid_2025_western_corrected_dc(hour_index, topology, mode)",
+      "role": "Corrected landing and all-boundary actuals; defaults combined.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_western_corrected_dc.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function mpc = npcc_nygrid_2025_western_corrected_dc(hour_index, topology, mode)\n%NPCC_NYGRID_2025_WESTERN_CORRECTED_DC Source-corrected western DC reconstruction.\n% Default combined: corrected generator locations and NYIS-reported physical\n% exchanges for all four neighboring regions, with the frozen bounded source-\n% prior generation projection. Individual units are reconstructed, not observed.\n% Ontario-only modes retain schedules elsewhere and are diagnostic scenarios.\n% Original four DC-device schedules and external P34 PAR targets are retained.\nif nargin<1, hour_index=1; end\nif nargin<2 || isempty(topology), topology='dated'; end\nif nargin<3 || isempty(mode), mode='combined'; end\nassert(any(strcmp(topology,{'dated','year_end'})), ...\n    'westernCorrection:Topology','Choose dated or year_end.');\nmodes={'mapping_only','Ontario_actual_only','Ontario_actual_and_mapping', ...\n    'all_boundary_actual_only','combined'};\nassert(any(strcmp(mode,modes)),'westernCorrection:Mode','Unknown western reconstruction mode.');\nmpc=npcc_nygrid_2025_par_controlled_dc(hour_index,topology);\nroot=fileparts(fileparts(mfilename('fullpath')));\nfolder=fullfile(root,'output','nygrid_2025_western_audit');"
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_line_estimated_dc",
+      "signature": "function mpc = npcc_nygrid_2025_line_estimated_dc(hour_index, topology, scenario)",
+      "role": "Adds source-informedF84/Staten engineering parameters; DC-only.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_line_estimated_dc.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function mpc = npcc_nygrid_2025_line_estimated_dc(hour_index, topology, scenario)\n%NPCC_NYGRID_2025_LINE_ESTIMATED_DC Source-informed project parameter scenario.\n% F84 uses a project-design Mallard ACSS/geometry estimate; Staten uses its\n% documented9.4mi route with the qualified historical cable impedance analog.\n% Dover line-only estimates are not substituted for missing PAR impedances.\n% The148bus case remains DC-only; Schur edges are not physical conductors.\nif nargin<1, hour_index=1; end\nif nargin<2 || isempty(topology), topology='dated'; end\nif nargin<3 || isempty(scenario), scenario='engineering_nominal'; end\nassert(any(strcmp(scenario,{'identity_reference','engineering_nominal', ...\n    'geometry_spacing_80pct','geometry_spacing_120pct','ground_image_30ft'})), ...\n    'lineEstimate:Scenario','Unknown engineering scenario.');\nmpc=npcc_nygrid_2025_western_corrected_dc(hour_index,topology,'combined');\nroot=fileparts(fileparts(mfilename('fullpath')));\nfolder=fullfile(root,'output','nygrid_2025_line_parameters','overlays',char(scenario));\nfile=fullfile(folder,'network_cases.mat');proof_file=fullfile(folder,'overlay_receipt.json');\nassert(isfile(file)&&isfile(proof_file),'lineEstimate:MissingArtifact','Build and validate the parameter overlay first.');\npersistent cached_file cached_signature n"
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_dover_dc",
+      "signature": "function mpc = npcc_nygrid_2025_dover_dc(hour_index, mode, impedance_family)",
+      "role": "Final source-conditionedDC comparator; defaults bounded,x_nominal.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_dover_dc.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function mpc = npcc_nygrid_2025_dover_dc(hour_index, mode, impedance_family)\n%NPCC_NYGRID_2025_DOVER_DC Applied Dover line/PAR engineering reconstruction.\n% Default bounded mode tracks qualified external posted P34 bank-flow targets\n% within a declared gamma-scaled40deg model limit. Both-native-zero hours use\n% an explicit neutral/normal-topology assumption, not zero intertie flow.\n% Actual taps, factory impedances, breaker states and physical thermal/AC\n% feasibility remain unverified. 'exact' is an unbounded diagnostic only.\nif nargin<1, hour_index=1; end\nif nargin<2 || isempty(mode), mode='bounded'; end\nif nargin<3 || isempty(impedance_family), impedance_family='x_nominal'; end\nassert(isnumeric(hour_index)&&isscalar(hour_index)&&isfinite(hour_index) ...\n    &&hour_index==floor(hour_index)&&hour_index>=1&&hour_index<=8760, ...\n    'Dover:Hour','Use a valid integer2025 physical-hour index.');\nassert(any(strcmp(mode,{'neutral','bounded','exact'})), 'Dover:Mode','Choose bounded, neutral, or diagnostic exact.');\nassert(any(strcmp(impedance_family,{'x_low','x_nominal','x_high'})), ...\n    'Dover:Impedance','Unknown conditional impedance family.');\nassert(~strcmp(mode,'exact')||strcmp(impedance_family,'x_nominal'), ...\n    'Dover:ExactFamily','Exact tracking is a nominal-impedance diagnostic only.');"
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_slim_interfaces",
+      "signature": "function result = npcc_nygrid_2025_slim_interfaces(solved_case)",
+      "role": "For a successfulDCresult only; evaluates the sealed affineinterfacefunctional.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_slim_interfaces.m",
+          "line_start": 1,
+          "line_end": 13,
+          "excerpt": "function result = npcc_nygrid_2025_slim_interfaces(solved_case)\n%NPCC_NYGRID_2025_SLIM_INTERFACES Recover the comparable legacy flow functionals.\n% Values are modelMW; public-equivalentMW divides by the frozen gamma.\nassert(isstruct(solved_case)&&isfield(solved_case,'success')&&solved_case.success, ...\n    'nygridSlim:UnsolvedCase','Pass a successful rundcpf result.');\nassert(isfield(solved_case,'userdata')&&isfield(solved_case.userdata,'slim'), ...\n    'nygridSlim:MissingRecovery','Use the slim-case loader first.');\nmeta=solved_case.userdata.slim;\nassert(isequal(solved_case.bus(:,1),meta.bus_ids),'nygridSlim:BusOrder','Solved bus order differs from recovery metadata.');\nflow=meta.interface_angle_matrix*deg2rad(solved_case.bus(:,9))+meta.interface_flow_offset(:);\nresult=table(string(meta.interface_names(:)),flow,flow/meta.gamma, ...\n    'VariableNames',{'interface','model_mw','public_equivalent_mw'});\nend"
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_ac",
+      "signature": "function mpc = npcc_nygrid_2025_ac(hour_index)",
+      "role": "Earlier fullsyntheticengineeringAC constructor; does notapply thelatest224/lossrevision.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_ac.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function mpc = npcc_nygrid_2025_ac(hour_index)\n%NPCC_NYGRID_2025_AC Full synthetic AC case on unchanged model power base.\n% Engineering study assumptions, not an as-built or historical AC replay.\n% All hourly native active-power boxes and six prescribed transfers survive.\n% Native Q boxes use hourly admitted capability at assumed0.95PF; external\n% boundary equivalents use fixed-P circle slices at finite declared MVA.\n% Costs penalize departure from the DC prior and Q use; they are not economic.\n% Default hour8508 is a tested post-Dover snapshot; qualification is per hour.\nif nargin<1,hour_index=8508;end\nroot=fileparts(fileparts(mfilename('fullpath')));\nprior=npcc_nygrid_2025_dover_dc(hour_index,'bounded','x_nominal');\nmpc=prior;\nif prior.userdata.dover.new_parameters_applied\n    n=load(fullfile(root,'output','nygrid_2025_dover_parameters','network','x_nominal.mat'));\n    c=n.full_case;c.branch(411:412,10)=prior.userdata.dover.bank_shift_model_deg;\nelse\n    n=load(fullfile(root,'output','nygrid_2025_line_parameters','overlays','engineering_nominal','full191_network_cases.mat'));\n    c=n.(prior.userdata.slim.network_state);"
+        }
+      ]
+    },
+    {
+      "name": "run_nygrid_2025_ac_dlr",
+      "signature": "function [result,audit]=run_nygrid_2025_ac_dlr(hour_index,weather,options)",
+      "role": "Earlier full-network steady-ampacity ACOPF/PFreplay; syntheticweather/referenceR; differentcaseandoperatingpolicyfromlatestreplay.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/run_nygrid_2025_ac_dlr.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function [result,audit]=run_nygrid_2025_ac_dlr(hour_index,weather,options)\n%RUN_NYGRID_2025_AC_DLR Whole-system synthetic ACOPF with OH current limits.\n% Applies every active overhead segment's weather-dependent steady ampacity.\n% Cables, transformers, PARs and terminal equipment keep separate MVA limits.\n% This snapshot uses declared reference-temperature R, not an inferred\n% equilibrium conductor temperature or an observed historical-weather replay.\nif nargin<1,hour_index=8508;end\nif nargin<2||isempty(weather)\n    weather=table(25,.6096,90,1000,101325,'VariableNames', ...\n        {'ambient_c','wind_m_s','wind_angle_deg','solar_w_m2','pressure_pa'});\nend\nif isstruct(weather),weather=struct2table(weather);end\nif nargin<3,options=struct();end\nif ~isfield(options,'solver')\n    if exist('ipopt','file')==3,options.solver='IPOPT';else,options.solver='MIPS';end\nend\nroot=fileparts(fileparts(mfilename('fullpath')));\naddpath(fullfile(root,'scripts','nygrid_2025_ac_system','thermal'));"
+        }
+      ]
+    },
+    {
+      "name": "npcc_nygrid_2025_compact_ac",
+      "signature": "function model=npcc_nygrid_2025_compact_ac(hour_index)",
+      "role": "Builds complexmatrixequivalent ofolderengineeringAC; do notpassmodelto genericrunpf.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/npcc_nygrid_2025_compact_ac.m",
+          "line_start": 1,
+          "line_end": 10,
+          "excerpt": "function model=npcc_nygrid_2025_compact_ac(hour_index)\n%NPCC_NYGRID_2025_COMPACT_AC Compact AC admittance model anchored to148 buses.\n% Use run_nygrid_2025_compact_acpf(model), not runpf(model): equivalent\n% matrix couplings are not physical conductor branches. Detailed currents\n% and eliminated voltages are recovered algebraically from the148-bus solve.\nif nargin<1,hour_index=8508;end\nroot=fileparts(fileparts(mfilename('fullpath')));\naddpath(fullfile(root,'scripts','nygrid_2025_compact_ac','core'));\nmodel=compact_ac_build(npcc_nygrid_2025_ac(hour_index));\nend"
+        }
+      ]
+    },
+    {
+      "name": "run_nygrid_2025_compact_acpf",
+      "signature": "function [result,audit,recovered]=run_nygrid_2025_compact_acpf(input,mpopt)",
+      "role": "Earlier exact148-busPF; preservesPD/non-slackPG, originalreference supplieslosses.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/run_nygrid_2025_compact_acpf.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function [result,audit,recovered]=run_nygrid_2025_compact_acpf(input,mpopt)\n%RUN_NYGRID_2025_COMPACT_ACPF Solve the148-bus complex AC equivalent.\n% INPUT is an hour index, a compact_ac_build model, or a detailed MATPOWER\n% case to reduce. RESULT.bus contains only retained nodes. RECOVERED is the\n% algebraically recovered detailed MATPOWER result, including line powers.\n% No OPF is used. Convergence and physical operating qualification differ.\nif nargin<1||isempty(input),input=8508;end\nif nargin<2,mpopt=[];end\nroot=fileparts(fileparts(mfilename('fullpath')));\naddpath(fullfile(root,'scripts','nygrid_2025_compact_ac','core'));\nif isnumeric(input)\n    c=npcc_nygrid_2025_compact_ac(input);\nelseif isfield(input,'model_kind')&&strcmp(input.model_kind,'compact_complex_admittance_AC')\n    c=input;\nelse\n    c=compact_ac_build(input);\nend\n[result,audit,recovered]=compact_ac_solve(c,mpopt);"
+        }
+      ]
+    },
+    {
+      "name": "run_nygrid_2025_loss_consistent_acpf",
+      "signature": "function [result,audit,recovered,allocation]=run_nygrid_2025_loss_consistent_acpf(input,options)",
+      "role": "LatestPF-only148-bus sourceequivalent/loss-accounting replay; defaultreleased_equivalent,boundary_consistent,simultaneousNewton.",
+      "evidence": [
+        {
+          "path": "System Matpower Format/run_nygrid_2025_loss_consistent_acpf.m",
+          "line_start": 1,
+          "line_end": 18,
+          "excerpt": "function [result,audit,recovered,allocation]=run_nygrid_2025_loss_consistent_acpf(input,options)\n%RUN_NYGRID_2025_LOSS_CONSISTENT_ACPF Versioned148-bus loss-accounting replay.\n% INPUT is a2025hour or unrevised detailed NYGRID case. This is PF-only.\n% Default: published E-G network equivalent and boundary-consistent losses.\nif nargin<1||isempty(input),input=8508;end\nif nargin<2,options=struct();end\nif ~isfield(options,'impedance_mode'),options.impedance_mode='released_equivalent';end\nroot=fileparts(fileparts(mfilename('fullpath')));\naddpath(fullfile(root,'scripts','nygrid_2025_ac_loss_revision','core'));\nif isnumeric(input),m=npcc_nygrid_2025_ac(input);else,m=input;end\nm=ac_loss_prepare_case(m,options.impedance_mode);\nif isfield(options,'loss_mode')&&strcmp(options.loss_mode,'legacy_single_slack')\n    [result,audit,recovered,allocation]=ac_loss_solve(m,options);\nelseif isfield(options,'loss_solver')&&strcmp(options.loss_solver,'outer_fixed_point')\n    [result,audit,recovered,allocation]=ac_loss_solve(m,options);\nelse\n    [result,audit,recovered,allocation]=ac_loss_coupled_solve(m,options);\nend"
+        }
+      ]
+    }
+  ],
+  "latest_result_summary": {
+    "source_qualified": 8651,
+    "source_excluded": 109,
+    "old_qualified": 8494,
+    "revised_qualified": 8170,
+    "paired": 8170,
+    "new": 0,
+    "lost": 324,
+    "operating_qualified": 0,
+    "rejected": 481
+  },
+  "latest_paired_annual_interfaces": [
+    {
+      "interface": "DYSINGER EAST",
+      "hours": 8170,
+      "old_WAPE_percent": 37.60778332612451,
+      "revised_WAPE_percent": 29.963813291686247,
+      "change_percentage_points": -7.643970034438265,
+      "old_bias_public_MW": -209.7824050483773,
+      "revised_bias_public_MW": 4.990789969398163
+    },
+    {
+      "interface": "WEST CENTRAL",
+      "hours": 8170,
+      "old_WAPE_percent": 58.5234424439493,
+      "revised_WAPE_percent": 45.85808760392107,
+      "change_percentage_points": -12.665354840028229,
+      "old_bias_public_MW": -218.0277971417515,
+      "revised_bias_public_MW": 2.293614246175742
+    },
+    {
+      "interface": "TOTAL EAST",
+      "hours": 8170,
+      "old_WAPE_percent": 14.461053812287233,
+      "revised_WAPE_percent": 14.695426068123677,
+      "change_percentage_points": 0.23437225583644405,
+      "old_bias_public_MW": 46.77232616143032,
+      "revised_bias_public_MW": -326.00357546476704
+    },
+    {
+      "interface": "MOSES SOUTH",
+      "hours": 8170,
+      "old_WAPE_percent": 23.178746410983965,
+      "revised_WAPE_percent": 22.94359860253754,
+      "change_percentage_points": -0.23514780844642402,
+      "old_bias_public_MW": -5.495977113391418,
+      "revised_bias_public_MW": 11.832741550488656
+    },
+    {
+      "interface": "CENTRAL EAST - VC",
+      "hours": 8170,
+      "old_WAPE_percent": 43.5042110625963,
+      "revised_WAPE_percent": 13.703768329560342,
+      "change_percentage_points": -29.800442733035958,
+      "old_bias_public_MW": 739.8723918687808,
+      "revised_bias_public_MW": 172.43266464312788
+    },
+    {
+      "interface": "UPNY CONED",
+      "hours": 8170,
+      "old_WAPE_percent": 7.549425742705923,
+      "revised_WAPE_percent": 7.562881773257351,
+      "change_percentage_points": 0.013456030551427745,
+      "old_bias_public_MW": 24.128142235812835,
+      "revised_bias_public_MW": -15.788771551885834
+    },
+    {
+      "interface": "SPR/DUN-SOUTH",
+      "hours": 8170,
+      "old_WAPE_percent": 8.87937416474068,
+      "revised_WAPE_percent": 9.176816455415125,
+      "change_percentage_points": 0.2974422906744447,
+      "old_bias_public_MW": -37.394609032504334,
+      "revised_bias_public_MW": -62.3959314642373
+    }
+  ],
+  "latest_loss_fraction_warning": {
+    "maximum_fraction": 0.9545169691763604,
+    "minimum_served_fraction": 0.04548303082363947,
+    "parent224_loss_ranges": {
+      "minimum_model_MW": 0.7859429869401637,
+      "mean_model_MW": 39.136466424438886,
+      "maximum_model_MW": 172.52731317081225,
+      "minimum_share_total_AC_loss": 0.0028320305772158516,
+      "mean_share_total_AC_loss": 0.11662313801120318,
+      "maximum_share_total_AC_loss": 0.317791636532879
+    },
+    "physical_impedance_validated": false
+  },
+  "current_DLR_decision": {
+    "latest_loss_consistent_148_case": "Usable for conditionalPF/current-recovery/accounting experiments only; PF-onlyAPI andzerooperatingqualifiedannualhours.",
+    "older_full_engineering_DLR": "ReproduciblesyntheticsteadyampacityOPFmethoddemonstrationatitsfourqualifiedweatherpoints, subjecttolaterassetclassificationcaveats; notthelatestlossrevision.",
+    "integrated_latest_DLR": "Notdelivered:requires versionedeligible-branch/thermaladapterintegration, refreshedR(T)/admittancelift/currentconstraints andadequateoperatingstates.",
+    "physical_NYISO_wide_DLR": "Notvalidated:incompleteassetidentity/gates, mixed-equivalentinteriors, cableconflicts andunobservedthermalconditions."
+  },
+  "next_research_gates": [
+    "Selectandfreezeelectricalmodel+powerbase+lossaccountingrolebeforecomparingDLRscenarios.",
+    "QualifyOH/cable/transformer/equivalentidentities;exclude224andresolvefourOH/cableconflictsbeforephysicalweather-basedDLR.",
+    "Choosefeasibleboundedoperatingstates anddocumentfailedhours;repairV/Qandcapabilityassumptions withoutusinginternalinterfaceerrorasatuningtarget.",
+    "Bindroute-segmentweather withtime/height/direction/solaruncertainty;declarefixedR,steadytemperatureortransientthermalstate.",
+    "RebuildcomplexACreductionwhentemperaturechangesR;checkphysicalseries/end/hardwarecurrents onrecoveredbranchaxes.",
+    "Addafullyspecifiedredispatch/controlpolicyandcomparablestaticbaselinebeforeclaimingDLRbenefits;economics/securityrequiretheirownvalidation."
+  ],
+  "pitfalls": [
+    "Never select the current NYgrid model via the older genericLATEST_MODEL_CONFIGURATION.csv: its preferred71-bus entry belongs to another family.",
+    "2019author-preparedlocal labels and2025UTC physicalhours are different time contracts despite both having8760positions.",
+    "Usegamma0.30012075175285535 only for2025aggregatepublic/modelMW comparison; do not rescale per-unitR/X or divide ACcurrent by gamma. Historicalcompact2019usesadifferentgamma.",
+    "Use exactbranch keys/parent rows/presence/status, not positionalpadding or arbitraryreducededges, for recoveredcurrent andinterface comparisons.",
+    "Use series current forI-squared-R; terminalcurrent includes charging. Divide conductorphasecurrent by explicitparallelcircuit andbundlecounts. Voltage-changing/composite rows arenotdirectOHthermalconductors.",
+    "P34 Flow(MWH), timing andsignal provenance remainconditional. No cadence-basedfactor12conversion, silentretiming, zero-fill or physicaltapclaim.",
+    "Currentparent224isareleasedE-Gnetworkequivalent, notaninstalledGilboa-Buchanancircuit. R=.02isnotphysicallyvalidated; noIEEE738/R(T)/ampacityclaim for224.",
+    "Rows300,309,310,386 haveOH/cableclassificationconflicts. Forty cable-likeequivalents and65mixed-voltagecomposites do notconstituteacompletephysicalcircuitinventory.",
+    "Exactreductionrequirespassivezero-injectioninteriors. Retainnewload/generator/converter/voltage-controlports; rebuild afterR(T),B,shunts,status,tap,phaseorcontrol changes.",
+    "PFconvergence, equation/recoveryclosure, profile/loss-accountingclosure, V/Q/generatorlimits andthermal/securityqualification areseparate gates.",
+    "Neveraveragefailedlastiterates or silentlydropchangedcoverage. Old8494 andnew8170scores mustuseanexplicitpairedcohort; the324losthoursremainvisible.",
+    "Currentlossallocationisdeclaredaccounting, notobservedzonal loss. ExtremeF/Efractions95.45%/94.52%andzerojointoperatingqualificationprecludephysicaldeploymentclaims.",
+    "CurrentlatestPFAPIrejectsalreadyrevised/thermallypreparedinputs andremovesOPFcallbacks. Do notattacholdDLR/OPFconstraints and assume thecombinationwasvalidated.",
+    "TheolderACDLRresultsused boundednativeOPFredispatch anduniformweather. Theirfourqualifyingpointsdonotcertify thelatestfixed-native-PGannualreplay.",
+    "Noannualweather-driven/transienttemperature study, installedampacitycertificate, N-1securityproof, economicDLRsavings, unitcommitment/ramp/reservoirenergyqualification is established."
+  ],
+  "critical_implementation_evidence": [
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_prepare_case.m",
+      "line_start": 12,
+      "line_end": 23,
+      "excerpt": "if strcmp(mode,'released_equivalent')\n    m.branch(rows,3:5)=repmat([.02 .0147 0]/numel(rows),numel(rows),1);\n    % Reverse only the synthetic compensation belonging to this aggregate.\n    ledger=m.userdata.ac_sections.reactor_ledger;\n    hit=find([ledger.original_branch_row]==224);assert(numel(hit)<=1);\n    if ~isempty(hit)\n        q=ledger(hit).applied_total_reactor_mvar_at1pu;\n        f=find(m.bus(:,1)==ledger(hit).from_bus);t=find(m.bus(:,1)==ledger(hit).to_bus);\n        m.bus([f;t],6)=m.bus([f;t],6)+q/2;reactor_removed=q;\n        ledger(hit).applied_total_reactor_mvar_at1pu=0;\n        ledger(hit).from_bus_BS_delta_mvar=0;ledger(hit).to_bus_BS_delta_mvar=0;\n        ledger(hit).policy='removed_unidentified_OH_design_for_released_network_equivalent';"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_prepare_case.m",
+      "line_start": 36,
+      "line_end": 45,
+      "excerpt": "    m.userdata.ac_system.terminal_current_constraints_applied=false;\n    m.userdata.ac_system.thermal_constraints_applied=false;\n    ts=m.userdata.ac_sections.thermal_segments;\n    if istable(ts),ts=ts(~ismember(ts.branch_row,rows),:);\n    elseif iscell(ts),ts=ts(~cellfun(@(x)ismember(x.branch_row,rows),ts));\n    else,ts=ts(~ismember([ts.branch_row],rows));end\n    m.userdata.ac_sections.thermal_segments=ts;\n    m.userdata.ac_sections.terminal_current_limit_A(rows,:)=NaN;\n    % This public revision is PF-only. Removing formulation callbacks avoids\n    % leaving invalid legacy ampacity assertions reachable through an OPF call."
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_finalize.m",
+      "line_start": 22,
+      "line_end": 29,
+      "excerpt": "policy_gate=complete&&strcmp(options.loss_mode,'boundary_consistent')&&equations ...\n    &&budget_residual<1e-6&&native_change<1e-7&&abs(r.gen(p.HQ,2)-p.baseline_PG(p.HQ))<1e-8 ...\n    &&max(abs(imports-p.target_NY_import))<1e-5&&load_closure<1e-5 ...\n    &&max(abs(external_delta-actual_budget(12:14)))<1e-5&&all(NY_served>=0) ...\n    &&a.max_P_bound_violation_mw<1e-5&&a.max_fixed_transfer_P_change_mw<1e-8;\naudit=a;audit.hour_index=base.userdata.ac_system.hour_index;audit.timestamp_utc=char(base.userdata.ac_system.timestamp_utc);\naudit.PF_converged=logical(r.success);audit.AC_equation_gate=equations;audit.loss_allocation_gate=policy_gate;\naudit.loss_iteration_converged=complete;audit.loss_status=status;audit.loss_iterations=numel(trace);"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_finalize.m",
+      "line_start": 40,
+      "line_end": 44,
+      "excerpt": "audit.VQ_and_generator_assumption_gate=policy_gate&&a.max_voltage_bound_violation_pu<1e-7 ...\n    &&a.max_Q_bound_violation_mvar<1e-5&&a.max_assumed_generator_S_bound_violation_mva<1e-5&&a.max_transfer_Q_bound_violation_mvar<1e-5;\naudit.passed=policy_gate&&audit.reduction_and_equation_gate&&audit.VQ_and_generator_assumption_gate&&a.passed;\naudit.impedance_mode=base.userdata.ac_loss_revision.impedance_mode;\naudit.parent224_physical_impedance_validated=false;audit.OPF_used=false;"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_prepare_case.m",
+      "line_start": 26,
+      "line_end": 29,
+      "excerpt": "assert(isfield(mpc.userdata.ac_system,'terminal_current_constraints_applied') ...\n    &&mpc.userdata.ac_system.terminal_current_constraints_applied, ...\n    'acDLR:HardwareLimits','Attach the actual-voltage terminal current limits before conductor DLR.');\nwithin=segments.branch_row<=size(mpc.branch,1);segments=segments(within,:);"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_apply_resistance.m",
+      "line_start": 8,
+      "line_end": 19,
+      "excerpt": "rows=unique(segments.branch_row);\nfor k=1:numel(rows)\n    use=find(segments.branch_row==rows(k));ohms=0;\n    for j=use'\n        assert(temperature_c(j)>=segments.temperature_min_c(j)&&temperature_c(j)<=segments.temperature_max_c(j), ...\n            'acDLR:TemperatureRange','Thermal state exceeds the declared study range.');\n        rr=ac_conductor_resistance(conductors(ci(j),:),temperature_c(j));\n        ohms=ohms+rr*segments.segment_length_m(j)/(segments.circuits(j)*segments.bundle_count(j));\n    end\n    kv=segments.base_kv(use(1));mpc.branch(rows(k),3)=ohms/(kv^2/mpc.baseMVA);\nend\nend"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/README.md",
+      "line_start": 30,
+      "line_end": 33,
+      "excerpt": "The model is a matrix network. Use its dedicated solver rather than passing\nit to MATPOWER `runpf`: the entries of `Yred` are equivalent couplings, not\nphysical lines with conductor ratings. The third returned value is a usual\ndetailed MATPOWER result with algebraically recovered bus and branch arrays."
+    },
+    {
+      "path": "NYGRID_2025_ACPF_PROFILE_AUDIT.md",
+      "line_start": 83,
+      "line_end": 86,
+      "excerpt": "The audit found **four currently overhead-classified rows with conflicting cable-corridor evidence**: row 300 (Shore Road-Dunwoodie/Y50), rows 309 and 310 (East Garden City-Sprain Brook/Y49), and row 386 (the synthetic Goethals-Gowanus attachment). NYPA and the PSC explicitly describe Y49 as underground/submarine. The two Y49-associated model rows do not prove two real physical Y49 circuits. The Goethals-Gowanus row is itself a synthetic aggregate attachment, so assigning it one particular owner feeder would also be unsupported.\n\nThese conflicts prevent physical use of overhead weather-based thermal equations on those route representations until the classification is corrected in a versioned model. Current cable rows use assumed static cable limits; underground ampacity needs an appropriate cable/soil/duct thermal model rather than the overhead conductor weather law. Controlled-transfer cable links such as Neptune and Norwalk-Northport are outside the 40 AC-row count. The 65 unresolved mixed-voltage composite equivalents also do not reveal every internal overhead/cable asset. Therefore the current ledger cannot be described as a complete physical line inventory for NYISO-wide DLR.\n"
+    },
+    {
+      "path": "NYGRID_2025_P34_QUALIFICATION_AND_DLR_READINESS.md",
+      "line_start": 56,
+      "line_end": 65,
+      "excerpt": "## Which DLR research claims are ready\n\n| Research task | Current status | What is needed |\n|---|---|---|\n| DC topology and control sensitivity | Ready now within declared assumptions | Use the dated loader and explicit source-quality masks |\n| Synthetic time-varying rating or congestion screening | Electrical platform ready; adapter absent | Recover physical-line MW and apply declared limits |\n| F84 design-based DC thermal exposure | Best next experiment; not yet integrated | ACSS thermal record, weather binding, gamma/current conversion and thermal integration |\n| Dover overhead-section sensitivity | Line estimates available; thermal adapter absent | Model NY twin-Mallard and CT single-Bluebird sections separately; keep PAR limits separate |\n| Historical weather-driven asset DLR | Not ready | Route/critical-span weather, asset limits and qualified state initialization; field data for measured-performance claims |\n| DLR redispatch or curtailment benefits | Not integrated | Physical-flow inequalities and a declared constrained-dispatch/controller policy |"
+    }
+  ],
+  "delivery_manifest_index": [
+    {
+      "path": "output/nygrid_2019/upstream_manifest.json",
+      "scope": null,
+      "declared_file_entries": 73,
+      "sha256": "6ea267b07fa3fd0ca9c24f93b660b02ac4704b4a3bedf2b0fe34ce173cadd6da"
+    },
+    {
+      "path": "output/nygrid_2019_diagnostics/delivery_manifest.json",
+      "scope": "raw-load verification and western flow diagnosis with preserved baseline",
+      "declared_file_entries": 80,
+      "sha256": "a07785f1486f3f01a069ab43d36efcb5ca6dc0417b943ed456cc00c6a87723f5"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/delivery_manifest.json",
+      "scope": "full2019 source reproduction plus derived DC thermal screening",
+      "declared_file_entries": 52,
+      "sha256": "6fc4808aecf54ad2bacd74418c3f9062e7c7326eedd71f706ad34e107956d806"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/DELIVERY_MANIFEST.json",
+      "scope": "completed_versioned_synthetic_AC_loss_policy_replay_with_explicit_physical_limits",
+      "declared_file_entries": 309,
+      "sha256": "b8cb03b2a2dea336950b3049fedc20257a46ed36273153cfbedcb655e4807ac5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/DELIVERY_MANIFEST.json",
+      "scope": "constructed_synthetic_AC_system_with_explicitly_partial_operating_qualification",
+      "declared_file_entries": 454,
+      "sha256": "3230c388c4b7129a1da0c89daf4be6eeb2a3ac2afc540a38a78b2e59e5451292"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/DELIVERY_MANIFEST.json",
+      "scope": "verification_complete_current_DLR_baseline_conditions_not_satisfied",
+      "declared_file_entries": 156,
+      "sha256": "4be2e0a78bde675fbf92891f397974afb3cd85dd58c6ff678f47d091968ceb8a"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/DELIVERY_MANIFEST.json",
+      "scope": "CENTRAL_EAST_model_regression_diagnosed_with_controlled_experiments",
+      "declared_file_entries": 170,
+      "sha256": "a3344ad8425cd8b00bc03f5d77c4fe9392c4acbc4078f48ca6ab31638fd14e5d"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/DELIVERY_MANIFEST.json",
+      "scope": "compact_148_bus_AC_reduction_validated",
+      "declared_file_entries": 129,
+      "sha256": "154be7a2a29db4d9ca29bd937a5672ccee0f703c54527f1fee9df39da51d1c60"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/delivery_manifest.json",
+      "scope": "capacity-bounded independent hourly DC reconstruction; unchanged2019 full NPCC network",
+      "declared_file_entries": 76,
+      "sha256": "ec7bfd78f78fc09bb4e6b47cb97e29deb8bc89a4d056277cd2c195e0789a65f5"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/DELIVERY_MANIFEST.json",
+      "scope": "applied_Dover_line_and_parallel_PAR_engineering_model_with_bounded_conditional_controls",
+      "declared_file_entries": 138,
+      "sha256": "5fb49816721182e7ac80217064327d377ba863537129cb4453451b8271f2a34e"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/delivery_manifest.json",
+      "scope": "verified_current_research_delivery",
+      "declared_file_entries": 223,
+      "sha256": "f51d60a0db79a9619fb9afb53af390d4695a5d0b1c53e7685e27ce3a2e7c50bd"
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/DELIVERY_MANIFEST.json",
+      "scope": "verified_source_definitions_model_calibration_unresolved",
+      "declared_file_entries": 121,
+      "sha256": "63127d93ae0bc35466be096146e67214528635c297ed04362914669ca89c4a84"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/delivery_manifest.json",
+      "scope": "2025 source and scaled operating inputs; not a completed operating case",
+      "declared_file_entries": 168,
+      "sha256": "00b1626530b10d8f72edffccecce0ad0c5871d5818673033740b57908234277b"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/DELIVERY_MANIFEST.json",
+      "scope": "validated_engineering_estimates_and_DC_replay;physical_gaps_explicit",
+      "declared_file_entries": 183,
+      "sha256": "01c00c08f4625bba2b99b2d3a8bad13e148b60a30105e48f26b9849177b2cb5d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/delivery_manifest.json",
+      "scope": "verified_source_backed_hydro_zone_repair_with_unpromoted_PAR_diagnostics",
+      "declared_file_entries": 166,
+      "sha256": "5eb41f7b73e17187a7122b82a4022397edd0cae696ef9ef5f29bfc9b60f840a7"
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/DELIVERY_MANIFEST.json",
+      "scope": "public_P34_audit_complete_with_unresolved_native_semantics;DLR_readiness_assessed",
+      "declared_file_entries": 68,
+      "sha256": "29629ce2cb0f0d70ac14ceced76cfa5c711636f56ba35bbe0d3f2ffc5e577669"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/delivery_manifest.json",
+      "scope": "verified_direction_and_nominal_P_screen_external_flow_conditioned_DC_reconstruction",
+      "declared_file_entries": 100,
+      "sha256": "6a4db70c05765ef2560e743acb2563c9034b85022a022a595e12a778528bca0a"
+    },
+    {
+      "path": "output/nygrid_2025_slim/delivery_manifest.json",
+      "scope": "verified_148bus_DC_research_alternative",
+      "declared_file_entries": 73,
+      "sha256": "93c39571db71ef9db44baac31d87ff5befc7ed8e70d51b34446de0cc40c2a92f"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/delivery_manifest.json",
+      "scope": "verified_source_conditioned_western_DC_reconstruction",
+      "declared_file_entries": 203,
+      "sha256": "c4005272c77b3b5820eba8266a7da6da3ed3bb47c5324a85efbf9283e5641f36"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/delivery_manifest.json",
+      "scope": "validated_fixed_cohort_source_defined_counterfactuals_no_default_promotion",
+      "declared_file_entries": 95,
+      "sha256": "55f8436e8bf3dd29b72fd49027d050c7095c48e287321e2bd2daed735ff96a03"
+    }
+  ],
+  "committed_source_overrides": [
+    {
+      "original_repository_path": "NYGRID_2025_WESTERN_SOURCE_AUDIT.md",
+      "committed_snapshot_commit": "8188cbec1172219a0414881121ad042b405a4044",
+      "snapshot": {
+        "path": "output/nygrid_2025_dlr_handoff/sources/NYGRID_2025_WESTERN_SOURCE_AUDIT_committed_8188cbec.md",
+        "sha256": "12e2161888f9e60de35fecd3b7eb56464a83bba40820409af62b757fef900788",
+        "bytes": 16973
+      },
+      "working_copy_sha256_preserved": "e21175a942b85519688708eaba22b2100ad06281b256a5d1dd66b17371b3d4cb",
+      "reason": "An unrelated working-copy annotation is preserved. The handoff binds the committed report, matching the packaged root report."
+    }
+  ],
+  "sources": [
+    {
+      "path": "PROJECT_HANDOFF.md",
+      "sha256": "59a1a9f296149743c4be6be20c973104f0a44cc00c4e8fcd3a86637153f0fc5d",
+      "bytes": 68303
+    },
+    {
+      "path": "ELECTRICAL_MODEL_IMPLEMENTATION.md",
+      "sha256": "72f9594596169b48ba2ffc759ec073e78b16f62d865d00b79f6ffefd07e02f06",
+      "bytes": 9138
+    },
+    {
+      "path": "output/ny_only_package_a/NY_ONLY_FOUNDATION_RESULTS.md",
+      "sha256": "029bed62cb6916a9fbb4cd6543b503ee07656a5c8fa0c9605c1e2eed6fe4c982",
+      "bytes": 3056
+    },
+    {
+      "path": "NY_ONLY_PACKAGE_B_IMPLEMENTATION.md",
+      "sha256": "2be5282c4e9144ea75b6e17d8a6881f38457c295623f90008165f82bc8df6242",
+      "bytes": 15184
+    },
+    {
+      "path": "NYGRID_2019_INTERFACE_VERIFICATION.md",
+      "sha256": "58927f963e727cc9999ef3feb192a77c0aaf19536f0f8a4ace2d092a1fd17904",
+      "bytes": 9458
+    },
+    {
+      "path": "NYGRID_2019_DLR_REBUILD.md",
+      "sha256": "fdf46d06ab618b3e696632442475da20f2d73757b466bc0f35824b7b2b2eccd7",
+      "bytes": 12401
+    },
+    {
+      "path": "NYGRID_COMPACT_2019_COMPARISON.md",
+      "sha256": "7d10259bfff5247e548ba19b0337f3ebcb489f92053cfad4e03a7d98da642f76",
+      "bytes": 16596
+    },
+    {
+      "path": "NYGRID_2025_OPERATING_INPUTS.md",
+      "sha256": "e8d131f8e1b2eed0881f16389039cc213169e2e6a3c0eb7f2ba9b3099bc74c9e",
+      "bytes": 10805
+    },
+    {
+      "path": "NYGRID_2025_BOUNDED_DISPATCH.md",
+      "sha256": "caf63aeebffeac2e6d9e77125923ade0fe0071241e584154250917769bf5665c",
+      "bytes": 15040
+    },
+    {
+      "path": "NYGRID_2025_DOWNSTATE_REFINEMENT.md",
+      "sha256": "264048ab280acf41dda8326b193f08a1774b8e9d52a473d3644b923295dcd526",
+      "bytes": 14069
+    },
+    {
+      "path": "NYGRID_2025_SLIM_DOWNSTATE.md",
+      "sha256": "e231bf847e17b257adb9c6c21c6dc13c382eb13d55cfda47ab3c0229d0a276eb",
+      "bytes": 9258
+    },
+    {
+      "path": "NYGRID_2025_MOSES_SOUTH_DIAGNOSIS.md",
+      "sha256": "e29c3992591907411a6d943ccf493786e1e9c306ff904afe787984e4b8fbd5dc",
+      "bytes": 12668
+    },
+    {
+      "path": "NYGRID_2025_VERIFIED_PAR_CONTROLS.md",
+      "sha256": "48a311e93778ad25b81c21b6258f625c8a54bd88013120bf981a52a5d00ee90d",
+      "bytes": 13204
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/sources/NYGRID_2025_WESTERN_SOURCE_AUDIT_committed_8188cbec.md",
+      "sha256": "12e2161888f9e60de35fecd3b7eb56464a83bba40820409af62b757fef900788",
+      "bytes": 16973
+    },
+    {
+      "path": "NYGRID_2025_WESTERN_CONTROLLED_TESTS.md",
+      "sha256": "bdc42fa24c428e8c34ed6cf1a5b97e30d946953d46ae8b46792a99adf5613fbf",
+      "bytes": 14917
+    },
+    {
+      "path": "NYGRID_2025_PHYSICAL_FLOWGATE_DEFINITIONS.md",
+      "sha256": "da37085028bbc8ce8672e294a7c5da9f4dbdb10abad88078a3fe3fddcc1c3e3d",
+      "bytes": 15602
+    },
+    {
+      "path": "NYGRID_2025_LINE_PARAMETER_ESTIMATION.md",
+      "sha256": "0d4c58f63319a676ea2737325399a79c1617f4c1285a1f7a322b70100cf787e2",
+      "bytes": 17479
+    },
+    {
+      "path": "NYGRID_2025_DOVER_PARAMETERS_APPLIED.md",
+      "sha256": "9d3c82b13f06e0161e323fd396709d1d84eaedd8e75c535848fb92f1e553dced",
+      "bytes": 15357
+    },
+    {
+      "path": "NYGRID_2025_AC_SYSTEM.md",
+      "sha256": "3d81dec007ceaa7a38c1bc0d386854d2f07aa4666e47159857e7ade8667588dc",
+      "bytes": 16887
+    },
+    {
+      "path": "NYGRID_2025_ACPF_PROFILE_AUDIT.md",
+      "sha256": "4cdd50f0dd16adc4c551f2c94366582512fb44ced26e04b5ac0a81ee4c94fd9a",
+      "bytes": 18754
+    },
+    {
+      "path": "NYGRID_2025_COMPACT_AC.md",
+      "sha256": "41b1ee8424bb429a7e72f82343e55b57a125c269f4411282fd967aee967da030",
+      "bytes": 14316
+    },
+    {
+      "path": "NYGRID_2025_CENTRAL_EAST_DIAGNOSIS.md",
+      "sha256": "95eab25346a915781bcce34829f8b06da6e0a02bd2f1c6881b570007ca3a2123",
+      "bytes": 10027
+    },
+    {
+      "path": "NYGRID_2025_AC_LOSS_REVISION.md",
+      "sha256": "69bec7ee43a9a9c28c607626de181113e620d6d86fec522380c66f03112d860d",
+      "bytes": 11780
+    },
+    {
+      "path": "LATEST_MODEL_CONFIGURATION.csv",
+      "sha256": "7429599e7222bfe5c9931968dd4c2e2905da64b4d58fb31652de39f3cea57d6e",
+      "bytes": 38550
+    },
+    {
+      "path": "COMPACT_NPCC_NY_TESTBED.md",
+      "sha256": "90b6b2bf51759175a4625f827b8cdb507d194c67c4d54ff27f3eff9ce1f3e5c8",
+      "bytes": 8986
+    },
+    {
+      "path": "COMPACT_NY_2025_DLR_METHODOLOGY.md",
+      "sha256": "a61d89d769e7a954bae0d2f7b95d28aad92a1a6e5fd970af65c2c4224809f0e1",
+      "bytes": 15168
+    },
+    {
+      "path": "COMPACT_NY_PARTIAL_SPC_BASELINE.md",
+      "sha256": "57552db80cadf06bb6b7c02108aa75a50bbcdaa9c175ae29c83add50a40fddbc",
+      "bytes": 11077
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h0001.mat",
+      "sha256": "ca590aa089c883a6bb273f0763344023cda4e5c6342fd2260fe66b1f2f6824be",
+      "bytes": 313713
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_checks/prepared_h0001_numeric.mat",
+      "sha256": "2e7bca4fd67e743358956f90864372cc762ac636efef4c09863bc5fc73f58a50",
+      "bytes": 67994
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h3360.mat",
+      "sha256": "fb9dec35082653e7690ff841727515b2c322f85ec92d13b86482cbbcc5e0da1c",
+      "bytes": 314056
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_checks/prepared_h3360_numeric.mat",
+      "sha256": "a27e28d2bbce8b863f133601ca8444a1250f511edb76aed3dbdc324b6386e370",
+      "bytes": 67724
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h3576.mat",
+      "sha256": "f38324de7355c2dd9498eba9ebc2cd80857c83295e79653905d3d7e4e21cedf0",
+      "bytes": 318325
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_checks/prepared_h3576_numeric.mat",
+      "sha256": "b7aaad74da4693cbe38f242886c3721c898d2e4fbf7dd8f439cad22ffd97797c",
+      "bytes": 67782
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h8472.mat",
+      "sha256": "0bf999f20d50ac9e398cc47a58d127e02f59c3ac251a18159cac5700dfb7116d",
+      "bytes": 320605
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_checks/prepared_h8472_numeric.mat",
+      "sha256": "beb2a32b43737725ca6410e63d3c53b2bb228f4e8863dafbb6dddf3e8b06efee",
+      "bytes": 68172
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h8508.mat",
+      "sha256": "c9beabd35ac69c33a85a8aed4d985a3936fc69628443b328663b62487bb779bc",
+      "bytes": 386806
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_checks/prepared_h8508_numeric.mat",
+      "sha256": "ba41090cbcb1b7b15ab56d6593725e13acefff01734a75f6d81322e4585769d6",
+      "bytes": 105895
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2019_full_dc.m",
+      "sha256": "57a4538c19fbc80c9333a548c22d53c33d61970a8bb115664d7e44c4ccd70bf9",
+      "bytes": 2604
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_operating_inputs.m",
+      "sha256": "3fe5221148c55f92ea83d580684140050f519dc8f85efa6a8e031e62250dfb42",
+      "bytes": 2730
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_full_dc.m",
+      "sha256": "3acff6c7187607c54c8b8e9b4fb4f3ccfe86c2dd3d6c9e22ef8eee75c4ffb2de",
+      "bytes": 4412
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_downstate_dc.m",
+      "sha256": "05274b555ef45351eaf05b3b7b7fa7316f684d115a5e0dd0583a6eb3e5893347",
+      "bytes": 4472
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_slim_dc.m",
+      "sha256": "2b7a67418717b9b0faf6fc9571e302793a04bd36eb8d54e9af4ecd1ee59be23f",
+      "bytes": 3646
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_moses_corrected_dc.m",
+      "sha256": "5971086fc019920f2a7c2317476cdce97945b585632a3136c73aec225d459c46",
+      "bytes": 2928
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_par_controlled_dc.m",
+      "sha256": "99e6778597e4f023ce967bd0ba9fec18a41ffa9a3139553138d7758e818879cd",
+      "bytes": 4083
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_western_corrected_dc.m",
+      "sha256": "6cf89f6076f2fa9e9c81e0d4da92d4a6bd930f99b644c2690c4ba9b63491ce01",
+      "bytes": 5020
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_line_estimated_dc.m",
+      "sha256": "de3935e1e9b9dd2b94078d5a19976648884eac0f883dcead7786d4d1a93b20db",
+      "bytes": 3724
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_dover_dc.m",
+      "sha256": "b0f4c23bc1e7cf4e3907411089b96efba5ea9bb77bf1fed6a03910e4134b0979",
+      "bytes": 7452
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_slim_interfaces.m",
+      "sha256": "c43fe312eda58b0a439d426a5eb05238a08115f07f6b7456b2a0e458cade2845",
+      "bytes": 919
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_ac.m",
+      "sha256": "b46962e1d966233d03ae30bfdd1ad4d0120a075940579d83f9ffd7e017c5efc3",
+      "bytes": 9621
+    },
+    {
+      "path": "System Matpower Format/run_nygrid_2025_ac_dlr.m",
+      "sha256": "abb55a96e326d3d747bd82de89ddd8d0c845094a3869d9ffc4850472e5df561f",
+      "bytes": 2795
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_compact_ac.m",
+      "sha256": "ef3f462d1dac27ddf41855c05603fd52f025b59e9f480b8fe19d3b0048278260",
+      "bytes": 567
+    },
+    {
+      "path": "System Matpower Format/run_nygrid_2025_compact_acpf.m",
+      "sha256": "9009265a6e6b09be11ee71a9b9ffa4b5b82208255ca32e46234a783d649d8c21",
+      "bytes": 896
+    },
+    {
+      "path": "System Matpower Format/run_nygrid_2025_loss_consistent_acpf.m",
+      "sha256": "11ee49bdb6d18923373b5940d1f5defad720e5ce41db269c3a455d68b613cb40",
+      "bytes": 1114
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/summary/revision_summary.json",
+      "sha256": "9d76933c9071eb4ed7474a79ac43532040e3a0f99a2a0b1a8eef422942116a85",
+      "bytes": 8398
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/released_equivalent_boundary_consistent_annual_arrays_independent_review.json",
+      "sha256": "b3fa164e2c2dcfd9a4519381a3393a864555eb8ca5991500bb45d6ea1214f3c9",
+      "bytes": 20285
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/independent/final_scoring_independent_review.json",
+      "sha256": "06706b064a7ef676136f9ca6695b8f9e7832ff47360ff7290c32ad8a82b3ee70",
+      "bytes": 7500
+    },
+    {
+      "path": "output/nygrid_2019/upstream_manifest.json",
+      "sha256": "6ea267b07fa3fd0ca9c24f93b660b02ac4704b4a3bedf2b0fe34ce173cadd6da",
+      "bytes": 27842
+    },
+    {
+      "path": "output/nygrid_2019_diagnostics/delivery_manifest.json",
+      "sha256": "a07785f1486f3f01a069ab43d36efcb5ca6dc0417b943ed456cc00c6a87723f5",
+      "bytes": 17037
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/delivery_manifest.json",
+      "sha256": "6fc4808aecf54ad2bacd74418c3f9062e7c7326eedd71f706ad34e107956d806",
+      "bytes": 10605
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/DELIVERY_MANIFEST.json",
+      "sha256": "b8cb03b2a2dea336950b3049fedc20257a46ed36273153cfbedcb655e4807ac5",
+      "bytes": 69478
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/DELIVERY_MANIFEST.json",
+      "sha256": "3230c388c4b7129a1da0c89daf4be6eeb2a3ac2afc540a38a78b2e59e5451292",
+      "bytes": 94757
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/DELIVERY_MANIFEST.json",
+      "sha256": "4be2e0a78bde675fbf92891f397974afb3cd85dd58c6ff678f47d091968ceb8a",
+      "bytes": 32176
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/DELIVERY_MANIFEST.json",
+      "sha256": "a3344ad8425cd8b00bc03f5d77c4fe9392c4acbc4078f48ca6ab31638fd14e5d",
+      "bytes": 37863
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/DELIVERY_MANIFEST.json",
+      "sha256": "154be7a2a29db4d9ca29bd937a5672ccee0f703c54527f1fee9df39da51d1c60",
+      "bytes": 25965
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/delivery_manifest.json",
+      "sha256": "ec7bfd78f78fc09bb4e6b47cb97e29deb8bc89a4d056277cd2c195e0789a65f5",
+      "bytes": 15403
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/DELIVERY_MANIFEST.json",
+      "sha256": "5fb49816721182e7ac80217064327d377ba863537129cb4453451b8271f2a34e",
+      "bytes": 27917
+    },
+    {
+      "path": "output/nygrid_2025_downstate/delivery_manifest.json",
+      "sha256": "f51d60a0db79a9619fb9afb53af390d4695a5d0b1c53e7685e27ce3a2e7c50bd",
+      "bytes": 45288
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/DELIVERY_MANIFEST.json",
+      "sha256": "63127d93ae0bc35466be096146e67214528635c297ed04362914669ca89c4a84",
+      "bytes": 25946
+    },
+    {
+      "path": "output/nygrid_2025_inputs/delivery_manifest.json",
+      "sha256": "00b1626530b10d8f72edffccecce0ad0c5871d5818673033740b57908234277b",
+      "bytes": 35132
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/DELIVERY_MANIFEST.json",
+      "sha256": "01c00c08f4625bba2b99b2d3a8bad13e148b60a30105e48f26b9849177b2cb5d",
+      "bytes": 37633
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/delivery_manifest.json",
+      "sha256": "5eb41f7b73e17187a7122b82a4022397edd0cae696ef9ef5f29bfc9b60f840a7",
+      "bytes": 35324
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/DELIVERY_MANIFEST.json",
+      "sha256": "29629ce2cb0f0d70ac14ceced76cfa5c711636f56ba35bbe0d3f2ffc5e577669",
+      "bytes": 14476
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/delivery_manifest.json",
+      "sha256": "6a4db70c05765ef2560e743acb2563c9034b85022a022a595e12a778528bca0a",
+      "bytes": 21774
+    },
+    {
+      "path": "output/nygrid_2025_slim/delivery_manifest.json",
+      "sha256": "93c39571db71ef9db44baac31d87ff5befc7ed8e70d51b34446de0cc40c2a92f",
+      "bytes": 14206
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/delivery_manifest.json",
+      "sha256": "c4005272c77b3b5820eba8266a7da6da3ed3bb47c5324a85efbf9283e5641f36",
+      "bytes": 44272
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/delivery_manifest.json",
+      "sha256": "55f8436e8bf3dd29b72fd49027d050c7095c48e287321e2bd2daed735ff96a03",
+      "bytes": 21404
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_prepare_case.m",
+      "sha256": "dccf49daf9d62b20a1d2a3f282e290dd01a4f52ab7de33a2f51db0a71faacd39",
+      "bytes": 3567
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_loss_revision/core/ac_loss_finalize.m",
+      "sha256": "8074c6bf91f4cc7cd29ae539de75ddd80e081088a0db5864c06636b8119c3272",
+      "bytes": 5056
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_prepare_case.m",
+      "sha256": "3e989e7a7ef8210b85ca9a496a8a1dda2f2ea0fbc8dd44251dc311278bf4ee85",
+      "bytes": 4428
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_apply_resistance.m",
+      "sha256": "f3f15f91f1192138162d9ba87fb3c6f413f843b7bfa565fd9a5ec4c3f97fa2ac",
+      "bytes": 1193
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/README.md",
+      "sha256": "0c055133a0fffc5be161ff718357e60284e3d1786a1b8624aee48084da8d81cf",
+      "bytes": 5542
+    },
+    {
+      "path": "NYGRID_2025_P34_QUALIFICATION_AND_DLR_READINESS.md",
+      "sha256": "c5d731f26861b07d4a1afa99cb4d116f3ddf85635b27cd89ca3d374cdeab5189",
+      "bytes": 15420
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/build_model_inventory.py",
+      "sha256": "7f69501d549f536d8449c23aec94c981500980fa8cc2ce0e93c867b011ef774b",
+      "bytes": 33713
+    },
+    {
+      "path": "scripts/nygrid_2025_dlr_handoff/technical_outline_template.md",
+      "sha256": "2d0e250625051bc37668604410b8ba4b9e5c381d3dca500581f2c844109cdb90",
+      "bytes": 13355
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "checked_files": 30,
+  "all_experiment_plans_input_NPZ_replay_NPZ_and_metric_CSV_bytes_identical": true,
+  "scope": "Metadata-only separation of an unrelated annotated document from numerical dependencies; all numerical values and experimental definitions must remain identical.",
+  "files": [
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_legacy_bounded_all_other.npz",
+      "sha256": "73a718a7a4c793b1816802b336d1f1b3995981151c15ffa6a1b3bbe223b8dfa5"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_legacy_bounded_outside_ab.npz",
+      "sha256": "ac44a93250c8f720877b372fd762f6e1d9c039be03dbcc1b6924cc833017c4aa"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_legacy_literal_all_other.npz",
+      "sha256": "32d5be84d1a801ed497016605b051d6b9546809ceb5b490682da34123b0a7b58"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_legacy_literal_outside_ab.npz",
+      "sha256": "ea5e0759aeb05b7b425ad35dda9acfb457da3e7185ce5bc7d8f8ea8470c15f53"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_constrained_all_other.npz",
+      "sha256": "a5e05a598eb57744f75a7adfcfac2120422ec32c429603169e0b3969b6225f58"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_constrained_outside_ab.npz",
+      "sha256": "8ffc27b42fadc811b8c99ba7c25b12a8f9d45aee4f9d7ddfbfd52e674ad9bece"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_literal_all_other.npz",
+      "sha256": "e2871b2f94b8b2a6fed19fe258c6c711a622962a8567d09f81200981787a5ff9"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_literal_outside_ab.npz",
+      "sha256": "9f987010b3fb3aeb4694e06ed9247acc515872640fa92a2e001932ab36224eed"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/baseline.npz",
+      "sha256": "9b5f3deb8bf6d13a3fdc879628f45dde6a8812498c9f8a53089d014ce681c160"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/load_original_A.npz",
+      "sha256": "9b5f3deb8bf6d13a3fdc879628f45dde6a8812498c9f8a53089d014ce681c160"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/load_original_AB.npz",
+      "sha256": "6a12f4e75e608dca3ebc6039c7fde1ab2fe854589a6ec78e52c58f4ea7d1dbb7"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/load_original_B.npz",
+      "sha256": "6a12f4e75e608dca3ebc6039c7fde1ab2fe854589a6ec78e52c58f4ea7d1dbb7"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_legacy_bounded_all_other.npz",
+      "sha256": "298f3b88ff6879fdb41cd099d04e0b85ec2a6259eac2345ec1c8a9ce700610e2"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_legacy_bounded_all_other__load_original_B.npz",
+      "sha256": "a20883c083eb34ea2d288ca233213bedfeecaf6e4d98f1c74a250f9ab9fc13ca"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_legacy_bounded_outside_ab.npz",
+      "sha256": "1049e9a800696ec4740c68f73f24ea175ea9414eb80e4c4b0efdc5bd3a1682d2"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_legacy_bounded_outside_ab__load_original_B.npz",
+      "sha256": "ec34ba736869178ed908ffbe01601b81b8d992a71cc217a0938414db2452202e"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_constrained_all_other.npz",
+      "sha256": "0af7e8f6d341065cd562ab4e1270584a49fefd7a6c743e8f6e5beb3373180fd8"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_constrained_all_other__load_original_B.npz",
+      "sha256": "5d756c65a4caf45b3614403be0a20447d68378463cb9eef76d8e33e89170a50c"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_constrained_outside_ab.npz",
+      "sha256": "9446489485cf797cf9fe3794315c9a4da17f20e74cc24934167d86142461dca8"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_constrained_outside_ab__load_original_B.npz",
+      "sha256": "d7954a4a044a3ed0b1439e8d93f45cb116c18596ce7e560350c11a1ba125b67a"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_literal_all_other.npz",
+      "sha256": "3a20b1193e0df277723550dd892d773dfd4fcfa480f22d6721e288835da03ae3"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_literal_all_other__load_original_B.npz",
+      "sha256": "71dec0a34e2e25a1ed50613b0bdbe992bdcb09437060afba60222f9f51b9c643"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_literal_outside_ab.npz",
+      "sha256": "61f644b2d3f62582947dd53077139dd8f04604b6efc7ee57977edc2769321445"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_literal_outside_ab__load_original_B.npz",
+      "sha256": "90f2beab02deb59e7699706c982b8c01b29d8a3d9cc87247f57a90d0356e9403"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/comparison/annual_metrics.csv",
+      "sha256": "843eab724ecb57a4ae79bb011bfb0c62037437536e0666a80590cbce63666cb2"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/comparison/monthly_metrics.csv",
+      "sha256": "e9e59c196e1dfb36d31f57c392b573a81f4cb01f8e480fde94af29e4f43fcac6"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/design/experiment_plan.json",
+      "sha256": "173b9e745c1444e2ee138a4162e62edc116e1c0a498bc94dd7fc3c8089f6f51e"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/niagara_plan.json",
+      "sha256": "334e0bb97a574c8b8671fef69e858ebd4276d2042810ab38d76f59a5020a12bd"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/load_plan.json",
+      "sha256": "20e7767ca8881a861c164f2adc74656c36827554e68a509901e9e0a06a825416"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/mapping_plan.json",
+      "sha256": "642c511ede3148048f9c425b52239da9fe168e06daca2ce5d67ee4e9aee8db18"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+operator_variant,interface_name,compact_branch_row,branch_key,from_bus,to_bus,from_role,to_role,PF_coefficient,PT_coefficient,source_upstream_bus,uniform_upstream_AC_PF_coefficient,uniform_upstream_AC_PT_coefficient,exact_official_public_operator,metering_scope
+nygrid_role_corridor_v1,Dysinger East,27,NPCC_S7:BRANCH_ROW:59,53,55,B,A,-1,0,55,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Dysinger East,30,NPCC_S7:BRANCH_ROW:62,54,62,A,B,1,0,54,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Dysinger East,36,NPCC_S7:BRANCH_ROW:70,58,62,A,B,1,0,58,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Dysinger East,63,NPCC_S7:BRANCH_ROW:222,54,52,A,B,1,0,54,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,West Central,23,NPCC_S7:BRANCH_ROW:55,50,52,C,B,-1,0,52,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,West Central,24,NPCC_S7:BRANCH_ROW:56,51,53,C,B,-1,0,53,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,West Central,28,NPCC_S7:BRANCH_ROW:60,53,65,B,C,1,0,53,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,West Central,38,NPCC_S7:BRANCH_ROW:73,62,63,B,C,1,0,62,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Total East,1,NPCC_S7:BRANCH_ROW:33,37,38,F,E,-1,0,38,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Total East,4,NPCC_S7:BRANCH_ROW:36,37,43,F,E,-1,0,43,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Total East,8,NPCC_S7:BRANCH_ROW:40,40,44,F,E,-1,0,44,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Total East,10,NPCC_S7:BRANCH_ROW:42,41,45,F,E,-1,0,45,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Total East,69,NPCC_S7:BRANCH_ROW:234,38,39,E,G,1,0,38,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Moses South,15,NPCC_S7:BRANCH_ROW:47,44,48,E,D,-1,0,48,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Moses South,20,NPCC_S7:BRANCH_ROW:52,46,49,E,D,-1,0,49,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Moses South,21,NPCC_S7:BRANCH_ROW:53,47,48,E,D,-1,0,48,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Central East,1,NPCC_S7:BRANCH_ROW:33,37,38,F,E,-1,0,38,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Central East,4,NPCC_S7:BRANCH_ROW:36,37,43,F,E,-1,0,43,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Central East,8,NPCC_S7:BRANCH_ROW:40,40,44,F,E,-1,0,44,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Central East,10,NPCC_S7:BRANCH_ROW:42,41,45,F,E,-1,0,45,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,UpNY-Coned,53,NPCC_S7:BRANCH_ROW:90,74,77,H,G,-1,0,77,0,1,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,UpNY-Coned,88,PERFORM2019:AC:897:902:1,9002,74,G,H,1,0,9002,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,UpNY-Coned,89,PERFORM2019:AC:897:902:2,9002,74,G,H,1,0,9002,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Dun/SPR-South,59,NPCC_S7:BRANCH_ROW:97,78,81,I,J,1,0,78,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Dun/SPR-South,60,NPCC_S7:BRANCH_ROW:98,78,82,I,J,1,0,78,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Dun/SPR-South,74,NPCC_S7:BRANCH_ROW:239,78,81,I,J,1,0,78,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+nygrid_role_corridor_v1,Dun/SPR-South,76,NPCC_S7:BRANCH_ROW:241,78,82,I,J,1,0,78,1,0,False,signed_from_terminal_P_for_literal_DC;upstream_AC_columns_are_separate_loss_convention
+frozen_current_partition_v1,Dysinger East,27,NPCC_S7:BRANCH_ROW:59,53,55,B,A,-1,0,55,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Dysinger East,38,NPCC_S7:BRANCH_ROW:73,62,63,A,C,1,0,62,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Dysinger East,63,NPCC_S7:BRANCH_ROW:222,54,52,A,B,1,0,54,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,West Central,23,NPCC_S7:BRANCH_ROW:55,50,52,C,B,-1,0,52,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,West Central,24,NPCC_S7:BRANCH_ROW:56,51,53,C,B,-1,0,53,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,West Central,28,NPCC_S7:BRANCH_ROW:60,53,65,B,C,1,0,53,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,West Central,38,NPCC_S7:BRANCH_ROW:73,62,63,A,C,1,0,62,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Total East,4,NPCC_S7:BRANCH_ROW:36,37,43,F,E,-1,0,43,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Total East,5,NPCC_S7:BRANCH_ROW:37,38,69,F,C,-1,0,69,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Total East,8,NPCC_S7:BRANCH_ROW:40,40,44,F,E,-1,0,44,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Total East,10,NPCC_S7:BRANCH_ROW:42,41,45,F,E,-1,0,45,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Moses South,15,NPCC_S7:BRANCH_ROW:47,44,48,E,D,-1,0,48,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Moses South,16,NPCC_S7:BRANCH_ROW:48,45,46,E,D,-1,0,46,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Central East,4,NPCC_S7:BRANCH_ROW:36,37,43,F,E,-1,0,43,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Central East,8,NPCC_S7:BRANCH_ROW:40,40,44,F,E,-1,0,44,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Central East,10,NPCC_S7:BRANCH_ROW:42,41,45,F,E,-1,0,45,0,1,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,UpNY-Coned,82,PERFORM2019:AC:651:858:1,73,858,G,G,1,0,73,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,UpNY-Coned,83,PERFORM2019:AC:651:858:2,73,858,G,G,1,0,73,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,UpNY-Coned,84,PERFORM2019:AC:651:902:1,73,9002,G,G,1,0,73,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,UpNY-Coned,85,PERFORM2019:AC:651:902:2,73,9002,G,G,1,0,73,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,UpNY-Coned,91,PERFORM2019:AC:774:900:1,774,77,G,H,1,0,774,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,UpNY-Coned,92,PERFORM2019:AC:900:1519:1,76,77,G,H,1,0,76,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Dun/SPR-South,57,NPCC_S7:BRANCH_ROW:95,78,79,I,J,1,0,78,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Dun/SPR-South,59,NPCC_S7:BRANCH_ROW:97,78,81,I,J,1,0,78,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Dun/SPR-South,60,NPCC_S7:BRANCH_ROW:98,78,82,I,J,1,0,78,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Dun/SPR-South,74,NPCC_S7:BRANCH_ROW:239,78,81,I,J,1,0,78,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Dun/SPR-South,75,NPCC_S7:BRANCH_ROW:240,78,79,I,J,1,0,78,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns
+frozen_current_partition_v1,Dun/SPR-South,76,NPCC_S7:BRANCH_ROW:241,78,82,I,J,1,0,78,1,0,False,signed_from_terminal_P_DC;frozen_AC_operator_uses_the_separate_upstream_columns

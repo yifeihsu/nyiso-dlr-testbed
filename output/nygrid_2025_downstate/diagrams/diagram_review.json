@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "method": "Independent SVG XML comparison against original saved bus and branch registers; separate agent audit",
+  "all_rendered_bus_names_ids_voltages_and_roles_match": true,
+  "all_displayed_branch_keys_and_categories_match": true,
+  "parallel_bundle_labels_match_multiplicity": true,
+  "full_view_bus_count": 191,
+  "full_view_added_buses": 51,
+  "focus_view_bus_count": 62,
+  "focus_view_added_buses": 51,
+  "focus_branch_record_counts": {
+    "source": 97,
+    "assumed": 22,
+    "scaffold": 1,
+    "replaced": 9,
+    "retained": 2
+  },
+  "PNG_visual_review": "All five rendered PNGs inspected for readable labels and clipping; SVG/PDF share fixed Graphviz coordinates",
+  "SVGs": [
+    {
+      "path": "output/nygrid_2025_downstate/diagrams/downstate_changes.svg",
+      "sha256": "531d010e9c8ac706ef0582abd940f0ef09d70fea862207a86908fbb016df708d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/diagrams/full_npcc.svg",
+      "sha256": "458b069056c562fd728ed7c5c971b7d65f826149d0e4a097abf093d6bd647ac6"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/diagrams/hudson_westchester.svg",
+      "sha256": "07f135507ff76b08cecc94dcac70fc15d9573b98882a73eb231e9b32d1d04713"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/diagrams/long_island.svg",
+      "sha256": "68878c9e3ebdc4cf31e9427740d3dea8a5beffd1f197d2b99f3512e8d0432dcd"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/diagrams/new_york_city.svg",
+      "sha256": "b0fb525a0d49a811094ac726fd3d48dfde31b11f15eeabe9d61d4f7ed2b204c7"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T03:05:14.894121+00:00",
+  "scope": "candidate_search_and_identifiability_audit_not_physical_operator_calibration",
+  "physical_terms": 269,
+  "definition_families": 21,
+  "verified_physical_model_terms": 0,
+  "complete_physical_operators": 0,
+  "internal_interface_observations_used": false,
+  "score_calibration_used": false,
+  "current_model_numeric_gate_promotion": false,
+  "legacy_AC_operator_state_checks": 35,
+  "historical_candidate_state_checks": 240,
+  "source_hashes_unchanged": true,
+  "dependencies": {
+    "PERFORM/On Peak 2019 v23_Perform_NY/On Peak 2019 v23/nyiso_On_Peak_v23_shunts_as_z_load.m": "36e86cea63f1dea0872d1c2ec57f09e20d5c5ce99dad20d9977a1b014b20edb5",
+    "PERFORM/Auxilliary_Perform_NY/Branch_changes_2019_to_2030.xlsx": "31d519c74f75a06a77ed11fabf535e4579fbc5c94cbb7e0a6be14cec38a054b8",
+    "output/nygrid_2025_downstate/network/network_cases.mat": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+    "output/nygrid_2025_slim/network/network_cases.mat": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58",
+    "output/nygrid_2025_downstate/network/branch_register.csv": "6a574d53b40eb2bf08dba851757a5d56ab6b4d89377b2a33e5d6319d5cd2a18f",
+    "output/nygrid_2025_downstate/network/bus_register.csv": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27",
+    "output/nygrid_2025_downstate/network/source_bus_map.csv": "56f9bad150c960236c0982a9076d681423f5558aad47c672ab432eaffc188c72",
+    "output/nygrid_2025_slim/network/branch_register.csv": "547c40ce859c358ded212f1755b879ee508a2d56c1354e7d40782b11e0bfb82d",
+    "output/ny_only_package_a/source_inventory/perform_ny_branch_inventory.csv": "09898f0857ca417c99ad19516578b9b7b15adef565529fe066ae7f5df6ecd97b",
+    "output/ny_only_package_a/source_inventory/perform_ny_bus_inventory.csv": "1389fef08bd6a75db5aabd7958a3a735b0dd4483181eb1c93ae31ed2fffd405f",
+    "scripts/nygrid_2025_flowgate_definitions/audit_source_crosswalk.py": "2b68ba803ab2f601ea386772eb7562e79bf07772468bc42e0e41ab53009df792",
+    "output/nygrid_2025_flowgate_definitions/local_model/source_crosswalk_receipt.json": "cb972562c785e4a420ec8b240d19c3b4869517b101226c073c493a05067ff120",
+    "output/nygrid_2025_flowgate_definitions/definitions/western_2025.csv": "382667ec1989f126558381171227824ae3fbfcae523f7264f100c029902aab22",
+    "output/nygrid_2025_flowgate_definitions/definitions/western_winter2025_26.csv": "a9a4d409ba1833c68de4796a39617a1f1930225fd7904a8bd020cef0f4daf95b",
+    "output/nygrid_2025_flowgate_definitions/definitions/western_winter2024_25.csv": "1949563de67b230fe8b554bcb33e1697b4a36e91a00c435150a5529a89d21163",
+    "output/nygrid_2025_flowgate_definitions/definitions/central_north_2025.csv": "f795ccd2d2b09a12a66f73cde5eaa8ff103bdcec50e8b126e32ffc0c1a49892c",
+    "output/nygrid_2025_flowgate_definitions/definitions/central_north_winter2024_25.csv": "11a3a4b3fb2fb1f608b97311575d0c79c3aa7c44a4bf8c9070e48877b485ce03",
+    "output/nygrid_2025_flowgate_definitions/definitions/downstate_2025.csv": "835f7fe7c3fd81bdc46225c710fb5db4f711787e6d1bcff115e6bbdec97e1c60",
+    "output/nygrid_2025_flowgate_definitions/sources/western/NYISO_Summer2025_Appendices_CE_Changes_APPROVED.pdf": "32e4fb86cc8397ab458fdf790ab52decfcaa9e9686de7aa9bec7527eaf04b901",
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2025_2026_Appendices.pdf": "bcf26e7ac908f43a29f34230067b5b1afc6e587845b26246d7ca39a41ef9f072",
+    "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_Winter2024_2025_Appendices_APPROVED.pdf": "546402b7e85f51441e64a6b68adac53579f83828f6bc8c1195ccc480e082dc0b",
+    "output/nygrid_2025_flowgate_definitions/local_model/PERFORM_source_to_model.csv": "718a8ebe99223678faf23238c8d74f500be985e7767dbdaec75623bf5be6096d"
+  },
+  "script_sha256": "a2e22a27c60bd9a49572078ac99919e4a5be3917299b055cd96d73cf55e96929",
+  "coverage": [
+    {
+      "definition_id": "NYISO_SUMMER2025_CE",
+      "interface": "CENTRAL EAST",
+      "physical_term_count": 8,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "NYISO_SUMMER2025_MS",
+      "interface": "MOSES SOUTH",
+      "physical_term_count": 7,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "NYISO_SUMMER2025_TE",
+      "interface": "TOTAL EAST",
+      "physical_term_count": 29,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "NYISO_WINTER2024_25_CE",
+      "interface": "CENTRAL EAST",
+      "physical_term_count": 8,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "NYISO_WINTER2024_25_MS",
+      "interface": "MOSES SOUTH",
+      "physical_term_count": 7,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "NYISO_WINTER2024_25_TE",
+      "interface": "TOTAL EAST",
+      "physical_term_count": 29,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "NYISO_WINTER2025_26_CE",
+      "interface": "CENTRAL EAST",
+      "physical_term_count": 8,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "NYISO_WINTER2025_26_MS",
+      "interface": "MOSES SOUTH",
+      "physical_term_count": 7,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "NYISO_WINTER2025_26_TE",
+      "interface": "TOTAL EAST",
+      "physical_term_count": 29,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "dysinger_east_summer2025",
+      "interface": "Dysinger East",
+      "physical_term_count": 10,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "dysinger_east_winter2024_25",
+      "interface": "Dysinger East",
+      "physical_term_count": 10,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "dysinger_east_winter2025_26",
+      "interface": "Dysinger East",
+      "physical_term_count": 10,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "sprain_dunwoodie_south_summer2025",
+      "interface": "Sprain Brook-Dunwoodie South",
+      "physical_term_count": 11,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 3,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "sprain_dunwoodie_south_winter2024_25",
+      "interface": "Sprain Brook-Dunwoodie South",
+      "physical_term_count": 11,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 3,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "sprain_dunwoodie_south_winter2025_26",
+      "interface": "Sprain Brook-Dunwoodie South",
+      "physical_term_count": 11,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 3,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "upny_coned_summer2025",
+      "interface": "UPNY-ConEd",
+      "physical_term_count": 10,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 5,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "upny_coned_winter2024_25",
+      "interface": "UPNY-ConEd",
+      "physical_term_count": 10,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 5,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "upny_coned_winter2025_26",
+      "interface": "UPNY-ConEd",
+      "physical_term_count": 10,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 5,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "west_central_summer2025",
+      "interface": "West Central",
+      "physical_term_count": 14,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "west_central_winter2024_25",
+      "interface": "West Central",
+      "physical_term_count": 16,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    },
+    {
+      "definition_id": "west_central_winter2025_26",
+      "interface": "West Central",
+      "physical_term_count": 14,
+      "verified_physical_model_terms": 0,
+      "terms_with_embedded_historical_candidates": 0,
+      "complete_physical_operator_available": false
+    }
+  ],
+  "limitations": [
+    "Candidate name/voltage or generic RAW ID equality is never a source-backed utility circuit crosswalk.",
+    "Original 225 parent rows contain no independently verified physical source lineage.",
+    "No source-backed physical-to-aggregate matrix or hidden-injection constraint exists here to establish whole-gate identifiability.",
+    "Current detailed circuits use a 2019 source with 2025 project assumptions; seasonal definition availability does not establish every-hour annual validity.",
+    "The current lossless DC model cannot reconstruct actual AC meter-end losses."
+  ],
+  "outputs": {
+    "embedded_source_vs_accounting_zone_differences.csv": "a4b6110e8af374b0e81f0d09d488fa2f8f42d025efd1d9ad2e7e86ccd7555588",
+    "gate_model_coverage.csv": "42b0f4eed9ad9460267de2f2df3192a7aafbe3e57af2a0e727bedc7455cc1539",
+    "historical_candidate_numeric_checks.csv": "f0a6d4914b47113867f03aa3edfaae33a9721493d52d7587c3280a3a159f4d9c",
+    "historical_circuit_candidates.csv": "17670e5f57049a3fbff2e444fc12c9a6ea9a30af938756fc6aacd4027c727fa1",
+    "legacy_AC_operator_provenance.csv": "7468dc3a5933f83ce9cd5a89d4fbc1fa9f520069764d1caed64459e3fcfe4382",
+    "legacy_AC_operator_terms.csv": "bb91a700ed84135019618beca9778eb57e5f234929de5580af0d5b2e0d16d93d",
+    "physical_term_model_identifiability.csv": "965224ce9d702796c73899e05a6e2e0f457436ecc08752c229d6a34556b5ac6e",
+    "unverified_station_search_candidates.csv": "22c3737f13378fa9ec694fda5e37829b78767c48192c6d549a19df4673d53ac6"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "added_buses": [
+    10589,
+    10593,
+    10774,
+    10858,
+    10902,
+    11129,
+    11130,
+    20001
+  ],
+  "shown_bus_ids": [
+    35,
+    73,
+    74,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    10589,
+    10593,
+    10774,
+    10858,
+    10902,
+    11129,
+    11130,
+    20001
+  ],
+  "branch_counts": {
+    "physical": 14,
+    "assumed": 5,
+    "equivalent": 30,
+    "replaced": 9
+  },
+  "source_files": [
+    {
+      "path": "output/nygrid_2025_slim/network/bus_register.csv",
+      "sha256": "9a3359281f3b51daedcb2c2740e3d31c4eb4f62adffca5ea7819b1736c0dc660"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/branch_register.csv",
+      "sha256": "547c40ce859c358ded212f1755b879ee508a2d56c1354e7d40782b11e0bfb82d"
+    },
+    {
+      "path": "scripts/nygrid_2025_slim/draw_slim_network.py",
+      "sha256": "bc235e6a02ad9def6421e0a7d9334cbe675cab0975199b8b681d319c23220a35"
+    }
+  ]
+}

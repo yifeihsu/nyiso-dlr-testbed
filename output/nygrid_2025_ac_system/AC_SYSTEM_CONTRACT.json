@@ -1,0 +1,69 @@
+{
+  "modeltype": "whole_network_synthetic_balanced_positive_sequence_AC",
+  "power_scale": "existing_gamma_scaled_injections;solved_currents_used_directly",
+  "gamma_current_lift": false,
+  "original_model_artifacts_preserved": true,
+  "explicit_OH_corridors": 186,
+  "cable_equivalents": 40,
+  "unresolved_composite_interiors": 65,
+  "pre_Dover_buses": 266,
+  "post_Dover_buses": 267,
+  "added_numerical_zero_injection_buses": 75,
+  "selected_electrical_attempts": 7,
+  "qualified_electrical_and_ACPF_hours": [
+    2630,
+    8471,
+    8472,
+    8508
+  ],
+  "unqualified_selected_electrical_hours": [
+    523,
+    4000,
+    4194
+  ],
+  "whole_network_weather_attempts": 8,
+  "qualified_weather_points": [
+    {
+      "hour": 2630,
+      "scenario": "catalog_reference"
+    },
+    {
+      "hour": 2630,
+      "scenario": "breezy"
+    },
+    {
+      "hour": 8508,
+      "scenario": "catalog_reference"
+    },
+    {
+      "hour": 8508,
+      "scenario": "breezy"
+    }
+  ],
+  "failed_weather_points_retained": 4,
+  "no_global_infeasibility_proof": true,
+  "all_year_AC_feasibility_established": false,
+  "historical_weather_bound": false,
+  "reference_temperature_resistance_not_equilibrium": true,
+  "composite_physical_interior_conductor_coverage_established": false,
+  "asbuilt_parameters_or_actual_equipment_ratings_certified": false,
+  "internal_interface_fitting": false,
+  "primary_entrypoints": [
+    "System Matpower Format/npcc_nygrid_2025_ac.m",
+    "System Matpower Format/run_nygrid_2025_ac_dlr.m"
+  ],
+  "operating_evidence_seal": {
+    "path": "output/nygrid_2025_ac_system/ac_validation/validation_source_receipt.json",
+    "sha256": "f403b9b19e869175169777c3ee0183ea1a3316bcb6416a3fb5d48c08cb6aaee1"
+  },
+  "preserved_deliveries": [
+    {
+      "path": "output/nygrid_2025_p34_qualification/DELIVERY_MANIFEST.json",
+      "sha256": "29629ce2cb0f0d70ac14ceced76cfa5c711636f56ba35bbe0d3f2ffc5e577669"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/DELIVERY_MANIFEST.json",
+      "sha256": "5fb49816721182e7ac80217064327d377ba863537129cb4453451b8271f2a34e"
+    }
+  ]
+}

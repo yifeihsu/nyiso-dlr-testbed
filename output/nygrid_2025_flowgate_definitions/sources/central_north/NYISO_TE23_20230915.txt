@@ -1,0 +1,492 @@
+
+===== PDF PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+TOTAL EAST STABILITY LIMIT S 
+ANALYSIS FOR ALL  LINES I/S AND 
+OUTAGE CONDITIONS ( TE-23) 
+ 
+ 
+ 
+A Report by the  
+New York Independent System Operator  
+ 
+September 2023 
+ 
+
+===== PDF PAGE 2 =====
+   
+          Total East Stability Limits Analysis |   2 
+ 
+Executive Summary 
+ 
+This study was conducted to examine the stability limits for the Total East interface and determine the impact 
+of the full completion of the Segment A&B project, accounting for the Edic-Princetown (351 and 352) 345 kV lines. 
+The Total East Interface is a closed interface linking central NY to eastern NY. For more details refer to Table 2 
+and Fig 1. The study provides updates to the all-lines-in-service limit as well as the two equipment outage limits 
+associated with Total East.  The transfer limits developed in this analysis increase by 1400 to 1500 MW as shown 
+on Table 1.  
+The limits recommended in this report are all based on stable system response at the highest transfer level 
+tested. There were no instances of any system or unit instability observed in this analysis. 
+On an informational basis, this study examined the system responses for contingencies involving three-phase 
+faults, line-to-line-to-ground faults as well as the normal criteria single-phase line-to-ground faults. The new all-
+lines-in-service stability limits for Total East is valid for either form of contingency at the levels tested. 
+It is recommended that the Total East stability transfer limits be updated as reported on Table 1.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+===== PDF PAGE 3 =====
+   
+          Total East Stability Limits Analysis |   3 
+ 
+Table of Contents 
+ 
+INTRODUCTION .................................................................................................................................................................................. 5 
+SUMMARY OF PROPOSED LIMITS ................................................................................................................................................. 5 
+SYSTEM OPERATING LIMIT METHODOLOGY ........................................................................................................................... 6 
+INTERFACE SUMMARY ..................................................................................................................................................................... 6 
+SYSTEM REPRESENTATION AND TRANSFER CASE DEVELOPMENT ................................................................................. 8 
+TESTED CONTINGENCIES ................................................................................................................................................................ 9 
+MONITORED PARAMETERS .......................................................................................................................................................... 12 
+DISCUSSION ........................................................................................................................................................................................ 12 
+RECOMMENDATIONS ...................................................................................................................................................................... 18 
+ 
+ 
+ 
+  
+
+===== PDF PAGE 4 =====
+   
+          Total East Stability Limits Analysis |   4 
+ 
+List of Tables 
+Table 1: Proposed and Existing Total East Stability Limits 
+Table 2: Total East Interface Definition 
+Table 3: Transfer Cases 
+Table 4: Contingencies applied for evaluating Total East stability transfer limits 
+Table 5: Summary of proposed Total East Stability Transfer Limits 
+ 
+List of Figures 
+Figure 1. NYCA Transmission System Interface (Total East inset) 
+Figure 2. Voltage Angle and Frequency for scenario with all equipment in-service 
+Figure 3. Edic Voltage response for all contingencies for all equipment in-service 
+Figure 4. Voltage Angle and Frequency for scenario with 5018 O/S 
+Figure 5. Voltage Angle and Frequency for scenario with 5018 O/S and Leeds SVC O/S 
+Figure 6. Voltage Angle and Frequency for scenario with 5018 O/S and Fraser SVC O/S 
+Figure 7. Voltage Angle and Frequency for scenario with 5018 O/S and Marcy STATCOM O/S 
+ 
+ 
+ 
+ 
+
+===== PDF PAGE 5 =====
+   
+          Total East Stability Limits Analysis |   5 
+ 
+Introduction 
+This study was conducted to examine the stability limits for the Total East interface and determine the impact 
+of the full completion of the Segment A&B project, accounting for the Edic-Princetown (351 and 352) 345 kV lines. 
+The study evaluated the all lines in-service condition, the outage on the 5018 line and the outage of an 
+SVC/STATCOM. These system scenarios also assume the Marcy South Series Capacitors (MSSC) are bypassed.  
+Sensitivities were performed on the Knickerbocker series compensation and were determined to have negligible 
+impact on the Total East stability limit.  The dynamic response of the system was gauged by examining the voltage 
+response at Edic and Pleasant Valley, and the generator angles at Athens, Gilboa, Niagara and Moses. 
+Summary of Proposed Limits 
+Table 1 shows the new proposed limits and the existing limits for Total East.  The new proposed limits would have 
+an All Lines In-service value of 7550 MW with a 750 MW reduction for outages on the 5018 Ramapo- Hopatcong 
+500kV Line and for the outage of any SVC/STATCOM. The increment in transfer limit across Total East interface is 
+mainly due to modeling of the Edic – Princetown (351 & 352) 345 kV lines in-service. When these two lines are 
+out-of-service, the transfer limit should be reverted back as reported in the Total East stability study approved by 
+NYISO Stakeholders in April 2023, posted at the following link: 
+https://www.nyiso.com/documents/20142/3692388/TE-23-StabReport-OC-4-20-2023-Approved.pdf/9bacf9e5-
+a70e-e09f-01a0-aaf133383651.  Table 1 includes these limits for quick reference. 
+Table 1 
+Proposed and Existing Total East Stability Limits  
+  
+Scenario 
+Proposed 
+Limit 
+(MW)   
+Existing  
+Limit 
+(MW)   
+Diff 
+(MW) 
+1 All Lines In 7550 
+ 
+6150 
+ 
++1400 
+2 5018 Ramapo-Hopatcong 500kV O/S 6800 
+ 
+5400 
+ 
++1400 
+3 5018 Ramapo-Hopatcong 500kV & (SVC or Statcom O/S) 6800 
+ 
+5300 
+ 
++1500 
+4 Edic – Princetown (351&352) 345 kV lines O/S 6150  N/A  N/A 
+5 
+Edic – Princetown (351&352) 345 kV lines & 5018 
+Ramapo-Hopatcong 500kV O/S 5400  N/A  N/A 
+6 
+Edic – Princetown (351&352) 345 kV lines & 5018 
+Ramapo-Hopatcong 500kV O/S & (SVC or Statcom O/S) 5300  N/A  N/A 
+ 
+
+===== PDF PAGE 6 =====
+   
+          Total East Stability Limits Analysis |   6 
+ 
+System Operating Limit Methodology 
+The “NYSRC Reliability Rules for Planning and Operating the New York State Power System” (NYSRC Reliability 
+Rules) provides the methodology for developing System Operating Limits (SOLs) within the NYISO Reliability 
+Coordinator Area.   NYSRC Reliability Rules require compliance with all North American Electric Reliability 
+Corporation (NERC) Standards and Northeast Power Coordinating Council (NPCC) Standards and Criteria.  Rule C.1 
+of the NYSRC Reliability Rules sets forth the contingencies to be evaluated and the performance requirements to be 
+applied in developing SOLs.  Rule C.1 also incorporates NYISO Transmission Planning Guideline #3-1, the 
+“Guideline for Stability Analysis and Determination of Stability-Based Transfer Limits” found in Attachment H to 
+the NYISO “Transmission Expansion and Interconnection Manual.” 
+Interface Summary  
+Table 2: Total East Interface Definition 
+Name 
+Line 
+ ID  (kV) 
+ 
+Name 
+Line 
+ ID (kV) 
+Edic-Gordon Rd* 14 345  *Waldwick-S. Mahwah K3411 345 
+Edic*-Princetown 351 345  Hudson-Farragut* C3403 345 
+Edic*-Princetown 352 345  Hudson-Farragut* B3402 345 
+Marcy-New Scotland* 18 345  Linden-Goethals* A2253 230 
+*Fraser-Gilboa GF5-35 345  *Cresskill – Sparkill 751 69 
+East Springfield - Inghams* 7 115  *Harings Corners – W. Nyack 701 69 
+Inghams PAR PAR 115  *Harings Corners – Corporate Drive 703 138 
+Inghams Bus Tie R81 115  *Montvale – Bluehill 44 69 
+Middletown-Rock Tavern* CCRT34 345  *Montvale – Bluehill 43 69 
+Coopers Corners- Dolson 
+Ave* CCDA42 345 
+ 
+*Montvale – Pearl River 491 69 
+Middletown 345*/138 BK114 345/138  *Harings Corners – Pearl River 45 34 
+West Woodbourne 115/69* BK1 115/69  *S. Mahwah – Ramapo 51 138 
+*Plattsburgh-Sand Bar PV20 115  *S. Mahwah - Hilburn 65 69 
+Hopatcong-Ramapo* 5018 500  S. Mahwah 138/345* BK258 138/345 
+*Waldwick- S. Mahwah J3410 345     
+
+===== PDF PAGE 7 =====
+   
+          Total East Stability Limits Analysis |   7 
+ 
+ 
+ 
+  
+Figure 1. NYCA Transmission System Interface (Total East inset) 
+ 
+  
+
+
+===== PDF PAGE 8 =====
+   
+          Total East Stability Limits Analysis |   8 
+ 
+System Representation and Transfer Case Development 
+The analysis was based on the 2022 NYISO Dynamics Base Case that was developed from the 2021 MMWG 
+Dynamics Base Case with the NYISO representation updated to reflect the results of the NYISO 2022 Summer 
+Operating Study. 
+The base case model includes the following: 
+- the NYISO Transmission Operator area; 
+- all Transmission Operator areas contiguous with NYISO; 
+- all system elements modeled as in-service; 
+- all generation represented; 
+- phase shifters in the regulating mode;  
+- the NYISO Load Forecast; 
+- transmission facility additions and retirements; 
+- generation facility additions and retirements; 
+- Remedial Action Scheme (RAS) models currently existing or projected for implementation within the 
+studied time horizon;  
+- series compensation for each line at the expected operating level; and 
+- facility Ratings as provided by the Transmission Owner and Generator Owner. 
+ 
+Total East transfers were developed from generation shifts between IESO and NYISO West (Zone A) through 
+Central (Zone C) to Capital (Zone F), and ISO New England, as well as transfers from PJM into Capital (Zone F) and 
+Hudson (Zone G) along the terms of the joint operating agreement between NYISO and PJM. The base case was 
+established with a high transfer on Dysinger East (> 2900 MW), Moses South (> 2900 MW) and NY-ISO-NE (1800 
+MW). 
+This study was performed with Chateauguay HVDC terminals taken out-of-service with the Chateauguay transfers 
+maintained with the Beauharnois units. The Fraser SVC, Leeds SVC and Marcy FACTs were modeled in-service, the 
+base case load flow were solved with the SVCs/FACTs set to minimum (0MVAr) output by adjusting their 
+respective voltage schedules in the pre-contingency case. 
+The capacitor banks at Oakdale and Edic were producing maximum VAR output of 135MVAR and 200MVAR 
+respectively.   This study placed the Knickerbocker series compensation in service at 0% compensation. Three 
+transfer cases were developed as shown on Table 3. 
+  
+
+===== PDF PAGE 9 =====
+   
+          Total East Stability Limits Analysis |   9 
+ 
+Table 3 
+Transfer Cases 
+A TE  8415, Marcy Statcom I/S, Leeds I/S,  Fraser I/S, 5018 I/S 
+B TE  7560, Marcy Statcom I/S, Leeds I/S,  Fraser I/S, 5018 O/S 
+C TE  7560, Any SVC/Statcom O/S, 5018 O/S 
+  
+
+===== PDF PAGE 10 =====
+   
+          Total East Stability Limits Analysis |   10 
+ 
+Tested Contingencies 
+Sixty One (61) contingencies were tested for each developed Total East transfer case scenario. Table 4 provides the 
+identification and description of these contingencies. 
+Table 4. 
+Contingencies applied for evaluating Total East stability transfer limits. 
+ 
+# ID Description 
+1 TE02(LLG) LLG@FISHKILL-L/O TOWER(2-1938)FISHKILL*PLEASANTVILLE 
+2 TE03(LLG) LLG@SPRAIN BK-L/O TOWER(2-1956)MILLWOOD*SPRAIN BROOK 
+3 TE10 SLG-STK@RAMAPO (BKR T77-94-2) – L/O RAMAPO-ROCK TAVERN (77) / BKUP CLR Y94 
+4 TE12 SLG-STK@RAMAPO500 (BRK T1500-W72-2) – L/O RAMAPO-HOPATCONG (5018) / BKUP CLR#W72 
+5 TE14 SLG/STK@LEEDS*GILBOA / STK R391 / CLR#91 PL.VALLEY 
+6 TE15 SLG-STK LEEDS BKRR9293 L/O LEEDS-VW59BKUPCLR93N.SCOT 
+7 TE16 SLG/STK @ ROSETON/ROSETON*ROCK TAVERN#311/STK 31151 
+8 TE18(LLG) LLG@LADENTOWN-L/O TOWER Y88/Y94 DOUBLE CIRCUIT 
+9 TE20(LLG) LLG@DUNWOODIE-L/O TOWER(2-1938)PLEASANTVILLE*DUNWO. 
+10 TE21 3PH@PLEAS.VAL-L/O TOWER(2-1961)PV*MILLWOOD DBL CKT 
+11 TE27 SLG/STK@ROCK TAVERN*COOPERS/CLR ROCK TAVN*RAMAPO 
+12 TE29 3PH@N.SCOT / N.SCOT-LEEDS#93 W/HS RCL 
+13 TE30 3PH@LEEDS / GILBOA * LEEDS GL-3 
+14 TE31 3PH@GILBOA – L/O GILBOA - NEW SCOTLAND (GNS-1) 
+15 TE32 3PH@NEW SCOTLAND - 77 BUS 
+16 TE33 3PH@NEW SCOTLAND - 99 BUS 
+17 TE34 SLG-STK@GILBOA/GILBOA*NSCOT / STUCK 3208 
+18 TE35 3PH-NC@LEEDS – L/O LEEDS-ATHENS#95 W/HS RCL 
+19 TE36 3PH @ LEEDS / LEEDS - HURLEY AVENUE 
+20 TE38 3PH/NC @ ROCK TAVERN / ROSETON * ROCK TAVERN #311 
+21 TE39 STORM-L/O 69/J3410 W/OUT FAULT & 1.1SEC LATER LLG@LADENTOWN – L/O Y88/Y94 DCT W/RCL 
+22 TE40 (LLG) LLG@RAMAPO - L/O 69/J3410+70/K3411 DCT 
+23 TE41 SLG-STK@GILBOA (BKR 3208) – L/O GILBOA - LEEDS (GL-3) / BKUP CLR GILBOA#1, 2 
+
+===== PDF PAGE 11 =====
+   
+          Total East Stability Limits Analysis |   11 
+ 
+24 TE42 3PH-NC@RAMAPO500 – L/O RAMAPO-HOPATCONG 
+25 TE43 3PH-NC@VANWGNR - LO-VANWGNR-PLTVLLEYY59WHSRCL 
+26 TE44(LLG) LLG@RAMAPO - L/O RAMAPO - ROCK-TAVERN 77 & 76 / DCT 
+27 TE45 3PH-NCLEEDS/LO LEEDS-VANWGNR59WHSRCL 
+28 TE46 SLG-STK/VANWGNR BKRR12/LO PLTVLLEY-VANWGNRY58BKUPCLR91 
+29 TE47 SLG-STK/VANWGNR BKRR12/LO ATHENS-VANWGNR91 BKUP CLR Y58 
+30 CE03 SLG-STK@EDIC345 (BKR R935) – L/O EDIC-GORDON ROAD #14 / BKUP CLR FE1 
+31 CE06 3PH-NC@MARCY345 – L/O EDIC-MARCY (UE1-7) 
+32 CE07(LLG) LLG@MARCY/EDIC - L/O MARCY-COOPERS (UCC2-41) & EDIC-FRASER (EF24-40) DCT 
+33 CE07AR(LLG) LLG@MARCY/EDIC - L/O MARCY-COOPERS (UCC2-41) & EDIC-FRASER (EF24-40) DCT W/RCL 
+34 CE09 SLG-STK@EDIC345KV – L/O FITZ-EDIC #FE-1/BKUP CLR#14 
+35 CE15 SLG-STK@MARCY345(BKR 3108) – L/O VOLNEY-MARCY (VU-19) / BKUP CLR#UE1-7 
+36 CE36 SLG--STK@SCRIBA345 (BKR R100)/SCRIBA-FITZ #10/ BKUP CLR SCRIBA 345-SCRIBA 115 XFMR 
+37 CE99 SLG-STK@SCRIBA345 (BKR R935) – L/O SCRIBA-VOLNEY 21 / BKUP CLR FITZ-SCRIBA #10 
+38 SA01_Q556 SLG-STK@EDIC345 (BKR R915) – L/O EDIC-FRASER EF24-40 / BKUP CLR 2-15 
+39 SA24_Q556 LLG@PRINCETOWN- L/O PRINCETOWN-EDIC (351) & PRINCETOWN-EDIC (352) 
+40 SA25_Q556 LLG@MARCY/EDIC - L/O MARCY-COOPERS (UCC2-41) & EDIC-PRINCETOWN (351) DCT 
+41 SA26_Q556 LLG@PRINCETOWN/EDIC - L/O EDIC-FRASER (EF24-40) & EDIC-PRINCETOWN (352) DCT 
+42 SA27_Q556 SLG-STK@EDIC345 (BKRR915) – L/O EDIC-PRINCETOWN / BKUP CLR#2-15 
+43 P1-2-F14 3PH@KNICKERBOCKER – L/O KNICKERBOCKER – ALPS (6) 
+44 P1-2-F15 3PH@ALPS – L/O ALPS – KNICKERBOCKER (6) 
+45 P1-2-F20 3PH@KNICKERBOCKER – L/O KNICKERBOCKER – PLEASANT VALLEY (Y57) 
+46 P1-2-F21 3PH@PLEASANT VALLEY – L/O PLEASANT VALLEY – KNICKERBOCKER (Y57) 
+47 P1-2-F31 3PH@NEW SCOTLAND – 66 BUS – L/O NEW SCOTLAND – KNICKERBOCKER (2) 
+48 P1-2-F32 3PH@KNICKERBOCKER – L/O NEW SCOTLAND – KNICKERBOCKER (2) 
+49 P4-2-F13_#4 SLG-STK@KNICKERBOCKER (BKR 4) – L/O KNICKERBOCKER – NEW SCOTLAND (2) 
+50 P4-2-F13_#7 SLG-STK@KNICKERBOCKER (BKR 7) – L/O KNICKERBOCKER – NEW SCOTLAND (2) 
+51 P4-2-F14_#5 SLG-STK@KNICKERBOCKER (BKR 5) – L/O KNICKERBOCKER – ALPS (6) 
+52 P4-2-F14_#7 SLG-STK@KNICKERBOCKER (BKR 7) – L/O KNICKERBOCKER – ALPS (6) 
+53 P4-2-F15 SLG-STK@ALPS (BKR R2) – L/O ALPS – KNICKERBOCKER (6) 
+
+===== PDF PAGE 12 =====
+   
+          Total East Stability Limits Analysis |   12 
+ 
+54 P4-2-F20_#4 SLG-STK@KNICKERBOCKER (BKR 4) – L/O KNICKERBOCKER – PLEASANT VALLEY (Y57) 
+55 P4-2-F20_#5 SLG-STK@KNICKERBOCKER (BKR 5) – L/O KNICKERBOCKER – PLEASANT VALLEY (Y57) 
+56 P4-2-F21 SLG-STK@PLEASANT VALLEY (BKR RNS3) – L/O PLEASANT VALLEY – KNICKERBOCKER (Y57) 
+57 P4-2-F31 SLG-STK@NEW SCOTLAND – 66 BUS (BKR R2) – L/O NEW SCOTLAND – KNICKERBOCKER (2) 
+58 P7_F1 L/O TOWER KNICKERBOCKER – PLEASANT VALLEY 345 & FORT ORANGE – VALKIN 115 DBL CKT 
+59 P7_F5 L/O TOWER KNICKERBOCKER – PLEASANT VALLEY 345 & ADM MILLING – CHURCHTOWN 115 DBL CKT 
+60 P7_F6 L/O TOWER KNICKERBOCKER – PLEASANT VALLEY 345 & CHURCHTOWN – BLUE STORES 115 DBL CKT 
+61 P7_F8 L/O TOWER KNICKERBOCKER – PLEASANT VALLEY 345 & MILAN – PLEASANT VALLEY 115 DBL CKT 
+ 
+Contingencies 1, 2, 8, 9 and 10 are tower three-phase faults, which are beyond NYSRC criteria for the 
+determination of NYISO System Operating Limits.   Those contingencies were only examined on an informational 
+basis.  
+ 
+Monitored Parameters 
+In order to assess system stability response for the Total East power transfer scenarios considering contingencies, 
+the following parameters were monitored and analyzed: 
+ Generators’ angles, power outputs, terminal voltages in the following areas/zones (West, North, Mohawk, 
+Capital, representative generators from West, Central, Hudson and Capital);
+ 
+ Bus voltages around Total East, Western NY and Central East especially at Edic and Pleasant Valley. 
+The recommended limits in this report are all based on stable system response at the highest transfer level tested. 
+There were no instances of any system or unit instability observed in any of the simulations. 
+Discussion 
+Angle, Voltage, and Frequency Monitoring 
+Machine angle, voltage and frequency were employed in this analysis as the key indicators of system stability. 
+Machine angles at Niagara and Athens, voltages at Edic and Pleasant Valley stations and frequency at New Scotland 
+station were plotted for the CE-99 contingency on the all lines in-service scenario, as shown in Figure 2.   The CE99 
+contingency consists of a SLG-STK@SCRIBA345 (BKR R935) – L/O SCRIBA-VOLNEY 21 / BKUP CLR FITZ-SCRIBA 
+#10. 
+  
+
+===== PDF PAGE 13 =====
+   
+          Total East Stability Limits Analysis |   13 
+ 
+ 
+Edic voltage was selected as the representative indicator of system performance for the CE-99 contingency in the 
+discussions that follow.  Similar plots for all the Total East contingencies simulated are included in the appendices.    
+ 
+ 
+Figure 2. Voltage Angle and Frequency for scenario with all equipment in-service 
+ 
+Most Severe Contingency  
+Edic voltages were plotted for all the Total East contingencies as shown in Figure 3.  It can be seen from Figure 3 
+that the voltage response at Edic 345KV is most severe for CE-99 contingency compared to all other Total East 
+contingencies. The magnitude of the post contingency voltage swings was found to be the largest when the CE-99 
+contingency was applied. Similar plots for all the Total East contingencies simulated are included in the 
+appendices. 
+ 
+
+
+===== PDF PAGE 14 =====
+   
+          Total East Stability Limits Analysis |   14 
+ 
+ 
+Figure 3. Edic Voltage response for all contingencies for all equipment in-service 
+CE99 
+
+===== PDF PAGE 15 =====
+   
+          Total East Stability Limits Analysis |   15 
+ 
+ 
+Figure 3 (Continued). Edic Voltage response for all contingencies for all equipment in-service 
+  
+
+
+===== PDF PAGE 16 =====
+   
+          Total East Stability Limits Analysis |   16 
+ 
+5018 Out of Service 
+Machine angle, voltage and frequency were employed in this analysis as the key indicators of system stability and 
+the dynamic response of the system under this outage condition is shown in Fig 4. All dynamic responses were 
+clearly stable for this configuration at a test level of 7560 MW. The Edic voltage response for all 57 contingencies 
+with 5018 Line out of service is found in Appendix B.     
+ 
+Figure 4. Voltage Angle and Frequency for scenario with 5018 O/S  
+  
+
+
+===== PDF PAGE 17 =====
+   
+          Total East Stability Limits Analysis |   17 
+ 
+ 
+5018 Out of Service and SVCs and STATCOM’s Out of Service 
+Machine angle, voltage and frequency were employed in this analysis as the key indicators of system stability and 
+the dynamic response of the system under this outage condition is shown in Fig 5, 6, 7. All responses were clearly 
+stable for this configuration at a test level of 7560 MW.   
+  
+Figure 5. Voltage Angle and Frequency for scenario with 5018 O/S and Leeds SVC O/S 
+
+
+===== PDF PAGE 18 =====
+   
+          Total East Stability Limits Analysis |   18 
+ 
+ 
+Figure 6. Voltage Angle and Frequency for scenario with 5018 O/S and Fraser SVC O/S 
+ 
+Figure 7. Voltage Angle and Frequency for scenario with 5018 O/S  and Marcy STATCOM O/S 
+  
+
+
+===== PDF PAGE 19 =====
+   
+          Total East Stability Limits Analysis |   19 
+ 
+ 
+Recommendations 
+This report has been reviewed and recommended for NYISO Operating Committee approval by the NYISO 
+Operating Studies Task Force (OSTF) and the System Operations Advisory Subcommittee (SOAS). 
+It is recommended that the stability limit of Total East be increased. The transfer case was set up for a transfer 
+level of 8415MW and a stability limit of 7550MW across Total East. Table 5 outlines the proposed stability limits 
+for Total East and also the stability limit under outage conditions. 
+ 
+# Scenario 
+2023 2023 
+ 
+Total 
+East 
+Stability 
+Limit(M
+W) 
+Total 
+East 
+Tested 
+Transfer 
+Level(M
+W) 
+Total 
+East 
+Stability 
+Limit 
+(MW) 
+Total East 
+Tested 
+Transfer 
+Level 
+(MW) 
+Difference 
+(MW) 
+1 All Lines In 7550 8415 6150 6845 +1400 
+2 5018 Ramapo-Hopatcong 500kV O/S 6800 7560 5400 6015 +1400 
+3 5018 Ramapo-Hopatcong 500kV & Any SVC/STATCOM O/S 6800 7560 5300 5915 +1500 
+4 Edic – Princetown (351&352) 345 kV lines O/S 6150 6845 N/A N/A N/A 
+5 
+Edic – Princetown (351&352) 345 kV lines O/S & 5018 
+Ramapo-Hopatcong 500 kV O/S 5400 6015 N/A N/A N/A 
+6 
+Edic – Princetown (351&352) 345 kV lines O/S & 5018 
+Ramapo-Hopatcong 500 kV O/S & (SVC or Statcom O/S) 5300 5915 N/A N/A N/A 
+ 
+Table 5: Summary of proposed Total East Stability Transfer Limits 
+ 
+ 
+ 
+ 
+ 
+ 

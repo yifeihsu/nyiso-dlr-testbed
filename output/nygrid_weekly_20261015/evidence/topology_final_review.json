@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "review_scope": "Independent source and figure-provenance review of slides 1-6 and 13 of the 15-slide weekly-report draft",
+  "research_snapshot_commit": "0e73b46fed7d9e859d7f1683be019b169270d095",
+  "main_tex": "output/pdf/nygrid_weekly_2026-10-15/main.tex",
+  "main_tex_edited_by_reviewer": false,
+  "status": "passed_topology_content_and_provenance_after_corrections",
+  "content_counts_and_chronology_pass": true,
+  "figure_current_edges_pass": true,
+  "findings": [
+    {
+      "id": "T1",
+      "priority": 2,
+      "slide": 3,
+      "location": "Downstate Network Modifications; left-panel source and label",
+      "finding": "The figure labels its left panel Original 2019 NPCC, but the baseline CSV and audit currently derive from the separate 233-row ENLITEN NPCC.m. The deck's structural baseline is the authors-derived 225-row full parent. Although the selected collapsed endpoint adjacency is identical, the branch-row provenance is not interchangeable.",
+      "precise_fix": "Derive the baseline panel from model_branch_row <= 225 in output/nygrid_2025_downstate/network/branch_register.csv and retain its PARENT keys. Use the nine selected parent rows 32,87,88,89,91,92,93,94,95. Change the panel label to 2019 structural counterpart. Preserve the existing schematic coordinates; the nine drawn endpoint pairs are unchanged. Regenerate the CSV and source audit hashes.",
+      "source_refs": [
+        "NYGRID_2019_DLR_REBUILD.md:21-38",
+        "output/nygrid_2019_full_stage1/paper_source_discrepancy.json",
+        "output/nygrid_2025_downstate/network/branch_register.csv: PARENT:32,87,88,89,91-95",
+        "output/nygrid_weekly_20261015/evidence/visual_downstate_source_audit.json: baseline_branch_count and source_files",
+        "output/pdf/nygrid_weekly_2026-10-15/figures/data/downstate_original_edges.csv"
+      ],
+      "requested_from": "deck_visual",
+      "resolution": "verified_fixed: baseline source is now first225 PARENT records; exported nine keys and endpoints match current frozen parent; label2019 structural counterpart"
+    },
+    {
+      "id": "T2",
+      "priority": 2,
+      "slide": 6,
+      "location": "AC Reconstruction of the Declared Network; third bullet",
+      "current_wording": "Thermal screening excludes voltage-changing branches.",
+      "precise_fix": "Overhead conductor screening excludes voltage-changing branches.",
+      "reason": "The current model excludes these equivalent/transformer paths from overhead conductor heating and weather-dependent DLR; they still receive declared equipment or terminal-limit screening. The broader wording can imply that no thermal/equipment screen exists for them.",
+      "source_refs": [
+        "NYGRID_2025_AC_SYSTEM.md: Branch parameters and their physical interpretation; Whole-network DLR implementation",
+        "output/nygrid_2025_moses_repair/delivery/docs/NYGRID_2025_MOSES_REPAIR_MODEL_STRUCTURE.md:202-224"
+      ],
+      "resolution": "verified_fixed: main.tex now says Conductor DLR excludes voltage-changing branches, which resolves the scope issue"
+    }
+  ],
+  "verified_claims": [
+    {
+      "slides": [
+        1,
+        2,
+        13
+      ],
+      "claim": "Paper is Liu et al., IEEE TPWRS 38(4), 2023; 2019 is the example input year. Authors' released benchmark is 57 buses and 94 AC branches, not the derived 140-bus counterpart.",
+      "source_refs": [
+        "tmp/pdfs/nygrid_2019_paper_review/paper.txt:1-7,31-55",
+        "NYGRID_RELEASED_2019_COMPARISON.md:3-7",
+        "NYGRID_2019_DLR_REBUILD.md:21-38"
+      ]
+    },
+    {
+      "slides": [
+        2,
+        3,
+        13
+      ],
+      "claim": "The construction retains all 140 original bus identities; 191 = 140 + 51 station-detail additions; 148 = 140 + eight retained 345-kV ports; 43 other station terminals are reduced and recovered.",
+      "source_refs": [
+        "NYGRID_2025_DOWNSTATE_REFINEMENT.md:41-55",
+        "NYGRID_2025_SLIM_DOWNSTATE.md:3-12,26-50",
+        "output/nygrid_2025_moses_repair/delivery/docs/NYGRID_2025_MOSES_REPAIR_MODEL_STRUCTURE.md:26-35"
+      ]
+    },
+    {
+      "slides": [
+        2,
+        6,
+        13
+      ],
+      "claim": "Current detailed AC state is 266 buses before Dover and 267 afterward; 75 numerical section buses and one post-Dover regulated port are not additional substations. Current solve retains 148 bus voltages and recovers detailed voltages/currents.",
+      "source_refs": [
+        "output/nygrid_2025_moses_repair/delivery/structure_inputs/structure_export_summary.json",
+        "output/nygrid_2025_moses_repair/delivery/docs/NYGRID_2025_MOSES_REPAIR_MODEL_STRUCTURE.md:11-42,144-176"
+      ]
+    },
+    {
+      "slides": [
+        4
+      ],
+      "claim": "Rainey-Corona is present throughout 2025 after its May 2023 completion; Gowanus-Greenwood and Goethals-Fox Hills activate at next-midnight May21 and May30 policies; Dover full service is Dec19 HB23 EST; F84 energized July28,2019.",
+      "source_refs": [
+        "output/nygrid_2025_downstate/sources/upgrade_register.csv: RCC project rows",
+        "output/nygrid_2025_moses_repair/delivery/structure/dated_state_map.csv",
+        "NYGRID_2025_DOVER_PARAMETERS_APPLIED.md:9-39,53-79",
+        "output/nygrid_2025_line_parameters/sources/projects/CV_InServiceNotice_20190729.txt:28-29"
+      ]
+    },
+    {
+      "slides": [
+        4
+      ],
+      "claim": "Nine predecessor downstate aggregate rows are inactive under registered replacements; most Long Island additions expose historical detail rather than newly constructed 2025 substations.",
+      "source_refs": [
+        "output/nygrid_2025_downstate/network/replacement_register.csv: variant refined_2025",
+        "NYGRID_2025_DOWNSTATE_REFINEMENT.md:41-55,99-127"
+      ]
+    },
+    {
+      "slides": [
+        6
+      ],
+      "claim": "The current model uses coupled AC equations, explicit loss allocation, and complex-admittance recovery; parent41 parameter consistency and section-local parent185/195 compensation are declared synthetic repairs.",
+      "source_refs": [
+        "output/nygrid_2025_moses_repair/delivery/docs/NYGRID_2025_MOSES_REPAIR_MODEL_STRUCTURE.md:52-77,144-200"
+      ]
+    },
+    {
+      "slides": [
+        13
+      ],
+      "claim": "Current generator axis is 1466 = 1437 native + 27 regional loss participants + HQ + PV20; six transfer records are four inherited representations plus two Ontario PAR substitutions, not six physical HVDC assets.",
+      "source_refs": [
+        "output/nygrid_2025_moses_repair/delivery/docs/NYGRID_2025_MOSES_REPAIR_MODEL_STRUCTURE.md:81-100",
+        "output/nygrid_2025_moses_repair/delivery/structure_inputs/structure_export_summary.json"
+      ]
+    }
+  ],
+  "figure_provenance_checks": {
+    "current_exported_parent_records": 120,
+    "current_source": "output/nygrid_2025_moses_repair/delivery/map/geography_data.json",
+    "current_endpoint_mismatches": 0,
+    "current_inactive_post_dover_records": 0,
+    "selected_parent_baseline_records": 9,
+    "original_figure_distinct_endpoint_pairs": 9,
+    "frozen_parent_distinct_endpoint_pairs": 9,
+    "baseline_unique_endpoint_adjacency_matches": true,
+    "parallel_circuits_and_station_voltage_ports_merged_visually": true,
+    "Dover_PAR_self_connections_intentionally_not_drawn": true,
+    "numerical_section_buses_excluded_from_station_diagram": true,
+    "schematic_not_geographic": true,
+    "no_installed_route_or_impedance_claim": true,
+    "scope_note": "The current panel depicts the post-Dover selected network excerpt, not the whole-year topology at every hour and not the complete G-K electrical model. Circuit IDs and source roles remain in companion CSVs."
+  },
+  "render_review": {
+    "images_inspected": [
+      "slide-02.jpg",
+      "slide-03.jpg",
+      "slide-04.jpg",
+      "slide-05.jpg",
+      "slide-06.jpg",
+      "slide-13.jpg"
+    ],
+    "directory": "output/nygrid_weekly_20261015/render",
+    "draft_layout_issues_reported_to_parent": [
+      "Slide2 hierarchy boxes overlap vertically.",
+      "Slides4,5,13 source/scope text is clipped near the footer.",
+      "Draft footers show total slide count1, requiring final multipass compilation."
+    ],
+    "parent_owns_layout_repairs": true,
+    "final_layout_certified_by_this_review": false
+  },
+  "scope_limitations": [
+    "Slide5 operating-input details are covered by the separate input/metrics reviewer; this review checks only their compatibility with topology and current-model semantics.",
+    "No power-flow, OPF, or annual replay was rerun.",
+    "This reviewer did not edit main.tex, existing model data, or source code."
+  ],
+  "final_checked_file_hashes": [
+    {
+      "Path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\pdf\\nygrid_weekly_2026-10-15\\main.tex",
+      "Hash": "C3FDB885167C3884DF066AD3AF63A429008C92F12E87B31D46CCEB2C46F8A276"
+    },
+    {
+      "Path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\pdf\\nygrid_weekly_2026-10-15\\figures\\downstate_comparison.tex",
+      "Hash": "F587E221ABE45E4F494A26F6BF10B75B3393F24311D37214556EC7DE7EB0B9F1"
+    },
+    {
+      "Path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\pdf\\nygrid_weekly_2026-10-15\\figures\\data\\downstate_original_edges.csv",
+      "Hash": "732C455247C60D8053A8C2EA5AF81FD99E5088431A9BB3F61CEAF69D801ADD79"
+    },
+    {
+      "Path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_weekly_20261015\\evidence\\visual_downstate_source_audit.json",
+      "Hash": "93575010765B0FC04162018E72B6EB86034234C1D3F7CE27C8FB12187B489ED9"
+    }
+  ]
+}

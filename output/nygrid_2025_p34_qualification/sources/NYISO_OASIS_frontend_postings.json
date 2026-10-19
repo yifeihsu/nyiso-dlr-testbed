@@ -1,0 +1,1539 @@
+[ {
+  "sidebarTitle" : "Generator",
+  "postingTitle" : "Day-Ahead Market LBMP - Generator",
+  "reportRef" : "P-2B",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "DAM_LBMP_GEN",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Pricing Data",
+      "ordering" : 1.0
+    },
+    "second" : {
+      "displayName" : "Day-Ahead Market (DAM) LBMP",
+      "ordering" : 1.1
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : [ "Dates with corrected prices are highlighted in green.  Files subject to other updates are highlighted in orange.", "The archived files include any corrections or updates made after the initial posting." ],
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 2160,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "NYISO Reference Bus LBMP - DAM",
+  "postingTitle" : "NYISO Reference Bus LBMP - DAM",
+  "reportRef" : "P-28",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "DAM_LBMP_REF_BUS",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Pricing Data",
+      "ordering" : 1.0
+    },
+    "second" : {
+      "displayName" : "Day-Ahead Market (DAM) LBMP",
+      "ordering" : 1.1
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : [ "Dates with corrected prices are highlighted in green.  Files subject to other updates are highlighted in orange.", "The archived files include any corrections or updates made after the initial posting." ],
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 2160,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Zonal",
+  "postingTitle" : "Day-Ahead Market LBMP - Zonal",
+  "reportRef" : "P-2A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "DAM_LBMP_ZONE",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Pricing Data",
+      "ordering" : 1.0
+    },
+    "second" : {
+      "displayName" : "Day-Ahead Market (DAM) LBMP",
+      "ordering" : 1.1
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : [ "Dates with corrected prices are highlighted in green.  Files subject to other updates are highlighted in orange.", "The archived files include any corrections or updates made after the initial posting." ],
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 2160,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Generator",
+  "postingTitle" : "Real-Time Market LBMP - Generator",
+  "reportRef" : "P-24B",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "CURRENT"
+  },
+  "postingEnum" : "RT_LBMP_GEN",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Pricing Data",
+      "ordering" : 1.0
+    },
+    "second" : {
+      "displayName" : "Real-Time Market LBMP",
+      "ordering" : 1.2
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : [ "Dates with corrected prices are highlighted in green.  Files subject to other updates are highlighted in orange.", "The archived files include any corrections or updates made after the initial posting." ],
+  "preambleHtml" : null,
+  "maxZippableDays" : 62,
+  "correctionWindowDuration" : 2160,
+  "currentFileDisplayName" : "Most recent interval"
+}, {
+  "sidebarTitle" : "Zonal",
+  "postingTitle" : "Real-Time Market LBMP - Zonal",
+  "reportRef" : "P-24A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "CURRENT"
+  },
+  "postingEnum" : "RT_LBMP_ZONE",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Pricing Data",
+      "ordering" : 1.0
+    },
+    "second" : {
+      "displayName" : "Real-Time Market LBMP",
+      "ordering" : 1.2
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : [ "Dates with corrected prices are highlighted in green.  Files subject to other updates are highlighted in orange.", "The archived files include any corrections or updates made after the initial posting." ],
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 2160,
+  "currentFileDisplayName" : "Most recent interval"
+}, {
+  "sidebarTitle" : "Generator",
+  "postingTitle" : "Time Weighted/Integrated Real-Time LBMP - Generator",
+  "reportRef" : "P-4B",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "RT_TW_LBMP_GEN",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Pricing Data",
+      "ordering" : 1.0
+    },
+    "second" : {
+      "displayName" : "Time-Wght/Int Real-Time LBMP",
+      "ordering" : 1.3
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : [ "Dates with corrected prices are highlighted in green.  Files subject to other updates are highlighted in orange.", "The archived files include any corrections or updates made after the initial posting." ],
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 2160,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "NYISO Reference Bus LBMP - Time Wght/Int RT",
+  "postingTitle" : "NYISO Reference Bus LBMP - Time Wght/Int RT",
+  "reportRef" : "P-28",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "RT_TW_LBMP_REF_BUS",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Pricing Data",
+      "ordering" : 1.0
+    },
+    "second" : {
+      "displayName" : "Time-Wght/Int Real-Time LBMP",
+      "ordering" : 1.3
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : [ "Dates with corrected prices are highlighted in green.  Files subject to other updates are highlighted in orange.", "The archived files include any corrections or updates made after the initial posting." ],
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 2160,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Zonal",
+  "postingTitle" : "Time Weighted/Integrated Real-Time LBMP - Zonal",
+  "reportRef" : "P-4A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "RT_TW_LBMP_ZONE",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Pricing Data",
+      "ordering" : 1.0
+    },
+    "second" : {
+      "displayName" : "Time-Wght/Int Real-Time LBMP",
+      "ordering" : 1.3
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : [ "Dates with corrected prices are highlighted in green.  Files subject to other updates are highlighted in orange.", "The archived files include any corrections or updates made after the initial posting." ],
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 2160,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Day-Ahead Market",
+  "postingTitle" : "Ancillary Service Prices - Day-Ahead",
+  "reportRef" : "P-5",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "DAM_ASP",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Pricing Data",
+      "ordering" : 1.0
+    },
+    "second" : {
+      "displayName" : "Ancillary Service Prices",
+      "ordering" : 1.4
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : [ "Dates with corrected prices are highlighted in green.  Files subject to other updates are highlighted in orange.", "The archived files include any corrections or updates made after the initial posting." ],
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 2160,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Real-Time Market",
+  "postingTitle" : "Ancillary Service Prices - Real-Time",
+  "reportRef" : "P-6B",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "RT_ASP",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Pricing Data",
+      "ordering" : 1.0
+    },
+    "second" : {
+      "displayName" : "Ancillary Service Prices",
+      "ordering" : 1.4
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : [ "Dates with corrected prices are highlighted in green.  Files subject to other updates are highlighted in orange.", "The archived files include any corrections or updates made after the initial posting." ],
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 2160,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "RTC vs. External RTO CTS Prices",
+  "postingTitle" : "RTC vs. External RTO CTS Prices",
+  "reportRef" : "P-42",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "EXT_RTO_CTS_PRICE",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Pricing Data",
+      "ordering" : 1.0
+    },
+    "second" : {
+      "displayName" : "External RTO CTS Price",
+      "ordering" : 1.5
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Area Control Error",
+  "postingTitle" : "Area Control Error",
+  "reportRef" : "",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 366,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "AREA_CONTROL_ERROR",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "ZIP" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "External Interface Limits",
+  "postingTitle" : "External Interface Limits",
+  "reportRef" : "",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "frontendName" : "NONE"
+  },
+  "postingEnum" : "EXTERNAL_INTERFACE_LIMITS",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Generation Maintenance Report",
+  "postingTitle" : "Generation Maintenance Report",
+  "reportRef" : "P-15",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "frontendName" : "NONE"
+  },
+  "postingEnum" : "GENERATION_MAINTENANCE_REPORT",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Day-Ahead Scheduled Outages",
+  "postingTitle" : "Day-Ahead Scheduled Outages",
+  "reportRef" : "P-54C",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "DAM_SCHEDULED_OUTAGES",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Outages",
+      "ordering" : 2.1
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Outage Schedules",
+  "postingTitle" : "Outage Schedules",
+  "reportRef" : "P-14",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "frontendName" : "NONE"
+  },
+  "postingEnum" : "OUTAGE_SCHEDULES",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Outages",
+      "ordering" : 2.1
+    }
+  },
+  "supportedFormats" : [ "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Outage Schedules CSV",
+  "postingTitle" : "Outage Schedules CSV",
+  "reportRef" : "P-14B",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "frontendName" : "NONE"
+  },
+  "postingEnum" : "OUTAGE_SCHEDULES_CSV",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Outages",
+      "ordering" : 2.1
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Real-Time Actual Outages",
+  "postingTitle" : "Transmission Line Real-Time Actual Outages",
+  "reportRef" : "P-54B",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "CURRENT"
+  },
+  "postingEnum" : "RT_ACTUAL_OUTAGE",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Outages",
+      "ordering" : 2.1
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : "Most recent information"
+}, {
+  "sidebarTitle" : "Real-Time Scheduled Outages",
+  "postingTitle" : "Transmission Line Real-Time Scheduled Outages",
+  "reportRef" : "P-54A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "CURRENT"
+  },
+  "postingEnum" : "RT_SCHEDULED_OUTAGES",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Outages",
+      "ordering" : 2.1
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : "Most recent information"
+}, {
+  "sidebarTitle" : "Day-Ahead Limiting Constraints",
+  "postingTitle" : "Day-Ahead Limiting Constraints",
+  "reportRef" : "P-511A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "DAM_LIMITING_CONSTRAINTS",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Constraints",
+      "ordering" : 2.2
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Limiting Constraints",
+  "postingTitle" : "Limiting Constraints",
+  "reportRef" : "P-33",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "CURRENT"
+  },
+  "postingEnum" : "LIMITING_CONSTRAINTS",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Constraints",
+      "ordering" : 2.2
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : "Most recent information"
+}, {
+  "sidebarTitle" : "Internal & External Interface Limits & Flows",
+  "postingTitle" : "Internal and External Transmission Interface Limits and Flows",
+  "reportRef" : "P-32",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "CURRENT"
+  },
+  "postingEnum" : "INTERFACE_LIMITS_FLOWS",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Interface Flows",
+      "ordering" : 2.3
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : "Most recent information"
+}, {
+  "sidebarTitle" : "Lake Erie Circulation - Day-Ahead",
+  "postingTitle" : "Lake Erie Circulation - Day-Ahead",
+  "reportRef" : "P-53B",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 31,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "ERIE_CIRCULATION_DA",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Interface Flows",
+      "ordering" : 2.3
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Lake Erie Circulation - Real-Time",
+  "postingTitle" : "Lake Erie Circulation - Real-Time",
+  "reportRef" : "P-34A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 31,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "ERIE_CIRCULATION_RT",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Interface Flows",
+      "ordering" : 2.3
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "PAR Flows",
+  "postingTitle" : "Phase Angle Regulator (PAR) Flows",
+  "reportRef" : "P-34",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "CURRENT"
+  },
+  "postingEnum" : "PAR_FLOW",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "PAR",
+      "ordering" : 2.4
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : "Most recent information"
+}, {
+  "sidebarTitle" : "PAR Schedules",
+  "postingTitle" : "Phase Angle Regulator (PAR) Schedules",
+  "reportRef" : "P-53A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "PAR_SCHEDULE",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "PAR",
+      "ordering" : 2.4
+    }
+  },
+  "supportedFormats" : [ "TXT" ],
+  "preambleText" : null,
+  "preambleHtml" : "<p>\n  Refer to the <a href=\"https://mis.nyiso.com/public/txt/parSchedule/defineParSchedule.doc\">PAR Schedule Definition</a>\n  for the structure of this report.\n</p>",
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "ATC/TTC",
+  "postingTitle" : "ATC/TTC",
+  "reportRef" : "P-8",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "ATC_TTC",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "ATC/TTC",
+      "ordering" : 2.5
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Long Term ATC/TTC",
+  "postingTitle" : "Long Term ATC/TTC",
+  "reportRef" : "P-8A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "LONG_TERM_ATC_TTC",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "ATC/TTC",
+      "ordering" : 2.5
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Transfer Limitations",
+  "postingTitle" : "Transfer Limitations",
+  "reportRef" : "",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "TRANSFER_LIMITATIONS",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "ATC/TTC",
+      "ordering" : 2.5
+    }
+  },
+  "supportedFormats" : [ "CSV", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Day-Ahead URR Report",
+  "postingTitle" : "Day-Ahead Uncertainty Reserve Requirements",
+  "reportRef" : "P-73",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "DAM_URR",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Uncertainty Reserve Requirements",
+      "ordering" : 2.6
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Real-Time URR Report",
+  "postingTitle" : "Real-Time Uncertainty Reserve Requirements",
+  "reportRef" : "P-74",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "RT_URR",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Power Grid Data",
+      "ordering" : 2.0
+    },
+    "second" : {
+      "displayName" : "Uncertainty Reserve Requirements",
+      "ordering" : 2.6
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "ISO Load Forecast",
+  "postingTitle" : "ISO Load Forecast",
+  "reportRef" : "P-7",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "ISO_LF",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Load Data",
+      "ordering" : 3.0
+    },
+    "second" : {
+      "displayName" : "Load Forecast/Commitment",
+      "ordering" : 3.1
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Weather Forecast",
+  "postingTitle" : "Weather Forecast",
+  "reportRef" : "P-7A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "LF_WEATHER",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Load Data",
+      "ordering" : 3.0
+    },
+    "second" : {
+      "displayName" : "Load Forecast/Commitment",
+      "ordering" : 3.1
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Zonal Bid Load",
+  "postingTitle" : "Zonal Bid Load",
+  "reportRef" : "P-59",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "ZONAL_BID_LOAD",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Load Data",
+      "ordering" : 3.0
+    },
+    "second" : {
+      "displayName" : "Load Forecast/Commitment",
+      "ordering" : 3.1
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Integrated Real-Time Actual Load",
+  "postingTitle" : "Integrated Real-Time Actual Load",
+  "reportRef" : "P-58C",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "INT_RT_ACT_LOAD",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Load Data",
+      "ordering" : 3.0
+    },
+    "second" : {
+      "displayName" : "Actual Load",
+      "ordering" : 3.2
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Real-Time Actual Load",
+  "postingTitle" : "Real-Time Actual Load",
+  "reportRef" : "P-58B",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "RT_ACTUAL_LOAD",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Load Data",
+      "ordering" : 3.0
+    },
+    "second" : {
+      "displayName" : "Actual Load",
+      "ordering" : 3.2
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "NYISO Capacity Report",
+  "postingTitle" : "NYISO Capacity Report",
+  "reportRef" : "P-60",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 31,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "NYISO_CAPACITY_REPORT",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "HTML" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Real-Time Events",
+  "postingTitle" : "Real-Time Events",
+  "reportRef" : "P-35",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "REAL_TIME_EVENT",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Real-Time Fuel Mix",
+  "postingTitle" : "Real-Time Fuel Mix",
+  "reportRef" : "P-63",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "RT_FUEL_MIX",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Subzones by Transmission Owner",
+  "postingTitle" : "Subzones by Transmission Owner",
+  "reportRef" : "P-23",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "frontendName" : "NONE"
+  },
+  "postingEnum" : "SUB_ZONES_BY_TRANSMISSION_OWNER",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Transmission Owner Information",
+  "postingTitle" : "Transmission Owner Information",
+  "reportRef" : "P-16",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "frontendName" : "NONE"
+  },
+  "postingEnum" : "TRANSMISSION_OWNER_INFORMATION",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ ],
+  "preambleText" : null,
+  "preambleHtml" : "<div style=\"text-align: center;\">\n    <p>CENTRAL HUDSON GAS & ELECTRIC CORPORATION</p>\n    <p>CONSOLIDATED EDISON COMPANY OF NEW YORK, INC</p>\n    <p>LONG ISLAND POWER AUTHORITY</p>\n    <p>NEW YORK POWER AUTHORITY</p>\n    <p>NEW YORK STATE ELECTRIC & GAS CORPORATION</p>\n    <p>NATIONAL GRID WESTERN, CENTRAL & EASTERN</p>\n    <p>ORANGE AND ROCKLAND UTILITIES INC.</p>\n    <p>ROCHESTER GAS AND ELECTRIC CORPORATION</p>\n    <p>NEW YORK TRANSCO, LLC</p>\n    <p>NextEra ENERGY TRANSMISSION NEW YORK, INC.</p>\n    <p>LS POWER GRID NEW YORK CORPORATION I</p>\n</div>",
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Balancing Market Advisory Summary",
+  "postingTitle" : "Balancing Market Advisory Summary",
+  "reportRef" : "P-31",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "HAM_ENERGY",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV", "HTML" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : "Most recent DNI report"
+}, {
+  "sidebarTitle" : "Day-Ahead Market Daily Energy Report",
+  "postingTitle" : "Day-Ahead Market Daily Energy Report",
+  "reportRef" : "P-30",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "DAM_ENERGY",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV", "HTML" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 63,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Day-Ahead IMER Report",
+  "postingTitle" : "Day-Ahead Implied Marginal Emission Rate",
+  "reportRef" : "P-71",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "DAM_IMER",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : "<p>\n    <b>Emissions Data Disclaimer:</b> The NYISO posts this emissions data for informational purposes only. The posted data\n    is based on the calculation methodology and assumptions described in the <a href=\"https://www.nyiso.com/documents/20142/40834869/Emissions%20Transparency_ICAPWG_MIWG_102623_final.pdf/4fcc75fd-bc29-3dc7-f3da-35dd3b168248\">\n    Emissions Transparency presentation</a>. It may contain information received from third parties and unverified\n    by the NYISO. The NYISO expressly disclaims any obligation to correct or update the data made available through\n    this posting. To the maximum extent permissible under law, the NYISO makes no representation or warranties of\n    any kind, express or implied, for the content of this data posting. In no event shall the NYISO be liable for\n    any damages of any kind, including, but not limited to, direct, indirect, general, special, incidental, or consequential\n    damages arising out of any access to or use of this data, or out of any use of or reliance on this data.\n</p>",
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Real-Time IMER Report",
+  "postingTitle" : "Real-Time Implied Marginal Emission Rate",
+  "reportRef" : "P-72",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "RT_IMER",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : "<p>\n    <b>Emissions Data Disclaimer:</b> The NYISO posts this emissions data for informational purposes only. The posted data\n    is based on the calculation methodology and assumptions described in the <a href=\"https://www.nyiso.com/documents/20142/40834869/Emissions%20Transparency_ICAPWG_MIWG_102623_final.pdf/4fcc75fd-bc29-3dc7-f3da-35dd3b168248\">\n    Emissions Transparency presentation</a>. It may contain information received from third parties and unverified\n    by the NYISO. The NYISO expressly disclaims any obligation to correct or update the data made available through\n    this posting. To the maximum extent permissible under law, the NYISO makes no representation or warranties of\n    any kind, express or implied, for the content of this data posting. In no event shall the NYISO be liable for\n    any damages of any kind, including, but not limited to, direct, indirect, general, special, incidental, or consequential\n    damages arising out of any access to or use of this data, or out of any use of or reliance on this data.\n</p>",
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Resource Uplift Report",
+  "postingTitle" : "Resource Uplift Report",
+  "reportRef" : "P-46",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 365,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "RESOURCE_UPLIFT",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Zonal Uplift Report",
+  "postingTitle" : "Zonal Uplift Report",
+  "reportRef" : "P-45",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 365,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "ZONAL_UPLIFT",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Dispatcher Notices",
+  "postingTitle" : "Dispatcher Notices",
+  "reportRef" : "P-25",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "frontendName" : "NONE"
+  },
+  "postingEnum" : "DISPATCHER_NOTICES",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ ],
+  "preambleText" : null,
+  "preambleHtml" : "<script>\n    window.initDispatcherNotices = function() {\n        \n        var iframeUrl;\n        \n        if (window.Environment && window.CloudFrontBaseUrl && window.Environments) {\n            // If local environment, use QA environment URL\n            var env = window.Environment === window.Environments.LOCAL \n                ? window.Environments.QA \n                : null;\n            \n            var baseUrl = window.CloudFrontBaseUrl(env);\n            iframeUrl = baseUrl + '/OP_ANNOUNCEMENT/HTML/current.html';\n        } else {\n            // Fallback if globals are not available\n            console.warn('Environment globals not available, using fallback URL in QA for dispatcher notices iframe');\n            iframeUrl = 'https://oasis-postings.qa.nysdi.com/OP_ANNOUNCEMENT/HTML/current.html';\n        }\n        \n        var iframe = document.getElementById('dispatcher-notices-iframe');\n        \n        // Set the src if not already set\n        if (!iframe.src || iframe.src === window.location.href || iframe.src === '') {\n            iframe.src = iframeUrl;\n        }\n    };\n    \n    // Initialize after a short delay to ensure DOM is ready\n    setTimeout(function() {\n        if (typeof window.initDispatcherNotices === 'function') {\n            window.initDispatcherNotices();\n        }\n    }, 100);\n</script>\n<iframe id=\"dispatcher-notices-iframe\" src=\"\" width=\"100%\" height=\"2600px\" frameborder=\"0\" style=\"min-height: 600px;\"></iframe>",
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "NYISO Operational Announcements",
+  "postingTitle" : "NYISO Operational Announcements",
+  "reportRef" : "P-25",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "CURRENT"
+  },
+  "postingEnum" : "OP_ANNOUNCEMENT",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Operator Initiated Commitments",
+  "postingTitle" : "Operator Initiated Commitments",
+  "reportRef" : "P-26",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "OPERATOR_INITIATED_COMMITMENT",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : "<li style=\"padding-bottom: 0.5em;\">\n  Records are posted to the Operator Initiated Commitment report based on each record's date/time of insertion,\n  not based on the start or end time of the associated action or event. Corrections are similarly posted\n  based on their date/time of insertion. For this reason, users may need to review results from more than one\n  posted report in order to review all records related to a specific action or event.\n</li>\n<li>\n  In compliance with FERC Order 844, the NYISO began posting the Operator Initiated Commitment Report on June\n  11, 2019. This report includes both Day-Ahead Reliability Unit (DARU) commitments and commitments made after\n  the DAM for a reason other than minimizing the total production costs of serving load. The NYISO presented\n  the content and purpose of this report at the August 23, 2018 and November 12, 2018 MIWG meetings.Out-of-Merit,\n  DARU, Supplemental Resource Evaluation (SRE), and Special Case Resource (SCR) events are detailed on the Operator\n  Initiated Commitment report. The Operator Initiated Commitment Report is available via the \n  <a href=\"https://www.nyiso.com/reports-information\">NYISO Public Website Reports & Information Page</a> and\n  is also available on this page.\n</li>",
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "NYISO Bid Data",
+  "postingTitle" : "NYISO Bid Data",
+  "reportRef" : "P-27",
+  "postingView" : "MASKED_BID_DATA",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 3660,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "MASKED_BID_DATA",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "ZIP" ],
+  "preambleText" : [ "The file layout in the archive follows the NYISO 3 Month Bid Data release description.", "Duplicates were removed from the original Gen Bids, Load Bids, and UC Data files for November 1999 through April 2000.", "These files are not posted until the first business day of each month." ],
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Estimated Actuals",
+  "postingTitle" : "BTM Solar Estimated Actuals",
+  "reportRef" : "P-70A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "BTM_ACTUAL_FORECAST",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : {
+      "displayName" : "BTM Solar Information",
+      "ordering" : 4.1
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Installed Capacity Tracking",
+  "postingTitle" : "BTM Estimated Installed Capacity Tracking",
+  "reportRef" : "P-70C",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "BTM_INSTALLED_CAPACITY_TRACKING",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : {
+      "displayName" : "BTM Solar Information",
+      "ordering" : 4.1
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Zonal Forecast",
+  "postingTitle" : "BTM Day Ahead Zonal Forecast",
+  "reportRef" : "P-70B",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 10,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "BTM_DA_FORECAST",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : {
+      "displayName" : "BTM Solar Information",
+      "ordering" : 4.1
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Active Transmission Nodes",
+  "postingTitle" : "Active Transmission Nodes",
+  "reportRef" : "P-66",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "frontendName" : "NONE"
+  },
+  "postingEnum" : "ACTIVE_TRANSMISSION_NODE",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : {
+      "displayName" : "General Information",
+      "ordering" : 4.2
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Generator Names",
+  "postingTitle" : "Generator Names",
+  "reportRef" : "P-19",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "frontendName" : "NONE"
+  },
+  "postingEnum" : "GENERATOR_NAME",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : {
+      "displayName" : "General Information",
+      "ordering" : 4.2
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Load Names",
+  "postingTitle" : "Load Names",
+  "reportRef" : "P-20",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "frontendName" : "NONE"
+  },
+  "postingEnum" : "LOAD_NAME",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : {
+      "displayName" : "General Information",
+      "ordering" : 4.2
+    }
+  },
+  "supportedFormats" : [ "CSV", "HTML", "PDF" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "DOE EIA 930 - Daily Posting",
+  "postingTitle" : "EIA Daily Demand",
+  "reportRef" : "P-930B",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 365,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "EIA_DAILY_DEMAND",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : {
+      "displayName" : "DOE EIA 930",
+      "ordering" : 4.3
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "DOE EIA 930 - Same-Day Hourly Demand",
+  "postingTitle" : "EIA Same Day Hourly Demand",
+  "reportRef" : "P-930A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "frontendName" : "NONE"
+  },
+  "postingEnum" : "EIA_SAME_DAY_DEMAND",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Reports & Information",
+      "ordering" : 4.0
+    },
+    "second" : {
+      "displayName" : "DOE EIA 930",
+      "ordering" : 4.3
+    }
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 0,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "TSC/NTAC Rates",
+  "postingTitle" : "TSC/NTAC Rates",
+  "reportRef" : "P-62A",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 366,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "TSC_NTAC",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Transmission Service Charges",
+      "ordering" : 4.4
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "PDF", "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Transmission Service Charges - Details",
+  "postingTitle" : "Transmission Service Charges - Details",
+  "reportRef" : "P-62C",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 366,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "TSC_DETAIL",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Transmission Service Charges",
+      "ordering" : 4.4
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+}, {
+  "sidebarTitle" : "Transmission Service Charges - Summary",
+  "postingTitle" : "Transmission Service Charges - Summary",
+  "reportRef" : "P-62B",
+  "postingView" : "TABLE",
+  "archiveMode" : {
+    "daysVisibleOnIndexPage" : 366,
+    "frontendName" : "DATE"
+  },
+  "postingEnum" : "TSC_SUMMARY",
+  "sidebarPath" : {
+    "first" : {
+      "displayName" : "Transmission Service Charges",
+      "ordering" : 4.4
+    },
+    "second" : null
+  },
+  "supportedFormats" : [ "CSV" ],
+  "preambleText" : null,
+  "preambleHtml" : null,
+  "maxZippableDays" : 366,
+  "correctionWindowDuration" : 0,
+  "currentFileDisplayName" : null
+} ]

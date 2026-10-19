@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "generated_utc": "2026-10-13T04:58:15.3873324Z",
+  "scope": "fresh-process final-archive extraction cold smoke and post-run manifest verification",
+  "archive": {
+    "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\deliverables\\nygrid_2025_dlr_handoff_20261013\\nygrid_dlr_runtime_20261013.zip",
+    "bytes": 314550890,
+    "sha256": "82821b4983cb8cb8dc24ca3595e15592be3d61a7b6363eb2aac3788d034fcdc9"
+  },
+  "extraction_root": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_dlr_runtime_final_x1113rmr\\nygrid_dlr_runtime_20261013",
+  "extraction_patched_before_smoke": false,
+  "git_ancestor_absent": true,
+  "checked_ancestors": [
+    "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_dlr_runtime_final_x1113rmr\\nygrid_dlr_runtime_20261013",
+    "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_dlr_runtime_final_x1113rmr",
+    "C:\\Users\\Holiday\\AppData\\Local\\Temp",
+    "C:\\Users\\Holiday\\AppData\\Local",
+    "C:\\Users\\Holiday\\AppData",
+    "C:\\Users\\Holiday",
+    "C:\\Users",
+    "C:\\"
+  ],
+  "setup_default_bundled_vendor_used": true,
+  "external_MATPOWER_used": false,
+  "fresh_MATLAB_process_exit_code": 0,
+  "smoke_test_count": 18,
+  "optimization_toolbox_entrypoints_absent": true,
+  "license_features_in_use": {
+    "feature": "matlab",
+    "user": ""
+  },
+  "unapproved_executed_files": [],
+  "unapproved_search_paths": [],
+  "executed_project_files": 40,
+  "executed_vendor_files": 189,
+  "post_smoke_manifest_verification": {
+    "passed": true,
+    "kind": "runtime",
+    "files": 770,
+    "bytes": 369700692,
+    "source_commit": "8188cbec1172219a0414881121ad042b405a4044",
+    "checksum_table_and_manifest_digest_verified": true
+  },
+  "selected_hour": 8508,
+  "thermal_candidate_parent_count": 46,
+  "thermal_candidate_segment_count": 47,
+  "annual_replay_run": false,
+  "NYGRID_OPF_run": false,
+  "installed_asset_DLR_qualification": false,
+  "whole_system_operating_qualification": false,
+  "earlier_patched_diagnostic_is_not_final_proof": true,
+  "evidence_files": [
+    {
+      "name": "loaded_function_dependencies.csv",
+      "bytes": 118066,
+      "sha256": "ca196790b5c31e8b75e813848aece237cb15cd9a7cbf451fbc200ceb978d15ce"
+    },
+    {
+      "name": "matlab_cold_smoke.log",
+      "bytes": 3173,
+      "sha256": "113b09f7d7265153919075da39cbafac658c1b409d5fef014fbfc8acb7fb8371"
+    },
+    {
+      "name": "post_smoke_package_verification.json",
+      "bytes": 206,
+      "sha256": "c0bf898b767b263dc3fa83d41d3d2e5001f2b130381f6eeb47532541e7599635"
+    },
+    {
+      "name": "smoke_receipt.json",
+      "bytes": 138984,
+      "sha256": "604a9cf761b8581957ae24403edd1c2fd6c31eef1515e1db7d037e6647237136"
+    },
+    {
+      "name": "smoke_selected_hour_results.mat",
+      "bytes": 50156007,
+      "sha256": "3433f30c444cf81014c62110713f46c403b239cfc6cc536a4775da73a26ce986"
+    },
+    {
+      "name": "smoke_tests.csv",
+      "bytes": 911,
+      "sha256": "7d64b46167a001361e9c5aa8f02e798d263a544bf6331e74df65d3d4c2b76657"
+    },
+    {
+      "name": "thermal_branch_screen.csv",
+      "bytes": 10597,
+      "sha256": "28a226a74374f758191af9fa59a831d1b965f48acfacf1afb18a94a846a45911"
+    },
+    {
+      "name": "thermal_candidate_and_exclusion_ledger.csv",
+      "bytes": 113940,
+      "sha256": "92bae1b0091da164945fb3a96456b2f1ba39a2e4ec52e40fdbe816ecd680f800"
+    },
+    {
+      "name": "thermal_candidate_segments.csv",
+      "bytes": 20107,
+      "sha256": "81995bb16c07925c466595c6151372d86846f8e027507c1f39c5439405579f9e"
+    },
+    {
+      "name": "thermal_segment_screen.csv",
+      "bytes": 23915,
+      "sha256": "24883336af331e43e349f7ff59266d5bcf8a270613a8bd5da7068dd687f434ee"
+    }
+  ]
+}

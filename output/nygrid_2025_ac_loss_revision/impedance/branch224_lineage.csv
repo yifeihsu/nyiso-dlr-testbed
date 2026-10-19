@@ -1,0 +1,12 @@
+stage,buses,branches,branch_38_77_present,branch_row,source,interpretation,R_pu,X_pu,B_pu
+pinned_Cornell_original_NPCC,140,227,False,,Cornell_NYgrid_original_npcc.mat,No such original NPCC branch,,,
+full_pre_hvdc_case,140,226,True,225.0,output/nygrid_2019_full_stage1/full_year.mat,"Released added E-G aggregate, no circuit identifier",0.02,0.0147,0.0
+base_case,140,225,True,224.0,output/nygrid_2019_full_stage1/full_year.mat,"Released added E-G aggregate, no circuit identifier",0.02,0.0147,0.0
+reduced_final_case,57,94,True,8.0,output/nygrid_2019_full_stage1/full_year.mat,"Released added E-G aggregate, no circuit identifier",0.02,0.0147,0.0
+refined_2025_pre_may_case,191,410,True,224.0,output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat,Original released aggregate inherited without changing R/X/B,0.02,0.0147,0.0
+refined_2025_may21_case,191,410,True,224.0,output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat,Original released aggregate inherited without changing R/X/B,0.02,0.0147,0.0
+refined_2025_may30_case,191,410,True,224.0,output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat,Original released aggregate inherited without changing R/X/B,0.02,0.0147,0.0
+refined_2025_case,191,410,True,224.0,output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat,Original released aggregate inherited without changing R/X/B,0.02,0.0147,0.0
+npcc_original,140,233,False,,System Matpower Format/npcc_original.m,Separate ENLITEN/S7 source family; current Cornell row224 does not originate here,,,
+npcc_ny_lite_s7_seven_interface_perform_direct_candidate,143,246,False,,System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_direct_candidate.m,Separate ENLITEN/S7 source family; current Cornell row224 does not originate here,,,
+npcc_ny_lite_s7_seven_interface_perform_tieline_candidate,143,246,False,,System Matpower Format/npcc_ny_lite_s7_seven_interface_perform_tieline_candidate.m,Separate ENLITEN/S7 source family; current Cornell row224 does not originate here,,,

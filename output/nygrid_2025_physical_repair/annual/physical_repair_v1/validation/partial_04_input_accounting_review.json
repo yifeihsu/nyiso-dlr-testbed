@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "completed": false,
+  "created_utc": "2026-10-15T14:21:49.851550+00:00",
+  "months_checked": 4,
+  "source_qualified_hours": 2848,
+  "candidate_qualified_hours": 2848,
+  "paired_current_baseline_hours": 2846,
+  "candidate_new_success_hours": 2,
+  "current_success_lost_hours": 0,
+  "VQ_qualified_hours": 0,
+  "full_operating_qualified_hours": 0,
+  "all_clock_rows_and_original_source_mask_preserved": true,
+  "native_and_HQ_profiles_and_all_fixed_transfer_targets_preserved": true,
+  "finite_P_Q_S_capability_metadata_reconstructed": true,
+  "physical_limit_violations_reported_without_promoting_failed_operating_cases": true,
+  "loss_ownership_and_regional_accounting_recomputed_from_saved_flows": true,
+  "terminal_amperes_checked_using_actual_voltage_without_gamma_lift": true,
+  "raw_complex_branch_law_and_passive_recovery_audit": "Separate physical_repair/independent review required for final physical validation.",
+  "maximum_independent_errors": {
+    "finite_capability_metadata_MW_MVAr": 0.0,
+    "native_HQ_PG_MW": 1.4217160781981875e-10,
+    "fixed_transfer_MW": 0.0,
+    "loss_budget_MW": 2.8268942742215586e-10,
+    "zonal_load_closure_MW": 2.828528522513807e-10,
+    "served_PD_QD_shape": 1.1368683772161603e-13,
+    "external_loss_increment_MW": 1.6282086789942696e-11,
+    "regional_import_MW": 2.808064891723916e-11,
+    "bus_generation_aggregation": 0.0,
+    "reported_bound_violation_difference": 3.183231456205249e-11,
+    "current_from_power_A": 1.0992309285029478e-09,
+    "phase_control_deg": 0.0
+  },
+  "tolerances": {
+    "finite_capability_metadata_MW_MVAr": 1e-08,
+    "native_HQ_PG_MW": 1e-07,
+    "fixed_transfer_MW": 1e-08,
+    "loss_budget_MW": 1e-05,
+    "zonal_load_closure_MW": 1e-05,
+    "served_PD_QD_shape": 1e-07,
+    "external_loss_increment_MW": 1e-05,
+    "regional_import_MW": 1e-05,
+    "bus_generation_aggregation": 1e-07,
+    "reported_bound_violation_difference": 1e-07,
+    "current_from_power_A": 1e-05,
+    "phase_control_deg": 1e-10
+  },
+  "monthly_counts": [
+    {
+      "month": 1,
+      "source_qualified": 738,
+      "candidate_qualified": 738,
+      "paired": 738,
+      "new": 0,
+      "lost": 0,
+      "solver_exceptions": 0
+    },
+    {
+      "month": 2,
+      "source_qualified": 661,
+      "candidate_qualified": 661,
+      "paired": 661,
+      "new": 0,
+      "lost": 0,
+      "solver_exceptions": 0
+    },
+    {
+      "month": 3,
+      "source_qualified": 735,
+      "candidate_qualified": 735,
+      "paired": 735,
+      "new": 0,
+      "lost": 0,
+      "solver_exceptions": 0
+    },
+    {
+      "month": 4,
+      "source_qualified": 714,
+      "candidate_qualified": 714,
+      "paired": 712,
+      "new": 2,
+      "lost": 0,
+      "solver_exceptions": 0
+    }
+  ],
+  "source_hashes_verified": 851,
+  "producer": {
+    "path": "scripts/nygrid_2025_physical_repair/annual/validate_annual.py",
+    "sha256": "fcf242ea61c4ab8bdd6e3622a22f9a0e6933c3e258e7cb35b7c599bb74cfc4f7",
+    "bytes": 17678
+  },
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/annual_axes.mat",
+      "sha256": "68dd2a9debe4c80d167e57711687aa6362272241f37b50dca7ef11c8074d4b2d",
+      "bytes": 113851
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/annual_network.mat",
+      "sha256": "6517ec6d3fbececbf4155b34d285ae85b176c4442590f9d86a02f297f0739864",
+      "bytes": 275918
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad",
+      "bytes": 6349492
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/baseline_bundle/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171",
+      "bytes": 802063
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/baseline_bundle/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4",
+      "bytes": 54625507
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/baseline_bundle/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf",
+      "bytes": 54767622
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_01.mat",
+      "sha256": "bb1d6805854c7f10ab7cc45b7bcd4b0926ba168b9611a5a13a69405555b27cbb",
+      "bytes": 38795226
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_01_receipt.json",
+      "sha256": "fad66d9ecee1a05feabfcdf11260b04b0de89bea08fab6d79d625f30f698f26d",
+      "bytes": 1269
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_02.mat",
+      "sha256": "8249c8930cf268cf437f27f252e4bcf63e63ff3bcdd398df6300626b3012216d",
+      "bytes": 35075664
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_02_receipt.json",
+      "sha256": "0de6bfabf1be5f62e51ac7e608f2cceff375bc0f5eb82e348585295b40850eb1",
+      "bytes": 1269
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_03.mat",
+      "sha256": "0a4600c1a5ae453a9bbb68b615a5ae0358278923e127fd0d23e0a420925702f4",
+      "bytes": 40676077
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_03_receipt.json",
+      "sha256": "9e2267460208832ef5f89d83c2860d4d423ab98c8e45c78a821b28a7cd4b09f7",
+      "bytes": 1267
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_04.mat",
+      "sha256": "fe2585712dfaa9dce9497d67a362bba4189823d3a71968b8a0d70a687e70c9d2",
+      "bytes": 40233239
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_04_receipt.json",
+      "sha256": "c23410b1c97701e50cdc072a935b9e4bbe0e943187794e48099c8894c5334c58",
+      "bytes": 1268
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/validation/partial_04_failed_hours.csv",
+      "sha256": "3d0b07bede4a4dd5400e55cac887fead8215b68e0d2ba7d3bcb68c8e6558c431",
+      "bytes": 94
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/validation/partial_04_physical_limits.csv",
+      "sha256": "a092f1a32689bc7e09d1f42e908e6e13f018bdbf102aa5266d3466d35793b395",
+      "bytes": 273435
+    }
+  ],
+  "limitations": [
+    "Equation qualification does not certify all voltage/Q/S/current limits or historical as-built asset identity.",
+    "Failed or partial returned iterates remain invalid predictions; failure does not prove global infeasibility."
+  ]
+}

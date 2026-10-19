@@ -1,0 +1,281 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T06:13:03.878425+00:00",
+  "baseline_commit": "51e424a139e0d0ec42fcbbb35749deaf119cffc2",
+  "scope": "Bounded final report, report builder, worked example, counts, attribution, current-reused versus inferred alternatives, and preservation review",
+  "reviewed_by": "independent provenance auditor",
+  "check_count": 14,
+  "checks": [
+    {
+      "name": "inverse_denominators_and_candidate_rows",
+      "passed": true,
+      "detail": {
+        "target_rows": 372,
+        "candidate_rows": 11701,
+        "feasible_parent_counts": {
+          "current_model_RX": 185,
+          "imported_RX": 141
+        }
+      }
+    },
+    {
+      "name": "default_restorations_separate_from_extended_sensitivity",
+      "passed": true,
+      "detail": {
+        "default_parents": [
+          12,
+          29,
+          41,
+          86,
+          102,
+          103,
+          105,
+          108,
+          120,
+          125,
+          165,
+          383,
+          390
+        ],
+        "extended_only_parents": [
+          152,
+          163,
+          164
+        ]
+      }
+    },
+    {
+      "name": "active_eligibility_separate_from_mathematical_fit",
+      "passed": true,
+      "detail": {
+        "4000": {
+          "v1_parent_count": 44,
+          "v2_parent_count": 179,
+          "imported_RX_parent_count": 123,
+          "prior_engineered_RX_parent_count": 56,
+          "segment_count": 251
+        },
+        "8508": {
+          "v1_parent_count": 46,
+          "v2_parent_count": 180,
+          "imported_RX_parent_count": 125,
+          "prior_engineered_RX_parent_count": 55,
+          "runtime_branch_count": 252,
+          "segment_count": 253
+        }
+      }
+    },
+    {
+      "name": "existing_metadata_reused_alternatives_not_substituted",
+      "passed": true,
+      "detail": "The report distinguishes existing runtime realizations from homogeneous inference alternatives and retains heterogeneous Dover segments."
+    },
+    {
+      "name": "worked_example_independent_catalog_forward_reconstruction",
+      "passed": true,
+      "detail": {
+        "R_X_B_pu": [
+          0.0004000000000000001,
+          0.004300000000000001,
+          0.14725397991431763
+        ],
+        "absolute_errors_pu": [
+          5.421010862427522e-20,
+          8.673617379884035e-19,
+          0.0
+        ],
+        "catalog_AC_resistance_at95C_ohm_m": 9.60236220472441e-05,
+        "GMD_m": 7.384465977604916,
+        "length_m": 19832.619926199262,
+        "candidate_count": 112,
+        "catalog_choices": 11,
+        "saved_candidate_rows_for_matching_current_parent1": 112,
+        "saved_candidate_catalog_choices_for_matching_current_parent1": 11
+      }
+    },
+    {
+      "name": "worked_example_conditional_uncertainty_and_B_separate",
+      "passed": true,
+      "detail": "Catalog alternatives, length and charging ranges are conditional; supplied B ranks alternatives without changing the target model."
+    },
+    {
+      "name": "stress_parent41_prior_engineered_not_observed",
+      "passed": true,
+      "detail": {
+        "points": [
+          {
+            "hour_index": 4000,
+            "parent": 41,
+            "parameter_tier": "prior_engineered_RX",
+            "catalog_id": "PRYSMIAN_ACSR_HAWK_477_0_26_7",
+            "circuits": 1,
+            "bundle_count": 1,
+            "base_kV": 115.0,
+            "maximum_series_utilization": 3.65415421196505
+          },
+          {
+            "hour_index": 8508,
+            "parent": 41,
+            "parameter_tier": "prior_engineered_RX",
+            "catalog_id": "PRYSMIAN_ACSR_HAWK_477_0_26_7",
+            "circuits": 1,
+            "bundle_count": 1,
+            "base_kV": 115.0,
+            "maximum_series_utilization": 1.47907619740147
+          }
+        ],
+        "current_R_X_pu": [
+          0.0598327463184317,
+          0.2040452503006289
+        ],
+        "imported_R_X_pu": [
+          0.0018,
+          0.0089
+        ]
+      }
+    },
+    {
+      "name": "weather_VQ_and_operating_scope_qualified",
+      "passed": true,
+      "detail": {
+        "weather_is_observed": false,
+        "VQ_gate_4000": false,
+        "VQ_gate_8508": false,
+        "annual_rerun_for_this_review": false
+      }
+    },
+    {
+      "name": "parent224_failure_scope_is_catalog_conditional",
+      "passed": true,
+      "detail": "Parent 224 rejection is bounded by the declared catalog and geometry; length/circuit degeneracy does not fix its X/R."
+    },
+    {
+      "name": "report_local_links_resolve",
+      "passed": true,
+      "detail": {
+        "checked": 10,
+        "missing": []
+      }
+    },
+    {
+      "name": "CLI_is_one_copyable_line",
+      "passed": true,
+      "detail": [
+        "python scripts/nygrid_2025_conductor_inference/infer_conductors.py --r-pu 0.0004 --x-pu 0.0043 --kv 345 --base-mva 100 --b-pu 0.1472539799143274 --output runs/conductor_example"
+      ]
+    },
+    {
+      "name": "upstream_report_provenance_and_API_hashes_current",
+      "passed": true,
+      "detail": {
+        "report_receipt.json": {
+          "checked": 6,
+          "mismatches": []
+        },
+        "provenance_and_runtime_RXB_review.json": {
+          "checked": 22,
+          "mismatches": []
+        },
+        "independent/inference_api_independent_review.json": {
+          "checked": 10,
+          "mismatches": []
+        }
+      }
+    },
+    {
+      "name": "frozen_model_and_MATLAB_sources_unchanged",
+      "passed": true,
+      "detail": {
+        "protected_source_paths_checked": 79,
+        "tracked_diff_from_baseline": [],
+        "MATLAB_source_hash_mismatches": [],
+        "no_old_annual_or_handoff_replay_performed": true
+      }
+    },
+    {
+      "name": "reported_validation_counts_match_receipts",
+      "passed": true,
+      "detail": {
+        "API": 29,
+        "MATLAB": 35,
+        "independent_physics_reported": 504
+      }
+    }
+  ],
+  "resolved_review_findings": [
+    "Added parent 41 prior-engineered R/X and Hawk attribution with imported/current parameter distinction.",
+    "Rendered the Python CLI invocation as one actual copyable line."
+  ],
+  "remaining_findings": [],
+  "PF_OPF_or_annual_run": false,
+  "prior_model_handoff_files_modified": false,
+  "files_written_by_this_review": [
+    "output/nygrid_2025_conductor_inference/final_report_review.json"
+  ],
+  "sources": [
+    {
+      "path": "NYGRID_2025_CONDUCTOR_INFERENCE.md",
+      "sha256": "50e8115a1f42bc183a74a3d88d10cdd8730bc8d918157761130969834023218d"
+    },
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/build_report.py",
+      "sha256": "42a1edbfd6ca44e0c9b6429e13525dd8f073f3b34ea90a2d687094343f14ed21"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/worked_example.json",
+      "sha256": "2b394c5307c698b675d49c6fbc41283c643f7c9935538087ba3d43243ae6065d"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/report_receipt.json",
+      "sha256": "de276ed9204132650213504ca05d32a7f33315e32a0682a0e47929b18daafb45"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/inverse_search_receipt.json",
+      "sha256": "416e085bec67570c299d010325da09d37b8b540e00a5720edb7cba99014a790b"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/inverse_target_summary.csv",
+      "sha256": "32ee374171861653f155dc1986eeec13ee0bab9b94de1b1628bb6535670f5434"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/feasible_candidate_realizations.csv",
+      "sha256": "d4b86519cba7cf8d544ab15cd32987963b41b79b3224a566b3b206c6baa2ef5b"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/independent/recovered_imported_RX_attribution.csv",
+      "sha256": "1437eeda68c46b0a63fd715326dcb00f349f3cce0d4446a27bd3acb677a3597b"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/provenance_and_runtime_RXB_review.json",
+      "sha256": "0baeb98546b1acb804485e257e2fc5561297205463055b0e6283764c9c867b3b"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/all_parent_parameter_provenance.csv",
+      "sha256": "0f631d329c8ad5a4d0e750819d8c18872980af1f621e018484a9d8527d8d5975"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/matlab_validation/validation_receipt.json",
+      "sha256": "bdcd42a744f89ad32526263212515b07d8f9a4c0870e6564f5ca4124f4054ce1"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/matlab_validation/hour_4000/segment_thermal_screen.csv",
+      "sha256": "f530adb8162597c5e6b63148449b5e26ecae56ffe6e31f994f485c3bd19ea032"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/matlab_validation/hour_8508/segment_thermal_screen.csv",
+      "sha256": "adb27e1c57753f7a348225bb966865980b25671c6e529fde06f8dba591b0ad43"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/independent/inference_api_independent_review.json",
+      "sha256": "79ca27d5e8c8244caf1c31f209baa70f9c46c634cd470c379c60c75a210943fc"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/independent/inverse_physics_review.json",
+      "sha256": "4f7e53ed91f51b6bb1d697f0fc6af97103ece180d7e32c58619227465d902e92"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    }
+  ]
+}

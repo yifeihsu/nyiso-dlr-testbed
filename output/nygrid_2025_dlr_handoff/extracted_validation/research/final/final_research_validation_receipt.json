@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "completed": true,
+  "generated_utc": "2026-10-13T05:05:53.011385+00:00",
+  "scope": "Untouched final research archive extracted outsideGit; saved-year portable comparison and independent post-run package SHA256 readback",
+  "archive": {
+    "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\deliverables\\nygrid_2025_dlr_handoff_20261013\\nygrid_dlr_research_20261013.zip",
+    "bytes": 3974318891,
+    "sha256": "5521c9090de22afc7f3ee2f12d31d517db2eeaf0fbb7a2e865efa3ae56357cc6"
+  },
+  "extraction_root": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_dlr_research_final_3kg5mg1r\\nygrid_dlr_research_20261013",
+  "extraction_patched_before_scoring": false,
+  "git_ancestor_absent": true,
+  "checked_ancestors": [
+    "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_dlr_research_final_3kg5mg1r\\nygrid_dlr_research_20261013",
+    "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_dlr_research_final_3kg5mg1r",
+    "C:\\Users\\Holiday\\AppData\\Local\\Temp",
+    "C:\\Users\\Holiday\\AppData\\Local",
+    "C:\\Users\\Holiday\\AppData",
+    "C:\\Users\\Holiday",
+    "C:\\Users",
+    "C:\\"
+  ],
+  "Git_process_executed": false,
+  "git_executable_on_PATH": false,
+  "fresh_Python_process_exit_code": 0,
+  "tested_environment": {
+    "Python": "3.13.7",
+    "NumPy": "1.26.4",
+    "SciPy": "1.15.2",
+    "pandas": "2.2.3"
+  },
+  "post_scoring_manifest_verification": {
+    "passed": true,
+    "kind": "research",
+    "files": 7268,
+    "bytes": 4778790161,
+    "source_commit": "8188cbec1172219a0414881121ad042b405a4044",
+    "checksum_table_and_manifest_digest_verified": true,
+    "archive_member_name_set_verified": true,
+    "sealed_files_unchanged_after_scoring": true
+  },
+  "source_qualified_hours": 8651,
+  "frozen_old_qualified_hours": 8494,
+  "revised_qualified_hours": 8170,
+  "paired_hours": 8170,
+  "gained_hours": 0,
+  "lost_hours": 324,
+  "metric_rows_recomputed": 1302,
+  "reference_metric_CSV_values_reproduced": true,
+  "all_reference_CSV_bytes_identical_on_this_host": true,
+  "all_reference_NPZ_arrays_identical": true,
+  "NPZ_array_count": 26,
+  "PF_or_OPF_rerun": false,
+  "original_consumer_bytes_unchanged": true,
+  "only_two_Git_identity_lookups_replaced_by_pinned_package_SHA_checks": true,
+  "original_numerical_checks_not_modified": true,
+  "scoring_output_directory": "runs/comparison_2025",
+  "sealed_original_outputs_not_overwritten": true,
+  "joint_operating_qualification_claimed": false,
+  "standalone_portable_scoring_receipt": {
+    "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/portable_scoring_receipt.json",
+    "bytes": 4165,
+    "sha256": "1968462f618aaaa95965582c70226f74a9905b6472095630096a13937ef60803"
+  },
+  "evidence_files": [
+    {
+      "name": "comparison_cohort.csv",
+      "bytes": 1264048,
+      "sha256": "d62536ab7bc148d015e8fff773f835df40fc0ad53e8191b0297841af961c1778"
+    },
+    {
+      "name": "execution_command.txt",
+      "bytes": 265,
+      "sha256": "59b185793fcf0477e96b2c745a1d4bd40a9ec87c052c50fc1022f93510b694a4"
+    },
+    {
+      "name": "extracted_PACKAGE_MANIFEST.json",
+      "bytes": 1819093,
+      "sha256": "6f2c583f2e64facce19ddd42a057172fd60d870d78c234bce5b766a0a7c3fda3"
+    },
+    {
+      "name": "extracted_SHA256SUMS.txt",
+      "bytes": 1048906,
+      "sha256": "7b082fe7f81fc762c482e17b692760c05fd470c3575fffa563b7559ec3b4fa34"
+    },
+    {
+      "name": "hourly_source_accounting.csv",
+      "bytes": 2869816,
+      "sha256": "d514034502bd24277a9346eb01e727d381992129c72f89504bb8f4074cb64918"
+    },
+    {
+      "name": "NY_zonal_loss_accounting.csv",
+      "bytes": 1790,
+      "sha256": "56794ad2e379cd58d668cba9ea0f0788a5e779d1056976ef0f638f9d4267002b"
+    },
+    {
+      "name": "portable_scoring_receipt.json",
+      "bytes": 4165,
+      "sha256": "1968462f618aaaa95965582c70226f74a9905b6472095630096a13937ef60803"
+    },
+    {
+      "name": "post_scoring_package_verification.json",
+      "bytes": 303,
+      "sha256": "3a0571173d306fa89521c07f892a5a51d4c016cc5b9ae65209aeeadfe1afa825"
+    },
+    {
+      "name": "public_interface_metrics.csv",
+      "bytes": 213868,
+      "sha256": "b3cd77cfd14ea1b0c7c7cd5ebcc4b453e1606976c3622556e8553994a581973a"
+    },
+    {
+      "name": "regional_NY_terminal_import_errors.csv",
+      "bytes": 1221,
+      "sha256": "34f2f90b0249ec8037d16ab5f4efee12edfb4eb4abff85d7639a7c7bb79f6f54"
+    },
+    {
+      "name": "scoring_receipt.json",
+      "bytes": 9781,
+      "sha256": "019839ff2046d72b0e01ae8b452ae5d1162b23d6f52aae4b9aca095d5a86086c"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/comparison_cohort.csv",
+      "bytes": 1264048,
+      "sha256": "d62536ab7bc148d015e8fff773f835df40fc0ad53e8191b0297841af961c1778"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/execution_command.txt",
+      "bytes": 265,
+      "sha256": "59b185793fcf0477e96b2c745a1d4bd40a9ec87c052c50fc1022f93510b694a4"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/extracted_PACKAGE_MANIFEST.json",
+      "bytes": 1819093,
+      "sha256": "6f2c583f2e64facce19ddd42a057172fd60d870d78c234bce5b766a0a7c3fda3"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/extracted_SHA256SUMS.txt",
+      "bytes": 1048906,
+      "sha256": "7b082fe7f81fc762c482e17b692760c05fd470c3575fffa563b7559ec3b4fa34"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/hourly_source_accounting.csv",
+      "bytes": 2869816,
+      "sha256": "d514034502bd24277a9346eb01e727d381992129c72f89504bb8f4074cb64918"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/NY_zonal_loss_accounting.csv",
+      "bytes": 1790,
+      "sha256": "56794ad2e379cd58d668cba9ea0f0788a5e779d1056976ef0f638f9d4267002b"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/portable_scoring_receipt.json",
+      "bytes": 4165,
+      "sha256": "1968462f618aaaa95965582c70226f74a9905b6472095630096a13937ef60803"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/post_scoring_package_verification.json",
+      "bytes": 303,
+      "sha256": "3a0571173d306fa89521c07f892a5a51d4c016cc5b9ae65209aeeadfe1afa825"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/public_interface_metrics.csv",
+      "bytes": 213868,
+      "sha256": "b3cd77cfd14ea1b0c7c7cd5ebcc4b453e1606976c3622556e8553994a581973a"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/regional_NY_terminal_import_errors.csv",
+      "bytes": 1221,
+      "sha256": "34f2f90b0249ec8037d16ab5f4efee12edfb4eb4abff85d7639a7c7bb79f6f54"
+    },
+    {
+      "path": "output/nygrid_2025_dlr_handoff/extracted_validation/research/final/scoring_receipt.json",
+      "bytes": 9781,
+      "sha256": "019839ff2046d72b0e01ae8b452ae5d1162b23d6f52aae4b9aca095d5a86086c"
+    }
+  ]
+}

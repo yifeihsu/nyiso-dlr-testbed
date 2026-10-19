@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-15T14:04:38.991795+00:00",
+  "parent": 41,
+  "baseline_R_X_B": [
+    0.0598327463184317,
+    0.2040452503006289,
+    0.024765209011782266
+  ],
+  "repaired_R_X_B": [
+    0.0018,
+    0.0089,
+    0.021267472267637012
+  ],
+  "selection_policy": "Use rank1 of the already-declared imported-RX catalog/geometry inference with originalB used only for ranking; no PF, voltage, interface residual or geographic chord selects parameters.",
+  "candidate_count": 32,
+  "selected_candidate": {
+    "catalog_id": "PRYSMIAN_ACSS_MALLARD_795_0_30_19",
+    "family": "ACSS",
+    "code_word": "Mallard",
+    "reference_temperature_C": 95.0,
+    "circuits": 4,
+    "bundle_count": 1,
+    "bundle_spacing_m": 0.4572,
+    "GMD_m": 3.9484768888938304,
+    "length_m": 10750.872721884722,
+    "base_kV": 115.0,
+    "base_MVA": 100.0,
+    "forward_R_pu": 0.0017999999999999997,
+    "forward_X_pu": 0.008899999999999998,
+    "derived_B_pu": 0.021267472267637012,
+    "R_abs_error_pu": 2.168404344971009e-19,
+    "X_abs_error_pu": 1.734723475976807e-18,
+    "B_abs_difference_pu": 0.048732527732362994,
+    "B_signed_difference_pu": -0.048732527732362994,
+    "B_log_difference": 1.1913164601608182,
+    "conductor_diameter_m": 0.028955999999999996,
+    "conductor_GMR_m": 0.01185672,
+    "conductor_reference_resistance_ohm_per_m": 8.856955380577428e-05,
+    "heat_capacity_J_per_m_K": 1390.9506060909273,
+    "ranking_score": 2.8425754658847078,
+    "installed_conductor_identified": false,
+    "candidate_rank": 1,
+    "realization_id": "candidate_0001"
+  },
+  "thermal_segment": {
+    "branch_row": 41,
+    "branch_key": "PARENT:41",
+    "segment_id": "equivalent_line",
+    "segment_length_m": 10750.872721884722,
+    "circuits": 4,
+    "bundle_count": 1,
+    "base_kv": 115.0,
+    "catalog_id": "PRYSMIAN_ACSS_MALLARD_795_0_30_19",
+    "gmd_m": 3.9484768888938304,
+    "bundle_spacing_m": 0.4572,
+    "reference_temperature_c": 95.0,
+    "temperature_min_c": 25.0,
+    "temperature_max_c": 95.0,
+    "diameter_m": 0.0289559999999999,
+    "gmr_m": 0.01185672,
+    "r_ac25_ohm_per_m": 6.955380577427821e-05,
+    "r_ac75_ohm_per_m": 8.300524934383202e-05,
+    "r_ac200_ohm_per_m": 0.0001177821522309,
+    "heat_capacity_j_m_k": 1390.9506060909273,
+    "emissivity": 0.5,
+    "absorptivity": 0.5,
+    "reference_r_pu": 0.0018,
+    "reference_x_pu": 0.0089,
+    "reference_b_pu": 0.021267472267637012,
+    "r_ref_ohm_per_m_per_subconductor": 8.856955380577428e-05,
+    "reactance_ohm_per_m_per_circuit": 0.00043792723826188403,
+    "capacitance_f_per_m_per_circuit": 9.919399097898724e-12,
+    "parameter_basis": "imported_RX_conditioned_synthetic_catalog_realization_with_geometric_B",
+    "route_length_verified": false,
+    "installed_conductor_identified": false,
+    "current_gamma_lift": false,
+    "parallel_circuit_mutual_coupling_modeled": false,
+    "bare_overhead_thermal_model_applicable": true
+  },
+  "thermal_registry_parameter_basis": "imported_RX_conditioned_synthetic_catalog_realization_with_geometric_B",
+  "thermal_registry_length_min_m": 5.0,
+  "thermal_registry_length_max_m": 250000.0,
+  "terminal_current_policy": "Retain the existing aggregate2000A apparatus ceiling independently of the four-circuit conductor hypothesis; do not multiply hardware capacity or relax a limit to obtain qualification.",
+  "source_static_MVA_limits_changed": false,
+  "installed_asset_identity_claimed": false,
+  "geometric_B_differs_from_imported_B": true,
+  "imported_B_pu": 0.07,
+  "sources": [
+    {
+      "path": "scripts/nygrid_2025_physical_repair/prepare_parent41.py",
+      "sha256": "32358df1a52d569b72ab75b753071a70d64b1299953d11acd51ca0e2b4147039"
+    },
+    {
+      "path": "scripts/nygrid_2025_conductor_inference/infer_conductors.py",
+      "sha256": "11fd9f52f939f2087be2616ffa885c6f63e3861a2b4f086209100e4739fc9b0b"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/line_equivalents.py",
+      "sha256": "f55c9c499f8ee8d7bf925a5a97c3c06c2be55f813d3a256796480cb5201183e6"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/geometry_defaults.csv",
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/thermal_segments.csv",
+      "sha256": "3be6298e619f6b2680f7d2dccc69bea75783d26a172e40b8993366042eae0b1e"
+    },
+    {
+      "path": "output/nygrid_2025_conductor_inference/feasible_candidate_realizations.csv",
+      "sha256": "d4b86519cba7cf8d544ab15cd32987963b41b79b3224a566b3b206c6baa2ef5b"
+    }
+  ]
+}

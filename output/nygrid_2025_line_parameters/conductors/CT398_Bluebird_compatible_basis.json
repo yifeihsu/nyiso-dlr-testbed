@@ -1,0 +1,33 @@
+{
+  "project": "CT_398_NY_border_to_Long_Mountain",
+  "catalog_id": "PRYSMIAN_ACSS_BLUEBIRD_2156_0_84_19",
+  "code_word": "Bluebird",
+  "code_word_status": "manufacturer_2156_ACSS_family_size_compatible_not_installed_vendor_confirmation",
+  "family": "ACSS",
+  "aluminum_kcmil": 2156,
+  "stranding": "84/19",
+  "bundle_count": 1,
+  "bundle_count_basis": "project_CSC_interrogatory_confirms_single_conductor_per_phase;see_project_source_register",
+  "diameter_m": 0.0447548,
+  "gmr_m": 0.0178308,
+  "aluminum_area_mm2": 1092.25588,
+  "source_ac_temperatures_c": [
+    25,
+    75,
+    200
+  ],
+  "source_ac_ohm_per_kft": [
+    0.00882,
+    0.0103,
+    0.0141
+  ],
+  "r_ac95_ohm_per_m": 3.578740157480315e-05,
+  "r_ac180_ohm_per_m": 4.426509186351706e-05,
+  "temperature_95C_is_analysis_scenario_not_CT_line_rating_claim": true,
+  "route_length_m": 8529.5232,
+  "source_catalog_sha256": "87513ead4a76d7ad9a4edb1c2d3c14525c6ff5c0fb7a712b9c488b5d517c774d",
+  "project_design_source_url": "https://portal.ct.gov/lib/csc/pending_petitions/2_petitions_1201through1300/pe1216_filing_eversource.pdf",
+  "project_design_pdf_page": 5,
+  "project_design_printed_page": 3,
+  "limitation": "CT section differs from NY twin795Mallard section;do not assign one uniform conductor to the composite Dover-LongMountain path"
+}

@@ -9,3 +9,68 @@ Desktop.ini
 *.m~
 slprj/
 codegen/
+
+# Reproducible public-source downloads; selected provenance is committed.
+tmp/epa_generation_raw/
+tmp/nonfossil_sources/
+tmp/nyiso_time_audit/
+tmp/infrastructure_status_audit/
+tmp/compact_source_ci_*/
+__pycache__/
+
+# Pinned paper-reproduction downloads and regenerable duplicate input tables.
+tmp/nygrid_2019_reproduction/
+output/nygrid_2019/prepared_mat_interfaces.csv
+output/nygrid_2019/nyiso_source_audit_hourly_quality.csv
+output/nygrid_2019/nyiso_source_audit_hourly_reconstructed.csv
+output/nygrid_2019_full_stage1/capture_runtime/
+
+# Isolated 2025 input build runtime and reproducible duplicate check outputs.
+tmp/nygrid_2025_inputs_runtime_*/
+tmp/nygrid_2025_input_rebuild_check/
+tmp/nygrid_2025_dispatch_*/
+output/nygrid_2025_dispatch/priors/initial_pre_ba_filter/
+output/nygrid_2025_dispatch/priors/initial_pre_nj_native_extension/
+output/nygrid_2025_dispatch/fleet/archive_ny_state_only_20261010/
+tmp/nygrid_2025_downstate_*/
+tmp/nygrid_2025_downstate_*.log
+tmp/downstate_partial_load_pre_repair_code/
+output/nygrid_2025_downstate/validation/initial_partial_K_load_20261010/
+tmp/downstate_clean_rebuild_*/
+tmp/downstate_final_rebuild_*/
+tmp/nygrid_2025_slim_*/
+tmp/nygrid_2025_slim_*.log
+tmp/nygrid_slim_rebuild_*/
+tmp/nygrid_2025_slim_*.js
+tmp/nygrid_2025_moses_*/
+tmp/nygrid_2025_par_*/
+
+# Reproducible colleague archives and internal document-render QA.
+/deliverables/nygrid_2025_dlr_handoff_20261013/
+/output/nygrid_2025_dlr_handoff/document_render/
+/deliverables/nygrid_rx_conductor_supplement_20261013/
+/deliverables/nygrid_2025_latest_model_20261013/
+# Reproducible physical-repair package; versioned source/model/evidence are tracked.
+/deliverables/nygrid_2025_physical_repair_20261015/
+/output/nygrid_2025_latest_handoff/document_render/
+# National inventory downloads are retained locally; source rows, URL/hash
+# receipts and the hash-enforcing retrieval script are versioned.
+/output/nygrid_2025_moses_source_diagnosis/generation/sources/*.xlsx
+/output/nygrid_2025_moses_source_diagnosis/generation/sources/*.zip
+# Reproducible current-model package and local document-render images.
+/deliverables/nygrid_2025_moses_repair_20261015/
+/output/nygrid_2025_moses_repair/delivery/document_render/
+# Weekly report: private template review and reproducible build/render products.
+/output/nygrid_weekly_20261015/template_review/
+/output/nygrid_weekly_20261015/render/
+/output/nygrid_weekly_20261015/figure_work/
+/output/pdf/nygrid_weekly_2026-10-15/*.aux
+/output/pdf/nygrid_weekly_2026-10-15/*.log
+/output/pdf/nygrid_weekly_2026-10-15/*.nav
+/output/pdf/nygrid_weekly_2026-10-15/*.out
+/output/pdf/nygrid_weekly_2026-10-15/*.snm
+/output/pdf/nygrid_weekly_2026-10-15/*.toc
+/output/pdf/nygrid_weekly_2026-10-15/build_stdout.txt
+/output/pdf/nygrid_weekly_2026-10-15/nygrid_weekly_20261015_source.zip
+# Cable-review SVGs are reproducible DOM-test intermediates.
+/output/nygrid_2025_cable_review_map/qa/*.svg

@@ -1,0 +1,211 @@
+graph downstate_changes {
+	bgcolor=white dpi=115 fontcolor="#223246" fontname=Arial fontsize=22 label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="2"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="22">Downstate additions and replaced aggregate branches</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">51 added buses / 62 shown  |  year-end 2025 core; optional NYES paths excluded</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12">Blue square boxes: ADDED buses; gray rounded boxes: ORIGINAL buses. Labels = name / model ID / nominal kV.</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12" COLOR="#226AA5">Blue lines: added historical source circuits</FONT>  |  <FONT POINT-SIZE="12" COLOR="#B87518">Gold dashed: added assumed connections</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12" COLOR="#C04754">Red dashed: replaced original branches (inactive)</FONT>  |  <FONT POINT-SIZE="12" COLOR="#73508E">Purple: unchanged DC equivalents</FONT>  |  <FONT POINT-SIZE="12" COLOR="#7E8791">Gray: retained; gray dotted: idle scaffold</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12">xN = parallel branch count. Schematic, not geographic. Cross-voltage proxies are not certified physical transformers.</FONT></TD></TR></TABLE>> labeljust=l labelloc=t margin=0 outputorder=edgesfirst overlap=false pad=0.35 sep="+16" splines=true start=17
+	node [color="#8E99A6" fillcolor="#F1F3F5" fontcolor="#293648" fontname=Arial fontsize=12 margin="0.10,0.08" penwidth=1.0 shape=box style="rounded,filled"]
+	35 [label="SOUTHINGTEN
+#35  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-35" penwidth=1.0 style="rounded,filled" tooltip="Bus 35: SOUTHINGTEN; 345 kV; accounting zone NA; ORIGINAL; original_parent; source bus 0"]
+	39 [label="LEEDS
+#39  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-39" penwidth=1.0 style="rounded,filled" tooltip="Bus 39: LEEDS; 345 kV; accounting zone G; ORIGINAL; original_parent; source bus 0"]
+	73 [label="PLEASANT VLY
+#73  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-73" penwidth=1.0 style="rounded,filled" tooltip="Bus 73: PLEASANT VLY; 345 kV; accounting zone G; ORIGINAL; original_parent; source bus 0"]
+	74 [label="MILLWOOD
+#74  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-74" penwidth=1.0 style="rounded,filled" tooltip="Bus 74: MILLWOOD; 345 kV; accounting zone H; ORIGINAL; original_parent; source bus 0"]
+	76 [label="RAMAPO
+#76  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-76" penwidth=1.0 style="rounded,filled" tooltip="Bus 76: RAMAPO; 345 kV; accounting zone G; ORIGINAL; original_parent; source bus 0"]
+	77 [label="BUCHANAN
+#77  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-77" penwidth=1.0 style="rounded,filled" tooltip="Bus 77: BUCHANAN; 345 kV; accounting zone G; ORIGINAL; original_parent; source bus 0"]
+	78 [label="CE UG
+#78  |  345 kV
+inherited aggregate proxy" color="#8E99A6" fillcolor="#F1F3F5" id="bus-78" penwidth=1.0 style="rounded,filled" tooltip="Bus 78: CE UG; 345 kV; accounting zone I; ORIGINAL; original_parent; source bus 0"]
+	79 [label="RAV A-3
+#79  |  22 kV
+inherited aggregate proxy" color="#8E99A6" fillcolor="#F1F3F5" id="bus-79" penwidth=1.0 style="rounded,filled" tooltip="Bus 79: RAV A-3; 22 kV; accounting zone K; ORIGINAL; original_parent; source bus 0"]
+	80 [label="NORTHPORT
+#80  |  138 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-80" penwidth=1.0 style="rounded,filled" tooltip="Bus 80: NORTHPORT; 138 kV; accounting zone K; ORIGINAL; original_parent; source bus 0"]
+	81 [label="GOETHALS
+#81  |  345 kV" color="#8E99A6" fillcolor="#F1F3F5" id="bus-81" penwidth=1.0 style="rounded,filled" tooltip="Bus 81: GOETHALS; 345 kV; accounting zone J; ORIGINAL; original_parent; source bus 0"]
+	82 [label="AK-3
+#82  |  22 kV
+inherited aggregate proxy" color="#8E99A6" fillcolor="#F1F3F5" id="bus-82" penwidth=1.0 style="rounded,filled" tooltip="Bus 82: AK-3; 22 kV; accounting zone J; ORIGINAL; original_parent; source bus 0"]
+	10079 [label="EAST 13TH STREET
+#10079  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10079" penwidth=2.1 style=filled tooltip="Bus 10079: EAST 13TH STREET; 345 kV; accounting zone J; ADDED; source_named_station; source bus 79"]
+	10547 [label="UNKNOWN129188
+#10547  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10547" penwidth=2.1 style=filled tooltip="Bus 10547: UNKNOWN129188; 345 kV; accounting zone I; ADDED; source_named_station; source bus 547"]
+	10557 [label="EAST ASTORIA
+#10557  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10557" penwidth=2.1 style=filled tooltip="Bus 10557: EAST ASTORIA; 345 kV; accounting zone J; ADDED; source_named_station; source bus 557"]
+	10560 [label="SHORE RD
+#10560  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10560" penwidth=2.1 style=filled tooltip="Bus 10560: SHORE RD; 345 kV; accounting zone K; ADDED; source_named_station; source bus 560"]
+	10561 [label="UNKNOWN129558
+#10561  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10561" penwidth=2.1 style=filled tooltip="Bus 10561: UNKNOWN129558; 69 kV; accounting zone K; ADDED; source_named_station; source bus 561"]
+	10567 [label="UNKNOWN129899
+#10567  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10567" penwidth=2.1 style=filled tooltip="Bus 10567: UNKNOWN129899; 69 kV; accounting zone K; ADDED; source_named_station; source bus 567"]
+	10588 [label="WEST HEMPSTEAD
+#10588  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10588" penwidth=2.1 style=filled tooltip="Bus 10588: WEST HEMPSTEAD; 69 kV; accounting zone K; ADDED; source_named_station; source bus 588"]
+	10589 [label="EAST GARDEN CITY
+#10589  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10589" penwidth=2.1 style=filled tooltip="Bus 10589: EAST GARDEN CITY; 345 kV; accounting zone K; ADDED; source_named_station; source bus 589"]
+	10593 [label="DUNWOODIE
+#10593  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10593" penwidth=2.1 style=filled tooltip="Bus 10593: DUNWOODIE; 345 kV; accounting zone I; ADDED; source_named_station; source bus 593"]
+	10594 [label="SPRAIN BROOK
+#10594  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10594" penwidth=2.1 style=filled tooltip="Bus 10594: SPRAIN BROOK; 345 kV; accounting zone I; ADDED; source_named_station; source bus 594"]
+	10595 [label="BRUCKNER
+#10595  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10595" penwidth=2.1 style=filled tooltip="Bus 10595: BRUCKNER; 138 kV; accounting zone J; ADDED; source_named_station; source bus 595"]
+	10596 [label="TREMONT
+#10596  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10596" penwidth=2.1 style=filled tooltip="Bus 10596: TREMONT; 138 kV; accounting zone J; ADDED; source_named_station; source bus 596"]
+	10597 [label="NORTH QUEENS
+#10597  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10597" penwidth=2.1 style=filled tooltip="Bus 10597: NORTH QUEENS; 138 kV; accounting zone J; ADDED; source_named_station; source bus 597"]
+	10598 [label="GREAT NECK
+#10598  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10598" penwidth=2.1 style=filled tooltip="Bus 10598: GREAT NECK; 69 kV; accounting zone K; ADDED; source_named_station; source bus 598"]
+	10600 [label="EAST 179TH STREET
+#10600  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10600" penwidth=2.1 style=filled tooltip="Bus 10600: EAST 179TH STREET; 138 kV; accounting zone J; ADDED; source_named_station; source bus 600"]
+	10601 [label="CORONA
+#10601  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10601" penwidth=2.1 style=filled tooltip="Bus 10601: CORONA; 138 kV; accounting zone J; ADDED; source_named_station; source bus 601"]
+	10620 [label="TAP135490
+#10620  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10620" penwidth=2.1 style=filled tooltip="Bus 10620: TAP135490; 69 kV; accounting zone K; ADDED; source_named_station; source bus 620"]
+	10626 [label="VALLEY STREAM
+#10626  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10626" penwidth=2.1 style=filled tooltip="Bus 10626: VALLEY STREAM; 69 kV; accounting zone K; ADDED; source_named_station; source bus 626"]
+	10628 [label="JAMAICA
+#10628  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10628" penwidth=2.1 style=filled tooltip="Bus 10628: JAMAICA; 138 kV; accounting zone J; ADDED; source_named_station; source bus 628"]
+	10774 [label="LADENTOWN
+#10774  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10774" penwidth=2.1 style=filled tooltip="Bus 10774: LADENTOWN; 345 kV; accounting zone G; ADDED; source_named_station; source bus 774"]
+	10858 [label="E. FISHKILL
+#10858  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10858" penwidth=2.1 style=filled tooltip="Bus 10858: E. FISHKILL; 345 kV; accounting zone G; ADDED; source_named_station; source bus 858"]
+	10902 [label="WOOD STREET
+#10902  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10902" penwidth=2.1 style=filled tooltip="Bus 10902: WOOD STREET; 345 kV; accounting zone G; ADDED; source_named_station; source bus 902"]
+	10995 [label="TAP140036
+#10995  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10995" penwidth=2.1 style=filled tooltip="Bus 10995: TAP140036; 69 kV; accounting zone K; ADDED; source_named_station; source bus 995"]
+	10996 [label="TAP140037
+#10996  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-10996" penwidth=2.1 style=filled tooltip="Bus 10996: TAP140037; 69 kV; accounting zone K; ADDED; source_named_station; source bus 996"]
+	11129 [label="GOWANUS
+#11129  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11129" penwidth=2.1 style=filled tooltip="Bus 11129: GOWANUS; 345 kV; accounting zone J; ADDED; source_named_station; source bus 1129"]
+	11130 [label="RAINEY
+#11130  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11130" penwidth=2.1 style=filled tooltip="Bus 11130: RAINEY; 345 kV; accounting zone J; ADDED; source_named_station; source bus 1130"]
+	11132 [label="FARRAGUT
+#11132  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11132" penwidth=2.1 style=filled tooltip="Bus 11132: FARRAGUT; 345 kV; accounting zone J; ADDED; source_named_station; source bus 1132"]
+	11134 [label="LEONARD STREET
+#11134  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11134" penwidth=2.1 style=filled tooltip="Bus 11134: LEONARD STREET; 345 kV; accounting zone J; ADDED; source_named_station; source bus 1134"]
+	11136 [label="WEST 49TH STREET
+#11136  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11136" penwidth=2.1 style=filled tooltip="Bus 11136: WEST 49TH STREET; 345 kV; accounting zone J; ADDED; source_named_station; source bus 1136"]
+	11493 [label="EAST ASTORIA
+#11493  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11493" penwidth=2.1 style=filled tooltip="Bus 11493: EAST ASTORIA; 138 kV; accounting zone J; ADDED; source_named_station; source bus 1493"]
+	11497 [label="EAST GARDEN CITY
+#11497  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11497" penwidth=2.1 style=filled tooltip="Bus 11497: EAST GARDEN CITY; 69 kV; accounting zone K; ADDED; source_named_station; source bus 1497"]
+	11501 [label="DUNWOODIE
+#11501  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11501" penwidth=2.1 style=filled tooltip="Bus 11501: DUNWOODIE; 138 kV; accounting zone I; ADDED; source_named_station; source bus 1501"]
+	11502 [label="SPRAIN BROOK
+#11502  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11502" penwidth=2.1 style=filled tooltip="Bus 11502: SPRAIN BROOK; 138 kV; accounting zone I; ADDED; source_named_station; source bus 1502"]
+	11503 [label="TREMONT
+#11503  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11503" penwidth=2.1 style=filled tooltip="Bus 11503: TREMONT; 69 kV; accounting zone J; ADDED; source_named_station; source bus 1503"]
+	11506 [label="JAMAICA
+#11506  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11506" penwidth=2.1 style=filled tooltip="Bus 11506: JAMAICA; 69 kV; accounting zone J; ADDED; source_named_station; source bus 1506"]
+	11529 [label="RAINEY
+#11529  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11529" penwidth=2.1 style=filled tooltip="Bus 11529: RAINEY; 138 kV; accounting zone J; ADDED; source_named_station; source bus 1529"]
+	11532 [label="WEST 49TH STREET
+#11532  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-11532" penwidth=2.1 style=filled tooltip="Bus 11532: WEST 49TH STREET; 138 kV; accounting zone J; ADDED; source_named_station; source bus 1532"]
+	20001 [label="CRICKET VALLEY
+#20001  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20001" penwidth=2.1 style=filled tooltip="Bus 20001: CRICKET VALLEY 345; 345 kV; accounting zone G; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20002 [label="LONG MOUNTAIN
+#20002  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20002" penwidth=2.1 style=filled tooltip="Bus 20002: LONG MOUNTAIN 345; 345 kV; accounting zone NA; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20003 [label="DOVER
+#20003  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20003" penwidth=2.1 style=filled tooltip="Bus 20003: DOVER 345; 345 kV; accounting zone G; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20004 [label="KNICKERBOCKER
+#20004  |  345 kV
+NYES idle placeholder" color="#226AA5" fillcolor="#DBEEF9" id="bus-20004" penwidth=2.1 style=filled tooltip="Bus 20004: KNICKERBOCKER 345; 345 kV; accounting zone G; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20005 [label="NYPA ANNEX
+#20005  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20005" penwidth=2.1 style=filled tooltip="Bus 20005: NYPA ANNEX 345; 345 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20006 [label="EAST HAMPTON
+#20006  |  69 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20006" penwidth=2.1 style=filled tooltip="Bus 20006: EAST HAMPTON 69; 69 kV; accounting zone K; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20007 [label="GREENWOOD
+#20007  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20007" penwidth=2.1 style=filled tooltip="Bus 20007: GREENWOOD 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20008 [label="FOX HILLS
+#20008  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20008" penwidth=2.1 style=filled tooltip="Bus 20008: FOX HILLS 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20009 [label="GOWANUS RCC PAR
+#20009  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20009" penwidth=2.1 style=filled tooltip="Bus 20009: GOWANUS RCC PAR 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20010 [label="GOETHALS RCC PAR
+#20010  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20010" penwidth=2.1 style=filled tooltip="Bus 20010: GOETHALS RCC PAR 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20011 [label="VERNON
+#20011  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20011" penwidth=2.1 style=filled tooltip="Bus 20011: VERNON 138; 138 kV; accounting zone J; ADDED; source_named_station; source bus 1133"]
+	20012 [label="FRESH KILLS
+#20012  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20012" penwidth=2.1 style=filled tooltip="Bus 20012: FRESH KILLS 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20013 [label="FRESH KILLS
+#20013  |  345 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20013" penwidth=2.1 style=filled tooltip="Bus 20013: FRESH KILLS 345; 345 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	20014 [label="RAINEY RCC PAR
+#20014  |  138 kV" color="#226AA5" fillcolor="#DBEEF9" id="bus-20014" penwidth=2.1 style=filled tooltip="Bus 20014: RAINEY RCC PAR 138; 138 kV; accounting zone J; ADDED; public_station_with_equivalent_connections; source bus 0"]
+	35 -- 73 [label="replaced P32" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-35-73-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:32 (model row 32; frozen_modified2019_parent)" weight=0.05]
+	39 -- 73 [label=x2 color="#B7BEC7" fontcolor="#B7BEC7" fontname=Arial fontsize=10 id="edge-39-73-retained" len=2.8 penwidth=1.1 style=solid tooltip="Retained original AC branch | PARENT:38 (model row 38; frozen_modified2019_parent); PARENT:39 (model row 39; frozen_modified2019_parent)" weight=1]
+	73 -- 74 [label="replaced P87" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-73-74-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:87 (model row 87; frozen_modified2019_parent)" weight=0.05]
+	74 -- 77 [label="replaced P88" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-74-77-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:88 (model row 88; frozen_modified2019_parent)" weight=0.05]
+	74 -- 78 [label="replaced P89" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-74-78-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:89 (model row 89; frozen_modified2019_parent)" weight=0.05]
+	76 -- 77 [label="replaced P91" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-76-77-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:91 (model row 91; frozen_modified2019_parent)" weight=0.05]
+	78 -- 79 [label="replaced P92" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-78-79-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:92 (model row 92; frozen_modified2019_parent)" weight=0.05]
+	78 -- 80 [label="replaced P93" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-78-80-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:93 (model row 93; frozen_modified2019_parent)" weight=0.05]
+	78 -- 81 [label="replaced P94" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-78-81-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:94 (model row 94; frozen_modified2019_parent)" weight=0.05]
+	78 -- 82 [label="replaced P95" color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 id="edge-78-82-replaced" len=2.8 penwidth=2.0 style=dashed tooltip="Replaced original branch (inactive) | PARENT:95 (model row 95; frozen_modified2019_parent)" weight=0.05]
+	10079 -- 10557 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10079-10557-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:210 (model row 286; pinned_PERFORM_2019_electrical_row); PERFORM:211 (model row 287; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10079 -- 11136 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10079-11136-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:212 (model row 288; pinned_PERFORM_2019_electrical_row); PERFORM:213 (model row 289; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10547 -- 10594 [label=x4 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10547-10594-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1107 (model row 290; pinned_PERFORM_2019_electrical_row); PERFORM:1108 (model row 291; pinned_PERFORM_2019_electrical_row); PERFORM:1109 (model row 292; pinned_PERFORM_2019_electrical_row); PERFORM:1110 (model row 293; pinned_PERFORM_2019_electrical_row)" weight=1]
+	74 -- 10547 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-74-10547-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1111 (model row 294; pinned_PERFORM_2019_electrical_row); PERFORM:1112 (model row 295; pinned_PERFORM_2019_electrical_row); PERFORM:1113 (model row 296; pinned_PERFORM_2019_electrical_row)" weight=1]
+	77 -- 10547 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-77-10547-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1114 (model row 297; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10557 -- 11493 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10557-11493-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1152 (model row 298; pinned_PERFORM_2019_electrical_row); PERFORM:1153 (model row 299; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10560 -- 10593 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10560-10593-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1159 (model row 300; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10561 -- 10567 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10561-10567-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1162 (model row 301; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10561 -- 10598 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10561-10598-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1164 (model row 302; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10567 -- 10588 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10567-10588-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1172 (model row 303; pinned_PERFORM_2019_electrical_row); PERFORM:1173 (model row 304; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10567 -- 11497 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10567-11497-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1174 (model row 305; pinned_PERFORM_2019_electrical_row); PERFORM:1175 (model row 306; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10588 -- 10996 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10588-10996-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1212 (model row 307; pinned_PERFORM_2019_electrical_row); PERFORM:1213 (model row 308; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10589 -- 10594 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10589-10594-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1214 (model row 309; pinned_PERFORM_2019_electrical_row); PERFORM:1215 (model row 310; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10589 -- 11497 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10589-11497-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1216 (model row 311; pinned_PERFORM_2019_electrical_row); PERFORM:1217 (model row 312; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10593 -- 10594 [label=x4 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10593-10594-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1226 (model row 313; pinned_PERFORM_2019_electrical_row); PERFORM:1227 (model row 314; pinned_PERFORM_2019_electrical_row); PERFORM:1228 (model row 315; pinned_PERFORM_2019_electrical_row); PERFORM:1229 (model row 316; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10593 -- 11501 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10593-11501-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1234 (model row 317; pinned_PERFORM_2019_electrical_row); PERFORM:1235 (model row 318; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10594 -- 11136 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10594-11136-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1236 (model row 319; pinned_PERFORM_2019_electrical_row); PERFORM:1237 (model row 320; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10594 -- 11502 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10594-11502-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1238 (model row 321; pinned_PERFORM_2019_electrical_row); PERFORM:1239 (model row 322; pinned_PERFORM_2019_electrical_row); PERFORM:1240 (model row 323; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10595 -- 10600 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10595-10600-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1241 (model row 324; pinned_PERFORM_2019_electrical_row); PERFORM:1242 (model row 325; pinned_PERFORM_2019_electrical_row); PERFORM:1243 (model row 326; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10595 -- 11493 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10595-11493-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1245 (model row 327; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10596 -- 11502 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10596-11502-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1248 (model row 328; pinned_PERFORM_2019_electrical_row); PERFORM:1249 (model row 329; pinned_PERFORM_2019_electrical_row); PERFORM:1250 (model row 330; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10596 -- 11503 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10596-11503-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1251 (model row 331; pinned_PERFORM_2019_electrical_row); PERFORM:1252 (model row 332; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10597 -- 11493 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10597-11493-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1257 (model row 333; pinned_PERFORM_2019_electrical_row); PERFORM:1258 (model row 334; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10598 -- 11503 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10598-11503-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1260 (model row 335; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10600 -- 11501 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10600-11501-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1262 (model row 336; pinned_PERFORM_2019_electrical_row); PERFORM:1263 (model row 337; pinned_PERFORM_2019_electrical_row); PERFORM:1264 (model row 338; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10601 -- 10628 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10601-10628-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1265 (model row 339; pinned_PERFORM_2019_electrical_row); PERFORM:1266 (model row 340; pinned_PERFORM_2019_electrical_row); PERFORM:1267 (model row 341; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10601 -- 11493 [label=x4 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10601-11493-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1269 (model row 342; pinned_PERFORM_2019_electrical_row); PERFORM:1270 (model row 343; pinned_PERFORM_2019_electrical_row); PERFORM:1271 (model row 344; pinned_PERFORM_2019_electrical_row); PERFORM:1272 (model row 345; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10620 -- 10626 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10620-10626-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1320 (model row 346; pinned_PERFORM_2019_electrical_row); PERFORM:1321 (model row 347; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10620 -- 10995 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10620-10995-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1322 (model row 348; pinned_PERFORM_2019_electrical_row); PERFORM:1323 (model row 349; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10626 -- 11506 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10626-11506-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1336 (model row 350; pinned_PERFORM_2019_electrical_row); PERFORM:1337 (model row 351; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10628 -- 11506 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10628-11506-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1340 (model row 352; pinned_PERFORM_2019_electrical_row)" weight=1]
+	73 -- 10858 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-73-10858-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1389 (model row 353; pinned_PERFORM_2019_electrical_row); PERFORM:1390 (model row 354; pinned_PERFORM_2019_electrical_row)" weight=1]
+	73 -- 10902 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-73-10902-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1391 (model row 355; pinned_PERFORM_2019_electrical_row); PERFORM:1392 (model row 356; pinned_PERFORM_2019_electrical_row)" weight=1]
+	77 -- 10774 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-77-10774-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1576 (model row 357; pinned_PERFORM_2019_electrical_row)" weight=1]
+	76 -- 10774 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-76-10774-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1577 (model row 358; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10858 -- 10902 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10858-10902-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1689 (model row 359; pinned_PERFORM_2019_electrical_row); PERFORM:1690 (model row 360; pinned_PERFORM_2019_electrical_row)" weight=1]
+	74 -- 77 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-74-77-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1731 (model row 361; pinned_PERFORM_2019_electrical_row); PERFORM:1732 (model row 362; pinned_PERFORM_2019_electrical_row); PERFORM:1733 (model row 363; pinned_PERFORM_2019_electrical_row)" weight=1]
+	74 -- 10902 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-74-10902-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1734 (model row 364; pinned_PERFORM_2019_electrical_row); PERFORM:1735 (model row 365; pinned_PERFORM_2019_electrical_row)" weight=1]
+	76 -- 77 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-76-77-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1738 (model row 366; pinned_PERFORM_2019_electrical_row)" weight=1]
+	10995 -- 10996 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-10995-10996-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1843 (model row 367; pinned_PERFORM_2019_electrical_row); PERFORM:1844 (model row 368; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11129 -- 11132 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11129-11132-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1984 (model row 369; pinned_PERFORM_2019_electrical_row); PERFORM:1985 (model row 370; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11130 -- 11132 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11130-11132-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1988 (model row 371; pinned_PERFORM_2019_electrical_row); PERFORM:1989 (model row 372; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11130 -- 11529 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11130-11529-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1990 (model row 373; pinned_PERFORM_2019_electrical_row); PERFORM:1991 (model row 374; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11132 -- 11134 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11132-11134-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1994 (model row 375; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11529 -- 20011 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11529-20011-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:1997 (model row 376; pinned_PERFORM_2019_electrical_row); PERFORM:1998 (model row 377; pinned_PERFORM_2019_electrical_row); PERFORM:1999 (model row 378; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11134 -- 11136 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11134-11136-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:2000 (model row 379; pinned_PERFORM_2019_electrical_row)" weight=1]
+	11136 -- 11532 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 id="edge-11136-11532-source" len=2.0 penwidth=2.0 style=solid tooltip="Added historical source circuit | PERFORM:2007 (model row 380; pinned_PERFORM_2019_electrical_row); PERFORM:2008 (model row 381; pinned_PERFORM_2019_electrical_row); PERFORM:2009 (model row 382; pinned_PERFORM_2019_electrical_row)" weight=1]
+	78 -- 10593 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-78-10593-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ATTACH:CEUG_DUNWOODIE (model row 383; inherited_parent_budget)" weight=1]
+	79 -- 10589 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-79-10589-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ATTACH:RAVA3_EGC (model row 384; inherited_parent_budget)" weight=1]
+	80 -- 10560 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-80-10560-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ATTACH:NORTHPORT_SHORERD (model row 385; inherited_parent_budget)" weight=1]
+	81 -- 11129 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-81-11129-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ATTACH:GOETHALS_GOWANUS (model row 386; inherited_parent_budget)" weight=1]
+	82 -- 11493 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-82-11493-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ATTACH:AK3_ASTORIA138 (model row 387; inherited_parent_budget)" weight=1]
+	35 -- 20002 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-35-20002-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | CV:BOUNDARY_SOUTHINGTON_LM (model row 388; parent_external_tie_positive_series_budget)" weight=1]
+	73 -- 20001 [label=x2 color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-73-20001-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | CV:PV_CV_F83_PROXY (model row 389; parent_external_tie_positive_series_budget); CV:PV_CV_F84 (model row 391; assumed_equal_existing_F83_proxy)" weight=1]
+	20001 -- 20003 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20001-20003-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | DOVER:CV_DOVER_Y17 (model row 393; positive_split_of_replaced_CV_LM_series_budget)" weight=1]
+	20002 -- 20003 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20002-20003-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | DOVER:DOVER_LM_398 (model row 394; positive_split_of_replaced_CV_LM_series_budget)" weight=1]
+	39 -- 20004 [label=idle color="#7E8791" fontcolor="#7E8791" fontname=Arial fontsize=10 id="edge-39-20004-scaffold" len=2.8 penwidth=2.0 style=dotted tooltip="Algebraic idle connection (not physical) | NYES:KNICKER_IDLE_LEAF (model row 398; optional_NYES_station_scaffold)" weight=1]
+	10601 -- 20007 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-10601-20007-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RECEIVING:GREENWOOD_CORONA (model row 399; declared_omitted_receiving_network_proxy)" weight=1]
+	20007 -- 20008 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20007-20008-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RECEIVING:FOXHILLS_GREENWOOD (model row 400; declared_omitted_receiving_network_proxy)" weight=1]
+	10079 -- 20005 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-10079-20005-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ASSET:ANNEX_E13_Q35_PROXY (model row 401; historical_EastAstoria_East13_two_circuit_template)" weight=1]
+	11497 -- 20006 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-11497-20006-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ASSET:EASTHAMPTON_K_PROXY (model row 402; declared_omitted_LongIsland69_network_proxy)" weight=1]
+	20008 -- 20012 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20008-20012-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ASSET:FRESHKILLS138_FOXHILLS (model row 403; positive_inherited_local_attachment_budget)" weight=1]
+	81 -- 20013 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-81-20013-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | ASSET:FRESHKILLS345_GOETHALS (model row 404; positive_inherited_local_attachment_budget)" weight=1]
+	11129 -- 20009 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-11129-20009-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:PAR:GOWANUS (model row 405; explicit_fixed_transformer_assumption)" weight=1]
+	81 -- 20010 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-81-20010-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:PAR:GOETHALS (model row 406; explicit_fixed_transformer_assumption)" weight=1]
+	11130 -- 20014 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-11130-20014-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:PAR:RAINEY (model row 407; explicit_fixed_transformer_assumption)" weight=1]
+	10601 -- 20014 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-10601-20014-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:CABLE:QUEENS (model row 408; 2019_EastAstoria_Corona_cable_per_mile_template_assumption)" weight=1]
+	20007 -- 20009 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20007-20009-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:CABLE:BROOKLYN (model row 409; 2019_EastAstoria_Corona_cable_per_mile_template_assumption)" weight=1]
+	20008 -- 20010 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 id="edge-20008-20010-assumed" len=2.0 penwidth=2.0 style=dashed tooltip="Added connection with assumed parameters | RCC:CABLE:STATEN (model row 410; 2019_EastAstoria_Corona_cable_per_mile_template_assumption)" weight=1]
+}

@@ -1,0 +1,6 @@
+variant,disposition,R_pu,X_pu,B_pu,evidence,physical_asset_qualified,thermal_conductor_qualified,baseMVA,nominal_kV,branch_row,from_bus,to_bus
+released_equivalent_nominal,accepted_for_explicit_equivalent_study_only,0.02,0.0147,0.0,Exact pinned author-release tuple; X approximately follows paperEq10. R and B have no physical derivation.,False,False,100.0,345.0,224,38,77
+paper_literal_X,arithmetic_sensitivity_only,0.02,0.014649863474060072,0.0,"47miles times0.371ohm/mile divided by1190.25ohm, holding released R/B. Not a physical uncertainty interval.",False,False,100.0,345.0,224,38,77
+lossless_equivalent,unresolved_R_sensitivity_only,0.0,0.0147,0.0,"Zero-loss boundary case for unsupported aggregate R, preserving documented DC reactance. Not an installed-line estimate.",False,False,100.0,345.0,224,38,77
+former_177p539km_single_OH,rejected_as_literal_asset_mapping_preserved_as_historical_model,0.0066055636188178,0.0554579021639292,0.9173402299621884,Geographic/default-conductor fallback applied to nonliteral network endpoints; no identified conductor or route.,False,False,100.0,345.0,224,38,77
+former_X_only_hybrid,rejected_as_production_repair_diagnostic_only,0.0066055636188178,0.0147,0.9173402299621884,Mixes unrelated conductor-derived R/B with released aggregate X; no coherent source tuple or identified hardware.,False,False,100.0,345.0,224,38,77

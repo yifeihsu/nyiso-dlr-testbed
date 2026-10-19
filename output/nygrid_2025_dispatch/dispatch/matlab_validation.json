@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "matlab_version": "26.1.0.3276743 (R2026a) Update 3",
+  "fresh_matpower_hours": 16,
+  "selected_hours": [
+    1,
+    745,
+    1417,
+    2160,
+    2880,
+    3624,
+    4344,
+    5033,
+    5088,
+    5832,
+    6552,
+    6842,
+    7296,
+    7321,
+    7322,
+    8017
+  ],
+  "maximum_branch_error_mw": 1.3642420526593924E-11,
+  "maximum_generation_change_mw": 1.3322676295501878E-11,
+  "maximum_angle_error_deg": 6.5369931689929217E-13,
+  "maximum_generator_bound_violation_mw": 2.2737367544323206E-13,
+  "unqualified_hour_rejected": true,
+  "DC_only": true,
+  "AC_feasibility_validated": false,
+  "input_files": [
+    {
+      "name": "dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "name": "dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "name": "dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "name": "dispatch_network.mat",
+      "sha256": "7fa16e2160edfe79b0ce26ae9262ecac9f1bd4dfde8196637d896e34567451d3"
+    }
+  ],
+  "loader_sha256": "3acff6c7187607c54c8b8e9b4fb4f3ccfe86c2dd3d6c9e22ef8eee75c4ffb2de",
+  "validation_code_sha256": "fab95dbcf07e2679b5eadff66bf40ab2edd76aee1c539d2ef55a883ae8243490"
+}

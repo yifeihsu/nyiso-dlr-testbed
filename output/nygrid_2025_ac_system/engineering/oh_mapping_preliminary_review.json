@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "scope": "preliminary OH/equipment math; cable mapping still pending",
+  "OH_branches": 186,
+  "segments": 187,
+  "max_independent_formula_error_pu": 8.551492847175268e-14,
+  "max_branch_composition_error_pu": 8.551492847175268e-14,
+  "multiplicity_patterns": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      1
+    ]
+  ],
+  "R_loss_identity_independently_checked": true,
+  "current_gamma_lift": false,
+  "F84_static_conductor_rating_separated_from_equipment_ceiling": true,
+  "whole_network_AC_or_thermal_solution_validated": false,
+  "open_item": "Declared hardware terminal amperes need exact terminal-current constraints or clearly qualified MVA-proxy semantics; root implementing constraint.",
+  "checked_files": [
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "6eabe810a76eecc6d8a879d836ab161ef1164ccbf848c4e0437d993724f88f0f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/thermal_segments.csv",
+      "sha256": "51f3ba8dd47077ed4307e3356e773ba8b6baf9df9f89c9dbb4ec70657e4ce477"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/engineering_overlay.mat",
+      "sha256": "d226cc2df7fd1d7aeaa35cf36b2089b242cba9572fe20bf777b14b38f51b23dc"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    }
+  ]
+}

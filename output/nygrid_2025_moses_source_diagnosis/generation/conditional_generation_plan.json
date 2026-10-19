@@ -1,0 +1,35 @@
+{
+  "scope": "Conditional single-component algebra; no AC solve or global fuel conservation adjustment.",
+  "selection": "Explicit requested mean/shape contrasts; no fitted coefficient or scenario selected by residual score.",
+  "initial_readonly_diagnostic_results_seen_before_receipt": true,
+  "target_construction_uses_P32_values": false,
+  "cohort_hours": 8651,
+  "full_calendar_hours": 8760,
+  "unmodeled_hours": 109,
+  "cohort_representativeness_assumption": "Applying a full-calendar EIA mean to qualified hours assumes their mean is representative; no full-month generated-energy claim.",
+  "held_fixed": [
+    "other_D_native_PG",
+    "HQ",
+    "PAR1",
+    "PAR2",
+    "gross_D_load",
+    "primary_minus_midpoint_terminal_correction"
+  ],
+  "cases": {
+    "baseline": {
+      "formula": "Current StLawrence source-derived PG; unchanged."
+    },
+    "EIA_month_mean_preserve_qualified_shape": {
+      "formula": "PG(h)+EIA_month_MWh/full_physical_month_hours-mean(PG on qualified month hours)."
+    },
+    "EIA_month_constant": {
+      "formula": "EIA_month_MWh/full_physical_month_hours at each qualified hour; illustrative constant, not measured hourly output."
+    },
+    "current_month_mean_constant_shape_ablation": {
+      "formula": "Mean(currentPG on qualified month hours) at each qualified hour; preserves current qualified-month energy, not an EIA source correction."
+    }
+  },
+  "P63_Hydro_conservation_repaired": false,
+  "finite_capability_feasibility_not_claimed": true,
+  "default_model_changed": false
+}

@@ -1,0 +1,114 @@
+{
+  "power_scale": "synthetic_existing_gamma_scaled_injections",
+  "base_mva": 100.0,
+  "current_gamma_lift": false,
+  "impedance_gamma_transform": false,
+  "current_definition": "nominal_pi_series_current_excluding_shunt_charging;divide_by_integer_circuits_times_bundle_count",
+  "line_identity": "R_eq=R_sub(T)*L/(n_bundle*n_parallel); X_eq=omega*2e-7*ln(GMD/GMR_bundle)*L/n_parallel; B_eq=n_parallel*omega*C_per_length*L",
+  "ratio_invariant": "X_eq/R_eq is independent of n_parallel and L for identical circuits; n_parallel cannot repair an infeasible X/R ratio.",
+  "bundle_formula": "GMR_bundle=(GMR_sub*n*Rcircle**(n-1))**(1/n), Rcircle=bundle_spacing/(2*sin(pi/n)), n>=2; same expression with physical radius for capacitance",
+  "inferred_length": "After selecting a feasible conductor/bundle/GMD, L=R_eq*n_bundle*n_parallel/R_sub or L=X_eq*n_parallel/x_per_length; compare both before accepting.",
+  "feasibility_policy": "Reject or separately label a branch when no finite candidate has plausible GMD/length. Never force a physical identity by fractional circuit count or fitting interface observations.",
+  "line_R_state_policy": "AC_reference_R_at75C_ACSR_or95C_ACSS is not equilibrium_R(T). Coupled thermal/electrical studies must explicitly update R(T) or retain a labeled fixed-reference approximation.",
+  "per_subconductor_loss_identity": "P_series_loss=3*n_parallel*n_bundle*I_sub**2*R_sub(T)*length; must equal branch series I-squared-R loss.",
+  "heat_capacity_model": {
+    "Al": {
+      "molar_mass_kg": 0.0269815386,
+      "valid_K": [
+        298.0,
+        933.0
+      ],
+      "A": 28.0892,
+      "B": -5.414849,
+      "C": 8.560423,
+      "D": 3.42737,
+      "E": -0.277375
+    },
+    "Fe": {
+      "molar_mass_kg": 0.055845,
+      "valid_K": [
+        298.0,
+        700.0
+      ],
+      "A": 18.42868,
+      "B": 24.64301,
+      "C": -8.91372,
+      "D": 9.664706,
+      "E": -0.012643
+    }
+  },
+  "heat_capacity_uncertainty": "Pure Al and alpha-Fe proxy, constant at reference temperature; manufacturing alloy/coating effects unverified.",
+  "surface_sensitivity": {
+    "reference": {
+      "emissivity": 0.5,
+      "absorptivity": 0.5
+    },
+    "weathered_example": {
+      "emissivity": 0.8,
+      "absorptivity": 0.8
+    },
+    "high_solar_low_emission_stress": {
+      "emissivity": 0.5,
+      "absorptivity": 0.9
+    },
+    "status": "declared scenarios, not statistical bounds"
+  },
+  "equipment_classification": "Voltage-changing, PAR, underground cable, fixed transfer, station reactance and accounting branches are excluded from bare overhead-conductor thermal equations.",
+  "same_voltage_zero_R_policy": "Do not call a finite-X zero-R station equivalent an ideal breaker or fabricate its conductor identity. Assign a finite synthetic equipment ceiling and explicit class.",
+  "Q_policy": "Enforce finite generator Q limits and record PV-to-PQ changes. A synthetic nameplate capability circle requires a declared S_rating and is not a certified machine capability curve.",
+  "source_field_semantics": "MATPOWER branch B is total line charging; RATE_A is MVA; tap0 means the line convention, not proof of an absence of voltage-changing equipment.",
+  "synthetic_not_asbuilt": true,
+  "internal_interface_observations_used": false,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/sources/NIST_Aluminum_solid.web.txt",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7429905&Mask=2",
+      "sha256": "3d59868b81c9c15ad041635b4b4fa62768f356b858cc8bec512b506008b85091"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/sources/NIST_Iron_solid.web.txt",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7439896&Mask=2",
+      "sha256": "e7426d11fa5a4b9c288e417280b219ac0e39e191964b40628b59a85185fdd734"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/sources/MATPOWER_caseformat_8_1.web.txt",
+      "url": "https://matpower.org/documentation/ref-manual/legacy/functions/caseformat.html",
+      "sha256": "4c1914e2999ff63615cefd624d86a8cdf374a308006422bd0228cc7dbef9975f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/sources/DOE_CleanLine_thermal_example.pdf",
+      "url": "https://www.energy.gov/sites/prod/files/2015/04/f22/CleanLinePt2-Appendix-8-A.pdf",
+      "sha256": "8b1778b081b60835eeae3e6de4c3d3f302895a9a16f76f9e08c534859f70032c"
+    }
+  ],
+  "source_catalog": {
+    "path": "output/nygrid_2025_line_parameters/conductors/conductor_catalog.csv",
+    "sha256": "f55a0d0a8e8857117b0e708eb50bc377ad07e209257438ff0851b3c5d3de3bd4"
+  },
+  "Linnet_extension": {
+    "source_pdf": "output/nygrid_2025_line_parameters/conductors/sources/prysmian_acsr_us.pdf",
+    "sha256": "689963f44e8edbb8be50c8867d1a9a656d78638fe813bffe482b525e867ce8b5",
+    "electrical_pdf_page": 3,
+    "mechanical_pdf_page": 2,
+    "electrical_row": "Linnet                      336.4        26x0.1137       7x0.0884        0.3070          0.2640         0.720       0.0503         0.0514         0.0615           530             595        0.0242         0.0855             0.5493",
+    "mechanical_row": "Linnet                       336.4          26x0.1137            7x0.0884           0.3070        0.2640        0.720   461.1          315.6         145.5        68.45%          31.55%         14100        14900     15700"
+  },
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/geometry_defaults.csv",
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/candidate_conductor_catalog.csv",
+      "sha256": "a1d775ccc5f38dd0ec76b82ec2404e8b058bbcce4937834a26ffb4be8dcffe5c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/synthetic_equipment_defaults.json",
+      "sha256": "4548de603528d5652d813bf0cb59f891ea6faa46cbf1908da051099733cf9180"
+    }
+  ]
+}

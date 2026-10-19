@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T00:15:55.476393+00:00",
+  "scope": "Independent root report, contract, README and finalizer readback. A separate reviewer independently reconstructed original-terminal flows and all882 metric rows.",
+  "baseline_HEAD": "3d2d3104879815180b82804861788dd132aed729",
+  "preserved_baseline_file_records": 610,
+  "baseline_manifests_anchored_to_recorded_commit": true,
+  "local_report_links_checked": 21,
+  "reported_numeric_tables_match_bound_evidence": true,
+  "retained_bus_count": 148,
+  "eliminated_bus_counts": [
+    118,
+    119
+  ],
+  "source_qualified_attempts": 8651,
+  "paired_hours": 8494,
+  "unchanged_failed_attempts": 157,
+  "source_excluded_positions": 109,
+  "additional_or_lost_successes": 0,
+  "physical_VQ_generator_qualified_hours": 0,
+  "maximum_paired_original_branch_current_difference_A": 1.4792703950661236e-08,
+  "profile_PD_QD_source_errors_exactly_zero": true,
+  "independently_recomputed_interface_metric_rows": 882,
+  "independent_alignment_review_passed": true,
+  "independent_annual_KCL_current_review_passed": true,
+  "scientific_boundaries_checked": {
+    "requested148_anchor_interface_not_global_minimum": true,
+    "extra_injection_control_ports_retained": true,
+    "matrix_couplings_not_physical_lines": true,
+    "original_branch_current_rows_and_terminal_bases_correct": true,
+    "no_current_gamma_division_or_observed_ampere_claim": true,
+    "equation_profile_recovery_qualification_separate_from_operating_limits": true,
+    "non_slack_and_six_transfer_P_preservation_with_explicit_slack_loss_adjustment": true,
+    "physical_and_NYISO_alignment_failures_not_claimed_repaired": true,
+    "zone_agreement_is_construction_identity_static_bus_shares_not_observed": true,
+    "bounded_native_generation_not_observed_unit_dispatch": true,
+    "P32_membership_terminal_and_unit_qualifications_retained": true,
+    "seven_held_out_scoring_series_distinguished_from_legitimate_boundary_inputs": true,
+    "measured_load_net_of_BTM_solar_and_DR_not_gross_end_use": true,
+    "Q_mode1_five_of_seven_and_historical_mode2_769_outer_iterations_accurate": true,
+    "failed_solves_not_global_infeasibility_proof": true,
+    "archived_byte_verification_distinguished_from_rerun_and_reseal": true
+  },
+  "resolved_review_findings": [
+    "README now names profile and operating gates, slack-loss policy, current gamma rule, branch-row axis and prerequisites.",
+    "Report distinguishes seven held-out comparison series from legitimate public boundary/control inputs.",
+    "Report quality CSV and scorer assert identical reduction/equation/profile-qualified hour sets."
+  ],
+  "outstanding_actionable_findings": [],
+  "no_additional_PF_or_OPF_runs_for_final_readback": true,
+  "model_or_root_owned_files_modified_by_review": false,
+  "new_delivery_manifest_not_bound_to_avoid_hash_cycle": true,
+  "dependencies": [
+    {
+      "path": "NYGRID_2025_COMPACT_AC.md",
+      "sha256": "41b1ee8424bb429a7e72f82343e55b57a125c269f4411282fd967aee967da030"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/MODEL_CONTRACT.json",
+      "sha256": "9efd5889ad5d9b460437ebd4733038fbf4b2a92ff51552a5c0c251499149da6e"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/model_exports.json",
+      "sha256": "da67bba0d892ce925e6e5244948d062331a87ba09a3b8744f5278d9d09a7bac0"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/validation/representative_pairs/representative_pair_receipt.json",
+      "sha256": "4f01a627223ec82269df8247b0d423ef62b28251175e4a688e3c9c4d7c710289"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/validation/annual_compact_PF_receipt.json",
+      "sha256": "d5e077a969d42aadc86c97aa9d3a006aebfa9e8166c635241ffa507105f38e83"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/validation/source_receipt.json",
+      "sha256": "b21f2d4e85c5af52c59b901e69b64b2e32c14a8fb601aa4f4ddf85dd2afaddb1"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/validation/Q_limit_pairs/Q_limit_pair_receipt.json",
+      "sha256": "5f707354b2f697dc0db414e9097dc83285af03bb064048296e03f7236c0b3778"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/alignment/comparison_contract.json",
+      "sha256": "7d25cd24ce49ad8f8a34b61b689fff91596bdc6e22861e188f86182c78aa1828"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/alignment/scoring_receipt.json",
+      "sha256": "91aff92f89c5d86f1cbc3f7d5a879ab59a980b1f070c7f9ae3f5b8694f3b34de"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/independent/kron_feasibility_review.json",
+      "sha256": "39440cba98533c978e75e625d881ff9665ee49739ca7d4e0f4aec54424e07bb5"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/independent/compact_core_review.json",
+      "sha256": "02f8093d57407a601f96636cd7143e92deb5e8f8a8015878afffcf1e65b8d086"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/independent/annual_arrays_independent_review.json",
+      "sha256": "c66667f6c254f0c5562fd0afe76b93e12effcd424ced0dc8a9805a5c1fe2f603"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/independent/alignment_scoring_independent_review.json",
+      "sha256": "d8143d915bfbb3a67326bb13a645a00ac9e4858d026c649ac7d4bc2a3e48756c"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/build_report.py",
+      "sha256": "442b71a7c93ab6681f9218be4e9d98d176fc2ad46a4b061530f1178de7d80c81"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/finalize_delivery.py",
+      "sha256": "a07101d6c97537b2ba3f36d11faf0b5e9586737270386983dd46afaf2efee5a2"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/README.md",
+      "sha256": "0c055133a0fffc5be161ff718357e60284e3d1786a1b8624aee48084da8d81cf"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/alignment/score_recovered_profiles.py",
+      "sha256": "da790699c9a60551da9aa1b62bdc6782c5594b5b40b21272bedc4221ce7d6087"
+    },
+    {
+      "path": "scripts/nygrid_2025_compact_ac/alignment/prepare_sources.py",
+      "sha256": "34d9b77698eeaec065f0d7e89b06c9742a6b2ebfd8290058efdcb6e94f3942e1"
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_compact_ac.m",
+      "sha256": "ef3f462d1dac27ddf41855c05603fd52f025b59e9f480b8fe19d3b0048278260"
+    },
+    {
+      "path": "System Matpower Format/run_nygrid_2025_compact_acpf.m",
+      "sha256": "9009265a6e6b09be11ee71a9b9ffa4b5b82208255ca32e46234a783d649d8c21"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/DELIVERY_MANIFEST.json",
+      "sha256": "3230c388c4b7129a1da0c89daf4be6eeb2a3ac2afc540a38a78b2e59e5451292"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/DELIVERY_MANIFEST.json",
+      "sha256": "4be2e0a78bde675fbf92891f397974afb3cd85dd58c6ff678f47d091968ceb8a"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/profile_alignment_summary.json",
+      "sha256": "20d1064c92aa382c76972f40b75a979bceff68c796a4e9861ee15b2408d12046"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/load_source_semantics.json",
+      "sha256": "e613ed6703ea37a46489b4f0ee62c6ffe62a0669e323851ff31fe01933c5b050"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/alignment/public_interface_metrics.csv",
+      "sha256": "875afb1cad13f20741f5a926d13dd51a54523d84e53f454dec3e07b4d7d5c7c2"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/alignment/paired_recovery_errors.csv",
+      "sha256": "f595e4fd6a2fe5fe4c0c10ce0755cbdb48bfbf269bd722774765b30be79e31a1"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/alignment/comparison_cohort.csv",
+      "sha256": "c89b54a046e93ae01db933df3d10f450353a5aff2873efc40b0c6e8f183be67c"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/validation/annual_hour_quality.csv",
+      "sha256": "c0e19aba5d86168058e8d7400827bdf5e22a7b7947014b0f5c3b11f2b7e427cd"
+    }
+  ],
+  "read_only_finalizer_closure_passed": true,
+  "finalizer_status_checked": "compact_148_bus_AC_reduction_validated",
+  "proof_checks_at_review": 367
+}

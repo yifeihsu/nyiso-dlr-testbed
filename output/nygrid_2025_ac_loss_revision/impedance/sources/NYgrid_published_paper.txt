@@ -1,0 +1,774 @@
+IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 38, NO. 4, JULY 2023                                                                                            3293
+
+
+
+
+An Open Source Representation for the NYS Electric
+         Grid to Support Power Grid and
+            Market Transition Studies
+  M. Vivienne Liu , Bo Yuan, Graduate Student Member, IEEE, Zongjie Wang, Member, IEEE, Jeffrey A. Sward,
+                      K. Max Zhang , and C. Lindsay Anderson, Senior Member, IEEE
+
+
+   Abstract— Under the increasing need to decarbonize energy                                                   I. INTRODUCTION
+systems, there is coupled acceleration in connection of distributed
+                                                                                        OWER grid models are crucial for power system devel-
+and intermittent renewable resources in power grids. To support
+this transition, researchers and other stakeholders are embarking
+on detailed studies and analyses of the evolution of this complex
+                                                                                   P    opment, planning and operational analysis. Meineche et al.
+                                                                                   reviewed existing steady-state power grids test cases and datasets
+system, which require a validated representation of the essential                  that are publicly available and summarized the background
+characteristics of the power grid that is accurate for a specific region
+of interest. For example, the Climate Leadership and Community
+                                                                                   information with possible use cases [1]. Most of the grid datasets
+Protection Act (CLCPA) in New York State (NYS) sets ambitious                      reviewed are intended to be a generic testbed for steady-state
+targets for the transformation of the energy system, opening many                  studies such as OPF and reliability analysis [2], [3]. However,
+interesting research and analysis questions. To provide a platform                 power grids exhibit distinct features and behaviors in different
+for these analyses, this paper presents an overview of the current                 regions. The significant investments in wind, solar, storage units
+NYS power grid and develops an open-source1 baseline model
+using publicly available data. The proposed model is validated with                and other renewables only increase the regional specificity due
+real data for power flow and Locational Marginal Prices (LMPs),                    to the availability of resources under various geographical and
+demonstrating the feasibility, functionality, and consistency of the               climate features [4]. For example, New York State (NYS) has
+model. The model is easily adjustable and customizable for various                 passed the Climate Leadership and Community Protect Act
+analyses of future configurations and scenarios that require spa-                  (CLCPA) [5], which targets 9 GW of offshore wind, 3 GW of
+tiotemporal information about the NYS power grid with access to
+all the available historical data and serves as a practical system for             energy storage and 6 GW of solar by 2035, 2030 and 2025,
+general methods and algorithms testing.                                            respectively. To evaluate the feasibility of such an aggressive
+                                                                                   plan and to optimally allocate and operate a combination of
+  Index Terms—NYS practical test case, power flow analyses,
+                                                                                   highly distributed and variable resources, it is crucial to perform
+validation analyses, locational marginal prices.
+                                                                                   analyses on a grid model that can reflect the principal physical
+                                                                                   characteristics of the NYS grid. However, specific power grid
+                                                                                   data is often unavailable due to security and economic con-
+                                                                                   cerns [6], [7], which is a challenge for region-specific research.
+                                                                                   Therefore, in this paper, we propose a representative model for
+   Manuscript received 9 December 2021; revised 4 June 2022; accepted 13
+August 2022. Date of publication 24 August 2022; date of current version 22
+                                                                                   the NYS power grid that captures key physical characteristics
+June 2023. The work of Bo Yuan, Jeffrey A. Sward and K. Max Zhang was              of the real grid, in its current form, with publicly available
+supported by the New York State Energy Research and Development Authority          data only. The model is intended to represent the basic network
+(NYSERDA). The work of Jeffrey A. Sward was supported by the National
+Science Foundation Graduate Research Fellowship Program under Grant DGE-
+                                                                                   topology, load allocation, generation condition for different fuel
+1650441. The work of C. Lindsay Anderson and M. Vivienne Liu was supported         types, and the connecting proxies with neighboring grids. The
+by the USDA National Institute of Food and Agriculture (NIFA) under Grant          intent is for this model to serve as a baseline model for future
+2019-67019-30122. Paper no. TPWRS-01896-2021. (Corresponding author:
+Mengwei Vivienne Liu.)
+                                                                                   analyses, supporting higher renewable penetration reliably and
+   M. Vivienne Liu is with the Field of Systems Engineering, Cornell University,   effectively. In addition to the contribution for NYS, the baseline
+Ithaca, NY 14853 USA (e-mail: ml2589@cornell.edu).                                 model also provides a generic practical testbed with complex
+   C. Lindsay Anderson is with the Department of Biological and Environmental
+Engineering and Cornell Energy Systems Institute, Cornell University, Ithaca,
+                                                                                   network topology and data coherency, closely representing a
+NY 14853 USA (e-mail: cla28@cornell.edu).                                          real-world power grid, for testing of methods and algorithms.
+   Bo Yuan, Jeffrey A. Sward, and K. Max Zhang are with the Sibley School of          Several studies have focused on building region-specific
+Mechanical and Aerospace Engineering, Cornell University, Ithaca, NY 14853
+USA (e-mail: by276@cornell.edu; jas983@cornell.edu; kz33@cornell.edu).
+                                                                                   power grid models around the world. A research tool for the
+   Zongjie Wang is with the Department of Electrical and Computer En-              European interconnected system was developed by Zhou and
+gineering, University of Connecticut, Storrs 06268, CT USA (e-mail:                Bialek to study the effects of cross-border trades [8]. The
+zongjie.wang@uconn.edu).
+   This article has supplementary material provided by the authors and color
+                                                                                   authors collected generation and demand data and created a
+versions of one or more figures available at https://doi.org/10.1109/TPWRS.
+2022.3200887.                                                                       1 [Online].   Available:    https://github.com/AndersonEnergyLab-Cornell/
+   Digital Object Identifier 10.1109/TPWRS.2022.3200887                            NYgrid
+
+       This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/
+3294                                                                                  IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 38, NO. 4, JULY 2023
+
+
+
+transmission line database using GIS information. The model                    report [20] and the 2020 Reliability Needs Assessment (RNA)
+was then validated with Optimal Power Flow (OPF) and Power                     report [21] of the New York Independent System Operator
+Transfer Distribution Factor (PTDF) analysis. Nutcheon and                     (NYISO), where the transmission topology and connectivity
+Bialek later improved the European model and further validated                 for load zones and external areas are provided. However, the
+it with Power Flow (PF) analysis [9]. A dataset to describe                    transmission line parameters are not given. While these NYISO
+the largest transmission network of Australia was constructed                  examples ([20], [21]) inform the the construction of the NYS
+for open access by Xenophon and Hill [10] to support studies                   baseline network, they are not directly usable for analysis.
+that aim to address engineering, economic and environmental                       In this paper, we propose a baseline model for NYS, developed
+challenges of the existing electricity system. Thorough valida-                with publicly available data to represent the principal physical
+tion was carried out to test the completeness, consistency and                 characteristics of the NYS power grid. The proposed network
+functionality of the network. Similar work has been conducted                  is reduced and modified from the NPCC 140-bus model [22] to
+for the Southeast Asian region by Ahmed et al. [11] to help future             take advantage of the geospatial information, meeting the desire
+development scenarios of the Association of Southeast Asian                    for future distributed renewable energy integration research
+Nations (ASEAN) network. In the US, the Federal Energy Reg-                    with a focus on New York State. Generation profiles (for
+ulatory Commission (FERC) [12] and the Western Electricity                     various fuel types) and load data are collected and compiled for
+Coordination Council (WECC) [13] test system provide large-                    a full year to perform DC-PF-related analysis. The cost curves
+scale testbeds for PJM area and the Western Electricity grid,                  for different types of generators are fitted with dynamic fuel
+respectively. An 8-zone ISO-NE test system was developed to                    price input to support DC-OPF studies. We focus on DC-OPF
+assist fast-execution simulation of the current ISO New England                due to the lack of reactive power data, but it is worth noting
+(NE) system in [14]. These studies based on publicly available                 that AC-OPF could potentially be performed on the model if
+data are able to represent principal physical characteristics of the           reactive power data are carefully estimated. We validate our
+real power grids, and most are validated use simulation against                PF simulation results against historical data on major interface
+historical data. As NYS embarks on a period of aggressive                      power flows collected from NYISO [23] so that when the
+transition, it is critical to provide an accessible NYS-centric grid           baseline model is used for a diverse set of applications in the
+model to support analyses.                                                     future, the result reliably represents the NYS system. The PF
+   Several academic networks have been created specifically                    simulation from our model shows promising results for most
+for NYS in the past two decades. Allen et al. [15], developed                  of the hours in the year 2019. To further demonstrate that the
+a 36-bus network reduced from the FERC 715 case for the                        proposed baseline model represents the real NYS network
+Northeastern power grid with a focus on NY and New England                     well, we conduct DC-OPF analysis for winter and summer
+(NE). The model preserves the external interfaces with NYS and                 seasons and compare the simulated zonal LMPs with historical
+fits generator bidding curves for OPF analysis but                             data. To summarize, the proposed model has the following
+                                                                               improvements and features relative to existing models:
+       it is intended to be a test system for algorithms and software, as
+                                                                                  1) The network represents the NYS power grid with geo-
+       opposed to a study system for the Northeastern region. (Allen et al.,
+       2008)                                                                          graphical information, intending to be a research tool for
+                                                                                      renewable integration impact in the region.
+   Howard et al. proposed a transshipment model [16] to study                     2) The model can backtrack through the publicly avail-
+the GHG emission of NYS, where the generators of different                            able historical data according to users’ preferences and
+types and demands were carefully modeled for the 11 load                              needs.2
+zones (A-K) in NYS. However, with the focus on GHG emission                       3) The model is validated with real data for PF and OPF
+factors, the model is not capable of OPF analysis and thus has                        analysis to test its fidelity using year 2019 as an example.
+limited capability for long-term planning, reliability assessment                 4) The model and a sample dataset are open-source and
+or electric market-related studies [17]. A NYS academic model                         available at: https://github.com/AndersonEnergyLab-
+was presented by Burchett et al. to study the effects of steam unit                   Cornell/NYgrid
+ramp rates under different renewable penetration scenarios [18].                  The rest of the paper is organized as follows: Section II
+In this study, a 68-bus network for the Northeast Power Coordi-                provides an overview of the NYS power grid. The data sets
+nating Council (NPCC) area was reorganized to represent four                   collected and processed for the baseline model are described
+load zones in NYS and one external load zone in New England.                   in Section III. Section IV presents the equivalent reduction of
+Coded in MATPOWER [19], the model can easily perform                           the original NPCC 140-bus model and integrates the processed
+OPF analysis, but the transmission lines and the topology of                   data with the reduced network. We validate our model with PF
+the network were designed to describe the connectivity for                     comparison to historical data in Section V and show demon-
+the whole NPCC area. Without updating the transmission line                    strative OPF cases for summer and winter 2019 in Section VI.
+parameters, the model is not able to accurately represent the                  Section VII concludes the paper with discussion of the benefits
+physical characteristics of the NYS network. Additionally, the                 and drawbacks of the model and future working directions.
+connections with other surrounding power grids are ignored in
+this representation. In addition to the papers mentioned above,
+representative networks can be found from the 2019 Conges-                      2 For more detail see repo at https://github.com/AndersonEnergyLab-Cornell/
+tion Assessment and Resource Integration Studies (CARIS)                       NYgrid
+LIU et al.: OPEN SOURCE REPRESENTATION FOR THE NYS ELECTRIC GRID TO SUPPORT POWER GRID AND MARKET TRANSITION STUDIES                               3295
+
+
+
+
+                                                                               Fig. 2. The NPCC 140-bus system represents the backbone transmission
+                                                                               system of northeast region of the Eastern Interconnection: NYISO (Blue),
+Fig. 1. Overview for the NYS power grid in 2019. (a) Capacity and Annual       NE-ISO (Red), PJM (Light-green), MISO (Darker-green), IESO (White).
+Generation in 2019. (b) Composition of annual generation and demand for each
+load zone in 2019.
+                                                                               be available for dispatch in each hour of the next day and a set
+                                                                               of Load Serving Entities (LSEs) are scheduled to buy a specific
+            II. OVERVIEW OF THE NYS POWER GRID                                 quantity of power at the day-ahead price. In the RTM, market
+                                                                               participants trade electricity during the course of the operating
+   The NYS power grid has eleven load zones labeled A-K,                       day to balance the differences between day-ahead commitments
+connecting to four neighboring power grids. The composition of                 and the realized real-time demand and production [26]. In both
+the existing generating sources, annual generation and demand                  market clearing processes, Locational Based Marginal Prices
+for each load zone can be found in [24], [25] and are summarized               (LBMPs) are calculated through unit commitment and economic
+in Fig. 1. As shown in Fig. 1(a), nuclear and hydro sources                    dispatch using market participants’ bidding prices. Electricity
+contributed over 55% of 2019 annual generation, residing in                    suppliers and LSEs may trade energy directly in the market at
+zones A, D and zones B, C, H, respectively. Wind and other                     LBMP, or be party to bilateral contracts.
+renewable sources contributed less than 6% of the total genera-
+tion, where the wind output (3%) is exclusively in upstate zones
+(A-E) and other renewables (< 3%) are distributed approxi-                                         III. DATASET PROCESSING
+mately evenly in all zones. Thermal generators mostly reside                      In this section, we introduce the data collected and processed
+in downstate zones (F, G, J and K), which leads to complicated                 to inform the grid model. We first present the NPCC 140-
+bidding situations as we describe in detail in Section VI. Another             bus network that represents the Northeast Power Coordinating
+characteristic of the NYS grid is the lack of balance in generation            Council area. Then an example is provided to illustrate the use
+and demand spatially. The upstate zones (A-E) have generation                  of 2019 demand and generation data to update the operating
+capability that exceeds loads, while the downstate zones (F-K)                 conditions for the proposed baseline model. Lastly, we describe
+have more load than generation capacity. As a result, power                    the interface power flow and LBMP data that is used to validate
+generally flows from upstate to downstate. Due to congestion                   the model.
+and lack of generation capacity, zonal marginal prices are usually
+higher for downstate zones (F-K) than upstate zones(A-E).
+                                                                               A. Network Dataset
+   The NYS grid is connected to four neighbouring areas with
+ten proxies: Hydro Quebec (two proxies), Ontario (IESO, one                       The NPCC 140-bus system is a power system test case from
+proxy), ISO-New England (three proxies) and PJM (four prox-                    the Power System Toolbox [22]. As shown in Fig. 2, it represents
+ies). Four of the proxies are controllable HVDC lines: 1385 line               the backbone transmission lines of the Northeast region of the
+(ISO-NE - NY), Cross Sound Cable (ISO-NE - NY), Neptune                        Eastern Interconnection [27], which has full or partial repre-
+(PJM - NY) and HTP (PJM - NY). One of the proxies, Linden                      sentations of five ISOs: NYISO (full), NE ISO (partial), PJM
+VFT (PJM - NY), is a controllable AC line, and the rest are                    ISO (partial), MISO (partial), IESO (partial) with 140 buses,
+uncontrollable AC lines.                                                       48 generators and 233 transmission lines. A baseline load and
+   NYISO directs the operation of the NYS power system, sup-                   generation operation condition is given with the network data
+plying power to serve load and maintaining safety and reliability              for power flow analysis. More importantly, the locations of all
+of the grid [26]. NYISO provides open access to the NYS                        the buses are available, which provides the ability to incorporate
+transmission system for the market participants and facilitates                spatially correlated information of conventional and renewable
+a two-settlement market clearing process: a Day-Ahead Market                   generation resources. Such a network provides a full represen-
+(DAM) and a Real-Time Market (RTM). In the DAM, market                         tation of the NYS area and preserves the major interfaces with
+participants sell or buy electricity one day before the operating              neighboring grids, providing the ability to model the interactions
+day to avoid price volatility. A set of generators are scheduled to            between NYS and other ISOs/RTOs.
+3296                                                                                    IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 38, NO. 4, JULY 2023
+
+
+
+B. NYS Generation Data                                                           value of maximum change in hourly power output in the RGGI
+                                                                                 dataset observed over the year [28]. For downward ramp rates,
+   NYISO [23] provides aggregated hourly generation for differ-
+ent fuel types, which we will refer to as fuel mix data within the               we excluded the data points for which power output in the next
+                                                                                 hour is zero, to prevent error introduced by generator shutdown.
+paper. However, the hourly profiles for individual generators,
+                                                                                    For small generators with insufficient generation data
+which are crucial for validating the proposed baseline model
+and performing PF-based analysis, are not available. Thus, we                    recorded in 2019, mostly small gas turbines, maximum and
+                                                                                 minimum power output are set to their nameplate capacity and
+compile and estimate the generation profiles for all the available
+                                                                                 zero, respectively. For these generators, hourly ramp rate is set
+generators from NYISO’s 2019 Load & Capacity Data Re-
+port [24], where the locations, capacities and aggregated annual                 equal to maximum power output for each, since small gas tur-
+                                                                                 bines have high ramp rate and can reach full output in one hour.
+generations are provided for all the generators. Cost curves
+with fluctuating fuel prices [20] are fitted to support OPF-based                Standard heat rate curves are defined using EIA’s Electric Power
+research.                                                                        Annual Report according to their unit type and fuel type [31].
+                                                                                 A fossil fuel generator’s cost curve is defined as its heat rate
+   1) Thermal Generators: Information regarding thermal gen-
+erators in NYS is compiled from NYISO, Regional Greenhouse                       curve multiplied by the fuel price ignoring the variable operation
+                                                                                 and maintenance cost, which is relatively small. Time-varying
+Gas Emission reports, and the Energy Information Adminis-
+                                                                                 fuel costs for natural gas, fuel oil, and coal are obtained from
+tration (EIA) as described below. Specifically, 227 fossil fuel
+generators are identified in NYISO’s 2019 Load & Capacity                        EIA [31].
+                                                                                    2) Nuclear Generators: Individual hourly nuclear genera-
+Data Report [24]3
+                                                                                 tion profiles are not publicly available, so profiles are estimated
+   Hourly generation and emission data of 140 fossil fuel gener-
+ators are available from the Regional Greenhouse Gas Initiative                  from the daily capacity factor obtained from U.S Nuclear Reg-
+                                                                                 ulatory Commission [32] with the following assumption given
+(RGGI) [28], which is the first mandatory market-based program
+                                                                                 the limited data accessibility:
+in the United States to reduce greenhouse gas emissions. RGGI                       r Hourly capacity factor is the same as the daily capacity
+requires fossil fuel power plants with capacity greater than 25
+                                                                                       factor for each individual generator in a day.4
+MW to obtain an allowance for each ton of CO2 they emit
+annually [29]. The total nameplate capacity of the RGGI tracked                     Thus, the hourly output for each nuclear power plant is:
+                                                                                                              N
+fossil fuel generators is 26,782 MW, which is 92.4% of the total                                             Pi,t           N
+                                                                                                                  = P̄iN × Ci,t                              (1)
+nameplate capacity of all fossil fuel generators. The other 87
+fossil fuel generators are mostly combustion turbines in New                                                                         N
+                                                                                 Where P̄iN is the capacity of nuclear generator i. Pi,t      N
+                                                                                                                                         and Ci,t are
+York City (zone J) and Long Island (zone K) that are too small                   the hourly output and capacity factor for nuclear generator i at
+to be tracked by RGGI. Thus, thermal generators in zone J and                    hour t, respectively. The ten minute ramp rate and marginal cost
+K are scaled slightly to compensate for the untracked 7.6% of                    for nuclear generators are assumed to be 10% of the generator
+thermal generation in NYS. We use the hourly generation data                     capacity and 1–3 $/MWh given nuclear generators typically
+to calculate generator parameters such as heat rate, maximum                     serve as base load and operate at 100% capacity if not in
+power, minimum power, and ramp rate [17]. For the fossil fuel                    maintenance.
+generators with data recorded by RGGI, heat rate curves are                         3) Renewable Generators: New York State has three cat-
+derived through a linear regression of the hourly heat input data                egories of renewable resources in the fuel mix data for the
+and hourly power output data. A linear approximation of heat                     real-time dispatch (every five minutes). The installed capacity
+rate relation is chosen because it can describe the data with                    and annual generation of 2019 are shown in Fig. 1. We average
+R2 greater than 0.9 for most generators. Note that poor fit is                   the 5-minute interval fuel mix data into hourly and estimate
+exhibited for some small gas turbines that lack sufficient data as               generation profiles for hydro, wind and other renewables (PV
+they only operate a few hours in a year. The maximum power                       included) as follows.
+is defined as the maximum hourly power output recorded in                           Hydro Generation: The total generation of the 347 hydro
+the RGGI database for 2019. The minimum power is defined                         plants in NYS has a strong diurnal pattern, shown in Fig. 3 by
+as the 5th percentile of all the recorded hourly power output                    the blue line. The two largest hydro power plants: Robert Moses
+in the same year. The 5th percentile is chosen as opposed to                     Niagara (in load zone A) and St. Lawrence (in load zone D),
+the 10th percentile [17] as the 10th percentile could potentially                consistently contributed roughly 80% of hydro generation in
+exclude some stable working conditions. Interested readers are                   2019 [33]. The strong diurnal pattern is dominated by the Robert
+referred to Section 2 of the Supplementary Information (SI).                     Moses Niagara power plant which bids much lower during night
+The hourly ramp rate is defined using the generator survey in                    hours (an upper limit of 1800 MW) than during daylight hours
+Form EIA-860 [30] which includes information about ramping                       (upper limit of 2600 MW) [23]. Whereas, the St. Lawrence
+capability from cold shutdown to full load. If a generator in-                   power plant prioritizes regulating water level and thus will
+dicated ability to ramp from cold shutdown to full load within                   not vary much in terms of hourly generation. Modeling hydro
+one hour, the hourly ramp rate is defined as its full capacity.                  power takes economic, environmental, agricultural and political
+For all other generators, the ramp rate is defined as the absolute               factors into consideration [34], [35]. As a result, the following
+
+  3 Note that [24] excludes some small generators with zero annual generation.     4 Users can supply their own hourly nuclear capacity factors if desired
+LIU et al.: OPEN SOURCE REPRESENTATION FOR THE NYS ELECTRIC GRID TO SUPPORT POWER GRID AND MARKET TRANSITION STUDIES                                    3297
+
+
+
+                                                                                 all the wind farms and calculate the individual output as follows:
+                                                                                                                    W
+                                                                                                       W      P̄i    W
+                                                                                                      Pi,t =  W Ptotal,t                                (3)
+                                                                                                               i P̄i
+                                                                                        W
+                                                                                 Where Pi,t is the generation output of wind farm i at hour t,
+                                                                                   W                                                  W
+                                                                                 P̄i is the installed capacity for wind farm i and Ptotal,t  is the
+                                                                                 total wind generation of hour t from the fuel mix data. Wind
+                                                                                 generation is assumed to be non-dispatchable and is modeled as
+                                                                                 negative load in our simulations, with a marginal cost assumed
+                                                                                 to be zero. It worth noting that wind resources could be easily
+                                                                                 converted to dispatchable resources in future settings. This can
+                                                                                 be achieved by including wind farms as generators with max-
+Fig. 3. Aggregated hydro generation with strong diurnal pattern for Jan 1- Jan   imum output dynamically adjusted according to the predicted
+7, 2019.                                                                         wind output for a given time.5
+                                                                                    Other Renewables: We identify 46 generators powered by
+                                                                                 other renewable resources, including solar, methane, refuse,
+simplifications and assumptions are made to estimate hourly                      and wood. Most of these generators have capacity under 25
+individual hydro profiles without over-complicating the model:                   MW and monthly aggregated output is not available. Because
+  1) St. Lawrence (STL) hydro plant has a monthly capacity                       the total capacity of other renewables is quite small and they
+      factor, as this is the highest resolution of capacity factor               are scattered in nine different load zones, their impact to the
+      publicly available from the Energy Information Adminis-                    grid overall is negligible. Output of these small generators are
+      tration (Form EIA-923) [33].                                               therefore allocated as a capacity weighted fraction of the output
+  2) Excluding the two largest hydro generators in zone A and                    from “other renewables,” as follows:
+      D, the remaining smaller hydro plants generate 20% of
+                                                                                                                    OR
+      total hourly hydro generation.                                                                  OR     P̄i     OR
+                                                                                                     Pi,t =  OR Ptotal,t                                (4)
+  3) Robert Moses Niagara (RMN) hydro plant generates the                                                       P̄ i
+                                                                                                              i
+      remaining portion of hydro power and thus dominates the
+                                                                                          OR                                                     OR
+      diurnal pattern.                                                           Where Pi,t    is the generation of unit i at hour t, P̄i is the
+                                                                                                                                      OR
+  The hourly hydro generation can then be calculated as follows:                 capacity for other renewable generator i and Ptotal,t is the
+           ⎧ H                                                                   total generation of other renewables at hour t from the fuel
+           ⎪
+           ⎪ CST L,m(t) P̄iH ,                 if i = STL
+           ⎪
+           ⎪                                                                     mix data. Similar to wind, we assume these renewables are
+           ⎪
+           ⎨0.8P H             H
+                  total,t − PST L,t ,          if i = RMN                        non-dispatchable and model them as negative load in the system
+     H
+   Pi,t =                                                      (2)               with zero marginal cost.
+           ⎪
+           ⎪                          H
+           ⎪
+           ⎪       H             P̄ i
+           ⎪0.2Ptotal,t
+           ⎩                             H
+                                             , otherwise
+                             ∈STL,RMN P̄i
+                            i/
+                                                                                 C. NYS Load Data
+            H
+  Where, Pi,t is the hourly generation for hydro i at time t,                       Real time and day-ahead load data for each load zone can be
+ H                                                                               accessed from NYISO’s database [23]. Both 5-minute interval
+CST L,m(t) denotes the capacity factor of month m(t) for St.
+                                                                                 and hourly load data are available for the real time market.
+Lawrence hydro and P¯H is the capacity for hydro i. The de-
+                             i                                                   Hourly integrated load data is collected to complement the
+composed generations of RMN, STL and all other hydro plants                      real-time hourly generation profile as described in Section III-B.
+are shown in red, yellow and purple lines in Fig. 3, respectively.
+The 10 minute ramping rates for hydro are usually quite large                    D. Interface Power Flow Data
+and assumed to be 90% of nameplate capacity. Because hydro
+generators do not have fuel costs, their marginal cost is the                       To validate the proposed model, major interface flows ob-
+variable Operations and Maintenance (O&M) cost, which is                         served by NYISO are collected for 2019 [23]. The dataset
+assumed to be a uniform random variable within range 1-10                        contains 19 major interface flows recorded roughly every five
+$/MWh to prioritize the dispatch of hydro generation. A random                   minutes, where seven measurements are for internal zonal inter-
+variable is used to account for the uncertainty of the variable                  faces and the remaining (12) represent external trades. From
+O&M cost with the range determined by [36], [37], [38], [39],                    NYISO’s Reliability Needs Assessment (RNA) report [21],
+though subsequent users can easily adjust this to account for                    the internal (zonal) interfaces are identified and matched with
+updated information or experience.                                               NYISO labels as summarized in Table I to support discussion of
+   Wind Generation: There are 24 wind farms scattered across                     results in Section V. It is worth noting that the positive limits are
+zones A-E. From the Form EIA-923 [33], the percentage of                         dynamically determined by NYISO and exhibit some variability.
+wind generation contributed by each zone changes very little by
+month, which means on the aggregate level, the wind farms are                      5 For more detail see GitHub         repository   at   https://github.com/
+highly correlated. Therefore, we assume perfect correlation of                   AndersonEnergyLab-Cornell/NYgrid
+3298                                                                       IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 38, NO. 4, JULY 2023
+
+
+
+                            TABLE I                                       Interested readers are referred to Section 1 of the SI where
+          INTERNAL INTERFACES AND RELEVANT LOAD ZONES
+                                                                          the zonal linear regression between load and population
+                                                                          is summarized. The generators are allocated to the nearest
+                                                                          bus within their load zone. Four buses are converted from
+                                                                          PQ buses to PV buses (39, 77, 45, 62) and four from PV
+                                                                          buses to PQ buses (53, 54, 68, 72) accordingly. The slack
+                                                                          bus is moved from bus 78 to bus 74 due to the absence of
+                                                                          generation in Zone I.
+E. Local Marginal Price Data                                           3) Update the hourly load conditions in external areas: The
+                                                                          load of each external area x is scaled up by a factor of
+   The real time zonal locational based marginal price (LBMP)             Dx                                    
+                                                                          Dx for each bus, where Dx and Dx are the updated and
+data is collected for 2019, which is the weighted average price
+                                                                          original load of area x. The reasoning is two-fold: first,
+of energy across all the nodes in each zone. The NYISO dataset
+                                                                          the loads within NYS are updated proportionally to the
+contains 15 regional prices for every 5-minute interval. Four of
+                                                                          original load condition, so maintaining proportional load
+the LBMPs represent external nodal interfaces with PJM, ISO-
+                                                                          condition in external areas will maintain consistency with
+NE, Ontario (IESO) and Hydro Quebec (HQ). The remaining 11
+                                                                          the baseline case for the whole system. Second, the exter-
+zonal prices are for the load zones within NYS. We compare the
+                                                                          nal areas will be reduced to a few highly aggregated virtual
+LBMPs with the marginal generation cost of each zone derived
+                                                                          buses with virtual load and generators by the network
+by DC-OPF in Section VI. For simplicity, the LBMP is referred
+                                                                          reduction, so spatially refined updates to external zones
+to as LMP throughout the paper. The LMP recorded by NYISO
+                                                                          will not be represented in the final reduction.
+is used to represent marginal costs for generators in the external
+                                                                       4) Maintain interface flows between external areas and NYS:
+areas for the simulation study.
+                                                                          Given the interface flow data described in Section III-D,
+                                                                          and the removal of connections between external areas,
+         IV. COMPREHENSIVE NETWORK MODELING                               each area is now connected only to NYS and the following
+   Equivalent network reduction is frequently used to effec-              equations hold for power balance:
+tively represent a larger system while preserving internal sys-
+                                                                                        PPJM = DPJM + lPJM→NY                       (5)
+tem characteristics and significantly reducing the number of
+buses in the external system. WARD [40] and REI [41] or                                  PNE = DNE + lNE→NY                         (6)
+their variants are the commonly used methods for equivalent
+                                                                                       PIESO = DIESO + lIESO→NY                     (7)
+network reduction. Comparison between methods show that the
+WARD-type equivalents have higher accuracy than REI for real              where Px and Dx are the total generation and demand for
+power flow, effectively representing the eliminated PQ buses,             area x, lPJM→NY , lNE→NY , lIESO→NY are the interface
+and can be easily incorporated into power flow problems. In               flows from each area to NY.
+addition, this method can track real-time variations in operating      5) Update hourly generation conditions in external areas:
+points by updating only power injection ranges. Therefore, to             The generation scaling factor for each area can be calcu-
+reduce computational complexity and simplify the neighboring              lated as:
+regions, the modified Ward-type equivalent [42] is applied to the
+                                                                                                 αx = Px /Px                       (8)
+NPCC 140-bus system to reduce the number of buses in areas
+outside of NYS.                                                            where Px is the baseline external area generation provided
+   Before applying the network equivalent reduction algorithm,             by the NPCC140-bus network. Then the generation con-
+which is sensitive to the load and generation condition of the             dition for generator i in the external area x can be updated
+network, we make the following simplifications and updates to              by:
+NPCC 140-bus model:
+                                                                                                Px,i = αx Px,i                     (9)
+   1) Simplify interactions between external areas: Three trans-
+      mission lines connecting PJM and MISO are removed so                 where Px,i is the baseline generation condition for gener-
+      that the external areas only connect to NYS, making it eas-          ator i provided by the NPCC 140-bus network.
+      ier to control the external interface flows while performing     6) Include Hydro Quebec in the NPCC 140-bus model: The
+      PF validation.                                                       original NPCC 140-bus system did not include an interface
+   2) Update outdated load and generation conditions in NYS:               with HQ. Given the importance of this external zone, a
+      To encourage the convergence of the PF solutions, the                hydro generator is added in zone D, with generation output
+      NYISO-observed zonal load data within NYS is allocated               equal to the interface flow lHQ→NY .
+      to each bus proportional to the baseline load conditions         After the modifications described above, the original NPCC
+      within each zone provided by the NPCC 140-bus sys-             140-bus system is updated with load and generation profile and
+      tem. While the NPCC 140-bus system exhibits positive           suitable for the PF-based equivalent reduction.
+      correlation between loading and population distribution          To perform the network reduction, we select 57 buses to be
+      for most zones, small modifications are made to zone B,        preserved including 46 buses representing the NYS area and nine
+      G and K to better represent the population distribution.       boundary buses that are proxies for external areas. In addition,
+LIU et al.: OPEN SOURCE REPRESENTATION FOR THE NYS ELECTRIC GRID TO SUPPORT POWER GRID AND MARKET TRANSITION STUDIES                3299
+
+
+
+
+Fig. 4.   Reduced and Modified Network for NYS.
+
+
+two additional buses are preserved: bus 132 is held to minimize     the added AC line between zone E and G. The thermal generator
+the PF error of equivalent network, and bus 21 is preserved         (green dots) allocations are indicated by the dashed blue lines.
+to allow preservation of HVDC lines to the reduced network
+later. The validation of the reduced model against the original                          V. MODEL VALIDATION
+NPCC 140-bus model can be found in section V-A. The reduced
+network has very similar zonal connections to the shipment             In this section, the power flow (PF) consistency of our reduced
+model in the NYISO RNA report [21] with the exception of            model is first tested by comparison to the original network.
+the missing connection between E and G, which is known as           Feasibility and consistency are then tested with the real-world
+the Marcy South transmission line. A 345 kV AC transmission         data processed for 2019, followed by discussion of the impact
+line with two segments (bus 43–38 and bus 38–77) is added to        of hydro on model performance.
+represent the Marcy South line and the reactance parameter (p.u)
+is estimated based on equation 10.                                  A. Validation of Consistency with Original Model
+                                  La−b XL                              The original NPCC 140-bus model represents the back bone
+                            X=                              (10)
+                                   Zbase                            of the northeast power grids. Thus, after updating the generator
+                                                                    and load profiles for the network, it is critical to verify that the
+Where La−b is the distance between the two substations(buses)
+                                                                    PF solutions of the reduced model are equivalent to the original
+a and b connected by the Marcy South transmission line and
+           V2                                                       network on the retained branches. We compare the DC-PF
+Zbase = Sbase
+            base
+                 . From [43], L43−38 = 137 miles and L38−77 =       solutions on each branch in the NYS area. All the absolute errors
+47 miles. The conductor type can also be found in [43]. Based       are in the negligible (10−9 ) range which supports the claim that
+on the aluminum conductors steel-reinforced table in [44],          the reduced model has equivalent DC-PF solution to the original
+XL = 0.371. The HVDC lines are added to the reduced net-            model, after simplification of the external areas.
+work, reflecting the controllable interfaces by connecting buses
+(in original index): 21–80 (CSC+NPX1385), 124-79 (Neptune)
+                                                                    B. Feasibility and Consistency with Real Data
+125-81 (VFT), and 125-81 (HTP). The final form of the reduced
+network is shown in Fig. 4 where PV, PQ and slack buses in NYS         A primary objective of our study is to provide a baseline model
+are shown as empty squares, circles and triangles, respectively.    for NYS, which captures the characteristics of the real power
+The external proxies are shown as solid squares. The solid black    grid without revealing or requiring confidential information. PF
+lines in the NYS area maintain their original parameters, whereas   is one of the basic and critical foundations for many applica-
+the solid red lines represent the equivalent virtual lines in the   tions. Therefore, PF analysis is conducted for all hours in 2019
+external areas, to support the same PF solution. The orange lines   and results are compared with historical records on the major
+represent the added HVDC lines and the purple line indicates        interface flows. Additional validation is also provided based on
+3300                                                                              IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 38, NO. 4, JULY 2023
+
+
+
+                                                                                                        TABLE II
+                                                                                         COMPARISON OF GENERATION BY FUEL TYPES
+
+
+
+
+                                                                            are composition of generation by fuel type, spatiotemporal corre-
+                                                                            lation and outliers in LMPs. Approximating these characteristics
+                                                                            effectively with the baseline model serves to confirm its ability
+                                                                            to represent real system performance.
+
+                                                                            A. Generation by Fuel Type
+
+Fig. 5. Box plot for simulated power flow percentage error of seven major
+                                                                               In this subsection, the aggregate generation by fuel type
+interfaces in 2019.                                                         is compared to show that with the technical and economic
+                                                                            parameters in this model, the merit order of dispatch is similar
+                                                                            to historical data as shown in Table II.
+2018 PF data and the results can be found in Section 3 of the SI.              As shown in Table II, hydro energy dispatch tends to be
+Fig. 5 shows the box plots of the percentage power flow error,              higher in the simulations than historical data, due to generally
+which is calculated as:                                                     lower costs for hydro relative to thermal generation, while the
+                                pfir − pfis                                 seasonal availability of hydro power caused by climate factors is
+                           =                                       (11)    not considered in the baseline model. As a result, lower thermal
+                                 Li,M V A
+                                                                            and imported energy are observed under the simulation case.
+where pfir is the real PF recorded and pfis is the simulated PF
+for interface i, Li,M V A is MVA rating of interface i.                     B. Spatiotemporal Correlation of LMPs
+   All the simulation cases have feasible solutions for PF, which
+indicates high feasibility of our proposed model given real-world              As previously discussed in Subsection III-E, real-time market
+data. The interquartile ranges are within ±10% and have high                LMP data is collected as a reference. However, LMPs depend
+densities. The 95% interval of each interface are mostly within             on several factors that cannot be easily modeled in a universal
+±15% except for Dysinger East (A-B) and Moses South (D-E),                  baseline model. Such factors include, but are not limited to,
+which tend to deviate due to hydro impacts. It is worth noting              the bidding strategy of different types of generators, long-term
+that the outliers of Dysinger East and Moses South exhibit some             contracts with external areas, or generators that are used for
+symmetry in that the outliers that are negative for Dysinger East           multiple purposes (e.g. hydro or steam turbines), unplanned
+are positive for Moses South. This is potentially caused by the             outages, maintenance and special planning, or controlled reg-
+assumption that the St. Lawrence hydro has constant monthly                 ulation due to extreme weather conditions. While this precludes
+output, which ignores the temporal variability of hydro outputs.            the comparison of LMPs on a one-to-one basis, Pearson correla-
+The positive outlier of Moses South indicates that extra hydro              tion coefficients can be used to evaluate the similarity between
+generation has been allocated to St. Lawrence, and Robert Moses             simulated and real LMPs arising from common historical con-
+Niagara generation is lower than it should be. In addition to hydro         ditions. To test the fidelity of our model, we run DC-OPF for
+impacts, other possible contributors of inaccuracies include: (a)           winter (Dec-Jan) and summer (Jun-Aug) seasons. The minimum
+estimation error of wind and other renewable generation, (b)                outputs of the generators are set to zero when running the
+averaging of real-time data: as these data are not recorded at              DC-OPF due to the lack of available start-up cost data. This
+precise 5-minutes intervals, the mean of each hour is not exactly           is an approximation of the Unit Commitment solution with the
+the hourly output/power flow. c) a small portion of thermal                 assumption that the generators could consistently operate at any
+generation profiles (≈ 7.6% of the total thermal capacity) are              level. The correlation coefficients are first analyzed between
+not known: the mismatched thermal generators are allocated                  derived zonal LMPs with historical LMP records, followed by
+to zones J and K as previously mentioned, which potentially                 a more comprehensive analysis for particular “outliers”.
+caused bias in the UPNY-conEd (G-H) and SPR/SUN-South                          The correlation coefficients between the simulated and his-
+(I-J) interfaces. Considering the factors above, the limitations            torical LMPs for each zone are shown in Fig. 6. One extremely
+resulting from data accessibility, and the relatively small errors,         large point which has -1300 $/MWh in zone D is removed for
+this model adequately characterizes the underlying spatiotem-               winter and nine large prices were removed in zone A, D, I and
+poral structure for the real NYS power grid.                                K where the LMPs are larger than 400 $/MWh or less than -500
+                                                                            $/MW for summer. This ensures that the correlation coefficients
+                                                                            are not underestimated by a few significant outliers.
+       VI. ANALYSIS OF OPTIMAL POWER FLOW RESULTS
+                                                                               During the winter season, correlations are strong (around
+  In this section, we compare the results of OPF analysis on                0.8-0.9) in most zones, except zones A, F and K. Zone A is signif-
+simulated and historical datasets. The specific results considered          icantly impacted by large hydro plant, as discussed in Section V,
+LIU et al.: OPEN SOURCE REPRESENTATION FOR THE NYS ELECTRIC GRID TO SUPPORT POWER GRID AND MARKET TRANSITION STUDIES                        3301
+
+
+
+
+                                                                              Fig. 7.   Zone B LMP comparison for 5pm on Dec 19, 2019.
+
+
+Fig. 6. Correlation Coefficients of Historical and Simulated LMPs by season
+and zone.
+
+
+
+where a refined model for dispatch and bidding strategies is out
+of the scope of this paper. Zone F contains 10 thermal generators,
+which are also potentially impacted by the the bidding strategies
+in some cases. For example, The Bethlehem Energy Center
+facility ran for 8438 out of 8760 hours in 2019. However, if
+we assume it bids at the cost curve fitted (with high R2 = 0.98)
+                                                                              Fig. 8.   LMP comparison for 5pm on Dec 19, 2019.
+in the DC-OPF model, it won’t be dispatched for most of the
+times due to its high cost compared to other generators. One
+hypothesis is that the Bethlehem Energy Center was bidding at a               baseline model. We next investigate some of the factors that
+lower price because it can make profit by the steam it generates              potentially cause the deviation of the simulated LMPs relative
+for other purposes or it has a long-term contract with LSEs.                  to historical, and to illuminate future research directions.
+Zone K has a similar but even more complicated situation with
+72 thermal generators. This means even just a small portion of
+                                                                              C. Outlier Analysis
+generators are not bidding at their energy cost curve or have
+other byproducts such as steam, the OPF model cannot dispatch                    The observed and simulated LMPs comparison for zone B is
+them correctly with cost curves only. Reserve resources can be                shown in Fig. 7, where the x-axis indicates the real LMPs and the
+another reason to cause the diverge in zones F and K.                         y-axis indicates the simulated LMPs. With the y = x line shown
+   The correlation coefficients are similarly high for summer                 as a reference for the perfect match of the prices, it can be seen
+months, with the exception of zones A and K. Referring to Fig. 1,             that the simulated LMPs tend to be slightly higher than the real
+these are zones with significant hydro or thermal generation.                 LMPs. This bias is due to the use of linear cost curves (constant
+Summer peak demand is much higher at 31 GW, relative to                       slopes), whereas from the masked bidding data, near zero or even
+23 GW for winter. Through the analysis of bidding curves, it                  negative bidding prices can be observed, which give lower values
+is worth noting that the bidding curve which seems to represent               than those determined by the linear cost curves. Zone B is chosen
+Robert Moses Niagara has much larger variation in summer than                 as an illustration here because it has relatively simple thermal
+in winter. The impact of this is an increased deviation of LMPs in            generator compositions as shown in Fig. 1, meaning the dispatch
+the simple OPF model, leading to lower correlation coefficients               strategies are more likely to be straightforward. We define the
+in summer for zone A. Conversely, the bidding curve for St.                   outliers as points that are ±30 $/MWh off the reference price.
+Lawrence is quite stable in the 0–10 $/MW range which is close                We choose this threshold to limit the number of outliers to an
+to assumed parameters, resulting in a better correlation between              analyzable size and focus on the extreme cases. We identify 24
+observed and simulated values in zone D. Zone K has very                      outliers for winter and 11 outliers for summer, indicated by the
+complicated thermal compositions and as the reserve units might               red dots. The outliers in winter mostly happened at peak (or near
+bid at extremely high prices with higher demand in summer, the                peak) hours of extremely cold days (Jan 21-22 and Dec 18-22),
+simulated LMPs for K diverge more from the real ones, causing                 aligning with the fuel price peaks highlighted in the NYISO
+a lower correlation coefficient than other zones.                             winter 2019-2020 Cold Weather Operations report [45], which
+   To conclude, the baseline model is able to capture the statisti-           were approximately five times higher than normal.
+cal trends for the real LMPs for most zones with correlation                     Fig. 8(a) compares the simulated and real prices across the
+coefficients at around 0.8–0.9. A more complicated bidding                    system at 5pm on December 19 as an example. Without mod-
+model that takes into consideration the unique features for hydro             ifications, the simulated LMPs (orange line) do not accurately
+and thermal units could potentially improve the results for the               represent the historical LMPs (blue line). However, when fuel
+3302                                                                           IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 38, NO. 4, JULY 2023
+
+
+
+                                                                        northeast region of the Eastern Interconnection. The reduced
+                                                                        network is then further modified to more closely reflect the
+                                                                        current NYS transmission system. Load and generation profiles
+                                                                        are updated for the NYS area with data from 2019 to provide
+                                                                        model validation and to support future research. The PF vali-
+                                                                        dation indicates that with precise records of generation profiles,
+                                                                        the baseline model can approximate the major interface flows
+                                                                        with 90% accuracy for most hours in 2019. A comparison of
+                                                                        LMPs further demonstrates that the baseline model is capable
+                                                                        of representing the major characteristics of the real grid, with
+Fig. 9.   LMP comparison for 6pm on Aug 3, 2019.                        high correlation under common situations. With modification of
+                                                                        cost curves to represent peak conditions, the simulation results
+                                                                        are significantly improved. The baseline model is coded in
+price is scaled by a factor of five to more closely represent
+                                                                        MATPOWER with interfaces to access and compile raw data
+the real price peak, the comparison improves, as shown in
+                                                                        from online resources, and is publicly available on GitHub. The
+in Fig. 8(b). By adjusting the fuel price, the fit of simulated
+                                                                        data structure is the same as MATPOWER data structure and
+LMPs improve significantly, suggesting that improvements in
+                                                                        detailed documentation of the data can be referred to [47]. This
+fuel price prediction, and generator bidding strategy in general,
+                                                                        open-source access provides other users the ability to adjust the
+can improve the simulated LMP performance.
+                                                                        generator/load profiles or make transmission network updates
+   A similar analysis for summer season shows two types of
+                                                                        for different purposes.
+outliers. One type is similar to the winter case, which is related to
+                                                                           As previously described, the bidding strategy of generators,
+hot weather and peak loads (shown in red on the right side of the
+                                                                        hydro power operations, long-term contracts with external areas
+reference line in Fig. 7(b)). The other type is attached to very low
+                                                                        and non-flexibility of reserve resources are not considered in the
+or even negative real LMPs. The negative real LMPs are caused
+                                                                        baseline model. However, the importance of precise hydro gen-
+by the negative bidding price or transmission congestion [23].
+                                                                        eration profile and its impact on PF performances is discussed.
+Because the cost curves fitted for generators are positive, we
+                                                                        Specifically, the accuracy of simulated LMPs suffers in zone A
+don’t observe as many negative LMPs as the real historical data.
+                                                                        as a function of Robert Moses Niagara hydro bidding strategies
+The LMPs of neighboring areas that used to approximate for
+                                                                        that depend on multiple factors that are not included in this model
+cost curves of external generators have negative costs sometimes
+                                                                        (such as the availability of the water, environmental regulations,
+and are the major reason to cause negative LMPs in our model.
+                                                                        among others). Exploring the bidding strategies of generators
+According to the NYISO’s 2019 market report [46], the weather
+                                                                        and incorporating a reserve market would be a valuable re-
+in summer 2019 was mild and thus does not exhibit many outliers
+                                                                        search direction to further improve this baseline. Furthermore,
+caused by high load. The simulation result of one such data
+                                                                        as shown in Table II, hydro is currently dispatched more in
+point 6 pm on Aug 3 is shown in Fig. 9(a). The simulated LMPs
+                                                                        the simulation model because the hydro seasonal availability
+for all load zones are significantly lower than the real LMPs.
+                                                                        governed by climate factors is not considered, which could
+One potential reason is that the generation cost curves are fitted
+                                                                        be another interesting direction to investigate in the future. It
+as linear curves as mentioned before whereas the real bidding
+                                                                        is also worth noting that correlation coefficients between the
+curve could be higher order polynomial curves. The load of
+                                                                        simulated and real LMPs are lower when the composition of ther-
+6 pm on Aug 3 was 24,254 MW which is about 2,000 MW
+                                                                        mal generators becomes increasingly complex. The non-flexible
+more than non-peak load hour of that day (for example 11 am).
+                                                                        reserve resources in J and K require additional attention as more
+These last 2,000 MW of power would likely to be provided by
+                                                                        intermittent renewable energy is integrated in the near future.
+thermal generators which would increase the bidding cost for the
+                                                                           In summary, the baseline model proposed and validated in
+generators online for this hour. From [23], 2,000 MW of extra
+                                                                        this paper is intended to be a tool for researchers, stakeholders,
+load would bring the operation level from roughly 60% to 90%
+                                                                        and policymakers to support analysis and understanding of the
+for the 74 generators that were online for this hour. The average
+                                                                        current NYS network. We hope that this model will be leveraged
+bidding price increases 23.72% from 60% operation level to
+                                                                        to answer a variety of research questions on this open-source,
+90% level. Therefore, the fuel price is scaled up by 23.72% to
+                                                                        customizable model and dataset. In particular, with the geospa-
+approximate the higher bidding price for these generations. The
+                                                                        tial information encoded in each bus, the model could serve as a
+result shown in Fig. 9(b) illustrates improvement in the ability
+                                                                        powerful underlying foundation for distributed and intermittent
+of the simulated LMPs to capture overall trend and magnitude
+                                                                        renewable integration studies that are sensitive to spatial and
+of the real LMPs.
+                                                                        temporal correlations.
+                VII. CONCLUSION AND DISCUSSION
+  In this paper, we proposed a baseline model for NYS us-                                              REFERENCES
+ing only publicly available data sources. A modified WARD                [1] S. Meinecke, L. Thurner, and M. Braun, “Review of steady-state elec-
+network equivalent reduction method is used to simplify the                  tric power distribution system datasets,” Energies, vol. 13, no. 18,
+NPCC 140-bus model, which represents the backbone of the                     2020, Art. no. 4826.
+LIU et al.: OPEN SOURCE REPRESENTATION FOR THE NYS ELECTRIC GRID TO SUPPORT POWER GRID AND MARKET TRANSITION STUDIES                                         3303
+
+
+
+ [2] Z. Wang and C. L. Anderson, “A progressive period optimal power flow          [25] New York Independent System Operator, “NYISO Gold Book - Load and
+     for systems with high penetration of variable renewable energy sources,”           Capacity Data,” Rensselaer, NY, USA: New York Independent System
+     Energies, vol. 14, no. 10, 2021, Art. no. 2815.                                    Operator, 2020. [Online]. Available: https://www.nyiso.com/documents/
+ [3] Z. Wang, G. Guo, and C. L. Anderson, “Simulation case studies on                   20142/2226333/2020-Gold-Book-Final-Public.pdf
+     period optimal power flow,” in Proc. IEEE Winter Simul. Conf., 2019,          [26] New york independent system operator, “market participants user’s
+     pp. 3669–3680 .                                                                    guide,” 2020, [Online]. Available: https://www.nyiso.com/manuals-tech-
+ [4] X. Chen, Q. Fu, and C.-P. Chang, “What are the shocks of climate change on         bulletins-user-guides
+     clean energy investment: A diversified exploration,” Energy Econ., vol. 95,   [27] W. Ju, J. Qi, and K. Sun, “Simulation and analysis of cascading failures
+     2021, Art. no. 105136.                                                             on an NPCC power system test bed,” in Proc. IEEE Power Energy Soc.
+ [5] “The climate leadership and community protection act,” 2019. [Online].             Gen. Meeting, 2015, pp. 1–5.
+     Available: https://climate.ny.gov/                                            [28] “The regional greenhouse gas initiative (RGGI),” 2021. Accessed:
+ [6] A. B. Birchfield, T. Xu, K. M. Gegner, K. S. Shetye, and T. J. Overbye,            Jun.28, 2021. [Online]. Available: https://www.rggi.org
+     “Grid structural characteristics as validation criteria for synthetic net-    [29] “Regional greenhouse gas initiative (RGGI)| Center for Climate and
+     works,” IEEE Trans. Power Syst., vol. 32, no. 4, pp. 3258–3265, Jul. 2017.         Energy Solutions,” 2021. Accessed: Jun. 28, 2021. [Online]. Available:
+ [7] W. Medjroubi, U. P. Müller, M. Scharf, C. Matke, and D. Kleinhans, “Open           https://www.c2es.org/content/regional-greenhouse-gas-initiative-rggi
+     data in power grid modelling: New approaches towards transparent grid         [30] “Form EIA-860 detailed data with previous from data EIA-860 A/860B,”
+     models,” Energy Rep., vol. 3, pp. 14–21, 2017.                                     2021. Accessed: May 27, 2022. [Online]. Available: https://www.eia.gov/
+ [8] Q. Zhou and J. W. Bialek, “Approximate model of European intercon-                 electricity/data/eia860/
+     nected system as a benchmark system to study effects of cross-border          [31] “Electric power annual 2019 - u. s. energy information administration,”
+     trades,” IEEE Trans. Power Syst., vol. 20, no. 2, pp. 782–788, May 2005.           2021. Accessed: Jun. 28 2021. [Online]. Available: https://www.eia.gov/
+ [9] N. Hutcheon and J. W. Bialek, “Updated and validated power flow model              electricity/annual/
+     of the main continental european transmission network,” in Proc. IEEE         [32] “United states nuclear regulatory commission,” 2021. Accessed: Jun.
+     Grenoble Conf., 2013, pp. 1–5.                                                     28, 2021. [Online]. Available: https://www.nrc.gov/reading-rm/doc-
+[10] A. Xenophon and D. Hill, “Open grid model of Australia’s national                  collections/event-status/reactor-status/index.html
+     electricity market allowing backtesting against historic data,” Sci. Data,    [33] “Form EIA-923 detailed data with previous from data EIA-906/920,”
+     vol. 5, no. 1, pp. 1–21, 2018.                                                     2021. Accessed: Jun. 28, 2021. [Online]. Available: https://www.eia.gov/
+[11] T. Ahmed, S. Mekhilef, R. Shah, and T. Urmee, “Modelling of asean power            electricity/data/eia923/
+     grid using publicly available data,” in Proc. IEEE PES Asia-Pacific Power     [34] K. Doering, J. Quinn, P. M. Reed, and S. Steinschneider, “Diagnosing
+     Energy Eng. Conf., 2018, pp. 411–416.                                              the time-varying value of forecasts in multiobjective reservoir control,” J.
+[12] E. Krall, M. Higgins, and R. P. O’Neill, “RTO unit commitment test                 Water Resour. Plan. Manage., vol. 147, no. 7, 2021, Art. no. 04021031.
+     system,” Federal Energy Regulatory Commission, DC, USA, Tech.                 [35] S. W. Turner, K. Doering, and N. Voisin, “Data-driven reservoir simulation
+     Rep., 2012. [Online]. Available: http://www.ferc.gov/legal/staff-reports/          in a large-scale hydrological and water resource model,” Water Resour.
+     rto-COMMITMENTTEST.pdf                                                             Res., vol. 56, no. 10, 2020, Art. no. e2020WR027902.
+[13] J. E. Price and J. Goodin, “Reduced network modeling of WECC as a             [36] T. T. D. Tran and A. D. Smith, “Incorporating performance-based global
+     market design prototype,” in Proc. IEEE Power Energy Soc. Gen. Meeting,            sensitivity and uncertainty analysis into LCOE calculations for emerging
+     2011, pp. 1–6.                                                                     renewable energy technologies,” Appl. Energy, vol. 216, pp. 157–171,
+[14] D. Krishnamurthy, W. Li, and L. Tesfatsion, “An 8-zone test system based           2018.
+     on ISO new England data: Development and application,” IEEE Trans.            [37] B. Vest, “Levelized cost and levelized avoided cost of new generation
+     Power Syst., vol. 31, no. 1, pp. 234–246, Jan. 2016.                               resources in the annual energy outlook 2016,” Us Eia Lcoe, pp. 1–20,
+[15] E. H. Allen, J. H. Lang, and M. D. Ilic, “A combined equivalenced-electric,        2016.
+     economic, and market representation of the northeastern power coordinat-      [38] Black & vetch holding company, “Cost and performance data
+     ing council US electric power system,” IEEE Trans. Power Syst., vol. 23,           for power generation technologies,” Nat. Renewable Energy Lab.,
+     no. 3, pp. 896–907, Aug. 2008.                                                     2012. [Online]. https://refman.energytransitionmodel.com/rails/active_
+[16] K. E. Nygard, S. Bou Ghosn, M. M. Chowdhury, D. Loegering, R. McCul-               storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ3d
+     loch, and P. Ranganathan, “Optimization models for energy reallocation             CIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8a0a9f94dbb94021
+     in a smart grid,” in Proc. IEEE Conf. Comput. Commun. Workshops, 2011,             d2c7ff1429286f27b4348ae7/nrel-cost-report.pdf?disposition=
+     pp. 186–190.                                                                       attachment
+[17] B. Howard, M. Waite, and V. Modi, “Current and near-term GHG emis-            [39] G. A. Oladosu and C. M. Sasthav, Hydropower Capital and O&m Costs:
+     sions factors from electricity production for New York state and New York          An Exploration of the FERC Form 1 Data. No. ORNL/TM-2021/2297.
+     city,” Appl. Energy, vol. 187, pp. 255–271, 2017.                                  Oak Ridge National Lab. (ORNL), Oak Ridge, TN, USA, 2022.
+[18] S. M. Burchettet al., “Investigation of generator ramp rates in high renew-   [40] J. B. Ward, “Equivalent circuits for power-flow studies,” Trans. Amer. Inst.
+     able penetration systems using an academic New York network model,”                Elect. Engineers, vol. 68, no. 1, pp. 373–382, 1949.
+     in Proc. IEEE Int. Conf. Probabilistic Methods Appl. Power Syst., 2018,       [41] P. Dimo, “Nodal analysis of power systems,” 1975.
+     pp. 1–6.                                                                      [42] D. Shiet al., “Optimal generation investment planning: Pt 1: Network
+[19] R. D. Zimmerman, C. E. Murillo-Sánchez, and R. J. Thomas, “MAT-                    equivalents,” in Proc. IEEE North Amer. Power Symp., 2012, pp. 1–6.
+     POWER: Steady-state operations, planning, and analysis tools for power        [43] N. Y. P. Authority, “Communication backbone OPGW expansion project,”
+     systems research and education,” IEEE Trans. Power Syst., vol. 26, no. 1,          Des., Eng. Construction Schedule, New York Power Authority, Sep.
+     pp. 12–19, Feb. 2011.                                                              18, 2018.
+[20] New York Independent System Operator, “Congestion Assessment and              [44] W. Stevenson, Jr and J. Grainger, Power System Analysis. New York City,
+     Resource Integration Studies,” New York Independent System Operator,               NY, USA: McGraw-Hill Educ., 1994.
+     Rensselaer, NY, USA, Rep., 2018.                                              [45] W. Yeomans, “Winter 2019-2020 cold weather operations,” NYISO
+[21] New York Independent System Operator, “2020 Reliability Needs Assess-              Management Committee Meeting, Rensselaer, NY, Mar. 25, 2020,
+     ment,” New York Independent System Operator, Rensselaer, NY, USA,                  https://www.nyiso.com/documents/20142/11460854/04%202019%20-
+     RNA Rep., 2020.                                                                    2020%20OC%20Cold%20Weather%20Operating%20Conditions.pdf/
+[22] J. Chow and G. Rogers, “User manual for power system toolbox,” Version,            26587afa-e8f0-f24d-11b8-949ba8056f39
+     vol. 3, pp. 1991–2008, 1991.                                                  [46] D. B. Patton, P. LeeVanSchaick, J. Chen, and R. P. Naga, “2019 State of the
+[23] New York Independent System Operator, “New york ISO| Energy and Mar-               Market Report for the New York ISO Markets,” May 2019. [Online]. Avail-
+     ket Operational Data,” 2021. Accessed: Jun. 28, 2021. [Online]. Available:         able: https://www.nyiso.com/documents/20142/2223763/NYISO-2019-
+     https://www.nyiso.com/energy-market-operational-data                               SOM-Report-Full-Report-5-19-2020-final.pdf/
+[24] New York Independent System Operator, “NYISO Gold Book—Load and               [47] R. D. Zimmerman and C. E. Murillo-Sánchez, Matpower user’s man-
+     Capacity Data,” Rensselaer, NY, USA: New York Independent System                   ual, Version 7.1, 2020. [Online]. Available:https://matpower.org/docs/
+     Operator, 2019. [Online]. Available: https://www.nyiso.com/documents/              MATPOWER-manual-7.1.pdf
+     20142/2226333/2019-Gold-Book-Final-Public.pdf/a3e8d99f-7164-
+     2b24-e81d-b2c245f67904?t=1556215322968
+

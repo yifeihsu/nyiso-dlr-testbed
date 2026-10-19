@@ -1,0 +1,16 @@
+{
+  "EPA_reporting_group": "EPA:ORIS:50006:UNIT:004001",
+  "associated_generators": "GTG6|STG1|STG2|STG3",
+  "single_EIA_generator": "EIA860:2025:PLANT:50006:GEN:GTG6",
+  "EIA_GTG6_nameplate_mw": 212.5,
+  "EIA_GTG6_summer_net_capacity_mw": 167.1,
+  "EIA_GTG6_winter_net_capacity_mw": 194.0,
+  "EPA_group_max_reported_gross_rate_mw": 296.0,
+  "EPA_group_max_gross_clock_average_mw": 296.0,
+  "finite_group_gross_hours": 7659,
+  "group_gross_clock_average_above_single_unit_net_capacity_hours": 7534,
+  "not_like_for_like_comparison": true,
+  "equipment_overload_inferred": false,
+  "all_group_energy_claimed_PJM": false,
+  "interpretation": "Reporting-group gross covers overlapping generator associations and is not single-unit net telemetry; the exceedance diagnostic demonstrates that treating this entire group as GTG6 output would be unsupported"
+}

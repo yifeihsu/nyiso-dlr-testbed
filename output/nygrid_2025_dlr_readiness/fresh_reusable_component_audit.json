@@ -1,0 +1,103 @@
+{
+  "audit_completed": true,
+  "fresh_reusable_component_tests_passed": true,
+  "component_tests": 25,
+  "source_case_loader": "npcc_nygrid_2025_dover_dc",
+  "inspected_hour_index": 8508,
+  "buses": 148,
+  "branch_records": 274,
+  "active_branch_records": 264,
+  "generators": 1464,
+  "fixed_transfer_records": 6,
+  "active_zero_RATE_A_records": 242,
+  "active_voltage_changing_records": 92,
+  "generator_Q_columns_all_zero_DC_placeholders": true,
+  "voltage_magnitudes_all_one_DC_placeholders": false,
+  "legacy_thermal_catalog_codes": [
+    "HAWK_477_ACSR",
+    "DRAKE_795_ACSR",
+    "CARDINAL_954_ACSR"
+  ],
+  "legacy_catalog_physical_NY_verified": false,
+  "legacy_library_has_ACSS_Mallard_or_Bluebird": false,
+  "current_loader_thermal_runtime_metadata_present": false,
+  "old_plain_helper_would_remove_six_transfer_records": true,
+  "old_plain_helper_would_remove_control_callbacks": true,
+  "gamma": 0.30012075175285535,
+  "design_F84_phase_current_A": 2214,
+  "design_F84_subconductor_current_A": 1107.0000000000002,
+  "design_F84_public_MVA": 1322.9923683453355,
+  "design_F84_model_MW_unity_PF": 397.05746415109263,
+  "unconverted_scaled_power_current_ratio": 0.3001207517528553,
+  "unconverted_scaled_power_Joule_heating_ratio": 0.090072465632699,
+  "coupled_current_testbed_DLR_experiment_run": false,
+  "current_testbed_physical_DLR_ready": false,
+  "AC_required_for_declared_DC_proxy_research": false,
+  "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+  "dependencies": [
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\dlr_heat_balance.m",
+      "sha256": "9a17663131eabae61c3d4cefff5a7d726c9ae81711c21992836411062416fed1"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\dlr_steady_ampacity.m",
+      "sha256": "413f4e1ab85d076f2678873ecc3361a46919020819dd304e051755008caf5fa4"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\dlr_temperature_trace.m",
+      "sha256": "a1c40f431ba0703576ef2c5d797fbb1a89f83bd96d85fa52cb203f5c0d4719ee"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\dlr_conductor_library.m",
+      "sha256": "1e2f233c615c4605b09f60c2358632b11d75b58f0a0aa86b90e413ed6c21736d"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\test_dlr_thermal_model.m",
+      "sha256": "7b8b265ac3d161423ebc906cf1f09148447093221238608272e9721f4f5ae0ca"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\test_dlr_electrical_consistency.m",
+      "sha256": "5d49042a9aca632750d29762f3806992ae33ce7e4922100747a95c582aa500d0"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\test_dlr_series_constraint.m",
+      "sha256": "1123e4afc769f4019830aba2b0d981d57821c40cb05935d41b8542c919fbcb35"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\dlr_series_current_audit.m",
+      "sha256": "d4ac34c9ec01979a06b52997d44f9ed61194e52960c9ce277b2c83f6c2793ee4"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\dlr_series_constraint.m",
+      "sha256": "3e1a967e63b43ab6ee4bf9e555f0a04382abe27fcbaafd138b12815d933bf627"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\build_dlr_corridor_realizations.m",
+      "sha256": "47f0dd82a55fb08356560ebd0ec4f4c4346fd0749644516652c043c3bc145eba"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\apply_dlr_temperature_resistance.m",
+      "sha256": "dbbdb8777851469e14f2adac1cb6e2db7486e999d183ecd5fbadcf6a14117657"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\solve_dlr_steady_operating_point.m",
+      "sha256": "f26d68424577d50ead7dd5350bde530a18ba4744097c423d91066ec9c53e244d"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_dover_dc.m",
+      "sha256": "b0f4c23bc1e7cf4e3907411089b96efba5ea9bb77bf1fed6a03910e4134b0979"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\fixtures\\dlr_nrel_reference.csv",
+      "sha256": "081a85f8598016667c16372897aebda986a1ada937ab096b4c8dba02da3a9c0b"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\NY_Lite\\fixtures\\dlr_nrel_reference_manifest.json",
+      "sha256": "da64fc8058e9cb4d2fa2c95f9662104b9dd40a73a6e393b85625149ef1337201"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_dlr_readiness\\check_reusable_kernels.m",
+      "sha256": "7a0f3091a201a8e53cb6a7aa92bcedc34e1b4f2c4fbb63fe26202cbb670efec4"
+    }
+  ]
+}

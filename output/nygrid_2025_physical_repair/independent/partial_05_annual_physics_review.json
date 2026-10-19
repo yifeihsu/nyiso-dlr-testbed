@@ -1,0 +1,187 @@
+{
+  "passed": true,
+  "completed_annual_review": false,
+  "created_utc": "2026-10-15T14:23:47.742688+00:00",
+  "scope": "Independent direct complex branch laws, nodal balance, passive-node reconstruction, material losses, requested-repair effects and remaining operating-limit readback of saved qualified annual arrays. No new PF solve.",
+  "months": [
+    5
+  ],
+  "clock_rows_reviewed": 744,
+  "source_qualified_hours": 729,
+  "candidate_qualified_hours": 729,
+  "paired_old_baseline_hours": 729,
+  "new_success_hours": 0,
+  "lost_old_success_hours": 0,
+  "rejected_source_hours": 0,
+  "failed_iterates_excluded_from_physical_statistics": true,
+  "maximum_recomputation_errors": {
+    "branch_complex_power_MVA": 1.8778707593416596e-10,
+    "series_current_A": 8.057199352151656e-10,
+    "from_current_A": 8.409699603362242e-10,
+    "to_current_A": 8.349516633643361e-10,
+    "series_loss_identity_MW": 2.7711166694643907e-13,
+    "parent41_material_loss_identity_MW": 1.3677947663381929e-13,
+    "nodal_P_MW": 6.462499868575833e-09,
+    "nodal_Q_MVAr": 9.712842086173623e-09,
+    "full_voltage_lift_pu": 7.016295501696787e-14,
+    "retained_voltage_pu": 0.0,
+    "passive_YL_pu": 1.6768829733431826e-12
+  },
+  "network_invariants": [
+    {
+      "state_index": 1,
+      "parent41_RXB": [
+        0.0018,
+        0.0089,
+        0.021267472267637012
+      ],
+      "nominal_reactor_MVAr": {
+        "185": 607.2794681638038,
+        "195": 254.8171800800456
+      },
+      "BS_formula_error_MVAr": 5.684341886080802e-14,
+      "voltage_bounds_and_initial_PV_setpoints_unchanged": true,
+      "all_other_branch_fields_unchanged": true
+    },
+    {
+      "state_index": 2,
+      "parent41_RXB": [
+        0.0018,
+        0.0089,
+        0.021267472267637012
+      ],
+      "nominal_reactor_MVAr": {
+        "185": 607.2794681638038,
+        "195": 254.8171800800456
+      },
+      "BS_formula_error_MVAr": 5.684341886080802e-14,
+      "voltage_bounds_and_initial_PV_setpoints_unchanged": true,
+      "all_other_branch_fields_unchanged": true
+    },
+    {
+      "state_index": 3,
+      "parent41_RXB": [
+        0.0018,
+        0.0089,
+        0.021267472267637012
+      ],
+      "nominal_reactor_MVAr": {
+        "185": 607.2794681638038,
+        "195": 254.8171800800456
+      },
+      "BS_formula_error_MVAr": 5.684341886080802e-14,
+      "voltage_bounds_and_initial_PV_setpoints_unchanged": true,
+      "all_other_branch_fields_unchanged": true
+    },
+    {
+      "state_index": 4,
+      "parent41_RXB": [
+        0.0018,
+        0.0089,
+        0.021267472267637012
+      ],
+      "nominal_reactor_MVAr": {
+        "185": 607.2794681638038,
+        "195": 254.8171800800456
+      },
+      "BS_formula_error_MVAr": 5.684341886080802e-14,
+      "voltage_bounds_and_initial_PV_setpoints_unchanged": true,
+      "all_other_branch_fields_unchanged": true
+    }
+  ],
+  "paired_parent41_loss_model_MW": {
+    "old_mean": 96.01995346015146,
+    "new_mean": 2.596997316528064,
+    "mean_reduction_percent": 97.29535661813685
+  },
+  "candidate_parent41_mean_loss_model_MW": 2.596997316528064,
+  "candidate_parent41_hardware_current_exceedance_hours": 261,
+  "target_voltage": {
+    "185": {
+      "min_VM": 1.0199999999999991,
+      "max_VM": 1.0387318800154217,
+      "violation_hours": 0
+    },
+    "195": {
+      "min_VM": 1.0099999999999993,
+      "max_VM": 1.0464298710893556,
+      "violation_hours": 0
+    }
+  },
+  "remaining_global_limits": {
+    "overvoltage_hours": 729,
+    "undervoltage_hours": 0,
+    "Q_violation_hours": 729,
+    "S_violation_hours": 729,
+    "branch_MVA_violation_hours": 383,
+    "full_operating_qualified_hours": 0,
+    "minimum_VM": 0.9652299999999997,
+    "maximum_VM": 1.075797805518904
+  },
+  "limitations": [
+    "Research-model repair, not installed-asset certification or historical dispatch validation.",
+    "Thermal DLR depends on weather and conductor temperature; this readback checks current bases, material-loss identity and the preserved 2000A parent41 apparatus ceiling, not a new annual thermal solve.",
+    "Physical P32 meter membership and conditional source numeric-as-MW interpretation remain unchanged and unverified.",
+    "Targeted voltage repairs do not imply whole-network operating feasibility."
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/annual_axes.mat",
+      "sha256": "68dd2a9debe4c80d167e57711687aa6362272241f37b50dca7ef11c8074d4b2d"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/annual_network.mat",
+      "sha256": "6517ec6d3fbececbf4155b34d285ae85b176c4442590f9d86a02f297f0739864"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/parent41_parameters.json",
+      "sha256": "0405ad77f50770eba7f984badfacb16ecaf300c75fb2d6b811a550cbe831174a"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/independent/review_annual_physics.py",
+      "sha256": "3c78d0248e97c4949976857b828db4bc78f58cd1cf18bc94c04297a562e85b88"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_05.mat",
+      "sha256": "df7920f5a55e42dd861f3aef58aa3af4711d5c9228a713aab56989bb0b19dc44"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_05_receipt.json",
+      "sha256": "21e549cee7226d95693e08b24ca0b90db180ba1db73c8337c0a247a135c72e71"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_05.mat",
+      "sha256": "7f4c08f15f2363b8298ef90fd416f53ba42ee5522f54f9c341a5081be6672748"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_physical_repair/independent/partial_05_hourly_physical_readback.csv",
+      "sha256": "852bd3efd9fb83d67b2616508143edcd1f58f5062bd20bd61ad287ac99c4d17f"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/independent/partial_05_paired_loss_comparison.csv",
+      "sha256": "c87e6bc2bf665e4c1f0988f17ba601cb4fc47d8911d858594e9cbd9c8576ebc9"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/independent/partial_05_target_parent_metrics.csv",
+      "sha256": "0258652f51f73ac52f22904937348e0092efce32dc5be2f9c498801ce8133a2f"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/independent/partial_05_interface_metrics.csv",
+      "sha256": "38d79801735ddee3a0d2a3980a25b6d8d3c223733a4e6930050d31f5988e853a"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/independent/partial_05_bus_voltage_readback.csv",
+      "sha256": "27bb752b583139903177dcd6b6284b5a2803bd02da1ea76935ae299d0b1594bf"
+    }
+  ]
+}

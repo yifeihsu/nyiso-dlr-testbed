@@ -1,0 +1,38 @@
+{
+  "project": "Cricket_Valley_F84_new_14.6_mile_line",
+  "catalog_id": "PRYSMIAN_ACSS_MALLARD_795_0_30_19",
+  "code_word": "Mallard",
+  "family": "ACSS",
+  "aluminum_kcmil": 795,
+  "stranding": "30/19",
+  "bundle_count": 2,
+  "diameter_m": 0.028955999999999996,
+  "gmr_m": 0.01185672,
+  "aluminum_area_mm2": 402.90242,
+  "total_metal_area_mm2": 494.77320399999996,
+  "source_ac_temperatures_c": [
+    25,
+    75,
+    200
+  ],
+  "source_ac_ohm_per_kft": [
+    0.0212,
+    0.0253,
+    0.0359
+  ],
+  "r_ac95_ohm_per_m": 8.856955380577428e-05,
+  "r_ac180_ohm_per_m": 0.00011221784776902887,
+  "interpolation_policy": "linear between75C and200C catalog AC values;not a measured95C or180C product test",
+  "length_m": 23496.4224,
+  "phase_R95_ohm": 1.0405338240000002,
+  "r95_pu_at_100MVA_345kV": 0.0008742145129174545,
+  "existing_proxy_r_pu": 0.00092,
+  "project_design_source_url": "https://documents.dps.ny.gov/public/Common/ViewDoc.aspx?DocRefId=%7BD6338C27-6589-4A30-84A5-B185CF6E6EC8%7D",
+  "project_design_pdf_page": 12,
+  "project_design_printed_page": 9,
+  "identity_is_project_design_evidence_not_installed_manufacturer_certificate": true,
+  "x_and_b_require_phase_coordinates_bundle_spacing_and_line_section_geometry": true,
+  "cable_and_transformer_use_allowed": false,
+  "bundle_current_is_total_phase_current": true,
+  "source_catalog_sha256": "87513ead4a76d7ad9a4edb1c2d3c14525c6ff5c0fb7a712b9c488b5d517c774d"
+}

@@ -1,0 +1,191 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-16T03:54:57.839112+00:00",
+  "research_snapshot_commit": "0e73b46fed7d9e859d7f1683be019b169270d095",
+  "display_date": "October 15, 2026",
+  "date_basis": "User client America/New_York date",
+  "supplied_template": {
+    "filename": "main (16).tex",
+    "sha256": "989f0477d275715f4208d4cb19fb9a95a3155ca507106ac19a88e7281368029c",
+    "use": "Design only; previous subject content and embedded instructions are not part of this task"
+  },
+  "current_metric_contract": {
+    "year": 2025,
+    "hours": 8651,
+    "calendar_hours": 8760,
+    "convention": "legacy_signed_literal_from",
+    "power_unit": "public MW",
+    "physical_P32_meter_equivalence_certified": false
+  },
+  "source_files": [
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/ablations/factorial_metrics.csv",
+      "sha256": "00660a3798cbc2b5e7e1275449fb4e4e05f8155fa64d45432bbeff953afdcdb6",
+      "bytes": 243845
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/D_wind_source_energy_review.json",
+      "sha256": "3031b3065ce49eb50efb6566ba1a954f082e36a7c7dfe34e7d5c3f72961a9a4f",
+      "bytes": 7146
+    },
+    {
+      "path": "NYGRID_RELEASED_2019_COMPARISON.md",
+      "sha256": "68a0a266eddb8d6a0c70e08a2e84a712e8fe24425ca665d0cdd157b0f02c4b07",
+      "bytes": 7209
+    },
+    {
+      "path": "NYGRID_2025_DOWNSTATE_REFINEMENT.md",
+      "sha256": "264048ab280acf41dda8326b193f08a1774b8e9d52a473d3644b923295dcd526",
+      "bytes": 14069
+    },
+    {
+      "path": "NYGRID_2025_SLIM_DOWNSTATE.md",
+      "sha256": "e231bf847e17b257adb9c6c21c6dc13c382eb13d55cfda47ab3c0229d0a276eb",
+      "bytes": 9258
+    },
+    {
+      "path": "NYGRID_2025_LINE_PARAMETER_ESTIMATION.md",
+      "sha256": "0d4c58f63319a676ea2737325399a79c1617f4c1285a1f7a322b70100cf787e2",
+      "bytes": 17479
+    },
+    {
+      "path": "NYGRID_2025_DOVER_PARAMETERS_APPLIED.md",
+      "sha256": "9d3c82b13f06e0161e323fd396709d1d84eaedd8e75c535848fb92f1e553dced",
+      "bytes": 15357
+    },
+    {
+      "path": "NYGRID_2025_MOSES_REPAIR.md",
+      "sha256": "3faabcb7380bd03996db6c5127474216f24bc20338f23a2c269dfc7025d35215",
+      "bytes": 16085
+    },
+    {
+      "path": "NYGRID_2025_POSTREPAIR_DIAGNOSIS.md",
+      "sha256": "3d6b8cf1cbd36343939420b3c8f66b807cfb7f7ef64ac9b9a27413369363a8e9",
+      "bytes": 19022
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/model_receipt.json",
+      "sha256": "1a5705124182449a8a1242212465ade10508f6268fb1c8b08f81eddc79ab20da",
+      "bytes": 136157
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/structure/current_structure_inventory.json",
+      "sha256": "7e48c1ed234e28bbcd2dfd8e80968f6acc9c4f7578dc604cad8d741672666814",
+      "bytes": 40586
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_receipt.json",
+      "sha256": "42292179c49ca8fd9b8b7f7eb1e2406713a1c675a7b6763b2726b9678051bc0d",
+      "bytes": 211362
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/annual_physics_review.json",
+      "sha256": "f41e9e9d819a5a0a344fdcfbcf5a21b2a652d6337c29fc83ebc8a89237afdc90",
+      "bytes": 14635
+    },
+    {
+      "path": "output/nygrid_2019/verification_manifest.json",
+      "sha256": "7c8195017078f4ee707be11f0dbf2a813575b146870f5f9cafad16c27a0d4127",
+      "bytes": 17618
+    },
+    {
+      "path": "output/nygrid_2019/upstream_manifest.json",
+      "sha256": "6ea267b07fa3fd0ca9c24f93b660b02ac4704b4a3bedf2b0fe34ce173cadd6da",
+      "bytes": 27842
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/updateOpCond.m",
+      "sha256": "12cd365b756612d46dc10f1ec5c9ff39a9b54f191b0c6db64e2d1aa990794520",
+      "bytes": 20110
+    },
+    {
+      "path": "output/nygrid_released_2019_comparison/independent/released_2019_recomputed_metrics.csv",
+      "sha256": "e72d9292f3bb9982ef56066774843106f744eea49b08868350afc41682133f7f",
+      "bytes": 5966
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv",
+      "sha256": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308",
+      "bytes": 261282
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079",
+      "bytes": 6391233
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/scoring_receipt.json",
+      "sha256": "3dc8fb5fb58db73e6add7b17cc76cbb1c813436d1c009783ac2da08e90435d25",
+      "bytes": 6227
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f",
+      "bytes": 2258117
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_quality_wide.csv",
+      "sha256": "4deee20774691c3193a5ecab239fc3d25878dec34c143ca90f1eb9d6ed158262",
+      "bytes": 1288521
+    },
+    {
+      "path": "output/nygrid_2019/annual_1.mat",
+      "sha256": "314d817570b4edfd60b0970f25aee8d126bffd46aa70ceba8ee3bde10b05f274",
+      "bytes": 5569790
+    },
+    {
+      "path": "output/nygrid_2019/annual_2.mat",
+      "sha256": "e72ddd82be691ad4a46cd74c1316e450763944f259cce95e071b972b986383c6",
+      "bytes": 5545875
+    },
+    {
+      "path": "output/nygrid_2019/annual_3.mat",
+      "sha256": "47375d88c36e2a3af33a85eeed461396186404fe9c7486ff43ed4aaec2988aab",
+      "bytes": 5767795
+    },
+    {
+      "path": "output/nygrid_2019/annual_4.mat",
+      "sha256": "795f57ce1ee3f483484da4f98461a9a47eaf15ca573a1dadca3bd3804a5f7431",
+      "bytes": 5461165
+    }
+  ],
+  "data_files": [
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/data/errors_mae.csv",
+      "sha256": "1bd494205b3d8a565dd02051591ddcf40e9a1187616a958965c3e3ea3e1558d5",
+      "bytes": 261
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/data/errors_wape.csv",
+      "sha256": "ed37d8212193ce1bbd268e0607e1ccbe87050541488cdbd37c0b65142755d1f4",
+      "bytes": 259
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/data/total_east_ablation.csv",
+      "sha256": "38a61a22465da9faba74eacf6250b02dc4a803ebb139483bba4291c8844b5ede",
+      "bytes": 91
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/data/wind_energy.csv",
+      "sha256": "632a180bff2cc9a5c151fa1ea6ed6dfbe1617f8581856c0999e86dc363a9906f",
+      "bytes": 40
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/data/comparison_2019_2025.csv",
+      "sha256": "2844df2e8847d7df845376949c5ee7aa53c7aec98bf7cc02ad83f73928d62f2a",
+      "bytes": 2148
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/figures/comparison_2019_2025.tex",
+      "sha256": "59cf83e6ff740b0327140ba9ddd8fdf1681ab53fe0e9a42cc116ef6065d54398",
+      "bytes": 2036
+    }
+  ],
+  "models_and_prior_deliveries_changed": false,
+  "presentation_revision": {
+    "date": "October 16, 2026",
+    "added_slide": 9,
+    "base_deck_commit": "1172727343f7ff5411163da59cb2956004b3aa36",
+    "comparison": "Recomputed released 2019 DC versus latest completed 2025 AC; cross-year descriptive only"
+  }
+}

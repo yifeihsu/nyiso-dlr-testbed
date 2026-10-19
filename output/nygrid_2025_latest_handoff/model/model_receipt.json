@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "source_model_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+  "model_file": {
+    "name": "latest_model.mat",
+    "bytes": 802063,
+    "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+  },
+  "model_files": [
+    {
+      "name": "latest_model.mat",
+      "bytes": 802063,
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+    },
+    {
+      "name": "profiles_h0001_4380.mat",
+      "bytes": 5.4625507E+7,
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "name": "profiles_h4381_8760.mat",
+      "bytes": 5.4767622E+7,
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    }
+  ],
+  "profile_shards": [
+    {
+      "name": "profiles_h0001_4380.mat",
+      "first_hour": 1,
+      "last_hour": 4380,
+      "bytes": 5.4625507E+7,
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "name": "profiles_h4381_8760.mat",
+      "first_hour": 4381,
+      "last_hour": 8760,
+      "bytes": 5.4767622E+7,
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    }
+  ],
+  "hours": 8760,
+  "source_qualified_hours": 8651,
+  "first_timestamp_utc": "2025-01-01T05:00:00Z",
+  "last_timestamp_utc": "2026-01-01T04:00:00Z",
+  "state_records": [
+    {
+      "state_index": 1,
+      "state_name": "refined_2025_pre_may_case",
+      "state_label": "pre_may",
+      "template_hour": 1,
+      "first_hour": 1,
+      "last_hour": 3359,
+      "source_qualified_hours": 3315,
+      "full_bus_count": 266,
+      "full_branch_rows": 485,
+      "active_branch_rows": 408,
+      "original_parent_rows": 410,
+      "generator_rows": 1464,
+      "retained_bus_count": 148,
+      "fixed_transfer_records": 6
+    },
+    {
+      "state_index": 2,
+      "state_name": "refined_2025_may21_case",
+      "state_label": "may21",
+      "template_hour": 3360,
+      "first_hour": 3360,
+      "last_hour": 3575,
+      "source_qualified_hours": 214,
+      "full_bus_count": 266,
+      "full_branch_rows": 485,
+      "active_branch_rows": 409,
+      "original_parent_rows": 410,
+      "generator_rows": 1464,
+      "retained_bus_count": 148,
+      "fixed_transfer_records": 6
+    },
+    {
+      "state_index": 3,
+      "state_name": "refined_2025_may30_case",
+      "state_label": "may30",
+      "template_hour": 3576,
+      "first_hour": 3576,
+      "last_hour": 8471,
+      "source_qualified_hours": 4835,
+      "full_bus_count": 266,
+      "full_branch_rows": 485,
+      "active_branch_rows": 410,
+      "original_parent_rows": 410,
+      "generator_rows": 1464,
+      "retained_bus_count": 148,
+      "fixed_transfer_records": 6
+    },
+    {
+      "state_index": 4,
+      "state_name": "refined_2025_case",
+      "state_label": "post_dover",
+      "template_hour": 8472,
+      "first_hour": 8472,
+      "last_hour": 8760,
+      "source_qualified_hours": 287,
+      "full_bus_count": 267,
+      "full_branch_rows": 488,
+      "active_branch_rows": 412,
+      "original_parent_rows": 413,
+      "generator_rows": 1464,
+      "retained_bus_count": 148,
+      "fixed_transfer_records": 6
+    }
+  ],
+  "all_annual_profile_arrays_copied_without_numeric_conversion": true,
+  "historical_loader_metadata_removed": true,
+  "serialized_function_handles_included": false,
+  "already_released_equivalent_templates": true,
+  "loss_policy_static_vectors_embedded": true,
+  "historical_replay_files_required_at_runtime": false,
+  "physical_arrays_changed": false,
+  "fresh_PF_solve_run": false,
+  "annual_replay_run": false,
+  "OPF_run": false,
+  "package_runtime_dependencies": [
+    "model/latest_model.mat",
+    "model/profiles_h0001_4380.mat",
+    "model/profiles_h4381_8760.mat",
+    "model/model_receipt.json",
+    "runtime/*.m",
+    "runtime/kernels/*.m",
+    "vendor/matpower8.1 code",
+    "MATLAB with JVM"
+  ],
+  "public_API": [
+    "setup_nygrid_latest",
+    "load_nygrid_latest",
+    "run_nygrid_latest_acpf",
+    "screen_nygrid_latest_dlr"
+  ]
+}

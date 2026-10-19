@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-16T00:47:00.832232+00:00",
+  "qualified_hours": 8651,
+  "Current_Moses_metrics": {
+    "hours": 8651,
+    "MAE_MW": 108.94497475154104,
+    "bias_MW": 24.319610134753106,
+    "RMSE_MW": 138.23965374306104,
+    "WAPE_pct": 20.178426849472665
+  },
+  "TE_mean_prediction_change_MW": -54.371519660986294,
+  "TE_MAE_increase_MW": 27.752895931029137,
+  "StLawrence_at_855_hours": 3161,
+  "oracle_above_855_hours": 1403,
+  "incompatible_StLawrence_only_months_by_cap": {
+    "855": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "912": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "conditional_shape_control": [
+    {
+      "period": "annual",
+      "hours": 8651,
+      "MAE_MW": 90.18716947048169,
+      "bias_MW": 24.82058608246795,
+      "RMSE_MW": 116.35008409341624,
+      "WAPE_pct": 16.704168375562155,
+      "frozen_terminal_correction": true,
+      "new_annual_AC_solve": false
+    }
+  ],
+  "limits": [
+    "The oracle holds all other source terms, physical-meter mapping and saved terminal corrections fixed; it is not observed generation or a feasible dispatch.",
+    "912MW is the 16-unit full-nameplate sensitivity, not certified net capability or a revised availability assumption.",
+    "TE/CE/parent224 identity describes the model proxies, not certified physical P32 definitions.",
+    "Daily correlations and control sensitivities do not establish actual plant-level causal error."
+  ],
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/hourly_evidence.csv",
+      "sha256": "9926ac86a0a6fd3d333bb198693554d8c042755ab102f4a1e3303ec8d1235f2b"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/StLawrence_monthly_energy_ledger.csv",
+      "sha256": "e5375d977b2e5fea74dbacba04af5fa4fca331e022bf09b4434725cd8b2f956f"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/generation/monthly_flat_hourly_injection_delta.csv",
+      "sha256": "970ec0314f3983bfb702ca8ea404a7c321225cf05e83bee97ec24f642463f443"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/residual_metrics.csv",
+      "sha256": "5d1fb34cf33ce4eedc574f427b43c8220215af68489df0f902dc8493d5ec6779"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/Moses_terminal_convention_sensitivity.csv",
+      "sha256": "ea9d7aba11b434adbde1d29f45d10cb612f51f5cd1316301aafa8e38811bbf95"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/daily_profiles.csv",
+      "sha256": "d6e3e680c0c08c9e275a2eb2874ef697563c5967e3f7d84547ba04777c133471"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/monthly_profiles.csv",
+      "sha256": "3a22f5b52ec31143c269e0247a8f897c82e29a45fa5cd4e8c8126161da8fd2e3"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/TotalEast_CentralEast_proxy_identity.csv",
+      "sha256": "5bb8de3f05b91d1dedcd91303b7e2c114decf4ffb78aa306754d4444db8e8cab"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/TotalEast_absolute_error_change_partition.csv",
+      "sha256": "0aaa9c9e60c473ea5057e2856e9f547c0445714c8bff38c0891695207e6ab20c"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/conditional_StLawrence_only_energy_compatibility.csv",
+      "sha256": "4192212b21bbd958e60bed70f490d0ac7219fed1b32d375832ac7366a5b0a19f"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/oracle_StLawrence_DIAGNOSTIC_ONLY.csv",
+      "sha256": "fc5f395e6c3c542a77a5a6000e01c4e6c4e2f5d209e73babf2d01fc871d9f205"
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/monthly_flat_frozen_terminal_scores.csv",
+      "sha256": "382c512ccbf050e48fd85b14ae8441f2d7ce9809f29b5453c9e6740bbe8e22b6"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "hours": [
+    349,
+    1093,
+    1765,
+    2509,
+    3135,
+    3229,
+    3469,
+    3613,
+    3973,
+    4693,
+    5477,
+    5605,
+    6181,
+    6901,
+    7645,
+    8365,
+    8605
+  ],
+  "qualified_hours": 17,
+  "all_four_states": true,
+  "parent185195_voltage_limits_pass_all_targeted_hours": true,
+  "parent41_thermal_forward_checks": [
+    {
+      "state_index": 1,
+      "parent41_segments": 1,
+      "parent41_catalog_id": "PRYSMIAN_ACSS_MALLARD_795_0_30_19",
+      "parent41_circuits": 4,
+      "parent41_forward_RXB_error": 1.7347234759768071E-18
+    },
+    {
+      "state_index": 2,
+      "parent41_segments": 1,
+      "parent41_catalog_id": "PRYSMIAN_ACSS_MALLARD_795_0_30_19",
+      "parent41_circuits": 4,
+      "parent41_forward_RXB_error": 1.7347234759768071E-18
+    },
+    {
+      "state_index": 3,
+      "parent41_segments": 1,
+      "parent41_catalog_id": "PRYSMIAN_ACSS_MALLARD_795_0_30_19",
+      "parent41_circuits": 4,
+      "parent41_forward_RXB_error": 1.7347234759768071E-18
+    },
+    {
+      "state_index": 4,
+      "parent41_segments": 1,
+      "parent41_catalog_id": "PRYSMIAN_ACSS_MALLARD_795_0_30_19",
+      "parent41_circuits": 4,
+      "parent41_forward_RXB_error": 1.7347234759768071E-18
+    }
+  ],
+  "detailed_vs_compact_hour": 8605,
+  "detailed_vs_compact_voltage_error_pu": 1.1655755895357269E-12,
+  "detailed_vs_compact_flow_error_model_MW_MVAr": 7.4514900916256011E-9,
+  "whole_system_operating_qualification_claimed": false,
+  "source_profiles_controls_and_voltage_limits_preserved": true,
+  "setup": {
+    "package_root": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems",
+    "runtime_root": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_latest_handoff\\runtime",
+    "model_file": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_latest_handoff\\model\\latest_model.mat",
+    "model_sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171",
+    "matpower_root": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower",
+    "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+    "MATPOWER_version": "8.1",
+    "source_model_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+    "hours": 8760,
+    "source_qualified_hours": 8651,
+    "topology_states": 4,
+    "retained_bus_count": 148,
+    "generator_count": 1464,
+    "fixed_transfer_records": 6,
+    "historical_model_loader_required": false,
+    "persistent_user_path_changed": false,
+    "function_resolution": [
+      {
+        "function": "setup_nygrid_latest",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_latest_handoff\\runtime\\setup_nygrid_latest.m"
+      },
+      {
+        "function": "load_nygrid_latest",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_latest_handoff\\runtime\\load_nygrid_latest.m"
+      },
+      {
+        "function": "run_nygrid_latest_acpf",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_latest_handoff\\runtime\\run_nygrid_latest_acpf.m"
+      },
+      {
+        "function": "screen_nygrid_latest_dlr",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_latest_handoff\\runtime\\screen_nygrid_latest_dlr.m"
+      },
+      {
+        "function": "nylatest_coupled_solve",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_latest_handoff\\runtime\\kernels\\nylatest_coupled_solve.m"
+      },
+      {
+        "function": "nylatest_compact_build",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_latest_handoff\\runtime\\kernels\\nylatest_compact_build.m"
+      },
+      {
+        "function": "nylatest_thermal_candidates",
+        "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_latest_handoff\\runtime\\kernels\\nylatest_thermal_candidates.m"
+      },
+      {
+        "function": "runpf",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\runpf.m"
+      },
+      {
+        "function": "makeYbus",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\makeYbus.m"
+      },
+      {
+        "function": "pfsoln",
+        "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\pfsoln.m"
+      }
+    ]
+  }
+}

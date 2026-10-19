@@ -1,0 +1,40 @@
+
+MATPOWER Version 8.1, 12-Jul-2025
+Optimal Power Flow -- AC-polar-power formulation
+MATPOWER Interior Point Solver -- MIPS-sc, Version 1.5.2, 12-Jul-2025
+ (using built-in linear solver)[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.005173e-19.] 
+[> In mplinsolve (line 265)
+In mips (line 523)
+In nlps_master (line 233)
+In opt_model/solve (line 220)
+In mp/task/run (line 226)
+In opf (line 257)
+In runopf (line 77)
+In run_capability_probe (line 13)
+] 
+
+Numerically Failed
+
+Did not converge in 13 iterations.
+OPF failed
+CAPABILITY h4000 success0 1.9s Pviol2.05 Qviol2.92 Vviol0.03 losses267.927
+
+MATPOWER Version 8.1, 12-Jul-2025
+Optimal Power Flow -- AC-polar-power formulation
+MATPOWER Interior Point Solver -- MIPS-sc, Version 1.5.2, 12-Jul-2025
+ (using built-in linear solver)[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.890831e-19.] 
+[> In mplinsolve (line 265)
+In mips (line 523)
+In nlps_master (line 233)
+In opt_model/solve (line 220)
+In mp/task/run (line 226)
+In opf (line 257)
+In runopf (line 77)
+In run_capability_probe (line 13)
+] 
+
+Numerically Failed
+
+Did not converge in 16 iterations.
+OPF failed
+CAPABILITY h8508 success0 0.8s Pviol1.28 Qviol1.18 Vviol0.0143 losses269.928

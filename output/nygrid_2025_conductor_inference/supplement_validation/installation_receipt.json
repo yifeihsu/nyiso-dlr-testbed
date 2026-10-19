@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "supplement_archive": {
+    "path": "deliverables/nygrid_rx_conductor_supplement_20261013/nygrid_rx_conductor_supplement_20261013.zip",
+    "bytes": 5561032,
+    "sha256": "208e05d2cf2c6663a7283183dbff7648eb8d5a5e61fb029a4dc9a23231f50723"
+  },
+  "actual_runtime_archive_extracted": true,
+  "base_package": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_rx_supplement_823_xnad\\nygrid_dlr_runtime_20261013",
+  "supplement": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_rx_supplement_823_xnad\\nygrid_rx_conductor_supplement_20261013",
+  "no_git_ancestor": true,
+  "first_install": {
+    "passed": true,
+    "installed_new_files": 79,
+    "already_identical_files": 2,
+    "existing_base_files_preserved": 6,
+    "electrical_parameters_modified": false,
+    "target": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_rx_supplement_823_xnad\\nygrid_dlr_runtime_20261013",
+    "new_API": "screen_nygrid_2025_rx_thermal",
+    "next_step": "In MATLAB: addpath('scripts/nygrid_2025_conductor_inference'); use explicit weather."
+  },
+  "idempotent_install": {
+    "passed": true,
+    "installed_new_files": 0,
+    "already_identical_files": 81,
+    "existing_base_files_preserved": 6,
+    "electrical_parameters_modified": false,
+    "target": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_rx_supplement_823_xnad\\nygrid_dlr_runtime_20261013",
+    "new_API": "screen_nygrid_2025_rx_thermal",
+    "next_step": "In MATLAB: addpath('scripts/nygrid_2025_conductor_inference'); use explicit weather."
+  },
+  "conflicting_destination_refused_before_writes": true,
+  "portable_Python_example_candidates": 112,
+  "original_v1_manifest_after_install": {
+    "passed": true,
+    "kind": "runtime",
+    "files": 770,
+    "bytes": 369700692,
+    "source_commit": "8188cbec1172219a0414881121ad042b405a4044",
+    "checksum_table_and_manifest_digest_verified": true
+  },
+  "MATLAB_validation_pending": false
+}

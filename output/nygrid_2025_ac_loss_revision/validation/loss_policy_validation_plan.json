@@ -1,0 +1,163 @@
+{
+  "status": "independent_policy_constraints_and_test_plan; no_default_policy_selected; no_revised_PF_run",
+  "baseline_commit": "a7c90215b22f688acea9ee8a08a08fc4385be494",
+  "installed_MATPOWER_version": "8.1",
+  "installed_MATPOWER_release_date": "12-Jul-2025",
+  "current_solver": "legacy power/polar Newton on148retained voltages; fullpfsoln recovery",
+  "distributed_slack_option_in_current_legacy_path_found": false,
+  "APF_column_current_values_all_zero": true,
+  "APF_column_does_not_allocate_losses_in_current_runpf_newtonpf_pfsoln_path": true,
+  "source_based_algorithm_constraints": [
+    "Keep original single reference bus as angle/voltage reference. A temporary inner-PF real-power residual may occur but cannot survive final acceptance as an unlimited Clay source.",
+    "Separate original frozen PG, policy scheduled PG, and solved PG. Existing inner-input profile-preservation gate is insufficient to validate allocation against the original frozen profiles.",
+    "For each outer iterate rebuild the compact case after PG changes so source fingerprints and the gen view match. The passive interior stays zero-injection and voltage lifting remains exact.",
+    "Native eligibility cannot be inferred from GEN_STATUS alone: status represents admitted hourly capability, not observed commitment. Positive baseline PG and conventional fossil prime-mover screening are explicit proxies, not observed AGC membership.",
+    "External equivalents are regional signed injection resources, not native thermal machines. Their current Pmin=Pmax are artificial net-boundary-derived pins; use separately declared finite historical capability boxes if policy reformulates generation for losses.",
+    "HQ can have negative scheduledPG; do not apply a positive-P native-unit screen to it. Meter/load semantics must decide its loss responsibility because the HQ equivalent sits atNYbus48.",
+    "Actual regional NY-boundary targets must be measured at a declared terminal convention and audited individually. Adding regional internal loss to PG alone does not prove the boundary targets if inter-region exchanges can change.",
+    "Do not add modeled NY transmission losses a second time if source reported load already includes them; await the independent load/meter-semantics contract before choosing served-PD versus reported-load handling.",
+    "Keep six explicit DC P schedules and their existing loss contracts fixed; preserve converter VG/Qpolicy unless separately declared. Hold native power boxes and physical topology to the agreed parameter revision.",
+    "Use explicit fixed participation weights and a bounded allocation with saturation. If a regional budget cannot be accommodated, fail with capacity deficit; do not silently use the reference, relax bounds or move another region.",
+    "Treat outer allocations as fixed-point/constraint satisfaction, not OPF or an internal-interface fit. All P32 internal observations remain post-hoc evaluation only.",
+    "Recompute or audit external MVA/Q-circle capability consistently when externalPG changes. Keep real-power policy qualification separate from voltage,Q,thermal/security qualifications."
+  ],
+  "outer_iteration_review_points": [
+    "Trace proposed regional budgets, allocated deltaPG, saturated rows, totalcapacity, stepnorm and observed boundary/reference residuals each iteration.",
+    "If undamped updates do not reduce residuals or innerNR fails, use documented bounded line-search/damping and reject the failed trial; retain the last valid iterate only as intermediate evidence.",
+    "Require both regional boundary/demand-contract residuals and original-reference residual below fixed tolerances; maximum iterations must return failure without promoting the final iterate.",
+    "Do not change fixed-point equations or loosen a tolerance after seeing internal NYISO errors. A successful native solve must be checked against a fresh detailed-network solve with identical scheduledPG/load/controls."
+  ],
+  "proposed_validation_suite": [
+    {
+      "name": "allocation_algebra",
+      "cases": [
+        "zero budget",
+        "one eligible generator",
+        "multiple colocated generators",
+        "one bound saturation",
+        "all capacity exhausted",
+        "negative regional adjustment within originalPmin",
+        "empty eligible pool",
+        "signedHQ schedules"
+      ],
+      "gates": [
+        "exactbudgetsum",
+        "finitepositiveweights",
+        "eligibility",
+        "Pboxes",
+        "nohiddenreferencefallback"
+      ]
+    },
+    {
+      "name": "representative_paired_physics",
+      "hours": [
+        2630,
+        4194,
+        523,
+        4000,
+        8508,
+        8471,
+        8472,
+        3360,
+        4746,
+        4213,
+        4740,
+        3039
+      ],
+      "gates": [
+        "fullcomplexKCL",
+        "148/fullcomplexV",
+        "originalbranchPQandphysicalcurrents",
+        "sameoriginalreference",
+        "preserved6DC",
+        "regionalmeterresidual",
+        "demandaccountingidentity",
+        "individualPbounds",
+        "freshsourcefingerprints"
+      ]
+    },
+    {
+      "name": "initialization_and_damping",
+      "cases": [
+        "originaldeclaredinitialstate",
+        "samehourpriorconvergedvoltageifexplicitlyallowed",
+        "increaseddampingonlyaftertracedstall"
+      ],
+      "gates": [
+        "samefinalequations",
+        "samepolicyallocation",
+        "failureretained",
+        "notglobalinfeasibilityclaim"
+      ]
+    },
+    {
+      "name": "cohort_integrity",
+      "gates": [
+        "all8651sourcehoursattemptedafterfreeze",
+        "old8494qualifiedcohortkeptfixedforpairedmetrics",
+        "157oldfailuresseparate",
+        "newloss-policyfailuresnotdropped",
+        "all8760positionsretained",
+        "P32heldoutuntilscoring"
+      ]
+    },
+    {
+      "name": "capability_and_physical_flags",
+      "gates": [
+        "activePboundandallocationgate",
+        "separateQboundandMVAproxygate",
+        "separatevoltagegate",
+        "separatehardware/conductorcurrentgate",
+        "noasbuilt_or_historicalAGCclaim"
+      ]
+    }
+  ],
+  "awaiting_root_freeze": [
+    "parent224parameterdecision",
+    "regionalNYloadandboundarymetersemantics",
+    "participationweightandeligibilitypolicy",
+    "revisedkernelAPI",
+    "outerloopacceptancetolerances"
+  ],
+  "headroom_receipt": "output/nygrid_2025_ac_loss_revision/validation/headroom/headroom_audit.json",
+  "primary_references": [
+    {
+      "title": "MATPOWER8.1 reference manual",
+      "url": "https://matpower.org/doc/_downloads/13f33e22ecbbad1ede2ee92dbf7e51ac/matpower_ref_manual.pdf"
+    },
+    {
+      "title": "MATPOWER power-flow manual",
+      "url": "https://www.matpower.org/docs/manual.pdf"
+    }
+  ],
+  "verified_local_code": [
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\mpver.m",
+      "sha256": "2978fecfc8b8926c867b4e3a083ba2fcbac4f70c447ab32a404f9a7e4d8b2def"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\runpf.m",
+      "sha256": "467ffd918e106ca75b690fb50adc77ac4544f898753359485a65518f3db4a66a"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\pfsoln.m",
+      "sha256": "01bd2214f72beb3a2b32f1e55d8226ed298a89dbdadace5218590727dadc48b2"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\newtonpf.m",
+      "sha256": "347220f6d83b4de31bc622c3a3cdc09ccccca52bfa770a81d9703aa28c860edc"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\mpoption.m",
+      "sha256": "fdf5a48b695f69d371258d8c5ab5bf824b28920f909356fbbb5c6b7773f8a106"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\core\\compact_ac_build.m",
+      "sha256": "e501cd0fc009ba5542850add00eb99d57f242087adc59bfc525accf333efa3b2"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_compact_ac\\core\\compact_ac_solve.m",
+      "sha256": "df890361ac16f4607c89776cb69d71474934d2c4077c37163bc289fa9dcc3db1"
+    }
+  ]
+}

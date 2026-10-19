@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "created_utc": "2026-10-15T14:14:22.813698+00:00",
+  "baseline_HEAD": "6d46babc3af4335638241e3abff525425a0a6d7e",
+  "model_revision": "physical_repair_41_185_195_20261015",
+  "apply_function": "nyrepair_apply_case",
+  "parent41": "ImportedR/X restored using existing rank1 synthetic conductor; geometricB and matching thermal metadata; existing aggregate apparatus bounds retained.",
+  "parents185195": "Existing75percent nominal compensation distributed proportional to section-local charging; total rating, conductorRXB, PV setpoints and V limits retained.",
+  "parameter_selection_uses_interface_observations": false,
+  "all_hourly_source_arrays_and_controls_preserved": true,
+  "same_bus_branch_generator_axes": true,
+  "targeted_preannual_checks_passed": true,
+  "annual_validation_complete": false,
+  "installed_asset_identity_claimed": false,
+  "whole_system_operating_qualification_claimed": false,
+  "candidate_files": [
+    {
+      "path": "scripts/nygrid_2025_physical_repair/core/nyrepair_apply_case.m",
+      "bytes": 1487,
+      "sha256": "e91265f8b414a3ac1ef62dbc0c8ee90430f1187946f5895c822b0ceb6fd82ca6"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/core/nyrepair_apply_parent41.m",
+      "bytes": 2272,
+      "sha256": "76708037350d843d25c45d5c0f3b3ad91523e76fe0ffd3dfb7f9bca74e2be9ac"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/physics/nyrepair_apply_185195.m",
+      "bytes": 4715,
+      "sha256": "d7b709f48d3de9ec08ee8569b26caad28b4391ae73fa9ec32d886ff790f910e4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/parent41_parameters.json",
+      "bytes": 4880,
+      "sha256": "0405ad77f50770eba7f984badfacb16ecaf300c75fb2d6b811a550cbe831174a"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/validation/targeted_candidate_receipt.json",
+      "bytes": 4674,
+      "sha256": "730ba443d7a4bb394e3a390b34a458c82961508f226a23c948edc49bee0c1ba3"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/compensation_design_review.json",
+      "bytes": 12489,
+      "sha256": "a85eb1af5da308e1d4bde032310d3815a74ff6971a7a266e986c71aca41c5625"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/independent_candidate_review.json",
+      "bytes": 9160,
+      "sha256": "ed2858ee42e4a22febae9846161a0ad82e88d4c0a812a410e7c1aeb00b8f5fd3"
+    }
+  ],
+  "baseline_model_files": [
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "bytes": 802063,
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h0001_4380.mat",
+      "bytes": 54625507,
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h4381_8760.mat",
+      "bytes": 54767622,
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/model_receipt.json",
+      "bytes": 4079,
+      "sha256": "0abce18bdcf9f6a28f1c93d7daa6358a0b319c98a8f310a54412266e43cbdac8"
+    }
+  ]
+}

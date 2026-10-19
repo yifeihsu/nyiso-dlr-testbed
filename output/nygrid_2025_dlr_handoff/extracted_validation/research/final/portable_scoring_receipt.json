@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "completed": true,
+  "created_utc": "2026-10-13T05:00:24.973928+00:00",
+  "scope": "Full saved-year comparison re-score with pinned package provenance; no PF or OPF rerun",
+  "Git_process_executed": false,
+  "local_dotgit_exists": false,
+  "git_executable_on_PATH": false,
+  "tested_environment": {
+    "Python": "3.13.7",
+    "NumPy": "1.26.4",
+    "SciPy": "1.15.2",
+    "pandas": "2.2.3"
+  },
+  "untested_version_combinations_are_not_guaranteed": true,
+  "original_consumer_bytes_unchanged": true,
+  "historical_identity_checks": [
+    {
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "historical_git_ref": "6dcc77f071a9ce4aaaa2fcba9a9aabc15f7d5dbc",
+      "provider": "pinned_package_SHA256_bytes; Git not executed"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "historical_git_ref": "6dcc77f071a9ce4aaaa2fcba9a9aabc15f7d5dbc",
+      "provider": "pinned_package_SHA256_bytes; Git not executed"
+    }
+  ],
+  "qualification_and_numerical_checks_not_modified": true,
+  "sealed_original_outputs_not_overwritten": true,
+  "revised_qualified_hours": 8170,
+  "paired_hours": 8170,
+  "gained_hours": 0,
+  "lost_hours": 324,
+  "reference_metric_CSV_values_reproduced": true,
+  "reference_metric_numeric_tolerance": 1e-09,
+  "all_reference_CSV_bytes_identical_on_this_host": true,
+  "source_code": {
+    "path": "scripts/nygrid_2025_dlr_handoff/portable_scoring.py",
+    "sha256": "728fd19a910b22672822987016205b218344fd5c5f831a1cbbb65d4c9272a5f0",
+    "bytes": 7992
+  },
+  "contract": {
+    "path": "output/nygrid_2025_dlr_handoff/portable_scoring_contract.json",
+    "sha256": "4f16b9d2495c3eab5237e18edda6709620f547ac6c643461f971d085b89b6eff",
+    "bytes": 3761
+  },
+  "original_consumer": {
+    "path": "scripts/nygrid_2025_ac_loss_revision/comparison/score_revised_profiles.py",
+    "sha256": "43281ace83cfaa97628bbddb746263c8157adf0cd79f545e4383abb81cc0953a",
+    "bytes": 30087
+  },
+  "outputs": [
+    {
+      "path": "runs/comparison_2025/combined/public_interface_metrics.csv",
+      "sha256": "b3cd77cfd14ea1b0c7c7cd5ebcc4b453e1606976c3622556e8553994a581973a",
+      "bytes": 213868,
+      "reference_SHA256": "b3cd77cfd14ea1b0c7c7cd5ebcc4b453e1606976c3622556e8553994a581973a",
+      "byte_identical_on_this_host": true,
+      "maximum_numeric_difference": 0.0
+    },
+    {
+      "path": "runs/comparison_2025/combined/comparison_cohort.csv",
+      "sha256": "d62536ab7bc148d015e8fff773f835df40fc0ad53e8191b0297841af961c1778",
+      "bytes": 1264048,
+      "reference_SHA256": "d62536ab7bc148d015e8fff773f835df40fc0ad53e8191b0297841af961c1778",
+      "byte_identical_on_this_host": true,
+      "maximum_numeric_difference": 0.0
+    },
+    {
+      "path": "runs/comparison_2025/combined/hourly_source_accounting.csv",
+      "sha256": "d514034502bd24277a9346eb01e727d381992129c72f89504bb8f4074cb64918",
+      "bytes": 2869816,
+      "reference_SHA256": "d514034502bd24277a9346eb01e727d381992129c72f89504bb8f4074cb64918",
+      "byte_identical_on_this_host": true,
+      "maximum_numeric_difference": 0.0
+    },
+    {
+      "path": "runs/comparison_2025/combined/NY_zonal_loss_accounting.csv",
+      "sha256": "56794ad2e379cd58d668cba9ea0f0788a5e779d1056976ef0f638f9d4267002b",
+      "bytes": 1790,
+      "reference_SHA256": "56794ad2e379cd58d668cba9ea0f0788a5e779d1056976ef0f638f9d4267002b",
+      "byte_identical_on_this_host": true,
+      "maximum_numeric_difference": 0.0
+    },
+    {
+      "path": "runs/comparison_2025/combined/regional_NY_terminal_import_errors.csv",
+      "sha256": "34f2f90b0249ec8037d16ab5f4efee12edfb4eb4abff85d7639a7c7bb79f6f54",
+      "bytes": 1221,
+      "reference_SHA256": "34f2f90b0249ec8037d16ab5f4efee12edfb4eb4abff85d7639a7c7bb79f6f54",
+      "byte_identical_on_this_host": true,
+      "maximum_numeric_difference": 0.0
+    }
+  ],
+  "scoring_receipt": {
+    "path": "runs/comparison_2025/combined/scoring_receipt.json",
+    "sha256": "019839ff2046d72b0e01ae8b452ae5d1162b23d6f52aae4b9aca095d5a86086c",
+    "bytes": 9781
+  }
+}

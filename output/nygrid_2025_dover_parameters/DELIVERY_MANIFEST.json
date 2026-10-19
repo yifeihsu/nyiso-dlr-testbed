@@ -1,0 +1,571 @@
+{
+  "status": "applied_Dover_line_and_parallel_PAR_engineering_model_with_bounded_conditional_controls",
+  "preferred_scenario": "bounded_x_nominal",
+  "all_original_buses_and_source_circuits_preserved": true,
+  "old_artifacts_preserved": true,
+  "retained_buses": 148,
+  "post_cutover_full_buses": 192,
+  "paired_hours": 8651,
+  "Dover_applied_hours": 287,
+  "ambiguous_mode_hours": 18,
+  "phase_bound_active_hours": 49,
+  "internal_interface_fitting": false,
+  "factory_parameters_or_actual_hardware_state_certified": false,
+  "raw_P34_numeric_unit_and_historical_sign_date_qualifications_retained": true,
+  "source_proof_hash_checks": 275,
+  "report_local_links_checked": 19,
+  "files": {
+    "NYGRID_2025_DOVER_PARAMETERS_APPLIED.md": {
+      "sha256": "9d3c82b13f06e0161e323fd396709d1d84eaedd8e75c535848fb92f1e553dced",
+      "bytes": 15357
+    },
+    "output/nygrid_2025_dover_parameters/comparison/annual_metrics.csv": {
+      "sha256": "b6b9ae7e7c11794b54a5ac9c8904d9334df746d1e98a563b7c8a8bc5048abdf0",
+      "bytes": 8343
+    },
+    "output/nygrid_2025_dover_parameters/comparison/monthly_metrics.csv": {
+      "sha256": "376d0156d8d7fe9e35237ae2915b38530eabd47072d0a3846d9559f748a87308",
+      "bytes": 90868
+    },
+    "output/nygrid_2025_dover_parameters/comparison/post_cutover_metrics.csv": {
+      "sha256": "e4aa45c53a2516bae7c3280f473bc3cd62d0bf0075c7e95d16fa37cd928f8b06",
+      "bytes": 9404
+    },
+    "output/nygrid_2025_dover_parameters/comparison/scoring_receipt.json": {
+      "sha256": "5cbae13f3ee2c9923d6bdf196164f41283ea7f9bb51d94577263e49ef582f2c1",
+      "bytes": 2681
+    },
+    "output/nygrid_2025_dover_parameters/engineering/angle_drop_interpretation_comparison.csv": {
+      "sha256": "89b847adb6e97f50bb065ffebe9b31e8fd88944dacf47607b5657db2665fc013",
+      "bytes": 555
+    },
+    "output/nygrid_2025_dover_parameters/engineering/conditional_impedance_basis.json": {
+      "sha256": "574677e7571b1a2adb5611c07e45108f2fc5cebd86df1c1097fc0012e1aee0f3",
+      "bytes": 3910
+    },
+    "output/nygrid_2025_dover_parameters/engineering/engineering_validation.json": {
+      "sha256": "f2f9dae9e729c47317411c959b71ac8dc3b8b06c0f251e0f16ffbd189c3848a2",
+      "bytes": 392
+    },
+    "output/nygrid_2025_dover_parameters/engineering/load_voltage_power_factor_condition_grid.csv": {
+      "sha256": "804df9ddeb401f09ba15b011bc8c3ea2e3676170d67ea76b352b58416489b4f2",
+      "bytes": 2172
+    },
+    "output/nygrid_2025_dover_parameters/engineering/PAR_estimates.csv": {
+      "sha256": "82168ae4c944c5ac96d1d604a7876fca4ea04a513531e32e3422b42a830db62e",
+      "bytes": 808
+    },
+    "output/nygrid_2025_dover_parameters/engineering/PAR_estimates.json": {
+      "sha256": "d574e40964934d1f1375c9e56ce14d5dfc5348f420a4c27d11d15df832eea6bf",
+      "bytes": 4084
+    },
+    "output/nygrid_2025_dover_parameters/engineering/PST_parameter_scenarios.csv": {
+      "sha256": "b951849bddca9699d6e33d2a2326f029a7b79f30358eaf4c21e887fb58acb514",
+      "bytes": 828
+    },
+    "output/nygrid_2025_dover_parameters/engineering/source_receipts.json": {
+      "sha256": "3bc0c5a0c29b02953e727c9aec45d3fe1b872ef55745d8559c1cf00dffa9ddb4",
+      "bytes": 4487
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_comparison_validation.json": {
+      "sha256": "9b217e3bb3a90cccd583de7a2b8311320d35172f6d9dcfb24461e7de535ea1d3",
+      "bytes": 12087
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_direction_source_qualification.json": {
+      "sha256": "ea80013f18d7c4f6cc1462cbb906101d836ef5b458651a7e0d6304cad5f2d5da",
+      "bytes": 1031
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_final_control_checks.csv": {
+      "sha256": "bea383db3fb653a05a60cb2bed6f75a4cb52a256ebf79251418e72fad8137db4",
+      "bytes": 217382
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_final_equation_checks.csv": {
+      "sha256": "dc0de6f5551ba26ad2f413addd3cf1bfe18c8138e83376ffbd09aa801fdddcb3",
+      "bytes": 1703
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_final_replay_validation.json": {
+      "sha256": "eacb7339f88201dbe395b4f274699bf37c4fe61d42572ca4062a943b058142d1",
+      "bytes": 12111
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_independent_clock_checks.csv": {
+      "sha256": "c4c304bce4b9ef3e063bb34b85c43ef710a13972482ffe4ea941e7476f58d311",
+      "bytes": 862
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_independent_comparison_metrics.csv": {
+      "sha256": "cf213cfe62e585c83af646c792717f15eaeec06004932d5c898aede2b44deb67",
+      "bytes": 115132
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_independent_two_bank_response.csv": {
+      "sha256": "5d0ba810e373fa104917a35072caa74381336e1e04bcab63b8a2a45f4287e658",
+      "bytes": 856
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_network_independent_validation.json": {
+      "sha256": "cbf8580f4d9f0322d2239bcd89fc54450c51bac4e70e11df9aec1cf60ca57221",
+      "bytes": 9173
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_channel_presence.csv": {
+      "sha256": "0d8ccee86cfecceab522e2915bdbcbbc1a4c7e43522902236f5d48042c9fc930",
+      "bytes": 52683
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_daily_native_audit.csv": {
+      "sha256": "9c551ddf6b56b95c4ea404b03c14bd26cdca10bc7e34b4756c1ded200f1a2d65",
+      "bytes": 27995
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_hourly_2025.csv": {
+      "sha256": "e76a3f2a8e9fb9b2a879cb1405f997b3758d2512f9c08284c568c6259e106147",
+      "bytes": 1190339
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_independent_validation.json": {
+      "sha256": "fb097009061a25e2d811573f396147c471c60c95b9e13f8fbcc028434d19b576",
+      "bytes": 7485
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_input_receipt.json": {
+      "sha256": "61423730e90bde37d2e0ed4d87cfff56657e7886e941b7397ef04d8a09bbae24",
+      "bytes": 11677
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_inputs.mat": {
+      "sha256": "d35fe15890cbf0a208254ed664adab56fc6ca0d9226b5531a40269c05b90513a",
+      "bytes": 36263
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_inputs.npz": {
+      "sha256": "31b5a0bf77f4664ca1ab4b6660e6737d78201bfdd2c566f413f664e25b1ffb1a",
+      "bytes": 59059
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_member_receipts.csv": {
+      "sha256": "44d013ff12d2059ad0b02ddc9e42453676cd4b6db7d3f0786054d7c4897cf4b5",
+      "bytes": 58900
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_monthly_native_audit.csv": {
+      "sha256": "1670cd80b881fbefd6b5d2bb136794568ca6e0995b2e76a0b9f99f58aa1040e9",
+      "bytes": 661
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_P34_raw_2025_with_endpoint.csv.gz": {
+      "sha256": "736e2bff9a446e7e2ee00d0b01cd059fb26dcc6d59f288ab70f4f6febb0bc967",
+      "bytes": 1646335
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_P53A_channel_metadata_only.csv": {
+      "sha256": "52dbec9ca9eca5149877624a0fa07663d6f6f682eab5d30db0564af3ab0caa45",
+      "bytes": 54893
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_ParFlows_page06.png": {
+      "sha256": "9cc6b39948839f82e68492411912c39ffc1af8f66e88de7b9925a0467f7a76c4",
+      "bytes": 104841
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_phase_affine_checks.csv": {
+      "sha256": "beed4c5335ca4545b36542d636b45505150bd3ef5ca734ba97abb2c17b515357",
+      "bytes": 1593
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_post_cutover_effect_attribution.csv": {
+      "sha256": "5da646ab46bf6a873a0d5d682627a045a99e1f903f7726ee775d05363be1067e",
+      "bytes": 1540
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/Dover_pre_full_service_nonzero_samples.csv": {
+      "sha256": "b168fb81a3b9c669668b7ad258be187b6010ce7429fa6602b07cf565c6e43c67",
+      "bytes": 613
+    },
+    "output/nygrid_2025_dover_parameters/local_audit/existing_model_contract.json": {
+      "sha256": "ffb6926270f9e68afcfaad524a29ecb28496ec0033c2e80ef3c5c976e4d4d631",
+      "bytes": 6627
+    },
+    "output/nygrid_2025_dover_parameters/network/Dover_applied_branch_register.csv": {
+      "sha256": "ae6a10fded4635162e77c37516b77eb71caee445b516268144f1857555be6883",
+      "bytes": 1721
+    },
+    "output/nygrid_2025_dover_parameters/network/network_receipt.json": {
+      "sha256": "c65358dc54875b6a945bf5ed194bb450be40be93924e6910555ee732a77e3d85",
+      "bytes": 4094
+    },
+    "output/nygrid_2025_dover_parameters/network/x_high.mat": {
+      "sha256": "c003b2dec47b5f0914e7347129f4efb2767d4d698cfed7e0004c270018c363d0",
+      "bytes": 59187
+    },
+    "output/nygrid_2025_dover_parameters/network/x_low.mat": {
+      "sha256": "1c8534d7dd57214ba357ed5f349a685fac8808ba0597ac1b0ef28a56916d88cd",
+      "bytes": 59190
+    },
+    "output/nygrid_2025_dover_parameters/network/x_nominal.mat": {
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1",
+      "bytes": 59195
+    },
+    "output/nygrid_2025_dover_parameters/replay/bounded_x_high.npz": {
+      "sha256": "1ef0603102d111a26a70bd1dff36d5a41b8b315af4d75429269444b98fb2bdce",
+      "bytes": 10137817
+    },
+    "output/nygrid_2025_dover_parameters/replay/bounded_x_low.npz": {
+      "sha256": "a178a8c9d2494fa2cf77e72cedbb1820af05c77d4ec1c0aee460c71d690c5a44",
+      "bytes": 10137444
+    },
+    "output/nygrid_2025_dover_parameters/replay/bounded_x_nominal.npz": {
+      "sha256": "0b1c2075989ba715fe356eaef24a008a2d4196e11034dbc44fb193dc469b85f9",
+      "bytes": 10137747
+    },
+    "output/nygrid_2025_dover_parameters/replay/Dover_bank_states.csv": {
+      "sha256": "839d28add2df6dfcf8e146d38fffc0d52be31500b62f5d534bdd13a769f77421",
+      "bytes": 709490
+    },
+    "output/nygrid_2025_dover_parameters/replay/exact_tracking_x_nominal.npz": {
+      "sha256": "185749ba307acfd5d13478c83eaaeda86333c76c9ba6ac7287e8bef7da199394",
+      "bytes": 10138746
+    },
+    "output/nygrid_2025_dover_parameters/replay/matlab_fixtures.mat": {
+      "sha256": "f153654d02e7e1ab0fed1416775d21ee458251f8bd937cf6e26914efcdd692f9",
+      "bytes": 508920
+    },
+    "output/nygrid_2025_dover_parameters/replay/neutral_x_high.npz": {
+      "sha256": "cbb1f13fa0a589859f3de4c77e0e033d8cb27fc3c7edee6552da9c0542e5e947",
+      "bytes": 10133272
+    },
+    "output/nygrid_2025_dover_parameters/replay/neutral_x_low.npz": {
+      "sha256": "b115ae2011fdded5cd80158ec36ecaf533c4e385ae23f862a61d0ee93e9725ff",
+      "bytes": 10133233
+    },
+    "output/nygrid_2025_dover_parameters/replay/neutral_x_nominal.npz": {
+      "sha256": "08bdf65631e3818dc74df2c0c452ecbe556e38f1b303da6474ad9d7fb71929e7",
+      "bytes": 10133390
+    },
+    "output/nygrid_2025_dover_parameters/replay/operating_states.mat": {
+      "sha256": "bea2fb35c44a3c9510b7c4a68cf4a5ea901e7df0b51567755a2a388942dd171a",
+      "bytes": 99254
+    },
+    "output/nygrid_2025_dover_parameters/replay/prior_line_parameters.npz": {
+      "sha256": "d0558af16b34f3e49469eddd353307da242fba508b5ba36deb4daa4f6f031ffc",
+      "bytes": 10130906
+    },
+    "output/nygrid_2025_dover_parameters/replay/replay_receipt.json": {
+      "sha256": "c5b0c9a4168525ded1eadfd4a4493c02a67a3eeae7a77b0a5a7f1964a5602931",
+      "bytes": 15134
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_2025_parallel_bypass_p7.png": {
+      "sha256": "711feef3c6d348db3dee4784e2756cde718945643b5705a69d3030352992c470",
+      "bytes": 268154
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_bypass_metering_p118.png": {
+      "sha256": "6e2b7f2b7218aadacfcaa487a530bfa83d20e10b1f7fa0d164f2dfd5a0282c53",
+      "bytes": 423402
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_23E0081_documents.json": {
+      "sha256": "42ad3a8d09433fd477196b5d4133d5e52071e831cadc33ffe7d50cca290c78a8",
+      "bytes": 98698
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_23E0081_documents.json.receipt.json": {
+      "sha256": "ee5d8326ca681c245a4b34caaf45c91ec1d18c2682255a81de836cfb07126f7e",
+      "bytes": 360
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_CPCN_Order_20230316.pdf": {
+      "sha256": "bf837b8968650c1d2b68bfda93a3004038c70a43c09952f2a96855b664685921",
+      "bytes": 141963
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_CPCN_Order_20230316.pdf.receipt.json": {
+      "sha256": "17c9a0494bcf4b76e08f44df011b987a875c4ae44548051a5581ed5550ecbb0d",
+      "bytes": 481
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_CPCN_Order_20230316.txt": {
+      "sha256": "2f32a656fb49afcf74bac6836ed4fd3f7c5e945cd805d43cf30909dad2419ca9",
+      "bytes": 34527
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex1_20230209.pdf": {
+      "sha256": "25b6ab8ca1fa1c60681fc3ce4168c3baab2fe392e605392f051f4394431c319b",
+      "bytes": 1029032
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex1_20230209.pdf.receipt.json": {
+      "sha256": "924a8387d00ae284a761664e4cc8243ad93e45cbec87498fb6c5f50bf77fb6f6",
+      "bytes": 482
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex1_20230209.txt": {
+      "sha256": "da33775604a0619559d84992a50acf96a2fed66f0c4fc2136dcfb016488fdaba",
+      "bytes": 105
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex2_20230209.pdf": {
+      "sha256": "ef16819a6ca4093ce565fe0321171d473e0ae3a3fe63512c715eaf5b769f14d0",
+      "bytes": 1933394
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex2_20230209.pdf.receipt.json": {
+      "sha256": "5de8feea69ac9ffa70d37eda0aeb5394bb49d14f27f3063419cad7b073f5dcd9",
+      "bytes": 482
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex2_20230209.txt": {
+      "sha256": "ccc48bb679facabb7403af49bce8a72bf06417538e46358c362ff9225edbb5c9",
+      "bytes": 113
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex3a_20230209.pdf": {
+      "sha256": "8c5a249717ec121eb46f381b01aa0c0921b988b5ec4b207f5ebe9305c29c603e",
+      "bytes": 16396673
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex3a_20230209.pdf.receipt.json": {
+      "sha256": "1b74a094f12263c56cc3c4b2d4e19e2faae364d99f8b9fdaea95f0b156a7be28",
+      "bytes": 483
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex3a_20230209.txt": {
+      "sha256": "6959eae63967f2b262a6b3f3879b7b390371ceed5bfddb3a619ac8f93c61c486",
+      "bytes": 931682
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex3b_20230209.pdf": {
+      "sha256": "1ba5edf1bced6be04a8ab1a5700afdd0b0b000daf2e50c8346e1da342771dc5c",
+      "bytes": 19448757
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex3b_20230209.pdf.receipt.json": {
+      "sha256": "a4ced655d5ae0319502048b35e8750a9197ac0c62167cf9aaea3d206dbf56252",
+      "bytes": 483
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Ex3b_20230209.txt": {
+      "sha256": "3d9095ae5798653e2a1082251975a71b01dfaef829513d0e2c5f4f806a0a6fd5",
+      "bytes": 642432
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_FacilitiesStudy_20230302_Redacted.pdf": {
+      "sha256": "41c5057310814c1fa4ea2462dec76585b0b511edbb940b1275cdfba39d6b743b",
+      "bytes": 539477
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_FacilitiesStudy_20230302_Redacted.pdf.receipt.json": {
+      "sha256": "1fc9e7609460a7005932cdbe187bca4aba10eafae3252a8f810df7cb47cfc7e0",
+      "bytes": 481
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_FacilitiesStudy_20230302_Redacted.txt": {
+      "sha256": "dc953a86fccda899d56b3610a081fae543fc29822ae32d11cd54224036a98498",
+      "bytes": 7966
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Petition_20230209_Redacted.pdf": {
+      "sha256": "d82b60379bb7d4aa1cc664764327f15bf30ecd863cb8ed1c008ad3f23711ddbf",
+      "bytes": 2041514
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Petition_20230209_Redacted.pdf.receipt.json": {
+      "sha256": "3e4489439898c134d3799592047dc038838f52f01d65d2f22fd82491fcf89da6",
+      "bytes": 482
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Petition_20230209_Redacted.txt": {
+      "sha256": "7b24901ac762d7eb7ecc2e6e1c191cf9c9630a2136f2ecc4e7ef390b2171eccc",
+      "bytes": 43857
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_PressNotice_20230301.pdf": {
+      "sha256": "2a495e0133f368da4a15c5a3f426c5961add31cce0b22ca53ffccce687f20996",
+      "bytes": 178161
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_PressNotice_20230301.pdf.receipt.json": {
+      "sha256": "664113d23b064d5dd3d1d301c988d9c8215044399215920840959f9fce57756c",
+      "bytes": 481
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_PressNotice_20230301.txt": {
+      "sha256": "10d8ee12f69ac46bf836b7be95140dff67ac7f29fee0cf1f0259b891df0f3157",
+      "bytes": 7407
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Transfer_Petition_SA2734_2025.pdf": {
+      "sha256": "4d7b5d492cc82cf710423214ac2285e79ad202f33b147e3626670561eed74ebb",
+      "bytes": 11280349
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Transfer_Petition_SA2734_2025.pdf.receipt.json": {
+      "sha256": "7df7972404fd37641d89c63633468bb1d7694ec2adc2ef5066214a2737dfc35d",
+      "bytes": 483
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_DPS_Transfer_Petition_SA2734_2025.txt": {
+      "sha256": "62eb9aa240a553920ddba9ba7542649a731d655f932c888b2271504bc5974e25",
+      "bytes": 515647
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_NYISO_Consent_20221028.pdf": {
+      "sha256": "8e3a98060a4ff2d8603904441e684152e8dd66cf2619136d53718d6b49f47e4a",
+      "bytes": 190110
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_NYISO_Consent_20221028.pdf.receipt.json": {
+      "sha256": "e914071f08bd620932947d27eed8056bf1ce2754480aaa63505255c9d3e0922c",
+      "bytes": 481
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_NYISO_Consent_20221028.txt": {
+      "sha256": "f02cb2d5aeb5e2899f92f7275d7b02a2c4f6edb0753f9ab41ff26371d3aa2176",
+      "bytes": 8239
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_ownership_diagram_p115.png": {
+      "sha256": "701b0151fe00f69fc0a586ef2fdfdcc52bd2f4dc32f73f6e9b30c14487033320",
+      "bytes": 226125
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_port_mapping_p101.png": {
+      "sha256": "6c79ec397345103d60c29f457dcb5f82fea303b0732bf97447fd4b7bb085f425",
+      "bytes": 318242
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_SA2734_public_C2_p116.png": {
+      "sha256": "b8d1147313b8610bd58cdceb428c2522d6396609ecf07e0fb932cc12c941c14b",
+      "bytes": 156638
+    },
+    "output/nygrid_2025_dover_parameters/sources/Dover_site_layout_p4.png": {
+      "sha256": "0894512a41af8fcc5edcb4ba624e4eb1936f03962429491fe233ae49dc80f577",
+      "bytes": 1082227
+    },
+    "output/nygrid_2025_dover_parameters/sources/dover_source_evidence_receipt.json": {
+      "sha256": "c17bfa8b619cc55f92fa9ea66c6bf98f4fb916a1164eb5d59551cf7ea642f53c",
+      "bytes": 3053
+    },
+    "output/nygrid_2025_dover_parameters/sources/dover_source_register.csv": {
+      "sha256": "f0f5d3109fce3395ebbdf76de246a12af2546b53e97c9dca4e885bf99fca8213",
+      "bytes": 10485
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/MATPOWER_branches.html": {
+      "sha256": "09a55413bbe39a2fdafe3cfc22f37833cd04c620f049884f2dff008398698ed6",
+      "bytes": 7804
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/MATPOWER_DC_modeling.html": {
+      "sha256": "a0e84b3974c5a57f2a8e5dd487c74610519ef924bbb135616f4e3066b584ed1b",
+      "bytes": 10720
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/PowerWorld_DC_options.html": {
+      "sha256": "ed75a408db8f340af5be9931c0a5aae01299e47fa7c6959a1cc533dfa7d3cbdb",
+      "bytes": 12150
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/PowerWorld_impedance_correction.html": {
+      "sha256": "9790039010ec0333889ed8b43872fb0f1c55040576753f96fda588f3de40bc64",
+      "bytes": 12198
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/PowerWorld_phase_shifting.html": {
+      "sha256": "40376544d04382f801822b2c042bf6e9f4c10fefcb18dd7910a0464e6e9617a1",
+      "bytes": 12886
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/PST_impedance_correction_2020.pdf": {
+      "sha256": "e2400d769cccc171827e6ba3ff37e4384db7166e93ebe73315eaec977d1e4376",
+      "bytes": 712560
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/PST_impedance_correction_2020.txt": {
+      "sha256": "57faccfe9d479c63af6dcdc6e9d39c127c6ff7e5d151f3e0feddc6d047dbfb40",
+      "bytes": 47989
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/SEL_PST_2002.pdf": {
+      "sha256": "2ae4d1196a76467688414ba0fca46303543e8f051f7a451d6b18380afe6c226d",
+      "bytes": 240638
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/SEL_PST_2002.txt": {
+      "sha256": "cee04aaca8e255259b9bbe877345e15a567d407a52dc5777533fbb5ec3393987",
+      "bytes": 45065
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/SEL_PST_2002_page10.png": {
+      "sha256": "c022069a0810118322bb39cbba62365cbd7f6a1a4118ce5166ad5e993cf93b54",
+      "bytes": 171974
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/SEL_PST_control_2018.pdf": {
+      "sha256": "46ca0901e23d840b47458bc9311289218f142bf42c513b5803fbad1c8b5ccbdd",
+      "bytes": 1904760
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/SEL_PST_control_2018.txt": {
+      "sha256": "dc58d826997d72e28bbd707d7bb720b01ee6b314e06a10b04672dc22a39e65b0",
+      "bytes": 71829
+    },
+    "output/nygrid_2025_dover_parameters/sources/engineering/SEL_PST_control_2018_page10.png": {
+      "sha256": "0d9c584675a51f530b7ba6bca9aca66b82077d83c7317fc7d95c3a7d8526f6b2",
+      "bytes": 375223
+    },
+    "output/nygrid_2025_dover_parameters/sources/NYISO_Dover_PAR_diagram_p6.png": {
+      "sha256": "9d92622a298f42c066b9236815e9db5a0006ce3c423b2e410a3b49c84b6adcb6",
+      "bytes": 82647
+    },
+    "output/nygrid_2025_dover_parameters/sources/NYISO_MarketParticipants_UserGuide.pdf": {
+      "sha256": "83a76f2e51762798feb53b342266457991b153cde9489a52834c0fb148c80897",
+      "bytes": 7095148
+    },
+    "output/nygrid_2025_dover_parameters/sources/NYISO_MarketParticipants_UserGuide.pdf.receipt.json": {
+      "sha256": "6bcdddcd02e2144a797f6e9beee410b7e6e4f4de7906ca4a025183e2fd1b60c8",
+      "bytes": 376
+    },
+    "output/nygrid_2025_dover_parameters/sources/NYISO_MarketParticipants_UserGuide.txt": {
+      "sha256": "974806620beb222dab9ea924abf9581cfb617a1d9b36842e4e75f81aedbc1a7e",
+      "bytes": 634159
+    },
+    "output/nygrid_2025_dover_parameters/sources/NYISO_MPUG_PAR_hourly_p90.png": {
+      "sha256": "b4f2c7ec0750d551693bd7284b618ffd202282b4b3d6e3e1f5f653c8e101b728",
+      "bytes": 148218
+    },
+    "output/nygrid_2025_dover_parameters/sources/NYISO_ParFlowDiagrams27.pdf": {
+      "sha256": "c0647d2abc38f216ccf5c1f197ca679cf16358fde5f507659bcdcd80a6938ba4",
+      "bytes": 219393
+    },
+    "output/nygrid_2025_dover_parameters/sources/NYISO_ParFlowDiagrams27.pdf.receipt.json": {
+      "sha256": "80a5ca7400f96284b7731560fded02908072f10974508dc925786ac72bd3d450",
+      "bytes": 475
+    },
+    "output/nygrid_2025_dover_parameters/sources/NYISO_ParFlowDiagrams27.txt": {
+      "sha256": "defe8dfc6265cb13b1504cc304a268f6f4248a108fde074ed5db03feac5010bb",
+      "bytes": 17306
+    },
+    "output/nygrid_2025_dover_parameters/validation/independent_network_checks.csv": {
+      "sha256": "f06ba5ba54bec3e3df9ae00c64c57744a17ba1298cb10365b7d6fe20d04d81c6",
+      "bytes": 977
+    },
+    "output/nygrid_2025_dover_parameters/validation/independent_network_validation.json": {
+      "sha256": "d65201943fa10008388feff249d6f1d09cba6263df2586af3ea1f28caba5be5b",
+      "bytes": 4801
+    },
+    "output/nygrid_2025_dover_parameters/validation/matlab_checks.csv": {
+      "sha256": "36b135b70b8a8a245b77080455dc373914a8b403c314063e94aa21fd3b7bb449",
+      "bytes": 13220
+    },
+    "output/nygrid_2025_dover_parameters/validation/matlab_guard_checks.csv": {
+      "sha256": "73d7b369da38601083b89cee75b17afd4b7b366ecc73fdec1453422f58dd699f",
+      "bytes": 331
+    },
+    "output/nygrid_2025_dover_parameters/validation/matlab_pre_cutover_checks.csv": {
+      "sha256": "61d9711f08c23632c81748b5fda821e74426495284abf8f3dd3c12f22b34618b",
+      "bytes": 1201
+    },
+    "output/nygrid_2025_dover_parameters/validation/matlab_two_bank_phasor_checks.csv": {
+      "sha256": "60d565c3b185f5a9b7436c000d4f30305524117dc408c17be54a18e06884aed9",
+      "bytes": 622
+    },
+    "output/nygrid_2025_dover_parameters/validation/matlab_validation.json": {
+      "sha256": "192c289d4fb626b10da22428686ef969bb9af1fa505430c7b9e71449e4dc2f7e",
+      "bytes": 4438
+    },
+    "output/nygrid_2025_dover_parameters/validation/source_model_review.json": {
+      "sha256": "9fbf59f941613371a9fe210e7cc2a97dbb37d62a5dd4fb9874574b39cf1f7d6c",
+      "bytes": 7555
+    },
+    "scripts/nygrid_2025_dover_parameters/build_dover_network.py": {
+      "sha256": "fc2bc7cd373a6e6674da7ff1e7680dea96d4171f54e1e7b30e026c3fad43b8e9",
+      "bytes": 13585
+    },
+    "scripts/nygrid_2025_dover_parameters/build_source_register.py": {
+      "sha256": "75132ccd68418594579e9ddc42d2df4665fae89feeabf0d771cf87e187dd094e",
+      "bytes": 8762
+    },
+    "scripts/nygrid_2025_dover_parameters/collect_project_sources.py": {
+      "sha256": "07a66bf7de289b71c96323a567efc08a8944cff12243552aef5b874b93c9743e",
+      "bytes": 3805
+    },
+    "scripts/nygrid_2025_dover_parameters/engineering/pst_model.py": {
+      "sha256": "733ac3e370869cc0d26b76a09cfabe2db71e7ac0cdc055a5df0dc77c110dbebc",
+      "bytes": 13192
+    },
+    "scripts/nygrid_2025_dover_parameters/engineering/test_pst_model.py": {
+      "sha256": "9785ccfa48f2b176df360da1ccefb0e0a77a0d633c2ad59e40bd456a6990a4ed",
+      "bytes": 7810
+    },
+    "scripts/nygrid_2025_dover_parameters/engineering/validate_matlab_dover.m": {
+      "sha256": "eb7c7acbb172fcd04e11f10fc155cae8be3de7965b87244107afefd60ef709be",
+      "bytes": 15285
+    },
+    "scripts/nygrid_2025_dover_parameters/engineering/validate_network.py": {
+      "sha256": "1680b3a345a6ea7b60eb0934f28733198ba033db24d868798190765d44bd5da3",
+      "bytes": 11243
+    },
+    "scripts/nygrid_2025_dover_parameters/finalize_dover.py": {
+      "sha256": "c7bfa1499121494aa279c84aa135d52d3b553fbad7a049335e9a2bab6d8d227f",
+      "bytes": 5473
+    },
+    "scripts/nygrid_2025_dover_parameters/local_audit/audit_local_sources.py": {
+      "sha256": "59e947d2c9af5062e783dd6886e9bdc5dbfdddf965aeda205ea787c9024d8579",
+      "bytes": 20311
+    },
+    "scripts/nygrid_2025_dover_parameters/local_audit/validate_dover_network.py": {
+      "sha256": "198ec9a1e7141782591aa2999fbdadd9a57e030870151ce6406a7f15de279a0f",
+      "bytes": 11594
+    },
+    "scripts/nygrid_2025_dover_parameters/local_audit/validate_final_replay.py": {
+      "sha256": "c16e79276f056c537ca6542eaa71a27cbc965a1964cd9f4695eb1dcb8803414c",
+      "bytes": 26537
+    },
+    "scripts/nygrid_2025_dover_parameters/local_audit/validate_p34_inputs.py": {
+      "sha256": "aa64c6c5adeb9fc9e6b32881a497d071ce573952c24ad1a0efa5af99d7d30193",
+      "bytes": 9031
+    },
+    "scripts/nygrid_2025_dover_parameters/run_dover_replay.py": {
+      "sha256": "022dc62e6a09a7c2dfda80318a3a2233c87717a6bff0d005ca67af471214edb2",
+      "bytes": 21898
+    },
+    "System Matpower Format/npcc_nygrid_2025_dover_dc.m": {
+      "sha256": "b0f4c23bc1e7cf4e3907411089b96efba5ea9bb77bf1fed6a03910e4134b0979",
+      "bytes": 7452
+    }
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "passed": true,
+  "preferred_scenario": "engineering_nominal",
+  "internal_interface_observations_used": false,
+  "scope": "six_paths_added_relative_to_frozen2019_model;not_six_lines_built_after_calendar2019",
+  "F84_energized_date": "2019-07-28",
+  "F84_estimates": [
+    {
+      "scenario_name": "engineering_nominal",
+      "geometry_m": [
+        [
+          4.7244,
+          0.0
+        ],
+        [
+          4.7244,
+          9.4488
+        ],
+        [
+          -4.7244,
+          4.2672
+        ]
+      ],
+      "geometry_basis": "representative_project_drawing_geometry;earth_images_omitted",
+      "conductor_temperature_c": 95.0,
+      "r_pu": 0.0008742145129174543,
+      "x_pu": 0.0073369902803424245,
+      "b_pu": 0.12144940019223492,
+      "r_ohm": 1.040533824,
+      "x_ohm": 8.73285268117757,
+      "b_siemens": 0.0001020368831692795,
+      "zbase_ohm": 1190.25,
+      "length_m": 23496.4224,
+      "frequency_hz": 60.0,
+      "parallel_subconductors_per_phase": 2,
+      "gmd_m": 10.182226556367471,
+      "bundle_gmr_m": 0.07362670971868836,
+      "bundle_capacitance_radius_m": 0.08135933628047845,
+      "inductance_h_per_m": 9.85878224240301e-07,
+      "capacitance_f_per_m": 1.1519253199216868e-11,
+      "r_ac_ohm_per_m_per_subconductor": 8.856955380577427e-05,
+      "charging_mvar_at_nominal_kv": 12.144940019223492,
+      "capacitance_ground_image_correction": false,
+      "scope": "transposed_overhead_engineering_estimate_not_asbuilt_test"
+    },
+    {
+      "scenario_name": "geometry_spacing_80pct",
+      "geometry_m": [
+        [
+          3.77952,
+          0.0
+        ],
+        [
+          3.77952,
+          7.55904
+        ],
+        [
+          -3.77952,
+          3.41376
+        ]
+      ],
+      "geometry_basis": "declared_20pct_smaller_phase_spacing_sensitivity",
+      "conductor_temperature_c": 95.0,
+      "r_pu": 0.0008742145129174543,
+      "x_pu": 0.007004859591813414,
+      "b_pu": 0.1273326862882776,
+      "r_ohm": 1.040533824,
+      "x_ohm": 8.337534129155916,
+      "b_siemens": 0.00010697978264085494,
+      "zbase_ohm": 1190.25,
+      "length_m": 23496.4224,
+      "frequency_hz": 60.0,
+      "parallel_subconductors_per_phase": 2,
+      "gmd_m": 8.145781245093977,
+      "bundle_gmr_m": 0.07362670971868836,
+      "bundle_capacitance_radius_m": 0.08135933628047845,
+      "inductance_h_per_m": 9.412495139774591e-07,
+      "capacitance_f_per_m": 1.2077272111426208e-11,
+      "r_ac_ohm_per_m_per_subconductor": 8.856955380577427e-05,
+      "charging_mvar_at_nominal_kv": 12.733268628827759,
+      "capacitance_ground_image_correction": false,
+      "scope": "transposed_overhead_engineering_estimate_not_asbuilt_test"
+    },
+    {
+      "scenario_name": "geometry_spacing_120pct",
+      "geometry_m": [
+        [
+          5.66928,
+          0.0
+        ],
+        [
+          5.66928,
+          11.33856
+        ],
+        [
+          -5.66928,
+          5.12064
+        ]
+      ],
+      "geometry_basis": "declared_20pct_larger_phase_spacing_sensitivity",
+      "conductor_temperature_c": 95.0,
+      "r_pu": 0.0008742145129174543,
+      "x_pu": 0.007608360812159362,
+      "b_pu": 0.11703129788751059,
+      "r_ohm": 1.040533824,
+      "x_ohm": 9.05585145667268,
+      "b_siemens": 9.832497197018323e-05,
+      "zbase_ohm": 1190.25,
+      "length_m": 23496.4224,
+      "frequency_hz": 60.0,
+      "parallel_subconductors_per_phase": 2,
+      "gmd_m": 12.218671867640964,
+      "bundle_gmr_m": 0.07362670971868836,
+      "bundle_capacitance_radius_m": 0.08135933628047845,
+      "inductance_h_per_m": 1.022342535599092e-06,
+      "capacitance_f_per_m": 1.1100204286438316e-11,
+      "r_ac_ohm_per_m_per_subconductor": 8.856955380577427e-05,
+      "charging_mvar_at_nominal_kv": 11.703129788751058,
+      "capacitance_ground_image_correction": false,
+      "scope": "transposed_overhead_engineering_estimate_not_asbuilt_test"
+    },
+    {
+      "scenario_name": "ground_image_30ft",
+      "geometry_m": [
+        [
+          4.7244,
+          9.144
+        ],
+        [
+          4.7244,
+          18.5928
+        ],
+        [
+          -4.7244,
+          13.411200000000001
+        ]
+      ],
+      "geometry_basis": "minimum_clearance_drawing_sensitivity;not_route_average_sag",
+      "conductor_temperature_c": 95.0,
+      "r_pu": 0.0008742145129174543,
+      "x_pu": 0.0073369902803424245,
+      "b_pu": 0.12328579364475294,
+      "r_ohm": 1.040533824,
+      "x_ohm": 8.73285268117757,
+      "b_siemens": 0.00010357974681348703,
+      "zbase_ohm": 1190.25,
+      "length_m": 23496.4224,
+      "frequency_hz": 60.0,
+      "parallel_subconductors_per_phase": 2,
+      "gmd_m": 10.182226556367471,
+      "bundle_gmr_m": 0.07362670971868836,
+      "bundle_capacitance_radius_m": 0.08135933628047845,
+      "inductance_h_per_m": 9.85878224240301e-07,
+      "capacitance_f_per_m": 1.1693431755220074e-11,
+      "r_ac_ohm_per_m_per_subconductor": 8.856955380577427e-05,
+      "charging_mvar_at_nominal_kv": 12.328579364475294,
+      "capacitance_ground_image_correction": true,
+      "scope": "transposed_overhead_engineering_estimate_not_asbuilt_test"
+    }
+  ],
+  "F84_rating_design_mva": 1323.0,
+  "F84_rating_from_current_mva": 1322.9923683453355,
+  "rating_is_current_operational_facility_rating": false,
+  "Dover_policy": "line_only_segment_estimates_saved;not_applied_until_PAR_series_impedance_and_path_binding_resolved",
+  "cable_policy": "R_X_remain_qualified_historical_analog;Staten_length_updated9p2_to9p4mi;B0_and_rate0remain_unknown_placeholders",
+  "uncertainty_policy": "declared_engineering_sensitivity_cases_not_confidence_intervals_or_exhaustive_bounds",
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_line_parameters/project_source_register.csv",
+      "sha256": "aedbe40ae145412e4815a641d11c8c5960835eb0a87fadf9c5f091150ab76d4b"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/conductor_catalog.csv",
+      "sha256": "f55a0d0a8e8857117b0e708eb50bc377ad07e209257438ff0851b3c5d3de3bd4"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/catalog_validation.json",
+      "sha256": "b0b5618cdeb5da07986df0ec32fcb6775a35f4e064ac21dcd1c5d339f8c020cc"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/branch_register.csv",
+      "sha256": "6a574d53b40eb2bf08dba851757a5d56ab6b4d89377b2a33e5d6319d5cd2a18f"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/local_inventory/existing_project_parameter_assignments.csv",
+      "sha256": "278fe9216a08114e503282951375a29c60ff869709748daadc1bb0d4640aa75b"
+    },
+    {
+      "path": "scripts/nygrid_2025_line_parameters/build_estimates.py",
+      "sha256": "dbb6a736196ec5637f34c8b67115cc90e34708c2e13878483d6b344006386056"
+    },
+    {
+      "path": "scripts/nygrid_2025_line_parameters/line_physics.py",
+      "sha256": "fd200cd43d715522d0da0a26f21263e878d1019b5d84d849a55eabf14f26d27f"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/projects/CV_EMCP_Rev2_VolI_2017.pdf",
+      "sha256": "5296a55d5bb1aa47df682398ef08058f16bd84a472c41fee2d3f848f2666dd6e"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/projects/CV_EMF_SmithRd_2014.pdf",
+      "sha256": "b0037979280d0898661aa5f2bf12a97976f8deb3a5b6eb0d32e24b320339f9d2"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/projects/CV_EMCP_AppS_EngineeringDrawings_20170825.pdf",
+      "sha256": "e89211ce68f7052d07050b495f118ddede40a2b733f48cfe09738f384d2879a9"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/projects/CV_InServiceNotice_20190729.pdf",
+      "sha256": "f1afcc39058486246d4f71aae796800ab1a245631e41adc6101d32fe1bb79b75"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/projects/NYISO_2022Q2_STAR.pdf",
+      "sha256": "a2a8aae2bf5abeac88fa56b8e7dfde626673a2225519a81463ff8852615d8fce"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/projects/NYTransco_SA2510_2023.pdf",
+      "sha256": "844a685a691c8922925a2409ffc4e81e5ad3723f80e1518f469b8cba4fe44c5e"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/projects/CT_398_Petition1216_Filing_2016.pdf",
+      "sha256": "c5ace6b1810e7deb2c3b14cc4235191725d8b6f4c815c0520918f14afc2cb906"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/projects/CT_398_Interrogatories_20160316.pdf",
+      "sha256": "a7797d6558ee1e735820f5f242ecf8a91b2e10dd566e1cf1a0636f9f5ce27b07"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/projects/CT_398_Completion_20190618.pdf",
+      "sha256": "1ffeb3f1198286965514471228638cf938e36cf180a0e0a821376de6f7376780"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/projects/CT_398_Completion_20191120.pdf",
+      "sha256": "30376d1bf9d22cf4836d0fa45bea6b26ede87573f6f4f5bc0a0735dcfa0e981e"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/sources/prysmian_acsr_us.pdf",
+      "sha256": "689963f44e8edbb8be50c8867d1a9a656d78638fe813bffe482b525e867ce8b5"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/conductors/sources/prysmian_acss_us.pdf",
+      "sha256": "87513ead4a76d7ad9a4edb1c2d3c14525c6ff5c0fb7a712b9c488b5d517c774d"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/cables/Haugland_Goethals_FoxHills.html",
+      "sha256": "05e14f8fbb172d9f3f75150d907acd4fff421c2eb211fa3656b976f229097cde"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/cables/Haugland_Goethals_FoxHills.receipt.json",
+      "sha256": "d348013e4df68cf6df78162aa798394bb752e9e92519eff40a975c20c66fc2d8"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/parameter_estimates.csv",
+      "sha256": "594f1deb04b74f2a6ab9de026e5f3862f18179b9e1c9137cca16a77bbe315411"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/Dover_line_only_estimates_not_applied.csv",
+      "sha256": "f2b64d1fd3734daa3a2a078f1cdef97bf4e16281a6203661fa61de352e484dee"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/circuit_conductor_matches.csv",
+      "sha256": "62af10d3c2b13a49f6d61a38345c45e2dfeffcdb3658c7146b5533e9656c4598"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/estimates/before_after_parameters.csv",
+      "sha256": "cd57897749c22be4b8d4ef146cddd12883287ac9cdbb51b8ac64764236424354"
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "passed": true,
+  "graph_checked_states": [
+    {
+      "state": "pre_may",
+      "full_parent_bus_count": 191,
+      "active_original_parent_branches": 333,
+      "active_branch_region_pair_counts": {
+        "ISONE--ISONE": 43,
+        "ISONE--NY": 2,
+        "NY--NY": 175,
+        "NY--ONTARIO": 2,
+        "NY--PJM": 4,
+        "ONTARIO--ONTARIO": 48,
+        "PJM--PJM": 59
+      },
+      "inter_external_region_AC_branch_rows": []
+    },
+    {
+      "state": "may21",
+      "full_parent_bus_count": 191,
+      "active_original_parent_branches": 334,
+      "active_branch_region_pair_counts": {
+        "ISONE--ISONE": 43,
+        "ISONE--NY": 2,
+        "NY--NY": 176,
+        "NY--ONTARIO": 2,
+        "NY--PJM": 4,
+        "ONTARIO--ONTARIO": 48,
+        "PJM--PJM": 59
+      },
+      "inter_external_region_AC_branch_rows": []
+    },
+    {
+      "state": "may30",
+      "full_parent_bus_count": 191,
+      "active_original_parent_branches": 335,
+      "active_branch_region_pair_counts": {
+        "ISONE--ISONE": 43,
+        "ISONE--NY": 2,
+        "NY--NY": 177,
+        "NY--ONTARIO": 2,
+        "NY--PJM": 4,
+        "ONTARIO--ONTARIO": 48,
+        "PJM--PJM": 59
+      },
+      "inter_external_region_AC_branch_rows": []
+    },
+    {
+      "state": "post_dover",
+      "full_parent_bus_count": 192,
+      "active_original_parent_branches": 337,
+      "active_branch_region_pair_counts": {
+        "ISONE--ISONE": 43,
+        "ISONE--NY": 2,
+        "NY--NY": 179,
+        "NY--ONTARIO": 2,
+        "NY--PJM": 4,
+        "ONTARIO--ONTARIO": 48,
+        "PJM--PJM": 59
+      },
+      "inter_external_region_AC_branch_rows": []
+    }
+  ],
+  "station_ports_checked": true,
+  "Dover_regulated_port21001_is_NY_zoneG": true,
+  "no_active_AC_ties_between_external_regions": true,
+  "all_six_DC_transfer_contracts": [
+    {
+      "row": 1,
+      "from_bus": 21,
+      "to_bus": 80,
+      "external_region": "ISONE",
+      "loss0": 0.0,
+      "loss1": 0.0
+    },
+    {
+      "row": 2,
+      "from_bus": 124,
+      "to_bus": 79,
+      "external_region": "PJM",
+      "loss0": 0.0,
+      "loss1": 0.0
+    },
+    {
+      "row": 3,
+      "from_bus": 125,
+      "to_bus": 81,
+      "external_region": "PJM",
+      "loss0": 0.0,
+      "loss1": 0.0
+    },
+    {
+      "row": 4,
+      "from_bus": 125,
+      "to_bus": 81,
+      "external_region": "PJM",
+      "loss0": 0.0,
+      "loss1": 0.0
+    },
+    {
+      "row": 5,
+      "from_bus": 100,
+      "to_bus": 48,
+      "external_region": "ONTARIO",
+      "loss0": 0.0,
+      "loss1": 0.0
+    },
+    {
+      "row": 6,
+      "from_bus": 100,
+      "to_bus": 48,
+      "external_region": "ONTARIO",
+      "loss0": 0.0,
+      "loss1": 0.0
+    }
+  ],
+  "all_source_hours_frozen_generation_load_boundary_identities": [
+    {
+      "region": "ISONE",
+      "max_frozen_PG_minus_PD_minus_actual_net_target_model_MW": 2.7284841053187847e-12
+    },
+    {
+      "region": "ONTARIO",
+      "max_frozen_PG_minus_PD_minus_actual_net_target_model_MW": 2.424282996571492e-12
+    },
+    {
+      "region": "PJM",
+      "max_frozen_PG_minus_PD_minus_actual_net_target_model_MW": 3.353761712787673e-12
+    }
+  ],
+  "maximum_NY_native_generation_plus_all_actual_imports_minus_original_P58_PD_model_MW": 9.094947017729282e-12,
+  "loss_partition_counts_every_active_branch_exactly_once": true,
+  "NY_zonal_loss_ownership_uses_original_parent_endzones_not_computational_section_nodes": true,
+  "NY_served_PD_can_be_scaled_on_existing_load_buses_preserving_zero_injection_interiors": true,
+  "NY_zero_PD_buses_have_zero_QD_so_constant_bus_PF_scaling_is_defined": true,
+  "previous_qualified_AC_budget_screen_hours": 8494,
+  "external_budget_capacity_screens": [
+    {
+      "region": "ISONE",
+      "previous_AC_budget_min_MW": 9.160582087595124,
+      "previous_AC_budget_mean_MW": 20.019327392225673,
+      "previous_AC_budget_max_MW": 67.85505969365498,
+      "simple_frozen_share_allocation_original_Pbox_violating_hours": 0,
+      "minimum_individual_generator_remaining_headroom_MW": 255.21785198196122
+    },
+    {
+      "region": "ONTARIO",
+      "previous_AC_budget_min_MW": 23.695057051577095,
+      "previous_AC_budget_mean_MW": 60.971594969926805,
+      "previous_AC_budget_max_MW": 205.93307439612025,
+      "simple_frozen_share_allocation_original_Pbox_violating_hours": 0,
+      "minimum_individual_generator_remaining_headroom_MW": 738.0435438468478
+    },
+    {
+      "region": "PJM",
+      "previous_AC_budget_min_MW": 36.331839223239854,
+      "previous_AC_budget_mean_MW": 76.6016091836141,
+      "previous_AC_budget_max_MW": 167.96200956161442,
+      "simple_frozen_share_allocation_original_Pbox_violating_hours": 0,
+      "minimum_individual_generator_remaining_headroom_MW": 98.1235881626928
+    }
+  ],
+  "NY_zone_PD_screens": [
+    {
+      "zone": "A",
+      "old_AC_NY_internal_loss_min_MW": 2.209515173888008,
+      "old_AC_NY_internal_loss_max_MW": 8.501927019803556,
+      "min_proposed_served_PD_MW": 366.1367752178678,
+      "nonpositive_served_PD_hours": 0,
+      "maximum_loss_fraction_hour_index": 3133,
+      "hours_loss_fraction_above25pct": 0,
+      "maximum_loss_fraction_of_original_P58_zonal_PD": 0.01620589121813342
+    },
+    {
+      "zone": "B",
+      "old_AC_NY_internal_loss_min_MW": 0.31134012385600507,
+      "old_AC_NY_internal_loss_max_MW": 7.425593396038102,
+      "min_proposed_served_PD_MW": 150.93273350391027,
+      "nonpositive_served_PD_hours": 0,
+      "maximum_loss_fraction_hour_index": 3133,
+      "hours_loss_fraction_above25pct": 0,
+      "maximum_loss_fraction_of_original_P58_zonal_PD": 0.039358581521021854
+    },
+    {
+      "zone": "C",
+      "old_AC_NY_internal_loss_min_MW": 6.156845046763532,
+      "old_AC_NY_internal_loss_max_MW": 49.922850296485606,
+      "min_proposed_served_PD_MW": 217.80064680045473,
+      "nonpositive_served_PD_hours": 0,
+      "maximum_loss_fraction_hour_index": 3133,
+      "hours_loss_fraction_above25pct": 0,
+      "maximum_loss_fraction_of_original_P58_zonal_PD": 0.14851211488892258
+    },
+    {
+      "zone": "D",
+      "old_AC_NY_internal_loss_min_MW": 0.4458509913313735,
+      "old_AC_NY_internal_loss_max_MW": 22.429722897194697,
+      "min_proposed_served_PD_MW": 97.08583638402202,
+      "nonpositive_served_PD_hours": 0,
+      "maximum_loss_fraction_hour_index": 4214,
+      "hours_loss_fraction_above25pct": 0,
+      "maximum_loss_fraction_of_original_P58_zonal_PD": 0.16475406211320867
+    },
+    {
+      "zone": "E",
+      "old_AC_NY_internal_loss_min_MW": 6.361020637504335,
+      "old_AC_NY_internal_loss_max_MW": 83.09164707867302,
+      "min_proposed_served_PD_MW": 51.149587311353905,
+      "nonpositive_served_PD_hours": 0,
+      "maximum_loss_fraction_hour_index": 3133,
+      "hours_loss_fraction_above25pct": 25,
+      "maximum_loss_fraction_of_original_P58_zonal_PD": 0.40534064492354316
+    },
+    {
+      "zone": "F",
+      "old_AC_NY_internal_loss_min_MW": 2.036484593043907,
+      "old_AC_NY_internal_loss_max_MW": 362.5625937982532,
+      "min_proposed_served_PD_MW": 7.1748028435469,
+      "nonpositive_served_PD_hours": 0,
+      "maximum_loss_fraction_hour_index": 4860,
+      "hours_loss_fraction_above25pct": 2679,
+      "maximum_loss_fraction_of_original_P58_zonal_PD": 0.9773228677541888
+    },
+    {
+      "zone": "G",
+      "old_AC_NY_internal_loss_min_MW": 0.6793902228005217,
+      "old_AC_NY_internal_loss_max_MW": 35.209549033486915,
+      "min_proposed_served_PD_MW": 130.4805001818017,
+      "nonpositive_served_PD_hours": 0,
+      "maximum_loss_fraction_hour_index": 3133,
+      "hours_loss_fraction_above25pct": 0,
+      "maximum_loss_fraction_of_original_P58_zonal_PD": 0.12262777021553478
+    },
+    {
+      "zone": "H",
+      "old_AC_NY_internal_loss_min_MW": 0.19862934140714916,
+      "old_AC_NY_internal_loss_max_MW": 2.796101290410668,
+      "min_proposed_served_PD_MW": 52.19864849461375,
+      "nonpositive_served_PD_hours": 0,
+      "maximum_loss_fraction_hour_index": 3132,
+      "hours_loss_fraction_above25pct": 0,
+      "maximum_loss_fraction_of_original_P58_zonal_PD": 0.029473888920213038
+    },
+    {
+      "zone": "I",
+      "old_AC_NY_internal_loss_min_MW": 0.7003251148739429,
+      "old_AC_NY_internal_loss_max_MW": 7.896120427627564,
+      "min_proposed_served_PD_MW": 123.19630836877984,
+      "nonpositive_served_PD_hours": 0,
+      "maximum_loss_fraction_hour_index": 3132,
+      "hours_loss_fraction_above25pct": 0,
+      "maximum_loss_fraction_of_original_P58_zonal_PD": 0.03238439258958382
+    },
+    {
+      "zone": "J",
+      "old_AC_NY_internal_loss_min_MW": 2.6531737912356923,
+      "old_AC_NY_internal_loss_max_MW": 34.91157857453699,
+      "min_proposed_served_PD_MW": 1099.1758480698204,
+      "nonpositive_served_PD_hours": 0,
+      "maximum_loss_fraction_hour_index": 4167,
+      "hours_loss_fraction_above25pct": 0,
+      "maximum_loss_fraction_of_original_P58_zonal_PD": 0.011209264262307398
+    },
+    {
+      "zone": "K",
+      "old_AC_NY_internal_loss_min_MW": 0.6855988576481552,
+      "old_AC_NY_internal_loss_max_MW": 5.623012225221058,
+      "min_proposed_served_PD_MW": 369.0208574117505,
+      "nonpositive_served_PD_hours": 0,
+      "maximum_loss_fraction_hour_index": 3269,
+      "hours_loss_fraction_above25pct": 0,
+      "maximum_loss_fraction_of_original_P58_zonal_PD": 0.007883332981032953
+    }
+  ],
+  "finite_budget_screen_is_not_revised_PF_feasibility": true,
+  "no_revised_PF_or_OPF_run": true,
+  "boundary_convention": "NY_terminal_aggregate_receipt; entire cross-border corridor real loss assigned to external region even during reverse flow",
+  "algebra": "NYservedPD=P58-NYinternalLoss; externalPG=priorPG+externalInternalLoss+NYBorderLoss; nativePGandHQPGfixed",
+  "remaining_policy_assumptions": [
+    "Outside-area deliveredPD remains a proxy for its served load.",
+    "P58loss-inclusive demand interpretation is supplied by independent source audit.",
+    "Half original-endzone allocation for cross-NY-zone losses is declared model accounting, not observed zonal metering.",
+    "Finite original external P bounds and frozen shares are synthetic aggregate capability assumptions; Q/MVA/voltage still need separate checks."
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_external_generator_shares.csv",
+      "sha256": "e0bef3a5c7c95fec628fb86410eb64f4ee5c3e3fd2a89e8eb5d42fa19289af7a"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/bus_register.csv",
+      "sha256": "9a3359281f3b51daedcb2c2740e3d31c4eb4f62adffca5ea7819b1736c0dc660"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/annual_axes.mat",
+      "sha256": "167ab7023c41189fcea9138f2aea43e50d01db4640551046d1160ee21e4ff640"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_compact_ac/models/compact_ac_h8508.mat",
+      "sha256": "c9beabd35ac69c33a85a8aed4d985a3936fc69628443b328663b62487bb779bc"
+    },
+    {
+      "path": "scripts/nygrid_2025_acpf_profile_audit/alignment/interface_operator.py",
+      "sha256": "944e63f827f46fd161e0a8da67473a2bb59cfdf3107f34ab984510cc0319a308"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_01.mat",
+      "sha256": "f21059f24b6614e4100d4cf7e7dec13e94f844fd3edcd265067873b1bc8d2369"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_02.mat",
+      "sha256": "06dd1ba4915daf839cc27905768141bdfbb228d8d7a6b9fb8cf23f1869c86443"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_03.mat",
+      "sha256": "2d518a28264d1fcc4f2fb16082f9b3dee94ef3f60e349f564d3f7e5d662260b1"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_04.mat",
+      "sha256": "9161554a02952e53da73b1c3dd933d77cdc6e5a5c3250826018973c9d9997ef2"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_05.mat",
+      "sha256": "fdc012f78d2511b930fefa563f033647cb250f5ceb15a60e67481a11b1b1ddf0"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_06.mat",
+      "sha256": "791ca8a79e3b2d2125aeea38482b0521cd8357c88b22b25ee661ee95f17f9b3c"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_07.mat",
+      "sha256": "e292c36bd9255a53c9d7149845aa6fbdf7a097e9f18cf49558593e647ae1d1a6"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_08.mat",
+      "sha256": "1c50cb51edf8854831fcc1da0d0bdfa5ba722bf47b05763fb08f70e352d3252b"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_09.mat",
+      "sha256": "2da4ed8badebc8e80151c06b1eb22904d2ca2f8d256bdbc3e9c0ba53c3eae122"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_10.mat",
+      "sha256": "2a3efa9c55e96119eb311fc5b6170edab5fe84beef7b813171951f2b922d7bb7"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_11.mat",
+      "sha256": "43fc75780afc6ae46c15c840ef39bf8f6bfb5da9e8a6c89dcd469e2990348e87"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/acpf/monthly/profile_PF_2025_12.mat",
+      "sha256": "9ef53680a25405da10524df26cfc65d2e25828053c7b986d10f5b6d67329dbf8"
+    }
+  ],
+  "source_code": {
+    "path": "scripts/nygrid_2025_ac_loss_revision/validation/review_regional_loss_budgets.py",
+    "sha256": "1ed0dcad38ca7efdf3f4575068421d860d1ba1eb9b5c71a46cd18d6772722d30"
+  }
+}

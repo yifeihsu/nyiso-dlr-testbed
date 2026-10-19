@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-14T02:21:43.170238+00:00",
+  "scope": "Bounded actual-ZIP map inclusion, unchanged base payload, relative links, clean extraction and included standard-library verifier",
+  "archive_path": "deliverables/nygrid_2025_latest_model_20261013/nygrid_latest_model_with_map_20261013.zip",
+  "archive_sha256": "7e6d13ea54f49aa141bd1d6bcfc77ef4e1ba64cbe2542c4675a3e9dd1cb16810",
+  "archive_bytes": 116111250,
+  "base_archive_sha256": "b349bfc5587162fd8d945dd0e81485ed6748c205d432f4ce93e2ad42e2732f6a",
+  "base_archive_preserved": true,
+  "archive_member_count": 671,
+  "payload_file_count": 669,
+  "payload_bytes": 130345898,
+  "unchanged_base_payload_file_count": 665,
+  "modified_base_files": [
+    "START_HERE.md"
+  ],
+  "added_files": [
+    "map/README.md",
+    "map/network_map.html",
+    "verification/MAP_PROVENANCE.json"
+  ],
+  "START_HERE_only_inserts_map_section": true,
+  "original_runtime_commands_preserved": true,
+  "map_HTML_sha256": "077d297471ff17655f01bd9a163466c522817dae7df16cc90a95453e1f01fa51",
+  "map_HTML_bytes_identical_to_approved_source": true,
+  "map_source_delivery_and_validation_hashes_match": true,
+  "relative_link_checks": [
+    {
+      "document": "START_HERE.md",
+      "relative_link": "map/network_map.html",
+      "resolved_package_path": "map/network_map.html",
+      "passed": true
+    },
+    {
+      "document": "START_HERE.md",
+      "relative_link": "map/README.md",
+      "resolved_package_path": "map/README.md",
+      "passed": true
+    },
+    {
+      "document": "map/README.md",
+      "relative_link": "network_map.html",
+      "resolved_package_path": "map/network_map.html",
+      "passed": true
+    }
+  ],
+  "fresh_OS_temporary_extraction": {
+    "root": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_handoff_map_mtojjl09\\package",
+    "outside_research_checkout": true,
+    "git_ancestors": [],
+    "preexisting_directory_overwritten": false,
+    "all671_member_hashes_verified": true
+  },
+  "included_standalone_verifier": {
+    "command": [
+      "C:\\Users\\Holiday\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_handoff_map_mtojjl09\\package\\verify_package.py",
+      "--root",
+      "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_handoff_map_mtojjl09\\package"
+    ],
+    "working_directory": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_handoff_map_mtojjl09\\package",
+    "exit_code": 0,
+    "result": {
+      "passed": true,
+      "kind": "latest_model_with_interactive_map",
+      "files": 669,
+      "bytes": 130345898,
+      "source_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+      "checksum_table_and_manifest_digest_verified": true
+    }
+  },
+  "all_payload_and_manifest_bytes_unchanged_after_verifier": true,
+  "MATLAB_PF_OPF_or_browser_rerun": false,
+  "validation_inheritance_basis": "All runtime/model payload bytes and approved map HTML are unchanged",
+  "old_archives_manifests_and_map_sources_modified": false,
+  "source_new_build_receipt_sha256": "cf2b0d5459bd57ad39bce2c481b42c9d7333b8685b56790783d6bdbb51a107eb",
+  "audit_script_sha256": "9b1f21de01f1a7c8777ed3313fefdab0ea49123755ee29dc8e1294f19077e521"
+}

@@ -1,0 +1,349 @@
+{
+  "status": "source_basis_verified_actual_hourly_external_exchange_ready",
+  "created_utc": "2026-10-11T15:24:13.420084+00:00",
+  "year": 2025,
+  "source_zone": "NEW-YORK",
+  "source_actual_field": "Flow",
+  "actual_units": "MW_hourly_average",
+  "source_net_schedule": "Exp_minus_Imp",
+  "positive_direction": "Ontario_to_NewYork",
+  "source_time_basis": "fixed_EST_UTCminus5_hour_ending;HE1starts00EST",
+  "source_sign_or_timing_fitted_to_internal_flows": false,
+  "internal_interface_observations_consumed": false,
+  "interval_axis_matches_frozen_2025_UTC_axis": true,
+  "finite_reported_actual_hours": 8760,
+  "actual_qualified_hours": 8754,
+  "original_schedule_qualified_hours": 8673,
+  "common_replay_hours_before_source_quality": 8663,
+  "common_replay_hours": 8657,
+  "coverage_flag_meaning": "published_hourly_value_present_and_finite_only; must additionally require separate source_quality_qualified child; historicalnative5mincoverage_not_asserted",
+  "source_quality_receipt_path": "output/nygrid_2025_western_audit/ontario/source_quality_receipt.json",
+  "source_quality_receipt_sha256": "0959c383d82ae34a413e9ecc97465843467d3e2e543ac7de8306a45d05710eaa",
+  "source_quality_child_sha256": "ae23b9a130773fece232c8bb84583a3fb2d16fe9c2533a13b525ab64ba788cde",
+  "source_quality_suspect_hours": 6,
+  "missing_policy": "NaN preserved; no zero fill,interpolation,clipping or gap unlocking",
+  "western_exchange_policy": "actualNEW-YORKtotal_minus_verified_actualStLawrenceP34sum;derivedwesternaggregate,notdirectNiagaraindividualcircuittelemetry",
+  "actual_change_implementation": "OntarioexternalPG += gamma*(actual\u2212originalschedule), allocated withfrozenregionalshares; requirednativePG -= samegamma*delta; rerunboundedprojectionwithsamepriors/bounds/weights.",
+  "other_regional_exchange_basis": "Otherregionalboundariesretainexistingbasis;thisdoesnotclaimallinternationalboundariesareactualtelemetry.",
+  "comparisons": [
+    {
+      "quantity": "IESO_actual_minus_P32_schedule",
+      "cohort": "source_overlap_before_source_quality",
+      "hours": 8673,
+      "mean": -4.2092422364425905,
+      "mae": 156.51900890695262,
+      "rmse": 194.60856385209917,
+      "minimum": -1846.8075,
+      "maximum": 692.9675
+    },
+    {
+      "quantity": "IESO_actual_minus_P32_schedule",
+      "cohort": "source_overlap_quality_qualified",
+      "hours": 8667,
+      "mean": -3.4693075747086555,
+      "mae": 155.88451541286872,
+      "rmse": 191.9228764535479,
+      "minimum": -820.1466666666666,
+      "maximum": 692.9675
+    },
+    {
+      "quantity": "IESO_actual_minus_P32_schedule",
+      "cohort": "common_replay_before_source_quality",
+      "hours": 8663,
+      "mean": -4.217249942283264,
+      "mae": 156.49189706221864,
+      "rmse": 194.58910907032353,
+      "minimum": -1846.8075,
+      "maximum": 692.9675
+    },
+    {
+      "quantity": "IESO_actual_minus_P32_schedule",
+      "cohort": "common_replay_quality_qualified",
+      "hours": 8657,
+      "mean": -3.476466106426388,
+      "mae": 155.85665185206577,
+      "rmse": 191.90001134535245,
+      "minimum": -820.1466666666666,
+      "maximum": 692.9675
+    },
+    {
+      "quantity": "IESO_net_schedule_minus_P32_schedule",
+      "cohort": "source_overlap_before_source_quality",
+      "hours": 8673,
+      "mean": -0.05381735462545665,
+      "mae": 6.82366813034066,
+      "rmse": 16.288001016902403,
+      "minimum": -724.9925,
+      "maximum": 290.72916666666697
+    },
+    {
+      "quantity": "IESO_net_schedule_minus_P32_schedule",
+      "cohort": "source_overlap_quality_qualified",
+      "hours": 8667,
+      "mean": -0.055554257528547334,
+      "mae": 6.824315356460661,
+      "rmse": 16.292613374748292,
+      "minimum": -724.9925,
+      "maximum": 290.72916666666697
+    },
+    {
+      "quantity": "IESO_net_schedule_minus_P32_schedule",
+      "cohort": "common_replay_before_source_quality",
+      "hours": 8663,
+      "mean": -0.05691287660162944,
+      "mae": 6.820201280670039,
+      "rmse": 16.292451454703713,
+      "minimum": -724.9925,
+      "maximum": 290.72916666666697
+    },
+    {
+      "quantity": "IESO_net_schedule_minus_P32_schedule",
+      "cohort": "common_replay_quality_qualified",
+      "hours": 8657,
+      "mean": -0.05865393130798775,
+      "mae": 6.82084685161656,
+      "rmse": 16.297070961898996,
+      "minimum": -724.9925,
+      "maximum": 290.72916666666697
+    }
+  ],
+  "source_validation": {
+    "primary_XSD_actual_units_MW": true,
+    "primary_XSD_zone_is_collection_of_neighbor_ties": true,
+    "primary_XSL_EST_hour_ending_proof": true,
+    "physical_DST_conversion_fixtures_passed": true,
+    "contemporary_XML_CSV_probe_day": "2026-10-10",
+    "contemporary_XML_CSV_probe_hours": 24,
+    "XML_native_samples": 288,
+    "maximum_CSV_minus_XML_hourly_average_mw": 0.4833333333333485,
+    "historical_2025_daily_XML_crosscheck_available": false,
+    "historical_2025_daily_XML_limitation": "Public daily directory retains90days; no all-year2025 native-interval coverage claim is made."
+  },
+  "annual_source_audits": [
+    {
+      "year": 2019,
+      "source_rows": 8760,
+      "source_days": 365,
+      "all_numeric_cells_independently_parsed": true,
+      "fields": 47,
+      "zero_actual_flow_rows": 1,
+      "suspect_report_wide_zero_hours": 0,
+      "source_quality_qualified_hours": 8760,
+      "missing_actual_flow_rows": 0,
+      "qualified_rows": 8760,
+      "intertie_zones": [
+        "MANITOBA",
+        "MANITOBA SK",
+        "MICHIGAN",
+        "MINNESOTA",
+        "NEW-YORK",
+        "PQ.AT",
+        "PQ.B5D.B31L",
+        "PQ.D4Z",
+        "PQ.D5A",
+        "PQ.H4Z",
+        "PQ.H9A",
+        "PQ.P33C",
+        "PQ.Q4C",
+        "PQ.X2Y",
+        "Total"
+      ],
+      "maximum_rounded_total_minus_zone_sum_mw": {
+        "Imp": 0.0,
+        "Exp": 0.0,
+        "Flow": 0.0
+      }
+    },
+    {
+      "year": 2025,
+      "source_rows": 8760,
+      "source_days": 365,
+      "all_numeric_cells_independently_parsed": true,
+      "fields": 47,
+      "zero_actual_flow_rows": 8,
+      "suspect_report_wide_zero_hours": 6,
+      "source_quality_qualified_hours": 8754,
+      "missing_actual_flow_rows": 0,
+      "qualified_rows": 8760,
+      "intertie_zones": [
+        "MANITOBA",
+        "MANITOBA SK",
+        "MICHIGAN",
+        "MINNESOTA",
+        "NEW-YORK",
+        "PQ.AT",
+        "PQ.B5D.B31L",
+        "PQ.D4Z",
+        "PQ.D5A",
+        "PQ.H4Z",
+        "PQ.H9A",
+        "PQ.P33C",
+        "PQ.Q4C",
+        "PQ.X2Y",
+        "Total"
+      ],
+      "maximum_rounded_total_minus_zone_sum_mw": {
+        "Imp": 0.0,
+        "Exp": 0.0,
+        "Flow": 0.0
+      }
+    }
+  ],
+  "final2025_archive_v394_byte_identical": true,
+  "source_evidence": [
+    {
+      "id": "IESO_schema",
+      "url": "https://reports-public.ieso.ca/docrefs/schema/IntertieScheduleFlow_r2.xsd",
+      "local_path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_r2.xsd",
+      "finding": "IntertieZone is a collection of tielines betweenOntario and neighbouring jurisdiction; Actual Flow is activepowerMW; Hour is hour-ending1..24."
+    },
+    {
+      "id": "IESO_stylesheet",
+      "url": "https://reports-public.ieso.ca/docrefs/stylesheet/IntertieScheduleFlow_HTML_t1-2.xsl",
+      "local_path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_HTML_t1-2.xsl",
+      "finding": "Hour1 spans00:00\u201301:00EST and eachtrade day is midnightEST to nextmidnightEST. Net schedule=Export\u2212Import."
+    },
+    {
+      "id": "IESO_data_directory",
+      "url": "https://www.ieso.ca/power-data/data-directory",
+      "finding": "Yearly CSV supplies historical report; actual power flows are operational-meter observations, distinct from scheduled transactions."
+    },
+    {
+      "id": "DOE_report_sign",
+      "url": "https://www.energy.gov/documents/motion-intervene-request-rehearing-and-motion-stay-state-washington-exhibits-1-10-2",
+      "local_path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_intertie_sign_source.pdf",
+      "document_page": "B-4",
+      "container_PDF_page": 151,
+      "table": "B.2",
+      "finding": "Explicitly identifies positive IESO Ontario\u2013NY flow as Ontario exporting toNY and negative flow asOntario importing. Cited only for this source convention."
+    },
+    {
+      "id": "IESO_border_corridors",
+      "url": "https://ieso.ca/-/media/Files/IESO/Document-Library/planning-forecasts/reliability-outlook/TTCMethodology.pdf",
+      "sections": "5.4 and5.5",
+      "finding": "NewYorkNiagara andNewYorkStLawrence arethetwoOntario\u2013NewYork interconnectioncorridors. AnnualNEW-YORKzone isaggregate; noindividualNiagara circuitmeasurements present."
+    }
+  ],
+  "source_receipts": [
+    {
+      "url": "https://reports-public.ieso.ca/public/IntertieScheduleFlowYear/PUB_IntertieScheduleFlowYear_2019.csv",
+      "file": "PUB_IntertieScheduleFlowYear_2019.csv",
+      "transport": "curl.exe GET with TLS verification and normal redirects",
+      "http_status": 200,
+      "response_headers_file": "IESO2019_headers.txt",
+      "source_http_date": "Sun, 11 Oct 2026 14:58:53 GMT",
+      "http_last_modified": "Fri, 31 Jan 2020 13:03:18 GMT",
+      "verified_utc": "2026-10-11T15:07:27.629689+00:00",
+      "sha256": "9b18b5c3fed8c9677399f32f76a788544d91f55c14b6fa6936ac17d16423acf2",
+      "bytes": 1206560
+    },
+    {
+      "url": "https://reports-public.ieso.ca/public/IntertieScheduleFlowYear/PUB_IntertieScheduleFlowYear_2025.csv",
+      "file": "PUB_IntertieScheduleFlowYear_2025.csv",
+      "transport": "curl.exe GET with TLS verification and normal redirects",
+      "http_status": 200,
+      "response_headers_file": "IESO2025_headers.txt",
+      "source_http_date": "Sun, 11 Oct 2026 14:57:11 GMT",
+      "http_last_modified": "Sat, 31 Jan 2026 13:03:16 GMT",
+      "verified_utc": "2026-10-11T15:07:27.636188+00:00",
+      "sha256": "b4aa6a2a3fe142124115bd9f4710ea3bb46ac2635b47be08b729aaf405671b4d",
+      "bytes": 1169310
+    },
+    {
+      "url": "https://reports-public.ieso.ca/public/IntertieScheduleFlowYear/PUB_IntertieScheduleFlowYear_2026.csv",
+      "file": "PUB_IntertieScheduleFlowYear_2026.csv",
+      "transport": "curl.exe with TLS verification and normal redirects",
+      "http_status": 200,
+      "response_headers_file": "IESO2026_headers.txt",
+      "source_http_date": "Sun, 11 Oct 2026 15:08:19 GMT",
+      "http_last_modified": "Sun, 11 Oct 2026 13:03:17 GMT",
+      "verified_utc": "2026-10-11T15:15:14.044775+00:00",
+      "bytes": 906853,
+      "sha256": "96ff644435c24886391747484968f9dbccfd2d6650033afd93c2c46c22d309f3"
+    },
+    {
+      "url": "https://reports-public.ieso.ca/public/IntertieScheduleFlowYear/PUB_IntertieScheduleFlowYear_2025_v394.csv",
+      "file": "PUB_IntertieScheduleFlowYear_2025_v394.csv",
+      "transport": "curl.exe with TLS verification and normal redirects",
+      "http_status": 200,
+      "response_headers_file": "IESO2025_v394_headers.txt",
+      "source_http_date": "Sun, 11 Oct 2026 15:08:19 GMT",
+      "http_last_modified": "Sat, 31 Jan 2026 13:03:16 GMT",
+      "verified_utc": "2026-10-11T15:15:14.037509+00:00",
+      "bytes": 1169310,
+      "sha256": "b4aa6a2a3fe142124115bd9f4710ea3bb46ac2635b47be08b729aaf405671b4d"
+    },
+    {
+      "url": "https://reports-public.ieso.ca/docrefs/helpfile/IntertieScheduleFlow_h1.pdf",
+      "status": 200,
+      "retrieved_utc": "2026-10-11T14:59:12.224174+00:00",
+      "sha256": "d945c5c55b105c5f375707a6f96b6e5bf689ac0ff1cfc68e6f1ffce40fdf7931",
+      "bytes": 4580,
+      "http_last_modified": "Wed, 14 Aug 2024 16:26:07 GMT"
+    },
+    {
+      "url": "https://reports-public.ieso.ca/public/IntertieScheduleFlow/PUB_IntertieScheduleFlow_20261010.xml",
+      "status": 200,
+      "retrieved_utc": "2026-10-11T14:59:12.690599+00:00",
+      "sha256": "20934c240a81e687e997c4a83e533b4f3eaf83da08e8975ec749abbab51eacbc",
+      "bytes": 354654,
+      "http_last_modified": "Sun, 11 Oct 2026 05:33:16 GMT"
+    },
+    {
+      "url": "https://reports-public.ieso.ca/docrefs/stylesheet/IntertieScheduleFlow_HTML_t1-2.xsl",
+      "status": 200,
+      "retrieved_utc": "2026-10-11T14:59:39.840450+00:00",
+      "sha256": "4ccefe0481f1b9efc2c636e73119d79b1a669c5418083f40a035f04a53d591ad",
+      "bytes": 18976,
+      "http_last_modified": "Wed, 23 Oct 2024 15:27:49 GMT"
+    },
+    {
+      "url": "https://reports-public.ieso.ca/docrefs/schema/IntertieScheduleFlow_r2.xsd",
+      "status": 200,
+      "retrieved_utc": "2026-10-11T14:59:40.005786+00:00",
+      "sha256": "230ddc6af589f3a1dba542ce499005dc0b17c18789fb904f71f5db3c6b09f307",
+      "bytes": 7346,
+      "http_last_modified": "Wed, 14 Aug 2024 16:27:15 GMT"
+    }
+  ],
+  "frozen_inputs": [
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/hour_catalog.csv",
+      "sha256": "96d4a0db424cbe1062b7c6b51d5f244a4de699679ad89428a8db3a992980f86a",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/hourly_controls.csv",
+      "sha256": "ea359615f1ef94b9f2e0f0101a72a6d2cedd78f83bab4aa15646a85b465a345a",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/input_receipt.json",
+      "sha256": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c",
+      "unchanged": true
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/replay/dated_verified_PAR_flows.mat",
+      "sha256": "4f034589dc10418d391d99cacf5c062b30c5d82308f0c9b73c06e4ae9c8fe6d1",
+      "unchanged": true
+    }
+  ],
+  "actual_input_sha256": "e59408bf1296bd92eb6c562395d98d629c6b9784d50767c9a94956c8400aa6b4",
+  "audit_script_sha256": "5bb0de95f1fc08b5bba9b27c69cbd7292d1e2e2d86f8ccf660acaa9e9a4e7abc",
+  "limitations": [
+    "AnnualCSV doesnotexpose2025nativeintervalcoverage ormeter-qualityflags; allreported hourlyvalues remainliteral.",
+    "Six hours with all14 intertie actuals plusTotalFlow zero andnonzero schedules arequarantined as suspected source defects; cause isnot conclusivelyestablished. RawactualCSV ispreserved andneeds the separatequalitymask.",
+    "NEW-YORKincludesallOntario\u2013NYties. IndividualNiagara/Queenstoncircuitflows arenotidentifiedbythisaggregate; westernresidualinheritsbothoperatorhourlyaggregation conventions andmeterboundary differences.",
+    "2019annualsourcecomparison iswithinIESOfixedESTtables; no positionaljoin tolegacy2019NYISOnaiveaxis isperformed."
+  ]
+}

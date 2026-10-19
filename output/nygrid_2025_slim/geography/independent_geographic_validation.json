@@ -1,0 +1,210 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-11T04:59:02.287747+00:00",
+  "method": "Independent CSV/GeoJSON/MAT identity and category audit; independent pyproj projection and SVG pixel-anchor/label verification; renderer not imported or rerun",
+  "git_HEAD_verified": "4a497f1cb72041042dddbe6db25d52721e341a60",
+  "total_nodes": 148,
+  "original_ids_1_through_140_preserved": true,
+  "added_bus_ids": [
+    10589,
+    10593,
+    10774,
+    10858,
+    10902,
+    11129,
+    11130,
+    20001
+  ],
+  "removed43_ids_absent_from_all_active_features_and_SVG_labels": true,
+  "mapped_nodes": 145,
+  "nongeographic_proxy_ids": [
+    78,
+    79,
+    82
+  ],
+  "source_and_map_lat_lon_exact_string_subset_of191": true,
+  "branch_counts": {
+    "retained": 216,
+    "replaced": 9,
+    "source": 14,
+    "assumed": 5,
+    "equivalent": 30,
+    "dc": 4
+  },
+  "connection_features": 278,
+  "mapped_connections": 263,
+  "nongeographic_connections": 15,
+  "active_AC_records": 265,
+  "inactive_replaced_rows": 9,
+  "replaced_rows_geographic": 4,
+  "replaced_rows_nongeographic": 5,
+  "equivalents_nonphysical_in_GeoJSON_and_SVG_legend": true,
+  "all_eight_added_names_ids_345kV_labels_present_in_atlas": true,
+  "maximum_projection_error_km": 5.684341886080802e-14,
+  "maximum_SVG_marker_position_error_points": 1.0310263308370214e-06,
+  "SVG_checks": [
+    {
+      "file": "geographic_slim_atlas.svg",
+      "maps": [
+        {
+          "axis": "axes_1",
+          "geographic_points": 20,
+          "labeled_ids": [
+            35,
+            73,
+            74,
+            76,
+            77,
+            10774,
+            10858,
+            10902,
+            20001
+          ],
+          "individual_connection_records": 49
+        },
+        {
+          "axis": "axes_2",
+          "geographic_points": 6,
+          "labeled_ids": [
+            81,
+            10589,
+            10593,
+            11129,
+            11130
+          ],
+          "individual_connection_records": 11
+        }
+      ]
+    },
+    {
+      "file": "geographic_slim_nyc_detail.svg",
+      "maps": [
+        {
+          "axis": "axes_1",
+          "geographic_points": 6,
+          "labeled_ids": [
+            81,
+            10589,
+            10593,
+            11129,
+            11130
+          ],
+          "individual_connection_records": 11
+        }
+      ]
+    },
+    {
+      "file": "geographic_slim_full_npcc.svg",
+      "maps": [
+        {
+          "axis": "axes_1",
+          "geographic_points": 145,
+          "labeled_ids": [
+            1,
+            16,
+            28,
+            35,
+            43,
+            47,
+            50,
+            52,
+            54,
+            69,
+            83,
+            85,
+            91,
+            92,
+            115,
+            124,
+            125,
+            130,
+            134,
+            138,
+            140
+          ],
+          "individual_connection_records": 263
+        }
+      ]
+    }
+  ],
+  "frozen_arrays_and_metadata_match_committed_blobs": [
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/branch_register.csv",
+      "sha256": "6a574d53b40eb2bf08dba851757a5d56ab6b4d89377b2a33e5d6319d5cd2a18f",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/bus_geographic_register.csv",
+      "sha256": "7aaedd8f68e6c1a9d2c13cf19158abe604a57c669ef1c3aa7e07df2e33476973",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/bus_register.csv",
+      "sha256": "9a3359281f3b51daedcb2c2740e3d31c4eb4f62adffca5ea7819b1736c0dc660",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/branch_register.csv",
+      "sha256": "547c40ce859c358ded212f1755b879ee508a2d56c1354e7d40782b11e0bfb82d",
+      "equals_git_HEAD_blob": true
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c",
+      "equals_git_HEAD_blob": true
+    }
+  ],
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_slim/geography/bus_geographic_register.csv",
+      "sha256": "481d2b3ded7bddc4bc2448b696e6c4f5d2ab8ef137c9c00fae10813069b8dfae"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/geographic_nodes.geojson",
+      "sha256": "6fa9464dc69ce83da6bfc70c40c3d1ce31a05400b544fbe50d52c9b5fe4764c4"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/geographic_connections.geojson",
+      "sha256": "0aee54ad1073693be47de27d508914986a92d03519be71ba1eba16e5472bfb5d"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/geographic_validation.json",
+      "sha256": "19186a970a73c0d5f957194dfa9286e1a6c35cfdf7eb9a74599b62c988c862ab"
+    },
+    {
+      "path": "scripts/nygrid_2025_slim/build_slim_geography.py",
+      "sha256": "f0daa02e29ed0cae49f0c0f802a4dfce05b4ee49acf88c7c6980b31e505d7e6c"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_atlas.svg",
+      "sha256": "5a47ed7a659febb4892f03c4c32d8afc2442c6a25986a3e248f992f95b18252c"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_full_npcc.svg",
+      "sha256": "8a6480887c7d4edb12cc912188ef7e2be04ce817c7340e54a9e01d6752792a17"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_nyc_detail.svg",
+      "sha256": "e348c5baa39cf35131fd909b147ad84aeb7a0d52b4b6f8824d136d334306ca7c"
+    }
+  ],
+  "limitations": [
+    "Independent audit confirms stored coordinate provenance and rendering, not surveyed equipment positions or transmission routes.",
+    "Three original aggregate proxy buses are retained with null geographic geometry and explicit inset records."
+  ]
+}

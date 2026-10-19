@@ -1,0 +1,20 @@
+{
+  "historical_vintage": 2019,
+  "RAW_export_not_2025_operating_proof": true,
+  "transformers": 144,
+  "transformer_control_code_counts": {
+    "0": 144
+  },
+  "maximum_absolute_transformer_angle_deg": 0.0,
+  "literal_PAR_name_candidates": [],
+  "Ontario_proxy_buses": [
+    1313,
+    1570
+  ],
+  "HQ_proxy_buses": [
+    1231,
+    1546
+  ],
+  "PS33_PS34_physical_impedances_or_tap_limits_recoverable": false,
+  "reason": "No explicit St Lawrence Ontario PAR corridor exists in the pinned NY-only source; its Ontario proxies are at two western buses"
+}

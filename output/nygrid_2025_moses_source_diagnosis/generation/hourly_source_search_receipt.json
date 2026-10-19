@@ -1,0 +1,58 @@
+{
+  "checked_utc": "2026-10-15T20:48:05.464787+00:00",
+  "scope": "Locate independently observed public2025 hourly StLawrence electrical generation; official NYPA, NYISO, EIA and NYPA-owned OpenNY sources only.",
+  "verified_public_2025_plant_hourly_electrical_generation_located": false,
+  "does_not_prove_no_such_data_exist": true,
+  "river_flow_or_water_level_converted_to_generation": false,
+  "run_of_river_specific_StLawrence_claim_verified_from_searched_NYPA_sources": false,
+  "sources": [
+    {
+      "url": "https://www.eia.gov/electricity/data/eia923/index.php",
+      "finding": "Plant/prime-mover net generation is published monthly and annually; final2025 release14September2026. No StLawrence hourly series here."
+    },
+    {
+      "url": "https://www.eia.gov/opendata/",
+      "finding": "Hourly electricity generation is reported for balancing authorities and fuel types; plant-level operations are monthly."
+    },
+    {
+      "url": "https://www.eia.gov/TodayinEnergy/detail.php?id=65344",
+      "finding": "EIA explains different generating-unit coverage between hourly balancing-authority reports and monthly plant reports; no equality between those universes is assumed."
+    },
+    {
+      "url": "https://mis.nyiso.com/public/P-63list.htm",
+      "finding": "Real-Time Fuel Mix archive supplies statewide fuel-category totals used by the frozen hydro allocation; it does not locate StLawrence plant-hour output."
+    },
+    {
+      "url": "https://www.nyiso.com/energy-market-operational-data",
+      "finding": "Main operational-data page returned a JavaScript verification page to the web reader; no plant-hour result inferred from that access failure."
+    },
+    {
+      "url": "https://data.ny.gov/resource/isux-jnrn.json",
+      "finding": "NYPA-owned facility-group net-generation dataset;2025 StLawrence6,730,000MWh. Annual grain, not hourly."
+    },
+    {
+      "url": "https://data.ny.gov/api/views/isux-jnrn.json",
+      "finding": "Metadata confirms NYPA ownership, annual posting, facility grouping and net-of-station-service generation."
+    },
+    {
+      "url": "https://nypa.gov/news/press-releases/2025/20250325-relicensing",
+      "finding": "2025 news describes16units and820.8MW output capacity without a matched EIA seasonal-capability definition; not an hourly dispatch source."
+    },
+    {
+      "url": "https://nypa.gov/power/generation/all-generating-facilities",
+      "finding": "Facility page uses2020 generation and a2020 GoldBook nameplate reference; not used to replace2025 EIA capability."
+    },
+    {
+      "url": "https://nypa.gov/Power/Generation/St-Lawrence-FDR-Power-Project/St-Lawrence-Relicensing",
+      "finding": "Confirms US16units separate from Canadian16units; no public2025 hourly electrical dispatch located."
+    }
+  ],
+  "queries": [
+    "St. Lawrence hourly generation2025 on NYPA/NYISO/EIA/OpenNY",
+    "NYPA NetGeneration facility dataset",
+    "StLawrence run-of-river on NYPA",
+    "StLawrence2025 GoldBook856MW on NYISO"
+  ],
+  "default_model_changed": false,
+  "new_PF_run": false
+}

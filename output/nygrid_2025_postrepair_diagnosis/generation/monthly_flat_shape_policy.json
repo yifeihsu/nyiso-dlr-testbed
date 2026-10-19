@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "source_HEAD": "30904058a6c2acac4fffa85a2d15a90e396c3681",
+  "purpose": "Diagnostic hourly-shape sensitivity only; no default model, map or package change",
+  "selection_uses_P32_or_interface_residuals": false,
+  "AC_solve_run": false,
+  "StLawrence_rule": "Unique minimum hourly variance around each EIA monthly mean, projected to existing source-only hourly feasible intervals and exact full-calendar EIA monthly energy.",
+  "other_HY_rule": "Same nearest-original-reference weighted bounded projection and frozen objective weights as current Moses repair; only StLawrence shape target differs.",
+  "fixed": "Same full8760 clock,source mask,monthly StL energy,855engineering cap,dated15unit admission,PSgeneration,currentreconciledhourlyHYtotal,otherfuel,HQ,PV20,PAR,load,network.",
+  "excluded_hours": "All109 remain excluded and keep the existing declared latent/reference policy; projected monthlyenergy includes them.",
+  "AC_test_hour_selection": "For each calendar month select the source-qualified hour with maximum absolute ZoneD native generation delta; first chronological tie. No observed flows read.",
+  "frozen_loss_cut": "Change in northern-cut publicMW equals change in nativeD publicMW only under frozen other boundary terms/load/losses; freshAC needed for exact flow effect.",
+  "sources": [
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/generation_candidate.npz",
+      "sha256": "fa8ede0a363b38dc6db81ca7bbe59d680ed972f0e1d1079a707f06391c344eff",
+      "bytes": 13491275
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/full8760_generation_ledger.csv",
+      "sha256": "ac1b69327cc69f03061250afbe09474416a63f3e92230b83abd0ae134207269e",
+      "bytes": 1946114
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/StLawrence_monthly_energy_ledger.csv",
+      "sha256": "e5375d977b2e5fea74dbacba04af5fa4fca331e022bf09b4434725cd8b2f956f",
+      "bytes": 2701
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/model_generator_register.csv",
+      "sha256": "4c9892ab2a855a75af893421ddce9131d3f491b407b072055a244e0448bb24f5",
+      "bytes": 195603
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/fleet_register.csv",
+      "sha256": "d025a1994c9a1c19cb62c6b4ae61a1e0bb62ae2060158592c61f6ecf19546d89",
+      "bytes": 3043498
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883",
+      "bytes": 56579710
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_bounds.npz",
+      "sha256": "7fdc0f26448d6333ba427f7d10535cff2eef993de21fae0794eba99b549e9c52",
+      "bytes": 5982245
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4",
+      "bytes": 54625507
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf",
+      "bytes": 54767622
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/generation/build_generation_candidate.py",
+      "sha256": "0c5b6f341939c2b710d5656f9fbef23e6fd87d9418a962dc492afe5c3f9e7713",
+      "bytes": 24053
+    }
+  ]
+}

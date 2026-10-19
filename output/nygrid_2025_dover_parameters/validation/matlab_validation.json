@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "fresh_slim148_DC_solves": 49,
+  "fresh_full192_DC_solves": 49,
+  "scenario_count": 7,
+  "fixed_sample_hours": [
+    8472,
+    8508,
+    8542,
+    8551,
+    8617,
+    8637,
+    8760
+  ],
+  "maximum_slim_branch_error_model_mw": 3.4646063795662485E-11,
+  "maximum_full_branch_error_model_mw": 1.1971224012086168E-10,
+  "maximum_full_angle_error_deg": 5.4249937875283649E-12,
+  "maximum_bank_flow_error_model_mw": 8.93862761586206E-12,
+  "maximum_full_vs_slim_interface_error_model_mw": 1.368789526168257E-10,
+  "maximum_recovered_full_flow_error_model_mw": 1.0311396181350574E-10,
+  "maximum_generation_change_model_mw": 1.6004975122996257E-10,
+  "maximum_generation_bound_violation_model_mw": 2.2737367544323206E-13,
+  "maximum_six_transfer_error_model_mw": 3.5527136788005009E-15,
+  "fixed_complex_voltage_parallel_PST_checks": 6,
+  "maximum_two_bank_terminal_power_error_mva": 2.7573452906915244E-12,
+  "pre_cutover_exact_parent_identity_checks": 24,
+  "wrapper_guard_checks": 8,
+  "default_bounded_nominal_policy_checked": true,
+  "saturated_and_ambiguous_zero_fixture_coverage": true,
+  "full_system_AC_or_factory_impedance_or_hardware_taps_certified": false,
+  "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+  "MATPOWER_DC_solver": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\rundcpf.m",
+  "dependencies": [
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dover_parameters\\replay\\matlab_fixtures.mat",
+      "sha256": "f153654d02e7e1ab0fed1416775d21ee458251f8bd937cf6e26914efcdd692f9"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dover_parameters\\replay\\replay_receipt.json",
+      "sha256": "c5b0c9a4168525ded1eadfd4a4493c02a67a3eeae7a77b0a5a7f1964a5602931"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dover_parameters\\replay\\operating_states.mat",
+      "sha256": "bea2fb35c44a3c9510b7c4a68cf4a5ea901e7df0b51567755a2a388942dd171a"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dover_parameters\\network\\network_receipt.json",
+      "sha256": "c65358dc54875b6a945bf5ed194bb450be40be93924e6910555ee732a77e3d85"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dover_parameters\\network\\x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dover_parameters\\network\\x_low.mat",
+      "sha256": "1c8534d7dd57214ba357ed5f349a685fac8808ba0597ac1b0ef28a56916d88cd"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_dover_parameters\\network\\x_high.mat",
+      "sha256": "c003b2dec47b5f0914e7347129f4efb2767d4d698cfed7e0004c270018c363d0"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_dover_dc.m",
+      "sha256": "b0f4c23bc1e7cf4e3907411089b96efba5ea9bb77bf1fed6a03910e4134b0979"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_line_estimated_dc.m",
+      "sha256": "de3935e1e9b9dd2b94078d5a19976648884eac0f883dcead7786d4d1a93b20db"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_western_corrected_dc.m",
+      "sha256": "6cf89f6076f2fa9e9c81e0d4da92d4a6bd930f99b644c2690c4ba9b63491ce01"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_slim_interfaces.m",
+      "sha256": "c43fe312eda58b0a439d426a5eb05238a08115f07f6b7456b2a0e458cade2845"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_dover_parameters\\engineering\\validate_matlab_dover.m",
+      "sha256": "eb7c7acbb172fcd04e11f10fc155cae8be3de7965b87244107afefd60ef709be"
+    }
+  ]
+}

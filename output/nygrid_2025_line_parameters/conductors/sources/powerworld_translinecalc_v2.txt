@@ -1,0 +1,797 @@
+          PowerWorld Transmission Line
+          Parameter Calculator Version 2
+
+
+Introduction
+The PowerWorld Transmission Line Parameter Calculator (TransLineCalc) is a tool
+designed to compute characteristic line parameters given the type of the conductor and
+the tower configuration of a three-phase overhead transmission line.
+The parameters computed are the resistance R, reactance X, susceptance B, and
+conductance G. These values are computed as distributed (per unit of distance),
+lumped or total (for a specific line distance), and in per-unit.
+
+PowerWorld provides TransLineCalc as a stand-alone program (.exe file) and also as
+an automation server that can run from PowerWorld Simulator directly or from an
+external application (.dll file).
+
+
+
+
+2001 South First Street
+Champaign, IL 61820, USA
+(217) 384-6330
+www.powerworld.com
+support@powerworld.com
+                                                                                Transmission Line Parameter Calculator Version 2
+
+
+                                                                Table of Contents
+
+1       FEATURES ........................................................................................................................................................1
+    1.1      CALCULATIONS ...........................................................................................................................................1
+       1.1.1   Parameters Calculation .........................................................................................................................1
+       1.1.2   Ampere to MVA Limit Conversion .........................................................................................................3
+       1.1.3   Reverse Lookup ......................................................................................................................................3
+    1.2      CONDUCTOR TYPE ......................................................................................................................................5
+       1.2.1   Edit By Form..........................................................................................................................................5
+       1.2.2   Edit By Table .........................................................................................................................................5
+    1.3      TOWER CONFIGURATION .............................................................................................................................7
+       1.3.1   Edit By Form..........................................................................................................................................7
+       1.3.2   Edit By Table .........................................................................................................................................7
+    1.4      DATABASE CONTROLS ................................................................................................................................9
+2       AUTOMATION SERVER .............................................................................................................................. 10
+    2.1      COM OBJECT INITIALIZATION AND DESTRUCTION ................................................................................... 10
+    2.2      METHODS OF THE SIMAUTO OBJECT ......................................................................................................... 11
+       2.2.1   SetParameters ...................................................................................................................................... 11
+       2.2.2   GetParametersPU ................................................................................................................................ 11
+       2.2.3   GetParametersLumped ........................................................................................................................ 12
+3       CALCULATIONS ........................................................................................................................................... 13
+    3.1         DISTRIBUTED PARAMETERS ...................................................................................................................... 13
+    3.2         LUMPED (TOTAL) PARAMETERS ................................................................................................................ 15
+    3.3         BASE VALUES ........................................................................................................................................... 16
+    3.4         PER UNIT (PU) PARAMETERS .................................................................................................................... 17
+    3.5         MVA TO AMPERE AND AMPERE TO MVA LIMITS CONVERSION .............................................................. 17
+4       REFERENCES ................................................................................................................................................. 17
+
+
+
+
+©PowerWorld Corporation                                                            ii                                                    April 22, 2013
+                                            Transmission Line Parameter Calculator Version 2
+
+
+
+1 Features
+
+1.1 Calculations
+The following controls are part of the calculations section:
+
+1.1.1 Parameters Calculation
+This section is to enter the necessary data to compute the characteristic line parameters
+that are shown in the Results panel.
+
+Input Data
+   Conductor Type:          This is the combo box that lists all the conductor types
+                            available in the Conductors table. To add, remove or edit a
+                            specific conductor and its characteristics, see Conductor
+                            Type section below.
+
+   Tower Configuration:     This combo box lists all the tower configurations available in
+                            the Tower Configurations table. To add, remove or edit a
+                            specific tower configuration, please go to the Tower
+                            Configuration section below.
+
+   Line Length:             This is the value of the distance of the transmission line.
+                            The units are miles when using English system, or
+                            kilometers when using the Metric (SI) system.
+
+   Line Length Units:       The line length units specify the measurement system to use
+                            when entering the line length. The options are English
+                            system or Metric (SI) system. The final and intermediate
+                            results will also be shown in the system specified here.
+
+   Power Base:              The system voltampere base in MVA.
+
+   Voltage Base:            The line-line voltage base in KV.
+
+   Impedance Base:          The impedance base in Ohms. This value is automatically
+                            computed when the power base and the voltage base are
+                            entered or modified.
+
+   Admittance Base:         The admittance base in Siemens. It is also automatically
+                            computed as the inverse of the impedance base.
+
+
+
+
+©PowerWorld Corporation                      1                            April 22, 2013
+                                           Transmission Line Parameter Calculator Version 2
+
+
+Lumped Results
+
+When all the input data is entered, the results automatically will be displayed. The
+values for R, X, B and G are shown in two different sections, one for actual total values
+per phase, and one for Per Unit values. The Power Surge Impedance Loading is also
+calculated.
+
+Distributed Results
+
+The values in this section will be displayed automatically too when all the input data is
+entered. The values for R, X, B and G are shown in actual values per distance units per
+phase.
+
+Intermediate Results
+
+The intermediate values calculated to compute the R, X, B, and G values are displayed
+here. The computed geometric mean radius and geometric mean distance are shown
+in the Distributed values section. The characteristic impedance and propagation factor
+are displayed in the Lumped values section.
+
+Note: To see the specific calculations used in this program, see the Calculations
+section, at the end of this document.
+
+
+
+
+                               Figure 1: Calculations Tab
+
+
+©PowerWorld Corporation                     2                            April 22, 2013
+                                          Transmission Line Parameter Calculator Version 2
+
+
+
+1.1.2 Ampere to MVA Limit Conversion
+This section converts the limits of the transmission line from Amperes to MVAs, given
+the voltage base, and vice versa.
+
+
+
+
+                           Figure 2: Amp to MVA Conversion
+
+1.1.3 Reverse Lookup
+
+Use this section to do a reverse lookup of the conductor, given a tower configuration
+and the characteristic line parameters in per unit.
+
+Input Data
+
+   Tower Configuration:    This combo box lists all the tower configurations available in
+                           the Tower Configurations table. To add, remove or edit a
+                           specific tower configuration, please go to the Tower
+                           Configuration section below.
+
+   Line Length:            This is the value of the distance of the transmission line.
+                           The units are miles when using English system, or
+                           kilometers when using the Metric (SI) system.
+
+   Line Length Units:      The line length units specify the measurement system to use
+                           when entering the line length. The options are English
+
+
+©PowerWorld Corporation                     3                            April 22, 2013
+                                           Transmission Line Parameter Calculator Version 2
+
+
+                            system or Metric (SI) system. The final and intermediate
+                            results will also be shown in the system specified here.
+
+   Power Base:              The system voltampere base in MVA.
+
+   Voltage Base:            The line-line voltage base in KV.
+
+   R:                       Resistance in per unit per phase.
+
+   X:                       Reactance in per unit per phase.
+
+   B:                       Susceptance in per unit per phase.
+
+   G:                       Conductance in per unit per phase.
+
+Results
+
+When all the input data is entered, click on the Calculate button to display the results in
+the table on the right. This table will compute the characteristic line parameters for each
+of the conductors in the data base, using the input tower configuration. The conductors
+will be sorted according to the match of their characteristics line parameters results with
+the input characteristic line parameters.
+
+
+
+
+©PowerWorld Corporation                     4                            April 22, 2013
+                                           Transmission Line Parameter Calculator Version 2
+
+
+
+1.2 Conductor Type
+This section is used to add, remove, rename, and edit the information related to the
+conductor types. This can be done in two ways: using the form for an individual
+conductor type, or using the table for all the conductor types available.
+
+1.2.1 Edit By Form
+Conductors are identified by a unique code word. All the available conductors are listed
+in the Conductor Code Word combo box. By selecting one conductor, all its properties
+are displayed in the form. There, the user is able to modify any of those values. After
+modification of any value, the user has to save the changes by clicking on the button
+Save before changing tabs, otherwise the changes will be lost.
+
+By clicking on New, a message prompting for a name for a new conductor will be
+shown. By clicking on Rename, a new name for the current conductor type is required.
+In order to save the current conductor type with a different name is necessary to click on
+Save As. Finally, to remove the current conductor the user can do so by clicking on the
+Delete button.
+
+1.2.2 Edit By Table
+
+In this tab, all the conductor types are shown as records in a table, where every field is
+a characteristic of the conductor. In order to edit the records in this table, use the
+Database button described in the Database section. While editing the table, the user
+can not change of tab until changes are posted or discarded.
+
+Conductor Properties
+
+The available properties of the conductors are the following:
+
+   Code Word:               Code name for the type of conductor. The names of bird
+                            species are typically used. Code Word has to be unique.
+
+   Area:                    The area of aluminum conductor in circular mils. A circular
+                            mil is the cross-sectional area of a circular conductor having
+                            a diameter of 1 mil. One mil is one thousandth of an inch
+                            (0.001”).
+
+   Aluminum strands:        Number of aluminum strands.
+
+   Steel layers:            Number of steel strands.
+
+   Aluminum layers:         Number of aluminum layers.
+
+   External diameter:       Outside diameter of the conductor in inches.
+
+
+
+©PowerWorld Corporation                      5                             April 22, 2013
+                                        Transmission Line Parameter Calculator Version 2
+
+
+   GMR:                   Geometric Mean Radius in feet.
+
+   DC Resistance:         DC resistance of the conductor at 20°C per 1 mile in Ohms.
+
+   AC Resistance 25:      AC resistance of the conductor at 60 Hz and 25°C per 1 mile
+                          in Ohms.
+
+   AC Resistance 50:      AC resistance of the conductor at 60 Hz and 50°C per 1 mile
+                          in Ohms.
+
+   AC Resistance 75:      AC resistance of the conductor at 60 Hz and 75°C per 1 mile
+                          in Ohms.
+
+   Inductive Reactance:   Inductive reactance per conductor at 1 foot spacing at 60 Hz
+                          in Ohms/mile.
+
+   Capacitive Reactance: Capacitive reactance per conductor at 1 foot spacing at 60
+                         Hz in MegaOhms/mile.
+
+
+
+
+                       Figure 3: Conductors Tab (Editing by Table)
+
+
+
+
+©PowerWorld Corporation                   6                           April 22, 2013
+                                             Transmission Line Parameter Calculator Version 2
+
+
+
+1.3 Tower Configuration
+
+This part is used to add, remove, rename, and edit the information related to the tower
+configurations. This can be done in two ways: using the form for an individual tower
+configuration, or using the table for all the tower configurations available.
+
+
+1.3.1 Edit By Form
+
+Tower configurations are identified by a unique name. All the available tower
+configurations are listed in the Tower Configuration Name combo box. By selecting one
+specific tower configuration, all its characteristics are displayed in the form. There, the
+user can modify any of those characteristics. After modification of any value, the user
+has to save the changes by clicking on the button Save before changing tabs, otherwise
+the changes will be lost.
+
+By clicking on New, a message prompting for a name for a new tower configuration will
+be shown. By clicking on Rename, a new name for the current tower configuration is
+required. In order to save the current tower configuration with a different name is
+necessary to click on Save As. Finally, to remove the current tower configuration the
+user can do so by clicking on the Delete button.
+
+
+1.3.2 Edit By Table
+
+In this tab, all the tower configurations are shown as records in a table, where every
+field is a value of the tower configuration. In order to edit the records in this table, use
+the Database button described in the Database section. While editing the table, the
+user can not change of tab until changes are posted or discarded.
+
+Tower Configuration Values
+
+The values of the tower configuration are the following:
+
+   Name:                     Name for the tower configuration. Name has to be unique.
+
+   Phase spacing:            x and y coordinates of phases A, B and C positions. Values
+                             are in feet for English system and meters for Metric (SI)
+                             system. When these values are modified, the phase spacing
+                             graph is automatically updated. Draw axis has to be
+                             checked for x and y axis to be drawn in the graph.
+
+   Conductors per bundle: This section specifies the number of conductors (either
+                          single conductor or a bundle of conductors) per phase. The
+                          maximum number of conductors per bundle allowed is 4.
+
+
+©PowerWorld Corporation                       7                             April 22, 2013
+                                           Transmission Line Parameter Calculator Version 2
+
+
+
+   Use regular spacing:     When using a bundle of conductors, checking the Use
+                            Regular Spacing of check box will use the specified value
+                            as a regular spacing among the conductors. If the Use
+                            Regular Spacing of check box is not checked, then the
+                            custom conductors spacing section has to be used.
+
+   Conductors spacing:      x and y coordinates of the conductors in the bundle. Values
+                            are in feet for English system and meters for Metric (SI)
+                            system. When these values are modified, the bundle
+                            spacing graph is automatically updated. Draw axis has to
+                            be checked for x and y axis to be drawn in the graph.
+
+   Temperature:             The temperature is in Celsius degrees regardless of the
+                            System of units that is selected.
+
+   Frequency:               Frequency of the system in Hertz.
+
+   System of units:         The system of units used to specify the values of the tower
+                            configuration. The options are English system or Metric (SI)
+                            system. The units specified here not necessarily have to
+                            math the units specified in the Input Data section.
+
+
+
+
+                      Figure 4: Tower Configuration (Editing by Form)
+
+
+©PowerWorld Corporation                     8                            April 22, 2013
+                                           Transmission Line Parameter Calculator Version 2
+
+
+
+1.4 Database Controls
+
+The conductor type and tower configurations tables are read by default from the file
+conductors.mbd, which is a MS Access® database. This database can be read from
+another *.mdb file by clicking on the Select Conductors and Configurations
+Database button.
+
+Note: The conductors.mdb file can also be viewed and edited in MS Access®.
+
+In order to edit a record in the database tables, the user can use the toolbar designed to
+do that. Following there is a figure showing this toolbar:
+
+
+
+
+The First, Prior, Next, and Last buttons are used to move among records. The Insert,
+Delete and Edit buttons are used to insert, delete or edit the current record,
+respectively. While editing a record, the user can not change of tab until modifications
+are posted through the Post edit button or canceled with the Cancel edit button. The
+Refresh data button just refreshed the data of the entire table.
+
+
+
+
+©PowerWorld Corporation                     9                            April 22, 2013
+                                           Transmission Line Parameter Calculator Version 2
+
+
+
+2 Automation Server
+
+The following automation server is useful for take advantage of the TransLineCalc
+functionality from an external application. Note that we also have included a script
+command in Simulator that is designed to run TransLineCalc and compute the
+characteristics parameters of a set of transmission lines, without the need of an external
+application: CalculateRXBGFromLengthConfigCondType(filtername);
+
+CalculateRXBGFromLengthConfigCondType takes the set of lines specified by the
+filtername, and computes the characteristic parameters for each of them, using the
+existing fields ConductorName and TowerConfiguration fields. If these fields are empty
+or can not be found within the TransLineCalc conductors database, no computations
+are performed or modified. The filtername is optional. See the Simulator Help for more
+information.
+
+
+2.1 COM Object Initialization and Destruction
+
+To initialize the TransLineCalc COM object, see the documentation for the particular
+programming environment being used. Sample code for initialization and destruction is
+provided for VB for Applications (which should easily port to VB 6). The calls for
+initialization and destruction are provided below. If for some reason the COM
+initialization code fails, be sure you have the TransLineCalc add-on for Simulator and
+you have either run the application on the computer where the COM object is being
+created or run the command regsvr32 “c:\path\TransLineCalcSvr.dll” at the command
+line. Also, some programming languages (e.g. Visual Basic) require an explicit
+reference to the COM object when using “early binding”. “Late binding”, on the other
+hand, requires no explicit reference.
+If, for some reason, you would like SimAuto to unregister itself as a COM object, run the
+command regsvr32 /u “c:\path\TransLineCalcSvr.dll” at the command
+line.
+
+TransLineCalc Initialization Code Samples
+
+VB for Applications
+
+Dim TransAuto As New PWTransLineCalcAuto        Early binding
+
+-or-
+
+Dim TransAuto As Object
+Set TransAuto = CreateObject("PWTransLineCalcSvr.PWTransLineCalcAuto")            Late
+binding
+
+
+
+
+©PowerWorld Corporation                    10                            April 22, 2013
+                                            Transmission Line Parameter Calculator Version 2
+
+
+2.2 Methods of the SimAuto Object
+2.2.1 SetParameters
+
+Function Prototype: SetParameters(ConductorName as String, TowerConfiguration as
+String, LineLength as Single, Units as Integer, VoltageBase as Single, PowerBase as
+Single)
+
+SetParameters is used to set the initial configuration of a transmission line. This input
+data will be used to compute the parameters of the transmission line.
+
+SetParameters takes six arguments:
+   • The first and second arguments correspond directly to the conductor and the
+      tower configuration names of the transmission line. These names should be
+      present in the TransLineCalc conductor’s database.
+   • The third and fourth arguments correspond to the transmission line length and
+      the units for that value. The options for units are 0 for English units or 1 for Metric
+      (SI) units.
+   • The fifth and sixth arguments correspond to the voltage and power bases.
+
+SetParameters returns only one element in Output—any errors which may have
+occurred when attempting to setting the initial input data.
+
+Sample Implementation
+
+VB for Applications
+
+Output = TransAuto.SetParameters("Bluebird", "Default", 25, 0, 138, 100)
+
+
+
+2.2.2 GetParametersPU
+
+Function Prototype: GetParametersPU(Rpu, Xpu, Bpu, Gpu as Single)
+
+GetParametersPU is used to return the characteristic per-unit parameters of a
+transmission line.
+
+GetParametersPU takes fourth variant arguments:
+   • The resistance R, reactance X, susceptance B, and conductance G will return
+     the calculated parameters.
+
+GetParametersPU returns only one element in Output—any errors which may have
+occurred when attempting to setting the initial input data.
+
+
+
+
+©PowerWorld Corporation                      11                            April 22, 2013
+                                           Transmission Line Parameter Calculator Version 2
+
+
+Sample Implementation
+
+VB for Applications
+
+Output = TransAuto.GetParametersPU(Rpu, Xpu, Bpu, Gpu)
+
+
+
+
+2.2.3 GetParametersLumped
+
+Function Prototype: GetParametersLumped(Rpu, Xpu, Bpu, Gpu as Single)
+
+GetParametersLumped is used to return the characteristic total parameters of a
+transmission line. The units of these values will be in Ohms/ length unit. The length unit
+will be the one entered in the SetParameters method.
+
+GetParametersLumped takes fourth variant arguments:
+   • The resistance R, reactance X, susceptance B, and conductance G will return
+     the calculated parameters.
+
+GetParametersLumped returns only one element in Output—any errors which may have
+occurred when attempting to setting the initial input data.
+
+Sample Implementation
+
+VB for Applications
+
+Output = TransAuto.GetParametersLumped(Rt, Xt, Bt, Gt)
+
+
+
+
+©PowerWorld Corporation                    12                            April 22, 2013
+                                                Transmission Line Parameter Calculator Version 2
+
+
+
+3 Calculations
+
+3.1 Distributed Parameters
+
+Resistance
+                                       R − R50          
+                              R25 +  25       (t − 25)
+                                        25 − 50 
+                        Rt =                                    0 ≤ t ≤ 50
+                                            N
+                                         R − R75           
+                                 R50 +  50      (t − 50 )
+                                          50 − 75 
+                          Rt =                                   50 ≤ t
+                                              N
+Where:
+  Rt      AC resistance at temperature t per phase per 1 mile in Ohms
+  t       Assumed temperature in Celsius degrees
+  R25     AC resistance of the conductor at 60 Hz and 25°C per 1 mile in Ohms
+  R50     AC resistance of the conductor at 60 Hz and 50°C per 1 mile in Ohms
+  R75     AC resistance of the conductor at 60 Hz and 75°C per 1 mile in Ohms
+  N       Number of conductors per phase
+
+Inductive Reactance
+                                                            Deq
+                                     X L = 4πf × 10 −7 ln
+                                                            DSL
+Where:
+  XL      Inductive reactance in Ohms/meter
+  f       Frequency of the system in Hertz
+   Deq    Geometric mean distance between phases in meters
+    DSL   Geometric mean radius between conductors of one phase in meters
+
+The geometric mean distance between phases is defined as:
+                                       Deq = 3 d ab d bc d ca
+Where:
+   d ab , d bc , d ca Distances between phases a-b, b-c, c-a, respectively in meters
+
+
+
+
+©PowerWorld Corporation                          13                            April 22, 2013
+                                                  Transmission Line Parameter Calculator Version 2
+
+
+The geometric mean radius between conductors of one phase is defined as:
+
+              DSL = GMR                          For 1 stranded conductor
+              DSL = e −1 / 4 r                   For 1 solid cylindrical conductor
+                                     1
+                      N N       N2
+              DSL =  ∏∏ d km                 For more then 1 conductor bundle
+                      k =1 m =1 
+
+Where:
+  DSL    Geometric mean radius in meters
+  r      External radius of conductor in meters
+  GMR    Geometric mean radius given in tables for one stranded conductor
+  d km   Distance between conductors k and m in meters.
+         Note: If k = m, then d km = DSL for one stranded or solid cylindrical conductor.
+
+Susceptance
+
+                                                                
+                                                                
+                                                    2πε 
+                                           B = 2πf              
+                                                    ln Deq  
+                                                     D 
+                                                     SC  
+
+Where:
+  B      Susceptance in Siemens/meter
+  f      Frequency of the system in Hertz
+   ε     Constant permittivity = 8.85418 × 10-12
+   Deq   Geometric mean distance between phases, defined as above
+   DSC   Geometric mean radius between conductors of one phase using external
+         radius in meters
+
+The geometric mean radius between conductors of one phase using external radius is
+defined as:
+
+          DSC = r                        For 1 conductor
+                                 1
+                  N N        N2
+          DSC =  ∏∏ d km             For more then 1 conductor bundle
+                  k =1 m =1 
+
+
+
+
+©PowerWorld Corporation                            14                            April 22, 2013
+                                                Transmission Line Parameter Calculator Version 2
+
+
+Where:
+  DSC    Geometric mean radius in meters
+  r      External radius of conductor in meters
+  d km   Distance between conductors k and m in meters.
+         Note: If k = m, then d km = r.
+
+
+Conductance
+
+                                         Assumed G = 0
+
+Where:
+  G      Conductance in Siemens/meter
+
+
+
+3.2 Lumped (Total) Parameters
+
+Resistance, Inductive Reactance, Conductance and Susceptance, using the
+equivalent π circuit (long line)
+
+                                                                           2       γ
+              Z ′ = R ′ + jX ′ = Z c sinh γ          Y ′ = G ′ + jB ′ =      tanh
+                                                                           Zc      2
+
+Where:
+  Z’     Total series impedance of line in Ohms
+  Y’     Total series admittance of line in Siemens
+  R’     Total series resistance of line in Ohms
+  X’     Total series inductive reactance of line in Ohms
+  G’     Total series conductance of line in Siemens
+  B’     Total series susceptance of line in Siemens
+  Zc     Characteristic impedance in Ohms
+   γ     Propagation constant in meters-1
+        Line length in meters
+
+
+The characteristic impedance and propagation constant are defined as:
+
+                                          z
+                                  Zc =                  γ = zy
+                                          y
+
+Where:
+  z      Distributed series impedance in Ohms/meter
+  y      Distributed series admittance in Siemens/meter
+
+
+©PowerWorld Corporation                         15                                 April 22, 2013
+                                           Transmission Line Parameter Calculator Version 2
+
+
+
+The distributed series impedance and distributed series admittance are defined as:
+                                   z = R + jX
+                                   y = G + jB
+
+Where:
+  R       Distributed series resistance in Ohms/meter
+  X       Distributed series inductive reactance in Ohms/meter
+  G       Distributed series conductance in Siemens/meter
+  B       Distributed series susceptance in Siemens/meter
+
+Surge Impedance Loading
+
+The surge impedance loading is defined as the power delivered by a lossless line to a
+load resistance equal to the surge (or characteristic) impedance Zc, and is given by:
+
+                                                      2
+                                                VN
+                                       PSIL =
+                                                 ZC
+
+Where:
+  PSIL    Total surge impedance loading in a three-phase line in VA
+  VN      Line-line nominal voltage in Volts
+
+
+
+3.3 Base Values
+
+Impedance Base
+                                            (VBll ) 2
+                                       ZB =
+                                             S B3φ
+Where:
+ZB   Impedance base in Ohms
+  3φ
+SB   Power base in VA
+VBll Line-line voltage base in Volts
+
+Admittance Base
+                                                1
+                                        YB =
+                                                ZB
+Where:
+YB   Admittance base in Siemens
+ZB   Impedance base in Ohms
+
+
+
+
+©PowerWorld Corporation                     16                           April 22, 2013
+                                            Transmission Line Parameter Calculator Version 2
+
+
+3.4 Per Unit (PU) Parameters
+
+Resistance, Inductive Reactance, Conductance, Susceptance
+
+                 R′                  X′                      G′                  B′
+         RPU =              X PU =                  GPU =                BPU =
+                 ZB                  ZB                      YB                  YB
+Where:
+  RPU    Per unit resistance
+  R’     Total series resistance in Ohms
+  XPU    Per unit Inductive reactance
+  X’     Total series inductive reactance in Ohms
+  XPU    Per unit conductance
+  G’     Total series conductance in Siemens
+  BPU    Per unit susceptance
+  B’     Total series susceptance in Siemens
+  ZB     Impedance base in Ohms
+  YB     Admittance base in Siemens
+
+3.5 MVA To Ampere and Ampere To MVA Limits Conversion
+
+MVA to Ampere Limit Conversion
+                                            Lim MVA × 10 6
+                                Lim Amp =
+                                                 3 VN
+Where:
+  LimAmp Limit in Amperes
+  LimMVA Limit in MVAs
+  VN     Nominal voltage in Volts
+
+Ampere to MVA Limit Conversion
+                                                     3 VN
+                               Lim MVA = Lim Amp
+                                                     10 6
+Where:
+  LimAmp Limit in Amperes
+  LimMVA Limit in MVAs
+  VN     Nominal voltage in Volts
+
+
+4 References
+
+[1]   J. D. Glover and M. S. Sarma, Power Systems analysis and design,
+      Brooks/Cole, 3rd edition, 2002.
+[2]   A. R. Bergen and V. Vittal, Power System Analysis, Prentice Hall, 2nd edition,
+      2000.
+
+
+
+©PowerWorld Corporation                     17                            April 22, 2013
+

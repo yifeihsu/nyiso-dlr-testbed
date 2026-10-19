@@ -1,0 +1,189 @@
+{
+  "passed": true,
+  "policy_frozen_before_projection_and_before_Moses_scoring": true,
+  "created_utc": "2026-10-15T21:53:42.116412+00:00",
+  "source_HEAD": "f6c124a97b16f45a98a538c121c6006556255005",
+  "old_generator_rows": 1464,
+  "new_generator_rows": 1465,
+  "native_added_EIA_unit": "2694:21",
+  "hydro_rows_in_compact_artifact": 364,
+  "StLawrence_rows": 16,
+  "monthly_OP_units": 15,
+  "hours": 8760,
+  "original_qualified_hours": 8651,
+  "full_calendar_StLawrence_energy_MWh": 6726938.999999999,
+  "EIA_target_MWh": 6726939.0,
+  "maximum_monthly_energy_error_MWh": 2.3283064365386963e-10,
+  "maximum_hourly_Hydro_conservation_error_public_MW": 9.094947017729282e-12,
+  "maximum_qualified_native_total_change_public_MW": 1.318767317570746e-11,
+  "fixed_PS_change_public_MW": 0.0,
+  "qualified_otherHY_bound_violation_public_MW": 0.0,
+  "KKT_free_residual": 8.881784197001252e-15,
+  "KKT_lower_violation": 0.0,
+  "KKT_upper_violation": 0.0,
+  "profile_available_reconciled_hours": 8657,
+  "excluded_with_reconciled_profiles": 6,
+  "excluded_with_observed_P63_and_frozen_prior": 93,
+  "latent_P63_gap_hours": 10,
+  "source_mask_changed": false,
+  "other_fuel_HQ_PAR_load_changed": false,
+  "otherHY_bounds_changed_on_qualified_hours": false,
+  "P32_or_interface_observations_read": false,
+  "Moses_metrics_computed": false,
+  "AC_feasibility_or_hourly_telemetry_claimed": false,
+  "raw_P63_total_preservation_claimed": false,
+  "raw_P63_difference": {
+    "mean_model_minus_P63": -3.8033723309596525,
+    "MAE": 4.886582353901203,
+    "min": -54.10635370283717,
+    "max": 12.076131491594424
+  },
+  "all_inputs_unchanged": true,
+  "MAT_roundtrip_passed": true,
+  "candidate_file": {
+    "path": "output/nygrid_2025_moses_repair/generation/generation_candidate.mat",
+    "sha256": "f22c9d1aeef1c76a8ba8de5bb966f12c9504a5f7aac7c06a29e9af9e83115535",
+    "bytes": 21054699
+  },
+  "policy": {
+    "path": "output/nygrid_2025_moses_repair/generation/generation_policy.json",
+    "sha256": "87c20c37415a47f102ac978bc724f3fc25323639683ae0a613899fa34f5a293a",
+    "bytes": 5477
+  },
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/generation_policy.json",
+      "sha256": "87c20c37415a47f102ac978bc724f3fc25323639683ae0a613899fa34f5a293a",
+      "bytes": 5477
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/model_generator_register_1465.csv",
+      "sha256": "91d1914bb0372eac3af8c740763a57dd5ba3346b7b92599bba703784193f9902",
+      "bytes": 195454
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/source_only_feasibility.csv",
+      "sha256": "c2961fe049d43c44892bb23ad39eaa7292712bec991ceb2d7162c80395adf214",
+      "bytes": 1082
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/StLawrence_monthly_energy_ledger.csv",
+      "sha256": "e5375d977b2e5fea74dbacba04af5fa4fca331e022bf09b4434725cd8b2f956f",
+      "bytes": 2701
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/other_HY_monthly_energy_changes.csv",
+      "sha256": "6c7df32d79ae112213e9b9238aa6becb993a934ea249805da2108f845b41aeb7",
+      "bytes": 118617
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/StLawrence_dated_unit_admission.csv",
+      "sha256": "e99bd72b16555cfc1eeec61df40165a789391d30ef88880c57c6f2f525d7fbac",
+      "bytes": 8725
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/latent_P63_gap_policy.csv",
+      "sha256": "f38231538a52064620f79828f4ab31f2693d8b90423580986f65599ab405c70d",
+      "bytes": 799
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/StLawrence_monthly_projection_duals.csv",
+      "sha256": "2333f7fc2eaa37d42421a92eb01801bdc3c28145f6946a3fa9fe6c612023dfe0",
+      "bytes": 279
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/full8760_generation_ledger.csv",
+      "sha256": "ac1b69327cc69f03061250afbe09474416a63f3e92230b83abd0ae134207269e",
+      "bytes": 1946114
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/generation_candidate.mat",
+      "sha256": "f22c9d1aeef1c76a8ba8de5bb966f12c9504a5f7aac7c06a29e9af9e83115535",
+      "bytes": 21054699
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/generation_candidate.npz",
+      "sha256": "fa8ede0a363b38dc6db81ca7bbe59d680ed972f0e1d1079a707f06391c344eff",
+      "bytes": 13491275
+    }
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_physical_repair/model/latest_model.mat",
+      "sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385",
+      "bytes": 846610
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/model_receipt.json",
+      "sha256": "bbefae143a0cc3acf394d01bba37df33fedc68f7af4ccab849ce8681f5086ef6",
+      "bytes": 135749
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05",
+      "bytes": 190996
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/fleet_register.csv",
+      "sha256": "d025a1994c9a1c19cb62c6b4ae61a1e0bb62ae2060158592c61f6ecf19546d89",
+      "bytes": 3043498
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/EIA860_plant2694_inventory_source_rows.csv",
+      "sha256": "b81c1547ac7a00bcb9a53bb0c4a809d7d1716fcefd9018fbedeeaa7c0b0e7518",
+      "bytes": 85833
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/inventory_source_receipt.json",
+      "sha256": "0ce6372c7ab3eaf2f0b8afceeb5bc8b032a1564a32aaddd2ec520bdf9c4123b9",
+      "bytes": 9678
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/final_EIA923_NY_hydro_scope.csv",
+      "sha256": "36a93312fe0ebba12b84e437026599247011873c8515b16437ddfc4b848cd0cf",
+      "bytes": 298988
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/statewide_fuelmix_hourly.csv",
+      "sha256": "489638be51300391d808a39b829a85d09eb9a1997423fe2f24e684b024764ec8",
+      "bytes": 14688252
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883",
+      "bytes": 56579710
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_bounds.npz",
+      "sha256": "7fdc0f26448d6333ba427f7d10535cff2eef993de21fae0794eba99b549e9c52",
+      "bytes": 5982245
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4",
+      "bytes": 54625507
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf",
+      "bytes": 54767622
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_scope/2025_Gold_Book.pdf",
+      "sha256": "cc43665b9344a04b4c9355edd1dc7e31d42a6bb759ffe027ad867221556aea8e",
+      "bytes": 2122546
+    }
+  ],
+  "producer": {
+    "path": "scripts/nygrid_2025_moses_repair/generation/build_generation_candidate.py",
+    "sha256": "0c5b6f341939c2b710d5656f9fbef23e6fd87d9418a962dc492afe5c3f9e7713",
+    "bytes": 24053
+  },
+  "limitations": [
+    "855MW is an engineering nameplate-derived bound, not observed hourly dependable capability or outage telemetry.",
+    "Hourly shape minimizes changes to existing source-derived estimates; monthly energy does not identify actual hourly plant dispatch.",
+    "Other conventional hydro monthly energies are allowed to move and are reported; they are not simultaneously reconciled to all EIA plant energies.",
+    "Positive PS generation and existing reconciled fuel-group scope are retained; no new net-pumping scope certification is claimed.",
+    "109excluded network hours remain excluded, although they participate in a separately labeled full-calendar source-energy ledger."
+  ]
+}

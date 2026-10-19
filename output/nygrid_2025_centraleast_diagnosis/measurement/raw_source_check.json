@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T01:41:00.282305+00:00",
+  "evidence_status": "Fresh independent reread of frozen historical 2025 public source archives, not live 2026 operating telemetry.",
+  "interface": "CENTRAL EAST - VC",
+  "point_id": 23330,
+  "archive_count": 13,
+  "daily_members_checked": 366,
+  "raw_CE_rows_including_endpoint_day": 106307,
+  "unique_timestamps": 105997,
+  "duplicate_timestamp_groups": 308,
+  "conflicting_duplicate_timestamp_groups": 307,
+  "qualified_hours": 8673,
+  "clock_hours": 8760,
+  "maximum_compiled_vs_independent_hourly_difference": 4.092726157978177e-12,
+  "actual_source_header": [
+    "Timestamp",
+    "Interface Name",
+    "Point ID",
+    "Flow (MWH)",
+    "Positive Limit (MWH)",
+    "Negative Limit (MWH)"
+  ],
+  "source_timezone_provided": false,
+  "time_policy": "New York calendar plus explicit raw-order fall clock rewind; first01xx=EDT, second01xx=EST; no fitted time lag.",
+  "quantity_policy": "The existing published Flow(MWH) numeric-as-MW assumption is retained, not independently certified or rescaled.",
+  "aggregation": "Average duplicate UTC timestamps, then forward-hold integration over [UTC hour,next hour); require3600seconds of finite coverage and all contributing source gaps<=600seconds.",
+  "raw_source_or_compiled_benchmark_changed": false,
+  "model_or_interface_membership_used": false,
+  "physical_P32_meter_binding_certified": false,
+  "dependencies": [
+    {
+      "path": "scripts/nygrid_2025_centraleast_diagnosis/measurement/recheck_raw_ce.py",
+      "sha256": "539969289e4c07332b4e5af0252ce6c6bbfeea177626d614185fbde1a71d5626"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250101ExternalLimitsFlows_csv.zip",
+      "sha256": "86b0f3533e6e0ed07dfddd2998be68e33776a6ed1dbc7e00b11153b9950be0cf"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250201ExternalLimitsFlows_csv.zip",
+      "sha256": "dc676b83fa4baa0d33603535d7f6c77b1f9227ebec316a3d830da638f52ee151"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250301ExternalLimitsFlows_csv.zip",
+      "sha256": "4802e5bf90313b5db161ed3692ffe0fa8a3c9a74391aff148ad492c6464b5747"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250401ExternalLimitsFlows_csv.zip",
+      "sha256": "e3225d222e609d5bc7473e1220456c9d3a45c51935209da8f9542319b27d90a9"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250501ExternalLimitsFlows_csv.zip",
+      "sha256": "f563313fb641483fb9df78841ade9e63944ff25fca72debe9bc68f4ce535d430"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250601ExternalLimitsFlows_csv.zip",
+      "sha256": "edb385f3784caedf2a33a62f51ed2a99435ffb4b3367f63e3135a407d1bd8847"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250701ExternalLimitsFlows_csv.zip",
+      "sha256": "d737f34b9435b28a4400ee29965f80f9ee39e3f79217130af5b0e944a20c93b9"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250801ExternalLimitsFlows_csv.zip",
+      "sha256": "b4ba0f3fb6d4a624bd80649e19fdddeb9c1b0d61c930964cf865b0996f49e470"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250901ExternalLimitsFlows_csv.zip",
+      "sha256": "24039120618f0b25e75f27c0af7239f087be7bf0a1e05fde9ad27c78c74635b9"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20251001ExternalLimitsFlows_csv.zip",
+      "sha256": "15ec712d61d478085009f8c984e1365e80904db3137b4e2e9ad540c88f42568f"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20251101ExternalLimitsFlows_csv.zip",
+      "sha256": "2cb7b745ffebb7622316980ce2696e46e190123f9d1ed2a3e358eb0504107703"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20251201ExternalLimitsFlows_csv.zip",
+      "sha256": "07d65e331241b50c9f2b53227fb56b6ae9101d33458b5db65d29c165b2e59e7a"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20260101ExternalLimitsFlows_csv.zip",
+      "sha256": "c6e9af1a0ea301d103d84ee94c19ec8627f44560ca668162c4fcdcc9ce2b3634"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/source_receipts.csv",
+      "sha256": "2c6e28a7743c49bd8ee540a8ca7eac7ce4dd37f9a3af928540ac0b676b87fad9"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/source_members.csv",
+      "sha256": "606667a7e416561249f9d2a6f30ba36a76f492e33f69afe3cc3fdca76b56f22d"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/hour_catalog.csv",
+      "sha256": "96d4a0db424cbe1062b7c6b51d5f244a4de699679ad89428a8db3a992980f86a"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_quality_wide.csv",
+      "sha256": "4deee20774691c3193a5ecab239fc3d25878dec34c143ca90f1eb9d6ed158262"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/raw_source_reaggregation.csv",
+      "sha256": "e2583126468e9afefceaad5aca3f75e8fc22fecc32c982fcd71ee0eff843e8b7"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/measurement/raw_source_members_checked.csv",
+      "sha256": "bc8516127608e0a648f5a64e169514725bbed729fc3781fe753e90b3015bd3b8"
+    }
+  ]
+}

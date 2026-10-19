@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "fixed_hours": 8651,
+  "source_values_checked": true,
+  "no_causal_error_share_claim": true,
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/comparison/annual_metrics.csv",
+      "sha256": "843eab724ecb57a4ae79bb011bfb0c62037437536e0666a80590cbce63666cb2"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/comparison/monthly_metrics.csv",
+      "sha256": "e9e59c196e1dfb36d31f57c392b573a81f4cb01f8e480fde94af29e4f43fcac6"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/build_figures.py",
+      "sha256": "c05cb07af1ff8e93059a591e47b744b5977cba6582408c614493ca8b7ff5ff86"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/figures/matched_western_tests.png",
+      "sha256": "fa1e573bcc997a4e688ce28551cb5b4caed02bd1503eae72ac2471d54c472c40"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/figures/matched_western_tests.pdf",
+      "sha256": "17c656e8502773f886f882537a1258b3616c0d60469bf54fdd62cc0c1da8c9a0"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/figures/matched_western_tests.svg",
+      "sha256": "c819bb8776c10feb932e791daeb19018d246dc300982bee3a7a8b2bdf2d6e63e"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/figures/plotted_annual_scores.csv",
+      "sha256": "18d7757e1bc052a2738e4b35765eb5a89cfae6371501fdd9a20dc32bca17b1c1"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+graph critical_transmission_buses {
+	bgcolor=white dpi=120 outputorder=edgesfirst overlap=false pad=0.35 sep="+18" splines=true start=23
+	fontcolor="#253144" fontname=Arial label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="3"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="22">Eight critical added buses — transmission-focused alternative</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="14">148 total buses = all140 original +8 additions;54 NY buses =46 original +8. Local change view; full backbone retained.</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12">Blue boxes: eight added345kV buses. Gray boxes: original NPCC terminals.</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12" COLOR="#226AA5">Blue:14 retained historical circuits</FONT> | <FONT POINT-SIZE="12" COLOR="#B87518">Gold:5 retained assumed connections</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12" COLOR="#8062A6">Purple dotted:30 DC equivalents of omitted detail</FONT> | <FONT POINT-SIZE="12" COLOR="#C04754">Red dashed:9 replaced inactive originals</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="12">Equivalent connections are not individual physical lines and are not DLR-qualified. xN = parallel circuit count. Schematic layout.</FONT></TD></TR></TABLE>> labeljust=l labelloc=t
+	35 [label="SOUTHINGTEN
+#35 | 345 kV" color="#A5AFBC" fillcolor="#F1F3F5" fontname=Arial fontsize=13 id="bus-35" margin=".12,.08" penwidth=1 shape=box style="rounded,filled"]
+	73 [label="PLEASANT VLY
+#73 | 345 kV" color="#A5AFBC" fillcolor="#F1F3F5" fontname=Arial fontsize=13 id="bus-73" margin=".12,.08" penwidth=1 shape=box style="rounded,filled"]
+	74 [label="MILLWOOD
+#74 | 345 kV" color="#A5AFBC" fillcolor="#F1F3F5" fontname=Arial fontsize=13 id="bus-74" margin=".12,.08" penwidth=1 shape=box style="rounded,filled"]
+	76 [label="RAMAPO
+#76 | 345 kV" color="#A5AFBC" fillcolor="#F1F3F5" fontname=Arial fontsize=13 id="bus-76" margin=".12,.08" penwidth=1 shape=box style="rounded,filled"]
+	77 [label="BUCHANAN
+#77 | 345 kV" color="#A5AFBC" fillcolor="#F1F3F5" fontname=Arial fontsize=13 id="bus-77" margin=".12,.08" penwidth=1 shape=box style="rounded,filled"]
+	78 [label="CE UG
+#78 | 345 kV" color="#A5AFBC" fillcolor="#F1F3F5" fontname=Arial fontsize=13 id="bus-78" margin=".12,.08" penwidth=1 shape=box style="rounded,filled"]
+	79 [label="RAV A-3
+#79 | 22 kV" color="#A5AFBC" fillcolor="#F1F3F5" fontname=Arial fontsize=13 id="bus-79" margin=".12,.08" penwidth=1 shape=box style="rounded,filled"]
+	80 [label="NORTHPORT
+#80 | 138 kV" color="#A5AFBC" fillcolor="#F1F3F5" fontname=Arial fontsize=13 id="bus-80" margin=".12,.08" penwidth=1 shape=box style="rounded,filled"]
+	81 [label="GOETHALS
+#81 | 345 kV" color="#A5AFBC" fillcolor="#F1F3F5" fontname=Arial fontsize=13 id="bus-81" margin=".12,.08" penwidth=1 shape=box style="rounded,filled"]
+	82 [label="AK-3
+#82 | 22 kV" color="#A5AFBC" fillcolor="#F1F3F5" fontname=Arial fontsize=13 id="bus-82" margin=".12,.08" penwidth=1 shape=box style="rounded,filled"]
+	10589 [label="EAST GARDEN CITY
+#10589 | 345 kV" color="#226AA5" fillcolor="#DCEFFA" fontname=Arial fontsize=13 id="bus-10589" margin=".12,.08" penwidth=2.1 shape=box style=filled]
+	10593 [label="DUNWOODIE
+#10593 | 345 kV" color="#226AA5" fillcolor="#DCEFFA" fontname=Arial fontsize=13 id="bus-10593" margin=".12,.08" penwidth=2.1 shape=box style=filled]
+	10774 [label="LADENTOWN
+#10774 | 345 kV" color="#226AA5" fillcolor="#DCEFFA" fontname=Arial fontsize=13 id="bus-10774" margin=".12,.08" penwidth=2.1 shape=box style=filled]
+	10858 [label="E. FISHKILL
+#10858 | 345 kV" color="#226AA5" fillcolor="#DCEFFA" fontname=Arial fontsize=13 id="bus-10858" margin=".12,.08" penwidth=2.1 shape=box style=filled]
+	10902 [label="WOOD STREET
+#10902 | 345 kV" color="#226AA5" fillcolor="#DCEFFA" fontname=Arial fontsize=13 id="bus-10902" margin=".12,.08" penwidth=2.1 shape=box style=filled]
+	11129 [label="GOWANUS
+#11129 | 345 kV" color="#226AA5" fillcolor="#DCEFFA" fontname=Arial fontsize=13 id="bus-11129" margin=".12,.08" penwidth=2.1 shape=box style=filled]
+	11130 [label="RAINEY
+#11130 | 345 kV" color="#226AA5" fillcolor="#DCEFFA" fontname=Arial fontsize=13 id="bus-11130" margin=".12,.08" penwidth=2.1 shape=box style=filled]
+	20001 [label="CRICKET VALLEY
+#20001 | 345 kV" color="#226AA5" fillcolor="#DCEFFA" fontname=Arial fontsize=13 id="bus-20001" margin=".12,.08" penwidth=2.1 shape=box style=filled]
+	35 -- 73 [label=P32 color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="PARENT:32" weight=.1]
+	73 -- 74 [label=P87 color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="PARENT:87" weight=.1]
+	74 -- 77 [label=P88 color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="PARENT:88" weight=.1]
+	74 -- 78 [label=P89 color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="PARENT:89" weight=.1]
+	76 -- 77 [label=P91 color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="PARENT:91" weight=.1]
+	78 -- 79 [label=P92 color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="PARENT:92" weight=.1]
+	78 -- 80 [label=P93 color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="PARENT:93" weight=.1]
+	78 -- 81 [label=P94 color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="PARENT:94" weight=.1]
+	78 -- 82 [label=P95 color="#C04754" fontcolor="#C04754" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="PARENT:95" weight=.1]
+	73 -- 10858 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=solid tooltip="PERFORM:1389; PERFORM:1390" weight=1]
+	73 -- 10902 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=solid tooltip="PERFORM:1391; PERFORM:1392" weight=1]
+	77 -- 10774 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=solid tooltip="PERFORM:1576" weight=1]
+	76 -- 10774 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=solid tooltip="PERFORM:1577" weight=1]
+	10858 -- 10902 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=solid tooltip="PERFORM:1689; PERFORM:1690" weight=1]
+	74 -- 77 [label=x3 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=solid tooltip="PERFORM:1731; PERFORM:1732; PERFORM:1733" weight=1]
+	74 -- 10902 [label=x2 color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=solid tooltip="PERFORM:1734; PERFORM:1735" weight=1]
+	76 -- 77 [label="" color="#226AA5" fontcolor="#226AA5" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=solid tooltip="PERFORM:1738" weight=1]
+	78 -- 10593 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="ATTACH:CEUG_DUNWOODIE" weight=1]
+	79 -- 10589 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="ATTACH:RAVA3_EGC" weight=1]
+	81 -- 11129 [label="" color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="ATTACH:GOETHALS_GOWANUS" weight=1]
+	73 -- 20001 [label=x2 color="#B87518" fontcolor="#B87518" fontname=Arial fontsize=10 len=2.4 penwidth=1.6 style=dashed tooltip="CV:PV_CV_F83_PROXY; CV:PV_CV_F84" weight=1]
+	35 -- 20001 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:35:20001" weight=.1]
+	74 -- 77 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:74:77" weight=.1]
+	74 -- 81 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:74:81" weight=.1]
+	74 -- 82 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:74:82" weight=.1]
+	74 -- 10589 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:74:10589" weight=.1]
+	74 -- 10593 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:74:10593" weight=.1]
+	74 -- 11129 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:74:11129" weight=.1]
+	74 -- 11130 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:74:11130" weight=.1]
+	77 -- 81 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:77:81" weight=.1]
+	77 -- 82 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:77:82" weight=.1]
+	77 -- 10589 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:77:10589" weight=.1]
+	77 -- 10593 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:77:10593" weight=.1]
+	77 -- 11129 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:77:11129" weight=.1]
+	77 -- 11130 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:77:11130" weight=.1]
+	80 -- 10593 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:80:10593" weight=.1]
+	81 -- 82 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:81:82" weight=.1]
+	81 -- 10589 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:81:10589" weight=.1]
+	81 -- 10593 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:81:10593" weight=.1]
+	81 -- 11129 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:81:11129" weight=.1]
+	81 -- 11130 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:81:11130" weight=.1]
+	82 -- 10589 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:82:10589" weight=.1]
+	82 -- 10593 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:82:10593" weight=.1]
+	82 -- 11129 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:82:11129" weight=.1]
+	82 -- 11130 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:82:11130" weight=.1]
+	10589 -- 10593 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:10589:10593" weight=.1]
+	10589 -- 11129 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:10589:11129" weight=.1]
+	10589 -- 11130 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:10589:11130" weight=.1]
+	10593 -- 11129 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:10593:11129" weight=.1]
+	10593 -- 11130 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:10593:11130" weight=.1]
+	11129 -- 11130 [label="" color="#8062A6" fontcolor="#8062A6" fontname=Arial fontsize=10 len=2.4 penwidth=.85 style=dotted tooltip="DC_EQ:11129:11130" weight=.1]
+}

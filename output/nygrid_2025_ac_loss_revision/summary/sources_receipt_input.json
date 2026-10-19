@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "ac-loss-revision",
+      "title": "2025 AC revision and NYISO comparison",
+      "queries": [
+        {
+          "id": "paired-interfaces",
+          "source": {
+            "label": "Seven-interface annual comparison",
+            "files": [
+              {
+                "label": "summary/paired_annual_interfaces.csv"
+              },
+              {
+                "label": "comparison/combined/public_interface_metrics.csv"
+              },
+              {
+                "label": "comparison/combined/comparison_cohort.csv"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Seven-interface annual comparison",
+                "definition": "Old and revised AC errors use exactly the same paired qualified hours and original physical-branch interface operator."
+              }
+            ],
+            "filters": [
+              "Common cohort: 8170 hours",
+              "Annual 2025",
+              "Inherited signed-literal-from terminal convention"
+            ],
+            "caveats": [
+              "Physical P32 meter membership and the inherited numeric-as-MW interpretation remain uncertified.",
+              "Revised qualification: 8170 of 8651 eligible hours; 0 new successes and 324 lost prior successes.",
+              "No hour passes the joint voltage/reactive/generator-capability gate; numerical qualification is conditional."
+            ]
+          },
+          "reportingPeriod": "2025 hourly profiles",
+          "rows": [
+            {
+              "interface": "DYSINGER EAST",
+              "hours": 8170,
+              "old_WAPE_percent": 37.60778332612451,
+              "revised_WAPE_percent": 29.963813291686247,
+              "change_percentage_points": -7.643970034438265,
+              "old_bias_public_MW": -209.7824050483773,
+              "revised_bias_public_MW": 4.990789969398163
+            },
+            {
+              "interface": "WEST CENTRAL",
+              "hours": 8170,
+              "old_WAPE_percent": 58.5234424439493,
+              "revised_WAPE_percent": 45.85808760392107,
+              "change_percentage_points": -12.665354840028229,
+              "old_bias_public_MW": -218.0277971417515,
+              "revised_bias_public_MW": 2.293614246175742
+            },
+            {
+              "interface": "TOTAL EAST",
+              "hours": 8170,
+              "old_WAPE_percent": 14.461053812287233,
+              "revised_WAPE_percent": 14.695426068123677,
+              "change_percentage_points": 0.23437225583644405,
+              "old_bias_public_MW": 46.77232616143032,
+              "revised_bias_public_MW": -326.00357546476704
+            },
+            {
+              "interface": "MOSES SOUTH",
+              "hours": 8170,
+              "old_WAPE_percent": 23.178746410983965,
+              "revised_WAPE_percent": 22.94359860253754,
+              "change_percentage_points": -0.23514780844642402,
+              "old_bias_public_MW": -5.495977113391418,
+              "revised_bias_public_MW": 11.832741550488656
+            },
+            {
+              "interface": "CENTRAL EAST - VC",
+              "hours": 8170,
+              "old_WAPE_percent": 43.5042110625963,
+              "revised_WAPE_percent": 13.703768329560342,
+              "change_percentage_points": -29.800442733035958,
+              "old_bias_public_MW": 739.8723918687808,
+              "revised_bias_public_MW": 172.43266464312788
+            },
+            {
+              "interface": "UPNY CONED",
+              "hours": 8170,
+              "old_WAPE_percent": 7.549425742705923,
+              "revised_WAPE_percent": 7.562881773257351,
+              "change_percentage_points": 0.013456030551427745,
+              "old_bias_public_MW": 24.128142235812835,
+              "revised_bias_public_MW": -15.788771551885834
+            },
+            {
+              "interface": "SPR/DUN-SOUTH",
+              "hours": 8170,
+              "old_WAPE_percent": 8.87937416474068,
+              "revised_WAPE_percent": 9.176816455415125,
+              "change_percentage_points": 0.2974422906744447,
+              "old_bias_public_MW": -37.394609032504334,
+              "revised_bias_public_MW": -62.3959314642373
+            }
+          ],
+          "columns": [
+            "interface",
+            "hours",
+            "old_WAPE_percent",
+            "revised_WAPE_percent",
+            "change_percentage_points",
+            "old_bias_public_MW",
+            "revised_bias_public_MW"
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "WAPE =100 \u00d7 sum(abs(model/gamma \u2212 observed))/sum(abs(observed)); bias = mean(model/gamma \u2212 observed). Gamma is used only for aggregate power, never branch amperes."
+            }
+          ]
+        },
+        {
+          "id": "loss-accounting",
+          "source": {
+            "label": "Declared loss accounting and load partition",
+            "files": [
+              {
+                "label": "policy_evidence/historical_definition_supplement.json"
+              },
+              {
+                "label": "policy_evidence/loss_accounting_policy_contract.json"
+              },
+              {
+                "label": "comparison/combined/NY_zonal_loss_accounting.csv"
+              },
+              {
+                "label": "comparison/combined/regional_NY_terminal_import_errors.csv"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Declared loss accounting and load partition",
+                "definition": "NYISO actual zonal load is generation plus net interchange. Modeled delivered demand plus assigned internal NY losses equals that frozen loss-inclusive boundary target."
+              }
+            ],
+            "filters": [
+              "All 8170 revised qualified hours",
+              "Eleven NY zones",
+              "No internal-interface fitting"
+            ],
+            "caveats": [
+              "The 2025 NYISO guide confirms the source definition; half-end zonal loss ownership is a model assumption.",
+              "Zonal losses and modeled delivered bus demand are not observed. Large loss fractions indicate unresolved model limitations.",
+              "External areas supply their internal and NY-border corridor losses within original finite bounds; native PG, HQ and six DC transfers stay fixed."
+            ]
+          },
+          "reportingPeriod": "2025 hourly profiles",
+          "rows": [
+            {
+              "zone": "A",
+              "hours": 8170,
+              "mean_allocated_loss_model_MW": 4.547953137672381,
+              "maximum_loss_fraction": 0.0166931886308038,
+              "minimum_served_PD_model_MW": 366.2925905440475,
+              "hours_loss_fraction_over25percent": 0
+            },
+            {
+              "zone": "B",
+              "hours": 8170,
+              "mean_allocated_loss_model_MW": 1.9753936041393096,
+              "maximum_loss_fraction": 0.0429166159058251,
+              "minimum_served_PD_model_MW": 150.86875284577587,
+              "hours_loss_fraction_over25percent": 0
+            },
+            {
+              "zone": "C",
+              "hours": 8170,
+              "mean_allocated_loss_model_MW": 13.754635599069829,
+              "maximum_loss_fraction": 0.1221564567820741,
+              "minimum_served_PD_model_MW": 224.6767251192168,
+              "hours_loss_fraction_over25percent": 0
+            },
+            {
+              "zone": "D",
+              "hours": 8170,
+              "mean_allocated_loss_model_MW": 4.227355881980192,
+              "maximum_loss_fraction": 0.2383636034863833,
+              "minimum_served_PD_model_MW": 88.529741028276,
+              "hours_loss_fraction_over25percent": 0
+            },
+            {
+              "zone": "E",
+              "hours": 8170,
+              "mean_allocated_loss_model_MW": 38.50638564276053,
+              "maximum_loss_fraction": 0.945163723559296,
+              "minimum_served_PD_model_MW": 5.058627094115691,
+              "hours_loss_fraction_over25percent": 802
+            },
+            {
+              "zone": "F",
+              "hours": 8170,
+              "mean_allocated_loss_model_MW": 80.91641799498423,
+              "maximum_loss_fraction": 0.9545169691763596,
+              "minimum_served_PD_model_MW": 14.730919401428835,
+              "hours_loss_fraction_over25percent": 2733
+            },
+            {
+              "zone": "G",
+              "hours": 8170,
+              "mean_allocated_loss_model_MW": 23.673704406484163,
+              "maximum_loss_fraction": 0.4117037453590231,
+              "minimum_served_PD_model_MW": 94.7729556849562,
+              "hours_loss_fraction_over25percent": 32
+            },
+            {
+              "zone": "H",
+              "hours": 8170,
+              "mean_allocated_loss_model_MW": 0.6347270249905518,
+              "maximum_loss_fraction": 0.0270983063776306,
+              "minimum_served_PD_model_MW": 52.22260981052367,
+              "hours_loss_fraction_over25percent": 0
+            },
+            {
+              "zone": "I",
+              "hours": 8170,
+              "mean_allocated_loss_model_MW": 2.047110706211745,
+              "maximum_loss_fraction": 0.0315804794572938,
+              "minimum_served_PD_model_MW": 123.21137513436696,
+              "hours_loss_fraction_over25percent": 0
+            },
+            {
+              "zone": "J",
+              "hours": 8170,
+              "mean_allocated_loss_model_MW": 7.604660955983159,
+              "maximum_loss_fraction": 0.0109932546988573,
+              "minimum_served_PD_model_MW": 1099.2193448342523,
+              "hours_loss_fraction_over25percent": 0
+            },
+            {
+              "zone": "K",
+              "hours": 8170,
+              "mean_allocated_loss_model_MW": 1.4242482691401703,
+              "maximum_loss_fraction": 0.0077517069911239,
+              "minimum_served_PD_model_MW": 369.0275601548067,
+              "hours_loss_fraction_over25percent": 0
+            }
+          ],
+          "columns": [
+            "zone",
+            "hours",
+            "mean_allocated_loss_model_MW",
+            "maximum_loss_fraction",
+            "minimum_served_PD_model_MW",
+            "hours_loss_fraction_over25percent"
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "Compute P_loss_MW = baseMVA \u00d7 R_pu \u00d7 |Iseries_pu|\u00b2 on original branches. Split within-NY corridor losses equally across endpoint zones. External corridor and external internal losses are supplied by the corresponding external generators. Solve voltages and these allocations simultaneously."
+            }
+          ]
+        },
+        {
+          "id": "equivalent-provenance",
+          "source": {
+            "label": "Gilboa\u2013Buchanan equivalent provenance",
+            "files": [
+              {
+                "label": "impedance/impedance_recommendation.json"
+              },
+              {
+                "label": "impedance/actual_case_implementation_review.json"
+              },
+              {
+                "label": "impedance/parameter_ledger.csv"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Gilboa\u2013Buchanan equivalent provenance",
+                "definition": "Parent 224 is an added Cornell NYgrid E\u2013G network equivalent; its released tuple is source-reproducible but not physically validated."
+              }
+            ],
+            "filters": [
+              "Parent 224, Gilboa 38 to Buchanan 77",
+              "Pinned author source",
+              "No observed-flow calibration"
+            ],
+            "caveats": [
+              "No installed direct line, physical route or utility impedance certificate was identified.",
+              "The original R and B have no recovered asset derivation. Lower WAPE is not physical validation.",
+              "Parent 224 is excluded from conductor temperature, DLR and synthetic facility-rating claims."
+            ]
+          },
+          "reportingPeriod": "2025 hourly profiles",
+          "rows": [
+            {
+              "parameter": "Released R",
+              "value": 0.02,
+              "unit": "pu on 100 MVA"
+            },
+            {
+              "parameter": "Released X",
+              "value": 0.0147,
+              "unit": "pu on 100 MVA"
+            },
+            {
+              "parameter": "Released B",
+              "value": 0,
+              "unit": "pu on 100 MVA"
+            },
+            {
+              "parameter": "Paper X approximation",
+              "value": 0.014649863474060072,
+              "unit": "pu on 100 MVA"
+            }
+          ],
+          "columns": [
+            "parameter",
+            "value",
+            "unit"
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "Paper X = 47 miles \u00d7 0.371 ohm/mile / (345 kV squared / 100 MVA). Restore the complete released R/X/B in two unchanged numerical sections; preserve all other branch parameters."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

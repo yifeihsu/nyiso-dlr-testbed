@@ -1,0 +1,300 @@
+{
+  "passed": true,
+  "completed": true,
+  "created_utc": "2026-10-13T14:50:27.998046+00:00",
+  "scope": "Independent current-only consolidated model and all8760-profile readback; no model experiments or solver runs",
+  "source_model_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+  "model_receipt_matches_all3_data_file_hashes": true,
+  "annual_axis_rows": 8760,
+  "source_qualified_rows": 8651,
+  "four_dated_states_preserved": true,
+  "exact_annual_numeric_entries_checked": 40996800,
+  "annual_profile_shards": 2,
+  "annual_numeric_fields": 7,
+  "timestamps_hour_indices_reference_and_state_axes_exact": true,
+  "generator_identity_and_corrected_electrical_landing_exact": true,
+  "catalog_geometry_and_cable_conflict_tables_preserved": true,
+  "source_model_parameters_changed": false,
+  "callback_and_historical_loader_metadata_removed": true,
+  "no_PF_OPF_or_annual_replay_run": true,
+  "profile_checks": [
+    {
+      "shard": "profiles_h0001_4380.mat",
+      "field": "bus_PD_MW",
+      "shape": [
+        4380,
+        140
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h0001_4380.mat",
+      "field": "bus_QD_MVAr",
+      "shape": [
+        4380,
+        140
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h0001_4380.mat",
+      "field": "generator_PG_MW",
+      "shape": [
+        4380,
+        1464
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h0001_4380.mat",
+      "field": "generator_Pmin_MW",
+      "shape": [
+        4380,
+        1464
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h0001_4380.mat",
+      "field": "generator_Pmax_MW",
+      "shape": [
+        4380,
+        1464
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h0001_4380.mat",
+      "field": "fixed_transfer_PF_MW",
+      "shape": [
+        4380,
+        6
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h0001_4380.mat",
+      "field": "dover_bank_phase_shift_deg",
+      "shape": [
+        4380,
+        2
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h4381_8760.mat",
+      "field": "bus_PD_MW",
+      "shape": [
+        4380,
+        140
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h4381_8760.mat",
+      "field": "bus_QD_MVAr",
+      "shape": [
+        4380,
+        140
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h4381_8760.mat",
+      "field": "generator_PG_MW",
+      "shape": [
+        4380,
+        1464
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h4381_8760.mat",
+      "field": "generator_Pmin_MW",
+      "shape": [
+        4380,
+        1464
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h4381_8760.mat",
+      "field": "generator_Pmax_MW",
+      "shape": [
+        4380,
+        1464
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h4381_8760.mat",
+      "field": "fixed_transfer_PF_MW",
+      "shape": [
+        4380,
+        6
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    },
+    {
+      "shard": "profiles_h4381_8760.mat",
+      "field": "dover_bank_phase_shift_deg",
+      "shape": [
+        4380,
+        2
+      ],
+      "dtype": "float64",
+      "exact_values_and_NaNs_preserved": true
+    }
+  ],
+  "template_checks": [
+    {
+      "state": "pre_may",
+      "passed": true,
+      "all_static_bus_branch_generator_transfer_axes_preserved": true,
+      "all_R_X_B_status_tap_shunt_and_limit_fields_preserved": true,
+      "loss_ownership_and_participation_exact": true,
+      "serialized_callback_tree_absent": true,
+      "source_fixture_hour": 523,
+      "template_hour": 1
+    },
+    {
+      "state": "may21",
+      "passed": true,
+      "all_static_bus_branch_generator_transfer_axes_preserved": true,
+      "all_R_X_B_status_tap_shunt_and_limit_fields_preserved": true,
+      "loss_ownership_and_participation_exact": true,
+      "serialized_callback_tree_absent": true,
+      "source_fixture_hour": 3360,
+      "template_hour": 3360
+    },
+    {
+      "state": "may30",
+      "passed": true,
+      "all_static_bus_branch_generator_transfer_axes_preserved": true,
+      "all_R_X_B_status_tap_shunt_and_limit_fields_preserved": true,
+      "loss_ownership_and_participation_exact": true,
+      "serialized_callback_tree_absent": true,
+      "source_fixture_hour": 4000,
+      "template_hour": 3576
+    },
+    {
+      "state": "post_dover",
+      "passed": true,
+      "all_static_bus_branch_generator_transfer_axes_preserved": true,
+      "all_R_X_B_status_tap_shunt_and_limit_fields_preserved": true,
+      "loss_ownership_and_participation_exact": true,
+      "serialized_callback_tree_absent": true,
+      "source_fixture_hour": 8508,
+      "template_hour": 8472
+    }
+  ],
+  "runtime_equivalence_and_extracted_execution": "Checked separately by the bound runtime validation and clean extraction receipts; not inferred from this static readback.",
+  "remaining_actionable_findings": [],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/model_receipt.json",
+      "sha256": "0abce18bdcf9f6a28f1c93d7daa6358a0b319c98a8f310a54412266e43cbdac8"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_handoff/review_model_bundle.py",
+      "sha256": "9495f027f66a343d30f42ba30942f439c7f62d5acd1c71e20e29ce128c4062fa"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_handoff/export_bundle_readback.m",
+      "sha256": "f350d5a5f811d40d9fc15e5f0213c8880427aca480afac5f7eabc41ca6bb3116"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/independent_bundle/bundled_hour_axis.csv",
+      "sha256": "968ede03cdc5a378736ce78e43c86e6230485ec07f11905cd8ca6d8265845cb0"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/operating_states.mat",
+      "sha256": "bea2fb35c44a3c9510b7c4a68cf4a5ea901e7df0b51567755a2a388942dd171a"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/pre_may.mat",
+      "sha256": "880ffad8b03c081520bcf71b6e16240c729ec8736fb03f28ff90195a03353c0c"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/may21.mat",
+      "sha256": "d31119f8f46d84c86290c63d2633907158c5911b20e098a8a924478e22024b81"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/may30.mat",
+      "sha256": "ba2d58e1c1767636c75c4e6587c3d8643442b05b85a60120941e1a62f821a799"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/post_dover.mat",
+      "sha256": "be60ffc8a1b61949bfb0716ff4c73d857791889b00c0e1782b9bed24ecc939e5"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/independent_bundle/bundled_conductors.csv",
+      "sha256": "8498d601b1b29a46b05263e3f63764538acdb2e8187787b225efbf923debad17"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/independent_bundle/bundled_geometry.csv",
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/geometry_defaults.csv",
+      "sha256": "898e15bdd8b63d779829c04e224def7529487442ad31e167792189735ce81a84"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/independent_bundle/bundled_cable_conflicts.csv",
+      "sha256": "6a4c40fd41a0145a2b24353d2747c9f2e5b861aeae73f1954712f054bb858048"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/overhead_cable_classification_conflicts.csv",
+      "sha256": "7a0436a6fe8c9f8fbb07478a17e403ebd8df40adec39a13f8802bcef03c5c817"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/independent_bundle/bundled_generator_registry.csv",
+      "sha256": "dcbea700ce49e5dff0bac947586b0746f5bf8758d3a1be24c901e9ac89348078"
+    }
+  ]
+}

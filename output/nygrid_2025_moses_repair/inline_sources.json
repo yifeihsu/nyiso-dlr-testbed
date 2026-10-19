@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "moses-repair-annual",
+      "title": "St. Lawrence and northern boundary repair: completed annual evidence",
+      "queries": [
+        {
+          "id": "paired-2025-replay",
+          "reportingPeriod": "2025 model year; fresh annual replay and independent checks October 15, 2026",
+          "source": {
+            "label": "Frozen source-defined candidate and completed 12-month AC replay",
+            "files": [
+              {"label": "generation_policy.json and StLawrence_monthly_energy_ledger.csv"},
+              {"label": "boundary_verification_receipt.json and source_binding_ledger.csv"},
+              {"label": "annual_receipt.json"},
+              {"label": "annual_input_accounting_review.json and annual_physics_review.json"},
+              {"label": "public_interface_metrics.csv and independent_scoring_crosscheck.json"},
+              {"label": "report_receipt.json and map DELIVERY_MANIFEST.json"}
+            ],
+            "metricDefinitions": [
+              {"label": "MAE", "definition": "Mean absolute modeled minus observed interface flow over the identical paired cohort, in public-scale MW."},
+              {"label": "WAPE", "definition": "100 times sum of absolute errors divided by sum of absolute observed flows; primary terminal convention unchanged."},
+              {"label": "Generation energy", "definition": "All physical hours, including separately flagged latent excluded hours, sum to each final EIA monthly St. Lawrence target."}
+            ],
+            "filters": [
+              "8651 source-qualified hours compared with the completed physical_repair_v1 baseline.",
+              "8760 UTC positions retained; all original 109 exclusions remain excluded."
+            ],
+            "caveats": [
+              "Monthly energy agreement does not certify actual hourly generation; the 855 MW capability bound and monthly inventory availability are declared engineering assumptions.",
+              "The source-verified North Country structure includes PV20. Sand Bar metering is a proxy for the Plattsburgh boundary, with South Hero load, losses and historical sign applicability qualified.",
+              "Physical P32 meter equivalence remains uncertified. Combined changes do not identify separate causal error contributions.",
+              "All 8651 attempted hours pass equation, loss and recovery checks, but zero hours pass every network operating limit.",
+              "Total East MAE increases and Moses South positive bias increases; the repair is not an improvement across every metric."
+            ],
+            "evidenceFlow": [
+              {"kind": "validation", "title": "Source constraints", "detail": "St. Lawrence full-year energy is 6726939 MWh, with maximum monthly error2.33e-10MWh. The reconciled hourly hydro total and regional imports are preserved."},
+              {"kind": "validation", "title": "Fresh annual computation", "detail": "Twelve completed months; 8651 successes, zero solver exceptions or lost baseline successes. Independent raw complex-power, current, loss-accounting and source-input readers pass."},
+              {"kind": "validation", "title": "Reviewed interactive map", "detail": "Seven interface series and eleven zones re-exported from fresh annual results; northern St. Lawrence/HQ/PV20 inputs added. Numerical, interaction and actual-browser reviews passed."}
+            ]
+          },
+          "rows": [
+            {"interface": "Dysinger East", "before_mae_mw": 259.4935, "after_mae_mw": 249.4332},
+            {"interface": "West Central", "before_mae_mw": 256.5476, "after_mae_mw": 247.0526},
+            {"interface": "Total East", "before_mae_mw": 471.5512, "after_mae_mw": 499.3041},
+            {"interface": "Moses South", "before_mae_mw": 118.8209, "after_mae_mw": 108.9450},
+            {"interface": "Central East", "before_mae_mw": 230.4242, "after_mae_mw": 208.7191},
+            {"interface": "UPNY ConEd", "before_mae_mw": 235.206790, "after_mae_mw": 235.207068},
+            {"interface": "Sprain-Dunwoodie", "before_mae_mw": 177.241927, "after_mae_mw": 177.241927}
+          ],
+          "columns": [
+            {"field": "interface", "label": "Interface"},
+            {"field": "before_mae_mw", "label": "Previous MAE (MW)"},
+            {"field": "after_mae_mw", "label": "Updated MAE (MW)"}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "checks_run": 23,
+  "checks": [
+    {
+      "name": "built page embeds exactly the frozen annual, geography and interface JSON",
+      "passed": true
+    },
+    {
+      "name": "actual inline application initializes without substitution",
+      "passed": true
+    },
+    {
+      "name": "initial hour8508 has145 geographic markers,7 flow labels and11 zone labels",
+      "passed": true
+    },
+    {
+      "name": "four dated state boundaries preserve148axis and update188/189 detailed markers",
+      "passed": true
+    },
+    {
+      "name": "each interface selection lists and highlights the exact frozen signed parent members in every state",
+      "passed": true
+    },
+    {
+      "name": "zone selection displays the correct11zone source/results values and highlights correct buses",
+      "passed": true
+    },
+    {
+      "name": "model/public power switch preserves exact unrounded DOM flow values",
+      "passed": true
+    },
+    {
+      "name": "negative Moses total reverses arrow endpoints and remains reversed after public conversion",
+      "passed": true
+    },
+    {
+      "name": "failed2349 and excluded154 expose no computed interface values or arrows",
+      "passed": true
+    },
+    {
+      "name": "failed hour retains only known zone inputs; excluded hour blanks all zone quantities",
+      "passed": true
+    },
+    {
+      "name": "nearby flow chart breaks its path at unavailable hours instead of interpolating",
+      "passed": true
+    },
+    {
+      "name": "prescribed control popup and source masks follow six input records without inventing unlocated links",
+      "passed": true
+    },
+    {
+      "name": "datetime, index and slider navigation honor UTC year limits and reject invalid hours",
+      "passed": true
+    },
+    {
+      "name": "three unlocated proxies remain inspectable with no fabricated geographic markers",
+      "passed": true
+    },
+    {
+      "name": "latest parent224 data and mathematical retained couplings are distinguished in popups",
+      "passed": true
+    },
+    {
+      "name": "zone, interface, inactive and bus-label toggles change only their intended layers",
+      "passed": true
+    },
+    {
+      "name": "view presets, zoom buttons and wheel preserve geographic marker coordinates",
+      "passed": true
+    },
+    {
+      "name": "keyboard activation, pan, zoom, Home and Escape operate the actual controls",
+      "passed": true
+    },
+    {
+      "name": "drag captures pointer, pans, suppresses accidental click and allows the next deliberate selection",
+      "passed": true
+    },
+    {
+      "name": "tooltip is clamped to the stub viewport and clears on pointer leave",
+      "passed": true
+    },
+    {
+      "name": "mobile-like resize stubs keep finite aspect-correct geometry and visible labels within viewport",
+      "passed": true
+    },
+    {
+      "name": "no external runtime assets, requests or console errors occurred",
+      "passed": true
+    },
+    {
+      "name": "all tested map inputs and previous map/test files remained unchanged",
+      "passed": true
+    }
+  ],
+  "method": "Actual built inline HTML/JavaScript executed with LinkeDOM DOM events and explicit viewport/IDL stubs; no application replacement or network server",
+  "final_ui_freeze_confirmed": false,
+  "browser_visual_verification": false,
+  "native_pointer_hit_testing": false,
+  "separate_browser_QA_expected": true,
+  "layout_stubs": {
+    "initial_width": 1024,
+    "initial_height": 720,
+    "mobile_width": 360,
+    "mobile_height": 540,
+    "tooltip_width": 260,
+    "tooltip_height": 100,
+    "select_value_IDL": true,
+    "checkbox_checked_IDL": true,
+    "requestAnimationFrame": "synchronous",
+    "ResizeObserver": "explicit callback"
+  },
+  "network_requests": [],
+  "console_errors": [],
+  "console_messages": [],
+  "html_sha256": "a42594ecd65ed2f6e5cb7a7dbbf59dce812202298e6f99666d2cccf308f943dc",
+  "test_code_sha256": "14dfd66c76773dc6e815c37760d1f5383b0e77e3d91ce23106d61dd1444ce73f",
+  "node_version": "v24.19.0",
+  "linkedom_version": "0.18.12",
+  "input_files": [
+    {
+      "path": "output/nygrid_2025_latest_map/network_map.html",
+      "bytes": 14246725,
+      "sha256": "a42594ecd65ed2f6e5cb7a7dbbf59dce812202298e6f99666d2cccf308f943dc"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/map.js",
+      "bytes": 30745,
+      "sha256": "0ee24b3eb2b1be15de74801c36258e07689755bc0423f3ad53dedfa72c76e903"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/map.css",
+      "bytes": 7788,
+      "sha256": "e9234bd1debd2ab8a3941719b32a8209ea402328347b6f0f522acfe7f737a95e"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/map_template.html",
+      "bytes": 5134,
+      "sha256": "7a11e393bc1d1680bb336c8ee2781dc635f07c91d176d7b1c1d2ddd4b732abe5"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/annual_data.json",
+      "bytes": 12268211,
+      "sha256": "786b4d5a585c374fc681289b4a28afc9fa0cc8a596b147e611d2ade781c69601"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/geography_data.json",
+      "bytes": 2759477,
+      "sha256": "aa846b69795fa42b8e4f870527fade4a49d1cf3bd6860d009c62070ce34e453c"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/interface_definitions.json",
+      "bytes": 96784,
+      "sha256": "1e84dd46e8120688b5d866457c97d51673ad721a38f7d91ae1b7c26c87dc64ed"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "bytes": 12874,
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    }
+  ],
+  "previous_artifacts_preserved": [
+    {
+      "path": "scripts/nygrid_2025_slim/test_interactive_map.cjs",
+      "bytes": 11677,
+      "sha256": "b2e1c889b6ac8a02cdf12e43c059f9074bfd41fc3a181ec5ccbba97db8ae01a5"
+    },
+    {
+      "path": "output/nygrid_2025_slim/interactive/network_map.html",
+      "bytes": 360232,
+      "sha256": "3c49b0d9c6bef5623b1150d9e85bd111d2666c7f0e3703ff0275b639d867832e"
+    }
+  ],
+  "generated_utc": "2026-10-13T19:59:24.547Z"
+}

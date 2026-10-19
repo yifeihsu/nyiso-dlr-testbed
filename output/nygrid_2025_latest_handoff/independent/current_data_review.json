@@ -1,0 +1,574 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T14:47:13.259414+00:00",
+  "scope": "Independent current data-file, complete annual input-array, static structure and loss-vector review",
+  "source_model_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+  "check_count": 29,
+  "checks": [
+    {
+      "name": "sealed_file_latest_model.mat",
+      "passed": true,
+      "details": {
+        "name": "latest_model.mat",
+        "bytes": 802063,
+        "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+      }
+    },
+    {
+      "name": "sealed_file_profiles_h0001_4380.mat",
+      "passed": true,
+      "details": {
+        "name": "profiles_h0001_4380.mat",
+        "bytes": 54625507.0,
+        "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+      }
+    },
+    {
+      "name": "sealed_file_profiles_h4381_8760.mat",
+      "passed": true,
+      "details": {
+        "name": "profiles_h4381_8760.mat",
+        "bytes": 54767622.0,
+        "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+      }
+    },
+    {
+      "name": "profile_field_set_profiles_h0001_4380.mat",
+      "passed": true,
+      "details": [
+        "bus_PD_MW",
+        "bus_QD_MVAr",
+        "dover_bank_phase_shift_deg",
+        "fixed_transfer_PF_MW",
+        "generator_PG_MW",
+        "generator_Pmax_MW",
+        "generator_Pmin_MW"
+      ]
+    },
+    {
+      "name": "exact_profile_bus_PD_MW_1",
+      "passed": true,
+      "details": {
+        "hours": [
+          1,
+          4380
+        ],
+        "shape": [
+          4380,
+          140
+        ],
+        "dtype": "float64",
+        "NaN_count": 0,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_bus_QD_MVAr_1",
+      "passed": true,
+      "details": {
+        "hours": [
+          1,
+          4380
+        ],
+        "shape": [
+          4380,
+          140
+        ],
+        "dtype": "float64",
+        "NaN_count": 0,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_generator_PG_MW_1",
+      "passed": true,
+      "details": {
+        "hours": [
+          1,
+          4380
+        ],
+        "shape": [
+          4380,
+          1464
+        ],
+        "dtype": "float64",
+        "NaN_count": 77592,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_generator_Pmin_MW_1",
+      "passed": true,
+      "details": {
+        "hours": [
+          1,
+          4380
+        ],
+        "shape": [
+          4380,
+          1464
+        ],
+        "dtype": "float64",
+        "NaN_count": 9764,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_generator_Pmax_MW_1",
+      "passed": true,
+      "details": {
+        "hours": [
+          1,
+          4380
+        ],
+        "shape": [
+          4380,
+          1464
+        ],
+        "dtype": "float64",
+        "NaN_count": 9764,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_fixed_transfer_PF_MW_1",
+      "passed": true,
+      "details": {
+        "hours": [
+          1,
+          4380
+        ],
+        "shape": [
+          4380,
+          6
+        ],
+        "dtype": "float64",
+        "NaN_count": 246,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_dover_bank_phase_shift_deg_1",
+      "passed": true,
+      "details": {
+        "hours": [
+          1,
+          4380
+        ],
+        "shape": [
+          4380,
+          2
+        ],
+        "dtype": "float64",
+        "NaN_count": 8760,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "profile_field_set_profiles_h4381_8760.mat",
+      "passed": true,
+      "details": [
+        "bus_PD_MW",
+        "bus_QD_MVAr",
+        "dover_bank_phase_shift_deg",
+        "fixed_transfer_PF_MW",
+        "generator_PG_MW",
+        "generator_Pmax_MW",
+        "generator_Pmin_MW"
+      ]
+    },
+    {
+      "name": "exact_profile_bus_PD_MW_4381",
+      "passed": true,
+      "details": {
+        "hours": [
+          4381,
+          8760
+        ],
+        "shape": [
+          4380,
+          140
+        ],
+        "dtype": "float64",
+        "NaN_count": 0,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_bus_QD_MVAr_4381",
+      "passed": true,
+      "details": {
+        "hours": [
+          4381,
+          8760
+        ],
+        "shape": [
+          4380,
+          140
+        ],
+        "dtype": "float64",
+        "NaN_count": 0,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_generator_PG_MW_4381",
+      "passed": true,
+      "details": {
+        "hours": [
+          4381,
+          8760
+        ],
+        "shape": [
+          4380,
+          1464
+        ],
+        "dtype": "float64",
+        "NaN_count": 73200,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_generator_Pmin_MW_4381",
+      "passed": true,
+      "details": {
+        "hours": [
+          4381,
+          8760
+        ],
+        "shape": [
+          4380,
+          1464
+        ],
+        "dtype": "float64",
+        "NaN_count": 7032,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_generator_Pmax_MW_4381",
+      "passed": true,
+      "details": {
+        "hours": [
+          4381,
+          8760
+        ],
+        "shape": [
+          4380,
+          1464
+        ],
+        "dtype": "float64",
+        "NaN_count": 7032,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_fixed_transfer_PF_MW_4381",
+      "passed": true,
+      "details": {
+        "hours": [
+          4381,
+          8760
+        ],
+        "shape": [
+          4380,
+          6
+        ],
+        "dtype": "float64",
+        "NaN_count": 276,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "exact_profile_dover_bank_phase_shift_deg_4381",
+      "passed": true,
+      "details": {
+        "hours": [
+          4381,
+          8760
+        ],
+        "shape": [
+          4380,
+          2
+        ],
+        "dtype": "float64",
+        "NaN_count": 8186,
+        "comparison": "exact numeric values and NaN locations"
+      }
+    },
+    {
+      "name": "hour_state_and_qualification_axes",
+      "passed": true,
+      "details": {
+        "hours": 8760,
+        "qualified": 8651,
+        "state_hour_ranges": [
+          [
+            1,
+            3359
+          ],
+          [
+            3360,
+            3575
+          ],
+          [
+            3576,
+            8471
+          ],
+          [
+            8472,
+            8760
+          ]
+        ]
+      }
+    },
+    {
+      "name": "generator_identity_and_power_base",
+      "passed": true,
+      "details": {
+        "native_rows": 1436,
+        "external_rows": 28,
+        "MVA_base": 100,
+        "frequency_Hz": 60,
+        "gamma": 0.30012075175285535
+      }
+    },
+    {
+      "name": "current_static_template_pre_may",
+      "passed": true,
+      "details": {
+        "bus_rows": 266,
+        "branch_rows": 485,
+        "parent_rows": 410,
+        "static_columns_exact_numeric_equal": true,
+        "fixture_hour": 523
+      }
+    },
+    {
+      "name": "loss_static_vectors_pre_may",
+      "passed": true,
+      "details": [
+        "bus_group",
+        "loss_ownership",
+        "external_gen_group",
+        "generator_share",
+        "HQ",
+        "native"
+      ]
+    },
+    {
+      "name": "current_static_template_may21",
+      "passed": true,
+      "details": {
+        "bus_rows": 266,
+        "branch_rows": 485,
+        "parent_rows": 410,
+        "static_columns_exact_numeric_equal": true,
+        "fixture_hour": 3360
+      }
+    },
+    {
+      "name": "loss_static_vectors_may21",
+      "passed": true,
+      "details": [
+        "bus_group",
+        "loss_ownership",
+        "external_gen_group",
+        "generator_share",
+        "HQ",
+        "native"
+      ]
+    },
+    {
+      "name": "current_static_template_may30",
+      "passed": true,
+      "details": {
+        "bus_rows": 266,
+        "branch_rows": 485,
+        "parent_rows": 410,
+        "static_columns_exact_numeric_equal": true,
+        "fixture_hour": 4000
+      }
+    },
+    {
+      "name": "loss_static_vectors_may30",
+      "passed": true,
+      "details": [
+        "bus_group",
+        "loss_ownership",
+        "external_gen_group",
+        "generator_share",
+        "HQ",
+        "native"
+      ]
+    },
+    {
+      "name": "current_static_template_post_dover",
+      "passed": true,
+      "details": {
+        "bus_rows": 267,
+        "branch_rows": 488,
+        "parent_rows": 413,
+        "static_columns_exact_numeric_equal": true,
+        "fixture_hour": 8508
+      }
+    },
+    {
+      "name": "loss_static_vectors_post_dover",
+      "passed": true,
+      "details": [
+        "bus_group",
+        "loss_ownership",
+        "external_gen_group",
+        "generator_share",
+        "HQ",
+        "native"
+      ]
+    }
+  ],
+  "profile_schema": {
+    "bus_PD_MW": {
+      "annual_shape": [
+        8760,
+        140
+      ],
+      "shard_shape": [
+        4380,
+        140
+      ],
+      "dtype": "float64"
+    },
+    "bus_QD_MVAr": {
+      "annual_shape": [
+        8760,
+        140
+      ],
+      "shard_shape": [
+        4380,
+        140
+      ],
+      "dtype": "float64"
+    },
+    "generator_PG_MW": {
+      "annual_shape": [
+        8760,
+        1464
+      ],
+      "shard_shape": [
+        4380,
+        1464
+      ],
+      "dtype": "float64"
+    },
+    "generator_Pmin_MW": {
+      "annual_shape": [
+        8760,
+        1464
+      ],
+      "shard_shape": [
+        4380,
+        1464
+      ],
+      "dtype": "float64"
+    },
+    "generator_Pmax_MW": {
+      "annual_shape": [
+        8760,
+        1464
+      ],
+      "shard_shape": [
+        4380,
+        1464
+      ],
+      "dtype": "float64"
+    },
+    "fixed_transfer_PF_MW": {
+      "annual_shape": [
+        8760,
+        6
+      ],
+      "shard_shape": [
+        4380,
+        6
+      ],
+      "dtype": "float64"
+    },
+    "dover_bank_phase_shift_deg": {
+      "annual_shape": [
+        8760,
+        2
+      ],
+      "shard_shape": [
+        4380,
+        2
+      ],
+      "dtype": "float64"
+    }
+  },
+  "full_annual_input_arrays_read": true,
+  "PF_OPF_or_annual_solution_run": false,
+  "historical_source_files_copied_into_package": false,
+  "original_files_modified": false,
+  "source_files": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/replay/operating_states.mat",
+      "sha256": "bea2fb35c44a3c9510b7c4a68cf4a5ea901e7df0b51567755a2a388942dd171a"
+    }
+  ],
+  "current_files": [
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/model_receipt.json",
+      "sha256": "0abce18bdcf9f6a28f1c93d7daa6358a0b319c98a8f310a54412266e43cbdac8"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    }
+  ],
+  "independent_current_structure_fixtures": [
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/pre_may.mat",
+      "sha256": "880ffad8b03c081520bcf71b6e16240c729ec8736fb03f28ff90195a03353c0c"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/may21.mat",
+      "sha256": "d31119f8f46d84c86290c63d2633907158c5911b20e098a8a924478e22024b81"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/may30.mat",
+      "sha256": "ba2d58e1c1767636c75c4e6587c3d8643442b05b85a60120941e1a62f821a799"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/post_dover.mat",
+      "sha256": "be60ffc8a1b61949bfb0716ff4c73d857791889b00c0e1782b9bed24ecc939e5"
+    }
+  ],
+  "audit_script": {
+    "path": "scripts/nygrid_2025_latest_handoff/audit_latest_model_data.py",
+    "sha256": "71f811d630c57594350a7768252cc5bde81afe7e791daaa3c8538ec9fdd6c358"
+  }
+}

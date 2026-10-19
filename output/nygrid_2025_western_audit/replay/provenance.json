@@ -1,0 +1,268 @@
+{
+  "passed": true,
+  "qualified_common_hours": 8651,
+  "original_qualified_hours": 8663,
+  "all_boundary_qualified_hours": 8657,
+  "Ontario_only_qualified_hours": 8657,
+  "preferred_mode": "combined",
+  "Ontario_only_modes_are_mixed_boundary_basis_diagnostics": true,
+  "raw_boundaries_and_internal_operators_not_fitted": true,
+  "internal_interface_observations_read": false,
+  "modes": [
+    "previous_PAR_baseline",
+    "mapping_only",
+    "Ontario_actual_only",
+    "Ontario_actual_and_mapping",
+    "all_boundary_actual_only",
+    "combined"
+  ],
+  "variants": [
+    {
+      "variant": "dated_mapping_only",
+      "topology": "dated",
+      "mode": "mapping_only",
+      "qualified_hours": 8663,
+      "common_scoring_hours": 8651,
+      "actual_exchange": false,
+      "boundary_basis": "scheduled",
+      "mapping_repaired": true,
+      "maximum_nodal_residual_model_mw": 3.04964942188235e-11,
+      "maximum_generation_change_by_powerflow_model_mw": 3.069544618483633e-11,
+      "file": "output/nygrid_2025_western_audit/replay/dated_mapping_only.mat",
+      "sha256": "cdb87e1fe32f266083fe9edf74b1c87fc55ad797a7e03e866834c123e9255a4a"
+    },
+    {
+      "variant": "dated_Ontario_actual_only",
+      "topology": "dated",
+      "mode": "Ontario_actual_only",
+      "qualified_hours": 8657,
+      "common_scoring_hours": 8651,
+      "actual_exchange": true,
+      "boundary_basis": "Ontario",
+      "mapping_repaired": false,
+      "maximum_nodal_residual_model_mw": 2.6474822334421333e-11,
+      "maximum_generation_change_by_powerflow_model_mw": 3.205968823749572e-11,
+      "file": "output/nygrid_2025_western_audit/replay/dated_Ontario_actual_only.mat",
+      "sha256": "c88fece5c0a6ca03c94d8799739843db120ecd6bf586df9c4ac24e4f0da8751e"
+    },
+    {
+      "variant": "dated_Ontario_actual_and_mapping",
+      "topology": "dated",
+      "mode": "Ontario_actual_and_mapping",
+      "qualified_hours": 8657,
+      "common_scoring_hours": 8651,
+      "actual_exchange": true,
+      "boundary_basis": "Ontario",
+      "mapping_repaired": true,
+      "maximum_nodal_residual_model_mw": 3.154809746774845e-11,
+      "maximum_generation_change_by_powerflow_model_mw": 3.296918293926865e-11,
+      "file": "output/nygrid_2025_western_audit/replay/dated_Ontario_actual_and_mapping.mat",
+      "sha256": "204d3fef233d9965f8fe9f51be37f8160b370d58a5c004b2c857292dcdccbaca"
+    },
+    {
+      "variant": "dated_all_boundary_actual_only",
+      "topology": "dated",
+      "mode": "all_boundary_actual_only",
+      "qualified_hours": 8657,
+      "common_scoring_hours": 8651,
+      "actual_exchange": true,
+      "boundary_basis": "all",
+      "mapping_repaired": false,
+      "maximum_nodal_residual_model_mw": 2.795275122480234e-11,
+      "maximum_generation_change_by_powerflow_model_mw": 2.2964741219766438e-11,
+      "file": "output/nygrid_2025_western_audit/replay/dated_all_boundary_actual_only.mat",
+      "sha256": "254302a067d7f89490be2bb23d1168a6b2ec667ac565800654ba7731665ff7e8"
+    },
+    {
+      "variant": "dated_combined",
+      "topology": "dated",
+      "mode": "combined",
+      "qualified_hours": 8657,
+      "common_scoring_hours": 8651,
+      "actual_exchange": true,
+      "boundary_basis": "all",
+      "mapping_repaired": true,
+      "maximum_nodal_residual_model_mw": 2.808064891723916e-11,
+      "maximum_generation_change_by_powerflow_model_mw": 2.3419488570652902e-11,
+      "file": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "variant": "year_end_mapping_only",
+      "topology": "year_end",
+      "mode": "mapping_only",
+      "qualified_hours": 8663,
+      "common_scoring_hours": 8651,
+      "actual_exchange": false,
+      "boundary_basis": "scheduled",
+      "mapping_repaired": true,
+      "maximum_nodal_residual_model_mw": 2.6005864128819667e-11,
+      "maximum_generation_change_by_powerflow_model_mw": 3.069544618483633e-11,
+      "file": "output/nygrid_2025_western_audit/replay/year_end_mapping_only.mat",
+      "sha256": "5d3b9766b54714c94a7e142dbf22a752b908217f5d8fbc326655b7ed7a342e41"
+    },
+    {
+      "variant": "year_end_Ontario_actual_only",
+      "topology": "year_end",
+      "mode": "Ontario_actual_only",
+      "qualified_hours": 8657,
+      "common_scoring_hours": 8651,
+      "actual_exchange": true,
+      "boundary_basis": "Ontario",
+      "mapping_repaired": false,
+      "maximum_nodal_residual_model_mw": 2.3987922759260982e-11,
+      "maximum_generation_change_by_powerflow_model_mw": 3.2514435588382185e-11,
+      "file": "output/nygrid_2025_western_audit/replay/year_end_Ontario_actual_only.mat",
+      "sha256": "c3165b5af1e5430e1f48c5b290a0899e9c9eda5d401d3d48f57ab991dc350448"
+    },
+    {
+      "variant": "year_end_Ontario_actual_and_mapping",
+      "topology": "year_end",
+      "mode": "Ontario_actual_and_mapping",
+      "qualified_hours": 8657,
+      "common_scoring_hours": 8651,
+      "actual_exchange": true,
+      "boundary_basis": "Ontario",
+      "mapping_repaired": true,
+      "maximum_nodal_residual_model_mw": 3.154809746774845e-11,
+      "maximum_generation_change_by_powerflow_model_mw": 3.296918293926865e-11,
+      "file": "output/nygrid_2025_western_audit/replay/year_end_Ontario_actual_and_mapping.mat",
+      "sha256": "786a962dfe14ec119cf2a7e1ffcf6682bb0e8f88b5232e1ab5142c1838978d3f"
+    },
+    {
+      "variant": "year_end_all_boundary_actual_only",
+      "topology": "year_end",
+      "mode": "all_boundary_actual_only",
+      "qualified_hours": 8657,
+      "common_scoring_hours": 8651,
+      "actual_exchange": true,
+      "boundary_basis": "all",
+      "mapping_repaired": false,
+      "maximum_nodal_residual_model_mw": 2.795275122480234e-11,
+      "maximum_generation_change_by_powerflow_model_mw": 2.2964741219766438e-11,
+      "file": "output/nygrid_2025_western_audit/replay/year_end_all_boundary_actual_only.mat",
+      "sha256": "8a966d29d6c5581425fcefbb7d1662cfe435a0bf32c737e2b8526d7099326559"
+    },
+    {
+      "variant": "year_end_combined",
+      "topology": "year_end",
+      "mode": "combined",
+      "qualified_hours": 8657,
+      "common_scoring_hours": 8651,
+      "actual_exchange": true,
+      "boundary_basis": "all",
+      "mapping_repaired": true,
+      "maximum_nodal_residual_model_mw": 2.523847797419876e-11,
+      "maximum_generation_change_by_powerflow_model_mw": 2.3419488570652902e-11,
+      "file": "output/nygrid_2025_western_audit/replay/year_end_combined.mat",
+      "sha256": "e574f5a4b049bd7a78fc3106f2db8130264b40438c358d31fec0ea2641e4920e"
+    }
+  ],
+  "baseline_replays": [
+    {
+      "topology": "dated",
+      "hours": 8663,
+      "maximum_branch_error_mw": 0.0,
+      "maximum_interface_error_mw": 0.0,
+      "original_file": "output/nygrid_2025_par_controls/replay/dated_verified_PAR_flows.mat"
+    },
+    {
+      "topology": "year_end",
+      "hours": 8663,
+      "maximum_branch_error_mw": 0.0,
+      "maximum_interface_error_mw": 0.0,
+      "original_file": "output/nygrid_2025_par_controls/replay/year_end_verified_PAR_flows.mat"
+    }
+  ],
+  "native_generation_reconstructed_only_for_actual_exchange_modes": true,
+  "native_priors_capacities_weights_unchanged": true,
+  "load_original_four_DC_and_verified_PAR_controls_unchanged": true,
+  "topology_changed": false,
+  "physical_new_Dysinger_PAR_network_added": false,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/actual_Ontario_dispatch.mat",
+      "sha256": "29d5adb7db188e395e9b4b177107088e3e23a27ece8cb986309307e26e620566"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_dispatch_receipt.json",
+      "sha256": "1ec2caef4fd0324d8b9aeceeed96f26aaf295d2b7ae3a0ffb6c5fbdade01a623"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/dispatch_receipt.json",
+      "sha256": "9e89cb608c2227e41624bb1cee3b6576cfda8a7fa3a9da8c51fb8b806195d78b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/repair_receipt.json",
+      "sha256": "446a1430568a967b16a28063ce2af9c8c4790f09e511fd6480b38278c6763819"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/input_receipt.json",
+      "sha256": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/hourly_actual_exchange.csv",
+      "sha256": "e59408bf1296bd92eb6c562395d98d629c6b9784d50767c9a94956c8400aa6b4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/hourly_exchange_quality.csv",
+      "sha256": "ae23b9a130773fece232c8bb84583a3fb2d16fe9c2533a13b525ab64ba788cde"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/source_quality_receipt.json",
+      "sha256": "0959c383d82ae34a413e9ecc97465843467d3e2e543ac7de8306a45d05710eaa"
+    },
+    {
+      "path": "scripts/nygrid_2025_par_controls/controlled_equivalent.py",
+      "sha256": "ee43b19d7b5e5fc2936a38bb9228b703456ce242d0be7ccae5ea8a78d9d6fcbf"
+    },
+    {
+      "path": "scripts/nygrid_2019/replay_dc.py",
+      "sha256": "bf48540453c4ab8191b6b8e2cb65d8248acaae425b154ab85f6d182be3e57434"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_audit/replay_western.py",
+      "sha256": "a3710803da31f2301a5d5c793961f86b43628df3a4191adb2ebd30963a675b7a"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+      "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/replay/dated_verified_PAR_flows.mat",
+      "sha256": "4f034589dc10418d391d99cacf5c062b30c5d82308f0c9b73c06e4ae9c8fe6d1"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/replay/year_end_verified_PAR_flows.mat",
+      "sha256": "9ed9c74d74f9a21ac45017262f76bf030fcfac9aec0483be07f9ead1a6e2b559"
+    }
+  ]
+}

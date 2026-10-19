@@ -1,0 +1,107 @@
+{
+  "status": "cached_primary_sources_and_near_contemporaneous_sign_corroboration_reviewed",
+  "created_utc": "2026-10-16T00:52:19.517910+00:00",
+  "January2026_document_url": "https://www.nyiso.com/documents/20142/2268519/ParFlowDiagrams27.pdf/7bd78df8-311c-0b29-fa3f-ba0c8a51d123?version=1.0",
+  "publication_date": "2026-01-09",
+  "visual_review": {
+    "pages": [
+      8,
+      26
+    ],
+    "completed": true,
+    "finding": "Page8 labels PTID325270 Sand Bar PAR PS01 and a cyan plus arrow from Sand Bar ISO-NE toward South Hero and Plattsburgh NYISO. Page26 defines the cyan plus arrow as positive flow."
+  },
+  "July2026_direction_same": true,
+  "earliest_inspected_SandBar_document_date": "2026-01-09",
+  "specific_2025_sign_effective_date_verified": false,
+  "historical_sign_interpretation": "Near-contemporaneous official corroboration strengthens the declared 2025 continuity assumption; it does not replace a dated historical convention record.",
+  "P34_product_description": "Operator-reported P34 numeric flow value",
+  "adopted_numeric_interpretation": "Numeric-as-MW and exact forward-hold hourly integration, unchanged from the sealed model.",
+  "independently_resolved_native_P34_unit": false,
+  "independently_resolved_metered_or_calculated_publication_origin": false,
+  "independently_resolved_native_timestamp_support": false,
+  "qualifier_interpretation": "These are unresolved metadata questions, not proof that the reported values are wrong or that another numerical multiplier should be selected.",
+  "physical_PV20_facility_identifier": {
+    "PTID": 25027,
+    "label": "S HERO__-PLATSBRG_115_PV20",
+    "source": "CEVC24 page7 Figure4 transmission-facility outage table",
+    "distinct_from_SandBar_PAR_PTID": 325270,
+    "public_hourly_flow_series_for_PTID25027_found": false,
+    "qualification": "This is an official facility identifier, not proof of a public telemetry endpoint or its numerical sign."
+  },
+  "source_scope": {
+    "CEVC24_page13_contains_PV20": true,
+    "generic_CE_definition_not_a_certified_public_CE_VC_expression": true,
+    "complete_physical_TE_operator_requires_PJM_and_meter_end_terms_beyond_PV20": true
+  },
+  "complete_SouthHero_loss_bypass_uncertainty_bound_MW": null,
+  "SouthHero_6_66_MVA_scope": "2025 planning peak of feeder29-1A only; not a total hourly tap-load series, observed correction or full meter-error bound.",
+  "bounded_search_this_turn": [
+    "Targeted official-domain queries for 2025 PAR direction diagrams and Sand Bar positive-flow metadata returned no additional dated source. Existing archived January2026 source was inspected first; no source downloaded or replaced."
+  ],
+  "source_or_operator_selected_by_P32_fit": false,
+  "existing_model_map_package_changed": false,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version1_0.pdf",
+      "sha256": "98553ac3d45f1d836032180ea768ff1ad49ee61edf7bb4eaeabc3b69112ecac2",
+      "bytes": 217418
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version1_0.pdf.receipt.json",
+      "sha256": "e4fb556a3f1c3d3cfef0f673f4eade526973e96bbc913e0d6704ae62f7c4d799",
+      "bytes": 3388
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/NYISO_PARdiagram_version1_0.txt",
+      "sha256": "48b7d6979e601bc128e3ffc75d0bdfb12a690e0ba544ae77d44f033e96c2cb46",
+      "bytes": 17184
+    },
+    {
+      "path": "output/nygrid_2025_p34_qualification/sources/primary_evidence_conclusion.json",
+      "sha256": "8edcc7957deb51e6d9e3d8d3a467936efe28b4c8322567584e014e357721a2db",
+      "bytes": 11562
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27.pdf",
+      "sha256": "c0647d2abc38f216ccf5c1f197ca679cf16358fde5f507659bcdcd80a6938ba4",
+      "bytes": 219393
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_CEVC24_2024.txt",
+      "sha256": "8d80796e96eeb6bc12ff9b3bf24a91bd14efb6f39c44aa64632d75f97db6a390",
+      "bytes": 37556
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/sources/central_north/NYISO_CEVC24_2024.pdf",
+      "sha256": "42358fbf03847610a7da52fe66abac13ca269c29294309ac8743be22cba9527f",
+      "bytes": 792032
+    },
+    {
+      "path": "output/nygrid_2025_flowgate_definitions/definitions/central_north_2025_qualifiers.json",
+      "sha256": "baabbef45f6be710b9cfebd1f1da763e00218ff9d48b541eb9366d58008f30c7",
+      "bytes": 8218
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/ISONE_OP17A_boundaries_current.pdf",
+      "sha256": "3431ecbea9a667208419506d65ae0ea1ed49fa8628cf94b258f7b33c176e42d3",
+      "bytes": 294514
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/sources/VEC2025_IRP_section4_SouthHero.pdf",
+      "sha256": "8ffcf8f3442fc10e74d9a7798a08ae20e7eb722c24628cdfc1ca19b53ed1f016",
+      "bytes": 7515891
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/boundary/sources/January2026_SandBar_direction_page08.png",
+      "sha256": "82e1efaf7ca5fccd21f34c807cbc5a34a3a0443224ae031e121e02ad6289f52e",
+      "bytes": 107112
+    },
+    {
+      "path": "output/nygrid_2025_postrepair_diagnosis/boundary/sources/January2026_direction_legend_page26.png",
+      "sha256": "8cf829ae7c9bdff4d66c3fdf5d8aac39bc98041a0dd4dfdbdda14e94f505cba1",
+      "bytes": 43463
+    }
+  ],
+  "script_sha256": "352b1fb672ee2e6b06f94f499040dc09b84d38ff5a23ee8da2139099f2f2d093"
+}

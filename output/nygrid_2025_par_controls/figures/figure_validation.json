@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-11T14:11:57.688587+00:00",
+  "all_seven_interfaces_included": true,
+  "hours_per_interface_variant": 8663,
+  "external_P34_observations_used_as_inputs": true,
+  "internal_interface_fitting": false,
+  "native_samples_per_device": 105998,
+  "native_sample_endpoint_day_included": true,
+  "nominal_capacity_screen_not_continuous_P_limit": true,
+  "hardware_taps_and_full_PQ_feasibility_claimed": false,
+  "direction_proof_link": "https://www.nyiso.com/documents/20142/2268519/ParFlowDiagrams27.pdf/7bd78df8-311c-0b29-fa3f-ba0c8a51d123#page=7",
+  "direction_legend_page": 26,
+  "all_rendered_text_inside_canvas": true,
+  "visual_QA": "Rendered PNG visually inspected; initial native-caption/axis-label overlap corrected and checked programmatically; final bars, exact values, legend, source population, physical-qualification notes and direction proof link are readable.",
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_par_controls/comparison/interface_summary.csv",
+      "sha256": "a955e2d2d0c6a6cf6b6f8f5b91d84443d9ab90a10a0c59a84147a14436b4aabb"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/necessary_p_only_screen.json",
+      "sha256": "67b6f85d134be9e8e1404e8b147f89efdc84280aa8922829a5ff8ce75b2be60d"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/input_receipt.json",
+      "sha256": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/direction_verification_receipt.json",
+      "sha256": "70591310ccf0ef85058cb7e92a385594c103a6c717a477db807def1601d4a55e"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/limits/limits.json",
+      "sha256": "80f1f5f97e4dd5d5bb1f74211394fcea358ea5cbbff130d432f3103d5a1e01d8"
+    },
+    {
+      "path": "scripts/nygrid_2025_par_controls/build_figures.py",
+      "sha256": "87c305b4e55de9d552d92e5c16ec67989aeb00e0f8630e1cf0cfa3c48b6c0770"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_par_controls/figures/verified_PAR_reconstruction.png",
+      "sha256": "027a2447d95196ed78ea1b471b988afa559cb7cafaad92b576ec40d9f7888ecb"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/figures/verified_PAR_reconstruction.pdf",
+      "sha256": "e913e0e8b7a8cb8a1bdfb127695c8586ccbf6291480b124458f5f4b711156033"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/figures/verified_PAR_reconstruction.svg",
+      "sha256": "0ce2cde96e7a04dbe1faf0ebf3489121b9f1364bd37a214aebf9a83b116d432f"
+    }
+  ],
+  "SVG_numeric_and_qualification_text_checks_passed": true,
+  "direction_evidence_hyperlink_verified": true
+}

@@ -13,7 +13,9 @@ define_constants;
 base = loadcase('npcc_ny_lite_s7_seven_interface_perform_direct_candidate');
 base = apply_ny_core_phase0_corrections(base, struct( ...
     'fit_reactance', false, 'verbose', false));
-candidate = loadcase('npcc_ny_lite_s13_npcc_augmented_2019');
+checkpoint = build_s13_phase1a_candidate(struct( ...
+    'write_outputs', false, 'verbose', false));
+candidate = checkpoint.candidate;
 
 cases = {base, candidate};
 case_id = ["s7_phase0_parent"; "s13_phase1a_candidate"];

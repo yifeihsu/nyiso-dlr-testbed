@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "completed": true,
+  "created_utc": "2026-10-13T14:51:38.356068+00:00",
+  "scope": "Independent scientific and structure-only content review of final current-model Word/Markdown; no historical results or model-modification narrative",
+  "source_model_commit": "2e0fcd5c3f0ae39d04f27a733ce30eb148b0b243",
+  "document_pages": 7,
+  "native_editable_equations": 8,
+  "current_counts_axes_controls_loss_policy_and_current_units_checked": true,
+  "explicit_conductor_ambiguity_and_one_way_screen_scope_preserved": true,
+  "operator_equations_checked_against_independently_rebuilt_four_state_matrices": true,
+  "current_structure_ledgers_and_figure_hashes_match": true,
+  "embedded_schematic_is_reviewed_print_asset": true,
+  "model_equations_source_eligibility_operating_bounds_and_thermal_flags_kept_separate": true,
+  "remaining_actionable_findings": [],
+  "corrections_resolved": [
+    "Removed saved annual result statistics from the structure-only document.",
+    "Changed DC susceptibility to DC susceptance."
+  ],
+  "visual_review_scope": "The bound document-team receipt records all seven rendered pages reviewed; this independent review checks scientific content and Word/Markdown/figure consistency.",
+  "package_relative_links": "The schematic link is resolved at model/structure/current_model_schematic.png in the latest-only package, matching the supplied structure asset.",
+  "dependencies": [
+    {
+      "path": "NYGRID_2025_LATEST_MODEL_STRUCTURE.docx",
+      "sha256": "18c472013e1a1925e1ca4c53bde84597f368a67f6de4714dc5241677761a8f93"
+    },
+    {
+      "path": "NYGRID_2025_LATEST_MODEL_STRUCTURE.md",
+      "sha256": "060dce76c296917c54b3c822113effca4e0b0a04fb6bea6a56ff740018a4c412"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure/current_structure_inventory.json",
+      "sha256": "00bbe79993a0767de59ab9db48434ebc4623c066a84b0fb9f6de0e575ae3630f"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_document_visual_review.json",
+      "sha256": "487414b52d880eea6889c191f30243917852243e0271e444d266902b718ec8f4"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure/current_model_schematic.png",
+      "sha256": "c8a755c034b6f345f512122418a0f7f34a71b4ff7f580620fe50b9cd655ab207"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_handoff/review_structure_document.py",
+      "sha256": "f792db1a1adcb54974ea665f087b2e8f5baec5726156c1b56303bab17fbf7b80"
+    }
+  ]
+}

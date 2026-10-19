@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "figure_count": 4,
+  "dimensions": [
+    {
+      "figure": "01_nygrid_annual_interface_wape.pdf",
+      "width_cm": 11.8,
+      "height_cm": 7.5,
+      "source_rows": 7,
+      "vector_pdf": true,
+      "preview": "01_nygrid_annual_interface_wape.png"
+    },
+    {
+      "figure": "02_annual_model_comparison.pdf",
+      "width_cm": 13,
+      "height_cm": 8,
+      "source_rows": 21,
+      "vector_pdf": true,
+      "preview": "02_annual_model_comparison.png"
+    },
+    {
+      "figure": "03_monthly_pooled_wape.pdf",
+      "width_cm": 13,
+      "height_cm": 7.2,
+      "source_rows": 36,
+      "vector_pdf": true,
+      "preview": "03_monthly_pooled_wape.png"
+    },
+    {
+      "figure": "04_selected_snapshot_flows.pdf",
+      "width_cm": 13,
+      "height_cm": 7.7,
+      "source_rows": 14,
+      "vector_pdf": true,
+      "preview": "04_selected_snapshot_flows.png"
+    }
+  ],
+  "row_counts": {
+    "annual_interfaces": 7,
+    "annual_grouped_comparisons": 21,
+    "monthly_series_cells": 36,
+    "selected_interface_panels": 14
+  },
+  "studies_rerun": false,
+  "source_mutations": false,
+  "AC_or_thermal_claim": false,
+  "visual_qa": "All four PNG previews inspected; snapshot PDF independently rendered with Poppler and inspected; no clipping or overlap.",
+  "latex_table_syntax": "All five table snippets compiled successfully in a two-page pdflatex smoke document.",
+  "exact_source_match": true,
+  "figure_rendering_reruns_only": true
+}

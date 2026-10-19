@@ -1,0 +1,154 @@
+{
+  "completed": true,
+  "all_counts_are_fresh": true,
+  "source_hours": 8651,
+  "attempted_hours": 8651,
+  "qualified_hours": 8170,
+  "failed_hours": 481,
+  "frozen_old_qualified_hours": 8494,
+  "common_qualified_hours": 8170,
+  "lost_old_qualified_hours": 324,
+  "new_qualified_hours": 0,
+  "VQ_physical_qualified_hours": 0,
+  "solver_exception_hours": 0,
+  "failure_status_counts": {
+    "coupled_line_search_failed": 465,
+    "NY_delivered_load_domain_boundary": 16
+  },
+  "qualified_statistics_only": true,
+  "qualified_extrema": {
+    "max_nodal_P_residual_mw": {
+      "min": 4.53699300351218e-11,
+      "mean": 1.3325123241586966e-09,
+      "max": 9.923610377882142e-09
+    },
+    "max_nodal_Q_residual_mvar": {
+      "min": 9.992060441529429e-11,
+      "mean": 1.6872132813586317e-09,
+      "max": 9.95213156329555e-09
+    },
+    "native_PG_change_from_original_MW": {
+      "min": 2.7869040408745598e-11,
+      "mean": 1.1042507713165066e-10,
+      "max": 1.8598145246073701e-10
+    },
+    "HQ_PG_change_from_original_MW": {
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "reference_PG_change_from_original_MW": {
+      "min": 2.7869040408745598e-11,
+      "mean": 1.1042507713165066e-10,
+      "max": 1.8598145246073701e-10
+    },
+    "regional_NY_import_residual_MW": {
+      "min": 1.13686837721616e-13,
+      "mean": 8.878908243751734e-12,
+      "max": 9.06993591343053e-10
+    },
+    "NY_gross_load_accounting_residual_MW": {
+      "min": 0.0,
+      "mean": 1.2556864293086263e-13,
+      "max": 4.54747350886464e-13
+    },
+    "loss_budget_residual_MW": {
+      "min": 7.105427357601e-15,
+      "mean": 4.9850070352060775e-14,
+      "max": 2.27373675443232e-13
+    },
+    "max_P_bound_violation_mw": {
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "max_fixed_transfer_P_change_mw": {
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "recovery_voltage_error_pu": {
+      "min": 2.22477863102719e-16,
+      "mean": 3.7905898674253105e-16,
+      "max": 6.753223014464259e-16
+    },
+    "recovered_current_error_A": {
+      "min": 9.01316712291754e-11,
+      "mean": 3.7236256624004346e-10,
+      "max": 1.3891678918298602e-09
+    },
+    "maximum_NY_zonal_loss_fraction": {
+      "min": 0.0569718797204763,
+      "mean": 0.25216389540392126,
+      "max": 0.95451696917636
+    },
+    "minimum_NY_served_PD_MW": {
+      "min": 5.05862709411569,
+      "mean": 89.41411811965483,
+      "max": 171.299967788172
+    },
+    "min_voltage_pu": {
+      "min": 0.841225886030247,
+      "mean": 0.9630179093309065,
+      "max": 0.965230000000001
+    },
+    "max_voltage_pu": {
+      "min": 1.10027492293311,
+      "mean": 1.1136181375003817,
+      "max": 1.12000500790884
+    },
+    "max_Q_bound_violation_mvar": {
+      "min": 561.979317438168,
+      "mean": 792.1466106171831,
+      "max": 865.071376252603
+    },
+    "max_transfer_Q_bound_violation_mvar": {
+      "min": 605.999700836782,
+      "mean": 741.3171490859885,
+      "max": 821.133331331803
+    },
+    "AC_real_losses_mw": {
+      "min": 155.180818638691,
+      "mean": 339.503441328107,
+      "max": 1024.65177943532
+    },
+    "total_NR_iterations": {
+      "min": 4.0,
+      "mean": 4.478090575275398,
+      "max": 9.0
+    }
+  },
+  "qualified_hours_NY_zonal_loss_fraction_above25pct": 3131,
+  "qualified_hours_NY_zonal_loss_fraction_above50pct": 573,
+  "qualified_hours_NY_zonal_loss_fraction_above90pct": 8,
+  "annual_elapsed_seconds": 719.1048574,
+  "paired_valid_points": 11,
+  "paired_failed_both_hours": [
+    4746,
+    4213,
+    4860
+  ],
+  "standard_full_PF_replays_passed": 11,
+  "representative_factorial_cell_success_counts": [
+    14,
+    14,
+    11,
+    11
+  ],
+  "representative_factorial_common_hours": [
+    2630,
+    4194,
+    523,
+    4000,
+    8508,
+    8471,
+    8472,
+    3360,
+    4740,
+    3039,
+    3133
+  ],
+  "representative_factorial_is_not_annual_attribution": true,
+  "global_infeasibility_not_claimed": true,
+  "allocation_and_equation_qualification_does_not_certify_VQ_thermal_security_or_real_meter_equivalence": true
+}

@@ -1,0 +1,17 @@
+{
+  "archive_path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\deliverables\\nygrid_2025_moses_repair_20261015\\nygrid_moses_repair_20261015.zip",
+  "archive_sha256": "27a0276ae4af38c823e6fea4557135350008c8afbc18a81817633963a300025c",
+  "package_root": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_moses_repair_b0djv_p3\\nygrid_moses_repair_20261015",
+  "temp_root": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_moses_repair_b0djv_p3",
+  "result_root": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_moses_repair_b0djv_p3\\results",
+  "script_path": "C:\\Users\\Holiday\\AppData\\Local\\Temp\\nygrid_moses_repair_b0djv_p3\\check_package.m",
+  "matlab_batch_command": "addpath('C:/Users/Holiday/AppData/Local/Temp/nygrid_moses_repair_b0djv_p3/nygrid_moses_repair_20261015/runtime'); check=smoke_nygrid_latest('C:/Users/Holiday/AppData/Local/Temp/nygrid_moses_repair_b0djv_p3/results'); assert(check.passed);",
+  "extracted_integrity": {
+    "passed": true,
+    "kind": "moses_repair_current_model_with_map",
+    "files": 787,
+    "bytes": 194410715,
+    "source_commit": "f6c124a97b16f45a98a538c121c6006556255005",
+    "checksum_table_and_manifest_digest_verified": true
+  }
+}

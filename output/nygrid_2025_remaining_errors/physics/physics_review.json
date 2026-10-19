@@ -1,0 +1,438 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T06:04:44.240588+00:00",
+  "baseline_HEAD": "303b626bcab43215c839ad7e175e7274f25b4bdc",
+  "scope": "Current saved annual loss/voltage concentration and remaining interface-error associations; no new PF/OPF/annual replay or source changes",
+  "hours": 8170,
+  "units": {
+    "branch_losses": "modelMW",
+    "interface_residuals": "publicMW already stored in comparisonNPZ",
+    "gamma": 0.30012075175285535
+  },
+  "qualified_cohort_only": true,
+  "failed_iterates_included": false,
+  "operating_qualified_hours": 0,
+  "mean_total_loss_model_MW": 339.5034413281053,
+  "maximum_total_loss_model_MW": 1024.6517794353495,
+  "parent41": {
+    "mean_loss_model_MW": 77.8967008507937,
+    "maximum_loss_model_MW": 322.53438608480855,
+    "share_of_all_cohort_loss": 0.22944303759063278,
+    "share_of_F_assigned_loss": 0.9626810328606287,
+    "ownership": "Both endpoints are zoneF; whole loss assignedF. It cancels from complete-zone midpoint balances.",
+    "original_R_X_B": [
+      0.0018,
+      0.0089,
+      0.07
+    ],
+    "current_R_X_B": [
+      0.0598327463184317,
+      0.2040452503006289,
+      0.024765209011782266
+    ]
+  },
+  "parent224": {
+    "mean_loss_model_MW": 39.13646642443888,
+    "maximum_loss_model_MW": 172.52731317081208,
+    "share_of_all_cohort_loss": 0.11527561037773491,
+    "share_of_E_assigned_loss": 0.5081815103022634,
+    "ownership": "Half zoneE and half zoneG; releasedR remains an unverified network-equivalent parameter.",
+    "current_R_X_B": [
+      0.02,
+      0.0147,
+      0.0
+    ]
+  },
+  "voltage": {
+    "hours_above_upper_limit": 8170,
+    "hours_below_lower_limit": 395,
+    "minimum_pu": 0.8412258860302474,
+    "maximum_pu": 1.1200050079088417,
+    "worst_overvoltage_rows": [
+      {
+        "bus_id": 79503,
+        "name": "SYNTHETIC LINE 195 INTERNAL 3",
+        "base_kV": 345.0,
+        "present_qualified_hours": 8170,
+        "over_1p05_hours": 8170,
+        "under_0p95_hours": 0,
+        "maximum_VM_pu": 1.1200050079088417,
+        "minimum_VM_pu": 1.1001810621412265,
+        "numerical_section_bus": true,
+        "incident_parent_rows": "195"
+      },
+      {
+        "bus_id": 79504,
+        "name": "SYNTHETIC LINE 195 INTERNAL 4",
+        "base_kV": 345.0,
+        "present_qualified_hours": 8170,
+        "over_1p05_hours": 8170,
+        "under_0p95_hours": 0,
+        "maximum_VM_pu": 1.1159355269537148,
+        "minimum_VM_pu": 1.1002749229331144,
+        "numerical_section_bus": true,
+        "incident_parent_rows": "195"
+      },
+      {
+        "bus_id": 79502,
+        "name": "SYNTHETIC LINE 195 INTERNAL 2",
+        "base_kV": 345.0,
+        "present_qualified_hours": 8170,
+        "over_1p05_hours": 8170,
+        "under_0p95_hours": 0,
+        "maximum_VM_pu": 1.1081353308863642,
+        "minimum_VM_pu": 1.0846906493286652,
+        "numerical_section_bus": true,
+        "incident_parent_rows": "195"
+      },
+      {
+        "bus_id": 78503,
+        "name": "SYNTHETIC LINE 185 INTERNAL 3",
+        "base_kV": 500.0,
+        "present_qualified_hours": 8170,
+        "over_1p05_hours": 8170,
+        "under_0p95_hours": 0,
+        "maximum_VM_pu": 1.0982936508141448,
+        "minimum_VM_pu": 1.0802654120088782,
+        "numerical_section_bus": true,
+        "incident_parent_rows": "185"
+      },
+      {
+        "bus_id": 79505,
+        "name": "SYNTHETIC LINE 195 INTERNAL 5",
+        "base_kV": 345.0,
+        "present_qualified_hours": 8170,
+        "over_1p05_hours": 8170,
+        "under_0p95_hours": 0,
+        "maximum_VM_pu": 1.0960004919846933,
+        "minimum_VM_pu": 1.0850332982216124,
+        "numerical_section_bus": true,
+        "incident_parent_rows": "195"
+      },
+      {
+        "bus_id": 78502,
+        "name": "SYNTHETIC LINE 185 INTERNAL 2",
+        "base_kV": 500.0,
+        "present_qualified_hours": 8170,
+        "over_1p05_hours": 8170,
+        "under_0p95_hours": 0,
+        "maximum_VM_pu": 1.091404153257764,
+        "minimum_VM_pu": 1.0750554023745353,
+        "numerical_section_bus": true,
+        "incident_parent_rows": "185"
+      },
+      {
+        "bus_id": 78504,
+        "name": "SYNTHETIC LINE 185 INTERNAL 4",
+        "base_kV": 500.0,
+        "present_qualified_hours": 8170,
+        "over_1p05_hours": 8170,
+        "under_0p95_hours": 0,
+        "maximum_VM_pu": 1.0884811912492438,
+        "minimum_VM_pu": 1.0725073235245017,
+        "numerical_section_bus": true,
+        "incident_parent_rows": "185"
+      },
+      {
+        "bus_id": 79501,
+        "name": "SYNTHETIC LINE 195 INTERNAL 1",
+        "base_kV": 345.0,
+        "present_qualified_hours": 8170,
+        "over_1p05_hours": 8170,
+        "under_0p95_hours": 0,
+        "maximum_VM_pu": 1.0804868355174662,
+        "minimum_VM_pu": 1.0539784984924887,
+        "numerical_section_bus": true,
+        "incident_parent_rows": "195"
+      }
+    ]
+  },
+  "loss_allocation_reconstruction_maximum_error_model_MW": 2.425490919222284e-10,
+  "source_prior_findings": {
+    "western_AC_vs_DC_difference_small": true,
+    "PJM_original_vs_capacity_share_L1": 4.649058915617843e-16,
+    "PJM_all8170_baseline_PG_share_max_difference_from_capacity_proportional": 1.6653345369377348e-16,
+    "PJM_capacity_proportional_baseline_PG_and_loss_share_variants_are_no_ops": true,
+    "external_proxy_identity": "Finite regional generation equivalents, not observed individual plant schedules; bus names alone do not establish a defect."
+  },
+  "persistent_overvoltage_construction_context": [
+    {
+      "parent_row": 195,
+      "from_name": "ERIE W",
+      "to_name": "KYGER",
+      "nominal_kV": 345.0,
+      "declared_equivalent_length_m": 657552.7685590063,
+      "current_R_pu": 0.02446509360009043,
+      "current_X_pu": 0.2054,
+      "current_B_pu": 3.3975624010672747,
+      "imported_R_pu": 0.0,
+      "imported_X_pu": 0.2054,
+      "imported_B_pu": 0.0,
+      "nominal_charging_MVAr_at_1pu": 339.7562401067275,
+      "declared_reactor_fraction": 0.75,
+      "nominal_reactor_absorption_MVAr_at_1pu": 254.8171800800456,
+      "interpretation": "Stored synthetic construction assumptions; nominal values are not measured charging or a verified installed compensation design."
+    },
+    {
+      "parent_row": 185,
+      "from_name": "CONASTONE",
+      "to_name": "KEYSTONE",
+      "nominal_kV": 500.0,
+      "declared_equivalent_length_m": 593603.9360393799,
+      "current_R_pu": 0.005700000000000001,
+      "current_X_pu": 0.06990000000000002,
+      "current_B_pu": 8.097059575517385,
+      "imported_R_pu": 0.0057,
+      "imported_X_pu": 0.0699,
+      "imported_B_pu": 0.0,
+      "nominal_charging_MVAr_at_1pu": 809.7059575517385,
+      "declared_reactor_fraction": 0.75,
+      "nominal_reactor_absorption_MVAr_at_1pu": 607.2794681638038,
+      "interpretation": "Stored synthetic construction assumptions; nominal values are not measured charging or a verified installed compensation design."
+    }
+  ],
+  "saved_counterfactual_scope": {
+    "CE_bridge_hours": 8494,
+    "CE_bridge_baseline": "6dcc77f071a9ce4aaaa2fcba9a9aabc15f7d5dbc",
+    "current_model_causal_attribution": false,
+    "reason": "The saved bridge uses the older single-slackAC model and its8494-hour cohort. Its solved-loss reconstruction and row224X effect cannot be transferred as a causal decomposition of the current loss-consistent residuals.",
+    "western_effect_scope": "The saved western source correction is source-conditioned DC evidence on its own8651-hour cohort; current matched-8170 AC/DC table is supplied separately."
+  },
+  "recommendations": [
+    "Use complete-cut accounting to distinguish fixed zonal/source terms, external landing distribution and signed terminal half-loss corrections before perturbing impedance.",
+    "Bounded Niagara/StLawrence hydro redistributions preserve statewideHY and are suitable mechanism probes for western/northern cut residuals; use a calendar-selected cohort and retain donor/capacity records.",
+    "PJM baseline-PG redistribution and loss-participation-weight changes are separate assumptions; hold regional totals and finite originalP/S caps, and rebuild policy/context before solving.",
+    "Use ac_loss_apply_budget (packaged nylatest_apply_budget) to update allocated externalP and its Q-circle slice at unchangedS; never keep oldQ bounds after changing externalP.",
+    "A parent41 importedRX (and separately importedRXB) probe diagnoses the oversized withinF loss mechanism. It is an admittance sensitivity, not a new conductor realization or a promised interface-error repair.",
+    "Parent224R is unresolved: any loss-isolation experiment must remain explicitly diagnostic, with no observation-selected replacement or operational promotion.",
+    "Inspect the recurring overvoltage locations and their charging/shunt/PV assumptions separately; improving a power-flow score cannot establish voltage/reactive feasibility."
+  ],
+  "association_limit": "Pearson and month-demeaned correlations/strata are descriptive, post-hoc and noncausal. Calendar selection and controlled probes are required for intervention claims.",
+  "user_uncommitted_map_files_preserved": true,
+  "protected_user_map_files": [
+    {
+      "path": "output/nygrid_2025_latest_map/DELIVERY_MANIFEST.json",
+      "sha256": "c6907b084c6aceb3caa2383994cebe350f21eab13a09c084526ec8cbbe508016"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/README.md",
+      "sha256": "eb9b30d7322150675872d12baa61d989dddd44817fd375ba4d426dbe44a171a8"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/browser_visual_review.json",
+      "sha256": "9ec22900651d7ddecd12da130db244a629039db2cfbdea5c269f8ddc603b071e"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/build_receipt.json",
+      "sha256": "96ac4477d07c286f4d4dbde51b6b9e2fae031ec8ad20776d95390f583743b868"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/independent_embedded_payload_review.json",
+      "sha256": "647094947a9719fc961d146c2dc84c85a700f8f8ed529c95be2b3001535db6a1"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/independent_ui_flow_math_review.json",
+      "sha256": "a9fbee6835e308b18050444f164764cbd05e8c00b6212660f0632264375fcebe"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/interaction_validation.json",
+      "sha256": "80f02707c3a3e7acd9404103dc09a6a0b2ba059e1f797391e733c545f6c460f0"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/network_map.html",
+      "sha256": "3a8af1759b46bf3b834a893335cf6ed1366618aed06f4160a83d8b8ea7c716cc"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/qa/default_map_preview.jpg",
+      "sha256": "904ef0d7544987d01d5647c7fa9a2632e040c914a26e6d98fa8780b135dcb660"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/qa/mobile_map_preview.jpg",
+      "sha256": "5709a58d7a9198b54e20e023cc3ba6ed298dcd6ccee2c311bbefc96239b8c62c"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/qa/moses_south_selection.jpg",
+      "sha256": "db180844c114c10879df10410081d19321b421c82240416f66f51dc6281b0142"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/qa/native_browser_observations.json",
+      "sha256": "33863ed0e9e1b9fc974ef70ef6dec3e5991e6ff972ffd768d39cdeed0e7fadd9"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/audit_ui_flow_math.js",
+      "sha256": "273d71b2689704c56c1788ac375c384a749f9fbeedaa517e918fa4874aa4dcd6"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/build_network_map.py",
+      "sha256": "5bc241daeb6d2053c6b77ae1477401c156c7b103fbb77bb7054c7d036127fd73"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/finalize_map.py",
+      "sha256": "ddb634351bf1efcd62a13172029130cff1d46d122e3e6e605936c17c29d243ef"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/map.css",
+      "sha256": "3d19b9cde2263a6c98c52b10fc9b3890bb251f3d4230d41e120ca77dc6e4349c"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/map.js",
+      "sha256": "10f7c76f9b351c84594a27a46d2c4512afb2572143d4cbbbae13c3c935436654"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/map_template.html",
+      "sha256": "1691c18c31b0fcd56c610cee6879288777a045ccff23f141b8f9eafe25b84ae9"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/test_interactive_map.cjs",
+      "sha256": "4f4d4868686fedd2cf64387df653042af35ecb5b75d8c32be31fa15473c9ed56"
+    },
+    {
+      "path": "output/nygrid_2025_latest_map/ny_display_mask.json",
+      "sha256": "fea811359b014b316ca371097a09b79277a96e09675852f040f266fc732b35fd"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/build_ny_display_mask.py",
+      "sha256": "16883c4721249d70b23f1559d22f736eb1e0d69384547ee2dca5e664c4307067"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/post_dover.mat",
+      "sha256": "be60ffc8a1b61949bfb0716ff4c73d857791889b00c0e1782b9bed24ecc939e5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/annual_axes.mat",
+      "sha256": "0dc30bef374d981ff82b658dec12ce967c88b4d317ea989f4b813e4c2bd75232"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_01.mat",
+      "sha256": "c7de8f9f2d060a3ba91cf3f1a2ba8e0d7d7dd85abd8315ec4dbd2d28fe5a74e5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_02.mat",
+      "sha256": "115158dc8dc00e1930e88ca446a03a038f584e379add3791e6065c8d598b813d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_03.mat",
+      "sha256": "c259bce5e604773fe4b8d7c6364181ae346fb7803cebf95f1dca472a93bf690b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_04.mat",
+      "sha256": "cee22944247e1ad1892461f83ca0053a99de9ceada64639064dd436a7b06119e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_05.mat",
+      "sha256": "7f4c08f15f2363b8298ef90fd416f53ba42ee5522f54f9c341a5081be6672748"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_06.mat",
+      "sha256": "55110d8509e12b2bd3a0fd6ed27f7e41d8f952066c56d638091ac17f99bd5ab1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_07.mat",
+      "sha256": "b1fe05126664dab9a76c119a2573ec4317755144d361d00bf29f7a35346a4132"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_08.mat",
+      "sha256": "6c43c4fa55e3bef47c576b9981a7dec232cc6590653e8f91dfe55b2e8d0d077e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_09.mat",
+      "sha256": "a0faa5b5bffeb9847c00c7fdcbf5219b21ec7371c46ed40595d6cf87b340e82d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_10.mat",
+      "sha256": "1cb54774324953bb500fe895f10bc40c20d026719e54dc8b7976f01b16b20849"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_11.mat",
+      "sha256": "0d44e45a44e464c04ac14c33eb90057e8efdf66523ca40e87a54d3b57aa784db"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/monthly/profile_PF_2025_12.mat",
+      "sha256": "f7102fdad75d7508ec922b66da3e9841035b9af286dfc01d840bc43d6abd0d8b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_centraleast_diagnosis/summary/diagnosis_summary.json",
+      "sha256": "5b29dc4ced8c7e732bb5b12001fa37395a6184783c17044c63fb7a2555429c50"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/effects/western_component_summary.csv",
+      "sha256": "4b06b2ca74d5733141bb94d3f89962d827977b079c2fcb97c248800d3f42a2ba"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/post_dover_reactor_ledger.csv",
+      "sha256": "8f85cc38402abe4187fbc03ebb4e13dcfab374b7c58f17b64c7c5625b817dac3"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/physics/analyze_saved_physics.py",
+      "sha256": "66ccb6fe92bff10a22422372ac1777f88926292cce19dca7b0e903b0e7bbe82a"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/parent_loss_concentration.csv",
+      "sha256": "2a1423c5b3db847b1be75ea377261e847c5f23ff43777b3c0d1740d0e48387e0"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/zonal_loss_contributions.csv",
+      "sha256": "5fc4dc5b831f0b2a6b5be0c1b829822a743f0f855f8121bca94a38b1e5833dd0"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/zonal_loss_fraction_summary.csv",
+      "sha256": "4586cbd793890647d5c447373426f035886c592067d373334ad9b9c117478e52"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/voltage_bound_concentration.csv",
+      "sha256": "99fcfb6e35735d25a2598b8a95c601e588d636474dfcda634342b118e06cfe94"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/hourly_physics_features.csv",
+      "sha256": "e01fb47b99947ec1d7db05b281194ca213c3d7eab7a9892e22779b262f7cceef"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/residual_physics_associations.csv",
+      "sha256": "699ccad3b867562bd044620f73cc2dee4cc3ceabceedbe719993703a04066deb"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/loss_fraction_residual_strata.csv",
+      "sha256": "294e66846b0f709235db3a2a9fe8130577c6eb05c85f3d9f70b4706856549758"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/current_AC_vs_corrected_DC_same_hours.csv",
+      "sha256": "9491f44b643c04db2a37e53fee2653328a18f9446ba928d3fb0f84f4d1e650a1"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/physics_extreme_hours.csv",
+      "sha256": "53bc3c74681270a05f9e0f099feb9bd04446b3f93c4d306011fb215af41e2f5d"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/PJM_proxy_share_priors.csv",
+      "sha256": "8e65dd0f5b109cf150ca5e288ec4ec518713808ee1ad4c0142445bb0052d2848"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/physics/ranked_unverified_assumptions.csv",
+      "sha256": "50b142654a88e242292c8e16697c7b78eb8c51ef4dc1987e35a147b0d8687614"
+    }
+  ]
+}

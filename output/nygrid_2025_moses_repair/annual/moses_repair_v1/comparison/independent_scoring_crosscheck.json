@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T22:06:57.784851+00:00",
+  "independent_raw_physics_metric_rows_compared": 28,
+  "maximum_MAE_RMSE_bias_difference_MW": 0.0,
+  "maximum_WAPE_recalculation_difference_percentage_points": 0.0,
+  "all_8760_rows_and_actual_comparison_cohorts_verified": true,
+  "candidate_qualified_hours": 8651,
+  "paired_hours": 8651,
+  "baseline_qualified_hours": 8651,
+  "lost_baseline_success_hours": 0,
+  "no_additional_PF_or_source_mutation": true,
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/interface_metrics.csv",
+      "sha256": "1b0177aaf262ad65112d91ad880fe64035a2703a73d0592cbedf70b4a3489799",
+      "bytes": 2863
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv",
+      "sha256": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308",
+      "bytes": 261282
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079",
+      "bytes": 6391233
+    }
+  ],
+  "producer": {
+    "path": "scripts/nygrid_2025_moses_repair/annual/crosscheck_scoring.py",
+    "sha256": "c025053095eba1a822707f5c8f43786671b4d265031737c063014478f693dee8",
+    "bytes": 3771
+  }
+}

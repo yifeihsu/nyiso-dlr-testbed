@@ -1,0 +1,18 @@
+--- cached_upstream/updateOpCond.m
++++ capture_runtime/nygrid_full_updateOpCond.m
+@@ -1,4 +1,4 @@
+-function mpcreduced = updateOpCond(mpc,timeStamp,savedata,verbose,usemat)
++function [mpcreduced,full_mpc,reduced_pre_hvdc] = nygrid_full_updateOpCond(mpc,timeStamp,savedata,verbose,usemat)
+ %UPDATEOPCOND Update operation condition at a speficied timestamp
+ % 
+ %   Inputs:
+@@ -398,7 +398,9 @@
+ Exbus = [1:20,22:28,30:34,36,83:99,101,104:123,126:131,133,135:137,139:140];
+ % Perform network reduction algorithm
+ pf_flag = 1; % Solve dc power flow
++full_mpc = mpc; % capture only; released calculation is unchanged
+ [mpcreduced,~,~] = MPReduction(mpc,Exbus,pf_flag);
++reduced_pre_hvdc = mpcreduced; % capture only
+ 
+ fprintf("Finished calculating network reduction!\n");
+ 

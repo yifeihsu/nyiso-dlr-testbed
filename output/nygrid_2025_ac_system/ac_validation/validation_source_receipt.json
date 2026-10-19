@@ -1,0 +1,649 @@
+{
+  "integrity_audit_passed": true,
+  "created_utc": "2026-10-12T21:55:34.116429+00:00",
+  "numerical_solves_performed_by_this_sealing_step": false,
+  "modeltype": "bounded_synthetic_AC",
+  "model_scale": "existing_gamma_scaled_powers_at100MVA_no_impedance_or_current_gamma_lift",
+  "default_demonstration_hour": 8508,
+  "electrical_attempts": 7,
+  "electrical_qualified_OPF_and_ACPF_hours": [
+    2630,
+    8508,
+    8471,
+    8472
+  ],
+  "electrical_failed_hours": [
+    4194,
+    523,
+    4000
+  ],
+  "additional_initialization_trials": 6,
+  "additional_qualified_hours": [],
+  "thermal_attempts": 8,
+  "thermal_qualified_points": 4,
+  "thermal_failed_points_retained": 4,
+  "all_four_thermal_successes_independently_audited_and_ACPF_replayed": true,
+  "all_hours_or_all_tested_snapshots_feasible": false,
+  "global_infeasibility_proved_for_failed_hours": false,
+  "historical_annual_AC_DLR_replay_or_asbuilt_certification_claimed": false,
+  "steady_ampacity_at_declared_reference_R_only": true,
+  "conductor_temperature_equilibrium_validated": false,
+  "PF_backend": "MATPOWER legacy NR with deterministic initial perturbation; Q enforcement0 then independent bounds audit",
+  "source_data": [
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/external_capability_mapping.csv",
+      "sha256": "e14805484535e7bebd38e93071a86b9adafc365a2d73b2f4b2bb6b32c796439d",
+      "bytes": 11135
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/generator_capability_policy.json",
+      "sha256": "5426aa3db79a2cada69393b52831f0083834a84b8d3097957ff723f5e13dfba6",
+      "bytes": 2908
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/engineering_overlay.mat",
+      "sha256": "89fbfe38138ffc007930b3fec4dd4dd02b55f3a6518f73be25be56b1f9014f8f",
+      "bytes": 17646
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_design_plan.mat",
+      "sha256": "aee5d1a7f4e34a4bfafda7462af93b8245353775c9335f62ac158a21373d24b5",
+      "bytes": 37728
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_design_receipt.json",
+      "sha256": "36d941861036b9eba5c6a39c916d33ca3f44ef9df4520b015838c0a6c6ba17b2",
+      "bytes": 10490
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/final_branch_mapping_review.json",
+      "sha256": "9586191164f2a87c7ac63c84ce06d62f95c28a4973ce82185a4f85c9adbebd58",
+      "bytes": 5977
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/sectioned_design_independent_review.json",
+      "sha256": "60e02280d71f85ac0ea64737d96996e9ba1200045bca1481671975ed4fa5444f",
+      "bytes": 6403
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/thermal_conductors.csv",
+      "sha256": "660f0b04ac9df1c21a51018aa9e982addbf8a0d641dec276ce6ba118b3b31cc8",
+      "bytes": 13436
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/declared_weather_scenarios.csv",
+      "sha256": "ba6ee92302f00d21059561f1d8e01ec3be2e6ced577d0b1fc11e819bb6ce64b4",
+      "bytes": 139
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/model_generator_register.csv",
+      "sha256": "7c613350f8cb397dc80fbfffd78d1a5e6e8e956e46cccdb6fc3a238af0615dda",
+      "bytes": 190710
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b",
+      "bytes": 19157492
+    }
+  ],
+  "current_source_code": [
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/audit_ac_solution.m",
+      "sha256": "07fcd00ff9f525af02ed40a6ba82951f427b5827aa93ddf47c6a1afe7edfe1b2",
+      "bytes": 8163
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/build_capability_register.py",
+      "sha256": "f1731cbc270f4eec36c0c79985078c3fc35f4230a831622eb8bc06ad30989e9c",
+      "bytes": 5770
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/diagnose_reactive_balance.py",
+      "sha256": "325ed913091b7d7555743dcb7fc3dab7ae30e2baa0217ac8da15606bfbd380f1",
+      "bytes": 4296
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/probe_solver_starts.m",
+      "sha256": "1cf5ac00eeb8cd7eb1afaa177a869f54737d7eecaf9c59f1b75c33543f4aa4b3",
+      "bytes": 3000
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/replay_acpf_solution.m",
+      "sha256": "728266a00a0a4f6d70354e9fe34e4215d8613007e63c0534c84ba98a49c4ab08",
+      "bytes": 2357
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/run_capability_probe.m",
+      "sha256": "32ef7ee2d89bcd3655da5f5cd357a32f458e2684bcff4928a61e3ade4eec5ff1",
+      "bytes": 2848
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/run_current_diagnostic.m",
+      "sha256": "b0b50c6047fe7f37d9c3b301e260967a1699d77464aba88a97862505e0761f0c",
+      "bytes": 5028
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/run_diagnostic_sectioned_pf.m",
+      "sha256": "8638b49c5d111783f0f33fccc43c618b9d56165fc0f240417a199fe2a55eeaf5",
+      "bytes": 2767
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/run_electrical_validation.m",
+      "sha256": "99d71dc871beaa8c26cc1254093ca57f071d991392e4774eeebb633c5720ff75",
+      "bytes": 8303
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/seal_validation_sources.py",
+      "sha256": "a11525e686222e3dc8791f9da779b0139ce59f17f959a1940e6ef089f5c2e719",
+      "bytes": 7395
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/ac_validation/validate_thermal_snapshots.m",
+      "sha256": "7808523f09c6a187a55bd4a9e6e2ed6670a07fef73792da247dc90d2306b822d",
+      "bytes": 8040
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/build_assignments.py",
+      "sha256": "4da333c789719e8dc1a17304a458cf0aab40aa075de4c4d2aef038d82f1f70ea",
+      "bytes": 28543
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/build_sectioned_design.py",
+      "sha256": "398dc4046a4e4e18a451d48afa34d6d2a6d3f4627327c19196e8d5aea1b2c3bd",
+      "bytes": 17766
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/line_equivalents.py",
+      "sha256": "f55c9c499f8ee8d7bf925a5a97c3c06c2be55f813d3a256796480cb5201183e6",
+      "bytes": 12044
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/nygrid_ac_apply_sections.m",
+      "sha256": "ce3de5ef5ab5774ac30a596c589dc67ffb5231b8ca276cdf518d83e8c5180416",
+      "bytes": 9640
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/test_line_equivalents.py",
+      "sha256": "051fad77aa3dcd8fa5cce43e0f08bd66d6d85ac31cd736c06e8de8558d55bcdf",
+      "bytes": 6748
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/validate_sectioned_runtime.m",
+      "sha256": "9e6d98a02e19f0130bd19860a10c23d13c2dffbcfbe919f6c8abb9560a2ce165",
+      "bytes": 6922
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_conductor_heat.m",
+      "sha256": "a70fdf123e90d99b91e206e20dd7fb1b5eacdfd91349b92a29e558f654de0538",
+      "bytes": 768
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_conductor_resistance.m",
+      "sha256": "b51b4bb4b7ac0d5cf4f886950ac44ee5d2284d2951e74f4c07a6e4ac70511624",
+      "bytes": 668
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_apply_resistance.m",
+      "sha256": "f3f15f91f1192138162d9ba87fb3c6f413f843b7bfa565fd9a5ec4c3f97fa2ac",
+      "bytes": 1193
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_current_audit.m",
+      "sha256": "f14301f156172f08611fe3cc028616e6d8f5158d8b3b7457cd22717f5c6ca234",
+      "bytes": 2766
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_limits.m",
+      "sha256": "926fcaf95dc169d31b55278062178d10b750cf0cdc64aeb5530f1b8ad6015832",
+      "bytes": 2965
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_prepare_case.m",
+      "sha256": "3e989e7a7ef8210b85ca9a496a8a1dda2f2ea0fbc8dd44251dc311278bf4ee85",
+      "bytes": 4428
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_terminal_current_audit.m",
+      "sha256": "e4733cc21ce0e6e2a8cd918bdfa510f739785aac75915e1c9f978ed7ac66cae0",
+      "bytes": 1054
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/add_ac_terminal_current_limits.m",
+      "sha256": "550020e7da959b7f0b39a61d85ba7699fc8d7c509d57759f49711312c88237cd",
+      "bytes": 3139
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/test_ac_dlr_adapter.m",
+      "sha256": "9744f1d5307ece0878821a7c039c3a83358fc243fe586d72a1e76131eb552504",
+      "bytes": 8555
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/validate_ac_dlr_system.m",
+      "sha256": "f5a6c616ef7e9e63d06156d162fa8b1ffc64278d4d25e1f9bf281c4e1cb42d15",
+      "bytes": 6628
+    },
+    {
+      "path": "System Matpower Format/npcc_nygrid_2025_ac.m",
+      "sha256": "b46962e1d966233d03ae30bfdd1ad4d0120a075940579d83f9ffd7e017c5efc3",
+      "bytes": 9621
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/add_dlr_series_current_constraints.m",
+      "sha256": "0c2fe8ebd452894188cb11cb7e37776eb5dbc837b52c6b156cbe75fd8f288183",
+      "bytes": 1419
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/dlr_series_constraint.m",
+      "sha256": "3e1a967e63b43ab6ee4bf9e555f0a04382abe27fcbaafd138b12815d933bf627",
+      "bytes": 641
+    },
+    {
+      "path": "System Matpower Format/run_nygrid_2025_ac_dlr.m",
+      "sha256": "abb55a96e326d3d747bd82de89ddd8d0c845094a3869d9ffc4850472e5df561f",
+      "bytes": 2795
+    }
+  ],
+  "current_evidence": [
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/electrical_validation.json",
+      "sha256": "d4ff26cccd560789f65d7f0278b31f1ce2d01632784b0abe62f07367fa8ffc46",
+      "bytes": 22796
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_0523.json",
+      "sha256": "a1be7160cbcf86e053db6ac5309a3e6f466f0375d8b6aa3a50eaf062a4aba31e",
+      "bytes": 2900
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_0523.mat",
+      "sha256": "1b872be0444220256d8a98ff9b8d43ef8ba58e09a96a4ccac3a6334941c1fd38",
+      "bytes": 1632904
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_0523_nodal_balance.csv",
+      "sha256": "929200dc01fbc9b1126fe539d9fd53718bd3c4947b175d461d926a1f27632bd9",
+      "bytes": 12834
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_2630.json",
+      "sha256": "3044f89ed7e9d05135912f93a822f95a2120e65e439343a7b77e8c370edeb817",
+      "bytes": 2847
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_2630.mat",
+      "sha256": "82b69ce885cfc9dfe0c34385a87820fa8c610f8393d7297fd071767b762eb0ff",
+      "bytes": 2199286
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_2630_ACPF.json",
+      "sha256": "c813460bac24bcf89687ae6716c9a1a44ad465c52f8c837021632aee96a0de24",
+      "bytes": 2516
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_2630_ACPF.mat",
+      "sha256": "8002b4ebf515473f868516e8904512b0fcd74333c1b0484f0df5acfb569661bb",
+      "bytes": 600457
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_2630_nodal_balance.csv",
+      "sha256": "f4f38ad7156749c6e8d8e220fff4b752035012ff0270ec5b7cc66fb95766b8a6",
+      "bytes": 12545
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_4000.json",
+      "sha256": "01bc538272d0752d98e41a0ed94332994cb38fbd59aec6f5f7a0d92a8bea9871",
+      "bytes": 2900
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_4000.mat",
+      "sha256": "4b2fc76dee019e881e2875632e469c31c3a4ecbdf4b0163fa89cbd231dc464d3",
+      "bytes": 2190996
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_4000_nodal_balance.csv",
+      "sha256": "969b2580fcb414ef5f24424efb11bd577084f0daf3185b12f6b52db44270bc7c",
+      "bytes": 11219
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_4194.json",
+      "sha256": "62fd15daca378676b386ecb983ed720978f24339a5a3c26f56440310ddd357e0",
+      "bytes": 2894
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_4194.mat",
+      "sha256": "8d29588c732bad3881da8a0eb8ca6b04cfc1fc933acf8c30f4a30a8a28c36b6b",
+      "bytes": 2272230
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_4194_nodal_balance.csv",
+      "sha256": "1ce3dafcf6d4eb3288125c5954909e7f137fdcf155a399d2226ded44123eac47",
+      "bytes": 12923
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8471.json",
+      "sha256": "3cbb0f44a47a594a84fda250dfd7b60b8b98b55d1f0dccefbbd737ca2103b11c",
+      "bytes": 2829
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8471.mat",
+      "sha256": "a5950ee6efe0ac3f95e8f1df81bdf1b61f9c82ec92749a07c59b586ae036f357",
+      "bytes": 1625827
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8471_ACPF.json",
+      "sha256": "0591985107ee160e72c143972674d688d99b1c983088e3bc8261edf578359ee4",
+      "bytes": 2513
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8471_ACPF.mat",
+      "sha256": "bcf8bce70e9adc3af4dc79a7efe0691d590eb105c5c46fedfc5d4dafb298d0ca",
+      "bytes": 488985
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8471_nodal_balance.csv",
+      "sha256": "92f9d7d82604a5135ba313c5b1dee39138f915019b1b81b5fb1d5d8ce0fa8cd7",
+      "bytes": 12633
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8472.json",
+      "sha256": "d8a02a25db660cc3fa080847565f9e5d110a7ba4d90684c8e6a5666ddc3beb37",
+      "bytes": 2827
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8472.mat",
+      "sha256": "856e531d917069cb9b758c83f18ce3d269c691deaa2795faa657d17c37a11df7",
+      "bytes": 1631811
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8472_ACPF.json",
+      "sha256": "19dfaf5c4ae5531080334974acd374db6f40830aeade1aa5eaf98bdc544eac92",
+      "bytes": 2531
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8472_ACPF.mat",
+      "sha256": "18bd7b23ecfaa2773b2ca1651768c342cd2729c802577c7e20b3ebf49419b440",
+      "bytes": 493443
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8472_nodal_balance.csv",
+      "sha256": "4bfed378410ef78e97a5dfb223509e3d24f520195eac5c17b25ba10522215377",
+      "bytes": 12702
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8508.json",
+      "sha256": "45803d18aebed9c2e70426b81fd12853740826bc4ece67315893a62df283f184",
+      "bytes": 2830
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8508.mat",
+      "sha256": "a9cd1d613995cb55e71c24e582dee5b411a4fcc05e6ff0e57749ddbfa13e7ab2",
+      "bytes": 2312209
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8508_ACPF.json",
+      "sha256": "c3324859876e7d5145a0299ea1442c6d7f854d49292d5ae896abd3373640492e",
+      "bytes": 2514
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8508_ACPF.mat",
+      "sha256": "9d2ca7f57b092443b392a8e00ab86ce4d8e6a38eea936bc17aa19a3bc7fc1885",
+      "bytes": 624340
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/hour_8508_nodal_balance.csv",
+      "sha256": "73128bbe7d7cf0032f31a4a72b4bb699b73846a0c0bc8ce445fb1513a34e6ca7",
+      "bytes": 12782
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/selected_hour_generator_assumptions.csv",
+      "sha256": "d5527b9874c5801549b1f92ea0508ff495478a479dd385ed369892994e862321",
+      "bytes": 1667006
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_final/selection_plan.csv",
+      "sha256": "24bc788f491bd782dac7a4eda2ed68bb75b19e06ff2508b30a6b126bac866628",
+      "bytes": 307
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_solver_starts/h4000_minimum_load_voltage_seed.mat",
+      "sha256": "0701b63e90672e46db064cf864580e76297fdb565c8c2b9007a53cbc47a2e7bb",
+      "bytes": 2370285
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_solver_starts/h4000_original_case_state.mat",
+      "sha256": "f630f385898fc74aa6672b0667989597a6d512861592ec692fe9d16eee17bfd6",
+      "bytes": 2270888
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_solver_starts/h4194_minimum_load_voltage_seed.mat",
+      "sha256": "8dd6092672f542fc86126574be7bea3c54f40a164eff9671d9908cc1f9aa9c45",
+      "bytes": 2364607
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_solver_starts/h4194_original_case_state.mat",
+      "sha256": "492b582e97bb642053b452d6487388745b7dcb0b18a52bdc3994ba69c7bfda51",
+      "bytes": 2264816
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_solver_starts/h523_minimum_load_voltage_seed.mat",
+      "sha256": "193437822a075f5a25d67e65cdf7ad31f7b96bce6fc711ee685d0a101f3e59e4",
+      "bytes": 1691252
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_solver_starts/h523_original_case_state.mat",
+      "sha256": "4934466a47f50d835977d5fb8672bfb156ceee503ce843b5fcc0294718934a34",
+      "bytes": 1628989
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/electrical_solver_starts/solver_start_diagnostics.json",
+      "sha256": "03191a3398da6eaecfe27a266f122a32a87d528c8b9f3a4e62a995280f22175f",
+      "bytes": 15080
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h2630_breezy_ACPF.json",
+      "sha256": "d6612683861cf96085f524728e02bf11da047ab4a51b29bb67f631d29b0fa221",
+      "bytes": 2588
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h2630_breezy_ACPF.mat",
+      "sha256": "7dd3f02cf92ff98469718da3318a7696e4e0a43fc67240ce55223935f0dd69bc",
+      "bytes": 614279
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h2630_breezy_audit.json",
+      "sha256": "f1af3e20cda4647a7a971660e3145dec71efd1013ab285b12afce58075966a63",
+      "bytes": 1453
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h2630_breezy_audit.mat",
+      "sha256": "0310a9daa41aba12804e88a78fd600162bf65f8d3325ba4380fd12c675a181b9",
+      "bytes": 41456
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h2630_breezy_independent_segment_audit.csv",
+      "sha256": "0314b638b6f957bca551f6e684042807e94ef0fe4632358e0e49b1abb6ac6d0a",
+      "bytes": 125046
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h2630_catalog_reference_ACPF.json",
+      "sha256": "e6924db48b707ac5adc540d4dec31b9a2381602e5a4c698b35f222838f6146fd",
+      "bytes": 2589
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h2630_catalog_reference_ACPF.mat",
+      "sha256": "fdf89773382bae0ccc751c99a9d8ae9dd7a8094ff83c441b8f6858b94ea40df9",
+      "bytes": 613827
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h2630_catalog_reference_audit.json",
+      "sha256": "0340818d9cef073ede28cdc5a06250894e1ce1da553d1bf34ed92fb817ea6f29",
+      "bytes": 1478
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h2630_catalog_reference_audit.mat",
+      "sha256": "00d022f377bbffacf7ef743a6ff73a255c515899a3481b590fc456c354fcdc37",
+      "bytes": 41453
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h2630_catalog_reference_independent_segment_audit.csv",
+      "sha256": "b812b06d836e7c71ada2e68cf1e43f968d433e390fcc1c1f78d36319de31b1f8",
+      "bytes": 125017
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h4000_breezy_audit.json",
+      "sha256": "1c3ce333101d0a9a0e2b31d6721f25f832279c6b487faf0d57ab5f215a256072",
+      "bytes": 1355
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h4000_breezy_audit.mat",
+      "sha256": "c9ea648fb17037e42bf876652a73eeadf30cb4143372d345439127b82db0a4dd",
+      "bytes": 41849
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h4000_catalog_reference_audit.json",
+      "sha256": "03cdb1cdd5c8b39025985c80c71a00b9b96662a7eac0deb839599e38a7edbf4a",
+      "bytes": 1375
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h4000_catalog_reference_audit.mat",
+      "sha256": "d08cfe87a1f1618692a2ecb0ce20427a291543cfd6f7cd43e8bc6c27a1a42641",
+      "bytes": 41910
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h4194_breezy_audit.json",
+      "sha256": "1850f0fa3e4f3a62dacddb9cbf003984b99c9bd8b4ea1842a9e7c3b9e778274c",
+      "bytes": 1347
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h4194_breezy_audit.mat",
+      "sha256": "6917dd8ce29eb5400ad73a02f16224ff9a61b44ab91f05a71698d05352b86ba5",
+      "bytes": 42577
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h4194_catalog_reference_audit.json",
+      "sha256": "b905af1ae21115d32998c0ec5ba85fc261c34d9d8a6a43336fdb364313786aa0",
+      "bytes": 1372
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h4194_catalog_reference_audit.mat",
+      "sha256": "80434fc9892bbd54a1b5444c3d6a4bf6ca2a32fac2904f959b3e615377069196",
+      "bytes": 42609
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h8508_breezy_ACPF.json",
+      "sha256": "f634c7a35de33f5f09487ab3a973e08f43e87c7104cd0c181dcd68d133ea3aa6",
+      "bytes": 2568
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h8508_breezy_ACPF.mat",
+      "sha256": "aa0976017c2d49b76b6e7581a8339b240f8178149e71cdadd55a99be4f630567",
+      "bytes": 638227
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h8508_breezy_audit.json",
+      "sha256": "89df93038df065bbf42c84c43c4e734f5a9bc16490fee59141f7fe139f2efa53",
+      "bytes": 1457
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h8508_breezy_audit.mat",
+      "sha256": "b2b166b5593e0526e229254a4cf38ea5802940039165db6fece90dd34466d58c",
+      "bytes": 42325
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h8508_breezy_independent_segment_audit.csv",
+      "sha256": "0e1e148e6d26489935eaa992944b3b9324e98ebe74d4ba487e63a6c2f413269d",
+      "bytes": 126108
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h8508_catalog_reference_ACPF.json",
+      "sha256": "4d5a8d0bf65e12932ccb0d6f2c7177eebcec8aefe68173b1ff67acd945ec3405",
+      "bytes": 2565
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h8508_catalog_reference_ACPF.mat",
+      "sha256": "620c69addee620bd96f94c7d94d18e310b583083142c12e9a535d884268560eb",
+      "bytes": 637926
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h8508_catalog_reference_audit.json",
+      "sha256": "8f608b5a6f0673cd866c426c1f6e8b16172fbd860561592c07b4609de8ff18e0",
+      "bytes": 1475
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h8508_catalog_reference_audit.mat",
+      "sha256": "a0c6ce9b8e4ccfc37891c6b955117f578e1e13f8130e40d91f1e12b58ff92d5c",
+      "bytes": 42237
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/h8508_catalog_reference_independent_segment_audit.csv",
+      "sha256": "85624d51e4ce107c2afcfe6fd69c5d4b6a4c7847c7a5c341fbe6f87e88d081a9",
+      "bytes": 126102
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/independent_snapshot_checks.csv",
+      "sha256": "36c1d8e6cdd07285d475a98c68700e040444585c25605e14b7cb79a72dd3e8d2",
+      "bytes": 4232
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/ac_validation/independent_thermal_snapshots/independent_thermal_snapshot_validation.json",
+      "sha256": "5b6a310c8a0281bff922667c29bb0460c493fca5166257ef0855c99dd8eeb4de",
+      "bytes": 12847
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/h2630_breezy.mat",
+      "sha256": "ba537850cc5e7922cec08a8c5643f2c7f1fdbc62e4fb8c08cf5580483f294cd4",
+      "bytes": 2612814
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/h2630_catalog_reference.mat",
+      "sha256": "8b884fde2bd0e962d93487240b173a3b44621e95c6024605effe78a9ee2cee4d",
+      "bytes": 2612073
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/h4000_breezy.mat",
+      "sha256": "f24f2d652a24b4e7a3c1bc2d507fd03bd4d6a3db4c7cdf7926598cfebac11b3f",
+      "bytes": 2600774
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/h4000_catalog_reference.mat",
+      "sha256": "dc8fcebfa0795e91e094bc353a37a6d8f24fa6a001298980b3e257f9f26dece9",
+      "bytes": 2601119
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/h4194_breezy.mat",
+      "sha256": "30daaa9379cbd08b7c20e3c8ac6c88f4e5f152a442eae7e340512443b8df3569",
+      "bytes": 2596388
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/h4194_catalog_reference.mat",
+      "sha256": "ae23add502c90eaf3582706785936a3e19463ef1d2cd10c8488b39b7fbfbee39",
+      "bytes": 2596564
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/h8508_breezy.mat",
+      "sha256": "929751d7a0e88e2d9936582b32085221c1f855baee0b4afd240aaa99b7dbf1a7",
+      "bytes": 2737002
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/h8508_catalog_reference.mat",
+      "sha256": "ddad9812ce01e79794851c4c6565c2aad93b869a4f56654450a6637dab203d8a",
+      "bytes": 2736189
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/whole_system_snapshot_results.csv",
+      "sha256": "722720a0b22fb9e75fbfed8c52d55f6bcbba62244a47ed88b2e4c2bd3bb990f4",
+      "bytes": 1689
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/whole_system_validation.json",
+      "sha256": "1e4044ada7e08d20a76c9fd2d03fbe29c22429b8e05c5d5b9ebb91f6f92773d1",
+      "bytes": 7364
+    }
+  ],
+  "prior_failed_sectioned_Q_rectangle_archive": {
+    "path": "output/nygrid_2025_ac_system/ac_validation/electrical_revision03/archive_receipt.json",
+    "sha256": "4b36ec42309e4ffb328ecc3b36502aaf3efb3fff69c61cf4a7935dd768264527",
+    "bytes": 4338
+  },
+  "behavior_changes_require_relevant_numerical_revalidation": true
+}

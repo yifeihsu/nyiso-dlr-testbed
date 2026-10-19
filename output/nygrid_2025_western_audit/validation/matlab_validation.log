@@ -1,0 +1,18 @@
+                                         passed: 1
+                       fresh_MATPOWER_snapshots: 95
+                                          modes: ["mapping_only"    "Ontario_actual_only"    "Ontario_actual_and_mapping"    "all_boundary_actual_only"    "combined"]
+                  maximum_branch_error_model_mw: 1.5433e-11
+                     maximum_angle_error_degree: 4.7606e-13
+             maximum_generation_change_model_mw: 1.7764e-11
+               maximum_bound_violation_model_mw: 2.2737e-13
+               maximum_interface_error_model_mw: 2.6716e-11
+            maximum_six_transfer_error_model_mw: 1.4211e-14
+                          missing_hour_rejected: 1
+                          invalid_mode_rejected: 1
+                      invalid_topology_rejected: 1
+                    IESO_suspect_hours_rejected: 6
+    AC_or_physical_PAR_tap_feasibility_verified: 0
+                                MATPOWER_solver: 'C:\Users\Holiday\OneDrive\Documents\MATLAB\matpower\lib\rundcpf.m'
+                                 MATLAB_version: '26.1.0.3276743 (R2026a) Update 3'
+                                   dependencies: [1×19 struct]
+

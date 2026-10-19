@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "scope": "Independent source inspection plus freshness verification of executed adapter fixtures including a small constrained ACOPF; not whole-network AC/thermal feasibility",
+  "created_utc": "2026-10-12T21:45:40.978566+00:00",
+  "fixture_tests": 21,
+  "inspected_invariants": [
+    "Conductor heating uses the selected synthetic AC current directly, with no gamma rescaling.",
+    "R(T) interpolates manufacturer AC values only inside the valid table; no doubled temperature coefficient.",
+    "Resistance is rebuilt from immutable per-segment dimensions and integer circuit/bundle multiplicity.",
+    "Weather ampacity applies per subconductor; branch phase ampacity is the minimum over heterogeneous sections after multiplication by circuit and bundle counts.",
+    "The series-current callback excludes lumped shunt charging and divides phase current by circuit and bundle counts for Joule heating.",
+    "Terminal hardware constraints use Yf and Yt including shunt charging and taps, at the appropriate per-end current base.",
+    "Terminal current audits divide solved MVA by actual terminal voltage, avoiding nominal-voltage MVA-only ambiguity.",
+    "Active external branch rows map through MATPOWER order.branch.status.on before formulation.",
+    "Generic current-squared Jacobian and Hessian are reused for terminal matrices and were checked by finite differences.",
+    "Hardware and conductor-section terminal limits use distinct constraint names and coexist in the executed small ACOPF fixture.",
+    "A missing hardware endpoint is represented by NaN and excluded from the formulation; this is tested with one physical endpoint.",
+    "The conductor section endpoint envelope uses the weather-dependent phase ampacity at both ends, separately from the series-current Joule calculation.",
+    "Active thermal mapping preserves the six fixed-transfer records, generator controls, costs and bus data.",
+    "Three-phase subconductor Joule loss agrees with the selected lumped-pi terminal active-power loss.",
+    "Reference resistance temperature is explicitly not claimed to be a solved thermal equilibrium."
+  ],
+  "material_limitations": [
+    "The section-end thermal envelope is an approximation safeguard; it does not certify the exact continuous along-route maximum current.",
+    "The heat model uses simplified solar absorption and excludes sag, clearance, radial gradients and bundle shielding.",
+    "Uniform weather is a declared scenario, not observed route-specific weather.",
+    "This review does not certify buried-cable thermal ratings or transformer nameplate identities.",
+    "Whole-system AC feasibility and coupled temperature equilibrium require their own fresh solve evidence."
+  ],
+  "inspected_files": [
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/adapter_tests.csv",
+      "sha256": "469d8ed6359505b22b1c17ddac3d2b3ca3ee8146831fe8519f55e9a8b8b5be6f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/thermal/adapter_validation.json",
+      "sha256": "b351e91f7058058fd938ff511b87a41878a2ef55c521d631e85df70831e041e3"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/engineering/record_thermal_review.py",
+      "sha256": "51567ce7e5a200acb1aa4f4077fbd4e05143d85a8b4a4e05fdbc5905b7935ff6"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_conductor_heat.m",
+      "sha256": "a70fdf123e90d99b91e206e20dd7fb1b5eacdfd91349b92a29e558f654de0538"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_conductor_resistance.m",
+      "sha256": "b51b4bb4b7ac0d5cf4f886950ac44ee5d2284d2951e74f4c07a6e4ac70511624"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_apply_resistance.m",
+      "sha256": "f3f15f91f1192138162d9ba87fb3c6f413f843b7bfa565fd9a5ec4c3f97fa2ac"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_current_audit.m",
+      "sha256": "f14301f156172f08611fe3cc028616e6d8f5158d8b3b7457cd22717f5c6ca234"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_limits.m",
+      "sha256": "926fcaf95dc169d31b55278062178d10b750cf0cdc64aeb5530f1b8ad6015832"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_dlr_prepare_case.m",
+      "sha256": "3e989e7a7ef8210b85ca9a496a8a1dda2f2ea0fbc8dd44251dc311278bf4ee85"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/ac_terminal_current_audit.m",
+      "sha256": "e4733cc21ce0e6e2a8cd918bdfa510f739785aac75915e1c9f978ed7ac66cae0"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/add_ac_terminal_current_limits.m",
+      "sha256": "550020e7da959b7f0b39a61d85ba7699fc8d7c509d57759f49711312c88237cd"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/test_ac_dlr_adapter.m",
+      "sha256": "9744f1d5307ece0878821a7c039c3a83358fc243fe586d72a1e76131eb552504"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/thermal/validate_ac_dlr_system.m",
+      "sha256": "f5a6c616ef7e9e63d06156d162fa8b1ffc64278d4d25e1f9bf281c4e1cb42d15"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/add_dlr_series_current_constraints.m",
+      "sha256": "0c2fe8ebd452894188cb11cb7e37776eb5dbc837b52c6b156cbe75fd8f288183"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/dlr_heat_balance.m",
+      "sha256": "9a17663131eabae61c3d4cefff5a7d726c9ae81711c21992836411062416fed1"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/dlr_series_constraint.m",
+      "sha256": "3e1a967e63b43ab6ee4bf9e555f0a04382abe27fcbaafd138b12815d933bf627"
+    }
+  ]
+}

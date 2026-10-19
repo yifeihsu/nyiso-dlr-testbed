@@ -1,0 +1,459 @@
+{
+  "passed": true,
+  "figures_complete": true,
+  "status": "complete_static_geography_and_map_exports",
+  "state": "refined_2025",
+  "total_buses": 148,
+  "original_buses": 140,
+  "added_buses": 8,
+  "added_bus_ids": [
+    10774,
+    10858,
+    10902,
+    10593,
+    10589,
+    11129,
+    11130,
+    20001
+  ],
+  "added_nominal_kv": 345,
+  "geographic_bus_records": 145,
+  "nongeographic_original_proxy_buses": [
+    78,
+    79,
+    82
+  ],
+  "coordinate_policy": "exact_subset_of_frozen191_geographic_register_no_new_geocoding_or_imputation",
+  "original_model_coordinate_points_approximate": 129,
+  "original_source_backed_station_anchors": 8,
+  "branch_counts": {
+    "retained": 216,
+    "source": 14,
+    "assumed": 5,
+    "equivalent": 30,
+    "replaced": 9,
+    "dc": 4
+  },
+  "active_network_branch_records": 265,
+  "inactive_replaced_branch_records": 9,
+  "scheduled_DC_channels": 4,
+  "equivalents_are_physical_circuits": false,
+  "branch_lines_are_actual_routes": false,
+  "parallel_records_share_display_stroke": true,
+  "projected_crs": "+proj=lcc +lat_1=40 +lat_2=45 +lat_0=42 +lon_0=-76 +datum=WGS84 +units=m +no_defs",
+  "maximum_projected_coordinate_difference_km": 5.684341886080802e-14,
+  "original_network_and_PG_files_unchanged": true,
+  "coordinate_features": {
+    "node_features": 148,
+    "mapped_nodes": 145,
+    "connection_features": 278,
+    "mapped_connections": 263,
+    "nongeographic_connections": 15
+  },
+  "views": {
+    "atlas_regional": {
+      "geographic_bus_ids": [
+        32,
+        34,
+        35,
+        36,
+        73,
+        74,
+        76,
+        77,
+        80,
+        81,
+        125,
+        126,
+        10774,
+        10858,
+        10902,
+        10593,
+        10589,
+        11129,
+        11130,
+        20001
+      ],
+      "labeled_bus_ids": [
+        35,
+        73,
+        74,
+        76,
+        77,
+        10774,
+        10858,
+        10902,
+        20001
+      ],
+      "shown_connection_records": 49,
+      "label_placement": {
+        "label_boxes": 9,
+        "overlap_pairs": 0,
+        "algorithm": "nearest_free_display_box_with_fixed_geographic_anchor"
+      },
+      "geographic_anchors_not_displaced": true
+    },
+    "atlas_city": {
+      "geographic_bus_ids": [
+        81,
+        126,
+        10593,
+        10589,
+        11129,
+        11130
+      ],
+      "labeled_bus_ids": [
+        81,
+        10593,
+        10589,
+        11129,
+        11130
+      ],
+      "shown_connection_records": 11,
+      "label_placement": {
+        "label_boxes": 5,
+        "overlap_pairs": 0,
+        "algorithm": "nearest_free_display_box_with_fixed_geographic_anchor"
+      },
+      "geographic_anchors_not_displaced": true
+    },
+    "aggregate_proxy_inset": {
+      "proxy_ids": [
+        78,
+        79,
+        82
+      ],
+      "geographic_positions_invented": false,
+      "connections": [
+        {
+          "model_bus": 78,
+          "incident_connection_records": 6,
+          "category_counts": {
+            "replaced": 5,
+            "assumed": 1
+          }
+        },
+        {
+          "model_bus": 79,
+          "incident_connection_records": 3,
+          "category_counts": {
+            "replaced": 1,
+            "assumed": 1,
+            "dc": 1
+          }
+        },
+        {
+          "model_bus": 82,
+          "incident_connection_records": 8,
+          "category_counts": {
+            "equivalent": 7,
+            "replaced": 1
+          }
+        }
+      ]
+    },
+    "city_detail": {
+      "geographic_bus_ids": [
+        81,
+        126,
+        10593,
+        10589,
+        11129,
+        11130
+      ],
+      "labeled_bus_ids": [
+        81,
+        10593,
+        10589,
+        11129,
+        11130
+      ],
+      "shown_connection_records": 11,
+      "label_placement": {
+        "label_boxes": 5,
+        "overlap_pairs": 0,
+        "algorithm": "nearest_free_display_box_with_fixed_geographic_anchor"
+      },
+      "geographic_anchors_not_displaced": true
+    },
+    "full_npcc": {
+      "geographic_bus_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        80,
+        81,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        10774,
+        10858,
+        10902,
+        10593,
+        10589,
+        11129,
+        11130,
+        20001
+      ],
+      "labeled_bus_ids": [
+        1,
+        16,
+        28,
+        35,
+        43,
+        47,
+        50,
+        52,
+        54,
+        69,
+        83,
+        85,
+        91,
+        92,
+        115,
+        124,
+        125,
+        130,
+        134,
+        138,
+        140
+      ],
+      "shown_connection_records": 263,
+      "label_placement": {
+        "label_boxes": 21,
+        "overlap_pairs": 0,
+        "algorithm": "nearest_free_display_box_with_fixed_geographic_anchor"
+      },
+      "geographic_anchors_not_displaced": true
+    }
+  },
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/bus_geographic_register.csv",
+      "sha256": "7aaedd8f68e6c1a9d2c13cf19158abe604a57c669ef1c3aa7e07df2e33476973"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/branch_register.csv",
+      "sha256": "547c40ce859c358ded212f1755b879ee508a2d56c1354e7d40782b11e0bfb82d"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/basemap_receipt.json",
+      "sha256": "d12a48b550b44db1c5968697b6e6f98f32a35a56818d685be22aefbe876fb38b"
+    },
+    {
+      "path": "scripts/nygrid_2025_slim/build_slim_geography.py",
+      "sha256": "f0daa02e29ed0cae49f0c0f802a4dfce05b4ee49acf88c7c6980b31e505d7e6c"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/build_geographic_diagrams.py",
+      "sha256": "b345e787d938b808f44b7fbe3b252a69a9de657e949b09ca9515af18c62615b3"
+    },
+    {
+      "path": "scripts/nygrid_2025_downstate/build_network_diagrams.py",
+      "sha256": "18bbc24e1fd5d918ed8f524a3a88f2f6a035a535e34abc1ea9263778aedc8d17"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_admin_1_states_provinces_lines_npcc.geojson",
+      "sha256": "908078a62f09080b9100423639245459e0e91880a316a50399b8d5f38cb8e6f6"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_lakes_npcc.geojson",
+      "sha256": "5647268771afe6b49e8de6620bd7aa4cca6b5976492090a7bcc1bceacf4c4737"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_land_npcc.geojson",
+      "sha256": "149ff4f15aa36650d87726349c14e8eac5246638554e46ce86fd672b8c2a5bbe"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_slim/geography/bus_geographic_register.csv",
+      "sha256": "481d2b3ded7bddc4bc2448b696e6c4f5d2ab8ef137c9c00fae10813069b8dfae"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/geographic_nodes.geojson",
+      "sha256": "6fa9464dc69ce83da6bfc70c40c3d1ce31a05400b544fbe50d52c9b5fe4764c4"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/geographic_connections.geojson",
+      "sha256": "0aee54ad1073693be47de27d508914986a92d03519be71ba1eba16e5472bfb5d"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_atlas.pdf",
+      "sha256": "e55938e0372824241503cf3534956b14adcbe946cd353fc3283b4d98048e370c"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_atlas.png",
+      "sha256": "3a9f74ad8371ae75ed695b5d78f32b52f53f0322466af3aef8cef5b0e9c3c3cc"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_atlas.svg",
+      "sha256": "5a47ed7a659febb4892f03c4c32d8afc2442c6a25986a3e248f992f95b18252c"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_full_npcc.pdf",
+      "sha256": "e7a18bd919b1f04a25c26f841bccb1e5da66ac599a8b4e765fb323e6fc13eb35"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_full_npcc.png",
+      "sha256": "1186fd159aabc4f7b858e995a981ac5174e75e25ef91357d24236cf353360106"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_full_npcc.svg",
+      "sha256": "8a6480887c7d4edb12cc912188ef7e2be04ce817c7340e54a9e01d6752792a17"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_nyc_detail.pdf",
+      "sha256": "e468c2f8a5ed25d0bb657a1b90e0e9985ce85158d1ca4e4fdc48b74de2c1e2a6"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_nyc_detail.png",
+      "sha256": "a633e04e47a9b8834331add3cb1be2a403d4def026a663c93cecc9165710ac13"
+    },
+    {
+      "path": "output/nygrid_2025_slim/geography/figures/geographic_slim_nyc_detail.svg",
+      "sha256": "e348c5baa39cf35131fd909b147ad84aeb7a0d52b4b6f8824d136d334306ca7c"
+    }
+  ]
+}

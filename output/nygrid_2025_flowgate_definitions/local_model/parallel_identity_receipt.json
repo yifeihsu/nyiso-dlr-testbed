@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T02:45:56.707861+00:00",
+  "groups": 26,
+  "group_state_checks": 130,
+  "complete_historical_bundle_checks": 130,
+  "historical_DC_individual_operator_permutation_invariant_checks": 130,
+  "max_oriented_operator_spread_MW_per_rad": 0.0,
+  "physical_2025_identity_established": false,
+  "observations_used": false,
+  "source_hashes_unchanged": true,
+  "limitations": "Historical numerical permutation invariance never establishes a utility circuit number, 2025 member list, in-service status, resection lineage, or actual meter-end losses.",
+  "inputs": {
+    "PERFORM/On Peak 2019 v23_Perform_NY/On Peak 2019 v23/nyiso_On_Peak_v23_shunts_as_z_load.m": "36e86cea63f1dea0872d1c2ec57f09e20d5c5ce99dad20d9977a1b014b20edb5",
+    "PERFORM/Auxilliary_Perform_NY/Branch_changes_2019_to_2030.xlsx": "31d519c74f75a06a77ed11fabf535e4579fbc5c94cbb7e0a6be14cec38a054b8",
+    "output/nygrid_2025_downstate/network/network_cases.mat": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+    "output/nygrid_2025_slim/network/network_cases.mat": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58",
+    "output/nygrid_2025_downstate/network/branch_register.csv": "6a574d53b40eb2bf08dba851757a5d56ab6b4d89377b2a33e5d6319d5cd2a18f",
+    "output/nygrid_2025_downstate/network/bus_register.csv": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27",
+    "output/nygrid_2025_downstate/network/source_bus_map.csv": "56f9bad150c960236c0982a9076d681423f5558aad47c672ab432eaffc188c72",
+    "output/nygrid_2025_slim/network/branch_register.csv": "547c40ce859c358ded212f1755b879ee508a2d56c1354e7d40782b11e0bfb82d",
+    "output/ny_only_package_a/source_inventory/perform_ny_branch_inventory.csv": "09898f0857ca417c99ad19516578b9b7b15adef565529fe066ae7f5df6ecd97b",
+    "output/ny_only_package_a/source_inventory/perform_ny_bus_inventory.csv": "1389fef08bd6a75db5aabd7958a3a735b0dd4483181eb1c93ae31ed2fffd405f",
+    "source_crosswalk_receipt.json": "cb972562c785e4a420ec8b240d19c3b4869517b101226c073c493a05067ff120",
+    "PERFORM_source_to_model.csv": "718a8ebe99223678faf23238c8d74f500be985e7767dbdaec75623bf5be6096d"
+  },
+  "outputs": {
+    "historical_parallel_identity_checks.csv": "3ea5830bc400262b1426b6118914c8ef146228f5bb49c62ebf4c724305779240"
+  },
+  "script_sha256": "1f7c4011d13b0fdf3efbfabf7c6b9d9ff0b81f46805e2cbe992485f5021531e5"
+}

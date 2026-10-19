@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-12T17:11:18.949048+00:00",
+  "scope": "2025-12-19only;fourmodeledPTIDsonly;notallarchiveversions",
+  "modeled_ptids": [
+    25118,
+    25119,
+    625149,
+    625150
+  ],
+  "comparisons": [
+    {
+      "ptid": 25118,
+      "frozen_records": 288,
+      "new_download_records": 288,
+      "timestamp_axis_exact": true,
+      "posted_values_exact": true,
+      "maximum_posted_value_difference": 0.0
+    },
+    {
+      "ptid": 25119,
+      "frozen_records": 288,
+      "new_download_records": 288,
+      "timestamp_axis_exact": true,
+      "posted_values_exact": true,
+      "maximum_posted_value_difference": 0.0
+    },
+    {
+      "ptid": 625149,
+      "frozen_records": 288,
+      "new_download_records": 288,
+      "timestamp_axis_exact": true,
+      "posted_values_exact": true,
+      "maximum_posted_value_difference": 0.0
+    },
+    {
+      "ptid": 625150,
+      "frozen_records": 288,
+      "new_download_records": 288,
+      "timestamp_axis_exact": true,
+      "posted_values_exact": true,
+      "maximum_posted_value_difference": 0.0
+    }
+  ],
+  "native_unit_header_unchanged": "Flow (MWH)",
+  "quantity_unit_or_SCADA_origin_proven": false,
+  "frozen_zip_member_sha256": "0764881bf5cc798c8985909860a16d2b5c6450bdc9e5689416686d9766758bd7",
+  "dependencies": {
+    "output/nygrid_2025_p34_qualification/sources/NYISO_OASIS_ParFlows_20251219.csv": "0764881bf5cc798c8985909860a16d2b5c6450bdc9e5689416686d9766758bd7",
+    "output/nygrid_2025_moses_audit/exchanges/raw/20251201ParFlows_csv.zip": "6e08b8e43669c5d97348842c107c3043812167eb505018e3eac44977a2a639ef"
+  },
+  "source_hashes_unchanged": true,
+  "output_sha256": "2541b822dad9df6bd57f366a249a40b553864f599eeaf571b54cd6c93f5e70fd",
+  "script_sha256": "7a9eb87a4284b958b8658e8e8f3c9ee3b0187f0c646c224d85b92f400d2889bf"
+}

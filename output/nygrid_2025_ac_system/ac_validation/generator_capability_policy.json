@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "modeltype": "bounded_synthetic_AC",
+  "baseMVA": 100,
+  "power_scale": "synthetic_existing_gamma_scaled_injections",
+  "impedance_rescaled_to_unscale_power": false,
+  "current_divided_by_gamma": false,
+  "native_Q_policy": "Online Qmin/Qmax = plus/minus hourly max(abs(Pmin),abs(Pmax))*tan(acos(0.95)).",
+  "external_Q_policy": "Regional boundary equivalent Qmin/Qmax = plus/minus sqrt(unchanged_assumed_S^2-fixed_P^2) if admitted; fixed external P schedule remains unchanged.",
+  "external_class_is_individual_synchronous_generator": false,
+  "external_assumed_S_enlarged_when_Q_policy_changed": false,
+  "external_previous_PF_rectangle_trial_retained_as_diagnostic": true,
+  "external_capacity_policy": "max(abs(parent Pmax),abs(parent Pmin)) on existing model base; no gamma multiplier; not an observed nameplate.",
+  "offline_Q_policy": "Existing GEN_STATUS=0 implies Qmin=Qmax=0; no assumed offline STATCOM service.",
+  "GEN_STATUS_is_DC_availability_admission_not_observed_commitment": true,
+  "admitted_zero_PG_rows_may_provide_Q_in_the_synthetic_model": true,
+  "physical_unit_commitment_or_generator_D_curves_validated": false,
+  "assumed_generator_S_proxy_MVA": "Capability reference /0.95. Native rectangular box lies inside this circle; external boundary equivalents use the full fixed-P circle slice at the same S. Reject fixed P above S.",
+  "voltage_limits_pu": [
+    0.95,
+    1.05
+  ],
+  "active_power_objective": "sum((PG-PG_DC_prior)^2/max(hourly max(abs(Pmin),abs(Pmax)),1))",
+  "reactive_power_objective": "sum(0.01*QG^2/max(Qcap,1))",
+  "objective_is_economic_cost": false,
+  "fixed_external_P_refers_to_generator_injections_not_loss_corrected_regional_AC_interchange": true,
+  "external_fixed_P_source_finite_rows_checked": 242844,
+  "external_fixed_P_source_rows_above_capacity": 0,
+  "maximum_external_fixed_P_to_parent_capacity": 0.4825035309345798,
+  "source_external_Q_limits_999_and_9999_used": false,
+  "reactive_nameplate_capability_verified": false,
+  "historical_AC_state_reconstructed": false,
+  "annual_ACOPF_performed": false,
+  "internal_interface_observations_read": false,
+  "assumptions_sized_from_solver_residuals": false,
+  "sources": [
+    {
+      "path": "output\\nygrid_2025_inputs\\model\\operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b"
+    },
+    {
+      "path": "output\\nygrid_2025_dispatch\\dispatch\\model_generator_register.csv",
+      "sha256": "7c613350f8cb397dc80fbfffd78d1a5e6e8e956e46cccdb6fc3a238af0615dda"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output\\nygrid_2025_ac_system\\ac_validation\\external_capability_mapping.csv",
+      "sha256": "e14805484535e7bebd38e93071a86b9adafc365a2d73b2f4b2bb6b32c796439d"
+    }
+  ],
+  "script_sha256": "f1731cbc270f4eec36c0c79985078c3fc35f4230a831622eb8bc06ad30989e9c"
+}

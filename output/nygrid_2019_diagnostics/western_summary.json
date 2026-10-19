@@ -1,0 +1,251 @@
+{
+  "baseline": "pinned_released_57_bus_corrected_if_map",
+  "hours": 8760,
+  "interfaces": [
+    {
+      "population": "all_8760_prepared_hours",
+      "interface": "Dysinger East",
+      "hours": 8760,
+      "mean_sim_mw": 983.8658029113094,
+      "mean_observed_mw": 931.9405555858398,
+      "mean_absolute_observed_mw": 933.2050422823626,
+      "mae_mw": 209.91815217397058,
+      "rmse_mw": 261.14648067521034,
+      "bias_sim_minus_observed_mw": 51.925247325469634,
+      "wape_pct": 22.494322540367826,
+      "mape_nonzero_pct": 57.45420162323992,
+      "median_absolute_error_mw": 179.52516366890666,
+      "p95_absolute_error_mw": 513.8538876063363,
+      "maximum_absolute_error_mw": 1076.2179880973072,
+      "opposite_direction_hours": 77,
+      "positive_error_hours": 5364,
+      "negative_error_hours": 3396,
+      "zero_observed_hours": 0,
+      "observed_abs_below_100mw_hours": 70,
+      "observed_abs_below_250mw_hours": 241,
+      "observed_abs_below_500mw_hours": 1168
+    },
+    {
+      "population": "all_8760_prepared_hours",
+      "interface": "West Central",
+      "hours": 8760,
+      "mean_sim_mw": 504.5813990628898,
+      "mean_observed_mw": 419.94943426100633,
+      "mean_absolute_observed_mw": 466.74440756583436,
+      "mae_mw": 218.46347406592213,
+      "rmse_mw": 270.2341307905345,
+      "bias_sim_minus_observed_mw": 84.63196480188344,
+      "wape_pct": 46.805804317025014,
+      "mape_nonzero_pct": 260.9778412622011,
+      "median_absolute_error_mw": 189.4308775333376,
+      "p95_absolute_error_mw": 522.8368287033447,
+      "maximum_absolute_error_mw": 1121.9912574222683,
+      "opposite_direction_hours": 1006,
+      "positive_error_hours": 5746,
+      "negative_error_hours": 3014,
+      "zero_observed_hours": 0,
+      "observed_abs_below_100mw_hours": 1131,
+      "observed_abs_below_250mw_hours": 2672,
+      "observed_abs_below_500mw_hours": 5221
+    }
+  ],
+  "replay_checks": {
+    "branch_error_mw": 1.2050804798491299e-11,
+    "generator_error_mw": 1.6143530956469476e-11,
+    "nodal_balance_error_mw": 1.5148771126405336e-11,
+    "operator_error_mw": 1.8189894035458565e-12
+  },
+  "component_checks": {
+    "reconstructed_all_NY_zonal_net_demand_max_error_mw": 6.730260793119669e-11,
+    "Ginna_daily_source_max_error_mw": 2.842170943040401e-14
+  },
+  "topology_checks": {
+    "WestCentral_minus_Dysinger_minus_B_injection_max_mw": 1.0118128557223827e-11,
+    "Dysinger_minus_A_injection_minus_Ontario_A_import_max_mw": 2.0691004465334117e-11,
+    "error_difference_minus_B_balance_error_max_mw": 1.0118128557223827e-11,
+    "Ontario_A_plus_D_minus_total_max_mw": 2.2737367544323206e-13,
+    "Ontario_modeled_import_minus_released_schedule_max_mw": 3.7061909097246826e-11
+  },
+  "no_A_to_C_bypass": true,
+  "B_has_no_external_or_DC_boundary": true,
+  "exact_modeled_identities": [
+    "WestCentral - DysingerEast = B native generation - B net demand - B GS",
+    "DysingerEast = A native generation - A net demand - A GS + Ontario_to_A_import",
+    "Ontario_to_A_import + Ontario_to_D_import = total modeled Ontario import"
+  ],
+  "invariant_under_reactance_changes": "WestCentral-DysingerEast is fixed when net injection in B is fixed; common flow may change through Ontario import landing redistribution",
+  "covariance_and_modes": {
+    "error_correlation": 0.9937121852993235,
+    "error_covariance_population_mw2": 65269.3358684165,
+    "same_error_sign_hours": 8356,
+    "both_overpredicted_hours": 5353,
+    "both_underpredicted_hours": 3003,
+    "common_error_bias_mw": 68.27860606367655,
+    "common_error_rmse_mw": 264.8356627032853,
+    "differential_half_error_rmse_mw": 21.772842421088562,
+    "common_fraction_pair_squared_error": 0.9932864560071393,
+    "common_fraction_centered_pair_variance": 0.9968541992281885,
+    "B_balance_error_bias_mw": 32.706717476413836,
+    "B_balance_error_mae_mw": 33.709448141721204,
+    "B_balance_error_rmse_mw": 43.545684842177124,
+    "pair_MAE_lower_bound_if_B_injection_fixed_mw": 16.854724070860602,
+    "pair_RMSE_lower_bound_if_B_injection_fixed_mw": 21.772842421088562,
+    "bound_scope": "algebraic_best_possible_common_flow_shift_not_necessarily_network_feasible"
+  },
+  "percentage_disparity": {
+    "WestCentral_to_Dysinger_MAE_ratio": 1.040707874966761,
+    "Dysinger_to_WestCentral_mean_absolute_observed_ratio": 1.9993920166054349,
+    "WestCentral_to_Dysinger_WAPE_ratio": 2.0807830168269494
+  },
+  "B_component_annual_means_mw": {
+    "nuclear": 576.313298630137,
+    "thermal": 2.915296803652968,
+    "hydro": 44.65612952337146,
+    "gross_load": 1109.0331906392694,
+    "wind_negative_load": 3.3123827307492077,
+    "other_negative_load": 2.5516791029430226,
+    "net_injection": -479.2844038484179
+  },
+  "A_component_annual_means_mw": {
+    "nuclear": 0.0,
+    "thermal": 123.875,
+    "hydro": 1793.037932921149,
+    "gross_load": 1697.721638127854,
+    "wind_negative_load": 46.00770559138024,
+    "other_negative_load": 28.493749982863758,
+    "net_injection": 293.6927503675287
+  },
+  "oracle_diagnostics_not_observed_injections": {
+    "B_required_injection_change_mean_mw": -32.70671747641562,
+    "B_required_injection_change_rmse_mw": 43.545684842178495,
+    "B_required_injection_change_min_mw": -527.325305153989,
+    "B_required_injection_change_max_mw": 538.6653137404145,
+    "B_implied_native_generation_min_mw": 22.235109634639116,
+    "B_implied_native_generation_max_mw": 698.0232368117379,
+    "B_implied_negative_native_generation_hours": 0,
+    "Ontario_A_import_required_min_mw": -535.3537112507697,
+    "Ontario_A_import_required_max_mw": 1744.2479259330257,
+    "Ontario_D_import_required_min_mw": -934.4435728423196,
+    "Ontario_D_import_required_max_mw": 913.6192361754286,
+    "qualification": "derived from observed interface targets under modeled lossless-cut identities; not telemetry, proposed dispatch, or independent validation"
+  },
+  "limitations": [
+    "No observed complete zonal generation or actual western Ontario tie flows were supplied.",
+    "Source labels are naive prepared local hours; lag experiments do not establish timestamp semantics.",
+    "Conservation holds exactly for the lossless modeled cuts. Real interfaces may differ in membership and losses.",
+    "Correlation with modeled components is descriptive and cannot establish which input is erroneous.",
+    "No electrical parameter, source dispatch, load allocation, or baseline result was modified."
+  ],
+  "inputs": [
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/RenewableGen.csv",
+      "sha256": "270e44f264b7e9b2132b5efab5cdcca0561724f82d8581e41a9305eaa293dc53",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/loadHourly_2019.csv",
+      "sha256": "677ce71d73fc800b3b938a75b9f7797e4a3f8a97e992518d0d1f8f5f3bf96f62",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/fuelmixHourly_2019.csv",
+      "sha256": "e5a742ed76a91bb81989bd85da01b3faba6ca8945d7bc391566a1e5cfc64386e",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/nuclearGenDaily_2019.csv",
+      "sha256": "bfe80d073a2c8f4641a89738ff02b0c923efc4173242b6be9869b3728b9e64f5",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/hydroGenMonthly_2019.csv",
+      "sha256": "a9797753476bcfc6133f3e0b2b714e61447c14f8c467df7d47f2ad747c49eb1f",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/interflowHourly_2019.csv",
+      "sha256": "b872530b5704a57a17928ca2949511958e4de6bb31063d197d55af3b21e52754",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/updateOpCond.m",
+      "sha256": "12cd365b756612d46dc10f1ec5c9ff39a9b54f191b0c6db64e2d1aa990794520",
+      "role": "pinned_source"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/allocateLoad.m",
+      "sha256": "6eda67f10f47561dab120f18796a91b0477facc9732296be2a80ecfe7f2dbd29",
+      "role": "pinned_source"
+    },
+    {
+      "path": "output/nygrid_2019/annual_1.mat",
+      "sha256": "314d817570b4edfd60b0970f25aee8d126bffd46aa70ceba8ee3bde10b05f274",
+      "role": "released_annual_case"
+    },
+    {
+      "path": "output/nygrid_2019/annual_1_cases.csv",
+      "sha256": "975024f20abfadbb42af807e41bb1b3d900bb781ee79b380e66ca539f4ba1f4e",
+      "role": "annual_completeness"
+    },
+    {
+      "path": "output/nygrid_2019/annual_1_interfaces.csv",
+      "sha256": "43bbe74b4f8562018bfe7de6f58346c87a3afe479acd04ee270f04776ed387dd",
+      "role": "observations_and_corrected_operators"
+    },
+    {
+      "path": "output/nygrid_2019/annual_2.mat",
+      "sha256": "e72ddd82be691ad4a46cd74c1316e450763944f259cce95e071b972b986383c6",
+      "role": "released_annual_case"
+    },
+    {
+      "path": "output/nygrid_2019/annual_2_cases.csv",
+      "sha256": "2ac37f02f919c6d20cf1fae95be25375868e21192d597e795ab823251a6fc734",
+      "role": "annual_completeness"
+    },
+    {
+      "path": "output/nygrid_2019/annual_2_interfaces.csv",
+      "sha256": "a4d4ca157fdf1c050f7c1bd32eb14645fbfbcebee22f0af4725a44481345d44f",
+      "role": "observations_and_corrected_operators"
+    },
+    {
+      "path": "output/nygrid_2019/annual_3.mat",
+      "sha256": "47375d88c36e2a3af33a85eeed461396186404fe9c7486ff43ed4aaec2988aab",
+      "role": "released_annual_case"
+    },
+    {
+      "path": "output/nygrid_2019/annual_3_cases.csv",
+      "sha256": "2df225949e193760fb40ed8e7670d5fa0f4fa4963ffd86476d9365c769eeb1cb",
+      "role": "annual_completeness"
+    },
+    {
+      "path": "output/nygrid_2019/annual_3_interfaces.csv",
+      "sha256": "c772c6b5e175493c6806cb881ccae1bb3f76984ff3f97b5361b96d6b6d3be21a",
+      "role": "observations_and_corrected_operators"
+    },
+    {
+      "path": "output/nygrid_2019/annual_4.mat",
+      "sha256": "795f57ce1ee3f483484da4f98461a9a47eaf15ca573a1dadca3bd3804a5f7431",
+      "role": "released_annual_case"
+    },
+    {
+      "path": "output/nygrid_2019/annual_4_cases.csv",
+      "sha256": "098405938b0f20d10bf969215961f8e79eb66d8188d8e56a649fc40b4cded863",
+      "role": "annual_completeness"
+    },
+    {
+      "path": "output/nygrid_2019/annual_4_interfaces.csv",
+      "sha256": "88b04d8569d359528e0e66ea987ecb109682d66dcc46b0359be8be5bbcb216fe",
+      "role": "observations_and_corrected_operators"
+    }
+  ]
+}

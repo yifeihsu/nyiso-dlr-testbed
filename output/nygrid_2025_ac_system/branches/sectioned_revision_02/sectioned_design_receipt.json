@@ -1,0 +1,246 @@
+{
+  "passed": true,
+  "design_construction_checked": true,
+  "created_utc": "2026-10-12T21:27:58.652144+00:00",
+  "operating_AC_or_thermal_solver_run": false,
+  "original_case_artifacts_modified": false,
+  "source_raw_stage": "frozen_revision_02_complete_mapping",
+  "raw_source_status_is_historical_stage_not_runtime_gate": true,
+  "criteria": {
+    "OH_max_section_m": 100000.0,
+    "cable_ABCD_error_trigger": 0.005,
+    "long_OH_reactor_threshold_m": 193121.28,
+    "cable_reactor_min_charging_mvar": 10.0,
+    "reactor_fraction": 0.75,
+    "reactor_fraction_scope": "generic_OH_source_supported_midpoint;cable_application_explicit_synthetic_extension"
+  },
+  "designed_extra_buses": 75,
+  "OH_split_corridors": 44,
+  "cable_split_corridors": [
+    319,
+    320
+  ],
+  "OH_reactor_corridors": 16,
+  "cable_reactor_corridors": 19,
+  "source_style": "preserve_full_R_X_B_totals;cascade_pi_sections;separate_fixed_negative_bus_BS_reactors",
+  "no_OPF_outcome_or_observed_interface_input": true,
+  "asbuilt_or_actual_site_thermal_claim": false,
+  "states": [
+    {
+      "state": "pre_may",
+      "original_buses": 191,
+      "buses": 266,
+      "original_branch_records": 410,
+      "branch_records": 485,
+      "added_zero_injection_buses": 75,
+      "active_runtime_OH_thermal_segments": 257,
+      "active_runtime_cable_sections": 40,
+      "applied_reactor_corridors": 34,
+      "total_fixed_reactor_mvar_at1pu": 3837.28901974172,
+      "original_generators_transfers_PD_QD_GS_preserved": true,
+      "coefficient_sums_preserved": true,
+      "no_new_PQ_GS_BS_on_section_buses": true,
+      "terminal_A_not_duplicated_at_artificial_taps": true
+    },
+    {
+      "state": "may21",
+      "original_buses": 191,
+      "buses": 266,
+      "original_branch_records": 410,
+      "branch_records": 485,
+      "added_zero_injection_buses": 75,
+      "active_runtime_OH_thermal_segments": 257,
+      "active_runtime_cable_sections": 41,
+      "applied_reactor_corridors": 34,
+      "total_fixed_reactor_mvar_at1pu": 3837.28901974172,
+      "original_generators_transfers_PD_QD_GS_preserved": true,
+      "coefficient_sums_preserved": true,
+      "no_new_PQ_GS_BS_on_section_buses": true,
+      "terminal_A_not_duplicated_at_artificial_taps": true
+    },
+    {
+      "state": "may30",
+      "original_buses": 191,
+      "buses": 266,
+      "original_branch_records": 410,
+      "branch_records": 485,
+      "added_zero_injection_buses": 75,
+      "active_runtime_OH_thermal_segments": 257,
+      "active_runtime_cable_sections": 42,
+      "applied_reactor_corridors": 35,
+      "total_fixed_reactor_mvar_at1pu": 3862.1055471543127,
+      "original_generators_transfers_PD_QD_GS_preserved": true,
+      "coefficient_sums_preserved": true,
+      "no_new_PQ_GS_BS_on_section_buses": true,
+      "terminal_A_not_duplicated_at_artificial_taps": true
+    },
+    {
+      "state": "post_dover",
+      "original_buses": 192,
+      "buses": 267,
+      "original_branch_records": 413,
+      "branch_records": 488,
+      "added_zero_injection_buses": 75,
+      "active_runtime_OH_thermal_segments": 259,
+      "active_runtime_cable_sections": 42,
+      "applied_reactor_corridors": 35,
+      "total_fixed_reactor_mvar_at1pu": 3862.1055471543127,
+      "original_generators_transfers_PD_QD_GS_preserved": true,
+      "coefficient_sums_preserved": true,
+      "no_new_PQ_GS_BS_on_section_buses": true,
+      "terminal_A_not_duplicated_at_artificial_taps": true
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/branch_assignments.csv",
+      "sha256": "d0297d8b706505bee6c31f1c1416bf41c99aa8d1118284b1584dde0e424b63b0"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/thermal_segments.csv",
+      "sha256": "3be6298e619f6b2680f7d2dccc69bea75783d26a172e40b8993366042eae0b1e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/cable_segments.csv",
+      "sha256": "1673ea1dba11ac057af2af18873971cc024c7de2a104a0172ed8ed5d776c52cd"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/revision_02_complete_mapping/engineering_overlay.mat",
+      "sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5"
+    },
+    {
+      "path": "output/nygrid_2025_line_parameters/overlays/engineering_nominal/full191_network_cases.mat",
+      "sha256": "24eac4d6a410f6b2b0bb5b3789e1c74517f8de5695aebadb831ff90f1a75813b"
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/network/x_nominal.mat",
+      "sha256": "e8076c924a355792d2826fb7a4ae8d69ba149cc96b5d272efbde0f72a9056fa1"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/final_branch_mapping_review.json",
+      "sha256": "9586191164f2a87c7ac63c84ce06d62f95c28a4973ce82185a4f85c9adbebd58"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/line_segmentation_accuracy.json",
+      "sha256": "cac8dd0cbff4b157c39750cc45ae9b06a037f3c09b97fef441547f2863042e25"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/shunt_reactor_source_review.json",
+      "sha256": "287df5c25dcec0014e52540226ef5cc7c510eb0d2c18ca4e4c18cbb83b283947"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/engineering/sources/SEL_Oncor_2013_shunt_reactors.pdf",
+      "sha256": "50a25fb55d6024d632c431c611e6ad96788f8cc7f728983e4671ded54b207d72"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/build_sectioned_design.py",
+      "sha256": "7e7b6bf6f257d4514a3a5a90fb264d5a036315ad0fff1022c171971f2b1a5526"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/branches/nygrid_ac_apply_sections.m",
+      "sha256": "ce3de5ef5ab5774ac30a596c589dc67ffb5231b8ca276cdf518d83e8c5180416"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_ac_system/branches/section_and_reactor_plan.csv",
+      "sha256": "05be0a4a301a65e931b035acea6c1c0fee68e008476346d81608e5065b42b23e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_design_plan.mat",
+      "sha256": "3a37801335e301f5d09eeeb8ba38ec6334249836dfed8436b5af9be5b3c59522"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/pre_may_branch_map.csv",
+      "sha256": "096d8920546391853d7c3ba34d0a64ef16340c1ec3598e7713abc4baf3deaa03"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/pre_may_added_bus_map.csv",
+      "sha256": "1400f6118b48a77bc830fb3f037675ee836a5d4e762508c1e7ce763ddce272a5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/pre_may_thermal_segments.csv",
+      "sha256": "cb97451dfeca8c75f384fbcdecf0eeab0ea937562108c6100d91a3b21628a063"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/pre_may_cable_segments.csv",
+      "sha256": "0c3935ec71f12add248fd9699ca485f6a5283c76ae3b3db8b2ef61fa72be9b35"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/pre_may_reactor_ledger.csv",
+      "sha256": "a766295a4bd22a08de200c2dd28c7c70625a5ce61016c07b2bc9e26adf487276"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may21_branch_map.csv",
+      "sha256": "b989113d3a7fb8283d77cfb1f191c1f67076314a9ff1314505aa86d286e7906d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may21_added_bus_map.csv",
+      "sha256": "1400f6118b48a77bc830fb3f037675ee836a5d4e762508c1e7ce763ddce272a5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may21_thermal_segments.csv",
+      "sha256": "cb97451dfeca8c75f384fbcdecf0eeab0ea937562108c6100d91a3b21628a063"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may21_cable_segments.csv",
+      "sha256": "5462cf9b4c937ce7f675b31d7b1b1a352f8b196505d8dc8ba168529d302c0917"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may21_reactor_ledger.csv",
+      "sha256": "a766295a4bd22a08de200c2dd28c7c70625a5ce61016c07b2bc9e26adf487276"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may30_branch_map.csv",
+      "sha256": "e49084b2303cc4a953d6810d85640d320dcb5d52be6e5145df0fa91aff7d9ee3"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may30_added_bus_map.csv",
+      "sha256": "1400f6118b48a77bc830fb3f037675ee836a5d4e762508c1e7ce763ddce272a5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may30_thermal_segments.csv",
+      "sha256": "cb97451dfeca8c75f384fbcdecf0eeab0ea937562108c6100d91a3b21628a063"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may30_cable_segments.csv",
+      "sha256": "0d27cccf8b04702ea0f56fa3e2285682dd48ce08259a71c6396b4b23c7d3b588"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/may30_reactor_ledger.csv",
+      "sha256": "8f85cc38402abe4187fbc03ebb4e13dcfab374b7c58f17b64c7c5625b817dac3"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/post_dover_branch_map.csv",
+      "sha256": "0f4d9a8ee314e651654f59f40116df7c0cca7708774787731d88825762e7060b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/post_dover_added_bus_map.csv",
+      "sha256": "1400f6118b48a77bc830fb3f037675ee836a5d4e762508c1e7ce763ddce272a5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/post_dover_thermal_segments.csv",
+      "sha256": "28d7141db5f3680a7da17c86d2923271cfa161a27478c320dd6958302d60b58d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/post_dover_cable_segments.csv",
+      "sha256": "bc56503a7b0371ae36a556bf6c5af20abf509cff41f22c6c69f70382d0e68cba"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/post_dover_reactor_ledger.csv",
+      "sha256": "8f85cc38402abe4187fbc03ebb4e13dcfab374b7c58f17b64c7c5625b817dac3"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_design_fixtures.mat",
+      "sha256": "81ae58a882a46629f6bd35868a709f58f38bc8601fa9e1f757b41e38069f9b67"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/sectioned_design_checks.csv",
+      "sha256": "552573ed0675a7f7ecb71a3ec862688ddf7e87dce634a4bb631ed40df02c32c3"
+    }
+  ],
+  "plan_file": {
+    "path": "output/nygrid_2025_ac_system/branches/sectioned_design_plan.mat",
+    "sha256": "3a37801335e301f5d09eeeb8ba38ec6334249836dfed8436b5af9be5b3c59522"
+  }
+}

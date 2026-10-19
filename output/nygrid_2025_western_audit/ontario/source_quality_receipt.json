@@ -1,0 +1,61 @@
+{
+  "status": "suspect_source_hours_quarantined_without_changing_reported_actuals",
+  "created_utc": "2026-10-11T15:24:13.404358+00:00",
+  "year": 2025,
+  "quality_child_path": "output/nygrid_2025_western_audit/ontario/hourly_exchange_quality.csv",
+  "quality_child_sha256": "ae23b9a130773fece232c8bb84583a3fb2d16fe9c2533a13b525ab64ba788cde",
+  "original_csv_path": "output/nygrid_2025_western_audit/ontario/hourly_actual_exchange.csv",
+  "original_csv_sha256": "e59408bf1296bd92eb6c562395d98d629c6b9784d50767c9a94956c8400aa6b4",
+  "actual_input_sha256": "e59408bf1296bd92eb6c562395d98d629c6b9784d50767c9a94956c8400aa6b4",
+  "original_csv_preserved": true,
+  "raw_reported_values_preserved": true,
+  "source_finite_reported_hours": 8760,
+  "source_quality_qualified_hours": 8754,
+  "suspect_count": 6,
+  "suspect_hours_in_common_cohort": 6,
+  "common_replay_hours_before_source_quality": 8663,
+  "common_replay_hours": 8657,
+  "predicate": "All 14 intertie Flow columns AND Total Flow equal literal zero, with finite nonzero directional schedules; flag the hour as suspect.",
+  "zero_policy": "A NEW-YORK zero alone remains eligible. This predicate quarantines only the report-wide signature; values are not clipped, imputed, interpolated or rewritten.",
+  "interpretation": "Suspected report-wide actual-data defect; the annual source has no native meter-quality flag, so the underlying cause is not conclusively established.",
+  "external_corroboration": {
+    "source": "output/nygrid_2025_par_controls/controls/hourly_controls.csv",
+    "sha256": "ea359615f1ef94b9f2e0f0101a72a6d2cedd78f83bab4aa15646a85b465a345a",
+    "quantity": "P34 PS33 plus PS34 northern Ontario-to-NewYork flow",
+    "nonzero_at_all_six_suspect_hours": true,
+    "role": "Independent external-boundary sanity check only; not used to select the quality predicate."
+  },
+  "internal_interface_observations_consumed": false,
+  "quality_predicate_fitted_to_internal_flows": false,
+  "audit_script_path": "scripts/nygrid_2025_western_audit/ontario_audit.py",
+  "audit_script_sha256": "5bb0de95f1fc08b5bba9b27c69cbd7292d1e2e2d86f8ccf660acaa9e9a4e7abc",
+  "raw_sources": [
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025.csv",
+      "sha256": "b4aa6a2a3fe142124115bd9f4710ea3bb46ac2635b47be08b729aaf405671b4d"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025_v394.csv",
+      "sha256": "b4aa6a2a3fe142124115bd9f4710ea3bb46ac2635b47be08b729aaf405671b4d"
+    }
+  ],
+  "versioned_and_canonical_source_byte_identical": true,
+  "suspect_rows_csv": "output/nygrid_2025_western_audit/ontario/source_quality_suspect_hours.csv",
+  "suspect_rows_sha256": "f7a4fd549c8bdea35879d0b84f23ed46d7fbb9d7073a70575a51100b7249c30c",
+  "excluded_hour_indices": [
+    1150,
+    1151,
+    1152,
+    1703,
+    1704,
+    5040
+  ],
+  "excluded_timestamps_utc": [
+    "2025-02-18T02:00:00Z",
+    "2025-02-18T03:00:00Z",
+    "2025-02-18T04:00:00Z",
+    "2025-03-13T03:00:00Z",
+    "2025-03-13T04:00:00Z",
+    "2025-07-30T04:00:00Z"
+  ]
+}

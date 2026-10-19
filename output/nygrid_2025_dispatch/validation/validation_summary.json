@@ -1,0 +1,1175 @@
+{
+  "passed": true,
+  "scope": "source-consistent capacity-bounded DC snapshots; no AC, commitment, ramp or storage-energy qualification",
+  "annual_hours": 8760,
+  "source_qualified_hours": 8663,
+  "qualified_dispatch_hours": 8663,
+  "missing_source_hours": 97,
+  "capacity_infeasible_hours": 0,
+  "fleet_inventory_rows": 2245,
+  "native_generators": 1436,
+  "fixed_external_generators": 28,
+  "maximum_bound_violation_mw": 0.0,
+  "maximum_independent_KKT_gradient_residual": 1.1563666690861396e-14,
+  "maximum_nodal_residual_mw": 3.296918293926865e-11,
+  "maximum_independent_branch_error_mw": 8.526512829121202e-12,
+  "maximum_independent_angle_error_deg": 3.659295089164516e-13,
+  "regional_schedule_max_residual_mw": {
+    "ISONE": 1.858779796748422e-11,
+    "ONTARIO": 2.3874235921539366e-12,
+    "PJM": 3.296918293926865e-12
+  },
+  "preserved_zone_landing_conflict_rows": 1,
+  "admitted_native_unknown_balancing_authority_rows": 0,
+  "admitted_native_other_balancing_authority_rows": 0,
+  "admitted_native_outside_NY_state_rows": 18,
+  "quarantined_outside_NY_inventory_rows": 3,
+  "scope_membership_basis": "NYISO unit market membership; includes 18 corroborated NJ units and excludes Linden GTG6/PJM plus two uncorroborated NJ solar records",
+  "check_count": 179,
+  "checks": [
+    {
+      "check": "8760_hour_axis",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "UTC_physical_year_axis",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "input_hour_identity",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "original_bus_IDs",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "unchanged_branch_rows",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "unchanged_bus_voltage_and_shunts",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "unchanged_DC_topology_and_loss_model",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "lossless_DC_PT_equals_PF",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "gross_PD_preserved_without_second_renewable_netting",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "declared_QD_preserved",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "fixed_DC_schedules",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "reference_MVA_base",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "inherited_operator_membership",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "claim_scope:topology_changed",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:internal_interface_observations_read",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:interface_calibration_performed",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:reference_is_free_balancing_generator",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:load_shedding_allowed",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:bounds_relaxed",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:ac_feasibility_validated",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:reactive_capabilities_available",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:physical_branch_thermal_feasibility_validated",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:unit_commitment_validated",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:ramping_validated",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:reserve_feasibility_validated",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:storage_energy_feasibility_validated",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "claim_scope:battery_dispatch_enabled",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "complete_fleet_keys_unique",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "contiguous_fleet_IDs",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "fleet_bound_hour_axis",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "fleet_bound_unit_axis",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "EIA_identity_key_format",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "EIA_capacity_not_duplicated_by_aliases",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "outside_state_inventory_exact_frozen_cohort",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "outside_state_inventory_is_NJ",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "unit_market_scope_independent_reconstruction",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "landing_flag_matches_original_NY_bus_IDs",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "only_explicit_quarantine_has_no_landing",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "parent_landing_zone_identity",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "quarantined_parent_names_empty",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "zone_conflicts_explicit",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "corroborated_NJ_units_land_on_existing_ZoneJ_proxy",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "corroborated_NJ_units_have_primary_scope_evidence",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "Linden_unit_market_split_has_owner_evidence",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "NJ_P63_membership_is_disclosed_inference",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "Linden_GTG6_is_explicit_PJM_record",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "uncorroborated_NJ_solar_zone_is_unverified",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "primary_market_scope_sources_present",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "market_scope_source_fingerprint:NYISO:P19:20261010",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "market_scope_source_fingerprint:EGCO:Linden:20251216",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "market_scope_source_fingerprint:NYISO:VFT:FERC:20120524",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "market_scope_source_fingerprint:NYISO:GoldBook:2025",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "finite_nonnegative_fleet_capabilities",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "fleet_season_status_bounds_month_1",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_season_status_bounds_month_2",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_season_status_bounds_month_3",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_season_status_bounds_month_4",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_season_status_bounds_month_5",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_season_status_bounds_month_6",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_season_status_bounds_month_7",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_season_status_bounds_month_8",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_season_status_bounds_month_9",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_season_status_bounds_month_10",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_season_status_bounds_month_11",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_season_status_bounds_month_12",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-10"
+    },
+    {
+      "check": "fleet_grid_scope_independent_reconstruction",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "fleet_active_month_policy",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "fleet_default_eligibility_independent_reconstruction",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "fleet_PS_eligibility_independent_reconstruction",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "fleet_default_bounds_respect_scope",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "continuous_native_minimum_zero",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "batteries_excluded_from_default_dispatch",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "two_Indian_Point_tombstones_zero",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "prior_hour_axis",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "prior_fleet_axis",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "prior_timestamp_axis",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "admitted_native_balancing_authority_scope",
+      "passed": true,
+      "max_error": null,
+      "detail": "Explicit other or unknown balancing authorities require a recorded, evidenced exception"
+    },
+    {
+      "check": "admitted_native_unit_market_scope",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "all_admitted_native_landings_valid",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "all_18_corroborated_NJ_units_admitted",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "quarantined_NJ_units_never_admitted",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "quarantine_prior_bound_zero:available_pmin_actual_mw",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "quarantine_prior_bound_zero:available_pmax_actual_mw",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "native_selection_exactly_ever_admitted_units",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "model_generator_count",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "contiguous_generator_rows",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "generator_keys_unique",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "generator_roles_partition",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "native_keys_preserved",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "native_landing_ids",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "case_generator_landing_identity",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "native_source_zone_ledger",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "native_fuel_ledger",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "single_frozen_gamma",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "scaled_native_physical_capability",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "scaled_native_admitted_upper_bounds",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "scaled_native_lower_bounds",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "source_native_priors_not_interface_fit",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "declared_capacity_weighted_objective",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "penalty_register",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "external_parent_identity",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "fixed_external:gen_pmin",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "fixed_external:gen_pmax",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "fixed_external:prior_pg",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "prior_generation_coverage_from_frozen_P63",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "prior_joint_coverage_from_frozen_P32_P63",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "complete_inventory_source_fuel_conservation:Combined Fossil",
+      "passed": true,
+      "max_error": 2.1827872842550278e-11,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "complete_inventory_source_fuel_conservation:Nuclear",
+      "passed": true,
+      "max_error": 1.3642420526593924e-12,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "complete_inventory_source_fuel_conservation:Hydro",
+      "passed": true,
+      "max_error": 1.1823431123048067e-11,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "complete_inventory_source_fuel_conservation:Wind",
+      "passed": true,
+      "max_error": 1.3642420526593924e-12,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "complete_inventory_source_fuel_conservation:Other Renewables",
+      "passed": true,
+      "max_error": 1.9326762412674725e-12,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "source_qualification_independent_rebuild",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "all_hours_have_a_known_status",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "missing_source_status_exact",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "dispatch_status_exact",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "unsolved_state_is_missing:gen_pg",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "qualified_state_is_finite:gen_pg",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "unsolved_state_is_missing:branch_pf",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "qualified_state_is_finite:branch_pf",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "unsolved_state_is_missing:bus_va",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "qualified_state_is_finite:bus_va",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "native_required_balance",
+      "passed": true,
+      "max_error": 2.1827872842550278e-11,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "capacity_infeasibility_is_explicit",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "all_box_feasible_hours_solved",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "fixed_external_dispatch_exact",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "finite_positive_objective_weights",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "native_bounds_nonnegative_ordered",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "declared_continuous_native_minimum_zero",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "admitted_capability_not_above_physical",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "pumped_storage_no_extra_balancing_generation",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "wind_solar_below_allocated_availability",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "exact_source_availability_ceiling:wind_solar",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "exact_source_availability_ceiling:pumped_hydro",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "conventional_resource_physical_ceiling",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "reactor_availability_keys_unique",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "NRC_availability_ceiling:EIA860:2025:PLANT:2589:GEN:1",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "NRC_availability_ceiling:EIA860:2025:PLANT:2589:GEN:2",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "NRC_availability_ceiling:EIA860:2025:PLANT:6110:GEN:1",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "NRC_availability_ceiling:EIA860:2025:PLANT:6122:GEN:1",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "KKT_primal:sum_error_mw",
+      "passed": true,
+      "max_error": 2.1827872842550278e-11,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "KKT_primal:bound_violation_mw",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "KKT_stationarity:kkt_gradient_residual",
+      "passed": true,
+      "max_error": 1.1563666690861396e-14,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "KKT_stationarity:saved_dual_gradient_residual",
+      "passed": true,
+      "max_error": 1.106753577673203e-14,
+      "detail": "tolerance 1e-06"
+    },
+    {
+      "check": "objective_recalculation",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 1e-05"
+    },
+    {
+      "check": "retired_IP_units_not_admitted",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "reference_zero_on_unsolved_hours",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "reference_has_admitted_native_generator",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "independent_DC:nodal_residual_mw",
+      "passed": true,
+      "max_error": 3.296918293926865e-11,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "independent_DC:global_balance_residual_mw",
+      "passed": true,
+      "max_error": 2.091837814077735e-11,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "independent_DC:branch_angle_identity_error_mw",
+      "passed": true,
+      "max_error": 2.3874235921539366e-12,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "independent_DC:independent_branch_error_mw",
+      "passed": true,
+      "max_error": 8.526512829121202e-12,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "independent_DC:independent_angle_error_deg",
+      "passed": true,
+      "max_error": 3.659295089164516e-13,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "regional_scheduled_export:ISONE",
+      "passed": true,
+      "max_error": 1.858779796748422e-11,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "regional_scheduled_export:ONTARIO",
+      "passed": true,
+      "max_error": 2.3874235921539366e-12,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "regional_scheduled_export:PJM",
+      "passed": true,
+      "max_error": 3.296918293926865e-12,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "recorded_slack_movement",
+      "passed": true,
+      "max_error": 3.296918293926865e-11,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "recorded_nodal_residual",
+      "passed": true,
+      "max_error": 1.233502189279534e-11,
+      "detail": "tolerance 1e-07"
+    },
+    {
+      "check": "summary:hours",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "summary:source_qualified_hours",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "summary:dispatched_hours",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "summary:missing_source_hours",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "summary:capacity_infeasible_hours",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "summary:native_generators",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "summary:fixed_external_generators",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "summary:generators",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "status_CSV_hour_axis",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "status_CSV_codes",
+      "passed": true,
+      "max_error": 0.0,
+      "detail": "tolerance 0"
+    },
+    {
+      "check": "status_CSV_qualification",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "all_state_artifacts_fingerprinted",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "state_artifact_fingerprint:dispatch.mat",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "state_artifact_fingerprint:dispatch_bounds.mat",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "state_artifact_fingerprint:dispatch_priors.mat",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "state_artifact_fingerprint:dispatch_network.mat",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "provenance:output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "provenance:output/nygrid_2025_dispatch/fleet/fleet_register.csv",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "provenance:output/nygrid_2025_dispatch/fleet/fleet_bounds.npz",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "provenance:output/nygrid_2025_dispatch/priors/dispatch_priors.npz",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "provenance:output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    },
+    {
+      "check": "provenance:scripts/nygrid_2025_dispatch/build_dispatch.py",
+      "passed": true,
+      "max_error": null,
+      "detail": ""
+    }
+  ],
+  "files": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_network.mat",
+      "sha256": "7fa16e2160edfe79b0ce26ae9262ecac9f1bd4dfde8196637d896e34567451d3"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/contract.json",
+      "sha256": "a31e1427567f525a78cea58ad8a90e51b1dd8a7856b5ba63abb1cbaa0342207d"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/summary.json",
+      "sha256": "9699f6ef6125540a626b76898f75a1605e503b2516e9858e35a9e74b26e246e1"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/model_generator_register.csv",
+      "sha256": "7c613350f8cb397dc80fbfffd78d1a5e6e8e956e46cccdb6fc3a238af0615dda"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/hour_status.csv",
+      "sha256": "295922124599aed8e249a2cd7aaca7bac2a5f24d4f7cf31be8a20728d77540ed"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/model/operating_inputs.mat",
+      "sha256": "53582176376797e2d25da316f776394bccca9505187c15e90b53a726bcd83f7b"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_register.csv",
+      "sha256": "6d27fc788fd90454c8b92d29115fe059783979b0063992ffe29d313bec405d45"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_bounds.npz",
+      "sha256": "7fdc0f26448d6333ba427f7d10535cff2eef993de21fae0794eba99b549e9c52"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_scope/source_receipts.json",
+      "sha256": "c271cd99c77c9d30327cff4d4bd1165d2a84e757c188cc5838218fb24fccd694"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/outside_NY_scope_register.csv",
+      "sha256": "a00221edd09f317e67509183e294514573837bb895b9db7ae10e9f74f521b1fa"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/priors/dispatch_priors.npz",
+      "sha256": "6a99bee7ea8be1e63a6349b6a0e6fa781932525fab17dd3548ac1e11a304c66f"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/nuclear_plant_hourly_priors.csv.gz",
+      "sha256": "f47348ec99724f10dae95eec80de1d0b0cbc9afb1318aeb7ae2a1a68da84346c"
+    },
+    {
+      "path": "scripts/nygrid_2025_dispatch/validate_dispatch.py",
+      "sha256": "56423685b3aa54a939160ffb62f2826ab228f8032f5c46b44e936d83b55d333d"
+    }
+  ]
+}

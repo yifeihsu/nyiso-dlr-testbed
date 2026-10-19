@@ -1,0 +1,67 @@
+{
+  "statistics_cohort": "native AC-equation, profile and reduction qualified; failed iterates excluded",
+  "native_qualified_hours": 8494,
+  "frozen_detailed_cohort_hours": 8494,
+  "runtime": {
+    "annual_wall_seconds": 548.1809985,
+    "total_compact_build_seconds": 110.49835610000001,
+    "total_native_solve_recovery_audit_seconds": 419.4689472,
+    "total_Newton_and_pfsoln_seconds": 54.1673271,
+    "native_NR_seconds_column_includes_pfsoln_and_control_bookkeeping": true,
+    "numerical_solver_time_is_not_total_end_to_end_workflow_time": true
+  },
+  "qualified_gate_counts": {
+    "normal_voltage_gate": 0,
+    "generator_active_bound_gate": 0,
+    "generator_reactive_bound_gate": 0,
+    "generator_S_proxy_gate": 0,
+    "six_transfer_reactive_contract_gate": 0,
+    "VQ_and_generator_assumption_gate": 0
+  },
+  "extrema": {
+    "min_voltage_pu": {
+      "min": 0.854424248978627,
+      "max": 0.965230000000001
+    },
+    "max_voltage_pu": {
+      "min": 1.10098416378987,
+      "max": 1.12005979032327
+    },
+    "reference_PG_change_MW": {
+      "min": 143.98400860278,
+      "max": 869.314308861128
+    },
+    "max_P_bound_violation_mw": {
+      "min": 141.606360116745,
+      "max": 867.918145242221
+    },
+    "max_Q_bound_violation_mvar": {
+      "min": 547.591905964085,
+      "max": 864.408641419096
+    },
+    "max_transfer_Q_bound_violation_mvar": {
+      "min": 608.708039502292,
+      "max": 821.91730978505
+    },
+    "maximum_non_slack_PG_change_MW": {
+      "min": 0.0,
+      "max": 0.0
+    },
+    "max_nodal_P_residual_mw": {
+      "min": 4.1286085661340595e-11,
+      "max": 9.29530585835892e-09
+    },
+    "max_nodal_Q_residual_mvar": {
+      "min": 9.928648810244109e-11,
+      "max": 1.0003205375142e-08
+    },
+    "recovered_current_operator_crosscheck_A": {
+      "min": 7.678399485466869e-11,
+      "max": 1.2582646036207701e-09
+    },
+    "eliminated_current_residual_pu": {
+      "min": 9.09494701772928e-13,
+      "max": 6.834519954515509e-12
+    }
+  }
+}

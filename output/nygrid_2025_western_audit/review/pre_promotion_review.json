@@ -1,0 +1,1150 @@
+{
+  "status": "passed_source_quality_and_mapping_pre_promotion_review",
+  "source_review": {
+    "status": "passed_source_basis_and_independently_verified_quality_child",
+    "source_file_rows": 8760,
+    "suspect_report_zero_hours": 6,
+    "new_common_cohort_hours": 8657,
+    "review_scope": "Raw source semantics, independent UTC/value reconstruction, source quality and planned balance algebra; no dispatch or network solve performed.",
+    "semantic_conclusion": "Source supports actual boundary power replacing scheduled transactions. Actual-minus-schedule discrepancy is present within the IESO file itself; not explainable by NYISO clock alignment or integer rounding.",
+    "sign_proof": "DOE TableB.2 explicitly states positiveOntarioexport; visually inspected cachedPDFpage151. IESO primaryXSD definesExp/Imp directions and primaryXSL net schedule=Export-Import. No sign selected by internal scores.",
+    "actual_aggregation": "Published integerMW hourly aggregate; contemporary XML probe only. Native2025 interval coverage/meter quality is not independently established.",
+    "source_quality_finding": {
+      "severity": "high_for_affected_hours",
+      "confidence": "high_in_pattern_suspect_cause_not_certified",
+      "rule": "All14neighbor actualflows andTotalFlow equal0 while scheduledtotalimports or exports nonzero",
+      "raw_values_preserved": true,
+      "do_not_assert_primary_missing_sentinel": true,
+      "NY_only_zero_hours_retained": true
+    },
+    "differences_on_reviewed_cohort": {
+      "IESO_actual_minus_IESO_schedule": {
+        "hours": 8657,
+        "mean_mw": -3.417812175118401,
+        "mae_mw": 156.6069077047476,
+        "rmse_mw": 193.07922268021457,
+        "minimum_mw": -818.0,
+        "maximum_mw": 940.0
+      },
+      "IESO_schedule_minus_P32_schedule": {
+        "hours": 8657,
+        "mean_mw": -0.05865393130798775,
+        "mae_mw": 6.82084685161656,
+        "rmse_mw": 16.297070961898996,
+        "minimum_mw": -724.9925,
+        "maximum_mw": 290.72916666666697
+      },
+      "IESO_actual_minus_P32_schedule": {
+        "hours": 8657,
+        "mean_mw": -3.476466106426388,
+        "mae_mw": 155.85665185206577,
+        "rmse_mw": 191.90001134535245,
+        "minimum_mw": -820.1466666666666,
+        "maximum_mw": 692.9675
+      }
+    },
+    "external_schedule_lag_MAE_mw": {
+      "-1": 144.2965540569162,
+      "0": 6.82084685161656,
+      "1": 137.551896850611
+    },
+    "clock_selected_from_documentation_not_fit": true,
+    "native_box_feasible_hours": 8657,
+    "minimum_native_lower_margin_mw": 2633.8151994715495,
+    "minimum_native_upper_margin_mw": 1781.0231051215487,
+    "Ontario_model_generator_rows": [
+      1446,
+      1447,
+      1448,
+      1449,
+      1450,
+      1451
+    ],
+    "Ontario_source_generator_rows": [
+      253,
+      254,
+      255,
+      256,
+      257,
+      258
+    ],
+    "Ontario_fixed_shares": [
+      0.3047091412742382,
+      0.1717451523545706,
+      0.0831024930747922,
+      0.1108033240997229,
+      0.1080332409972299,
+      0.2216066481994459
+    ],
+    "promotion_conditions": [
+      "Apply independently reconstructed6hour suspect mask consistently to baseline,mapping-only,actual-only,combined comparisons",
+      "Source-gate hashes must include annualfile, archivedv394, deliveredactualinput, newqualitychild, XSL/XSD andDOEpdf",
+      "Rerun bounded projection from unchangedp0,weights,nativebounds on revisednativeglobaltarget; do not merely add all imbalance to a slack",
+      "Otherexternalregions,loads,fourDCschedules,P34northcontrols,topology,andinterfaceoperators remainunchanged",
+      "Validate bounds,KKT,nodalbalance,slackchange andregionexports afteractual replay"
+    ],
+    "limitations": [
+      "OntarioWest is actualtotal minus independently observedNorth; individualNiagara lineflows remainundetermined by this aggregate",
+      "IESO andNYISO meter terminals andhourlyaggregation can differ; noexactlosslessphysicalNorth/Westmeteridentityclaim",
+      "All-other-regions remaintheir existing schedulebasis",
+      "Finite publishedhour is not a nativeintervalmeter-quality certificate"
+    ],
+    "completed_utc": "2026-10-11T15:25:19.356210+00:00",
+    "checks": [
+      {
+        "check": "source_hash_PUB_IntertieScheduleFlowYear_2019.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "source_hash_PUB_IntertieScheduleFlowYear_2025.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "source_hash_PUB_IntertieScheduleFlowYear_2026.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "source_hash_PUB_IntertieScheduleFlowYear_2025_v394.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "source_hash_IntertieScheduleFlow_h1.pdf",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "source_hash_IntertieScheduleFlow_20261010.xml",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "source_hash_IntertieScheduleFlow_HTML_t1-2.xsl",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "source_hash_IntertieScheduleFlow_r2.xsd",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "DOE_source_hash",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "2025_v394_identical",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "8760_annual_rows",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "hour_end_range",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "all_intervals_unique_consecutive",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "delivered_UTC_exact",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "raw_actual_delivered_identity",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "raw_schedule_delivered_identity",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "actual_annual_values_present",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "primary_EST_HE_definition",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "primary_MW_and_border_scope",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "primary_hourly_mean_rounding",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "14_border_zones_plus_total",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "six_suspect_all_border_zeros",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "P32_hour_identity",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "P32_schedule_preserved",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "control_hour_identity",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "all_six_suspects_in_prior_cohort",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "new_common_cohort8657",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "two_NY_only_zero_values_retained",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "quality_child_UTC_identity",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "quality_child_predicate_independently_rebuilt",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "quality_child_hash",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "quality_preserves_delivered_actual_bytes",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "quality_source_only_no_internal_fit",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "quality_script_receipt_current",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "quality_suspect_source_rows_hash",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "nonzero_external_north_corroborates_suspects",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "six_Ontario_shares",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Ontario_share_sum",
+        "passed": true,
+        "maximum_absolute_error": 3.3306690738754696e-16
+      },
+      {
+        "check": "Ontario_external_row_identity",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "planned_native_sum_target_inside_frozen_box",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "planned_Ontario_change_conservative",
+        "passed": true,
+        "maximum_absolute_error": 1.7479351299698465e-12
+      },
+      {
+        "check": "planned_native_external_delta_cancel",
+        "passed": true,
+        "maximum_absolute_error": 8.810729923425242e-13
+      },
+      {
+        "check": "fleet_column_order_preserved",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "model_column_order_preserved",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "fleet_identity_order_preserved",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "model_identity_order_preserved",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "all_nonmapping_fleet_cells_unchanged",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "all_nonmapping_generator_cells_unchanged",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "exact_40_reviewed_changed_units",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_233",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_233",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_234",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_234",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_235",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_235",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_342",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_342",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_343",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_343",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_1121",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_1121",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_1122",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_1122",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_1123",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_1123",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_1124",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_1124",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_1125",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_1125",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_1126",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_1126",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_1127",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_1127",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_1128",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_1128",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_967",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_967",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_968",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_968",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_969",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_969",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_970",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_970",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_634",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_634",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_778",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_779",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_780",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_684",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_684",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_685",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_685",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_686",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_686",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_687",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_687",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_688",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_688",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_689",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_689",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_690",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_690",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_691",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_691",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_destination_1037",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "site_move_no_legacy_anchor_1037",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_402",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_402",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_403",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_403",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_404",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_404",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_405",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_405",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_406",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_406",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_407",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_407",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_408",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_408",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_409",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_409",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_410",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_410",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_411",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_411",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_412",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_412",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_destination_413",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Lewiston_no_legacy_terminal_override_413",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Batavia_two_legacy_controls_unchanged",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "Batavia_GEN3_landing_method_preserved",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "prior_26_hydro_corrections_preserved",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "all_model_mapping_matches_corrected_fleet",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "all_external_register_rows_unchanged",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "213_fleet_cells_71_model_cells",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "39_fleet35_model_terminal_moves",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "changed_field_ledger_exact",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "mapping_repair_declares_no_numeric_changes",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "numeric_reuse_hash_fleet_bounds_npz",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "numeric_reuse_hash_fleet_bounds_mat",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "numeric_reuse_hash_per_unit_source_priors_npz",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "numeric_reuse_hash_frozen_dispatch_mat",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "numeric_reuse_hash_dispatch_priors_mat",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "numeric_reuse_hash_dispatch_bounds_mat",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "corrected_fleet_output_hash",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "corrected_model_output_hash",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_fleet_register.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_model_generator_register.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_source_confirmed_unit_zone_proposals.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_source_confirmed_site_zone_proposals.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_Lewiston_candidate_landing_correction.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_EIA_site_identity.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_npcc.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_nygrid_full_updateOpCond.m",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_2025_Gold_Book.pdf",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_NYISO_Niagara_Model_20180724.pdf",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_fleet_bounds.npz",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_fleet_bounds.mat",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_dispatch_priors.npz",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_dispatch.mat",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_dispatch_priors.mat",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_dispatch_bounds.mat",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_plant_zone_corrections.csv",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_mapping_summary.json",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_generation_audit.json",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "repair_dependency_hash_repair_western_mapping.py",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "check": "all_review_dependencies_unchanged",
+        "passed": true,
+        "maximum_absolute_error": 0.0
+      }
+    ],
+    "failed_checks": 0,
+    "dependencies": [
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/source_manifest.csv",
+        "sha256": "59e41c8e1082fa06fc84d692c14af05890c622b3c598851f9e856cc349eecb14"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2019.csv",
+        "sha256": "9b18b5c3fed8c9677399f32f76a788544d91f55c14b6fa6936ac17d16423acf2"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025.csv",
+        "sha256": "b4aa6a2a3fe142124115bd9f4710ea3bb46ac2635b47be08b729aaf405671b4d"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2026.csv",
+        "sha256": "96ff644435c24886391747484968f9dbccfd2d6650033afd93c2c46c22d309f3"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/raw/PUB_IntertieScheduleFlowYear_2025_v394.csv",
+        "sha256": "b4aa6a2a3fe142124115bd9f4710ea3bb46ac2635b47be08b729aaf405671b4d"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_h1.pdf",
+        "sha256": "d945c5c55b105c5f375707a6f96b6e5bf689ac0ff1cfc68e6f1ffce40fdf7931"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_20261010.xml",
+        "sha256": "20934c240a81e687e997c4a83e533b4f3eaf83da08e8975ec749abbab51eacbc"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_HTML_t1-2.xsl",
+        "sha256": "4ccefe0481f1b9efc2c636e73119d79b1a669c5418083f40a035f04a53d591ad"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/raw/IntertieScheduleFlow_r2.xsd",
+        "sha256": "230ddc6af589f3a1dba542ce499005dc0b17c18789fb904f71f5db3c6b09f307"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_intertie_sign_source.pdf.receipt.json",
+        "sha256": "15404987b7f08074f059e2289b776a6ba1dd9384a1f3ec9e56d2e8317ec69801"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_intertie_sign_source.pdf",
+        "sha256": "f9744dcaa0b1e35b7e8e31f04b086b391d47425ceaa09bf21c859a8679082f76"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/raw/DOE2025_TableB2_sign.png",
+        "sha256": "6fa9a62e41e4d98c9b49eb084bc6ecac168a3bb0fde3df0fd02a5a62b8f944f2"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/hourly_actual_exchange.csv",
+        "sha256": "e59408bf1296bd92eb6c562395d98d629c6b9784d50767c9a94956c8400aa6b4"
+      },
+      {
+        "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+        "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+      },
+      {
+        "path": "output/nygrid_2025_par_controls/controls/hourly_controls.csv",
+        "sha256": "ea359615f1ef94b9f2e0f0101a72a6d2cedd78f83bab4aa15646a85b465a345a"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/hourly_exchange_quality.csv",
+        "sha256": "ae23b9a130773fece232c8bb84583a3fb2d16fe9c2533a13b525ab64ba788cde"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/source_quality_receipt.json",
+        "sha256": "0959c383d82ae34a413e9ecc97465843467d3e2e543ac7de8306a45d05710eaa"
+      },
+      {
+        "path": "scripts/nygrid_2025_western_audit/ontario_audit.py",
+        "sha256": "5bb0de95f1fc08b5bba9b27c69cbd7292d1e2e2d86f8ccf660acaa9e9a4e7abc"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/ontario/source_quality_suspect_hours.csv",
+        "sha256": "f7a4fd549c8bdea35879d0b84f23ed46d7fbb9d7073a70575a51100b7249c30c"
+      },
+      {
+        "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+        "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+      },
+      {
+        "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+        "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+      },
+      {
+        "path": "output/nygrid_2025_moses_audit/corrected/model_generator_register.csv",
+        "sha256": "1211d0f632df2ccd6306ce299de5d24644d4d28d0d987af8421c8b7559a01e21"
+      },
+      {
+        "path": "output/nygrid_2025_inputs/model/external_generator_allocation.csv",
+        "sha256": "471ea55dc77808137342df764e89be6e4cededefdaad798e8687ebbe9ea42615"
+      },
+      {
+        "path": "output/nygrid_2025_moses_audit/corrected/fleet/fleet_register.csv",
+        "sha256": "f7266a08faac3d65442482f8e5c3f2facfbf0c25960419820c7f2eb514710d13"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/corrected/fleet_register.csv",
+        "sha256": "d025a1994c9a1c19cb62c6b4ae61a1e0bb62ae2060158592c61f6ecf19546d89"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+        "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/mapping/source_confirmed_unit_zone_proposals.csv",
+        "sha256": "f78041d1a85458023bce6769effb910d9462160d8b910a9ccf2cc8621c41bc32"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/generation/Lewiston_candidate_landing_correction.csv",
+        "sha256": "d5730bb89e45bcea2795f2c8ef21aad26324616c13b7c7e57d60de80dea83838"
+      },
+      {
+        "path": "output/nygrid_2025_moses_audit/corrected/fleet/plant_zone_corrections.csv",
+        "sha256": "4530bb1e883a4cc4412898ccd7a60235cbab2ce986d885d8e17290f429534722"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/corrected/changed_fleet_fields.csv",
+        "sha256": "990d649aec7616477ebe14d27e98b05021114c128cb1550153c61682f9dc27dc"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/corrected/numeric_reuse_contract.json",
+        "sha256": "e24205b543ff12e60e221885e2ec64754def48dbebb099200653610c571b9604"
+      },
+      {
+        "path": "output/nygrid_2025_dispatch/fleet/fleet_bounds.npz",
+        "sha256": "7fdc0f26448d6333ba427f7d10535cff2eef993de21fae0794eba99b549e9c52"
+      },
+      {
+        "path": "output/nygrid_2025_dispatch/fleet/fleet_bounds.mat",
+        "sha256": "48da9450d2dbc265404232f481feb73cc4e3f971499a723afd7dce1ef7400b57"
+      },
+      {
+        "path": "output/nygrid_2025_dispatch/priors/dispatch_priors.npz",
+        "sha256": "6a99bee7ea8be1e63a6349b6a0e6fa781932525fab17dd3548ac1e11a304c66f"
+      },
+      {
+        "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+        "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/corrected/repair_receipt.json",
+        "sha256": "446a1430568a967b16a28063ce2af9c8c4790f09e511fd6480b38278c6763819"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/corrected/source_manifest.csv",
+        "sha256": "c3faf729cbf0133adcaec85d92371a468ef63f09dac6b1b309cec4afbb40968e"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/mapping/source_confirmed_site_zone_proposals.csv",
+        "sha256": "7adec9c2193d181275dd5f2c0fef93c5ea833a552b9e11f6cf11eabc6f18ba98"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/mapping/EIA_site_identity.csv",
+        "sha256": "29d9b4c5245d34f247014e78fdced50c6eb9d26ddbd987be31d39c86bd5ae60c"
+      },
+      {
+        "path": "output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv",
+        "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+      },
+      {
+        "path": "output/nygrid_2025_dispatch/fleet/source_parent/nygrid_full_updateOpCond.m",
+        "sha256": "2a0ad5224190194abe528a824dfd508005aa2cdf23f5b4d8845ec80e3726154a"
+      },
+      {
+        "path": "output/nygrid_2025_dispatch/fleet/source_scope/2025_Gold_Book.pdf",
+        "sha256": "cc43665b9344a04b4c9355edd1dc7e31d42a6bb759ffe027ad867221556aea8e"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/generation/sources/NYISO_Niagara_Model_20180724.pdf",
+        "sha256": "7ace05f9231540b218add162fbe70398b649bd4089fc350f062d81e067178396"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/mapping/mapping_summary.json",
+        "sha256": "bb30be1c3918fc39790c17241e8aff673ef734a0ea0b93f7387c3354e112bfd8"
+      },
+      {
+        "path": "output/nygrid_2025_western_audit/generation/generation_audit.json",
+        "sha256": "e5e6efe02980d4bf77a7fbfdb7426e20d0bf131c43f5b18d118ce6d40f13b477"
+      },
+      {
+        "path": "scripts/nygrid_2025_western_audit/repair_western_mapping.py",
+        "sha256": "636748168092aa6f899f50eea583ce56d28feedca4c463aecc486555e6afaa7a"
+      },
+      {
+        "path": "scripts/nygrid_2025_western_audit/review_inputs.py",
+        "sha256": "7baabd419d8109e1d1967383108cfa8a26668cb0917f4381aa9ac278a7e7e8c0"
+      }
+    ],
+    "all_dependencies_unchanged": true
+  },
+  "fleet_review": {
+    "status": "passed_independent_mapping_only_scope_review",
+    "inventory_rows": 2245,
+    "model_generator_rows": 1464,
+    "changed_inventory_rows": 40,
+    "fleet_zone_changes": 28,
+    "fleet_terminal_moves": 39,
+    "model_terminal_moves": 35,
+    "fleet_field_cells": 213,
+    "model_field_cells": 71,
+    "all_unit_identity_capacity_admission_prior_bounds_dispatch_unchanged": true,
+    "prior_26_Moses_hydro_corrections_preserved": true,
+    "Batavia_legacy_anchors_preserved": true,
+    "no_generator_units_added_or_removed": true,
+    "source_interpretation": "2018NYISO diagram groups all12Lewiston machines atNiagara230; originalbuilder anchorsNiagara toNPCCbus55. This justifies declaredproject/voltageproxy awayfromHuntley115, not exact2025physicalunit-terminalidentity. GoldBook8sitezones correct countyderivedcoarseplacements; none claims exactsubstationconnection.",
+    "no_numerical_replay_performed": true,
+    "limitations": [
+      "Niagara main-generator6/4/3 split and hourlycontrols remainunresolved; no newunitdispatchassumption introduced",
+      "Lewiston withinA move should not change closedzone-cut exports when injections/externalboundary conditions arefixed; verify in mapping-only replay",
+      "Existingpump-dispatch/admissionlimits unchanged; sourcezone/capacitydifferences do not silently altercapability"
+    ]
+  }
+}

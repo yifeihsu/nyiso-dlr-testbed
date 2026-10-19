@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "model_kind": "compact_complex_admittance_AC",
+  "retained_bus_count": 148,
+  "anchor_registry": "output/nygrid_2025_slim/network/bus_register.csv",
+  "promoted_necessary_nodes_in_current_cases": 0,
+  "detailed_bus_counts": [
+    266,
+    267
+  ],
+  "eliminated_bus_counts": [
+    118,
+    119
+  ],
+  "AC_OPF_used": false,
+  "full_network_Newton_solve_used_by_compact_solver": false,
+  "extra_retention_triggers": [
+    "nonzero prescribed P or Q load",
+    "generator terminal",
+    "DC terminal",
+    "PV or reference control"
+  ],
+  "fixed_shunts_preserved_in_admittance": true,
+  "phase_taps_preserved": true,
+  "magnitude_pruning_applied": false,
+  "formulas": {
+    "K": "-Yee\\Yek",
+    "Yred": "Ykk+Yke*K",
+    "Vfull": "L*Vk",
+    "If": "Yf*L*Vk",
+    "It": "Yt*L*Vk"
+  },
+  "valid_for_current_source_network_and_control_state": true,
+  "rebuild_after_physical_or_operating_input_change": true,
+  "current_columns": [
+    "from_terminal_A",
+    "to_terminal_A",
+    "series_A"
+  ],
+  "current_row_axis": "original detailed branch rows/keys",
+  "model_baseMVA": 100,
+  "gamma": 0.30012075175285535,
+  "current_divided_by_gamma": false,
+  "original_148_interface_preserved": true,
+  "globally_minimal_node_count_claimed": false,
+  "source_qualified_hours": 8651,
+  "compact_equation_and_profile_qualified_hours": 8494,
+  "paired_frozen_detailed_hours": 8494,
+  "additional_compact_success_hours": 0,
+  "frozen_success_lost_hours": 0,
+  "physical_operating_qualified_hours": 0,
+  "NYISO_zonal_load_exact_by_construction": true,
+  "NYISO_bus_load_distribution_observed": false,
+  "physical_P32_meter_certified": false,
+  "detailed_parameters_inputs_and_prior_evidence_modified": false,
+  "public_constructor": "npcc_nygrid_2025_compact_ac",
+  "public_solver": "run_nygrid_2025_compact_acpf"
+}

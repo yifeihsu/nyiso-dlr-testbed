@@ -1,0 +1,171 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-16T00:55:38.805421+00:00",
+  "plant_count": 6,
+  "all_monthly_respondents": false,
+  "EIA_2025_total_MWh": 1425010.0,
+  "current_qualified_total_MWh": 1662733.2505819518,
+  "qualified_plus_excluded_min_MWh": 1662733.2505819518,
+  "qualified_plus_excluded_max_MWh": 1736689.7505819518,
+  "diagnostic_full_calendar_total_MWh": 1683963.6497223221,
+  "diagnostic_full_minus_EIA_MWh": 258953.649722322,
+  "robust_qualified_energy_excess_MWh": 237723.2505819518,
+  "robust_qualified_mean_overallocation_lower_bound_public_MW": 27.479279919310116,
+  "annual_reported_equals_sum_of_months": true,
+  "frequency_by_plant": [
+    {
+      "plant_id": 56618,
+      "plant_name": "Clinton",
+      "respondent_frequency": "AM",
+      "balancing_authority": "NYIS"
+    },
+    {
+      "plant_id": 56619,
+      "plant_name": "Ellenburg",
+      "respondent_frequency": "AM",
+      "balancing_authority": "NYIS"
+    },
+    {
+      "plant_id": 56857,
+      "plant_name": "Marble River Wind Farm",
+      "respondent_frequency": "M",
+      "balancing_authority": "NYIS"
+    },
+    {
+      "plant_id": 56901,
+      "plant_name": "Altona",
+      "respondent_frequency": "AM",
+      "balancing_authority": "NYIS"
+    },
+    {
+      "plant_id": 56904,
+      "plant_name": "Chateaugay",
+      "respondent_frequency": "AM",
+      "balancing_authority": "NYIS"
+    },
+    {
+      "plant_id": 59629,
+      "plant_name": "Jericho Rise Wind Farm LLC",
+      "respondent_frequency": "M",
+      "balancing_authority": "NYIS"
+    }
+  ],
+  "current_qualified_minus_original_wind_prior_max_MW": 0.5436087318755796,
+  "EIA_outside_excluded_bounds_plantmonths": 67,
+  "plants": [
+    {
+      "plant_id": 56618,
+      "plant_name": "Clinton",
+      "EIA_net_generation_MWh": 177641.0,
+      "diagnostic_full_calendar_MWh": 249430.13529416855,
+      "diagnostic_full_minus_EIA_MWh": 71789.13529416853,
+      "relative_difference_pct": 40.41248095550494
+    },
+    {
+      "plant_id": 56619,
+      "plant_name": "Ellenburg",
+      "EIA_net_generation_MWh": 167719.0,
+      "diagnostic_full_calendar_MWh": 201033.24337141943,
+      "diagnostic_full_minus_EIA_MWh": 33314.24337141942,
+      "relative_difference_pct": 19.863130218651087
+    },
+    {
+      "plant_id": 56857,
+      "plant_name": "Marble River Wind Farm",
+      "EIA_net_generation_MWh": 495408.0,
+      "diagnostic_full_calendar_MWh": 534351.3246650198,
+      "diagnostic_full_minus_EIA_MWh": 38943.324665019805,
+      "relative_difference_pct": 7.860859062635202
+    },
+    {
+      "plant_id": 56901,
+      "plant_name": "Altona",
+      "EIA_net_generation_MWh": 177284.0,
+      "diagnostic_full_calendar_MWh": 241984.4596137456,
+      "diagnostic_full_minus_EIA_MWh": 64700.45961374561,
+      "relative_difference_pct": 36.49537443522575
+    },
+    {
+      "plant_id": 56904,
+      "plant_name": "Chateaugay",
+      "EIA_net_generation_MWh": 200788.0,
+      "diagnostic_full_calendar_MWh": 264321.48665501445,
+      "diagnostic_full_minus_EIA_MWh": 63533.486655014436,
+      "relative_difference_pct": 31.64207355768992
+    },
+    {
+      "plant_id": 59629,
+      "plant_name": "Jericho Rise Wind Farm LLC",
+      "EIA_net_generation_MWh": 206170.0,
+      "diagnostic_full_calendar_MWh": 192843.0001229542,
+      "diagnostic_full_minus_EIA_MWh": -13326.999877045808,
+      "relative_difference_pct": -6.464082978632104
+    }
+  ],
+  "no_model_change": true,
+  "no_PF_or_residual_fitting": true,
+  "annual_interval_distance_recomputed_from_annual_energy": true,
+  "annual_derived_flags_are_boolean": true,
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_western_audit/generation/sources/EIA923_Schedules_2_3_4_5_M_12_2025_Final.xlsx",
+      "sha256": "95684212d89ac688a355a5c8b51935111247e6f60716eba250464b28d14cfd2c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/model_generator_register.csv",
+      "sha256": "4c9892ab2a855a75af893421ddce9131d3f491b407b072055a244e0448bb24f5"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/latest_model.mat",
+      "sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h0001_4380.mat",
+      "sha256": "197a6bbb5909a61dc227f779805d07d76d8d5a7f3b7e1d77974e12c6375c91e6"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h4381_8760.mat",
+      "sha256": "ccd92f0560427d78ade6861d34182cf64a8b3c76b46744eb80e4a99edb6ffe61"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_bounds.npz",
+      "sha256": "7fdc0f26448d6333ba427f7d10535cff2eef993de21fae0794eba99b549e9c52"
+    }
+  ],
+  "latent_policy": "Qualified modeledPG plus frozenprior on excludedhours where available;10missingP63hours linearly interpolated for diagnosticpointestimate only; robustminmaxbounds are also reported.",
+  "mechanism_code_citations": [
+    {
+      "path": "scripts/nygrid_2025_inputs/generation_priors.py",
+      "lines": "484-506",
+      "claim": "Wind zonal allocation weights active nameplate against statewide Wind total."
+    },
+    {
+      "path": "scripts/nygrid_2025_dispatch/build_dispatch_priors.py",
+      "lines": "500-514",
+      "claim": "Unit/plant allocation broadcasts active nameplate weights across hours and normalizes to P63 Wind total."
+    },
+    {
+      "path": "scripts/nygrid_2025_inputs/generation_priors.py",
+      "lines": "651",
+      "claim": "Explicit same statewide capacity factor assumption."
+    }
+  ],
+  "limitations": [
+    "Four plants have raw code AM and supply monthly generation values once annually; Marble River and Jericho Rise have code M and report monthly. AM is not annual-total monthly imputation. Neither reporting frequency establishes hourly telemetry.",
+    "The 27.479 MW lower bound on qualified-hour overallocation is conditional on the current nonnegative excluded-hour wind bounds. EIA permits negative net generation when station service exceeds gross generation; no actual auxiliary-power lower bound is established.",
+    "Wind plant hourly output is reconstructed from statewide signal, not telemetry.",
+    "Plant energy mismatch does not by itself identify physical Moses meter error or certify all market-scope mappings."
+  ],
+  "frequency_sources": [
+    "https://www.eia.gov/survey/form/eia_923/instructions.pdf",
+    "https://docs.catalyst.coop/pudl/en/v2026.2.0/_modules/pudl/metadata/codes.html"
+  ],
+  "condition_for_qualified_lower_bound": "Current nonnegative net generation bounds on the109excludedhours; not an EIA rule.",
+  "excluded_net_energy_required_if_qualified_model_is_actual_MWh": -237723.2505819518,
+  "excluded_mean_net_power_required_if_qualified_model_is_actual_MW": -2180.9472530454295,
+  "actual_negative_auxiliary_power_bound_established": false
+}

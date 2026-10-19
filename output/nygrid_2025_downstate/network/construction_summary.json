@@ -1,0 +1,79 @@
+{
+  "status": "constructed_DC_research_scenarios_not_as_built_or_AC_qualified",
+  "original_buses": 140,
+  "total_buses": 191,
+  "total_branch_records": 410,
+  "exact_source_branches": 97,
+  "replaced_parent_rows": [
+    32,
+    87,
+    88,
+    89,
+    91,
+    92,
+    93,
+    94,
+    95
+  ],
+  "source_sha256_lf": "f6ba2d787a4f22fcb7ae9f597cdd3111500d79921829a245d50e516c47e209ca",
+  "identity_maximum_B_error_mw_per_rad": 7.275957614183426e-12,
+  "identity_maximum_phase_error_mw": 0.0,
+  "observed_internal_flows_used": false,
+  "gamma": 0.30012075175285535,
+  "attachment_scale": 1.0,
+  "project_scale": 1.0,
+  "modified_generator_landings": 38,
+  "original_generators": 1464,
+  "selected_K_loads_have_K_only_source_path_to_parent": true,
+  "K_backbone_added_source_buses": [
+    561,
+    567,
+    588,
+    620,
+    995,
+    996
+  ],
+  "load_coverage": [
+    {
+      "zone": "I",
+      "full_source_pd_mw": 1304.57,
+      "selected_source_pd_mw": 1169.25,
+      "represented_fraction": 0.8962723349456143,
+      "residual_parent_fraction": 0.10372766505438569,
+      "selected_source_bus_ids": "1501;1502",
+      "policy": "selected_source_PD_divided_by_full_source_zone_PD;unrepresented_remainder_stays_at_each_original_parent_bus"
+    },
+    {
+      "zone": "J",
+      "full_source_pd_mw": 10415.09,
+      "selected_source_pd_mw": 6655.260000000001,
+      "represented_fraction": 0.6390016792941781,
+      "residual_parent_fraction": 0.36099832070582194,
+      "selected_source_bus_ids": "595;596;597;600;601;628;1493;1503;1506;1529;1532;1133",
+      "policy": "selected_source_PD_divided_by_full_source_zone_PD;unrepresented_remainder_stays_at_each_original_parent_bus"
+    },
+    {
+      "zone": "K",
+      "full_source_pd_mw": 4995.65,
+      "selected_source_pd_mw": 293.53000000000003,
+      "represented_fraction": 0.05875711869326315,
+      "residual_parent_fraction": 0.9412428813067368,
+      "selected_source_bus_ids": "561;567;588;598;620;626;995;996;1497",
+      "policy": "selected_source_PD_divided_by_full_source_zone_PD;unrepresented_remainder_stays_at_each_original_parent_bus"
+    }
+  ],
+  "original_dclines": 4,
+  "dc_landings_changed": false,
+  "source_parameter_exception": "ANGMIN=-360,ANGMAX=360_only",
+  "variant_interface_maps": "rebuilt_on_active_zone_crossings_ids1_2_3_4_5_8_10;unsupported_parent_OPF_only_ids6_7_9_11_omitted",
+  "nyes_policy": "omitted_from_all_primary_cases;optional_refined_2025_nyes_variant_only",
+  "accounting_zone_exception": "Buchanan_source900_H_is_parent77_G;parent_accounting_zone_preserved",
+  "limitations": [
+    "Identity is DC-only algebraic scaffolding; it does not certify AC admittance identity",
+    "Exact PERFORM circuits are historical source rows, not confirmed 2025 as-built topology",
+    "Positive proxy attachments are explicit assumptions, not fitted passive residuals",
+    "Project R/X and fixed PAR controls remain assumptions and require sensitivity",
+    "Source-PD spatial load shares are 2019 proxies; unrepresented fractions stay on parent buses; all2025 zonal totals are conserved",
+    "No new branch is thermal/DLR-qualified; project MW is never treated as ampacity/MVA rating"
+  ]
+}

@@ -1,0 +1,1683 @@
+{
+  "method": "independent_generation_v1_target_free_prediction_freeze",
+  "frozen_at_utc": "2026-09-08T05:42:34.198827+00:00",
+  "internal_targets_used_to_form_prior": false,
+  "internal_targets_used_to_solve_saved_predictions": false,
+  "original_hours_role": "revisited_diagnostics_not_fresh_holdouts",
+  "new_hours_role": "calendar_selected_before_internal_target_access",
+  "protocol_sha256_lf_normalized": "b9fdef829f29a26a25df84c8199581b1ce9f8a9943c44551681dff7b45b2fbf9",
+  "new_validation_scenarios": [
+    "V1_2025_JAN15_EVENING",
+    "V2_2025_APR15_MIDDAY",
+    "V3_2025_JUL15_EVENING",
+    "V4_2025_JUL25_NIGHT"
+  ],
+  "prediction_scenarios": 16,
+  "files": [
+    {
+      "path": "audit_compact_nyiso_time_alignment.py",
+      "normalization": "LF_text",
+      "sha256": "eb73902295edfbc53cd6adf74601a6d2f0954972898c52967f86edfc9719e2ae"
+    },
+    {
+      "path": "build_compact_combined_generation_prior.py",
+      "normalization": "LF_text",
+      "sha256": "85da81961abb49c06a9558c7f90d02f4a507ac914c2a06c91351c40c22fb6d39"
+    },
+    {
+      "path": "build_compact_epa_generation_inputs.py",
+      "normalization": "LF_text",
+      "sha256": "553a6cee8b06553c933e2deace06977271d5c872bdd24a585f37415777ea6436"
+    },
+    {
+      "path": "build_compact_named_generation_priors.py",
+      "normalization": "LF_text",
+      "sha256": "86792fba37202458cf4c8055fcb0d79c1ed1af9e9b86f0691419a0f66af6beb6"
+    },
+    {
+      "path": "build_compact_nonfossil_generation_inputs.py",
+      "normalization": "LF_text",
+      "sha256": "c544744554fd10ce4c5049e58b128d2f6cb5e2e19d1e555620c69ddfc8c72807"
+    },
+    {
+      "path": "build_compact_nyiso_hourly_inputs.py",
+      "normalization": "LF_text",
+      "sha256": "41e47aa0eaec527d0a2855272ce4ea381a0f0c32d423e9da12cf8e3915caa13b"
+    },
+    {
+      "path": "freeze_compact_generation_methodology.py",
+      "normalization": "LF_text",
+      "sha256": "3b64bdac44dadfa70940df95d0c94f9e8052ba5bb90166ee0deebc3c37c8c668"
+    },
+    {
+      "path": "output/compact_ny_2025/electrical_fixed_peak/compact_ny_2025_electrical_campaign.mat",
+      "normalization": "raw_bytes",
+      "sha256": "e5330437409c6114902ca900e594eb44d63398e288c1f86a40dfbc18733ebf18"
+    },
+    {
+      "path": "output/compact_ny_2025/electrical_fixed_peak/electrical_code_manifest.csv",
+      "normalization": "LF_text",
+      "sha256": "beaee32cf974448f86c3ac1a99fc2a3e358073f84100209df5cc0f8ff768c432"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/blind_interface_predictions.csv",
+      "normalization": "LF_text",
+      "sha256": "efa6faf32d84dff8f7f68ed3b54ebc43b25eabc0594b7edb0a1f13b1d7ca0271"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/campaign.mat",
+      "normalization": "raw_bytes",
+      "sha256": "d7269fe9ce3be27b2cc96572fba34d16e816bbb74d54d1972ea0bbdfd26ff705"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/campaign_manifest.csv",
+      "normalization": "LF_text",
+      "sha256": "9e2cbc4231f7ee99ea8a893196d93ceb18d4a5ced2d35a5e369b625d117ffd2a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/campaign_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "730e2eda0cc7574a7fbfbb17be9ee0bd3738ce125abfdca91ef858d6851a7d94"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/case_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "157b1cee2c651df370aa8fe3e09a2b4b9461711620bd2238876a11d395355e8e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/code_manifest.csv",
+      "normalization": "LF_text",
+      "sha256": "933c1df13a8c9763717d647d04cd23a66bc0d93e74fcc0fbb67b7985be2cfc40"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "ac3bd07b15c4e2decb49cda0e3a4e3bf71090f9756a5465f7bbb131d03c0a548"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/implementation_tests.csv",
+      "normalization": "LF_text",
+      "sha256": "7a3a5ee68ba8e672e26fde10f6ffc90349749e5ff4395767bfd54b679df2c9ca"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/independent_replay.csv",
+      "normalization": "LF_text",
+      "sha256": "f18a1716c57e4f8dc785e43bde1570d294c0cad3a2aa3a55fafa1052377cd4b0"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/operating_attempts.csv",
+      "normalization": "LF_text",
+      "sha256": "fc14b7f954169288615d0c2c369d955df7c0ba2485a0aced52e872f16f6ace47"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "fa357e0a95b46c42466e54bd6517b36d152f77434314fc63faae79639a51334e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "97467c30b53b54cef56ac4ca3de178bb3bf9499e4066770aac28459852ee33d4"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "300f3c0d4758d0db0e4968dc232ea63be482892b00f635ce21a06a05f2503da0"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "7d88a83d5958557871937c13dace50583419bbee052888997accd7bd19614c02"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "48ea12e5038c1cfe9692c24a8c223606ac9b907b08763450228bb5dba55ff5f9"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "246a402d09f8354ecfb3a6d4512dfe5f66f7c219b95db48bcc699de2d5cf72d9"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "08a4a72053d5aab3ac371eaa77844f422ef81d80b1b0ec6f69921f9f57a2fc7d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "e26f3ae7c2e6ab5b6b7042fc252d2471c83ded34ea2b563ae9b15077fca0b2bb"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "6570bac7689837984ff35e60c58795bee545ea3634c7e24684e82bf5fd3b90ba"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "7042814a08642bad5c88d78a72727a51a778bc54482152371d6b2bb6fe623b59"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "84d6431401859431dd66771c90db72fad6bc798fbdcdd7bf0801fc88760e5946"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "73edfd9006809341f9a070dd90e200c979608e6bb64f92b652f0dbe4b7989226"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "1949d56bbad68dc4b9cccbeb29d8d96d02b81f458e9dd278dacc47271415ce65"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "142ad4dd63410545f84b3509071e24fa44ac45017197c1804e290b0adc93ca1a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "87bdfbf51ae36e4bf5fe7bb3b318a03cd68e10e770ef3cab9301da11d0eee693"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2019_SUMMER_PEAK_PUBLIC/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "cb5e5d9b348e63f515eb0f10e4406219af9ec403c1a2b7b12b2518715ea305b2"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "6b4286eca13c3297ec6fe01f9c4ad0bf50b540c527ed6b741fef02e7e544716c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "5c114154cd43e9c4498345c593c18d37c736ee2025c4cc6fb125b6a26b264b92"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "dc9e107ddc1c62b39b4bc4fabc615773ee4c1fa37d58e29c81d5a8e53b905307"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "441b1e03a65676f51f31938f08f0b26547d326d49538f7d7ed3f1fe2dacb1b0a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "64fbc5bbd5a1f47f769312436a8f18f9aeeaf19a3ba191b3468d7a8dc3c7e444"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "3a607ea779afd546e2c7e49bda04e428ff74ff405980ce59a31cf37a6d7ae9a7"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "502bc78f21441dcc698cc98c26263d068fd36f4f249ad191756541c94befddff"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "ea8d0c5e29c08ac6695be7415087c43266b5c0dcb5b667b3e344a1a190826b21"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "900da7a22cf64b5b434d88023848e77034bab18da0fadf13274c3ddfdc68800e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "4ac46dc60cf34b27eba2f413bb10ddbb07f90011470d7347cfcef867dee2aaea"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "cff77809b96b9dc277eea219acc4e0de92715f9f12dc4f85a010606899a8480d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "c18e63ecfb66555317c3d3c63def07aa2b8ebcd9c5bb7c68d2e292179b0ac6bc"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "17830357f0af5d074ce51c8574d57b4d55a065063370c97cb7f04ba645ad8562"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "7d294197945148a91339fb2d974f55e0680348ffa21c1c12a8d6c1905363af09"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "80cb43d36d551a9362969132db93aecb22f0fb8edb6c928d7350721c97446c86"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S1_2025_SUMMER_PEAK_PUBLIC/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "9baf885fd02274b04c22d1772d65e805e86878f6f19743f4aaacaa798a300fe5"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "ce97a492a0673b0700e2255bb091d3f488048ffb8d4b93a08a3df7ca310ad42f"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "b6e936ac4695b39a14a22842647052e4875845f143a6ae958db9f0886847b629"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "f4d21220719a855127e5e7fab1264973c65e042555054bee16879e2c47ed1dab"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "7d88a83d5958557871937c13dace50583419bbee052888997accd7bd19614c02"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "ea84b8f4fe1aaf1f37fa8c6b8fe46e0b6335fecad41b3b062c3fd681be0ea0c6"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "f22a3b8358bb87752c6590a6a40c6ed6f7c05133101aa4a7c60d594fbcaba0f5"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "08a4a72053d5aab3ac371eaa77844f422ef81d80b1b0ec6f69921f9f57a2fc7d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "e26f3ae7c2e6ab5b6b7042fc252d2471c83ded34ea2b563ae9b15077fca0b2bb"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "6570bac7689837984ff35e60c58795bee545ea3634c7e24684e82bf5fd3b90ba"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "334da3a5f8595de0c9877edc09307fd79316664f0ce20b9576928dc9548b1a03"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "1a23bd351026618bc58de41af134c41f7a299fe97d8d09cefa1865bf19c09a06"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "23f3fa4554d88d1c353ec5cadea2a6be01afb4333cc304edb0f938892129a89e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "489be5e22f6b7d4a30cc3c555291845ff3e3f4ebfbab9508c8928c8cbc18baf1"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "892e2ccdf037cd385eec0c5cd2d45fca01a9042f144a6faf07c524876e5c6c4a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "85bb6d438708610f11144b2a786a1b26ad9d8ec5324118fe8ff58e77ff6ca09f"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2019_WINTER_PEAK_PUBLIC/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "f21de25760af531ae030f0791f8ed1a90162506c501aa90564a4aae01840c8f4"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "8531a3cf6d02b0a01852cd7d158fc0723fcaef5b33300a59f0d31b42cf27cf53"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "c37e30eb3361f91a6630d89b1020872098f1bc7109dc289f15edaf3b49be080c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "764d6a6fc8cb92121af7591c1d9fd52362358c0f8d256a81b131afc96fa30a08"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "441b1e03a65676f51f31938f08f0b26547d326d49538f7d7ed3f1fe2dacb1b0a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "d47bb9c16434336fd5a73f10d1099d379724a8e6fd3c4202785635b2f3324c3c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "7b0a7bdf13eb3acaefddf8321ae813c00d32a7526b7ca0f2e59a9f7ab6fa4e59"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "502bc78f21441dcc698cc98c26263d068fd36f4f249ad191756541c94befddff"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "7362e2eb4c2f5ce957f9368230e2e70b1bcd181e34324c1bd0b136aaed8acc3c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "900da7a22cf64b5b434d88023848e77034bab18da0fadf13274c3ddfdc68800e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "bed2d16c25cdb8b9a56af0b2d074156e786c1641dca330ec9cb612d49eed5b1f"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "d6dd28dab004102ef31d3e0485e7f7220244ef239ed656041a0e46b29cb821b3"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "b91ba701ecefaaf8b30a19b9644ed8a3148b3a23031118f2f7d20e64ed7141d6"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "ee468ef8a1c48e7f6882bc1c8be0fc6977f27106fa2bb8c9c30c87d7568e63a1"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "42b3ded6007e6429ec341516f9a2c80378a0ba2fac910cd60c9fd45473893871"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "8f77f2179b3e082b5b3c8a401248af57d34db3bd884ddcd12cda92d4ec9cd427"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S2_2025_WINTER_PEAK_PUBLIC/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "a357f0b4f6b280f02fa3b5bb55f0b8a6d4b31ec56d5f8cabea90814519f58ee9"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "d8204f37e801f3c763106ae463d4f559e6d749d20656953143ecf16728765dc2"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "c16dc25b6d5449bfe1564d491604b733bde877bf323f52c48953dee7203501db"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "e9e5ba18346d5653cc2875c5a55ed077aef4e45e78b2303c9a7b7a95d79ad244"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "7d88a83d5958557871937c13dace50583419bbee052888997accd7bd19614c02"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "e50d040af96d7b30cb5a0b3954e72f7c39d5635a3c90bf03a99a119f7a415d20"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "68ef3232a56145c062e4bbb9f9722ab736ebee2fa098ac9d6bd1ae96942f0736"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "08a4a72053d5aab3ac371eaa77844f422ef81d80b1b0ec6f69921f9f57a2fc7d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "e26f3ae7c2e6ab5b6b7042fc252d2471c83ded34ea2b563ae9b15077fca0b2bb"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "6570bac7689837984ff35e60c58795bee545ea3634c7e24684e82bf5fd3b90ba"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "9e468342a82f7a4b9b42432ec8eff5186456dc3a99136be381e5b91a9b830879"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "e8a38826da9eacb585bb94bef7ed01d823594ec06f17358ddf4047809c5c102f"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "ab660aae835a899615c54a31c7899e30f50b0ce670864de9dbb72e7061c32348"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "72f4d1c94939d47bbf5b277a9d77a4c916d9a5ab045400a4d0640a3222618d1d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "c3b68b706e8eb06d42ecd460828d77317eb3dab55af6c02d740a8d7fe94ae034"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "3ddba09960928c0c8f70dc5da5c2c28c40e62817389fda67e5a874f6629afea5"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2019_SHOULDER_LIGHT_LOAD_PUBLIC/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "1696bb3c5704bbf067fe1a90f86ec5e024c63a662261d11f08ca5594eca2f110"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "21cc90864ff02e9ca0add2ff024690478530cf057302d648598c535fa050213f"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "9f485626bf59853b6851d445878bee8df93598ed938caf6fb3fa5afc57434321"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "f7b0e9e1936698786ce5fe3690241a125afff8f82a26c4ed9a699feccd34cdaf"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "441b1e03a65676f51f31938f08f0b26547d326d49538f7d7ed3f1fe2dacb1b0a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "44e0089886c5bdd551c841184f6e871e3734a2faf55e73fbfea306385918c15d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "ba60074dd27ae5e99d6b93f406886e53a369afd14e7ca6b7b52a0fbdd2ba5f7d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "502bc78f21441dcc698cc98c26263d068fd36f4f249ad191756541c94befddff"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "a28a0a6b36b716e6cd0653f5194ce04e7b7bae45ec7bd42fc4591c4f3718e203"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "900da7a22cf64b5b434d88023848e77034bab18da0fadf13274c3ddfdc68800e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "e0bcdba1f64b4ccd7517935835ef9d13dbc74bc6e03d2a48f6aa09c2f522334b"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "41eaa0dbba1f55f4394cf89b13af446ad58f9069889629dfe7746e050b14dc8c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "6e00ab2b0deac5e415e701fee7b0b122a3bd212b8ae02f3132d0f21b379de74c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "690c84ec21f09fafecd84d80b4145f711921f73979a0e2f257e2382a5addd325"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "2cf5abb58ef51b281cb62f77e025878b036d96a98fad4b272109fc704777268e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "58e6042e556f346f8fd096e5608f114e47c115417f5b592978f83f5f9ed9ed86"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S3_2025_SHOULDER_LIGHT_LOAD_EXACT/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "609a183fa3355d9927328bf97ea38a3245b2bdbae4edf4d72bbad61eb6ad672b"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "e0000f60ec11c3d3d9910123a765728fb933a118a6314ee3da44cac7f12f611b"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "468f96c756abf17c0e255e9199d0f79cd22a93bafe96cd17860b6b352611473e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "531a166d335ba1b28d434cf92931703b28900a50a9d14c46b5b5f4a8efcc95a4"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "7d88a83d5958557871937c13dace50583419bbee052888997accd7bd19614c02"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "5e550790ba5a055f444d535fe47d0da584f7c1447173caa2c17ee7ef692c5e89"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "800e14764bede71994d26427b2195ca28d3c21cce3451bda965bb0bca632a6b2"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "08a4a72053d5aab3ac371eaa77844f422ef81d80b1b0ec6f69921f9f57a2fc7d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "e26f3ae7c2e6ab5b6b7042fc252d2471c83ded34ea2b563ae9b15077fca0b2bb"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "6570bac7689837984ff35e60c58795bee545ea3634c7e24684e82bf5fd3b90ba"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "4bc071e57f493e7074a1b07cc107ed598fd7b98dd32f8824c305e7e4a69dc1a5"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "9334c548e487841599b587b71add5ae58a332cfdaf3532764a97e00d0f3708f1"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "25f5fe33cf3ed5c25775666856ac9c787f798643b94bddb983720559cddd0711"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "762fbeabd9e37c7507171a1cf3e363c71f17b25167bf802c567d075a012fafec"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "4c5d23172e44e888274c5823b55252d384c18d5f13b8abe8b233c3895d6d047b"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "172380c437afe894b6d32431ee01ab6cd35212a4939d7f9ad457e3dfa7a74628"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2019_HIGH_NYC_LI_LOAD_PUBLIC/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "b774a2d0679f2ef4271affba0dfd269666dbee2842c4732894a196c82364465d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "3a9e83ea87dea7eea8ab502dbbb612c2ae3b96875719c8e4803f3bf0402fb6e8"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "2967e195c313ed91f7fc44ff77e86e3581e4ad00c6f73ad16323f38c00a263d7"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "e845a0412bf1c01af2c9acd1ab76978f53c090ba541561c3f5ee2fe211bc680e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "441b1e03a65676f51f31938f08f0b26547d326d49538f7d7ed3f1fe2dacb1b0a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "6602d5feba6a42b2463408d686b5e39144296bb708c6b8031cc2866f821fae9f"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "dd6ff5c4aca678c42b64ee7b322c6a1be42069dd717986931472c47107b101e0"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "502bc78f21441dcc698cc98c26263d068fd36f4f249ad191756541c94befddff"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "b02c565ea0f485d918304f3f114de15353f338276c3c3f386470cb534b8f986c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "900da7a22cf64b5b434d88023848e77034bab18da0fadf13274c3ddfdc68800e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "f53d6c9b9eff72aae0906e5d66519d8a1e7efca8d71b9e8e5ad746984cb310d9"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "5afa4af32c7fad4598d8c749a7967a652272e4b8ede93ffd7092e0cb5157a23a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "30cfba8d80a0ae58fe00791f21d08ce0453be031ba9611b8bedfc37055ea6d81"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "e81a97a671709172ecc872ebc1de33003bd9bd9ab3d22d90575d9b1accd18381"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "311146a7e341167d236400535aeff7c8110b3640cbd622f62819b9572cca778b"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "5c5b6a8c8566c6cc73517fe7b05bcd0c137dc5cd47cdec06c765fde8a782e02d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S4_2025_HIGH_NYC_LI_LOAD_PUBLIC/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "4d458a0f2edd79691f3679a404b050387914d99867084de8ee0b3b3829d893ff"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "7bb80e3d6a5b1e08cb66cd8e6475448071509c07aca4b21bc3136b3395da0962"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "49bbb86e0aec9c38e5871f653300d80c2f20a3143d15a91b74abc2a045899036"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "b639d73798e243abcb13eb59b2bbd58c5ae589a2e814740f5cf373326353bd7c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "7d88a83d5958557871937c13dace50583419bbee052888997accd7bd19614c02"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "42bcf4ed9ba517fe17ff44dbd811fca2798b96fc9cab9699f0193f63bb7bf4a6"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "ebc5762a6bd862b8543392ea2e5a23f16b6d56286568e559cbecdbf2c0d8fad1"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "08a4a72053d5aab3ac371eaa77844f422ef81d80b1b0ec6f69921f9f57a2fc7d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "e26f3ae7c2e6ab5b6b7042fc252d2471c83ded34ea2b563ae9b15077fca0b2bb"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "6570bac7689837984ff35e60c58795bee545ea3634c7e24684e82bf5fd3b90ba"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "3e83cc88b703d64e48ee07c2365770ea3a014733ea8cffa8cf09cd6b30d46a57"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "df1f453222d6c5a3b9c1f2d27648324076dac9751284c3e7f27268e6eab7cdaa"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "073d37f0f926215b94b4d2bdd214674a427e52bca795c7745c575f6240daf6f8"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "91f9413451fc47dd6966245b4e9869247408329875d922728e2ba5de4305c1e4"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "a42f360fd253d0ef13f65062641fad93802339085f1012e7788baab5f83bc53c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "e1ea125e023905b073f8c1d71d36619d7e6233eaf1226d7933676aaf2f543402"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2019_LOW_TOTAL_EAST_PUBLIC/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "ebdb4199c83f379743847b20df225173dcab412f5786893a85d27476adfd3044"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "84445bb998421b32dcf8aea009c37673801b4c6b68a760382605e8d9d9862078"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "f344933b8ae196d9cb40ac7e96385ac8e6949e185de0ecef70d303da2939bab3"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "afd3f79f464282c88837d7e120f39f885cba842c59ca7a278e11db40e8664b1a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "441b1e03a65676f51f31938f08f0b26547d326d49538f7d7ed3f1fe2dacb1b0a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "1e29db6857d709fa772e2d00140f9cc2e62d68030c1301a35d20d4bcb9169fd3"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "a23ec5160e0c7e7bf61bb7eb21b50a6091a52fc4d69cfc882d4d6eda39036cd0"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "502bc78f21441dcc698cc98c26263d068fd36f4f249ad191756541c94befddff"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "3baaaf7f5f1909d3cc9bb29c272556ca15fdbf5d48e6df6cdaf27c1f81d93030"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "900da7a22cf64b5b434d88023848e77034bab18da0fadf13274c3ddfdc68800e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "3c99e44c853bcd9b8cbe15dd8c40245027fcebcc19a58400efa7af0a31f0dea6"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "32a502c1ef2719ba27ac7df2fe0883fa9d86cfdcd6cc92fd792f420f5a258cab"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "f7a191586a58506698c7acceb9520a49a0f26ac8e88dde4a8e523bd3900d7311"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "64444b8e3174117ead918c9b5a34a215a89205940c8ab04520749fece034aba0"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "ac3e8d6772ab4436022532ae3b76271394d70e25bab8c45a893b9b35f4d612d9"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "f6052a35745c9c7a0b0f3e191182cb169af3b3986c9eac654d91c1136f488d85"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/S6_2025_LOW_TOTAL_EAST_PUBLIC/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "f9faaa1e5d33d567e2060db1ee804ac4948053ad084fc7d285158cbf629d879c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/source_manifest.csv",
+      "normalization": "LF_text",
+      "sha256": "e263ad61f64a22d62199e9fc167a6317f7f632407d30c60995666443ed1c4f9e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "6d53645c26cabea83b6070982c1a0722af51d2dca15206e59e4f95f8d8045011"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "55b96be1de14851a356fb832e6b7d1cecac8dbd41ade827b94888f7f5f0dc806"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "0f4a97092a984146abd401e7c8237a57346d805fd4598a46d897d9559e4de5e1"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "441b1e03a65676f51f31938f08f0b26547d326d49538f7d7ed3f1fe2dacb1b0a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "05ba96881f68495efe09b8c7ab844d710c95ec32e5b6d5673fa38d11172b21fe"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "35787499fb0ba7cf24a7c61a1546c86320bbfee35489e9b3f74d9a428427961d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "502bc78f21441dcc698cc98c26263d068fd36f4f249ad191756541c94befddff"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "738f24ff6268fff797cecd6a8550700b9f2751dcd8e7841c5738c87495c1a57a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "900da7a22cf64b5b434d88023848e77034bab18da0fadf13274c3ddfdc68800e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "5cab23448e1c666ee24101340f9329f87a0f5c0eaa47d42b1682b6cec7fc7e6e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "0ac45ac0588dc15f5432ec2776c25f726621799dc452bfe600b84e60059aa085"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "d2d0e20869e4095846f4da191066c445b3b1cb2621d7dc262fd012f7c05072ed"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "867c6b65dbfe3ac47a1f769e2e0df1472a12713db7753c988b7feefe1bc9bc0f"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "c381b275c7dbcd89303a09fa6c335ef9dbb35cbb644400f7dd5b39d7b5dde84f"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "e2fc9d04fbd60744b243b96b2c3717336ae508277c0f9953898e6e9c598ae148"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V1_2025_JAN15_EVENING/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "592424d0334201cd8d734f0e598719745e6d04872c4be77fbfa8126ac48dc5fc"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "f221a588da534c71045d9fca0dc67abe21d110972189e6af7c225884e934d627"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "e5c0d518877c9c6bd35502a3b44a400ba49e7b790fdbce37c347e23488886a0b"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "50a4da319cd0c5dbf1439b48f0c0d3ec9a14ed3944e5fa9c90b2e2b7679fcb9a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "441b1e03a65676f51f31938f08f0b26547d326d49538f7d7ed3f1fe2dacb1b0a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "717485da7256f1c925e1048eaeee43fe0ae1a63b66b945bf1cdb7e683625f8c8"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "a4a6253a5388668673f845e836991a355bebf0427f73b11ed0deeda22f22a84a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "502bc78f21441dcc698cc98c26263d068fd36f4f249ad191756541c94befddff"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "8a27fbd62e58f1535ae6ac4757ffc3ca8554ad5153c4278d617bdef5397af0e3"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "900da7a22cf64b5b434d88023848e77034bab18da0fadf13274c3ddfdc68800e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "367109ef4f3841dc75ad0827166d3efc2dad2c74341796c6672b50e4453ccd05"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "c88db49892c5efee4e098ff7448f2d9b5a3951a6ee7a3c7efb08f144bc709e0e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "3cf572c70beb1526848edee7c7cb3d970e4fa212d4f0ad6118391b3150fb682c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "d8e06418204c0091877d3beaef35f31cca8178e0cf0747943ca8e205e088033e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "f8dcef2cb1f6be38de0741d69139f0f8a0d21fd252275caa525de9b60e650c9b"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "7f4a3a28fe18503b7e9d71f14416d8bc3799b676ff29f5515ab3e188067bd0d4"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V2_2025_APR15_MIDDAY/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "55f22482f6b5b7a0c8a68094b835d110496c3ff7a6f798f995f553b967eba4fb"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "902bba7e6a9bad60744ddcd15425af6918fd51f2d6079545c2b045768bc8fc10"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "14cca727f842cf39523b5a84a4cebae3b95f9b8779dd9bdb5bde44c2c378cec0"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "cbecebca5f54e56bf894984a724b24e66df3a601b538030e62db6fab45397d15"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "441b1e03a65676f51f31938f08f0b26547d326d49538f7d7ed3f1fe2dacb1b0a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "e406504e8f8f2b200b26f455d12a8f60707e00e42e9a9f4da371483b60b90719"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "afc0a5c8c158821795d5a6039bf0393456c3a318eaf179e095dfa24f124a3056"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "502bc78f21441dcc698cc98c26263d068fd36f4f249ad191756541c94befddff"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "ee69eb440a6120adfe7eb817bb0ea49209a23fb8b00006999a14ab78416f154a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "900da7a22cf64b5b434d88023848e77034bab18da0fadf13274c3ddfdc68800e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "75d36130cb2998da5a870b464895e54f3cfaac0b95c69559cbb270a0913d281b"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "231f6c05ff2bdee15a3839041dafef4247421974afd2e735f183ac0ffcd8ac49"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "54e3c4aa6f5a494b5fc8e32735132e0465d77ada80c6a490a7172b50466923b3"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "79ab0d472b1c82b086b845236cd9e08643813cfd4153f60a33fb8732ff140948"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "4191d55962579f57fd504ba91f1a171ea195f890eb68f91b28994025f63d5594"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "08620c90a1ec3b52b105e991ed398acf8c4fa7b35662abaa0d6d4d384c9d83f0"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V3_2025_JUL15_EVENING/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "593e45e22a3cfee548931ab3e4074c5ec4e09530380954c09fd5d12b81f820b3"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/attempt_1_MIPS.mat",
+      "normalization": "raw_bytes",
+      "sha256": "8e36ac5afceb7273a1c5ce942ebd2345b6a897f64a1810c554ea6f87b43f5c59"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/boundary_register.csv",
+      "normalization": "LF_text",
+      "sha256": "e10fe457f5902b8feccb2576609107eae3cb1558e107219dbbb38d5bcefaddc2"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/bounded_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "11ff5f1c5792e6426a5efc195fa3f056d0fe65c15043c9b7d3bf9131725870f2"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/branch_map.csv",
+      "normalization": "LF_text",
+      "sha256": "441b1e03a65676f51f31938f08f0b26547d326d49538f7d7ed3f1fe2dacb1b0a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/bus_injection_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "8bdcec678d6c3b62b4ca77131511b705df641e551308c199a73ba25ebd85887f"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/generator_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "0d92dfa2f5e98e02a23b66b964c92a8e0d6a10cb1dfc30095c9f483097e61e1a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/generator_map.csv",
+      "normalization": "LF_text",
+      "sha256": "502bc78f21441dcc698cc98c26263d068fd36f4f249ad191756541c94befddff"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/named_source_prior_ledger.csv",
+      "normalization": "LF_text",
+      "sha256": "25a7b46baa352e3210dda7ba670cb6f1c55b86702ff0e7067d41bcff5873a6d2"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/operator_gaps.csv",
+      "normalization": "LF_text",
+      "sha256": "e9a945bcaff33cb5b730937623ef46ea62345619f8b5aa2a596a98f9bfe96b90"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/operator_members.csv",
+      "normalization": "LF_text",
+      "sha256": "900da7a22cf64b5b434d88023848e77034bab18da0fadf13274c3ddfdc68800e"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/replay_audit_branch.csv",
+      "normalization": "LF_text",
+      "sha256": "bfe469cf1801722d98a1a191cb961b1f8566ef94c19ad8fe0fb0a93110beb57c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/replay_audit_bus.csv",
+      "normalization": "LF_text",
+      "sha256": "5460bb1f661a168baa6ee7d64838140f0c14764aef0f083e59c5f1ca95ce5698"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/replay_audit_generator.csv",
+      "normalization": "LF_text",
+      "sha256": "c74431e0407e43ecafdccb26ab2d26773a9ccb047d71ac622a706d6930b6b65b"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/replay_audit_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "ec6da38de7428df2c0151bbe868b5c816f2f09bf1ad5d0eb6041cf97a5420a17"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/source_prior_evidence.mat",
+      "normalization": "raw_bytes",
+      "sha256": "946323f777d881ddeb68d60726676e3fd36889f3c88cab9b66e8563d93571b54"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/target_free_proxy_flows.csv",
+      "normalization": "LF_text",
+      "sha256": "23348ecc334b662d2ed63d020d3553653ba29147ac6582b458d85d48a7dc2081"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/V4_2025_JUL25_NIGHT/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "8a98305711379d107b8809660ed43aaad402184ea77ad222c51349214c8dbbf5"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_reconstruction/zone_generation_deviations.csv",
+      "normalization": "LF_text",
+      "sha256": "6793c34b0e0534371eca76fb337831235b2bab6d48d6bdfc52f070d1c642370a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/combined/named_generator_priors.csv",
+      "normalization": "LF_text",
+      "sha256": "78c9c315107bdd747bb8ac4ca91c72a02721f7d9d856fe25b68a868ae95e98cc"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/combined/named_source_manifest.json",
+      "normalization": "LF_text",
+      "sha256": "37efd3b336393d621d97a930124bfbb1bddb35f09384588770e553b0eb84a904"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/combined/source_manifest.json",
+      "normalization": "LF_text",
+      "sha256": "b8a55e5f5f3c5a486e55fb18f14163f77f29da422cdd20c73353eeeb9874a504"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/combined/statewide_reconciliation.csv",
+      "normalization": "LF_text",
+      "sha256": "fd6d2cec2c90956de3c01d4351843d4527fd1b46b6dc5ff811b147fc95e51d3a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/combined/zonal_generation_priors.csv",
+      "normalization": "LF_text",
+      "sha256": "2cb1bfe3e27c7ee9834c1564efd4e8cb9a69bd855dd1a4d44f78b81f093bc43a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/declared_facility_zone_evidence.csv",
+      "normalization": "LF_text",
+      "sha256": "075be8ab8ab0a6fd43cd0a292cb2376e4572cd62d0517feb2a1322d4a724047b"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_eia_crosswalk_ny.csv",
+      "normalization": "LF_text",
+      "sha256": "565795c8fcdc865c6b668e9c85d952a0a5029136a2f3718084ffb328ff569aff"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_facility_attributes_ny.csv",
+      "normalization": "LF_text",
+      "sha256": "6473f859c8f7502afe4feaa61cbf730522e7bc3c7c322f4ee68303fc27263b24"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_generation_hourly.csv",
+      "normalization": "LF_text",
+      "sha256": "7615ce98ed103214cf9e08d56917c42793f19eda5b3307a10efb41b625c2cc70"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_generation_input_tests.json",
+      "normalization": "LF_text",
+      "sha256": "99b8d176550308d51388070371c83d7e4abc72a929f9ca053fd584358055131c"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_method_source_manifest.csv",
+      "normalization": "LF_text",
+      "sha256": "d509299261fdf7b0edfd5bae7727a83a20aec2c1765479f999c2a657d66b84c1"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_quantity_conversion_audit.csv",
+      "normalization": "LF_text",
+      "sha256": "b92202af4cd6c5b88dace85735a2e7b2c81c1e5c6f0d440be6cc040478059ab4"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_selected_scenarios.csv",
+      "normalization": "LF_text",
+      "sha256": "8315955346de958537347a5f67ed1c538f2d47fdb1277c24ac6ca75ebcb0e576"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_snapshot_coverage.csv",
+      "normalization": "LF_text",
+      "sha256": "c24964ddfc39e048466234a237b0915f6a50d410eaefe64de650a5d8438fa76a"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_source_manifest.json",
+      "normalization": "LF_text",
+      "sha256": "912bc4ef9eda1b94c94fc737d6d696f54e8170bf2ef3daca9148c18f4aa3b198"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_unit_identity_register.csv",
+      "normalization": "LF_text",
+      "sha256": "122bf2c556950dfdb70c1355c621d608212d7825acf53db65e0a4faded9c9ddb"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_unmatched_generation.csv",
+      "normalization": "LF_text",
+      "sha256": "257632c401c5d3a00cc987fd0a71fbd2be02cd3b6ce752ac6fc148751882f769"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/epa_zonal_gross_generation.csv",
+      "normalization": "LF_text",
+      "sha256": "c80f5fd70c9e426dbedff17cf0b3fdfddbb3609cd6e73acaf0183af61f3157ca"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/nygrid_2019_identity_crosswalk.csv",
+      "normalization": "LF_text",
+      "sha256": "0020e547dcff2cfb10cc9b74a5c0864668ab406f1d164f27e3ab57cf58f10b50"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/quantity_audit_daily_source.csv",
+      "normalization": "LF_text",
+      "sha256": "1f4129c85fd59e0391c8cdad0a8350d23794af3051260d03ee92a3489a933fae"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/quantity_audit_hourly_source.csv",
+      "normalization": "LF_text",
+      "sha256": "d4fcddf7f5f8555bae1555c1a79e1bef07429c0027338dfb76aca3494b0ad7a1"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/selected_epa_source_rows_2019.csv",
+      "normalization": "LF_text",
+      "sha256": "7da10da1acc820a010e72633ca24b8299f912624c3b0922aede0a1ef55c8f683"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/epa/selected_epa_source_rows_2025.csv",
+      "normalization": "LF_text",
+      "sha256": "57fd8ae61d9603b408757e3bc28a080e39d6cf9a45a6e333b78252397d902b50"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/generation_reconstruction_protocol.json",
+      "normalization": "LF_text",
+      "sha256": "b9fdef829f29a26a25df84c8199581b1ce9f8a9943c44551681dff7b45b2fbf9"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/hourly_inputs/boundaries.csv",
+      "normalization": "LF_text",
+      "sha256": "91c6f0cec5c2628a62e39dd67ac5f8afff2fc50362b43571e7d683f5aa27af96"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/hourly_inputs/external_records.csv",
+      "normalization": "LF_text",
+      "sha256": "6055bb6a26d5c48a33d1338e80fd32cbbf96887ba022568d11a31d959ed5b522"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/hourly_inputs/extraction_manifest.json",
+      "normalization": "LF_text",
+      "sha256": "125e13b060913d1a6747b464f9860d5042a0928c5d7b6db8e85d51834a03eac3"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/hourly_inputs/interfaces.csv",
+      "normalization": "LF_text",
+      "sha256": "312024f1890de7d65bcdbda5426c07083f451273ccd7582afc476e318d8ae359"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/hourly_inputs/loads.csv",
+      "normalization": "LF_text",
+      "sha256": "7efe7c0ae866415de555313d505c418bd09158155ce88c5919e6e1e54cc3fe49"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/hourly_inputs/snapshots.csv",
+      "normalization": "LF_text",
+      "sha256": "f1f4eab97cb46d228e9b5649586cf8cffd8417f2f11543c23ca69e941f1f557d"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/hourly_inputs/source_manifest.csv",
+      "normalization": "LF_text",
+      "sha256": "d5b0e646da16f93d83de6b57e8c1e5e34a2f38c8450163d91aa5c5a20b7109ef"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/allocation_validation.csv",
+      "normalization": "LF_text",
+      "sha256": "dd001c909379b24540c762b90ebbcb83bab74f76f6a5759c0fb2f3d583b31981"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/eia860_nonfossil_inventory.csv",
+      "normalization": "LF_text",
+      "sha256": "a500603710cf3b47805eadf50410f8b1935ec15d4e1e00e97883e71e5742e992"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/eia923_monthly_hydro.csv",
+      "normalization": "LF_text",
+      "sha256": "d162da5991a1c88d627f619f1d1b642b560478a09a970a7cba60040160347c88"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/hydro_plant_hourly_estimates.csv",
+      "normalization": "LF_text",
+      "sha256": "d22259f394d01fa86ae89f9848ddf7d9741ae05de67732d2c5a5cd3eb7c33b0b"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/named_renewable_priors.csv",
+      "normalization": "LF_text",
+      "sha256": "9d9303efabeda1ce0a5cf76d71f72d645e0dae5bf87abc90abc292a8fd37df21"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/nonfossil_input_summary.json",
+      "normalization": "LF_text",
+      "sha256": "2bef30758cd23aacc49015f46aaa720a80d6f50787344f0558842b57e0ce4ffe"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/nrc_daily_reactor_inputs.csv",
+      "normalization": "LF_text",
+      "sha256": "729b8632734bff866d890479b0889d53c5467ab061b58a6ef032102279199b04"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/output_manifest.csv",
+      "normalization": "LF_text",
+      "sha256": "8f0507746b3d9ddb5dfb1ef1fd448f2c1bf929849d3c95e5e4e9c482750fafad"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/registered_hours.csv",
+      "normalization": "LF_text",
+      "sha256": "3cb4232ff4f90256abec38fee0291da9ecedadd8a843e0abcee4f5e719bd5e29"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/source_manifest.csv",
+      "normalization": "LF_text",
+      "sha256": "e96f42be67cec1b16e5a9ee127a8bd273ca7827c5657a8f38b632621db7e83de"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/statewide_fuelmix_hourly.csv",
+      "normalization": "LF_text",
+      "sha256": "cc74520bc911a850d439bb3a98a6d5e94824648a173893101c7cc0411bb6fdbf"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/statewide_fuelmix_raw_samples.csv",
+      "normalization": "LF_text",
+      "sha256": "957e05f1a0da150dcebbd879f3c1169912c2cb70d1eafeb7525776dfef7a6730"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/zonal_allocation_shares.csv",
+      "normalization": "LF_text",
+      "sha256": "a96942e250d2c851850c848709c0bbf01da3d81aa69a25313dbf647b2f0994ae"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/nonfossil/zonal_nonfossil_priors.csv",
+      "normalization": "LF_text",
+      "sha256": "1a76450833d8e69011680713d7df43b2343991489acf948928ef3dd2b5337594"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/time_alignment/integration_protocol.json",
+      "normalization": "LF_text",
+      "sha256": "8703a1add643f0de292795cb73150b06cf3a6d15c035608abb5a68500c81f6a2"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/time_alignment/p58b_hourly_coverage.csv",
+      "normalization": "LF_text",
+      "sha256": "a89792030d26758a6411f4fb8497a020f1e54ad4c4d26a2a5f070256a1dd1bad"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/time_alignment/p58b_p58c_interval_comparison.csv",
+      "normalization": "LF_text",
+      "sha256": "833fbe71da439e1d589758c3460a7af309d3d55bdee8b0a8d17ee5a7d02cf8e2"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/time_alignment/source_manifest.json",
+      "normalization": "LF_text",
+      "sha256": "03225d1cd511f868178199d0e44941b644283bdbd415ce86c43017d2182a7255"
+    },
+    {
+      "path": "output/compact_ny_2025/generation_sources/time_alignment/time_alignment_summary.csv",
+      "normalization": "LF_text",
+      "sha256": "722e87dbfafbdf74648c8dc4f4cc1cc6483b6b83e05696293a81c4ab9b1b4671"
+    },
+    {
+      "path": "replay_compact_generation_reconstruction.m",
+      "normalization": "LF_text",
+      "sha256": "8b0c82ce6f2f02cdc39d6a90fa7cd73f61fbb145d4304ba4fdffbfd96af5b343"
+    },
+    {
+      "path": "replay_compact_ny_2025_electrical.m",
+      "normalization": "LF_text",
+      "sha256": "b78d0fb52019e0a069823b366c2be6a67cc3c6e0b04189b8d65a32ccf6d447ed"
+    },
+    {
+      "path": "run_compact_ny_2025_calibration.m",
+      "normalization": "LF_text",
+      "sha256": "8442a001d2c7dfce26f620434e9e7e2a7a32cb3bfaabcac8071b3135f2ef16e2"
+    },
+    {
+      "path": "run_compact_ny_generation_reconstruction.m",
+      "normalization": "LF_text",
+      "sha256": "a9bebc30f73f0eb3eb39f70964530d4b76d0e98e0e8f7486889fde84024ffeed"
+    },
+    {
+      "path": "score_compact_generation_reconstruction.py",
+      "normalization": "LF_text",
+      "sha256": "0470d44ceb5831ce90dca7740106c1e62864af311cf576d6ec25141863afaa11"
+    },
+    {
+      "path": "System Matpower Format/npcc_ny_2025_dlr_research.m",
+      "normalization": "LF_text",
+      "sha256": "1c0ebf78eab2d08b3f2a45c0f3a4560a92e14a92a415ade35422eabcd3eb1f8b"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/add_compact_interface_cost.m",
+      "normalization": "LF_text",
+      "sha256": "082c5470151752685ecd119439ccd4d59c1cc6d9909055d35aba8cf84d962676"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/apply_compact_2025_generation.m",
+      "normalization": "LF_text",
+      "sha256": "40a31c2bbf12ce47e399ada4ebe9b19c15c70b95d5246f305f3d38f89f16c609"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/apply_compact_2025_infrastructure.m",
+      "normalization": "LF_text",
+      "sha256": "316eb5482635bcc3f743a547f0fb10da14cd72a2ce0eace24647aeca6da801ff"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/apply_compact_independent_generation_prior.m",
+      "normalization": "LF_text",
+      "sha256": "5da9d82f7f4709d3fc4f279a28bcc2aea9dc6ffc19da04d4a578fb28fc14bfd8"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/attach_nyiso_zone_metadata.m",
+      "normalization": "LF_text",
+      "sha256": "c73b19353e2951159b46a702d1e7e97db61cec8b98435374992acfa2b0330d5c"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/audit_ny_ac_reference.m",
+      "normalization": "LF_text",
+      "sha256": "67c466012c360db0058a889311406e60d23c9d98301e44d1642e9e5d4f251550"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/build_compact_npcc_corridors.m",
+      "normalization": "LF_text",
+      "sha256": "f66ea1dbceca30f3cc82b7d6450591f156c54ad07ce06e3bba93f06c1d72f0e4"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/build_compact_nyiso_operating_snapshot.m",
+      "normalization": "LF_text",
+      "sha256": "90adc54ef069bc07dd2029642d8329b9a03f3b3684c238c1d3a7146910decd68"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/build_compact_nyiso_snapshot_inputs.m",
+      "normalization": "LF_text",
+      "sha256": "0fc58ffd3b4a878e228e63bae009c47f2cacf6869f177b2b874f35b8700347b3"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/compact_interface_ac_cost.m",
+      "normalization": "LF_text",
+      "sha256": "48f3a99ee7cec5312baff2b875ef4e25277758330b719efc79e9ec82933ace86"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/compact_ny_2025_code_manifest.m",
+      "normalization": "LF_text",
+      "sha256": "d93fc865ee9a0a275e8874c19432ef52052fc8379766d2cfb9a92ef47d4b0a4e"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/compact_nyiso_interface_operator_variant.m",
+      "normalization": "LF_text",
+      "sha256": "84c778f4081dc2cef3eee2bd06aab06763edd7c09a0cfa4081e42c9b90c1a7b3"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/compact_nyiso_interface_operators.m",
+      "normalization": "LF_text",
+      "sha256": "75e9c2c32459ae804f6cac671909d1ccae0980989267abf8e42e9bd0377d6696"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/fit_compact_nyiso_operating_snapshot.m",
+      "normalization": "LF_text",
+      "sha256": "68ae4fecbc93863d1fcb81dfc038da8b95259fdf31d9659852cda724bfbef5e7"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/normalize_perform_ny_source.m",
+      "normalization": "LF_text",
+      "sha256": "691ec3d59faf57df34107e114beaeb3ff53723262d00cc45d2d5c8fbcc076bf3"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/nyiso_bus_zone_map.m",
+      "normalization": "LF_text",
+      "sha256": "e10c9547b238e1eef49f36358286341b7b8843cb86cb68fd71c488655b9f8c47"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/test_compact_interface_ac_cost.m",
+      "normalization": "LF_text",
+      "sha256": "b64a1386488ca2d7dc86a7a7d2ba8fa3b6c8f4386fc182de722a2b40fabd29aa"
+    },
+    {
+      "path": "System Matpower Format/NY_Lite/test_compact_nyiso_operating_snapshot.m",
+      "normalization": "LF_text",
+      "sha256": "7679b960d1d14eb3acf631a0450f6f50cd3d44d1cf8408dc2bfeb063b4235419"
+    }
+  ]
+}

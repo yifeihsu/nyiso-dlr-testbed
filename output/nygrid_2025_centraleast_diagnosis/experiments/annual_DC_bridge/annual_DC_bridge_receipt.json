@@ -1,0 +1,72 @@
+{
+  "completed": true,
+  "passed": true,
+  "fixed_original_AC_qualified_cohort_hours": 8494,
+  "solves": 33976,
+  "elapsed_seconds": 67.6241547,
+  "output_bytes": 7.2563177E+7,
+  "variants": [
+    "detailed_AC_network_DCPF",
+    "restore_parent224_X",
+    "restore_parent41_X",
+    "restore_all33_X"
+  ],
+  "summary": [
+    {
+      "variant": "detailed_AC_network_DCPF",
+      "hours": 8494,
+      "DCPF_audits_passed": true,
+      "CE_mean_public_MW": 1984.6046954215929,
+      "CE_mean_minus_archived_DC_public_MW": 600.3217968864609,
+      "CE_min_minus_archived_DC_public_MW": 95.659975597045332,
+      "CE_max_minus_archived_DC_public_MW": 1313.3393702638984,
+      "max_nodal_P_residual_MW": 2.3766233425703831E-10,
+      "max_branch_law_error_MW": 7.6567105146562513E-11,
+      "total_DCPF_seconds": 14.053600500000007
+    },
+    {
+      "variant": "restore_parent224_X",
+      "hours": 8494,
+      "DCPF_audits_passed": true,
+      "CE_mean_public_MW": 1403.0306193283475,
+      "CE_mean_minus_archived_DC_public_MW": 18.7477207932176,
+      "CE_min_minus_archived_DC_public_MW": -39.535051672250887,
+      "CE_max_minus_archived_DC_public_MW": 97.764368769598832,
+      "max_nodal_P_residual_MW": 2.2419044398702681E-10,
+      "max_branch_law_error_MW": 7.8557604865636677E-11,
+      "total_DCPF_seconds": 13.790191899999989
+    },
+    {
+      "variant": "restore_parent41_X",
+      "hours": 8494,
+      "DCPF_audits_passed": true,
+      "CE_mean_public_MW": 1984.6046954215938,
+      "CE_mean_minus_archived_DC_public_MW": 600.3217968864617,
+      "CE_min_minus_archived_DC_public_MW": 95.6599755970442,
+      "CE_max_minus_archived_DC_public_MW": 1313.3393702638948,
+      "max_nodal_P_residual_MW": 2.3766233425703831E-10,
+      "max_branch_law_error_MW": 7.7420736488420516E-11,
+      "total_DCPF_seconds": 13.793741900000004
+    },
+    {
+      "variant": "restore_all33_X",
+      "hours": 8494,
+      "DCPF_audits_passed": true,
+      "CE_mean_public_MW": 1384.2828985350075,
+      "CE_mean_minus_archived_DC_public_MW": -1.2471734747551743E-10,
+      "CE_min_minus_archived_DC_public_MW": -2.28283170145005E-10,
+      "CE_max_minus_archived_DC_public_MW": -5.9117155615240335E-12,
+      "max_nodal_P_residual_MW": 2.0571633285726421E-10,
+      "max_branch_law_error_MW": 7.7122308539401274E-11,
+      "total_DCPF_seconds": 13.774353700000002
+    }
+  ],
+  "maximum_all33_X_restore_vs_archived_DC_interface_error_model_MW": 1.8144419300369918E-10,
+  "all_original_8760_clock_positions_exported": true,
+  "no_new_cohort_selection": true,
+  "OPF_or_fitting_used": false,
+  "source_profiles_transfers_and_R_B_taps_phase_status_shunts_preserved": true,
+  "only_X_changes_in_three_diagnostic_variants": true,
+  "observed_interface_values_read_by_solver": false,
+  "diagnostic_not_production_model_change": true
+}

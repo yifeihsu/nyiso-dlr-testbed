@@ -1,0 +1,56 @@
+{
+  "created_utc": "2026-10-11T15:51:28.431071+00:00",
+  "scope": "Independent pre-specified source review for2025 NYIS-reported four-region EIA930 actual boundaries",
+  "internal_interface_observations_consumed": false,
+  "primary_source": "https://www.eia.gov/survey/form/eia_930/instructions.pdf",
+  "doc_sha256": "321ee0a8d93b15ca2fe206720615bb721c1b6eaf9d9fb06e9c11837ca5004d58",
+  "documentation_pages": {
+    "UTC_hour_ending_and_rounding": 3,
+    "positive_export_from_reporter": 5,
+    "all_physical_neighbor_ties_and_SYS": 7,
+    "quality_consistency_valid_zeros_physical_scope": 9,
+    "physical_boundary_agreements": 10
+  },
+  "required_scope": {
+    "reporting_BA": "NYIS",
+    "complete_neighbor_set": [
+      "HQT",
+      "IESO",
+      "ISNE",
+      "PJM"
+    ],
+    "hours": 8760,
+    "rows": 35040
+  },
+  "transforms": {
+    "sign": "import_positive=-NYIS_reported_value",
+    "time": "startUTC=periodUTC-1hour",
+    "units": "APImegawatthours/1hour=MWaverage; keeprawunitlabel"
+  },
+  "hard_checks": [
+    "complete unique(period,fromba,toba) key and one-to-one8760x4 physical UTC grid",
+    "unambiguous NYIS reporting perspective and complete neighbor set withouttobafilter",
+    "finite sourceactuals and exact archivedprimary-document/value metadata",
+    "unmodified source bytehashes and exact derived-value/sign/time reconstruction"
+  ],
+  "zero_rule": {
+    "individual_zero_or_sign_reversal": "retain",
+    "source_wide_zero_suspect": "allfourbilateralreportedvalues==0 AND abs(NYIS_reported_total_interchange)>2.5MW",
+    "schedule_disagreement": "separatecorroboration; notrequiredforinternaltotalcontradiction",
+    "allfour_and_reportedtotal_zero": "noautomaticrejectionwithoutindependentcorroboration; sourcecauseunverified"
+  },
+  "sum_checks": {
+    "rounding_bound_mw": 2.5,
+    "derivation": "fourroundedcomponentsplusa roundedtotal:0.5*(4+1)",
+    "beyond_rounding": "flagforreview,notautomaticallyexclude",
+    "10MWh_reference": "EIAunexpectederrorrevisionmaterialityguidance; notaphysicalconstraintorblanketfilter"
+  },
+  "bilateral_comparison": "reportNYISvsindependentIESOactualswithbothsourcequalitymasks; do notinferwrongclock/scaleoradjustvaluesfromdifferences",
+  "cohort": "newEIAqualificationisindependentof6IESOsuspectreporthours; pairedscenariointersectionsmustbeexplicit",
+  "limitations": [
+    "primaryinstructionspermitdifferenttotal/componentmethodsandphysical-boundaryreportingagreements",
+    "noAPIobservationmeter-qualityflag",
+    "fouractualregionaltotalsdonotestablishactualindividualcircuit/DCflows",
+    "do notfitanyruletointernalinterfaceobservations"
+  ]
+}

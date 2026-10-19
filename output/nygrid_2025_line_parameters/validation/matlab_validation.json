@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "fresh_MATPOWER_DC_snapshots": 35,
+  "scenarios": 5,
+  "predetermined_state_and_season_hours": [
+    1,
+    2160,
+    3360,
+    3576,
+    4344,
+    6552,
+    8472
+  ],
+  "observations_selected_hours": false,
+  "maximum_branch_error_model_mw": 3.0127011996228248E-11,
+  "maximum_angle_error_degree": 7.496225862269057E-13,
+  "maximum_interface_error_model_mw": 3.3310243452433497E-11,
+  "maximum_generation_change_model_mw": 2.2648549702353193E-11,
+  "maximum_bound_violation_model_mw": 2.2737367544323206E-13,
+  "maximum_six_transfer_error_model_mw": 0,
+  "wrapper_guard_checks_passed": 7,
+  "fixed_voltage_two_bus_AC_pi_checks": 2,
+  "maximum_two_bus_loss_error_mw": 4.3698378249246161E-13,
+  "maximum_two_bus_charging_half_error_mvar": 1.3384848784880887E-12,
+  "full148_bus_AC_validated": false,
+  "facility_thermal_feasibility_validated": false,
+  "MATLAB_version": "26.1.0.3276743 (R2026a) Update 3",
+  "MATPOWER_DC_solver": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\rundcpf.m",
+  "MATPOWER_Ybus_builder": "C:\\Users\\Holiday\\OneDrive\\Documents\\MATLAB\\matpower\\lib\\makeYbus.m",
+  "dependencies": [
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\replay\\matlab_fixtures.mat",
+      "sha256": "55491d6069ce74f0741b9b0758579cb6e0f5f73865839275d682adb09a46b46d"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\estimates\\parameter_estimates.csv",
+      "sha256": "594f1deb04b74f2a6ab9de026e5f3862f18179b9e1c9137cca16a77bbe315411"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\estimates\\engineering_basis.json",
+      "sha256": "fa9861415d123b9933f20c0af87ae6a6655000714c3741e2a86719c5767de871"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_line_estimated_dc.m",
+      "sha256": "de3935e1e9b9dd2b94078d5a19976648884eac0f883dcead7786d4d1a93b20db"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_western_corrected_dc.m",
+      "sha256": "6cf89f6076f2fa9e9c81e0d4da92d4a6bd930f99b644c2690c4ba9b63491ce01"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_par_controlled_dc.m",
+      "sha256": "99e6778597e4f023ce967bd0ba9fec18a41ffa9a3139553138d7758e818879cd"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_moses_corrected_dc.m",
+      "sha256": "5971086fc019920f2a7c2317476cdce97945b585632a3136c73aec225d459c46"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_slim_dc.m",
+      "sha256": "2b7a67418717b9b0faf6fc9571e302793a04bd36eb8d54e9af4ecd1ee59be23f"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_full_dc.m",
+      "sha256": "3acff6c7187607c54c8b8e9b4fb4f3ccfe86c2dd3d6c9e22ef8eee75c4ffb2de"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\System Matpower Format\\npcc_nygrid_2025_slim_interfaces.m",
+      "sha256": "c43fe312eda58b0a439d426a5eb05238a08115f07f6b7456b2a0e458cade2845"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\scripts\\nygrid_2025_line_parameters\\validate_matlab_line_parameters.m",
+      "sha256": "c025e4fc4c6fc5d0daa36b6d2670621a4c7f98b9ac5d2a3aa98454e1f99f1257"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\overlays\\identity_reference\\network_cases.mat",
+      "sha256": "fa885cccb4b33387ba1c613625a58a791a330f282d56df829133d3efaf338f6a"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\overlays\\identity_reference\\overlay_receipt.json",
+      "sha256": "73c78f90ae8b3ad61980198e267a1c8c3c5060f19aebf0fffe5c1d82bca0856c"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\overlays\\engineering_nominal\\network_cases.mat",
+      "sha256": "5fb84104d527b2e26d22f3a772ebd4e56ff981325ea7490d349fa53758646320"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\overlays\\engineering_nominal\\overlay_receipt.json",
+      "sha256": "a1c54e2657b63798f406176a41db99852277bb9a9741312bc1f236445913f8c9"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\overlays\\geometry_spacing_80pct\\network_cases.mat",
+      "sha256": "1f704980be86f5dacbd0635f1058c42cad3d4a48e756a58b48efdf169b2ff4f8"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\overlays\\geometry_spacing_80pct\\overlay_receipt.json",
+      "sha256": "698be8a1e95bfe7478401b78f4e6bb5226bd8faa15607788758d28978f01c593"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\overlays\\geometry_spacing_120pct\\network_cases.mat",
+      "sha256": "52f99671d5433a583f1ba2ac3ae398897713fb9f1cfba9c00e214e69827a092f"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\overlays\\geometry_spacing_120pct\\overlay_receipt.json",
+      "sha256": "08566c0befb4e252cb41502758e2a9f7af14a0142922be0baf3f875e96462590"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\overlays\\ground_image_30ft\\network_cases.mat",
+      "sha256": "6ea4138429432d7c3ff1068ad84bb404b0018f63d389ff49bb5b1b9a10758275"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\overlays\\ground_image_30ft\\overlay_receipt.json",
+      "sha256": "3c1e34ce93bf4b1d597e76df2838ff0fc9cd5418ea2785fcd7ed959b220a1662"
+    },
+    {
+      "path": "C:\\Users\\Holiday\\Desktop\\npcc_ny_lite_package_fixed\\WECC and NPCC Systems\\output\\nygrid_2025_line_parameters\\replay\\replay_receipt.json",
+      "sha256": "eb24271211e1513f769ff8feccc206905cc8a33b04b0ecd0c223f5abb627afe5"
+    }
+  ]
+}

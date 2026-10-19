@@ -1,0 +1,391 @@
+{
+  "passed": true,
+  "numerical_and_text_fields": 41,
+  "numeric_fields": 33,
+  "exact_match": true,
+  "mat_header_policy": "creation timestamps may differ; every saved data field compared",
+  "fields": [
+    {
+      "field": "annual_peak_public_mw",
+      "shape": [],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.baseMVA",
+      "shape": [],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.branch",
+      "shape": [
+        225,
+        13
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.bus",
+      "shape": [
+        140,
+        13
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.dcline",
+      "shape": [
+        4,
+        17
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.gen",
+      "shape": [
+        271,
+        21
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.gencost",
+      "shape": [
+        271,
+        6
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.genfuel",
+      "shape": [
+        271
+      ],
+      "numeric": false,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.if.lims",
+      "shape": [
+        11,
+        3
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.if.map",
+      "shape": [
+        29,
+        2
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "base_case.version",
+      "shape": [],
+      "numeric": false,
+      "exact_match": true
+    },
+    {
+      "field": "boundary_channel_names",
+      "shape": [
+        10
+      ],
+      "numeric": false,
+      "exact_match": true
+    },
+    {
+      "field": "boundary_hour_qualified",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "boundary_model_mw",
+      "shape": [
+        8760,
+        10
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "boundary_public_mw",
+      "shape": [
+        8760,
+        10
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "bus_gross_pd",
+      "shape": [
+        8760,
+        140
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "bus_gross_qd",
+      "shape": [
+        8760,
+        140
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "bus_id",
+      "shape": [
+        140
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "dcline_pf",
+      "shape": [
+        8760,
+        4
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "external_input_pg",
+      "shape": [
+        8760,
+        271
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "external_load_ratio",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "gamma",
+      "shape": [],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "generation_prior_fuel_names",
+      "shape": [
+        5
+      ],
+      "numeric": false,
+      "exact_match": true
+    },
+    {
+      "field": "hour_index",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "ny_balance_residual_model_mw",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "ny_balance_residual_public_mw",
+      "shape": [
+        8760
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "ny_generation_dispatch_available",
+      "shape": [],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "ready_for_dc_power_flow",
+      "shape": [],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "reference_ny_load_mw",
+      "shape": [],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "regional_import_model_mw",
+      "shape": [
+        8760,
+        4
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "regional_import_names",
+      "shape": [
+        4
+      ],
+      "numeric": false,
+      "exact_match": true
+    },
+    {
+      "field": "statewide_generation_fuel_names",
+      "shape": [
+        7
+      ],
+      "numeric": false,
+      "exact_match": true
+    },
+    {
+      "field": "statewide_generation_model_mw",
+      "shape": [
+        8760,
+        7
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "statewide_generation_public_mw",
+      "shape": [
+        8760,
+        7
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "timestamp_utc",
+      "shape": [
+        8760
+      ],
+      "numeric": false,
+      "exact_match": true
+    },
+    {
+      "field": "zonal_generation_prior_model_mw",
+      "shape": [
+        8760,
+        11,
+        5
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "zonal_generation_prior_public_mw",
+      "shape": [
+        8760,
+        11,
+        5
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "zonal_generation_prior_qualified",
+      "shape": [
+        8760,
+        11,
+        5
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "zonal_load_model_mw",
+      "shape": [
+        8760,
+        11
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "zonal_load_public_mw",
+      "shape": [
+        8760,
+        11
+      ],
+      "numeric": true,
+      "exact_match": true
+    },
+    {
+      "field": "zone_names",
+      "shape": [
+        11
+      ],
+      "numeric": false,
+      "exact_match": true
+    }
+  ],
+  "csv_files": [
+    {
+      "file": "bus_allocation.csv",
+      "byte_identical": true,
+      "sha256": "757fbe115e4ee517014dcda313d99005619cffa492cfb49f9c5e4226579489f1"
+    },
+    {
+      "file": "epa_zonal_hourly.csv.gz",
+      "byte_identical": true,
+      "sha256": "e9669bf8fa0416946eeab9d31ca738bd53bcace316ee3b014deed74b2dba794f"
+    },
+    {
+      "file": "external_generator_allocation.csv",
+      "byte_identical": true,
+      "sha256": "471ea55dc77808137342df764e89be6e4cededefdaad798e8687ebbe9ea42615"
+    },
+    {
+      "file": "hour_catalog.csv",
+      "byte_identical": true,
+      "sha256": "96d4a0db424cbe1062b7c6b51d5f244a4de699679ad89428a8db3a992980f86a"
+    },
+    {
+      "file": "interface_hourly.csv",
+      "byte_identical": true,
+      "sha256": "f13f7cf053c648f717cebc76877c73909668fb900f2f089981438b3cb5a6c59d"
+    },
+    {
+      "file": "load_hourly.csv",
+      "byte_identical": true,
+      "sha256": "8e164df86fa6bb6975ebbe31fa185950aa276c0907c63f0d2b4aefe10b4dd49f"
+    },
+    {
+      "file": "statewide_fuelmix_hourly.csv",
+      "byte_identical": true,
+      "sha256": "1eaa0a5480be79e2bfc8d1f9366e843e959512389c606a706190b79fdda5391f"
+    },
+    {
+      "file": "zonal_generation_priors.csv.gz",
+      "byte_identical": true,
+      "sha256": "9bc01498012677887e12dd7ca23276584654771ed9c734b70ed83865a82d4989"
+    }
+  ],
+  "reference": "output/nygrid_2025_inputs/model",
+  "rebuilt": "tmp/nygrid_2025_input_rebuild_check"
+}

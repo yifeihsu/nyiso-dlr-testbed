@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "postrepair-drivers",
+      "title": "Controlled Total East and Moses South diagnosis",
+      "queries": [
+        {
+          "id": "factorial-year",
+          "reportingPeriod": "2025; two fresh annual diagnostic runs, checked October 15, 2026 local time",
+          "source": {
+            "label": "Frozen previous and repaired models plus hydro-only and PV20-only annual runs",
+            "files": [{"label":"scenario_recipe.json"},{"label":"factorial_metrics.csv"},{"label":"factorial_attribution.csv"},{"label":"independent_summary_review.json"}],
+            "metricDefinitions": [
+              {"label":"MAE","definition":"Mean absolute error in public-scale MW on exactly the same 8651 qualified hours and unchanged primary diagnostic operators."},
+              {"label":"Factor effects","definition":"Average each input change's marginal effect with and without the other change; the two effects sum to the total metric change."}
+            ],
+            "filters": ["Identical 8651-hour cohort across B, G, P and GP; 8760 physical clock rows retained."],
+            "caveats": ["Effects are controlled effects within the model, not real-world source-error attribution.","Physical Total East/Central East/P32 mapping remains incomplete; partial PV20 readout sensitivities are not promoted.","Moses MAE interaction largely reflects offsetting signed changes and the absolute-error metric."],
+            "evidenceFlow": [{"kind":"validation","title":"Independent checks","detail":"Both new annual runs pass all8651hours; 24 baseline/combined bridges, 48 sample metadata checks, full-year KCL/branch/input/accounting checks and224 independent headline metric/effect calculations pass."}]
+          },
+          "rows": [
+            {"case":"Previous model","Total_East_MAE_MW":471.551177,"Moses_MAE_MW":118.820924},
+            {"case":"Hydro correction only","Total_East_MAE_MW":465.320064,"Moses_MAE_MW":141.586389},
+            {"case":"PV20 routing only","Total_East_MAE_MW":507.402104,"Moses_MAE_MW":123.014514},
+            {"case":"Both repairs","Total_East_MAE_MW":499.304073,"Moses_MAE_MW":108.944975}
+          ],
+          "columns": [{"field":"case","label":"Case"},{"field":"Total_East_MAE_MW","label":"Total East MAE (MW)"},{"field":"Moses_MAE_MW","label":"Moses MAE (MW)"}]
+        },
+        {
+          "id":"northern-generation",
+          "reportingPeriod":"2025 annual plant energy and current model qualified subset",
+          "source":{
+            "label":"Final EIA-923, verified six-plant identity crosswalk and current compiled profiles",
+            "files":[{"label":"D_wind_source_energy_review.json"},{"label":"D_wind_asset_source_crosswalk.csv"},{"label":"conditional_StLawrence_only_energy_compatibility.csv"},{"label":"monthly_flat_AC_receipt.json"}],
+            "metricDefinitions":[{"label":"Conditional wind excess bound","definition":"Modeled energy in8651qualifiedhours minus the full-year EIA energy; nonnegative generation in the109excludedhours cannot erase the excess."}],
+            "caveats":["The27.479MW bound requires the model's nonnegative excluded-hour wind bounds. EIA net generation can be negative; attributing actual hourly error remains conditional.","AM means monthly values reported annually, not the annual-only A category with estimated monthly allocation.","The90.187MW annual shape-control MAE holds saved terminal correction fixed; only12source-selected pairs receive fresh AC solves.","Current model, map and handoff remain unchanged."],
+            "evidenceFlow":[{"kind":"validation","title":"Independent annual source mismatch","detail":"The existing wind prior uses the same statewide capacity factor across sites. All six matched wind plants are NYIS/ZoneD resources. The qualified modeled subset alone exceeds their full-year reported energy by237723.25MWh."}]
+          },
+          "rows":[{"measure":"EIA full-year wind energy","MWh":1425010},{"measure":"Modeled qualified-hour wind energy","MWh":1662733.250582},{"measure":"Excess before filling excluded hours","MWh":237723.250582}],
+          "columns":[{"field":"measure","label":"Energy scope"},{"field":"MWh","label":"MWh"}]
+        },
+        {
+          "id":"nyiso-generation-products",
+          "reportingPeriod":"Live official product discovery and cached source inspection",
+          "source":{
+            "label":"NYISO public data products, Gold Book and data-release manuals",
+            "files":[{"label":"generation_data_availability.csv"},{"label":"generation_source_review.json"},{"label":"P63_schema_cadence_review.json"}],
+            "caveats":["P63 has statewide fuel categories, no plant identifier.","The verified2025Gold Book reports2024annual energy; an exact2026edition was not verified during this search.","Masked bids, schedules and nodal prices are not named metered plant generation.","No public named hourly StLawrence output series was located in the inspected products; this is not a universal absence claim."]
+          },
+          "rows":[{"product":"P63 Real-Time Fuel Mix","grain":"Statewide fuel category","resolution":"Nominal five minutes"},{"product":"Gold Book","grain":"Named generator or grouped fleet","resolution":"Annual net energy; capability snapshots"},{"product":"P27 bid release","grain":"Masked generator offers","resolution":"Delayed bid records, not actual output"}],
+          "columns":[{"field":"product","label":"NYISO product"},{"field":"grain","label":"Grain"},{"field":"resolution","label":"Temporal/data meaning"}]
+        }
+      ]
+    }
+  ]
+}

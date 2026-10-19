@@ -1,0 +1,14 @@
+LATEST_COMPARE independent_full_annual_array_and_four_template_data_review_passed pass1 value0
+LATEST_COMPARE exact_current_loader_numeric_arrays_h523 pass1 value0
+LATEST_COMPARE exact_current_control_and_thermal_metadata_h523 pass1 value0
+LATEST_COMPARE exact_loss_policy_contract_h523 pass1 value0
+{Error using fprintf
+Function is not defined for sparse inputs.
+
+Error in validate_latest_runtime/record (line 111)
+        fprintf('LATEST_COMPARE %s pass%d value%.12g\n',name,ok,value);
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in validate_latest_runtime (line 36)
+    record("exact148bus_reduction_and_current_operators_h"+string(hour),reduction<1e-12 ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 

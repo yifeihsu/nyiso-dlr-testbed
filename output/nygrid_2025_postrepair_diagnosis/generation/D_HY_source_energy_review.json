@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-16T00:43:31.120902+00:00",
+  "modeled_D_HY_plants": 20,
+  "D_HY_generator_rows": 48,
+  "nonStL_D_HY": {
+    "plants": 19,
+    "matched_EIA_plants": 18,
+    "missing_EIA_plants": [
+      {
+        "plant_id": 50093,
+        "plant_name": "Chateaugay High Falls Hydro",
+        "current_full_calendar_reconstruction_MWh": 1046.4107081389911
+      }
+    ],
+    "EIA_target_MWh": 202928.0,
+    "matched_current_full_calendar_MWh": 186009.19874541418,
+    "all_current_full_calendar_MWh": 187055.60945355316,
+    "current_qualified_MWh": 184414.53573248934,
+    "excluded_latent_MWh": 2641.073721063841,
+    "full_calendar_difference_MWh": -16918.801254585815,
+    "reference_before_StL_repair_MWh": 197332.48295665625,
+    "change_due_to_StL_repair_MWh": -10276.873503103057
+  },
+  "top_nonStL_differences": [
+    {
+      "plant_id": 2550,
+      "plant_name": "Chasm",
+      "EIA_net_generation_MWh": 20722.0,
+      "current_full_calendar_reconstruction_MWh": 12362.91082946042,
+      "current_qualified_MWh": 12195.641437236156,
+      "current_excluded_latent_MWh": 167.26939222426233,
+      "modeled_rows": 3,
+      "EIA_months": 12,
+      "EIA_frequency": "AM",
+      "StLawrence": false,
+      "difference_MWh": -8359.08917053958,
+      "relative_difference_pct": -40.3392007071691,
+      "absolute_difference_MWh": 8359.08917053958
+    },
+    {
+      "plant_id": 2540,
+      "plant_name": "Allens Falls",
+      "EIA_net_generation_MWh": 21188.0,
+      "current_full_calendar_reconstruction_MWh": 18727.620924622912,
+      "current_qualified_MWh": 18469.350799629454,
+      "current_excluded_latent_MWh": 258.2701249934569,
+      "modeled_rows": 1,
+      "EIA_months": 12,
+      "EIA_frequency": "AM",
+      "StLawrence": false,
+      "difference_MWh": -2460.379075377088,
+      "relative_difference_pct": -11.612134582674571,
+      "absolute_difference_MWh": 2460.379075377088
+    },
+    {
+      "plant_id": 10544,
+      "plant_name": "Hailesboro 4 Plant",
+      "EIA_net_generation_MWh": 9776.0,
+      "current_full_calendar_reconstruction_MWh": 8014.634508986664,
+      "current_qualified_MWh": 7903.660465092395,
+      "current_excluded_latent_MWh": 110.97404389426887,
+      "modeled_rows": 2,
+      "EIA_months": 12,
+      "EIA_frequency": "AM",
+      "StLawrence": false,
+      "difference_MWh": -1761.3654910133364,
+      "relative_difference_pct": -18.017241111020216,
+      "absolute_difference_MWh": 1761.3654910133364
+    },
+    {
+      "plant_id": 10753,
+      "plant_name": "Lachute Hydro Upper",
+      "EIA_net_generation_MWh": 8104.0,
+      "current_full_calendar_reconstruction_MWh": 9593.589984427701,
+      "current_qualified_MWh": 9451.590723311929,
+      "current_excluded_latent_MWh": 141.99926111577173,
+      "modeled_rows": 1,
+      "EIA_months": 12,
+      "EIA_frequency": "AM",
+      "StLawrence": false,
+      "difference_MWh": 1489.589984427701,
+      "relative_difference_pct": 18.380922808831453,
+      "absolute_difference_MWh": 1489.589984427701
+    },
+    {
+      "plant_id": 6486,
+      "plant_name": "Mill C",
+      "EIA_net_generation_MWh": 21788.0,
+      "current_full_calendar_reconstruction_MWh": 20379.255068554136,
+      "current_qualified_MWh": 20096.42855328848,
+      "current_excluded_latent_MWh": 282.82651526565894,
+      "modeled_rows": 2,
+      "EIA_months": 12,
+      "EIA_frequency": "AM",
+      "StLawrence": false,
+      "difference_MWh": -1408.7449314458645,
+      "relative_difference_pct": -6.465691809463303,
+      "absolute_difference_MWh": 1408.7449314458645
+    },
+    {
+      "plant_id": 50268,
+      "plant_name": "Hewittville Hydroelectric",
+      "EIA_net_generation_MWh": 12404.0,
+      "current_full_calendar_reconstruction_MWh": 11282.736987542301,
+      "current_qualified_MWh": 11124.451010539786,
+      "current_excluded_latent_MWh": 158.28597700251598,
+      "modeled_rows": 1,
+      "EIA_months": 12,
+      "EIA_frequency": "AM",
+      "StLawrence": false,
+      "difference_MWh": -1121.263012457699,
+      "relative_difference_pct": -9.039527672183965,
+      "absolute_difference_MWh": 1121.263012457699
+    },
+    {
+      "plant_id": 2597,
+      "plant_name": "Parishville",
+      "EIA_net_generation_MWh": 11827.0,
+      "current_full_calendar_reconstruction_MWh": 10868.723434629637,
+      "current_qualified_MWh": 10716.759334425686,
+      "current_excluded_latent_MWh": 151.9641002039521,
+      "modeled_rows": 1,
+      "EIA_months": 12,
+      "EIA_frequency": "AM",
+      "StLawrence": false,
+      "difference_MWh": -958.2765653703627,
+      "relative_difference_pct": -8.102448341678892,
+      "absolute_difference_MWh": 958.2765653703627
+    },
+    {
+      "plant_id": 2601,
+      "plant_name": "Raymondville",
+      "EIA_net_generation_MWh": 11285.0,
+      "current_full_calendar_reconstruction_MWh": 10374.784354262012,
+      "current_qualified_MWh": 10227.79241013122,
+      "current_excluded_latent_MWh": 146.99194413079186,
+      "modeled_rows": 1,
+      "EIA_months": 12,
+      "EIA_frequency": "AM",
+      "StLawrence": false,
+      "difference_MWh": -910.2156457379879,
+      "relative_difference_pct": -8.065712412388018,
+      "absolute_difference_MWh": 910.2156457379879
+    }
+  ],
+  "no_PF_or_fitting": true,
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/generation_candidate.npz",
+      "sha256": "fa8ede0a363b38dc6db81ca7bbe59d680ed972f0e1d1079a707f06391c344eff"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/model_generator_register.csv",
+      "sha256": "4c9892ab2a855a75af893421ddce9131d3f491b407b072055a244e0448bb24f5"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/fleet_register.csv",
+      "sha256": "d025a1994c9a1c19cb62c6b4ae61a1e0bb62ae2060158592c61f6ecf19546d89"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/final_EIA923_NY_hydro_scope.csv",
+      "sha256": "36a93312fe0ebba12b84e437026599247011873c8515b16437ddfc4b848cd0cf"
+    }
+  ],
+  "limitations": [
+    "Plant EIA net generation and public P63/current reconciled HY may differ in market and net-pumping scope.",
+    "AM respondents supply monthly generation values once annually. AM must not be equated with annual-total monthly imputation; these monthly reports do not establish hourly telemetry.",
+    "109excludedhour values are latent assumptions, shown separately.",
+    "Independent plant energy bounds do not establish simultaneous feasibility with all plant targets and statewide hour totals.",
+    "Zone/bus mappings of smaller plants remain inherited proxies."
+  ],
+  "frequency_sources": [
+    "https://www.eia.gov/survey/form/eia_923/instructions.pdf",
+    "https://docs.catalyst.coop/pudl/en/v2026.2.0/_modules/pudl/metadata/codes.html"
+  ]
+}

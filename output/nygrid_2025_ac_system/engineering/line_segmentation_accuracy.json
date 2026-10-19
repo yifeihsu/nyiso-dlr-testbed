@@ -1,0 +1,116 @@
+{
+  "status": "independent_planning_accuracy_check_not_implemented_design_validation",
+  "created_utc": "2026-10-12T21:17:54.435550+00:00",
+  "physical_reference": "exact distributed homogeneous positive-sequence line with the same total R, X and shunt B",
+  "scope": "OH and cable electrical accuracy; source-design short heterogeneous branch treated as aggregate only for screening; no cable thermal certification",
+  "declared_planning_tolerances": {
+    "maximum_ABCD_relative_error": 0.005,
+    "maximum_no_load_voltage_magnitude_error_pu": 0.005
+  },
+  "no_OPF_dispatch_or_observed_interface_inputs": true,
+  "summary": [
+    {
+      "scheme": "all_over_100km",
+      "original_OH_corridors": 186,
+      "total_sections": 259,
+      "extra_zero_injection_buses": 73,
+      "worst_branch_row": 164,
+      "maximum_ABCD_relative_error": 0.002713061580269796,
+      "maximum_open_end_voltage_magnitude_error_pu": 0.0007967034827289776,
+      "maximum_open_end_charging_relative_error": 0.0013488894348989637,
+      "maximum_reciprocity_error": 6.661902812449847e-16
+    },
+    {
+      "scheme": "all_over_50km",
+      "original_OH_corridors": 186,
+      "total_sections": 401,
+      "extra_zero_injection_buses": 215,
+      "worst_branch_row": 164,
+      "maximum_ABCD_relative_error": 0.0006766366231794412,
+      "maximum_open_end_voltage_magnitude_error_pu": 0.0001988349107902021,
+      "maximum_open_end_charging_relative_error": 0.00033681607237359804,
+      "maximum_reciprocity_error": 1.5543151990877073e-15
+    },
+    {
+      "scheme": "long_only_100km",
+      "original_OH_corridors": 186,
+      "total_sections": 231,
+      "extra_zero_injection_buses": 45,
+      "worst_branch_row": 114,
+      "maximum_ABCD_relative_error": 0.009800401836013037,
+      "maximum_open_end_voltage_magnitude_error_pu": 0.0007967034827289776,
+      "maximum_open_end_charging_relative_error": 0.00479896751152133,
+      "maximum_reciprocity_error": 6.661902812449847e-16
+    },
+    {
+      "scheme": "long_only_50km",
+      "original_OH_corridors": 186,
+      "total_sections": 282,
+      "extra_zero_injection_buses": 96,
+      "worst_branch_row": 114,
+      "maximum_ABCD_relative_error": 0.009800401836013037,
+      "maximum_open_end_voltage_magnitude_error_pu": 0.0001988349107902021,
+      "maximum_open_end_charging_relative_error": 0.00479896751152133,
+      "maximum_reciprocity_error": 1.5543151990877073e-15
+    },
+    {
+      "scheme": "unchanged_lumped",
+      "original_OH_corridors": 186,
+      "total_sections": 186,
+      "extra_zero_injection_buses": 0,
+      "worst_branch_row": 195,
+      "maximum_ABCD_relative_error": 0.12741870932642313,
+      "maximum_open_end_voltage_magnitude_error_pu": 0.04392369168765842,
+      "maximum_open_end_charging_relative_error": 0.04235115894444225,
+      "maximum_reciprocity_error": 3.3306697797361844e-16
+    }
+  ],
+  "all_over_100km_passes_declared_screen": true,
+  "notes": [
+    "The 0.5 percent ABCD screen is a declared synthetic-study accuracy criterion, not a formal industry limit.",
+    "Terminal ABCD accuracy does not independently prove local temperature accuracy or installed geometry.",
+    "Compensation must be represented identically in later model comparisons; this calculation excludes external reactors."
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "d0297d8b706505bee6c31f1c1416bf41c99aa8d1118284b1584dde0e424b63b0"
+    },
+    {
+      "path": "scripts/nygrid_2025_ac_system/engineering/review_line_segmentation.py",
+      "sha256": "7733d379a4de55582cdcfb1bd8e5f831494ddac467a15acedd0b8484350ffd84"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/cable_segments.csv",
+      "sha256": "1673ea1dba11ac057af2af18873971cc024c7de2a104a0172ed8ed5d776c52cd"
+    }
+  ],
+  "results_file": {
+    "path": "output/nygrid_2025_ac_system/engineering/line_segmentation_accuracy.csv",
+    "sha256": "bf045b6acb8098feacbd6b1c16859935709871d3a214adc41c1eb2c430643f70"
+  },
+  "cable_summary": [
+    {
+      "scheme": "cable_max30km",
+      "total_cable_sections": 42,
+      "extra_zero_injection_buses": 2,
+      "maximum_ABCD_relative_error": 0.0013577918505193471,
+      "maximum_open_end_voltage_magnitude_error_pu": 1.1345277761920514e-05
+    },
+    {
+      "scheme": "unchanged_lumped",
+      "total_cable_sections": 40,
+      "extra_zero_injection_buses": 0,
+      "maximum_ABCD_relative_error": 0.005457862699757583,
+      "maximum_open_end_voltage_magnitude_error_pu": 4.553025837283897e-05
+    }
+  ],
+  "cable_screen_exception_original_rows": [
+    319,
+    320
+  ],
+  "cable_results_file": {
+    "path": "output/nygrid_2025_ac_system/engineering/cable_segmentation_accuracy.csv",
+    "sha256": "b7de800afbfe8a6a47b12ea6d6b58db8de30917b4f18e9a09986a49f33cbff8d"
+  }
+}

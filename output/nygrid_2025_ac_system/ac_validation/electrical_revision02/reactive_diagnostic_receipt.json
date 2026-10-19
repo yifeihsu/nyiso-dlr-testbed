@@ -1,0 +1,192 @@
+{
+  "diagnostic_complete": true,
+  "diagnostic_only": true,
+  "feasible_operating_states_claimed": false,
+  "compensation_sized_or_fitted": false,
+  "bounds_or_inputs_modified": false,
+  "cases": [
+    {
+      "hour": 523,
+      "solver_success": false,
+      "case_sha256": "5168beb3904e2301cb57ee3437bf764dd4af5594781961246a3c92b9ca6bdbe8",
+      "overlay_sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5",
+      "maximum_reactive_branch_identity_error_MVAr": 3.2379432468587765e-11,
+      "total_line_charging_at_trial_voltage_MVAr": 9770.81059977966,
+      "top_Q_residual_buses": [
+        {
+          "bus_id": 10594,
+          "positive_Q_residual_is_excess_injection_MVAr": 722.359834539439
+        },
+        {
+          "bus_id": 130,
+          "positive_Q_residual_is_excess_injection_MVAr": 698.6151578523634
+        },
+        {
+          "bus_id": 10593,
+          "positive_Q_residual_is_excess_injection_MVAr": 1.981189257094229e-08
+        },
+        {
+          "bus_id": 11493,
+          "positive_Q_residual_is_excess_injection_MVAr": 1.0134812100659474e-08
+        }
+      ]
+    },
+    {
+      "hour": 2630,
+      "solver_success": false,
+      "case_sha256": "9065d6d97be660a7ae435a922d2a774f57d08d56bcc7feb9922ec5e2f6482f43",
+      "overlay_sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5",
+      "maximum_reactive_branch_identity_error_MVAr": 3.007993853998414e-11,
+      "total_line_charging_at_trial_voltage_MVAr": 9774.982728173152,
+      "top_Q_residual_buses": [
+        {
+          "bus_id": 10594,
+          "positive_Q_residual_is_excess_injection_MVAr": 1448.582298781702
+        },
+        {
+          "bus_id": 130,
+          "positive_Q_residual_is_excess_injection_MVAr": 681.0372855466549
+        },
+        {
+          "bus_id": 11529,
+          "positive_Q_residual_is_excess_injection_MVAr": 124.67199547068942
+        },
+        {
+          "bus_id": 11493,
+          "positive_Q_residual_is_excess_injection_MVAr": 25.426911932620044
+        }
+      ]
+    },
+    {
+      "hour": 4000,
+      "solver_success": false,
+      "case_sha256": "1c306e5d39432c4810991c8761625dcd6b8e666dbc0f5721180755344b6fdef4",
+      "overlay_sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5",
+      "maximum_reactive_branch_identity_error_MVAr": 6.290296061806089e-11,
+      "total_line_charging_at_trial_voltage_MVAr": 10273.935161539455,
+      "top_Q_residual_buses": [
+        {
+          "bus_id": 130,
+          "positive_Q_residual_is_excess_injection_MVAr": 489.9464601271045
+        },
+        {
+          "bus_id": 10594,
+          "positive_Q_residual_is_excess_injection_MVAr": 375.6902817916702
+        },
+        {
+          "bus_id": 10593,
+          "positive_Q_residual_is_excess_injection_MVAr": 224.36471327979132
+        },
+        {
+          "bus_id": 10079,
+          "positive_Q_residual_is_excess_injection_MVAr": 210.3962572649724
+        }
+      ]
+    },
+    {
+      "hour": 4194,
+      "solver_success": false,
+      "case_sha256": "c6070889879ed1e053a675ea47d43f4c97acbfb0cd01d7a9966b0c96d592f8bd",
+      "overlay_sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5",
+      "maximum_reactive_branch_identity_error_MVAr": 3.985733965095051e-11,
+      "total_line_charging_at_trial_voltage_MVAr": 10200.09419546894,
+      "top_Q_residual_buses": [
+        {
+          "bus_id": 130,
+          "positive_Q_residual_is_excess_injection_MVAr": 870.7941784284496
+        },
+        {
+          "bus_id": 10594,
+          "positive_Q_residual_is_excess_injection_MVAr": 369.88887040218174
+        },
+        {
+          "bus_id": 11493,
+          "positive_Q_residual_is_excess_injection_MVAr": 60.271378133156674
+        },
+        {
+          "bus_id": 89,
+          "positive_Q_residual_is_excess_injection_MVAr": -15.78991359879516
+        }
+      ]
+    },
+    {
+      "hour": 8471,
+      "solver_success": false,
+      "case_sha256": "4911de20cdd3822519dcaaf7f12bb1665e268de85a928d36913fb8e39727b4c4",
+      "overlay_sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5",
+      "maximum_reactive_branch_identity_error_MVAr": 2.903216556049415e-11,
+      "total_line_charging_at_trial_voltage_MVAr": 10094.941526612687,
+      "top_Q_residual_buses": [
+        {
+          "bus_id": 130,
+          "positive_Q_residual_is_excess_injection_MVAr": 279.3247491008092
+        },
+        {
+          "bus_id": 10594,
+          "positive_Q_residual_is_excess_injection_MVAr": 279.19730235987066
+        },
+        {
+          "bus_id": 10079,
+          "positive_Q_residual_is_excess_injection_MVAr": 157.03062514645313
+        },
+        {
+          "bus_id": 10593,
+          "positive_Q_residual_is_excess_injection_MVAr": 151.263729426491
+        }
+      ]
+    },
+    {
+      "hour": 8472,
+      "solver_success": false,
+      "case_sha256": "83c6e5d8da5fc6eebc4214edefa448925183650a1ddb77fff6171f2c3a582acd",
+      "overlay_sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5",
+      "maximum_reactive_branch_identity_error_MVAr": 1.1481901540655315e-10,
+      "total_line_charging_at_trial_voltage_MVAr": 10104.429430329714,
+      "top_Q_residual_buses": [
+        {
+          "bus_id": 10594,
+          "positive_Q_residual_is_excess_injection_MVAr": 914.6914735394494
+        },
+        {
+          "bus_id": 11493,
+          "positive_Q_residual_is_excess_injection_MVAr": -663.1228706575237
+        },
+        {
+          "bus_id": 130,
+          "positive_Q_residual_is_excess_injection_MVAr": 478.7696732978128
+        },
+        {
+          "bus_id": 10079,
+          "positive_Q_residual_is_excess_injection_MVAr": 329.461636425543
+        }
+      ]
+    },
+    {
+      "hour": 8508,
+      "solver_success": false,
+      "case_sha256": "04198e233846d6388b1c5c30168ad401a93e8905e80be55c2d93d8d629f6af00",
+      "overlay_sha256": "0330f220d9af0b49f558307f8b2d45774a78df731729f3f1ad0333df6e35e2f5",
+      "maximum_reactive_branch_identity_error_MVAr": 9.87662729379224e-11,
+      "total_line_charging_at_trial_voltage_MVAr": 9872.264572692085,
+      "top_Q_residual_buses": [
+        {
+          "bus_id": 10594,
+          "positive_Q_residual_is_excess_injection_MVAr": 1053.79588217352
+        },
+        {
+          "bus_id": 130,
+          "positive_Q_residual_is_excess_injection_MVAr": 465.2311935426043
+        },
+        {
+          "bus_id": 11529,
+          "positive_Q_residual_is_excess_injection_MVAr": 111.43758784679183
+        },
+        {
+          "bus_id": 11493,
+          "positive_Q_residual_is_excess_injection_MVAr": 102.24803209421822
+        }
+      ]
+    }
+  ],
+  "script_sha256": "325ed913091b7d7555743dcb7fc3dab7ae30e2baa0217ac8da15606bfbd380f1"
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "source_HEAD": "f6c124a97b16f45a98a538c121c6006556255005",
+  "source_only": true,
+  "P32_or_interface_observations_read": false,
+  "Moses_residual_used_to_choose_policy": false,
+  "StLawrence_monthly_energy": "Exact finalEIA923 plant2694 HY netMWh over all physical NewYork month hours, including latent excluded hours.",
+  "hourly_Hydro_target": "Preserve current reconciled nativeHydro input total where that profile exists; retain its difference from rawP63 explicitly.",
+  "excluded_hour_policy": "6excluded hours with finite reconciled profiles retain those targets;93use frozen HY prior with observedP63 total;10missingP63 hours use bracketed linear latent interpolation. All109 remain excluded from model qualification.",
+  "StLawrence_engineering_upper_bound": "15 monthly-OP units times57MW EIAnameplate=855MW; engineering bound, not observed net hourly capability or availability.",
+  "dated_capability_context": {
+    "GoldBook2025_pdf_page": 88,
+    "GoldBook_notes_pdf_page": 105,
+    "Summer2025_DMNC_MW": 856,
+    "Winter2024_25_DMNC_MW": 810,
+    "CRIS_summer_winter_MW": [
+      856,
+      856
+    ],
+    "historical_nameplate_MW": 1088,
+    "market_DMNC_used_as_hourly_hard_bound": false
+  },
+  "unit_identity": "Append EIA2694unit21 as row1465; retain all old rows including HQrow1464. Unit26offJan-Feb,21offMar-Dec; exactly15OP/month.",
+  "StLawrence_hourly_shape": "Unique unweighted minimum squared deviation from existing reconciled plantPG where available, otherwise frozen sourceprior/declared latent interpolation, subject to exact monthlyenergy and hourly feasible intervals.",
+  "StLawrence_unit_dispatch": "Equal nameplate-proportional allocation among15monthly-active equal57MW units; not observed unit telemetry.",
+  "other_HY_redistribution": "Unique bounded weighted least-squares projection nearest existing unitPG/reference at eachhour, using frozen original objective_weights; preserves hourly target after held PS and repairedStL.",
+  "PS_generation": "Held at existing source-derived positive generation profile/reference. Net-pumping/P63 scope is not newly certified.",
+  "other_fuel_HQ_PAR_and_load": "Unchanged by this artifact. Only Hydro PG and StLawrence bounds are supplied to compiler.",
+  "old_other_HY_bounds_changed_on_qualified_hours": false,
+  "latent_missing_bounds": "Frozen fleet bounds only for excluded-hour energy ledger; not promoted as observed availability.",
+  "raw_P63_vs_reconciled_HY_difference_qualified_MW": {
+    "mean_model_minus_P63": -3.8033723309596525,
+    "MAE": 4.886582353901203,
+    "min": -54.10635370283717,
+    "max": 12.076131491594424
+  },
+  "new_AC_run_or_interface_scoring": false,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_physical_repair/model/latest_model.mat",
+      "sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385",
+      "bytes": 846610
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/model_receipt.json",
+      "sha256": "bbefae143a0cc3acf394d01bba37df33fedc68f7af4ccab849ce8681f5086ef6",
+      "bytes": 135749
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05",
+      "bytes": 190996
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/fleet_register.csv",
+      "sha256": "d025a1994c9a1c19cb62c6b4ae61a1e0bb62ae2060158592c61f6ecf19546d89",
+      "bytes": 3043498
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/EIA860_plant2694_inventory_source_rows.csv",
+      "sha256": "b81c1547ac7a00bcb9a53bb0c4a809d7d1716fcefd9018fbedeeaa7c0b0e7518",
+      "bytes": 85833
+    },
+    {
+      "path": "output/nygrid_2025_moses_source_diagnosis/generation/inventory_source_receipt.json",
+      "sha256": "0ce6372c7ab3eaf2f0b8afceeb5bc8b032a1564a32aaddd2ec520bdf9c4123b9",
+      "bytes": 9678
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/final_EIA923_NY_hydro_scope.csv",
+      "sha256": "36a93312fe0ebba12b84e437026599247011873c8515b16437ddfc4b848cd0cf",
+      "bytes": 298988
+    },
+    {
+      "path": "output/nygrid_2025_inputs/generation_source/statewide_fuelmix_hourly.csv",
+      "sha256": "489638be51300391d808a39b829a85d09eb9a1997423fe2f24e684b024764ec8",
+      "bytes": 14688252
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883",
+      "bytes": 56579710
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/fleet_bounds.npz",
+      "sha256": "7fdc0f26448d6333ba427f7d10535cff2eef993de21fae0794eba99b549e9c52",
+      "bytes": 5982245
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4",
+      "bytes": 54625507
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf",
+      "bytes": 54767622
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_scope/2025_Gold_Book.pdf",
+      "sha256": "cc43665b9344a04b4c9355edd1dc7e31d42a6bb759ffe027ad867221556aea8e",
+      "bytes": 2122546
+    }
+  ]
+}

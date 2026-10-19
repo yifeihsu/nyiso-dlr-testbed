@@ -1,0 +1,121 @@
+{
+  "status": "passed",
+  "rebuild_directory": "tmp/downstate_final_rebuild_8234fbd5bf",
+  "comparisons": [
+    {
+      "artifact": "network_cases.mat",
+      "comparison": "recursive_exact_MAT_payload_only_header_ignored",
+      "passed": true
+    },
+    {
+      "artifact": "source_subset.mat",
+      "comparison": "recursive_exact_MAT_payload_only_header_ignored",
+      "passed": true
+    },
+    {
+      "artifact": "branch_register.csv",
+      "comparison": "byte_exact",
+      "passed": true
+    },
+    {
+      "artifact": "bus_register.csv",
+      "comparison": "byte_exact",
+      "passed": true
+    },
+    {
+      "artifact": "generation_landing_register.csv",
+      "comparison": "byte_exact",
+      "passed": true
+    },
+    {
+      "artifact": "interface_operator_register.csv",
+      "comparison": "byte_exact",
+      "passed": true
+    },
+    {
+      "artifact": "K_backbone_source_register.csv",
+      "comparison": "byte_exact",
+      "passed": true
+    },
+    {
+      "artifact": "load_allocation_register.csv",
+      "comparison": "byte_exact",
+      "passed": true
+    },
+    {
+      "artifact": "load_coverage_register.csv",
+      "comparison": "byte_exact",
+      "passed": true
+    },
+    {
+      "artifact": "project_state_register.csv",
+      "comparison": "byte_exact",
+      "passed": true
+    },
+    {
+      "artifact": "replacement_register.csv",
+      "comparison": "byte_exact",
+      "passed": true
+    },
+    {
+      "artifact": "source_bus_map.csv",
+      "comparison": "byte_exact",
+      "passed": true
+    },
+    {
+      "artifact": "source_manifest.csv",
+      "comparison": "dependency_rows_exact_all_hashes_verified;subset_output_path_and_MAT_header_hash_may_differ",
+      "passed": true
+    },
+    {
+      "artifact": "construction_summary.json",
+      "comparison": "parsed_JSON_exact",
+      "passed": true
+    }
+  ],
+  "case_counts": {
+    "expanded_identity": {
+      "buses": 191,
+      "branch_records": 410,
+      "active_branches": 276
+    },
+    "refined_2019": {
+      "buses": 191,
+      "branch_records": 410,
+      "active_branches": 332
+    },
+    "refined_2025_pre_may": {
+      "buses": 191,
+      "branch_records": 410,
+      "active_branches": 334
+    },
+    "refined_2025_may21": {
+      "buses": 191,
+      "branch_records": 410,
+      "active_branches": 335
+    },
+    "refined_2025_may30": {
+      "buses": 191,
+      "branch_records": 410,
+      "active_branches": 336
+    },
+    "refined_2025": {
+      "buses": 191,
+      "branch_records": 410,
+      "active_branches": 336
+    },
+    "refined_2025_nyes": {
+      "buses": 191,
+      "branch_records": 410,
+      "active_branches": 337
+    }
+  },
+  "focused_tests_passed": 11,
+  "source_dependency_hashes_verified": true,
+  "python": "3.13.7",
+  "numpy": "1.26.4",
+  "scipy": "1.15.2",
+  "network_file_sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4",
+  "source_subset_sha256": "8afe12ede90836e70ccc9fc853c97d192b5253b82509b4a373a4c2c32c6ebe7d",
+  "numeric_changes_during_rebuild": false
+}

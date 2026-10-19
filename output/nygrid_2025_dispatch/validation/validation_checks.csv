@@ -1,0 +1,180 @@
+check,passed,max_error,detail
+8760_hour_axis,True,0.0,tolerance 0
+UTC_physical_year_axis,True,,
+input_hour_identity,True,,
+original_bus_IDs,True,0.0,tolerance 0
+unchanged_branch_rows,True,0.0,tolerance 0
+unchanged_bus_voltage_and_shunts,True,0.0,tolerance 0
+unchanged_DC_topology_and_loss_model,True,0.0,tolerance 0
+lossless_DC_PT_equals_PF,True,0.0,tolerance 0
+gross_PD_preserved_without_second_renewable_netting,True,0.0,tolerance 0
+declared_QD_preserved,True,0.0,tolerance 0
+fixed_DC_schedules,True,0.0,tolerance 0
+reference_MVA_base,True,0.0,tolerance 0
+inherited_operator_membership,True,0.0,tolerance 0
+claim_scope:topology_changed,True,,
+claim_scope:internal_interface_observations_read,True,,
+claim_scope:interface_calibration_performed,True,,
+claim_scope:reference_is_free_balancing_generator,True,,
+claim_scope:load_shedding_allowed,True,,
+claim_scope:bounds_relaxed,True,,
+claim_scope:ac_feasibility_validated,True,,
+claim_scope:reactive_capabilities_available,True,,
+claim_scope:physical_branch_thermal_feasibility_validated,True,,
+claim_scope:unit_commitment_validated,True,,
+claim_scope:ramping_validated,True,,
+claim_scope:reserve_feasibility_validated,True,,
+claim_scope:storage_energy_feasibility_validated,True,,
+claim_scope:battery_dispatch_enabled,True,,
+complete_fleet_keys_unique,True,,
+contiguous_fleet_IDs,True,,
+fleet_bound_hour_axis,True,0.0,tolerance 0
+fleet_bound_unit_axis,True,0.0,tolerance 0
+EIA_identity_key_format,True,,
+EIA_capacity_not_duplicated_by_aliases,True,,
+outside_state_inventory_exact_frozen_cohort,True,,
+outside_state_inventory_is_NJ,True,,
+unit_market_scope_independent_reconstruction,True,,
+landing_flag_matches_original_NY_bus_IDs,True,,
+only_explicit_quarantine_has_no_landing,True,,
+parent_landing_zone_identity,True,,
+quarantined_parent_names_empty,True,,
+zone_conflicts_explicit,True,,
+corroborated_NJ_units_land_on_existing_ZoneJ_proxy,True,,
+corroborated_NJ_units_have_primary_scope_evidence,True,,
+Linden_unit_market_split_has_owner_evidence,True,,
+NJ_P63_membership_is_disclosed_inference,True,,
+Linden_GTG6_is_explicit_PJM_record,True,,
+uncorroborated_NJ_solar_zone_is_unverified,True,,
+primary_market_scope_sources_present,True,,
+market_scope_source_fingerprint:NYISO:P19:20261010,True,,
+market_scope_source_fingerprint:EGCO:Linden:20251216,True,,
+market_scope_source_fingerprint:NYISO:VFT:FERC:20120524,True,,
+market_scope_source_fingerprint:NYISO:GoldBook:2025,True,,
+finite_nonnegative_fleet_capabilities,True,,
+fleet_season_status_bounds_month_1,True,0.0,tolerance 1e-10
+fleet_season_status_bounds_month_2,True,0.0,tolerance 1e-10
+fleet_season_status_bounds_month_3,True,0.0,tolerance 1e-10
+fleet_season_status_bounds_month_4,True,0.0,tolerance 1e-10
+fleet_season_status_bounds_month_5,True,0.0,tolerance 1e-10
+fleet_season_status_bounds_month_6,True,0.0,tolerance 1e-10
+fleet_season_status_bounds_month_7,True,0.0,tolerance 1e-10
+fleet_season_status_bounds_month_8,True,0.0,tolerance 1e-10
+fleet_season_status_bounds_month_9,True,0.0,tolerance 1e-10
+fleet_season_status_bounds_month_10,True,0.0,tolerance 1e-10
+fleet_season_status_bounds_month_11,True,0.0,tolerance 1e-10
+fleet_season_status_bounds_month_12,True,0.0,tolerance 1e-10
+fleet_grid_scope_independent_reconstruction,True,,
+fleet_active_month_policy,True,,
+fleet_default_eligibility_independent_reconstruction,True,,
+fleet_PS_eligibility_independent_reconstruction,True,,
+fleet_default_bounds_respect_scope,True,0.0,tolerance 0
+continuous_native_minimum_zero,True,0.0,tolerance 0
+batteries_excluded_from_default_dispatch,True,,
+two_Indian_Point_tombstones_zero,True,,
+prior_hour_axis,True,0.0,tolerance 0
+prior_fleet_axis,True,0.0,tolerance 0
+prior_timestamp_axis,True,,
+admitted_native_balancing_authority_scope,True,,"Explicit other or unknown balancing authorities require a recorded, evidenced exception"
+admitted_native_unit_market_scope,True,,
+all_admitted_native_landings_valid,True,,
+all_18_corroborated_NJ_units_admitted,True,,
+quarantined_NJ_units_never_admitted,True,,
+quarantine_prior_bound_zero:available_pmin_actual_mw,True,0.0,tolerance 0
+quarantine_prior_bound_zero:available_pmax_actual_mw,True,0.0,tolerance 0
+native_selection_exactly_ever_admitted_units,True,,
+model_generator_count,True,,
+contiguous_generator_rows,True,0.0,tolerance 0
+generator_keys_unique,True,,
+generator_roles_partition,True,,
+native_keys_preserved,True,,
+native_landing_ids,True,0.0,tolerance 0
+case_generator_landing_identity,True,0.0,tolerance 0
+native_source_zone_ledger,True,,
+native_fuel_ledger,True,,
+single_frozen_gamma,True,0.0,tolerance 0
+scaled_native_physical_capability,True,0.0,tolerance 0
+scaled_native_admitted_upper_bounds,True,0.0,tolerance 0
+scaled_native_lower_bounds,True,0.0,tolerance 0
+source_native_priors_not_interface_fit,True,0.0,tolerance 0
+declared_capacity_weighted_objective,True,0.0,tolerance 0
+penalty_register,True,0.0,tolerance 0
+external_parent_identity,True,0.0,tolerance 0
+fixed_external:gen_pmin,True,0.0,tolerance 0
+fixed_external:gen_pmax,True,0.0,tolerance 0
+fixed_external:prior_pg,True,0.0,tolerance 0
+prior_generation_coverage_from_frozen_P63,True,,
+prior_joint_coverage_from_frozen_P32_P63,True,,
+complete_inventory_source_fuel_conservation:Combined Fossil,True,2.1827872842550278e-11,tolerance 1e-06
+complete_inventory_source_fuel_conservation:Nuclear,True,1.3642420526593924e-12,tolerance 1e-06
+complete_inventory_source_fuel_conservation:Hydro,True,1.1823431123048067e-11,tolerance 1e-06
+complete_inventory_source_fuel_conservation:Wind,True,1.3642420526593924e-12,tolerance 1e-06
+complete_inventory_source_fuel_conservation:Other Renewables,True,1.9326762412674725e-12,tolerance 1e-06
+source_qualification_independent_rebuild,True,,
+all_hours_have_a_known_status,True,,
+missing_source_status_exact,True,,
+dispatch_status_exact,True,,
+unsolved_state_is_missing:gen_pg,True,,
+qualified_state_is_finite:gen_pg,True,,
+unsolved_state_is_missing:branch_pf,True,,
+qualified_state_is_finite:branch_pf,True,,
+unsolved_state_is_missing:bus_va,True,,
+qualified_state_is_finite:bus_va,True,,
+native_required_balance,True,2.1827872842550278e-11,tolerance 1e-07
+capacity_infeasibility_is_explicit,True,,
+all_box_feasible_hours_solved,True,,
+fixed_external_dispatch_exact,True,0.0,tolerance 0
+finite_positive_objective_weights,True,,
+native_bounds_nonnegative_ordered,True,,
+declared_continuous_native_minimum_zero,True,0.0,tolerance 0
+admitted_capability_not_above_physical,True,,
+pumped_storage_no_extra_balancing_generation,True,,
+wind_solar_below_allocated_availability,True,,
+exact_source_availability_ceiling:wind_solar,True,0.0,tolerance 1e-07
+exact_source_availability_ceiling:pumped_hydro,True,0.0,tolerance 1e-07
+conventional_resource_physical_ceiling,True,0.0,tolerance 1e-07
+reactor_availability_keys_unique,True,,
+NRC_availability_ceiling:EIA860:2025:PLANT:2589:GEN:1,True,0.0,tolerance 1e-07
+NRC_availability_ceiling:EIA860:2025:PLANT:2589:GEN:2,True,0.0,tolerance 1e-07
+NRC_availability_ceiling:EIA860:2025:PLANT:6110:GEN:1,True,0.0,tolerance 1e-07
+NRC_availability_ceiling:EIA860:2025:PLANT:6122:GEN:1,True,0.0,tolerance 1e-07
+KKT_primal:sum_error_mw,True,2.1827872842550278e-11,tolerance 1e-07
+KKT_primal:bound_violation_mw,True,0.0,tolerance 1e-07
+KKT_stationarity:kkt_gradient_residual,True,1.1563666690861396e-14,tolerance 1e-06
+KKT_stationarity:saved_dual_gradient_residual,True,1.106753577673203e-14,tolerance 1e-06
+objective_recalculation,True,0.0,tolerance 1e-05
+retired_IP_units_not_admitted,True,,
+reference_zero_on_unsolved_hours,True,,
+reference_has_admitted_native_generator,True,,
+independent_DC:nodal_residual_mw,True,3.296918293926865e-11,tolerance 1e-07
+independent_DC:global_balance_residual_mw,True,2.091837814077735e-11,tolerance 1e-07
+independent_DC:branch_angle_identity_error_mw,True,2.3874235921539366e-12,tolerance 1e-07
+independent_DC:independent_branch_error_mw,True,8.526512829121202e-12,tolerance 1e-07
+independent_DC:independent_angle_error_deg,True,3.659295089164516e-13,tolerance 1e-07
+regional_scheduled_export:ISONE,True,1.858779796748422e-11,tolerance 1e-07
+regional_scheduled_export:ONTARIO,True,2.3874235921539366e-12,tolerance 1e-07
+regional_scheduled_export:PJM,True,3.296918293926865e-12,tolerance 1e-07
+recorded_slack_movement,True,3.296918293926865e-11,tolerance 1e-07
+recorded_nodal_residual,True,1.233502189279534e-11,tolerance 1e-07
+summary:hours,True,,
+summary:source_qualified_hours,True,,
+summary:dispatched_hours,True,,
+summary:missing_source_hours,True,,
+summary:capacity_infeasible_hours,True,,
+summary:native_generators,True,,
+summary:fixed_external_generators,True,,
+summary:generators,True,,
+status_CSV_hour_axis,True,0.0,tolerance 0
+status_CSV_codes,True,0.0,tolerance 0
+status_CSV_qualification,True,,
+all_state_artifacts_fingerprinted,True,,
+state_artifact_fingerprint:dispatch.mat,True,,
+state_artifact_fingerprint:dispatch_bounds.mat,True,,
+state_artifact_fingerprint:dispatch_priors.mat,True,,
+state_artifact_fingerprint:dispatch_network.mat,True,,
+provenance:output/nygrid_2025_inputs/model/operating_inputs.mat,True,,
+provenance:output/nygrid_2025_dispatch/fleet/fleet_register.csv,True,,
+provenance:output/nygrid_2025_dispatch/fleet/fleet_bounds.npz,True,,
+provenance:output/nygrid_2025_dispatch/priors/dispatch_priors.npz,True,,
+provenance:output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv,True,,
+provenance:scripts/nygrid_2025_dispatch/build_dispatch.py,True,,

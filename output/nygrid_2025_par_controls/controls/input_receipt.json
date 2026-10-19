@@ -1,0 +1,253 @@
+{
+  "status": "complete_source_only_two_device_controls",
+  "created_utc": "2026-10-11T13:58:03.351825+00:00",
+  "started_utc": "2026-10-11T13:57:46.710791+00:00",
+  "python": "3.13.7",
+  "ptids": [
+    25118,
+    25119
+  ],
+  "physical_hours": 8760,
+  "observed_qualified_hours": 8673,
+  "observed_replay_hours": 8663,
+  "schedule_qualified_hours": 8760,
+  "schedule_replay_hours": 8663,
+  "common_replay_hours": 8663,
+  "native_P34_records": 211996,
+  "native_P34_records_by_device": {
+    "25118": 105998,
+    "25119": 105998
+  },
+  "native_P34_source_days": 366,
+  "native_P34_endpoint_scope": "Includes the frozen Jan1,2026 endpoint day; all retained raw records screened, not only averaged or replay-qualified hours.",
+  "schedule_source_days": 365,
+  "schedule_period_count_histogram": {
+    "23": 1,
+    "24": 363,
+    "25": 1
+  },
+  "gamma": 0.30012075175285535,
+  "input_device_direction": "Ontario100_to_NewYork_Moses48_positive",
+  "P34_direction_verified": true,
+  "P34_direction_effective_date": "2024-12-03",
+  "P53A_sign_verified": false,
+  "P53A_mode": "diagnostic_raw_signed_G_control_code;shared_direction_not_promoted",
+  "P53A_time_policy": "Declared midnight local date and60minute intervals; count must equal physical UTC duration to next local midnight. Preserve both fallfolds; invent no spring hour.",
+  "P34_time_policy": "Frozen forward-held means; complete3600seconds and source gap<=600seconds; no fill or clipping.",
+  "missing_data_policy": "Retain NaN per device and explicit masks; no interpolation, zero-fill or cross-device substitution.",
+  "necessary_active_power_screen_passed": true,
+  "full_P_Q_thermal_or_operational_feasibility_verified": false,
+  "actual_tap_trajectory_used": false,
+  "physical_no_load_phase_bound_applied_to_equivalent": false,
+  "internal_interface_observations_read": false,
+  "sign_or_parameters_fit_to_internal_flows": false,
+  "frozen_inputs_modified": false,
+  "all_input_hashes_unchanged": true,
+  "focused_checks": {
+    "native_resolution_spike_rejected": true,
+    "spring_23_hours_preserved": true,
+    "fall_25_hours_preserved": true,
+    "invalid_DST_period_count_rejected": true,
+    "missing_schedule_device_not_filled": true
+  },
+  "limitations": [
+    "The nominal300MVA screen is only necessary |P|<=S; Q,current,temperature,voltage,tap,emergency and outage capability remain unverified.",
+    "The physical +/-60degree no-load design range is metadata and is not a bound on an aggregate equivalent's phase offset.",
+    "P53A schedules are source-derived with correct physical hours, but their G/L numeric sign semantics remain explicitly diagnostic.",
+    "P34's raw Flow(MWH) column retains the existing posted-flow numeric convention; no energy/time rescaling was introduced."
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/par_source_receipts.csv",
+      "sha256": "b39d82ac719458499145b34541de7a9c0f7165e23546bcac06ee63b285bb48bb"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/par_stlawrence_hourly_2025.csv",
+      "sha256": "6987b1858257e05300790f43deb755c7912494bcc72be457ed7d8e23cc402d21"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/par_stlawrence_raw_2025.csv.gz",
+      "sha256": "9b0291944d3c70212bf9637877bb45116fa0a6ddcaacb9a4f23d7e8d7428d0a6"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250101ParFlows_csv.zip",
+      "sha256": "bb760c2b1c15bc59e907e28ba0eaec5715260179dce513ee43cd2c2c9e2ec076"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250201ParFlows_csv.zip",
+      "sha256": "5466d3ed258b133b0c7296228ac1087c3dc2c73e74b72dfeaf0ea7e0195faaf7"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250301ParFlows_csv.zip",
+      "sha256": "5b011a11c73b2f31779da5bd2a80e3fbcccaf6d685fb1cacc92c8c3a98c7199a"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250401ParFlows_csv.zip",
+      "sha256": "e5d349be83ce17ce7a8767e88c91c9d5a66a55f3391ea401abe01555d1f94efb"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250501ParFlows_csv.zip",
+      "sha256": "805cd14d79b7234d82856fa72f9a71acdcd70a4534c5d7bab11e73fd98d8be8f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250601ParFlows_csv.zip",
+      "sha256": "4fcfc99c76ce1cd8f04548088004b57fdc73266b8bb3d053c2177397ad6517e9"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250701ParFlows_csv.zip",
+      "sha256": "05f572827945a51003dc5b744cc533cc7464a3e99a457bc3340df84c93066fe2"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250801ParFlows_csv.zip",
+      "sha256": "6c0501a90e001d781daffadd5286adc2b1188a77157cd44fac73de8b5309e98b"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20250901ParFlows_csv.zip",
+      "sha256": "3ddf7f4708b783abbc3b6c8bc0494482356538ab5adbf1cb7010e06f25c2e76e"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251001ParFlows_csv.zip",
+      "sha256": "7e739cda35caac38deea8f8bc024e8845f9cc76aa1ddb715680a168193f9ea7e"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251101ParFlows_csv.zip",
+      "sha256": "df8734666414d51aa04319565cb0f1377e069cef04bff623b8d92de6cde74644"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20251201ParFlows_csv.zip",
+      "sha256": "6e08b8e43669c5d97348842c107c3043812167eb505018e3eac44977a2a639ef"
+    },
+    {
+      "path": "output/nygrid_2025_moses_audit/exchanges/raw/20260101ParFlows_csv.zip",
+      "sha256": "0bda820cf2c06bc5da05787f13399b79ef6a698452c037e32f3feec3ba7ff085"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27.pdf",
+      "sha256": "c0647d2abc38f216ccf5c1f197ca679cf16358fde5f507659bcdcd80a6938ba4"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27_layout.txt",
+      "sha256": "defe8dfc6265cb13b1504cc304a268f6f4248a108fde074ed5db03feac5010bb"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27_page07.png",
+      "sha256": "626dc5e17311bb786d6c47a762c336a3d7b1f41cf311d2f6740f65c398b5a323"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/NYISO_ParFlowDiagrams27_page26.png",
+      "sha256": "c7f1300a97be9213a6c799c3c010aedf9f2e241d8930ce3827a56c1016aed58a"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/direction_manifest.json",
+      "sha256": "a1ee8e50784eb7cc676b3de320898411355a316ca60884839925520799b37a00"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/direction_verification_receipt.json",
+      "sha256": "70591310ccf0ef85058cb7e92a385594c103a6c717a477db807def1601d4a55e"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/direction/verified_ptid_directions.csv",
+      "sha256": "5abe03d52641645db1e2d517b8e9fdc30999f8b0a40f354b1d326f122adb4870"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/limits/limits.json",
+      "sha256": "80f1f5f97e4dd5d5bb1f74211394fcea358ea5cbbff130d432f3103d5a1e01d8"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/limits/reinhausen_2022_stlawrence_technology.pdf",
+      "sha256": "fdd3c2f6367809c31f0b3c6f3ced634116b47539322df19df59ff588341ca294"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20250101parSchedule_txt.zip",
+      "sha256": "163ac93abda8eae5362e48c3d85ae948d77162c25914cd7ac94f44a8ab4c706d"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20250201parSchedule_txt.zip",
+      "sha256": "be4c485ffc738ea115967fc1ec83096530c1693d20ebf5de7472b51145fe8d27"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20250301parSchedule_txt.zip",
+      "sha256": "0f6a652a2228fee901879bfd1f7744dc27cf7c7677b628d492ed280376538d41"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20250401parSchedule_txt.zip",
+      "sha256": "d9eb0d97f8fc4fa7a5209f8960cd479655466bdef9aefd7c023b7bf030b66bd9"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20250501parSchedule_txt.zip",
+      "sha256": "973f937f37ac42cf1fde69456b64984027c86fa8a0733ec271e489aac8485c84"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20250601parSchedule_txt.zip",
+      "sha256": "6f55243ad5cc32f51eb9692bc8ab3fc53e30132507e5e038431c3e3ceb53bd79"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20250701parSchedule_txt.zip",
+      "sha256": "cdce06a146066be4caa44e44365c4f1b2481ab665781519cbb87d8bc4d7fdef4"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20250801parSchedule_txt.zip",
+      "sha256": "7b8807acbe8bf88e9d74abc6055c1cc0e7cffca76ea8c90c37560267bca90969"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20250901parSchedule_txt.zip",
+      "sha256": "96260e3d606d5fd7a0e3fae5d864e22b9bcfdefe78b63df84c457548f6164f23"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20251001parSchedule_txt.zip",
+      "sha256": "e1cbfa771adb21ec5879b52474efc1bb38f221c7711f4855ecb16a54c8fddcb8"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20251101parSchedule_txt.zip",
+      "sha256": "02fdcc68b94068aff6d834b5459f810217bb5b5e3ad86853aea2551981e89c1e"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/20251201parSchedule_txt.zip",
+      "sha256": "12ca6c2c0496512b656ce537bd060643b3b61d98d19b807318fb41c5529aba93"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/sources/schedules/acquisition_receipts.json",
+      "sha256": "535eeb896f451d5c4be413c49889071f0d47906754301cb2e18fe6bce25c6807"
+    },
+    {
+      "path": "scripts/nygrid_2025_par_controls/build_control_inputs.py",
+      "sha256": "a693a82f7fb76bbd9227f5764cdcfd647ec1b6aa4b5ebc7725e19c60af2904a9"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_par_controls/controls/hourly_controls.csv",
+      "bytes": 2074840,
+      "sha256": "ea359615f1ef94b9f2e0f0101a72a6d2cedd78f83bab4aa15646a85b465a345a"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.mat",
+      "bytes": 217619,
+      "sha256": "585bf12987d319aab802705da5d4b917b9e695e16ee24acf5f093a7a872ebc43"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "bytes": 219965,
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/necessary_p_only_screen.json",
+      "bytes": 2856,
+      "sha256": "67b6f85d134be9e8e1404e8b147f89efdc84280aa8922829a5ff8ce75b2be60d"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/P34_native_member_receipts.csv",
+      "bytes": 57139,
+      "sha256": "177fa7c637f999c13ca55adff023a29489235bd4254ff7fa70202d69e9574c25"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/schedule_day_receipts.csv",
+      "bytes": 89612,
+      "sha256": "f56977ef7355a4519284afad8fa1b26a0ee8d169e9a76e1eff2a91559824ee07"
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "passed": true,
+  "scope": "Current annual offline-map data export; full-axis masks and precision; no simulation",
+  "createdUTC": "2026-10-15T22:07:30.832494+00:00",
+  "output": {
+    "path": "output/nygrid_2025_moses_repair/delivery/map/annual_data.json",
+    "bytes": 12947535,
+    "sha256": "b2bb4d7f3125553c2d4e114edae52fcc8d08a9e8aa7ea5e05da46c6e42829d91"
+  },
+  "counts": {
+    "hours": 8760,
+    "sourceQualified": 8651,
+    "sourceExcluded": 109,
+    "qualified": 8651,
+    "failed": 0,
+    "operatingQualified": 0,
+    "publicObservationRows": 8673
+  },
+  "failureStatusCounts": {},
+  "exactJSONRoundtrip": true,
+  "inputsUnchanged": true,
+  "PFRun": false,
+  "OPFRun": false,
+  "annualRerun": false,
+  "monthlyCoverage": [
+    {
+      "file": "profile_PF_2025_01.mat",
+      "hours": 744,
+      "source_qualified": 738,
+      "qualified": 738
+    },
+    {
+      "file": "profile_PF_2025_02.mat",
+      "hours": 672,
+      "source_qualified": 661,
+      "qualified": 661
+    },
+    {
+      "file": "profile_PF_2025_03.mat",
+      "hours": 743,
+      "source_qualified": 735,
+      "qualified": 735
+    },
+    {
+      "file": "profile_PF_2025_04.mat",
+      "hours": 720,
+      "source_qualified": 714,
+      "qualified": 714
+    },
+    {
+      "file": "profile_PF_2025_05.mat",
+      "hours": 744,
+      "source_qualified": 729,
+      "qualified": 729
+    },
+    {
+      "file": "profile_PF_2025_06.mat",
+      "hours": 720,
+      "source_qualified": 710,
+      "qualified": 710
+    },
+    {
+      "file": "profile_PF_2025_07.mat",
+      "hours": 744,
+      "source_qualified": 729,
+      "qualified": 729
+    },
+    {
+      "file": "profile_PF_2025_08.mat",
+      "hours": 744,
+      "source_qualified": 732,
+      "qualified": 732
+    },
+    {
+      "file": "profile_PF_2025_09.mat",
+      "hours": 720,
+      "source_qualified": 716,
+      "qualified": 716
+    },
+    {
+      "file": "profile_PF_2025_10.mat",
+      "hours": 744,
+      "source_qualified": 740,
+      "qualified": 740
+    },
+    {
+      "file": "profile_PF_2025_11.mat",
+      "hours": 721,
+      "source_qualified": 710,
+      "qualified": 710
+    },
+    {
+      "file": "profile_PF_2025_12.mat",
+      "hours": 744,
+      "source_qualified": 737,
+      "qualified": 737
+    }
+  ],
+  "maximumNumericalDifferences": {
+    "served_export_error_model_MW": 0,
+    "gross_input_error_model_MW": 0,
+    "NY_gross_served_loss_closure_model_MW": 3.808064974464287e-13,
+    "native_generation_input_vs_solved_model_MW": 1.8280843505635858e-10,
+    "fixed_control_input_vs_solved_model_MW": 0,
+    "global_generation_demand_loss_closure_model_MW": 1.823536877054721e-10,
+    "legacy_signed_literal_from_frozen_scorer_error_public_MW": 0.0,
+    "oriented_source_side_frozen_scorer_error_public_MW": 1.8189894035458565e-12,
+    "oriented_target_side_frozen_scorer_error_public_MW": 9.094947017729282e-13,
+    "legacy_signed_literal_from_independent_reconstruction_error_model_MW": 0.0,
+    "oriented_source_side_independent_reconstruction_error_model_MW": 4.547473508864641e-13,
+    "oriented_target_side_independent_reconstruction_error_model_MW": 2.2737367544323206e-13,
+    "frozen_gross_input_error_model_MW": 0.0,
+    "frozen_served_error_model_MW": 0.0,
+    "frozen_loss_error_model_MW": 0.0
+  },
+  "savedMetricRowsCompared": 294,
+  "maximumSavedMetricDifference": 1.1368683772161603e-13,
+  "interfaceConvention": "legacy_signed_literal_from",
+  "publicScaleFormula": "model_MW/gamma",
+  "generationExcludesAllExternalEquivalents": true,
+  "sourceReceipts": [
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/map/export_annual_data.py",
+      "bytes": 26574,
+      "sha256": "ff4972c4035558368a7d88de75f122d71717b3d09b1143afd3f643ef69d21992"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_arrays.npz",
+      "bytes": 6391233,
+      "sha256": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv",
+      "bytes": 261282,
+      "sha256": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/scoring_receipt.json",
+      "bytes": 6227,
+      "sha256": "3dc8fb5fb58db73e6add7b17cc76cbb1c813436d1c009783ac2da08e90435d25"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/comparison_contract.json",
+      "bytes": 11427,
+      "sha256": "6a7b0f5171a9b9e4dbfcf2c5889c7625c80ce92c85c61778c3fdb131ac4988a7"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/frozen_comparison_cohort.csv",
+      "bytes": 743576,
+      "sha256": "2a8ac4b6eb3cfb7577d5e8f3ad864589b15acb8af4d1c642aa901dcf6e086332"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_receipt.json",
+      "bytes": 211362,
+      "sha256": "42292179c49ca8fd9b8b7f7eb1e2406713a1c675a7b6763b2726b9678051bc0d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/model_receipt.json",
+      "bytes": 136157,
+      "sha256": "1a5705124182449a8a1242212465ade10508f6268fb1c8b08f81eddc79ab20da"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/latest_model.mat",
+      "bytes": 848957,
+      "sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h0001_4380.mat",
+      "bytes": 54282573,
+      "sha256": "197a6bbb5909a61dc227f779805d07d76d8d5a7f3b7e1d77974e12c6375c91e6"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h4381_8760.mat",
+      "bytes": 53594616,
+      "sha256": "ccd92f0560427d78ade6861d34182cf64a8b3c76b46744eb80e4a99edb6ffe61"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "bytes": 12874,
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_contract.json",
+      "bytes": 4872,
+      "sha256": "bb909130ecd61253819c2876f8d35347ca6bd3a9f4ce9507e82b79c7aee8b553"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_01.mat",
+      "bytes": 38766803,
+      "sha256": "235060bbdbd6aa1146c463da2602da65c64aeb80e0dcf20042ce0bf41957cd26"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_02.mat",
+      "bytes": 35035992,
+      "sha256": "6545363fae3a6c1e16a463c8b09ab8f91bb562e42f9db6c63952d704d50cca4f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_03.mat",
+      "bytes": 40636086,
+      "sha256": "7b93be2424f1fba2b21bf92a484a60cbb6227e8f47a07960901670d00171b7e7"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_04.mat",
+      "bytes": 40192632,
+      "sha256": "3307cce53ccbdd008eeeb36d19ff6abde6ee5d6221b0381c8eede1f5a5a77d9e"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_05.mat",
+      "bytes": 42421099,
+      "sha256": "28372f635ea2865ade07237cf48d8e6eed5144314baf927bce92aa6ff005e5da"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_06.mat",
+      "bytes": 42362205,
+      "sha256": "50be6dd999e465d66b80fca8db249c349f45f5d5076fb90ec53a2629095556ad"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_07.mat",
+      "bytes": 43309881,
+      "sha256": "93ee6ae056ceea2539000c22ddca99c5e9458c8e615f7985aac8e5e884722532"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_08.mat",
+      "bytes": 42661664,
+      "sha256": "06c82cd080fba654a6754b1449059e7024a4e3c26b0ee6d5d2709f3c73a813ca"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_09.mat",
+      "bytes": 39990738,
+      "sha256": "52314266180b5f0c471f997efe855fdccb1a78a969800d959a3927e7329e90f4"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_10.mat",
+      "bytes": 40442533,
+      "sha256": "436383321d1f6bf164c076bad471fede640ca0fb7beec3595214201c38f02648"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_11.mat",
+      "bytes": 38397553,
+      "sha256": "525d187b03540dc11c4a0b0ceb8c7563fe99821e122e3f81d9bee38e6f84ce60"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_12.mat",
+      "bytes": 39203700,
+      "sha256": "9cf3be88a219bd1963ca15744105fb869b095f81ef0f46b4e4d47732b8c21ca6"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/profile_alignment_summary.json",
+      "bytes": 7915,
+      "sha256": "20d1064c92aa382c76972f40b75a979bceff68c796a4e9861ee15b2408d12046"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/interface_flow_reference.npz",
+      "bytes": 1427332,
+      "sha256": "21c0bc01ed7b6a424ba0b58fb0ea5aca322e49bf2da6b3ae417de6f777642490"
+    }
+  ],
+  "recomputedMetrics": {
+    "path": "output/nygrid_2025_moses_repair/delivery/map/recomputed_interface_metrics.csv",
+    "bytes": 36453,
+    "sha256": "ef8ba4e14a4d21cc8373e1ed31aba1144412865ff2ceccffae6af23c6f1d07b3"
+  }
+}

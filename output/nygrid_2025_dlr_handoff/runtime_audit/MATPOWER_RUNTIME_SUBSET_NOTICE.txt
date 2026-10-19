@@ -1,0 +1,7 @@
+This folder is a code-only runtime subset of MATPOWER 8.1, MIPS 1.5.2, MP-Opt-Model 5.0, and MP-Test 8.1.
+It is not the complete MATPOWER distribution. Case data, examples, tests, docs, MOST, and optional solver binaries are omitted.
+The unmodified source code and retained LICENSE/AUTHORS/CITATION files govern use and redistribution.
+MATPOWER case data are not covered by its code BSD license and are not included in this vendor subset.
+MATLAB and any MathWorks toolbox are external prerequisites and are not redistributed.
+Use setup_nygrid_2025_handoff for this project; the full MATPOWER installer/test suite is intentionally not shipped.
+Official sources: https://matpower.org/license/ and https://github.com/MATPOWER/matpower

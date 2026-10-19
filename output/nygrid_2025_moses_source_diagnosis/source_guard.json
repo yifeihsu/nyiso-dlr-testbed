@@ -1,0 +1,197 @@
+{
+  "created_utc": "2026-10-15T20:27:07.579228+00:00",
+  "baseline_HEAD": "d4aea78c1b042158d7e295edc4cb33cffa5b0341",
+  "branch": "codex/s13-phase1b-upny-coned",
+  "critical_sources": [
+    {
+      "path": "output/nygrid_2025_physical_repair/model/latest_model.mat",
+      "bytes": 846610,
+      "sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h0001_4380.mat",
+      "bytes": 54625507,
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h4381_8760.mat",
+      "bytes": 54767622,
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/model_receipt.json",
+      "bytes": 135749,
+      "sha256": "bbefae143a0cc3acf394d01bba37df33fedc68f7af4ccab849ce8681f5086ef6"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+      "bytes": 6290016,
+      "sha256": "3297f564d35b7cc1d132eeaa4d1f4054ecc49681b67478b957d6ca5752191245"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/scoring_receipt.json",
+      "bytes": 6314,
+      "sha256": "930d727fb67a9130f9d5d8693aaf86496e0cb6e39c591f86691979c9eb718fa4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/public_interface_metrics.csv",
+      "bytes": 270287,
+      "sha256": "6cb5dd4792ce306227cdd8a38c0003f95bf730c997bed79dd19ac49cc8578fc2"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "bytes": 190996,
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/load_wide.csv",
+      "bytes": 1505796,
+      "sha256": "442435c39c3e1ca6ffdb867f5bbee34ba28d7ae764cf1777e83a84859d43c300"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/input_receipt.json",
+      "bytes": 11729,
+      "sha256": "b420fa9d811026bfd185e3a754a62f512b2cccc873ee34aa35da0b51dfd65747"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "bytes": 12874,
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_apply_budget.m",
+      "bytes": 2183,
+      "sha256": "270b73b76eb3da572351f9f067a65efae17d47fbfe0e6ad39058e674df299d4b"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_audit_ac_solution.m",
+      "bytes": 8190,
+      "sha256": "cc4ca45f7c92d04da1a6cfc0c9ea0d2ae7e956e76ce69a07b05b1241bf1f5c4d"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_budget.m",
+      "bytes": 910,
+      "sha256": "454d8d5842a63b66cfdb34568ea26a9724bc2d7d0062fafa24a59d6e1ae32e9b"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_compact_build.m",
+      "bytes": 5681,
+      "sha256": "596332752f5bd6185754a6c595872c25355e29f098ce19181fbfed823096d5d5"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_conductor_heat.m",
+      "bytes": 789,
+      "sha256": "35e92e4fb534ddbed129f4654ce32db14b6d2c891e6ca56dc78d906d7fe696d8"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_conductor_resistance.m",
+      "bytes": 674,
+      "sha256": "0f7688f8e2d80114f017c07ba8a2747459412f74fdf6a62f824901fcb05eaea0"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_coupled_context.m",
+      "bytes": 2263,
+      "sha256": "dae2bf87cc8a25e81446e3c56825ea6924a177e4912362d803db8f432a9fa03e"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_coupled_equations.m",
+      "bytes": 2371,
+      "sha256": "8161af0470bad1a99d18636d793fd372486f85fbef78c79f2dbbec8acb7f83ed"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_coupled_solve.m",
+      "bytes": 3957,
+      "sha256": "eee52a1cd20481befbe436b972a1d77adc56e802b77b632e91c76bb9756ff723"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_dlr_apply_resistance.m",
+      "bytes": 1205,
+      "sha256": "28156afb8772421fb19a41e916c6c43931cb9cf043e1ca58f6b49de8239df5e6"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_dlr_current_audit.m",
+      "bytes": 2784,
+      "sha256": "934968b82ecff1bfb318732d4a75b7b3b5764c0ee54081ded4e570bfad0ece18"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_dlr_heat_balance.m",
+      "bytes": 3192,
+      "sha256": "e76267cc61a3621be7adbe35dba32e7aa6c41b9753cd1a38636cd5a4637d1743"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_dlr_limits.m",
+      "bytes": 2977,
+      "sha256": "e2adea7d49750c1384910fc7c34babb3ac9e891c6c64a3a8d27a23dea1b02371"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_finalize.m",
+      "bytes": 5007,
+      "sha256": "e8294c1959b010136388c7f2dbdb8a34429f780cb6274ee86bec988c62c236f2"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_operator_fingerprint.m",
+      "bytes": 1875,
+      "sha256": "6f73ba32c90eaffc88ad2c1fcc691efa987165c0c99c6cecc66f72e8050a2b62"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_prepare_policy.m",
+      "bytes": 1518,
+      "sha256": "499dcdbbf36033cade6e0069deda694cafebf9d83c5be20c27408be9e83e100a"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_source_fingerprint.m",
+      "bytes": 614,
+      "sha256": "aea665afe48f48e0da51384e1a84eba8ef47c6d3fb1803cb42783b83333b5c15"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_terminal_current_audit.m",
+      "bytes": 1069,
+      "sha256": "fba0b6f06428899a179ffb3cd70ae7140a2ba89ecbbf519eb33f991e91bc7d43"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/kernels/nylatest_thermal_candidates.m",
+      "bytes": 17627,
+      "sha256": "e06ff58549d065f8426ee5eff52ab4409113b784929c53b21a03ec5737027c65"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/load_nygrid_latest.m",
+      "bytes": 3302,
+      "sha256": "249d14620c015a74217bd52028496a4f32e0af0ccabccf82303d431d4595c345"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/nylatest_data.m",
+      "bytes": 2383,
+      "sha256": "03d89bf34dda49a7c5e7e4623df600ef985620c99478a6fa2ec9c0f1bd7d4fc0"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/nylatest_file_sha256.m",
+      "bytes": 395,
+      "sha256": "0ff894dab7ad2bb1d9eac9a5e1ab5ec06433050de1d3786338b926526f608c17"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/nylatest_paths.m",
+      "bytes": 672,
+      "sha256": "65901c49b400b15d0a4155ff3f6d4cde66f9a74bb92b512301689223bb1e6623"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/run_nygrid_latest_acpf.m",
+      "bytes": 937,
+      "sha256": "fc42e2d088a3534fb370f89e6e4daf95f2f698b86998cf1e4016092f3606d169"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/screen_nygrid_latest_dlr.m",
+      "bytes": 8787,
+      "sha256": "067775fb41512c166270c4c851154b97ac97884d749272018ee456469aad4b2b"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/setup_nygrid_latest.m",
+      "bytes": 2535,
+      "sha256": "728886412e82b845ad089c1d53ebb89b9472a727f8db67c025c12f010c25c0da"
+    },
+    {
+      "path": "scripts/nygrid_2025_physical_repair/delivery/runtime/smoke_nygrid_latest.m",
+      "bytes": 9274,
+      "sha256": "1d69c365cdabbdefee08652a7a687b611abc3b5a9207d0847a5c4106db2c3f82"
+    }
+  ]
+}

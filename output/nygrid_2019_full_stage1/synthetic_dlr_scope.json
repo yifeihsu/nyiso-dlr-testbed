@@ -1,0 +1,18 @@
+{
+  "stage": "synthetic_DC_thermal_exposure_screen",
+  "year": 2019,
+  "fixed_dispatch": true,
+  "nominal_voltage_unity_power_factor_proxy": true,
+  "observed_weather": false,
+  "installed_conductors_verified": false,
+  "ac_feasibility_validated": false,
+  "economic_redispatch_performed": false,
+  "dynamic_temperature_time_series": false,
+  "sag_clearance_validated": false,
+  "zero_rate_a_policy": "unspecified equipment limit; never zero thermal capacity",
+  "length_policy": "Rmatched at assumed75C; exclude outside1to300km; not geographic route",
+  "conductor_policy": "2026 catalog surrogate for a2019 research scenario; not historical equipment identification",
+  "weather_policy": "four constant conditions independently applied to the same8760 prepared hourly states",
+  "max_heat_residual_w_m": 3.5527136788005009E-14,
+  "thermal_tests_passed": true
+}

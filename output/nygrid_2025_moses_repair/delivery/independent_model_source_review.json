@@ -1,0 +1,269 @@
+{
+  "passed": true,
+  "status": "compiled_model_and_source_contract_passed_delivery_not_yet_complete",
+  "created_utc": "2026-10-15T22:16:48.823740+00:00",
+  "model_sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8",
+  "candidate_receipt_sha256": "7d465d2bf86027fa28d58bfadce109d283f96ae0fd2a32b85850b8933992ae35",
+  "source_qualified_hours": 8651,
+  "generator_rows": 1466,
+  "native_rows": 1437,
+  "PV20_fixed_PQ_row_1based": 1466,
+  "PV20_bus": 49,
+  "StLawrence_unit21_row_1based": 1465,
+  "dated_unit26_row_1based": 317,
+  "all_original_1464_row_identities_preserved": true,
+  "max_errors_public_MW": {
+    "compiled_hydro_source_MW": 1.4210854715202004e-14,
+    "compiled_PV20_source_MW": 1.4210854715202004e-14,
+    "compiled_ISONE_pool_MW": 2.2737367544323206e-13,
+    "regional_import_preservation_MW": 7.275957614183426e-12,
+    "global_active_input_preservation_MW": 3.637978807091713e-11,
+    "hourly_native_hydro_total_preservation_MW": 1.6370904631912708e-11
+  },
+  "maximum_monthly_StLawrence_energy_error_MWh": 2.3283064365386963e-10,
+  "state_checks": [
+    {
+      "state_index": 1,
+      "all_bus_branch_and_six_transfer_arrays_preserved": true,
+      "previous_parents_41_185_195_preserved": true,
+      "fixed_boundary_zero_Q": true,
+      "PV20_excluded_from_loss_participation": true
+    },
+    {
+      "state_index": 2,
+      "all_bus_branch_and_six_transfer_arrays_preserved": true,
+      "previous_parents_41_185_195_preserved": true,
+      "fixed_boundary_zero_Q": true,
+      "PV20_excluded_from_loss_participation": true
+    },
+    {
+      "state_index": 3,
+      "all_bus_branch_and_six_transfer_arrays_preserved": true,
+      "previous_parents_41_185_195_preserved": true,
+      "fixed_boundary_zero_Q": true,
+      "PV20_excluded_from_loss_participation": true
+    },
+    {
+      "state_index": 4,
+      "all_bus_branch_and_six_transfer_arrays_preserved": true,
+      "previous_parents_41_185_195_preserved": true,
+      "fixed_boundary_zero_Q": true,
+      "PV20_excluded_from_loss_participation": true
+    }
+  ],
+  "fresh_runtime_cases": 14,
+  "PV20_Q_zero_and_no_voltage_control_verified": true,
+  "full_physical_P32_meter_equivalence_claimed": false,
+  "monthly_unit_status_interpreted_as_engineering_availability": true,
+  "profile_exclusions_remain109": true,
+  "new_AC_power_flows": 0,
+  "delivery_complete": false,
+  "pending": [
+    "final_map",
+    "final_documents",
+    "final_archive"
+  ],
+  "inputs": [
+    {
+      "path": "output/nygrid_2025_moses_repair/candidate_receipt.json",
+      "sha256": "7d465d2bf86027fa28d58bfadce109d283f96ae0fd2a32b85850b8933992ae35"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/candidate_receipt.json",
+      "sha256": "04c717e2a2361064c662277afd4e49181beb135ca41db1810defb22bdcd0f1fc"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/boundary_rerouting_receipt.json",
+      "sha256": "15a0121447f847e5364794d97361415d56a3fbdabcd979b8fd5c9dedde65c65f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/generation_candidate.mat",
+      "sha256": "f22c9d1aeef1c76a8ba8de5bb966f12c9504a5f7aac7c06a29e9af9e83115535"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/boundary_rerouting.mat",
+      "sha256": "60cf14f347b40ff50c8471e9797d8766907db9a44126b6e2b94a55c8afffa0c6"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/PV20_source_receipt.json",
+      "sha256": "74545707c320f7658d5ddceb6822a79ee18199f56db86fc3e6745e3dfe7744ed"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_apply_budget.m",
+      "sha256": "b9a26d5489361285ddad6252948755929b2424d88d7fd0156ac1e2ef8ead3fa3"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_audit_ac_solution.m",
+      "sha256": "cc4ca45f7c92d04da1a6cfc0c9ea0d2ae7e956e76ce69a07b05b1241bf1f5c4d"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_budget.m",
+      "sha256": "454d8d5842a63b66cfdb34568ea26a9724bc2d7d0062fafa24a59d6e1ae32e9b"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_compact_build.m",
+      "sha256": "596332752f5bd6185754a6c595872c25355e29f098ce19181fbfed823096d5d5"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_conductor_heat.m",
+      "sha256": "35e92e4fb534ddbed129f4654ce32db14b6d2c891e6ca56dc78d906d7fe696d8"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_conductor_resistance.m",
+      "sha256": "0f7688f8e2d80114f017c07ba8a2747459412f74fdf6a62f824901fcb05eaea0"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_coupled_context.m",
+      "sha256": "dae2bf87cc8a25e81446e3c56825ea6924a177e4912362d803db8f432a9fa03e"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_coupled_equations.m",
+      "sha256": "8161af0470bad1a99d18636d793fd372486f85fbef78c79f2dbbec8acb7f83ed"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_coupled_solve.m",
+      "sha256": "eee52a1cd20481befbe436b972a1d77adc56e802b77b632e91c76bb9756ff723"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_dlr_apply_resistance.m",
+      "sha256": "28156afb8772421fb19a41e916c6c43931cb9cf043e1ca58f6b49de8239df5e6"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_dlr_current_audit.m",
+      "sha256": "934968b82ecff1bfb318732d4a75b7b3b5764c0ee54081ded4e570bfad0ece18"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_dlr_heat_balance.m",
+      "sha256": "e76267cc61a3621be7adbe35dba32e7aa6c41b9753cd1a38636cd5a4637d1743"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_dlr_limits.m",
+      "sha256": "e2adea7d49750c1384910fc7c34babb3ac9e891c6c64a3a8d27a23dea1b02371"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_finalize.m",
+      "sha256": "6140e119e0a22dbf72d077aa74a70f565eb502d342a63e060f32edfeb939574c"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_operator_fingerprint.m",
+      "sha256": "6f73ba32c90eaffc88ad2c1fcc691efa987165c0c99c6cecc66f72e8050a2b62"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_prepare_policy.m",
+      "sha256": "499dcdbbf36033cade6e0069deda694cafebf9d83c5be20c27408be9e83e100a"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_source_fingerprint.m",
+      "sha256": "aea665afe48f48e0da51384e1a84eba8ef47c6d3fb1803cb42783b83333b5c15"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_terminal_current_audit.m",
+      "sha256": "fba0b6f06428899a179ffb3cd70ae7140a2ba89ecbbf519eb33f991e91bc7d43"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/kernels/nylatest_thermal_candidates.m",
+      "sha256": "e06ff58549d065f8426ee5eff52ab4409113b784929c53b21a03ec5737027c65"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/load_nygrid_latest.m",
+      "sha256": "eb23eaf6e991ca6c43859ebdb6689cb2dc376c00fa33133f0b39cc5691836805"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/nylatest_data.m",
+      "sha256": "03d89bf34dda49a7c5e7e4623df600ef985620c99478a6fa2ec9c0f1bd7d4fc0"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/nylatest_file_sha256.m",
+      "sha256": "0ff894dab7ad2bb1d9eac9a5e1ab5ec06433050de1d3786338b926526f608c17"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/nylatest_paths.m",
+      "sha256": "26d4c4b499acd2ac5d2028bb9ecd51e037607a6654411e171c8aef7ec3bfa439"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/run_nygrid_latest_acpf.m",
+      "sha256": "fc42e2d088a3534fb370f89e6e4daf95f2f698b86998cf1e4016092f3606d169"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/screen_nygrid_latest_dlr.m",
+      "sha256": "067775fb41512c166270c4c851154b97ac97884d749272018ee456469aad4b2b"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/setup_nygrid_latest.m",
+      "sha256": "728886412e82b845ad089c1d53ebb89b9472a727f8db67c025c12f010c25c0da"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/runtime/smoke_nygrid_latest.m",
+      "sha256": "84277b31f033ec6978008edff272ceb47bb3aec9309f8d035669d8d8d488a26f"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/delivery/export_model.m",
+      "sha256": "fefc3a0059509085bc5c312b5169e12601d38bd29c410fe10da3f3f9778d0cc0"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/prepare_boundary_rerouting.py",
+      "sha256": "be76a95f6a0f0c580b1028b27a9fadbeb85049a17f5c674d2eb93c44cabb2025"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/model_receipt.json",
+      "sha256": "1a5705124182449a8a1242212465ade10508f6268fb1c8b08f81eddc79ab20da"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/latest_model.mat",
+      "sha256": "c2142719b6c754769a5796e7f0f866e0eedf25f2a07b45dc0b4910294e23ecc8"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h0001_4380.mat",
+      "sha256": "197a6bbb5909a61dc227f779805d07d76d8d5a7f3b7e1d77974e12c6375c91e6"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/profiles_h4381_8760.mat",
+      "sha256": "ccd92f0560427d78ade6861d34182cf64a8b3c76b46744eb80e4a99edb6ffe61"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/latest_model.mat",
+      "sha256": "5f0d7f3745dcc8f298e6f6d3c6d5734d930737d6a087d5e176aeea2380de7385"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/PV20_hourly_source.csv",
+      "sha256": "b9aa8d1da50f6f3374e0e9a571156b0123bcdf68f45f5cde269da34157fb0455"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/boundary/boundary_verification_receipt.json",
+      "sha256": "bf6894762f315e925e5948f976151e226c77a81f83c65ad794efbf3d41d5faad"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/generation_policy.json",
+      "sha256": "87c20c37415a47f102ac978bc724f3fc25323639683ae0a613899fa34f5a293a"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/StLawrence_dated_unit_admission.csv",
+      "sha256": "e99bd72b16555cfc1eeec61df40165a789391d30ef88880c57c6f2f525d7fbac"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/model_generator_register.csv",
+      "sha256": "4c9892ab2a855a75af893421ddce9131d3f491b407b072055a244e0448bb24f5"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/independent_runtime_loader_review.json",
+      "sha256": "864cfe629a0894dacd9b5c461e34babe9eab2e819de1c485db3713b6d99d9faf"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/generation/StLawrence_monthly_energy_ledger.csv",
+      "sha256": "e5375d977b2e5fea74dbacba04af5fa4fca331e022bf09b4434725cd8b2f956f"
+    }
+  ],
+  "review_script_sha256": "e6d4c01a37ebac1121c16d731e8a4e5a7413668c830aa4678857b0d34885d933"
+}

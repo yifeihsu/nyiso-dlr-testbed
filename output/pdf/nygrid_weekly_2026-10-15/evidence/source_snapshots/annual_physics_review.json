@@ -1,0 +1,337 @@
+{
+  "passed": true,
+  "completed_annual_review": true,
+  "created_utc": "2026-10-15T22:06:13.783970+00:00",
+  "run_directory": "output/nygrid_2025_moses_repair/annual/moses_repair_v1",
+  "scope": "Independent direct complex branch laws, nodal balance, passive-node reconstruction, material losses, requested-repair effects and remaining operating-limit readback of saved qualified annual arrays. No new PF solve.",
+  "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "clock_rows_reviewed": 8760,
+  "source_qualified_hours": 8651,
+  "candidate_qualified_hours": 8651,
+  "paired_old_baseline_hours": 8651,
+  "new_success_hours": 0,
+  "lost_old_success_hours": 0,
+  "rejected_source_hours": 0,
+  "failed_iterates_excluded_from_physical_statistics": true,
+  "maximum_recomputation_errors": {
+    "branch_complex_power_MVA": 2.7814856962369466e-10,
+    "series_current_A": 1.335344279596029e-09,
+    "from_current_A": 1.2664855830735178e-09,
+    "to_current_A": 1.4434533568419283e-09,
+    "series_loss_identity_MW": 4.4231285301066237e-13,
+    "parent41_material_loss_identity_MW": 1.9806378759312793e-13,
+    "nodal_P_MW": 6.73875888423936e-09,
+    "nodal_Q_MVAr": 1.0000434258472524e-08,
+    "full_voltage_lift_pu": 7.02095815187362e-14,
+    "retained_voltage_pu": 0.0,
+    "passive_YL_pu": 1.6768829733431826e-12
+  },
+  "network_invariants": [
+    {
+      "state_index": 1,
+      "parent41_RXB": [
+        0.0018,
+        0.0089,
+        0.021267472267637012
+      ],
+      "nominal_reactor_MVAr": {
+        "185": 607.2794681638038,
+        "195": 254.8171800800456
+      },
+      "BS_change_from_repaired_baseline_MVAr": 0.0,
+      "voltage_bounds_and_initial_PV_setpoints_unchanged": true,
+      "all_other_branch_fields_unchanged": true
+    },
+    {
+      "state_index": 2,
+      "parent41_RXB": [
+        0.0018,
+        0.0089,
+        0.021267472267637012
+      ],
+      "nominal_reactor_MVAr": {
+        "185": 607.2794681638038,
+        "195": 254.8171800800456
+      },
+      "BS_change_from_repaired_baseline_MVAr": 0.0,
+      "voltage_bounds_and_initial_PV_setpoints_unchanged": true,
+      "all_other_branch_fields_unchanged": true
+    },
+    {
+      "state_index": 3,
+      "parent41_RXB": [
+        0.0018,
+        0.0089,
+        0.021267472267637012
+      ],
+      "nominal_reactor_MVAr": {
+        "185": 607.2794681638038,
+        "195": 254.8171800800456
+      },
+      "BS_change_from_repaired_baseline_MVAr": 0.0,
+      "voltage_bounds_and_initial_PV_setpoints_unchanged": true,
+      "all_other_branch_fields_unchanged": true
+    },
+    {
+      "state_index": 4,
+      "parent41_RXB": [
+        0.0018,
+        0.0089,
+        0.021267472267637012
+      ],
+      "nominal_reactor_MVAr": {
+        "185": 607.2794681638038,
+        "195": 254.8171800800456
+      },
+      "BS_change_from_repaired_baseline_MVAr": 0.0,
+      "voltage_bounds_and_initial_PV_setpoints_unchanged": true,
+      "all_other_branch_fields_unchanged": true
+    }
+  ],
+  "paired_parent41_loss_model_MW": {
+    "old_mean": 2.3649779642364996,
+    "new_mean": 2.3562069295888457,
+    "mean_reduction_percent": 0.37087172820595704
+  },
+  "candidate_parent41_mean_loss_model_MW": 2.3562069295888457,
+  "candidate_parent41_hardware_current_exceedance_hours": 2712,
+  "previous_parent41_RXB_and_parent185195_compensation_preserved": true,
+  "previous_target_voltage_limits_pass_all_candidate_qualified_hours": true,
+  "target_voltage": {
+    "185": {
+      "min_VM": 1.019999999999999,
+      "max_VM": 1.0393892710525465,
+      "violation_hours": 0
+    },
+    "195": {
+      "min_VM": 1.0065659723836624,
+      "max_VM": 1.0469867120878924,
+      "violation_hours": 0
+    }
+  },
+  "remaining_global_limits": {
+    "overvoltage_hours": 8651,
+    "undervoltage_hours": 599,
+    "Q_violation_hours": 8651,
+    "S_violation_hours": 8651,
+    "branch_MVA_violation_hours": 4793,
+    "full_operating_qualified_hours": 0,
+    "minimum_VM": 0.8412258860302456,
+    "maximum_VM": 1.0760982356538613
+  },
+  "limitations": [
+    "Research-model repair, not installed-asset certification or historical dispatch validation.",
+    "Thermal DLR depends on weather and conductor temperature; this readback checks current bases, material-loss identity and the preserved 2000A parent41 apparatus ceiling, not a new annual thermal solve.",
+    "Physical P32 meter membership and conditional source numeric-as-MW interpretation remain unchanged and unverified.",
+    "Targeted voltage repairs do not imply whole-network operating feasibility."
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_axes.mat",
+      "sha256": "1e4c9a9fdf55180a9adc6f5de2b8dc6f83dcb839037ddec229798a4f0c83c056"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_network.mat",
+      "sha256": "e8cee6440b9b1688893eb1374f10e86a1862d299dd156e79481eaebdb79ce799"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "3297f564d35b7cc1d132eeaa4d1f4054ecc49681b67478b957d6ca5752191245"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/physics/parent41_parameters.json",
+      "sha256": "0405ad77f50770eba7f984badfacb16ecaf300c75fb2d6b811a550cbe831174a"
+    },
+    {
+      "path": "scripts/nygrid_2025_moses_repair/validation/review_annual_physics.py",
+      "sha256": "d747c0a804369e8e2b39673bd77b604bad842c635e5b91ed684cc08cb27a330c"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_01.mat",
+      "sha256": "235060bbdbd6aa1146c463da2602da65c64aeb80e0dcf20042ce0bf41957cd26"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_01_receipt.json",
+      "sha256": "c786694a111acabba76d3d4051e2b3e4eae89015a2287d030c7c78ec3bac8722"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_01.mat",
+      "sha256": "bb1d6805854c7f10ab7cc45b7bcd4b0926ba168b9611a5a13a69405555b27cbb"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_02.mat",
+      "sha256": "6545363fae3a6c1e16a463c8b09ab8f91bb562e42f9db6c63952d704d50cca4f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_02_receipt.json",
+      "sha256": "eda34e7723c9b74120960117d52a10bdb966ce6257ae9d22a1141534a3473c10"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_02.mat",
+      "sha256": "8249c8930cf268cf437f27f252e4bcf63e63ff3bcdd398df6300626b3012216d"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_03.mat",
+      "sha256": "7b93be2424f1fba2b21bf92a484a60cbb6227e8f47a07960901670d00171b7e7"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_03_receipt.json",
+      "sha256": "d1e4e496ea239e2ecd21382f3922c54c657c166ba600a3a01c53b508a55865ab"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_03.mat",
+      "sha256": "0a4600c1a5ae453a9bbb68b615a5ae0358278923e127fd0d23e0a420925702f4"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_04.mat",
+      "sha256": "3307cce53ccbdd008eeeb36d19ff6abde6ee5d6221b0381c8eede1f5a5a77d9e"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_04_receipt.json",
+      "sha256": "7ac5cf41305d5ac3366ed2a38fcb0c980b9021b3df8f074cbad344314cd4ab0c"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_04.mat",
+      "sha256": "fe2585712dfaa9dce9497d67a362bba4189823d3a71968b8a0d70a687e70c9d2"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_05.mat",
+      "sha256": "28372f635ea2865ade07237cf48d8e6eed5144314baf927bce92aa6ff005e5da"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_05_receipt.json",
+      "sha256": "49c8b093fbad7a53790ec8a102951dde74b11e0bd9a92794d3077a6c3319e4db"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_05.mat",
+      "sha256": "df7920f5a55e42dd861f3aef58aa3af4711d5c9228a713aab56989bb0b19dc44"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_06.mat",
+      "sha256": "50be6dd999e465d66b80fca8db249c349f45f5d5076fb90ec53a2629095556ad"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_06_receipt.json",
+      "sha256": "2e88a394384c9cc0f1467365abdddbacd929d8422bee1df1bd4cb2ac2634d6db"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_06.mat",
+      "sha256": "45ac14b19ba1dd5c1bfc65a4ed89d27189cc5a54fe4c4f13a4fa0b7b869406ae"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_07.mat",
+      "sha256": "93ee6ae056ceea2539000c22ddca99c5e9458c8e615f7985aac8e5e884722532"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_07_receipt.json",
+      "sha256": "a29da4f2f29577262a0a78d3de9f277ede29185216bcb524de27475983bda5d4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_07.mat",
+      "sha256": "f2f5bbf9de3c670096d7c8c90adca1cec3e556edadb7ee4feb00c783af20057a"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_08.mat",
+      "sha256": "06c82cd080fba654a6754b1449059e7024a4e3c26b0ee6d5d2709f3c73a813ca"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_08_receipt.json",
+      "sha256": "3e43a476f5655b2ec1cbdcf60cc8e9bac1b68bbbb7517bf07d920cecf47d245b"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_08.mat",
+      "sha256": "7668f2d1b3a1bbc8623c9df984930e314aa2dd871b621afe738b24bb1d0374b7"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_09.mat",
+      "sha256": "52314266180b5f0c471f997efe855fdccb1a78a969800d959a3927e7329e90f4"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_09_receipt.json",
+      "sha256": "8e9d92f44f225e0fd7535ecc609934ce5e859eba30aad4a78c327c9da6acfef4"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_09.mat",
+      "sha256": "3a2554c0df79a5c767ef4c7f2925f133dcd2fd0734185c5ae8e544ad61660973"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_10.mat",
+      "sha256": "436383321d1f6bf164c076bad471fede640ca0fb7beec3595214201c38f02648"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_10_receipt.json",
+      "sha256": "4a0ad2a756328bfaccda09e8dd1fd5628b431ba8b88a6a6a8fd70c50ea434ba8"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_10.mat",
+      "sha256": "cd467cf41cc9987563540808b01bd2a56686f38433d9c4c6a44df598e8047247"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_11.mat",
+      "sha256": "525d187b03540dc11c4a0b0ceb8c7563fe99821e122e3f81d9bee38e6f84ce60"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_11_receipt.json",
+      "sha256": "cf263b8e9f2599a78256d11a9b91ed23d349c900f7335aa1ccfcb70220a0f644"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_11.mat",
+      "sha256": "fde7871db5143276b6e21863ff6d745d4e9e433604023323e7d8c3ae547b16c0"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_12.mat",
+      "sha256": "9cf3be88a219bd1963ca15744105fb869b095f81ef0f46b4e4d47732b8c21ca6"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/monthly/profile_PF_2025_12_receipt.json",
+      "sha256": "4a745e59b2a2f813bb449497df1704743fcb88cb6885531b1dfa3c3bbf937270"
+    },
+    {
+      "path": "output/nygrid_2025_physical_repair/annual/physical_repair_v1/monthly/profile_PF_2025_12.mat",
+      "sha256": "ed7de0a1c3acdbd99bd6b9ac5d1efe2f080b8203aeff2169c8992feb11c6f881"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/annual_receipt.json",
+      "sha256": "42292179c49ca8fd9b8b7f7eb1e2406713a1c675a7b6763b2726b9678051bc0d"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/hourly_physical_readback.csv",
+      "sha256": "9be84520a77a822c4896f86f0e99237eef0a7b4623655baa315240c290b40d27"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/paired_loss_comparison.csv",
+      "sha256": "93c8e6fda3a84161567cabc14a65f2d285d144a935b153ac249222ae67fcea42"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/target_parent_metrics.csv",
+      "sha256": "6ca74ef67f1708706f7c05aec2efb4407f29902f08fb82bd48c9bf6e2f272b40"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/interface_metrics.csv",
+      "sha256": "1b0177aaf262ad65112d91ad880fe64035a2703a73d0592cbedf70b4a3489799"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/validation/bus_voltage_readback.csv",
+      "sha256": "a2d7418d00d3a656584d5db25d76315e84afdeec990cc8becd69d9d330f7bcd7"
+    }
+  ]
+}

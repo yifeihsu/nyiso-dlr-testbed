@@ -1,0 +1,198 @@
+{
+  "passed": true,
+  "counts": {
+    "source_qualified": 8651,
+    "source_excluded": 109,
+    "old_qualified": 8494,
+    "revised_qualified": 8170,
+    "paired": 8170,
+    "new": 0,
+    "lost": 324,
+    "operating_qualified": 0,
+    "rejected": 481
+  },
+  "elapsed_seconds": 719.1048574,
+  "solver_exceptions": 0,
+  "source_tuple_provenance_verified": true,
+  "physical_parent224_impedance_validated": false,
+  "actual_zonal_losses_or_delivered_load_observed": false,
+  "internal_interface_fitting_used": false,
+  "failed_iteration_implies_global_infeasibility": false,
+  "failed_status_counts": {
+    "coupled_line_search_failed": 465,
+    "NY_delivered_load_domain_boundary": 16
+  },
+  "qualified_voltage_min_pu": 0.841225886030247,
+  "qualified_voltage_max_pu": 1.12000500790884,
+  "qualified_total_loss_mean_model_MW": 339.503441328107,
+  "qualified_total_loss_max_model_MW": 1024.65177943532,
+  "maximum_native_PG_change_model_MW": 1.8598145246073701e-10,
+  "maximum_NY_load_balance_error_model_MW": 4.54747350886464e-13,
+  "maximum_regional_import_error_model_MW": 9.06993591343053e-10,
+  "maximum_zonal_loss_fraction": 0.9545169691763596,
+  "qualified_hours_any_zone_loss_fraction_over25percent": 3131,
+  "representative_factorial_common_hours": 11,
+  "representative_factorial_means": {
+    "legacy_public_MW": 2909.2201120521236,
+    "impedance_only_public_MW": 2782.39145612619,
+    "loss_policy_only_public_MW": 2314.209188091579,
+    "combined_public_MW": 2124.259346168448,
+    "impedance_effect_from_legacy_public_MW": -126.82865592593326,
+    "loss_policy_effect_from_legacy_public_MW": -595.0109239605436,
+    "interaction_public_MW": -63.121185997200634,
+    "combined_effect_public_MW": -784.960765883678
+  },
+  "representative_factorial_is_not_annual_attribution": true,
+  "independent_maximum_errors": {
+    "branch_law_MVA": 3.039539846913767e-10,
+    "current_A": 1.389160786402499e-09,
+    "KCL_MVA": 1.0353038142030138e-08,
+    "loss_identity_MW": 3.8768988019910466e-13,
+    "passive_voltage_recovery_pu": 6.528000455957699e-14,
+    "NY_gross_MW": 9.094947017729282e-13,
+    "regional_import_MW": 9.065388439921662e-10,
+    "loss_budget_MW": 1.3642420526593924e-12,
+    "native_bus_PG_MW": 1.8599166651256382e-10,
+    "HQ_PG_MW": 0.0,
+    "external_P_bounds_MW": 0.0,
+    "external_loss_increment_MW": 1.3784529073745944e-12,
+    "served_load_shape_MW": 2.2737367544323206e-13,
+    "QD_ratio_MVAr": 5.684341886080802e-14,
+    "DC_schedule_MW": 0.0
+  },
+  "equivalent224_loss_ranges": {
+    "minimum_model_MW": 0.7859429869401637,
+    "mean_model_MW": 39.136466424438886,
+    "maximum_model_MW": 172.52731317081225,
+    "minimum_share_total_AC_loss": 0.0028320305772158516,
+    "mean_share_total_AC_loss": 0.11662313801120318,
+    "maximum_share_total_AC_loss": 0.317791636532879
+  },
+  "paired_annual_interfaces": [
+    {
+      "interface": "DYSINGER EAST",
+      "hours": 8170,
+      "old_WAPE_percent": 37.60778332612451,
+      "revised_WAPE_percent": 29.963813291686247,
+      "change_percentage_points": -7.643970034438265,
+      "old_bias_public_MW": -209.7824050483773,
+      "revised_bias_public_MW": 4.990789969398163
+    },
+    {
+      "interface": "WEST CENTRAL",
+      "hours": 8170,
+      "old_WAPE_percent": 58.5234424439493,
+      "revised_WAPE_percent": 45.85808760392107,
+      "change_percentage_points": -12.665354840028229,
+      "old_bias_public_MW": -218.0277971417515,
+      "revised_bias_public_MW": 2.293614246175742
+    },
+    {
+      "interface": "TOTAL EAST",
+      "hours": 8170,
+      "old_WAPE_percent": 14.461053812287233,
+      "revised_WAPE_percent": 14.695426068123677,
+      "change_percentage_points": 0.23437225583644405,
+      "old_bias_public_MW": 46.77232616143032,
+      "revised_bias_public_MW": -326.00357546476704
+    },
+    {
+      "interface": "MOSES SOUTH",
+      "hours": 8170,
+      "old_WAPE_percent": 23.178746410983965,
+      "revised_WAPE_percent": 22.94359860253754,
+      "change_percentage_points": -0.23514780844642402,
+      "old_bias_public_MW": -5.495977113391418,
+      "revised_bias_public_MW": 11.832741550488656
+    },
+    {
+      "interface": "CENTRAL EAST - VC",
+      "hours": 8170,
+      "old_WAPE_percent": 43.5042110625963,
+      "revised_WAPE_percent": 13.703768329560342,
+      "change_percentage_points": -29.800442733035958,
+      "old_bias_public_MW": 739.8723918687808,
+      "revised_bias_public_MW": 172.43266464312788
+    },
+    {
+      "interface": "UPNY CONED",
+      "hours": 8170,
+      "old_WAPE_percent": 7.549425742705923,
+      "revised_WAPE_percent": 7.562881773257351,
+      "change_percentage_points": 0.013456030551427745,
+      "old_bias_public_MW": 24.128142235812835,
+      "revised_bias_public_MW": -15.788771551885834
+    },
+    {
+      "interface": "SPR/DUN-SOUTH",
+      "hours": 8170,
+      "old_WAPE_percent": 8.87937416474068,
+      "revised_WAPE_percent": 9.176816455415125,
+      "change_percentage_points": 0.2974422906744447,
+      "old_bias_public_MW": -37.394609032504334,
+      "revised_bias_public_MW": -62.3959314642373
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/annual_loss_policy_receipt.json",
+      "sha256": "7e7ff61c77b430b113d2e4cd70c27ac211ef555f0715c8ba7dd8f4cc4cbcfd2f"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/scoring_receipt.json",
+      "sha256": "08ed03da7ea4ab29669e7214f19022987f61dc9e936abb1ee0ab6fa3525e942c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/public_interface_metrics.csv",
+      "sha256": "b3cd77cfd14ea1b0c7c7cd5ebcc4b453e1606976c3622556e8553994a581973a"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/NY_zonal_loss_accounting.csv",
+      "sha256": "56794ad2e379cd58d668cba9ea0f0788a5e779d1056976ef0f638f9d4267002b"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/annual/released_equivalent_boundary_consistent/annual_hour_quality.csv",
+      "sha256": "2a758cfe7ae15a05854a424d87cda4e5a43c0aa6752484ae641dfae307b7c5e5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/impedance_recommendation.json",
+      "sha256": "8fa3c727c8ffa1e6bdeaed6e63c4830a046e421d339e8c0787cb67abec212ae5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/actual_case_implementation_review.json",
+      "sha256": "3577bb12869b06a95b11c0c0340f155202dfb615c418b5f48f9608803d39cf1e"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/historical_definition_supplement.json",
+      "sha256": "28df3cc27c0c0d8a61fcc9795147120c3f2923184f0ffcce4b54c97c4ce3381c"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/pairs/simultaneous_representatives/pair_receipt.json",
+      "sha256": "5f3630c94318765d9c1f515a57bf406f5783540d979d036dbb10aff5eb2df9d5"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/jacobian/jacobian_receipt.json",
+      "sha256": "936849fd38a6f9a003511571749aa5e1e411e7375bcfeb1c98db92e06a9cec70"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/policy_contract/policy_contract_receipt.json",
+      "sha256": "895471861ac27e118c9a8bdd1b24c8dcce33f7e9cd07530921bad7f11475b07d"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_cohort.csv",
+      "sha256": "d62536ab7bc148d015e8fff773f835df40fc0ad53e8191b0297841af961c1778"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/impedance/released_equivalent_boundary_consistent_annual_arrays_independent_review.json",
+      "sha256": "b3fa164e2c2dcfd9a4519381a3393a864555eb8ca5991500bb45d6ea1214f3c9"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/factorial_receipt.json",
+      "sha256": "35e93ee9c7c00c7cd7b99bd0f78652959dc72b08f0a9d100e52ccbb5d7bec082"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/validation/representative_factorial/common_success_attribution.csv",
+      "sha256": "b885c9f2ab727f2fa51a55b12882b31672bd761fd1f93295af7561f687c81d2f"
+    }
+  ]
+}

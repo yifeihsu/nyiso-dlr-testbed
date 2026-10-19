@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-19T00:59:25.250736+00:00",
+  "checkout_commit": "5b1dd6eeb9fca2f5c10400741b3696731f16b592",
+  "source_years": [
+    2019,
+    2025
+  ],
+  "baseline": "Reproduced authors released57bus DC case with supplied2019inputs",
+  "baseline_operator": "authors_released_if_map",
+  "current_model": "moses_repair_v1",
+  "current_operator": "legacy_signed_literal_from",
+  "current_model_pointer_verified": true,
+  "cohorts": {
+    "year2019": 8760,
+    "year2025": 8651,
+    "excluded2025": 109
+  },
+  "power_units": "public scale MW",
+  "new_power_flow_run": false,
+  "model_or_deck_or_map_changed": false,
+  "definitions": {
+    "error": "predicted - observed; positive bias is numerical overprediction in the declared orientation",
+    "bias_MW": "mean(error)",
+    "MAE_MW": "mean(abs(error))",
+    "MSE_MW2": "mean(error squared)",
+    "RMSE_MW": "sqrt(mean(error squared))",
+    "error_SD_MW": "population standard deviation of error, ddof=0",
+    "median_AE_MW": "median absolute hourly error",
+    "p95_AE_MW": "95th percentile absolute hourly error, linear quantile; not a confidence bound",
+    "WAPE_percent": "100*sum(abs(error))/sum(abs(observed))",
+    "nRMSE_percent": "100*RMSE/mean(abs(observed)); not normalized by range or standard deviation",
+    "normalized_bias_percent": "100*bias/mean(abs(observed)); not hourly MPE",
+    "MAPE_nonzero_percent": "100*mean(abs(error)/abs(observed)) over exactly nonzero observations",
+    "MAPE_abs_actual_ge100_percent": "Same MAPE restricted to abs(observed)>=100MW, a fixed disclosed diagnostic threshold",
+    "sMAPE_percent": "mean(200*abs(error)/(abs(predicted)+abs(observed))); both-zero terms defined as zero",
+    "macro_equal_interface": "Arithmetic mean of the seven interface-specific metrics; each interface has equal weight",
+    "macro_quantiles": "Mean of seven interface-specific quantiles; not the quantile of pooled errors",
+    "pooled_interface_hours": "Metrics recomputed on all interface-hour observations; overlapping gates mean this is not statewide energy accuracy",
+    "average_absolute_interface_bias_MW": "mean across interfaces of abs(mean hourly error for that interface))",
+    "comparison_deltas": "delta_*_pp columns are percentage-point differences. Other delta columns use the stated physical units. relative_change_*_percent is100*(2025/2019-1)."
+  },
+  "verification": {
+    "source_fingerprints": 13,
+    "all_source_hashes_preserved": true,
+    "pinned_author_map_and_saved_annual_manifest_verified": true,
+    "current_arrays_scoring_receipt_verified": true,
+    "RMSE_squared_equals_bias_squared_plus_error_variance": true,
+    "maximum_discrepancy_against_saved_primary_metrics": 5.684341886080802e-14
+  },
+  "limitations": [
+    "Cross-year descriptive comparison; load, generation, controls, topology, physics and cohorts differ.",
+    "2019 uses prepared local-hour observations;2025 uses qualified physicalUTC hours. No harmonized same-input replay is claimed.",
+    "Physical P32 meter equivalence and unchanged interface definitions across years are not certified.",
+    "These metrics are recomputed from released outputs, not quoted from the paper, which used a different limit-normalized metric.",
+    "MAPE near zero can dominate an average. Coverage and a fixed100MW sensitivity are exported; WAPE is the primary relative-error summary.",
+    "Signed mean bias can cancel across hours and interfaces. Average absolute interface bias is provided separately.",
+    "Percentile errors describe tails; no independence assumption or statistical-significance claim is made.",
+    "Interface comparisons overlap electrically; pooled aggregates are descriptive benchmark statistics, not systemwide energy errors."
+  ],
+  "source_files": [
+    {
+      "path": "deliverables/CURRENT_NYGRID_MODEL.json",
+      "sha256": "1b5e96e603b182eef4619105daea9bc592e5390a64d17cbd8838993ee3908019",
+      "bytes": 3590
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/model/model_receipt.json",
+      "sha256": "1a5705124182449a8a1242212465ade10508f6268fb1c8b08f81eddc79ab20da",
+      "bytes": 136157
+    },
+    {
+      "path": "output/nygrid_2019/verification_manifest.json",
+      "sha256": "7c8195017078f4ee707be11f0dbf2a813575b146870f5f9cafad16c27a0d4127",
+      "bytes": 17618
+    },
+    {
+      "path": "output/nygrid_2019/upstream_manifest.json",
+      "sha256": "6ea267b07fa3fd0ca9c24f93b660b02ac4704b4a3bedf2b0fe34ce173cadd6da",
+      "bytes": 27842
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/updateOpCond.m",
+      "sha256": "12cd365b756612d46dc10f1ec5c9ff39a9b54f191b0c6db64e2d1aa990794520",
+      "bytes": 20110
+    },
+    {
+      "path": "output/nygrid_2019/annual_1.mat",
+      "sha256": "314d817570b4edfd60b0970f25aee8d126bffd46aa70ceba8ee3bde10b05f274",
+      "bytes": 5569790
+    },
+    {
+      "path": "output/nygrid_2019/annual_2.mat",
+      "sha256": "e72ddd82be691ad4a46cd74c1316e450763944f259cce95e071b972b986383c6",
+      "bytes": 5545875
+    },
+    {
+      "path": "output/nygrid_2019/annual_3.mat",
+      "sha256": "47375d88c36e2a3af33a85eeed461396186404fe9c7486ff43ed4aaec2988aab",
+      "bytes": 5767795
+    },
+    {
+      "path": "output/nygrid_2019/annual_4.mat",
+      "sha256": "795f57ce1ee3f483484da4f98461a9a47eaf15ca573a1dadca3bd3804a5f7431",
+      "bytes": 5461165
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/comparison_arrays.npz",
+      "sha256": "0febf97e7dcf00fb4ab8fa5a6761e880cc03eeca91a38e16a6d710362c31d079",
+      "bytes": 6391233
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/scoring_receipt.json",
+      "sha256": "3dc8fb5fb58db73e6add7b17cc76cbb1c813436d1c009783ac2da08e90435d25",
+      "bytes": 6227
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/annual/moses_repair_v1/comparison/public_interface_metrics.csv",
+      "sha256": "dafb3a163008d6d7b9ebbbbb3b91bb5681beaef036dfa8943b83920ae66ac308",
+      "bytes": 261282
+    },
+    {
+      "path": "output/nygrid_released_2019_comparison/independent/released_2019_recomputed_metrics.csv",
+      "sha256": "e72d9292f3bb9982ef56066774843106f744eea49b08868350afc41682133f7f",
+      "bytes": 5966
+    }
+  ],
+  "output_files": [
+    {
+      "path": "output/nygrid_2019_2025_error_metrics/per_interface_metrics.csv",
+      "sha256": "75860e56fe9a0c578c0b73bbd6c6400f96f3441e0d4393689248c638bf5c7e78",
+      "bytes": 4804
+    },
+    {
+      "path": "output/nygrid_2019_2025_error_metrics/monthly_metrics.csv",
+      "sha256": "23526608fb1500d68a152352a08c2c1004c27c2af5729eda7ef2e92fc54e33c9",
+      "bytes": 52954
+    },
+    {
+      "path": "output/nygrid_2019_2025_error_metrics/comparison.csv",
+      "sha256": "fdee58edd0d61537ab3453ae0e9e771b0062a3f42a4925db9a0715bc40b76d1a",
+      "bytes": 6501
+    },
+    {
+      "path": "output/nygrid_2019_2025_error_metrics/aggregate_metrics.csv",
+      "sha256": "a9c551c2f6666c0409e74dfb19feac1b7d8fdd43b8deb80a3d1f38279be19fd8",
+      "bytes": 1877
+    }
+  ],
+  "script": {
+    "path": "scripts/nygrid_2019_2025_error_metrics/compare_metrics.py",
+    "sha256": "a4f3efc19f7cd0808ab0e5ccc6ea20a2cd99237d32e4ae448e6d2670c8c51ebb",
+    "bytes": 15258
+  }
+}

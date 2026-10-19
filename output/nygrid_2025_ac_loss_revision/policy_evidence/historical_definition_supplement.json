@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T03:27:00.030417+00:00",
+  "role": "Historical source-definition supplement; policy and comparison criteria unchanged",
+  "publisher": "New York Independent System Operator",
+  "document": "Market Participants User's Guide",
+  "version": "16.0",
+  "effective_date": "2025-05-29",
+  "issued": "May 2025",
+  "original_official_url": "https://www.nyiso.com/documents/20142/3625950/mpug.pdf/c6ca83ca-ee6b-e507-4580-0bf76cd1da1b?t=1718726270377",
+  "archived_official_url": "https://web.archive.org/web/20250806051858id_/https://www.nyiso.com/documents/20142/3625950/mpug.pdf/c6ca83ca-ee6b-e507-4580-0bf76cd1da1b?t=1718726270377",
+  "archive_capture_timestamp": "2025-08-06T05:18:58Z",
+  "archive_original_last_modified": "Thu, 29 May 2025 18:46:14 GMT",
+  "archive_CDX_SHA1_base32": "5G62PJZSKHDGAEEGOJOIYDME3RC2U2OV",
+  "full_PDF_sha256": "ac8483745aa21f7a7c632d1da470ffca9e8e4e28a87a7ab24e5ee4fbdea7ff75",
+  "complete_PDF_eof_and_parser_verified": true,
+  "title_and_definition_pages_visually_verified": true,
+  "source_sections": [
+    {
+      "section": "5.6.2 Actual Load",
+      "printed_page": 56,
+      "PDF_page_1based": 90,
+      "primary_fact": "Actual zonal load is calculated using generation and net interchange from telemetry."
+    },
+    {
+      "section": "Integrated Real-Time Actual Load",
+      "printed_page": 57,
+      "PDF_page_1based": 91,
+      "primary_fact": "The integrated series is a time-weighted hourly value published after the hour."
+    }
+  ],
+  "same_actual_and_integrated_definition_text_in_current_2026_MPG": true,
+  "historical_2025_primary_definition_now_verified": true,
+  "scope_of_temporal_caveat_reduction": "The actual-load balance definition now has a verified2025 primary-document snapshot; this does not establish that every 2025 manual revision was examined.",
+  "retained_scientific_limits": [
+    "No observed2025 zonal transmission-loss values or exact physical meter terminals are supplied by this definition.",
+    "Half-zone and whole-border loss ownership remain declared model accounting assumptions.",
+    "The supplemental document does not change frozen timestamp interpretation, scaling, operating profiles, or interface operators.",
+    "The transmission-dispatch forecast rule and EIA instructions previously archived remain2026 sources; no older versions of those were verified here."
+  ],
+  "unsuccessful_capture": {
+    "archive_capture_timestamp": "2025-05-13T10:57:18Z",
+    "receipt": {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_MPG_archived_20250513.receipt.json",
+      "sha256": "8a75ef954495a1f5ec49a97c26b7d1664d096b7849a631440f8c08f73924f985",
+      "bytes": 1054
+    },
+    "status": "Archived PDF payload truncated at5242880bytes; excluded from definition evidence"
+  },
+  "sealed_policy_and_comparison_contract_not_rewritten": true,
+  "sealed_policy": {
+    "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/loss_accounting_policy_contract.json",
+    "sha256": "b05ed3956c6ab606af6b9d8985b81d7c78f2fb76726da461f2b007a9b33dce23",
+    "bytes": 17643
+  },
+  "sealed_comparison": {
+    "path": "output/nygrid_2025_ac_loss_revision/comparison/comparison_contract.json",
+    "sha256": "6a7b0f5171a9b9e4dbfcf2c5889c7625c80ce92c85c61778c3fdb131ac4988a7",
+    "bytes": 11427
+  },
+  "sources": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_MPG_archived_20250806.pdf",
+      "sha256": "ac8483745aa21f7a7c632d1da470ffca9e8e4e28a87a7ab24e5ee4fbdea7ff75",
+      "bytes": 6843019
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_MPG_archived_20250806.txt",
+      "sha256": "50bda912ece6289934a2c12fc3311a85f447264f1e8718a5e0caad273054f898",
+      "bytes": 626330
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_MPG_archived_20250806.receipt.json",
+      "sha256": "525f2470085c15d181e3c8ae33569647bc1296d44f9f333fc6552fe65c6b4591",
+      "bytes": 908
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_Market_Participants_User_Guide.txt",
+      "sha256": "974806620beb222dab9ea924abf9581cfb617a1d9b36842e4e75f81aedbc1a7e",
+      "bytes": 634159
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_MPG_2025_version_pdf2.png",
+      "sha256": "e91292560b9e137366e9d6597c07f8fb5515c25c7a8c411914a24da4c39b785a",
+      "bytes": 81173
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_MPG_2025_ActualLoad_pdf90.png",
+      "sha256": "f7f9d7e398e0194ef37c47b8454a5f3f27bcfe26c3b043b271fc43e9717992db",
+      "bytes": 114105
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/policy_evidence/sources/NYISO_MPG_2025_IntegratedLoad_pdf91.png",
+      "sha256": "fcd9e26f3a5c88475028fc82603a2f17706d358f859c67b68b88c7007380cdb8",
+      "bytes": 142706
+    }
+  ],
+  "source_code": {
+    "path": "scripts/nygrid_2025_ac_loss_revision/policy_evidence/audit_historical_definition.py",
+    "sha256": "bc5a6384ddf17cb8c36b74a233bbf45deb739d80e9ae34fb9aa8cf4c615b9418",
+    "bytes": 5697
+  }
+}

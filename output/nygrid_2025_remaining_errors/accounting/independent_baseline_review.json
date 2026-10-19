@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T06:13:40.731527+00:00",
+  "scope": "Seven primary annual metrics, western residual arithmetic, fixed same-state lag cohorts and aggregation semantics",
+  "qualified_hours": 8170,
+  "annual_interface_count": 7,
+  "max_primary_metric_difference": 2.842170943040401e-14,
+  "western_error_correlation": 0.9982557071224563,
+  "incremental_B_MAE_public_MW": 14.393481147407966,
+  "incremental_B_bias_WC_minus_DY_public_MW": -2.6971757232224176,
+  "baseline_pair_difference_sign": "Baseline pair_stats uses DY minus WC; incremental B uses WC minus DY. MAE is identical and signed bias reverses.",
+  "strict_lag_cohort_hours": 7936,
+  "qualified_center_lag_cohort_hours": 8042,
+  "strict_lag_metric_rows_checked": 21,
+  "max_strict_lag_metric_difference": 5.684341886080802e-14,
+  "lag_semantics": "model(t) against observation(t+shift), -1/0/+1 UTC hours, all using the identical qualified same-state center cohort",
+  "aggregation_rows_checked": 24,
+  "max_aggregation_metric_difference": 1.3926637620897964e-12,
+  "aggregation_scope": "All8170positions retained; qualified hour sums within local calendar bins; cancellation is explicit and not improved hourly accuracy",
+  "new_model_run_or_fit": false,
+  "baseline_outputs_modified": false,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/annual_metrics.csv",
+      "sha256": "94eb9eabb3e46c0268f1557282e264fb1cb15b5d0e3df80c8ebd71942e0999d9"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/baseline_summary.json",
+      "sha256": "ffc458bdcdfa55534bed22589346c780e72977a7adb8ba6b590ec3d383455233"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/lag_cohorts.csv",
+      "sha256": "86777ab8e24e6105eee065d27c452fbe3ee2d3f7316e3eaedba8d5265ac744dd"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/lag_diagnostics.csv",
+      "sha256": "36035f7f88e50c8ad85feb49d2ed37c7462888ada747276b4e81c62846e255ed"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/time_aggregation_metrics.csv",
+      "sha256": "3105bd2e8969dd24b9115463d9994147af9eacef69ea787b60d912ebab7dc28e"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/accounting/review_baseline.py",
+      "sha256": "424b4dba1f043a03af1f6474898058fe321055d2bb5001e6613458905a90a25c"
+    }
+  ]
+}

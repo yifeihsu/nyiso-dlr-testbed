@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "author-release-identity",
+      "title": "Authors\u2019 released model and 2019 inputs",
+      "queries": [
+        {
+          "id": "source-identity-check",
+          "reportingPeriod": "Authors\u2019 2019 model year; checks performed October 15, 2026",
+          "source": {
+            "label": "Pinned author release and fresh source checks",
+            "files": [
+              {
+                "label": "upstream_manifest.json"
+              },
+              {
+                "label": "fresh_author_release_checks.csv"
+              },
+              {
+                "label": "fresh_author_release_receipt.json"
+              },
+              {
+                "label": "independent_released_2019_review.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Reference model",
+                "definition": "The reference is the authors\u2019 released 57-bus DC model, 94 AC branches, 271 generator records and four DC records, using their supplied 2019 inputs."
+              }
+            ],
+            "caveats": [
+              "The runtime uses MATLAB R2026a, MATPOWER 8.1 legacy core and a pinned historical reduction toolbox; the exact software revision used for the published figure is unknown."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "Identity and numerical checks",
+                "detail": "All 73 author files match SHA-256 and Git-blob identities. Twelve fresh runs of unmodified author source match saved inputs and solutions exactly; all 8760 verified annual states are rescored. No reconstructed 140-bus case or 2025 inputs enter the 2019 runs."
+              }
+            ]
+          },
+          "rows": [
+            {
+              "annual_hours": 8760,
+              "fresh_source_check_hours": 12,
+              "maximum_input_or_solution_difference": 0
+            }
+          ],
+          "columns": [
+            {
+              "field": "annual_hours",
+              "label": "Annual hours rescored"
+            },
+            {
+              "field": "fresh_source_check_hours",
+              "label": "Fresh source checks"
+            },
+            {
+              "field": "maximum_input_or_solution_difference",
+              "label": "Maximum difference"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "released-model-errors",
+      "title": "Two readouts of the same unchanged released model",
+      "queries": [
+        {
+          "id": "recomputed-comparison",
+          "reportingPeriod": "2019 released model versus separate current 2025 model",
+          "source": {
+            "label": "Released-model branch-flow aggregation",
+            "files": [
+              {
+                "label": "released_2019_recomputed_metrics.csv"
+              },
+              {
+                "label": "released_operator_members.csv"
+              },
+              {
+                "label": "released2019_vs_othermodel2025.csv"
+              },
+              {
+                "label": "flow4Plot.m"
+              },
+              {
+                "label": "updateOpCond.m"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "WAPE",
+                "definition": "WAPE divides total absolute flow mismatch by total absolute observed flow. Both 2019 readouts use the same unchanged power-flow solutions."
+              }
+            ],
+            "filters": [
+              "Authors\u2019 supplied 2019 inputs and all 8760 prepared local hours",
+              "Current model shown only as a separate 2025 comparison with 8651 eligible physical hours"
+            ],
+            "caveats": [
+              "The plotting helper and the authors\u2019 own interface map disagree for five interfaces. Reading the supplied map changes the measurement, not the network or operating inputs.",
+              "The 2019 columns are recomputed release results, not numbers quoted from a published WAPE table.",
+              "This remains a cross-year, different-input comparison; it is not a controlled model-improvement experiment.",
+              "Neither literal plotting nor the interface-map result is claimed to reproduce the published Figure 5 exactly."
+            ]
+          },
+          "rows": [
+            {
+              "interface": "Dysinger East",
+              "strict_literal_2019_WAPE_percent": 57.543518980723405,
+              "authors_ifmap_2019_WAPE_percent": 22.49432254036783,
+              "other_model_2025_WAPE_percent": 30.941384678184928
+            },
+            {
+              "interface": "West Central",
+              "strict_literal_2019_WAPE_percent": 409.85120300348586,
+              "authors_ifmap_2019_WAPE_percent": 46.80580431702501,
+              "other_model_2025_WAPE_percent": 46.06707912947254
+            },
+            {
+              "interface": "Total East",
+              "strict_literal_2019_WAPE_percent": 7.235275449190192,
+              "authors_ifmap_2019_WAPE_percent": 7.235275449190192,
+              "other_model_2025_WAPE_percent": 15.062786822704751
+            },
+            {
+              "interface": "Moses South",
+              "strict_literal_2019_WAPE_percent": 86.42761528708073,
+              "authors_ifmap_2019_WAPE_percent": 8.992934954618775,
+              "other_model_2025_WAPE_percent": 22.00761741451924
+            },
+            {
+              "interface": "Central East",
+              "strict_literal_2019_WAPE_percent": 9.629928822516236,
+              "authors_ifmap_2019_WAPE_percent": 9.629928822516236,
+              "other_model_2025_WAPE_percent": 13.849212530617868
+            },
+            {
+              "interface": "UpNY-Coned",
+              "strict_literal_2019_WAPE_percent": 157.0553122531949,
+              "authors_ifmap_2019_WAPE_percent": 9.912028782177918,
+              "other_model_2025_WAPE_percent": 7.844144783669234
+            },
+            {
+              "interface": "Dun/SPR-South",
+              "strict_literal_2019_WAPE_percent": 19.063770240477968,
+              "authors_ifmap_2019_WAPE_percent": 10.886460038712718,
+              "other_model_2025_WAPE_percent": 9.59150480637178
+            }
+          ],
+          "columns": [
+            {
+              "field": "interface",
+              "label": "Interface"
+            },
+            {
+              "field": "strict_literal_2019_WAPE_percent",
+              "label": "Literal plotting WAPE (%)"
+            },
+            {
+              "field": "authors_ifmap_2019_WAPE_percent",
+              "label": "Authors\u2019 map WAPE (%)"
+            },
+            {
+              "field": "other_model_2025_WAPE_percent",
+              "label": "Current 2025 WAPE (%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

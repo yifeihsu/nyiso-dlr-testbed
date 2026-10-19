@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "source_derived_connectivity": true,
+  "baseline_bus_count": 140,
+  "baseline_branch_count": 225,
+  "baseline_definition": "The 140 original_parent bus records and first 225 PARENT branch records in the paper-derived structural-parent registry. Current refinement statuses ignored for the pre-refinement structural view.",
+  "baseline_name_source": "output/nygrid_2025_downstate/network/bus_register.csv:model_name",
+  "baseline_source_correction": "Uses the paper-derived 225-row parent, not the separate ENLITEN 233-row NPCC.m source. The nine selected collapsed endpoint pairs are unchanged.",
+  "baseline_selected_endpoint_pairs_unchanged": true,
+  "source_files": [
+    {
+      "path": "output/nygrid_2025_downstate/network/branch_register.csv",
+      "sha256": "6a574d53b40eb2bf08dba851757a5d56ab6b4d89377b2a33e5d6319d5cd2a18f"
+    },
+    {
+      "path": "output/nygrid_2025_moses_repair/delivery/map/geography_data.json",
+      "sha256": "2f9ee668e8c01b29996a14587769acb46757bd02e73508b53a1fac4467e96e75"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/bus_register.csv",
+      "sha256": "bfab44648f3d2052e79a2a8db7c7e7390874f6bace1c575f6c94868206127f27"
+    }
+  ],
+  "baseline_selected_bus_ids": [
+    35,
+    73,
+    74,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82
+  ],
+  "current_selected_bus_ids": [
+    35,
+    73,
+    74,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    10079,
+    10547,
+    10557,
+    10560,
+    10561,
+    10567,
+    10588,
+    10589,
+    10593,
+    10594,
+    10595,
+    10596,
+    10597,
+    10598,
+    10600,
+    10601,
+    10620,
+    10626,
+    10628,
+    10774,
+    10858,
+    10902,
+    10995,
+    10996,
+    11129,
+    11130,
+    11132,
+    11134,
+    11136,
+    11493,
+    11497,
+    11501,
+    11502,
+    11503,
+    11506,
+    11529,
+    11532,
+    20001,
+    20002,
+    20003,
+    20005,
+    20007,
+    20008,
+    20009,
+    20010,
+    20011,
+    20012,
+    20013,
+    20014,
+    21001
+  ],
+  "baseline_selected_branches": 9,
+  "current_selected_active_parent_records": 120,
+  "baseline_drawn_unique_pairs": 9,
+  "current_drawn_unique_pairs": 59,
+  "current_group_count": 51,
+  "co_located_voltage_and_regulated_ports_collapsed": true,
+  "current_self_connections_not_drawn": [
+    "PERFORM:1152",
+    "PERFORM:1153",
+    "PERFORM:1216",
+    "PERFORM:1217",
+    "PERFORM:1234",
+    "PERFORM:1235",
+    "PERFORM:1238",
+    "PERFORM:1239",
+    "PERFORM:1240",
+    "PERFORM:1251",
+    "PERFORM:1252",
+    "PERFORM:1340",
+    "PERFORM:1990",
+    "PERFORM:1991",
+    "PERFORM:2007",
+    "PERFORM:2008",
+    "PERFORM:2009",
+    "DOVER:PAR:T398_A",
+    "DOVER:PAR:T398_B"
+  ],
+  "all_selected_current_edges_active_in": "post_dover",
+  "note": "Connectivity excerpt, not complete G-K electrical network. Parallel circuit rows merged visually; all records and endpoint IDs retained in CSV. Voltage ports of same station share a display node. Includes 8 added retained ports. Original aggregate proxy nodes remain schematic.",
+  "geography_policy": "Manual schematic positions only. Source coordinates exported for audit but not used as display coordinates.",
+  "electrical_policy": "No impedances fabricated, inferred, plotted, or altered. Source parent endpoint adjacency only; no Yred coupling plotted.",
+  "qualifications": [
+    "Added relative to original model does not imply built after 2019.",
+    "Current source contains engineering equivalents and assumptions; diagram is not an installed-asset map.",
+    "Numerical section buses omitted.",
+    "Grey original nodes are preserved; inactive superseded aggregate branches omitted in current panel."
+  ],
+  "outputs": [
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/figures/downstate_comparison.tex",
+      "sha256": "f587e221abe45e4f494a26f6bf10b75b3393f24311d37214556ec7de7eb0b9f1"
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/figures/data/downstate_current_edges.csv",
+      "sha256": "20625a43d09e656225cc331095fcf6793d51fbf29774f8b8b9c1aeef33095cd4"
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/figures/data/downstate_nodes.csv",
+      "sha256": "082081c121f3f66bf501b51d9e92975fa6611e68aedd60cf62592730f0d50435"
+    },
+    {
+      "path": "output/pdf/nygrid_weekly_2026-10-15/figures/data/downstate_original_edges.csv",
+      "sha256": "732c455247c60d8053a8c2ea5af81fd99e5088431a9bb3f61ceaf69d801add79"
+    }
+  ]
+}

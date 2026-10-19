@@ -1,0 +1,43 @@
+NYGRID 2025 DLR RESEARCH HANDOFF
+Edition: fixture
+Model snapshot: 8188cbec1172219a0414881121ad042b405a4044
+Prepared: 2026-10-13
+
+1. Read NYGRID_2025_DLR_HANDOFF.docx (or the matching Markdown file).
+2. In MATLAB, change directory to this extracted package root, then run:
+
+   addpath(fullfile(pwd,'scripts','nygrid_2025_dlr_handoff','runtime'));
+   env = setup_nygrid_2025_handoff(pwd);
+   check = smoke_nygrid_2025_handoff(fullfile(pwd,'runtime_results'));
+
+3. Run a current hour:
+
+   [r,audit,recovered,allocation] = run_nygrid_2025_loss_consistent_acpf(8508);
+
+The accounting and current-recovery gates can pass while the physical operating
+gate fails. No annual hour is fully V/Q/capability-qualified. This is a synthetic
+research model. The new thermal screen is one-way; it is not joint electrothermal
+optimization. The older run_nygrid_2025_ac_dlr function uses a separate model.
+
+MATLAB with JVM is required and is not bundled. MATPOWER 8.1 code and notices are
+under vendor/matpower8.1. Use the recorded version for reproducibility. Python
+3.9+ suffices for the standalone integrity verifier; scientific re-scoring has
+additional dependencies documented in its handoff wrapper.
+
+Verify every sealed file with:
+   python scripts/nygrid_2025_dlr_handoff/verify_package.py --root .
+
+The runtime edition supports default dated PF and filtered thermal screening.
+The research edition additionally includes the full selected historical corpus,
+raw-source captures, annual arrays, alternate cases and evidence. Original raw
+source rebuilding may require network services and optional tools. Historical
+Git-dependent finalizers are preserved as provenance; use this package verifier
+and the portable handoff scoring wrapper after relocation.
+
+PACKAGE_MANIFEST.json records per-file hashes and SOURCE_PATH_ALIASES.json maps
+selected historical references without changing their old receipts. New work
+belongs in runtime_results or a new scenario namespace. Do not overwrite frozen
+inputs or mistake earlier model-family results for current qualification.
+
+The package grants no new blanket license. Preserve source attribution and all
+third-party notices; MATLAB and optional external solvers are not redistributed.

@@ -1,0 +1,802 @@
+{
+  "passed": true,
+  "dataset_type": "operator",
+  "created_utc": "2026-10-12T01:49:13.894785+00:00",
+  "status": "source_definitions_frozen_and_baseline_invariance_verified",
+  "qualified_hours": 8651,
+  "operators_path": "output/nygrid_2025_western_counterfactuals/mapping/operators.npz",
+  "operators_sha256": "6da5ac3cead2bc1bca474297e709406eb9dfb98d82d361bec5e2e76aa4f60edc",
+  "mapping_plan_path": "output/nygrid_2025_western_counterfactuals/mapping/mapping_plan.json",
+  "mapping_plan_sha256": "642c511ede3148048f9c425b52239da9fe168e06daca2ce5d67ee4e9aee8db18",
+  "scenario_definitions": [
+    {
+      "name": "baseline_corrected_full191_operator",
+      "key": "baseline_corrected_full191_operator",
+      "dc_key": "baseline_corrected_full191_operator_dc",
+      "label": "Preferred baseline operator reconstructed on full191",
+      "is_diagnostic_only": false,
+      "source_basis": "Current recovery operator; Western rows exactly preserve corrected released2019 interface maps"
+    },
+    {
+      "name": "independent_zone_cuts",
+      "key": "independent_zone_cuts",
+      "dc_key": "independent_zone_cuts_dc",
+      "label": "Independent accounting-zone A/A+B cuts with external-border removal",
+      "is_diagnostic_only": true,
+      "source_basis": "Bus-zone membership plus complete active AC and6DC boundary enumeration; exact conservation null control"
+    },
+    {
+      "name": "literal_released_plot_negative_control",
+      "key": "literal_released_plot_negative_control",
+      "dc_key": "literal_released_plot_negative_control_dc",
+      "label": "Known-bug released Western plotting formulas; negative control",
+      "is_diagnostic_only": true,
+      "source_basis": "Original57-bus flow4Plot Western formulas remapped by unique exact electrical-row lineage; not a correction candidate"
+    }
+  ],
+  "operator_shape": [
+    7,
+    410
+  ],
+  "DC_operator_shape": [
+    7,
+    6
+  ],
+  "state_invariant": true,
+  "full191_branch_count": 410,
+  "full191_bus_count": 191,
+  "slim_bus_count": 148,
+  "states": [
+    "refined_2025_pre_may_case",
+    "refined_2025_may21_case",
+    "refined_2025_may30_case",
+    "refined_2025_case"
+  ],
+  "no_internal_observation_files_read": true,
+  "no_parameter_or_operator_fit": true,
+  "no_PF_or_PG_write": true,
+  "no_network_solve": true,
+  "negative_control_is_known_wrong": true,
+  "complete_source_backed_physical_alternatives": 0,
+  "physical_coverage": {
+    "official2019_Dysinger_member_entries": 10,
+    "dated2014_WestCentral_member_entries": 14,
+    "certified_complete_full191_physical_alternatives": 0,
+    "exactly_crosswalked_physical_member_entries": 0,
+    "unexecutable_physical_scenarios": [
+      {
+        "name": "physical2019_Dysinger",
+        "reason": "No complete circuit/terminal lineage into aggregate full191 network"
+      },
+      {
+        "name": "physical2014_WestCentral",
+        "reason": "Historical fourteen source entries include compound low-voltage terms with missing retained circuits and some unspecified meter terminals"
+      },
+      {
+        "name": "physical2025_western_gates",
+        "reason": "Complete2025 as-built member/terminal definitions and exact lineage are not established"
+      }
+    ],
+    "missing_evidence": [
+      "Circuit/PTID plus meter-terminal orientation mapped to each retained or recovered branch",
+      "Treatment of compound/low-voltage physical members and shared A-C paths",
+      "Complete2025 membership including any post2019 station/PAR reconfiguration"
+    ],
+    "no_guessed_alias_or_zero_filled_operator": true,
+    "scope": "No executable physical alternative is emitted; zero certified coverage means unknown mapping, not zero physical flow."
+  },
+  "exact_Western_baseline_members": [
+    [
+      -58,
+      61,
+      69,
+      212
+    ],
+    [
+      -54,
+      -55,
+      59,
+      72
+    ]
+  ],
+  "exact_literal_Western_negative_members": [
+    [
+      -57,
+      59,
+      60,
+      68
+    ],
+    [
+      -53,
+      -54,
+      58,
+      216
+    ]
+  ],
+  "invariance_scope": "Within-zone changes preserving net injections and external boundary components cannot alter these complete represented western cuts. Physical flowgate mismatch is not identified by this equality.",
+  "checks": [
+    {
+      "check": "fresh_operator_outputs",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "matched_design8651",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_western_audit/dispatch/all_boundary_dispatch_receipt.json",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_western_audit/replay/provenance.json",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_par_controls/controls/inputs.npz",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_slim/network/network_cases.mat",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_output/nygrid_2025_downstate/network/network_cases.mat",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_scripts/nygrid_2025_western_counterfactuals/common.py",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "design_dependency_scripts/nygrid_2025_western_counterfactuals/freeze_design.py",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "accounting_zone_labels",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "literal_formula_source_exact",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "2019_primary_membership_text",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "physical_source_member_entry_counts",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "no_added_western_nodes_can_supply_missing_terminals",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "unique_interface_members_1",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "unique_interface_members_2",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "unique_interface_members_3",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "unique_interface_members_4",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "unique_interface_members_5",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "unique_interface_members_8",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "unique_interface_members_10",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "literal_to_full_unique_DC_identity_32",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_literal_row_preserved_57",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_literal_row_preserved_57",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_literal_row_preserved_57",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_literal_row_preserved_57",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "literal_to_full_unique_DC_identity_34",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_literal_row_preserved_59",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_literal_row_preserved_59",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_literal_row_preserved_59",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_literal_row_preserved_59",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "literal_to_full_unique_DC_identity_37",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_literal_row_preserved_60",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_literal_row_preserved_60",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_literal_row_preserved_60",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_literal_row_preserved_60",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "literal_to_full_unique_DC_identity_47",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_literal_row_preserved_68",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_literal_row_preserved_68",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_literal_row_preserved_68",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_literal_row_preserved_68",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "literal_to_full_unique_DC_identity_28",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_literal_row_preserved_53",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_literal_row_preserved_53",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_literal_row_preserved_53",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_literal_row_preserved_53",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "literal_to_full_unique_DC_identity_29",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_literal_row_preserved_54",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_literal_row_preserved_54",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_literal_row_preserved_54",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_literal_row_preserved_54",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "literal_to_full_unique_DC_identity_33",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_literal_row_preserved_58",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_literal_row_preserved_58",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_literal_row_preserved_58",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_literal_row_preserved_58",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "literal_to_full_unique_DC_identity_50",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_literal_row_preserved_216",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_literal_row_preserved_216",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_literal_row_preserved_216",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_literal_row_preserved_216",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_full191_410",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_operator_dimensions",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_west_equals_published_corrected2019",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_independent_cut_equals_baseline",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_accounting_west_has_no_DC_crossing",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_full191_410",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_operator_dimensions",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_west_equals_published_corrected2019",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_independent_cut_equals_baseline",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may21_case_accounting_west_has_no_DC_crossing",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_full191_410",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_operator_dimensions",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_west_equals_published_corrected2019",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_independent_cut_equals_baseline",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_may30_case_accounting_west_has_no_DC_crossing",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_full191_410",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_operator_dimensions",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_west_equals_published_corrected2019",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_independent_cut_equals_baseline",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_case_accounting_west_has_no_DC_crossing",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "baseline_state_invariant",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "cut_state_invariant",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "DC_state_invariant",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "rawAC_state_invariant",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "externalAC_state_invariant",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "negative_control_changes_only_Western",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "mapping_plan_is_new",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "fixed8651_mask",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "refined_2025_pre_may_case_baseline148_to_full191_operator_invariance",
+      "passed": true,
+      "maximum_absolute_error": 1.4097167877480388e-11
+    },
+    {
+      "check": "refined_2025_may21_case_baseline148_to_full191_operator_invariance",
+      "passed": true,
+      "maximum_absolute_error": 9.777068044058979e-12
+    },
+    {
+      "check": "refined_2025_may30_case_baseline148_to_full191_operator_invariance",
+      "passed": true,
+      "maximum_absolute_error": 1.2846612662542611e-11
+    },
+    {
+      "check": "refined_2025_case_baseline148_to_full191_operator_invariance",
+      "passed": true,
+      "maximum_absolute_error": 1.2221335055073723e-11
+    },
+    {
+      "check": "all_inputs_unchanged",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    }
+  ],
+  "failed_checks": 0,
+  "all_input_hashes_unchanged": true,
+  "selected_mat_variables": [
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "variables": [
+        "base_case",
+        "reduced_final_case"
+      ]
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "variables": [
+        "refined_2025_pre_may_case",
+        "refined_2025_may21_case",
+        "refined_2025_may30_case",
+        "refined_2025_case",
+        "bus_ids",
+        "bus_zones",
+        "branch_keys"
+      ]
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "variables": [
+        "recovery",
+        "kept_bus_ids",
+        "gamma"
+      ]
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "variables": [
+        "timestamp_utc",
+        "network_state_ids",
+        "bus_va",
+        "interface_pf",
+        "common_scoring_mask",
+        "gamma"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/design/experiment_plan.json",
+      "sha256": "173b9e745c1444e2ee138a4162e62edc116e1c0a498bc94dd7fc3c8089f6f51e"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_bounds.mat",
+      "sha256": "aea299a79e96a145dcaa25ab66b9118f29e53455e3ac274951d844223c6631ab"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+      "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_dispatch_receipt.json",
+      "sha256": "1ec2caef4fd0324d8b9aeceeed96f26aaf295d2b7ae3a0ffb6c5fbdade01a623"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/provenance.json",
+      "sha256": "781b83d403e017c0dbc531a04989ba256afa4e696c752c582ec133bf37e1ba2b"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/dated_combined.mat",
+      "sha256": "d576fdeb3f84b3029c99522f4ad1116f636a0dda1853f659bd1dc92d574a84b7"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+      "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_par_controls/controls/inputs.npz",
+      "sha256": "af93663aac002dc9e0a0c93015930ad597c2a43b2ee8f4dbd00b4e71c8e405f9"
+    },
+    {
+      "path": "output/nygrid_2025_slim/network/network_cases.mat",
+      "sha256": "3c990e658464037ad36ab427150ba3c358624c1d0e3d795adb90aca91abdbc58"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/network/network_cases.mat",
+      "sha256": "89af6622ece7539d4056e3840ebda6059afcc830f0afbbdab749c43d90a503e4"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/common.py",
+      "sha256": "c005e17c59ebd797cfeef386cfacdbcc8aa4df39f2ee873cecc5af97e582217d"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/freeze_design.py",
+      "sha256": "135ebc3fa570d217f40388c27c00c1bd9ed5a5c895b3af6b10520d99742db7fa"
+    },
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Data/npcc_new.csv",
+      "sha256": "9d23846e23fa579b8da41f7d5c3853d124d48f14ce0f614681d0c2793000a042"
+    },
+    {
+      "path": "tmp/nygrid_2019_reproduction/upstream/Utility/flow4Plot.m",
+      "sha256": "924df00f371ee600b16db75e6f83cf6997731beae2502df6db094a112a5eeaec"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.pdf",
+      "sha256": "5a08d0c8501df096806506df79fb1b8ded77e6da8c4fe9c82ef405a71c3cf140"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_Summer2019_Operating_Study_Appendices.txt",
+      "sha256": "731da35565c15b1d460a48cf8331782b9c3e2d5d797668587370a72b9906175f"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.pdf",
+      "sha256": "094f26c8b268b432567cf5a4b62f3b8699f53d3220e7180971dc595b6ad5d7be"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_DE_WC_Stability_2014.txt",
+      "sha256": "8734cd72ee75d70328e0bf5229834beca3719c8a2466e599d05d2189411590d6"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.pdf",
+      "sha256": "87cf3ecaa2b80c8851b79951437e190a0e0eb2aba542cc028ce5351831bdc5f7"
+    },
+    {
+      "path": "tmp/nygrid_2019_diagnostics/references/NYISO_CRPP_Appendix5_1_Interface_Definitions.txt",
+      "sha256": "52ce521985529b7a2cd569634eba1ee05e925e3bc8c57b8d645f1d91fd4e52ae"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/mapping_plan.json",
+      "sha256": "642c511ede3148048f9c425b52239da9fe168e06daca2ce5d67ee4e9aee8db18"
+    },
+    {
+      "path": "scripts/nygrid_2025_western_counterfactuals/mapping/build_operators.py",
+      "sha256": "7ddf081b6240c9a9f824e63a8441455478b1e277381a48a0685159847eae83cb"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/accounting_cut_members.csv",
+      "sha256": "b99e8bf4c9a7f78a18f3f7ebb7ccb2f398995b340ebd78fc4e60e7db9d91732c"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/baseline_recovery_checks.csv",
+      "sha256": "356f07e4eff20a2f2e8ad8dfc4bb8400e7498c3cfaf775027298831920de1936"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/checks.csv",
+      "sha256": "68835a02afa931f5979145bc1b2e8a0b26c8541ea1463cc8e136246f92577085"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/literal_operator_exact_lineage.csv",
+      "sha256": "8097e973653c9fe6855fbe7cdb6bbb57ebd8bdb73b929b9125e5644ea0189852"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/mapping_plan.json",
+      "sha256": "642c511ede3148048f9c425b52239da9fe168e06daca2ce5d67ee4e9aee8db18"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/operators.npz",
+      "sha256": "6da5ac3cead2bc1bca474297e709406eb9dfb98d82d361bec5e2e76aa4f60edc"
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/mapping/physical_member_coverage.csv",
+      "sha256": "41f1899207551aa5ab2f70879a5e5b933b05a4d3c8d034ee915a93b8778183c9"
+    }
+  ]
+}

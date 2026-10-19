@@ -1,0 +1,14 @@
+{
+  "scenario_count": 16,
+  "hour_convention": "hour_beginning",
+  "boundary_qualified_scenarios": 14,
+  "p32_mean_policy": "forward_sample_hold",
+  "max_sample_gap_seconds": 600,
+  "duplicate_timestamp_policy": "mean_with_timestamp_range_and_hourly_bounds_retained",
+  "p32_header": "Flow (MWH)",
+  "p32_unit_interpretation": "published_interface_power_MW_no_energy_conversion",
+  "internal_targets_extracted": false,
+  "internal_targets_used_in_optimizer": false,
+  "methodology_freeze_sha256": "",
+  "protocol_sha256": "b9fdef829f29a26a25df84c8199581b1ce9f8a9943c44551681dff7b45b2fbf9"
+}

@@ -1,0 +1,80 @@
+{
+  "status": "qualified_public_only_engineering_estimate_ready_for_explicit_application",
+  "source_nameplate": {
+    "per_bank_kv": 345,
+    "per_bank_cooling_nameplate_mva": [
+      450,
+      600,
+      750
+    ],
+    "normal_parallel_banks": 2,
+    "detached_spares": 1,
+    "published_phase_range_degree": 40,
+    "maximum_advance_at_750MVA_degree": 32,
+    "phase40_explicitly_labeled_no_load_in_SA2510": false,
+    "actual_factory_R_X_and_tap_curve_publicly_established": false
+  },
+  "selected_model": {
+    "r_pu_on100MVA": 0.0,
+    "physical_resistance_ohm": null,
+    "R_policy": "lossless_DC_model_placeholder;not_claimed_zero_physical_winding_loss",
+    "x_pu_on750MVA": 0.14054083470239145,
+    "x_pu_on100MVA": 0.01873877796031886,
+    "x_ohm": 22.303830467269524,
+    "two_parallel_equal_phase_x_pu_on100MVA": 0.00936938898015943,
+    "design_range_assumed_no_load_deg": 40.0,
+    "reference_loaded_advance_deg": 32.0,
+    "reference_angle_drop_deg": 8.0,
+    "calibration_receiving_voltage_pu": 1.0,
+    "calibration_load_MVA_pu": 1.0,
+    "calibration_load_power_factor": 1.0,
+    "calibration_internal_voltage_pu": 1.009827572518618,
+    "constant_leakage_is_model_assumption_not_factory_neutral_value": true,
+    "tap_magnitude": 1.0,
+    "symmetrical_unity_no_load_voltage_ratio_is_assumed": true,
+    "default_unconditioned_phase_shift_deg": 0.0,
+    "default_phase_is_not_measured_operating_state": true
+  },
+  "formula": {
+    "inference": "X=[V^2*tan(beta)+R*(P*tan(beta)+Q)]/[P-Q*tan(beta)]",
+    "load_phasor": "E=V+(R+jX)*conj(S/V); beta=arg(E/V)",
+    "forward_orientation": "NY/Y17 to CT/398",
+    "positive_physical_advance_definition": "load-side no-load voltage leads source",
+    "MATPOWER_shift_sign": "SHIFT=-physical_advance for the declared from/to orientation",
+    "P34_target_sign": "positive rawP34 is CT-to-NY;forward_model_target=-gamma*rawP34",
+    "inferred_DC_shift": "thetaNY-thetaCT-target_model_MW*X_pu*tap/baseMVA [radians]",
+    "parallel_equivalent": "inverse sum inverse X for equal unit tap; phase weighted by inverse X",
+    "model_phase_not_telemetry": "gamma-scaled coarse-network inferred phase is not a measured physical tap or an independently verified hardware phase"
+  },
+  "operating_scope": {
+    "normal_bypass_open": true,
+    "actual_breaker_and_tap_states_measured": false,
+    "normal_banks_in_parallel": true,
+    "no_three_unit_capacity_from_detached_spare": true,
+    "actual_Q_cooling_tap_steps_and_equipment_limits_unresolved": true,
+    "necessary_P_only_screen": "abs(P_model_i)<=selected_rating_MVA_i*gamma individually;aggregate limit alone is insufficient",
+    "external_P34_flow_conditioning_allowed_after_verified_cutover": true,
+    "internal_P32_observations_used": false
+  },
+  "sensitivity_policy": "1/1.5,1,1.5 are declared stress factors informed by generic correction-table practice;notDoverconfidencebounds;onlynominalmatchesreference8degreeassumptions",
+  "evidence_limits": [
+    "SA2510 phase-range interpretation is conditional",
+    "unknown zero-phase versus maximum-phase leakage relation",
+    "no public load-loss or winding-resistance test found",
+    "no technology-specific asymmetrical/symmetrical construction certificate found",
+    "P34 measures reported active transfer,notphysicaltap",
+    "AC apparent-power/current/cooling feasibility is not established by a DC MW screen"
+  ],
+  "sources": [
+    {
+      "path": "output/nygrid_2025_line_parameters/sources/projects/NYTransco_SA2510_2023.pdf",
+      "sha256": "844a685a691c8922925a2409ffc4e81e5ad3723f80e1518f469b8cba4fe44c5e",
+      "pdf_page": 44,
+      "printed_page": 7
+    },
+    {
+      "path": "output/nygrid_2025_dover_parameters/engineering/source_receipts.json",
+      "sha256": "3bc0c5a0c29b02953e727c9aec45d3fe1b872ef55745d8559c1cf00dffa9ddb4"
+    }
+  ]
+}

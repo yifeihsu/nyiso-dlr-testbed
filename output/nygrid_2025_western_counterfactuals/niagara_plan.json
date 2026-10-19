@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "experiment": "source_only_Niagara_hydro_redistribution",
+  "year": 2025,
+  "baseline_git_revision": "8290ced50354c81eb572a87f0f90eb87278c3cfe",
+  "baseline_dispatch": {
+    "path": "output/nygrid_2025_western_audit/dispatch/all_boundary_actual_dispatch.mat",
+    "sha256": "1c5dd267af5c7aaaf16a1c26183c58f49b387bdfda3df2ee74025dc3da25f85c"
+  },
+  "fixed_experiment_mask": {
+    "path": "output/nygrid_2025_western_audit/replay/paired_common_mask.npy",
+    "sha256": "fdd6b163647095921d51d2dec6c2d7022ee35de746d25fe59b21404c3945c0a4",
+    "expected_hours": 8651
+  },
+  "target_plant_id": 2693,
+  "fixed_StLawrence_plant_id": 2694,
+  "fixed_Lewiston_plant_id": 2692,
+  "held_fixed": [
+    "all 28 external equivalents",
+    "PD and QD",
+    "all six original DC/P34 transfers",
+    "St Lawrence unit PG",
+    "every PS/Lewiston unit PG",
+    "all non-HY unit PG",
+    "generator terminals and topology"
+  ],
+  "donor_policies": {
+    "outside_ab": "Admitted conventional HY with frozen corrected generator landing outside electrical zones A and B; exclude2693/2694 and all PS.",
+    "all_other": "All other admitted conventional HY; exclude2693/2694 and all PS. Balancing-location sensitivity, not the preferred western-cut isolation."
+  },
+  "target_policies": {
+    "legacy_literal": "RMN = 0.8 * public P63 Hydro - fixed current StLawrence PG. Literal requested target; infeasible hours unavailable. This is a partial legacy-share recipe, not a complete 2019-method swap.",
+    "legacy_bounded": "Project the legacy hypothesis target into the hourly jointly feasible RMN interval. Record requested/applied differences; source observations are never rewritten.",
+    "month_shape_literal": "EIA2693 full-month net MWh / physical local-calendar month hours, times baselineRMN/mean(baselineRMN on the fixed eligible month cohort). Reject infeasible hourly requests.",
+    "month_shape_constrained": "Nearest unweighted hourly vector to that same monthly-shaped request, subject to joint hourly RMN intervals and exact cohort sum = source monthly mean * fixed eligible hours. An infeasible monthly sum rejects the whole affected cohort month."
+  },
+  "balancing_objective": "For each feasible hourly RMN and donor aggregate, minimize0.5*sum(original objective_weight*(unitPG-current baselinePG)^2) within original native unit bounds.",
+  "conserved_total": "Current baseline hourly statewide Hydro PG, including fixed PS; the P63 Hydro source is separately exposed and is not substituted for this preserved total.",
+  "monthly_scope": "America/New_York physical calendar hours (March743, November721). Source EIA monthly energy is rescaled to the fixed eligible-hour count by a representative-missing-hours assumption. No full-month or full-year energy claim for incomplete cohorts.",
+  "fixed_cohort_policy": "Main comparisons require all8651fixedhours. Literal/infeasible variants remain restricted diagnostics; no error-based hour selection or silent filling.",
+  "scenarios": [
+    "niagara_legacy_literal_outside_ab",
+    "niagara_legacy_bounded_outside_ab",
+    "niagara_month_shape_literal_outside_ab",
+    "niagara_month_shape_constrained_outside_ab",
+    "niagara_legacy_literal_all_other",
+    "niagara_legacy_bounded_all_other",
+    "niagara_month_shape_literal_all_other",
+    "niagara_month_shape_constrained_all_other"
+  ],
+  "internal_interface_observations_read": false,
+  "power_flow_run": false,
+  "output_contract": {
+    "layout": "compact_changed_generator_rows",
+    "fields": [
+      "gen_rows_1based",
+      "gen_pg_changed",
+      "qualified",
+      "requested_RMN_model_mw",
+      "applied_RMN_model_mw",
+      "hour_index",
+      "timestamp_utc",
+      "gamma"
+    ],
+    "reconstruction": "Load the hash-bound all-boundary baseline, overwrite gen_rows_1based with gen_pg_changed, and set every PG row outside qualified to NaN."
+  },
+  "preregistered_utc": "2026-10-12T01:38:05.436451+00:00"
+}

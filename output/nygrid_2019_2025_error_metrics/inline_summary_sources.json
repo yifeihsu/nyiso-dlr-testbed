@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "average-error-metrics",
+      "title": "How do the average error metrics compare?",
+      "queries": [
+        {
+          "id": "annual-aggregates",
+          "source": {
+            "label": "Annual metric aggregation",
+            "files": [
+              {
+                "label": "2019 author-release annual partitions 1-4"
+              },
+              {
+                "label": "2025 moses_repair_v1 comparison arrays"
+              },
+              {
+                "label": "Current-model pointer and scoring receipts"
+              }
+            ],
+            "caveats": [
+              "2019 uses 8,760 prepared local-hour positions; 2025 uses 8,651 source-qualified physical hours.",
+              "The released 2019 DC case and current 2025 AC case have different inputs, physics and diagnostic operators. This comparison does not isolate topology effects.",
+              "Physical meter equivalence across the named interfaces and years remains unverified. Values were recomputed from saved results; no new power-flow run was performed.",
+              "The seven interfaces overlap electrically. Pooled results are benchmark statistics, not statewide energy error.",
+              "Signed errors can cancel. Mean absolute interface bias is separately calculated.",
+              "Raw MAPE is sensitive to near-zero observed flow. The 100-MW threshold is a disclosed sensitivity and changes the included population."
+            ],
+            "filters": [
+              "2019: authors_released_if_map",
+              "2025: candidate_all_success; annual; legacy_signed_literal_from"
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Equal-interface mean",
+                "definition": "Arithmetic mean of seven interface-level metrics; each interface has equal weight."
+              },
+              {
+                "label": "Pooled metric",
+                "definition": "Recompute the metric over all seven interface-hour arrays. This differs from averaging RMSE, WAPE and quantiles."
+              },
+              {
+                "label": "Bias",
+                "definition": "Mean predicted minus observed flow. Positive values denote numerical overprediction in the declared orientation."
+              },
+              {
+                "label": "WAPE",
+                "definition": "Sum of absolute errors divided by sum of absolute observed flows, expressed as a percentage."
+              },
+              {
+                "label": "Error standard deviation",
+                "definition": "Population standard deviation of signed errors around their mean."
+              },
+              {
+                "label": "P95 absolute error",
+                "definition": "95th percentile of absolute hourly error. The equal-interface summary averages the seven individual percentiles; it is not a confidence bound."
+              },
+              {
+                "label": "MAPE sensitivity",
+                "definition": "Mean hourly absolute percentage error, calculated both for nonzero observations and for observations whose absolute flow is at least 100 MW."
+              }
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "Independent source reconciliation",
+                "detail": "Primary metrics match the saved source tables within 5.684341886080802e-14 in their stated units. Source fingerprints and the current model pointer were checked."
+              }
+            ]
+          },
+          "reportingPeriod": "2019 and 2025 annual cohorts",
+          "columns": [
+            "year",
+            "aggregation",
+            "bias_MW",
+            "MAE_MW",
+            "RMSE_MW",
+            "error_SD_MW",
+            "WAPE_percent",
+            "nRMSE_percent",
+            "average_absolute_interface_bias_MW",
+            "p95_AE_MW",
+            "MAPE_nonzero_percent",
+            "MAPE_abs_actual_ge100_percent",
+            "MAPE_ge100_coverage_percent"
+          ],
+          "rows": [
+            {
+              "year": 2019,
+              "aggregation": "macro_equal_interface",
+              "bias_MW": 82.91276562292884,
+              "MAE_MW": 231.4436623286005,
+              "RMSE_MW": 293.8573352512409,
+              "error_SD_MW": 274.1416479988304,
+              "WAPE_percent": 16.565250700658382,
+              "nRMSE_percent": 20.84052082775696,
+              "average_absolute_interface_bias_MW": 92.15891970428063,
+              "p95_AE_MW": 581.8247111483909,
+              "MAPE_nonzero_percent": 53.4287087033472,
+              "MAPE_abs_actual_ge100_percent": 20.48025203939485,
+              "MAPE_ge100_coverage_percent": 98.03652968036528
+            },
+            {
+              "year": 2019,
+              "aggregation": "pooled_interface_hours",
+              "bias_MW": 82.91276562292883,
+              "MAE_MW": 231.4436623286005,
+              "RMSE_MW": 300.08500335537644,
+              "error_SD_MW": 288.4033330867616,
+              "WAPE_percent": 11.218076930625283,
+              "nRMSE_percent": 14.545123506505972,
+              "average_absolute_interface_bias_MW": 92.15891970428063,
+              "p95_AE_MW": 586.0511270115148,
+              "MAPE_nonzero_percent": 53.428708703347205,
+              "MAPE_abs_actual_ge100_percent": 19.71232563523728,
+              "MAPE_ge100_coverage_percent": 98.03652968036528
+            },
+            {
+              "year": 2025,
+              "aggregation": "macro_equal_interface",
+              "bias_MW": -64.98002986830419,
+              "MAE_MW": 246.5575602792167,
+              "RMSE_MW": 308.3868925313304,
+              "error_SD_MW": 285.20478972520306,
+              "WAPE_percent": 20.030281548729047,
+              "nRMSE_percent": 25.18313419009058,
+              "average_absolute_interface_bias_MW": 104.1043047895636,
+              "p95_AE_MW": 606.1498618332689,
+              "MAPE_nonzero_percent": 117.0438978671535,
+              "MAPE_abs_actual_ge100_percent": 26.71975755761456,
+              "MAPE_ge100_coverage_percent": 95.7692752282973
+            },
+            {
+              "year": 2025,
+              "aggregation": "pooled_interface_hours",
+              "bias_MW": -64.9800298683042,
+              "MAE_MW": 246.5575602792167,
+              "RMSE_MW": 337.3335687337852,
+              "error_SD_MW": 331.01590945600435,
+              "WAPE_percent": 14.908992765509751,
+              "nRMSE_percent": 20.398091748312652,
+              "average_absolute_interface_bias_MW": 104.1043047895636,
+              "p95_AE_MW": 714.7817874196903,
+              "MAPE_nonzero_percent": 117.04389786715356,
+              "MAPE_abs_actual_ge100_percent": 25.9332578225317,
+              "MAPE_ge100_coverage_percent": 95.7692752282973
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "def metrics(predicted,observed):\n    predicted=np.asarray(predicted,float).ravel()\n    observed=np.asarray(observed,float).ravel()\n    assert predicted.shape==observed.shape and len(predicted)>0\n    assert np.isfinite(predicted).all() and np.isfinite(observed).all()\n    error=predicted-observed;absolute=np.abs(error);obs_abs=np.abs(observed)\n    denominator=float(obs_abs.mean());assert denominator>0\n    mse=float(np.mean(error**2));bias=float(error.mean());sd=float(error.std(ddof=0))\n    assert np.isclose(mse,bias*bias+sd*sd,rtol=1e-12,atol=1e-8)\n    nonzero=obs_abs>0;guarded=obs_abs>=100\n    symmetric=np.abs(predicted)+obs_abs\n    smape=np.divide(200*absolute,symmetric,out=np.zeros_like(absolute),where=symmetric>0)\n    result=dict(hours=len(error),bias_MW=bias,MAE_MW=float(absolute.mean()),\n        MSE_MW2=mse,RMSE_MW=float(np.sqrt(mse)),error_SD_MW=sd,\n        median_AE_MW=float(np.median(absolute)),\n        p95_AE_MW=float(np.quantile(absolute,.95,method='linear')),\n        WAPE_percent=float(100*absolute.sum()/obs_abs.sum()),\n        nRMSE_percent=float(100*np.sqrt(mse)/denominator),\n        normalized_bias_percent=float(100*bias/denominator),\n        MAPE_nonzero_percent=float(100*np.mean(absolute[nonzero]/obs_abs[nonzero])),\n        MAPE_abs_actual_ge100_percent=float(100*np.mean(absolute[guarded]/obs_abs[guarded])),\n        sMAPE_percent=float(smape.mean()),\n        MAPE_nonzero_hours=int(nonzero.sum()),\n        MAPE_ge100_hours=int(guarded.sum()),\n        MAPE_nonzero_coverage_percent=float(100*nonzero.mean()),\n        MAPE_ge100_coverage_percent=float(100*guarded.mean()),\n        observed_zero_hours=int((~nonzero).sum()),\n        observed_abs_below100_hours=int((obs_abs<100).sum()),\n        mean_abs_observed_MW=denominator)\n    assert np.isclose(result['WAPE_percent'],100*result['MAE_MW']/denominator)\n    return result\n"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

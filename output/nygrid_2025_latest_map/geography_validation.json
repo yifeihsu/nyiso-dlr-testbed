@@ -1,0 +1,213 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T19:45:07.951921+00:00",
+  "scope": "Current AC topology and qualified source/display coordinate builder; no HTML, physical-route reconstruction or source modification",
+  "canonical_nodes": 267,
+  "parents": 413,
+  "controlled_transfers": 6,
+  "complex_Yred_couplings": 253,
+  "state_counts": [
+    {
+      "id": "pre_may",
+      "representativeHour": 523,
+      "representativeTimestampUtc": "2025-01-22T23:00:00Z",
+      "detailedBusCount": 266,
+      "retainedBusCount": 148,
+      "numericalBusCount": 75,
+      "physicalOrProxyPortCount": 191,
+      "sourceGeographicPointCount": 188,
+      "displayedAnchorCount": 188,
+      "retainedGeographicPointCount": 145,
+      "unlocatedProxyIds": [
+        78,
+        79,
+        82
+      ],
+      "parentRecordCount": 410,
+      "activeParentRecordCount": 333,
+      "runtimeBranchCount": 485,
+      "activeRuntimeBranchCount": 408,
+      "complexCouplingCount": 247,
+      "fixedTransferCount": 6,
+      "sourceQualifiedHourCount": 3315
+    },
+    {
+      "id": "may21",
+      "representativeHour": 3360,
+      "representativeTimestampUtc": "2025-05-21T04:00:00Z",
+      "detailedBusCount": 266,
+      "retainedBusCount": 148,
+      "numericalBusCount": 75,
+      "physicalOrProxyPortCount": 191,
+      "sourceGeographicPointCount": 188,
+      "displayedAnchorCount": 188,
+      "retainedGeographicPointCount": 145,
+      "unlocatedProxyIds": [
+        78,
+        79,
+        82
+      ],
+      "parentRecordCount": 410,
+      "activeParentRecordCount": 334,
+      "runtimeBranchCount": 485,
+      "activeRuntimeBranchCount": 409,
+      "complexCouplingCount": 247,
+      "fixedTransferCount": 6,
+      "sourceQualifiedHourCount": 214
+    },
+    {
+      "id": "may30",
+      "representativeHour": 4000,
+      "representativeTimestampUtc": "2025-06-16T20:00:00Z",
+      "detailedBusCount": 266,
+      "retainedBusCount": 148,
+      "numericalBusCount": 75,
+      "physicalOrProxyPortCount": 191,
+      "sourceGeographicPointCount": 188,
+      "displayedAnchorCount": 188,
+      "retainedGeographicPointCount": 145,
+      "unlocatedProxyIds": [
+        78,
+        79,
+        82
+      ],
+      "parentRecordCount": 410,
+      "activeParentRecordCount": 335,
+      "runtimeBranchCount": 485,
+      "activeRuntimeBranchCount": 410,
+      "complexCouplingCount": 253,
+      "fixedTransferCount": 6,
+      "sourceQualifiedHourCount": 4835
+    },
+    {
+      "id": "post_dover",
+      "representativeHour": 8508,
+      "representativeTimestampUtc": "2025-12-21T16:00:00Z",
+      "detailedBusCount": 267,
+      "retainedBusCount": 148,
+      "numericalBusCount": 75,
+      "physicalOrProxyPortCount": 192,
+      "sourceGeographicPointCount": 188,
+      "displayedAnchorCount": 189,
+      "retainedGeographicPointCount": 145,
+      "unlocatedProxyIds": [
+        78,
+        79,
+        82
+      ],
+      "parentRecordCount": 413,
+      "activeParentRecordCount": 337,
+      "runtimeBranchCount": 488,
+      "activeRuntimeBranchCount": 412,
+      "complexCouplingCount": 253,
+      "fixedTransferCount": 6,
+      "sourceQualifiedHourCount": 287
+    }
+  ],
+  "coordinate_coverage": {
+    "canonicalBusCount": 267,
+    "sourceGeographicPoints": 188,
+    "countsAreBusRecordsNotUniquePhysicalSites": true,
+    "colocatedDisplayOnlyPorts": [
+      21001
+    ],
+    "unlocatedAggregateProxies": [
+      78,
+      79,
+      82
+    ],
+    "numericalNongeographicBuses": 75,
+    "retainedGeographicPoints": 145,
+    "retainedNongeographicProxies": 3
+  },
+  "exact_old_retained_coordinates_and_basemap_paths_preserved": true,
+  "geographic_proxy_coordinates_invented": false,
+  "numerical_bus_coordinates_invented": false,
+  "all_runtime_branches_accounted_once_by_state_parent": true,
+  "source_files_unchanged": true,
+  "old_map_or_archives_modified": false,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_downstate/geography/bus_geographic_register.csv",
+      "sha256": "7aaedd8f68e6c1a9d2c13cf19158abe604a57c669ef1c3aa7e07df2e33476973"
+    },
+    {
+      "path": "output/nygrid_2025_slim/interactive/map_data.json",
+      "sha256": "f44c731519d9c3ea1656883611e3915ffc260d2821950b3378b66319c952dc72"
+    },
+    {
+      "path": "output/nygrid_2025_ac_system/branches/branch_assignments.csv",
+      "sha256": "3106820016b5b47c3aebb49a8b1ebe4cb7452c41f08ae9b1e72c493bbf2c4849"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/structure/overhead_cable_classification_conflicts.csv",
+      "sha256": "7a0436a6fe8c9f8fbb07478a17e403ebd8df40adec39a13f8802bcef03c5c817"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure/current_structure_inventory.json",
+      "sha256": "00bbe79993a0767de59ab9db48434ebc4623c066a84b0fb9f6de0e575ae3630f"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/basemap_receipt.json",
+      "sha256": "d12a48b550b44db1c5968697b6e6f98f32a35a56818d685be22aefbe876fb38b"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/raw/20250101palIntegrated_csv.zip",
+      "sha256": "f77f56ccb24a2395ddf9bc967b5ab372380a1791448ba228d95cfe1a0a43e28e"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_land_npcc.geojson",
+      "sha256": "149ff4f15aa36650d87726349c14e8eac5246638554e46ce86fd672b8c2a5bbe"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_lakes_npcc.geojson",
+      "sha256": "5647268771afe6b49e8de6620bd7aa4cca6b5976492090a7bcc1bceacf4c4737"
+    },
+    {
+      "path": "output/nygrid_2025_downstate/geography/basemap/ne_10m_admin_1_states_provinces_lines_npcc.geojson",
+      "sha256": "908078a62f09080b9100423639245459e0e91880a316a50399b8d5f38cb8e6f6"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/pre_may.mat",
+      "sha256": "880ffad8b03c081520bcf71b6e16240c729ec8736fb03f28ff90195a03353c0c"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/pre_may_thermal_eligibility.csv",
+      "sha256": "cc8466d0ea612311a9c4b3a539e5ce0a8b7c53b2aa7f1009c807ee3fa9b133df"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/may21.mat",
+      "sha256": "d31119f8f46d84c86290c63d2633907158c5911b20e098a8a924478e22024b81"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/may21_thermal_eligibility.csv",
+      "sha256": "668f470baa51437575c57d27ec91c0f01b4c6e5bb4897c26e7aed97036cedd92"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/may30.mat",
+      "sha256": "ba2d58e1c1767636c75c4e6587c3d8643442b05b85a60120941e1a62f821a799"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/may30_thermal_eligibility.csv",
+      "sha256": "94f77c1069cb05b088b3f3cfc6d35ee180dee12214e478122e5635959d153c5c"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/post_dover.mat",
+      "sha256": "be60ffc8a1b61949bfb0716ff4c73d857791889b00c0e1782b9bed24ecc939e5"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/structure_inputs/post_dover_thermal_eligibility.csv",
+      "sha256": "10c23b85179f1a02940dbcfeb161b682a426c41895da58d71bbf95f0a59b98a3"
+    },
+    {
+      "path": "scripts/nygrid_2025_latest_map/build_geography_data.py",
+      "sha256": "80e1fe453b2d26e7955e08edbbc106eec2fcd8e0b3186fecc0c2bcab62607c44"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_latest_map/geography_data.json",
+      "sha256": "aa846b69795fa42b8e4f870527fade4a49d1cf3bd6860d009c62070ce34e453c"
+    }
+  ]
+}

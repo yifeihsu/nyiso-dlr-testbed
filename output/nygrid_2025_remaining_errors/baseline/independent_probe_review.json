@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T06:03:17.455617+00:00",
+  "calendar_selection_reproduced_without_residuals": true,
+  "selected_hours": [
+    349,
+    1093,
+    1765,
+    2509,
+    3229,
+    3469,
+    3613,
+    3973,
+    4693,
+    5477,
+    6181,
+    6901,
+    7645,
+    8365,
+    8605
+  ],
+  "four_current_model_states_and_generator_bus_mapping_verified": true,
+  "feasible_hydro_input_cases": 54,
+  "hydro_target_counts": [
+    13,
+    15
+  ],
+  "donor_count": 282,
+  "maximum_hydro_input_conservation_error_model_MW": 3.241851231905457e-14,
+  "maximum_hydro_target_delta_error_model_MW": 3.197442310920451e-14,
+  "maximum_native_bound_violation_MW": 0.0,
+  "PJM_capacity_fraction_range": [
+    0.18456279120740982,
+    0.33526969476565743
+  ],
+  "PJM_recomputed_Q_cap_minimum_model_MVAr": 167.70817209987703,
+  "newly_active_PJM_bus_count": 0,
+  "all_34_operator_terms_bound_to_parent_rows_in_all_selected_states": true,
+  "maximum_baseline_vs_saved_annual_flow_difference_public_MW": 0.0,
+  "maximum_independent_score_difference_public_MW": 5.684341886080802e-14,
+  "qualified_cases": 142,
+  "rejected_cases": 8,
+  "whole_system_operating_qualified_cases": 0,
+  "fixed_during_review": [
+    "Root corrected initially empty state operator matching before final export.",
+    "Root corrected integer inversion of qualified flag before final receipt; rejected count is8.",
+    "Root added equality check between finite exported flows and equation-qualified audit flags."
+  ],
+  "limitations": [
+    "These15calendar-selected hours establish local response, not annual error improvement.",
+    "PJM dispatch and loss shares remain alternative model proxies, not observed physical dispatch.",
+    "Parent41admittance probes do not validate conductor or DLR metadata.",
+    "No additional solver run was performed in this independent review; saved results and code/algebra were inspected."
+  ],
+  "source_hashes_unchanged": true,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_plan.json",
+      "sha256": "1b9af6b5e17a4c7ed267e0f458ec4a31149bd4775f4d85be2c3d5167c6246b2a"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_inputs.mat",
+      "sha256": "cad92dfc0468fe534669896bbac708be4db35a05498cf95a535b36bd1a7e4523"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_results.mat",
+      "sha256": "ea5c5758e95a2dff85384e7e2d73d865b40f6c29ecf6ef3df10055a2885a4317"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_audit.csv",
+      "sha256": "6e03cc6510162fb1fb6675f44d2bff48f467c01e22121f9829c1142cc59c9950"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/paired_interface_responses.csv",
+      "sha256": "46df4128d04383aefaa7445a15393b5835376eba100450fe825084363977e76d"
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/probes/probe_receipt.json",
+      "sha256": "a90a148dbaa5823d9f9a70fabf928890721120d683a702b71cccd9b66e2b14ca"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/prepare_probes.py",
+      "sha256": "96920b037a4003680367e6d2d50a25be820142bff633e85b3f83a69baa57569d"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/run_probes.m",
+      "sha256": "808efa93f97d5eaf16cd11506ba15d62535618aec3229bf81f477f4d2defaeb3"
+    },
+    {
+      "path": "scripts/nygrid_2025_remaining_errors/score_probes.py",
+      "sha256": "8927c7b9d4972a060b8796a46ed95163eb9d86ce89d39d39ee8d59e1fc8bae71"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4"
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf"
+    },
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05"
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/fleet_register.csv",
+      "sha256": "d025a1994c9a1c19cb62c6b4ae61a1e0bb62ae2060158592c61f6ecf19546d89"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/fleet/source_parent/npcc.csv",
+      "sha256": "3f203b94d44b95607c48b4f5a8eb78adf42cbbc600294122ac87399e53626b2d"
+    },
+    {
+      "path": "output/nygrid_2025_acpf_profile_audit/alignment/interface_operator_terms.csv",
+      "sha256": "6ed9fa9d0c02c4e08bf91654c913bcd24f1c22f3d38bde0903d4ac4c91032670"
+    }
+  ],
+  "producer": {
+    "path": "scripts/nygrid_2025_remaining_errors/baseline/review_root_probes.py",
+    "sha256": "dd5e54862d3505d6abe31fa1e03d65aabeabe3176ff6a3ee2e4a91fe53f0a712"
+  }
+}

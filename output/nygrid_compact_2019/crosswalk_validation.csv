@@ -1,0 +1,7 @@
+gate,passed,evidence
+all_original_46_bus_IDs_retained,True,Original37:82 are a subset of compact51.
+seven_role_differences_verified,True,38;46;47;62;69;77;79.
+operators_use_unique_active_stable_keys,True,No duplicate interface/key pairs; active status checked before membership.
+Marcy_direct_endpoint_pairs_absent,True,43-38 and38-77 each have zero active compact records; functional equivalence beyond identical endpoints not established.
+current_operator_matches_independent_MATLAB_export,True,Every interface/key/PF-or-PT/sign matches current_operator_members.csv.
+reference_operator_matches_fresh_annual_export,True,All24 corrected source terms match fresh reference export by row/endpoints/sign.

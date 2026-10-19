@@ -1,0 +1,1156 @@
+Impacts of Shunt Reactors on Transmission
+             Line Protection
+
+
+                          Eithar Nashawati
+                        Oncor Electric Delivery
+
+             Normann Fischer, Bin Le, and Douglas Taylor
+              Schweitzer Engineering Laboratories, Inc.
+
+
+
+
+                Revised edition released November 2013
+
+
+                      Originally presented at the
+     38th Annual Western Protective Relay Conference, October 2011
+                                                                                                                                                       1
+
+
+
+
+               Impacts of Shunt Reactors on Transmission
+                            Line Protection
+                                        Eithar Nashawati, Oncor Electric Delivery
+                  Normann Fischer, Bin Le, and Douglas Taylor, Schweitzer Engineering Laboratories, Inc.
+
+    Abstract—Shunt reactors are installed to offset the capacitive         For short lines, the sending-end voltage (VS) and current
+effect of transmission lines and therefore improve the voltage         (IS) are calculated as follows (in the following equations, all
+profiles of transmission lines. In addition, they also help regulate   variables are complex numbers—phasors and impedances—
+the volt/VAR of power systems. Specific implementations of
+shunt reactors may greatly differ between utilities. Reactors can
+                                                                       unless indicated otherwise):
+be placed on a section of the transmission line or on the adjacent                                       VS  VR  ZI R
+bus. Current transformers (CTs) may be installed on the                                                                                             (1)
+reactors, or the line protection devices may rely on bus CTs.                                            IS  I R
+Each philosophy presents challenges for reactor, line, and/or bus         where:
+protection schemes.
+    This paper examines typical implementations for shunt                   Z is the line impedance.
+reactors, considers their advantages and disadvantages, and                 VR is the receiving-end voltage.
+presents protection requirements and solutions required by each             IR is the receiving-end current.
+implementation. For example, a line-installed reactor can be kept
+within the line protection zone or taken out of the line protection
+                                                                          For medium-length lines, the parasitic capacitance of the
+zone by measuring its current and effectively subtracting it from      line becomes significant enough that it impacts the sending-
+the total line current. In the former case, the reactor represents a   end and receiving-end voltages and currents; therefore, it is
+shunt branch within the zone with the possibility of inrush            included as shunt components in the equivalent line model.
+current, effect of zero-sequence feed into the zone during             The equivalent  circuit, as shown in Fig. 2, is generally used
+external ground faults, and so on. In the latter case, we need to
+                                                                       when modeling medium-length transmission lines.
+consider the performance of reactor CTs during inrush
+conditions and ground faults forcing the zero-sequence fault                                               R        jX
+current in the reactor and the potential impact of CT errors or
+CT saturation on the security of line protection, especially if                       IS                                             IR
+sensitive protection elements are used.
+                                                                                                  jB/2                   jB/2
+    We begin the paper by examining why shunt reactors are used           VS                                                                   VR
+on power lines and then discuss how to calculate the size of the
+reactors. Next, we see what impact these shunt reactors have on
+the power system. Lastly, we investigate the impact shunt
+reactors have on line protection schemes.                                                                 Z = R + jX
+                                                                                                          Y/2 = jB/2
+
+                            I. INTRODUCTION                            Fig. 2.   Equivalent  circuit representing a medium-length transmission line
+
+   For the purposes of accurate modeling, transmission lines              For the medium-length line model, the sending-end voltage
+are generally categorized into the following three types with          and current are calculated as follows:
+regard to their physical length [1]:
+                                                                                                 ZY 
+      Short lines (less than 50 miles).                                                   VS   1       • VR  ZI R
+                                                                                                       2 
+      Medium-length lines (greater than 50 miles but less                                                                                          (2)
+        than 120 miles).                                                                           ZY               ZY 
+                                                                                           IS  Y  1       • VR  1     • IR
+      Long lines (greater than 120 miles).                                                             4              2 
+   The equivalent transmission line model changes based on                 where:
+the physical line length; accordingly, for a short line, we only            Y is the line admittance.
+consider the series parameters and ignore the shunt
+parameters, as shown in Fig. 1.
+
+
+
+
+Fig. 1.   Model used to represent a short transmission line
+                                                                                                                                             2
+
+   Equation (2) is often expressed in matrix form; this is the                     Examining (1) representing the short line, we can make the
+form commonly found in most reference material and                              following observations:
+textbooks:                                                                            The sending-end voltage (VS) is dependent only on the
+                          VS   A B   VR                                           series voltage drop (load current) and the receiving-
+                          I    C D •  I                            (3)           end voltage (VR).
+                          S          R                                          The sending-end voltage will always be greater than or
+   where:                                                                               equal to the receiving voltage (VR), unless the load is
+               ZY                                                                     capacitive.
+     A  D  1                                                                  For medium-length and long lines, we can make the
+                 2 
+                                                                                following observations:
+     BZ                                                                              The sending-end voltage is dependent on the
+            ZY                                                                        receiving-end voltage and the series voltage drop, but
+     C  Y 1    
+               4                                                                      the series voltage drop is dependent not solely on the
+   In long lines, the distributed effects of the parameters                             load current but also on the current being drawn by the
+become significant, and the line must be represented by the                             parasitic capacitance of the line (charging current of
+                                                                                        the line).
+equivalent  circuit. Alternatively, the line may be represented
+by smaller cascaded sections, where each section is                                   The receiving-end voltage can be higher than the
+                                                                                        sending-end voltage if the charging current is
+represented by an equivalent  circuit, similar to the one used
+                                                                                        predominant.
+for a medium-length line. For the purpose of this paper, we
+consider a long line as being composed of multiple sections of                     From these observations, we see that for short lines, we can
+                                                                                basically ignore the impact of capacitive current from a
+equivalent  circuits, as shown in Fig. 3.
+                                                                                voltage regulation point of view. Medium-length and long
+                                                                                lines, on the other hand, can have voltages at their receiving
+                                                                                ends much higher than at the sending end, and this can create
+                                                                                issues such as overfluxing of power transformers and
+                                                                                overstressing of line insulators. But before we can come up
+                                                                                with a solution for this problem, it is important to understand
+                                                                                what causes this overvoltage.
+                                                                                   Examine the medium-length line equivalent circuit in
+                                                                                Fig. 2. Notice that the circuit has both a VAR source (the
+                                                                                shunt capacitor) and a VAR sink (the series line impedance).
+Fig. 3. Multiple equivalent  circuits used to represent a long transmission    The VARs produced by the line are determined by the
+line                                                                            sending-end voltage (VS) and the line susceptance (B).
+   In Fig. 3, ∆L is the per-unit (pu) section length defined as                 Because the line susceptance is fixed and the sending-end
+the ratio of the incremental line section l to the total line                   voltage is relatively constant, the VARs produced by a
+length L (both given in the same unit of length). The sending-                  transmission line are relatively constant.
+end voltage and current for a long line composed of n                                                                2
+                                                                                                      Q Produced  VS B                     (5)
+equivalent  sections are determined as follows, with n = L/l.
+Calculate the incremental sending-end voltage and current for                      The VARs sunk (consumed) on the line are dependent on
+Section n using (4). The sending-end voltage of Section n                       the line reactance (X) and the line current (IL). We know that
+then becomes the receiving-end voltage and current for                          the line impedance is fixed but the load current can vary from
+Section n – 1. The process is repeated until the final sending-                 zero to full load or even temporary overload given the thermal
+end voltage and current are obtained.                                           constraints for the given line. This means the VARs consumed
+                                                                                by the line are directly dependent on the load current.
+                    VS(n)          A B   VR (n) 
+                   I        L •      •                            (4)                                       2
+                                                                                                      QConsumed  IL X
+                    S(n)           C D   IR (n) 
+                                                                                                                                           (6)
+                                                                                                                    V B
+   where:                                                                                             I L   IS  j• S 
+                                                                                                                     2 
+    ∆L is l/L (pu line section).
+    l is the incremental line section length.                                      The result of this is that under light-load conditions, the
+    L is the total line length.                                                 line produces more VARs than it consumes; therefore, there is
+                                                                                an excess of VARs on the line, resulting in the receiving-end
+                                                                                voltage being higher than the sending-end voltage. In order to
+                                                                                consume the excess VARs when the system is lightly loaded,
+                                                                                a device that absorbs VARs must be added to the system. This
+                                                                                                                                                       3
+
+addition should be done in the vicinity of the line to minimize
+the losses caused by the reactive current. Because we know
+that inductors absorb VARs, a reactor is connected in parallel
+with the shunt capacitance of the line. Therefore, the VARs
+produced by the shunt capacitance of the line (QGEN) are
+consumed by the shunt reactors connected in parallel with the
+line (QSINK), as shown in Fig. 4.
+ Terminal S                                                    Terminal R
+
+
+
+
+                                                                                        CS + 2 • CM
+
+
+                                                                                                      CS + 2 • CM
+
+
+                                                                                                                    CS + 2 • CM
+      QSINK       QGEN           QGEN           QGEN        QGEN        QSINK
+      XL          XC             XC             XC          XC          XL
+
+
+
+
+ Reactor                                                           Reactor
+                                                                                Fig. 5. Connection scheme with four reactor units
+                            Transmission Line
+
+Fig. 4. VARs created by the parasitic capacitance of the line are absorbed by      The four-reactor scheme reduces the installation cost by
+shunt reactors                                                                  using the minimum number of reactor tanks, because the per-
+   The value of the shunt reactor to be connected to the line is                kilovar cost decreases with the increase in the unit size [3]. If
+discussed in detail in Section II.                                              we know the positive-sequence susceptance (B1L) of the line
+                                                                                and the percent of compensation (η), we can calculate the
+  II. DETERMINING THE VAR RATING OF A SHUNT REACTOR                             impedance of the phase-to-neutral reactance or positive-
+                                                                                sequence reactance (Xl1) using:
+A. General Discussion
+                                                                                                                                                1
+    Extra-high-voltage (EHV) transmission lines are employed                                                                      X l1               (7)
+to transmit power over vast distances; due to the long lengths,
+                                                                                                                                            B1L 
+                                                                                                                                             •
+these lines have large shunt capacitances associated with                          Assuming that reactors are deployed at both line terminals,
+them. Shunt capacitance exists between the individual phases                    the VAR rating of a single line reactor unit can be calculated
+of the transmission line and also between the phase conductors                  using the rated line-to-neutral voltage VLN and the positive-
+and ground. When a transmission line is energized, it draws a                   sequence reactance as follows:
+large charging current because of the large shunt capacitance                                                                                     2
+of the line. This current is mainly capacitive, and as we see                                                                               VLN
+                                                                                                                                   S1               (8)
+from (2), the voltage at the receiving end of the line can                                                                                 2 • X l1
+become greater than the voltage at the sending end. To avoid                       A further consideration is whether to install the reactors on
+an overvoltage condition along the line and the possibility of                  the line or the bus. Should the reactor be connected on the bus,
+damaging the line insulator, shunt reactors are installed at the                multiple lines benefit from the reactor, which further lowers
+terminals of the line. As shown in Section III, this brings the                 the capital investment. Under normal system operation
+voltage levels along the line to within specified levels.                       conditions, transmission lines are switched in and out of
+    The degree of compensation of a line determines the size                    service; therefore, the amount of reactive current
+and configuration of the reactor scheme. Perfect compensation                   compensation being supplied by the reactor varies. The size of
+(100 percent) is not always the best choice, even though this                   the bus reactor has to be such that it provides compensation
+results in a flat voltage profile along the line under no-load                  for the system with all the feeders in service. A properly sized
+conditions. A perfectly tuned reactor will need to be switched                  earthing switch is required for each feeder for the safety of
+out of service well before the line reaches its rated full-load                 maintenance personnel [4]. After the line breaker trips, the
+current, in order to maintain the voltage regulation at the                     motor-operated earthing switch needs to be closed to
+receiving end of the line.                                                      discharge the energy trapped on the line. The travel time of its
+B. Three-Pole Protection Tripping Applications                                  moving contact is long, and arcing will persist, once formed,
+   Common practice is for the reactors to compensate                            until the switch is physically closed. On the other hand, if the
+between 70 and 80 percent of the line shunt capacitance,                        reactor is connected to the line, the compensation is fixed and
+which allows the reactors to remain in service when the line is                 there is almost no stress on the earthing switch when it
+moderately loaded. The reactor only needs to be taken out of                    operates to ground the power line. However, when a line is
+service when the line is heavily loaded in order to maintain the                de-energized, the system will experience a subsynchronous
+voltage within the prescribed limits [2]. For the purpose of this               ringdown due to the interaction of the reactor and the line
+paper, a four-reactor scheme as shown in Fig. 5 is selected.                    capacitance.
+The fourth reactor, Xn, is only needed in single-pole tripping
+applications, as discussed in Section II, Subsection C.
+                                                                                                                                                   4
+
+C. Single-Pole Protection Tripping Applications                        opposite polarity. The equivalent shunt reactor current with
+    Single-pole tripping and reclosing for single-line-to-ground       respect to phase voltage is given by:
+faults help improve system stability and prevent unnecessary                                         X l0   1
+                                                                                                                    0       0 
+                                                                                      I Al                                          V 
+separation of the interconnected power system. Single-pole                                         
+                                                                                      I    j• A 0                            1  A 
+tripping is often employed at the transmission level, but long                        Bl                       X l11    0  • A •  VB      (11)
+EHV line applications often experience difficulty in                                  ICl                               1       VC 
+                                                                                                    0             0      X l2 
+successfully clearing single-phase faults when only
+de-energizing the faulted phase. When the faulted phase                    where:
+breaker poles are open, the primary circuit stops supplying                      1 1          1
+current to the fault directly through the faulted conductor. But                                   
+because of the capacitive coupling between the faulted phase                 A  1 a 2         a
+and the two remaining healthy phases, capacitive current                         1 a          a 2 
+                                                                                 
+flows between the unfaulted phases and the faulted phase,
+                                                                             a  1120
+effectively supplying a fault current and preventing the arc
+from extinguishing. Once the primary arc has been
+                                                                                        1
+                                                                             X l11  X l2 , the inverse of the positive-sequence shunt
+established, the current required to maintain the arc is low                 reactor impedance.
+enough to be maintained by the capacitive current flowing
+                                                                                                        , the inverse of the zero-sequence
+                                                                                                        1
+                                                                               1
+from the unfaulted phases to the faulted phase. This                         X l0  X l1  3 • X n
+phenomenon is known as secondary arcing [3]. If reclosing                  shunt reactor impedance.
+occurs before the secondary arc is extinguished, it is no                 Solving (11), we obtain the following result for the shunt
+different than reclosing back into a permanent fault.                  reactor current:
+    To extinguish the secondary arc (neutralize the secondary
+arcing current), a fourth reactor, the neutral reactor, is installed                       I Al       s         M      M   VA 
+                                                                                           I    j•             s     M  •  VB      (12)
+between the phase reactor neutral point and ground (Fig. 5).                               Bl         M
+The charging current for a transmission line is determined by                              ICl     M         M       s   VC 
+multiplying the capacitance matrix with the voltage matrix:
+                                                                           where:
+               I Ac       CS   CM     CM   VA 
+               I   j • C     CS     CM  •  VB        (9)
+                                                                                   1
+                                                                             s  X l0    
+                                                                                        2 • X l11 3
+               Bc         M
+               ICc     CM   CM     CS   VC                         X  X  3
+                                                                                 M
+                                                                                          1
+                                                                                          l0
+                                                                                                 1
+                                                                                                 l1
+
+   where:                                                                 For the A-phase fault case, the A-phase inductive current
+     CS is the self-capacitance of the line.                           drawn by the line reactors is:
+     CM is the mutual capacitance of the line.                                           I Al   j• M •  VB  VC               (13)
+   Assume that the A-phase is the faulted phase and that the                                                  
+A-phase breakers have been opened at both ends of the line.              To satisfy the need of having I Al  I Ac  0 , it is clear by
+Using (9), we can calculate the A-phase capacitive current             comparing (10) and (13) that the mutual inductive susceptance
+being supplied by the two remaining healthy phases as
+follows:
+                                                                        X  X  / 3 must match the mutual capacitive susceptance
+                                                                           1
+                                                                           l0
+                                                                                     1
+                                                                                     l1
+
+                                                                       CM . This concept is graphically illustrated in Fig. 6.
+                    I Ac  j• CM •  VB  VC                 (10)
+   From (10), we see that the magnitude of the coupling
+current is proportional to the mutual capacitance between the
+phases. Because long EHV transmission lines have a high
+mutual capacitance, single-pole tripping is not often successful
+under these conditions.
+   With the addition of a neutral reactor, the goal is to create
+an LC resonance circuit so that the paralleled circuit between
+phase conductors has an infinitely large impedance when
+viewed externally. In other words, the interphase inductive
+current supplied from the shunt reactor configuration should
+have the same magnitude as the capacitive current but with
+
+
+                                                                       Fig. 6.   Interphase LC resonance circuit
+                                                                                                                                               5
+
+   We know that the mutual capacitance (CM) is one-third of                        Using the calculated neutral-to-ground voltage (Vn), we can
+the difference between the zero-sequence (C0) and positive-                     determine the short-time VAR rating of the neutral reactor.
+sequence (C1) capacitances, which are known line parameters.                    Assuming that grounding reactors are installed at both
+The result of solving those equations is the required                           substations, the VAR rating for the reactor at one substation
+impedance of the neutral reactor:                                               can be calculated as follows:
+                                                                                                                     2
+                         1                                      
+                                                         1
+                                                   1                                                             Vn
+                    X n  •    •  C0  C1             X l1      (14)                             Sn                               (16)
+                         3                      X l1                                                          2 • Xn
+                                                                   
+                                                                                   Note that the reactor does not need to be rated for
+   If the reactor neutral point is directly grounded, the
+                                                                                continuous operation at this calculated reactive power level.
+wye-connected reactor group has identical positive-, negative-,
+                                                                                The reactor needs to be rated such that it is capable of
+and zero-sequence impedances. Effectively, the mutual
+                                                                                dissipating the heat during the fault-clearing time plus the pole
+inductive susceptance between the phases does not exist, and
+                                                                                open time. Prior to the breaker operating, the A-phase voltage
+there is no neutralization of capacitive current.
+                                                                                usually does not collapse to zero at the reactor location (except
+   The appendix includes the circuit diagram and details of a
+                                                                                in the case of a fault being close in to the terminal). This
+model power system implemented in a Real Time Digital
+                                                                                lowers the fault-time VAR rating of the reactor further. During
+Simulator (RTDS®). We used this model to validate the
+                                                                                the pole open period, all the energy stored in the faulted phase
+equations presented in this paper and to obtain the transient
+                                                                                is dissipated into the earth, thereby bringing the faulted phase
+and steady-state waveforms that are presented throughout this
+                                                                                potential close to zero or ground potential. The rating of the
+paper. We refer to this power system model as the test system.
+                                                                                neutral reactor (Sn) is a good indication of how fast the reactor
+   Using (10), we calculate the capacitance current supplied
+                                                                                absorbs VARs during the pole open period while the arc is
+by the B-phase and C-phase for an A-phase fault during a
+                                                                                being extinguished. Because the pole open period is much
+single-pole open condition for the test system as 84 Arms
+                                                                                longer than the fault-clearing time, Sn multiplied by the pole
+(120 Apeak). Comparing this calculated value with the
+                                                                                open time should be used to calculate the amount of energy
+secondary arcing current without neutralization (blue trace)
+                                                                                dissipated in the neutral reactor.
+from Fig. 7, we see that the values agree with one another.
+Fig. 7 also includes the fault current flowing to ground when
+                                                                                 III. EFFECTS OF A SHUNT REACTOR ON THE POWER SYSTEM
+the proper neutral reactor is installed (red trace). Note that the
+magnitude of the fault current is low enough for the arc to                        Shunt reactors amplify and introduce numerous behaviors
+self-extinguish.                                                                in the power system that would otherwise go unnoticed or be
+                                                                                nonexistent. This section deals with several of these
+                                                                                behaviors, organized into two categories: normal system
+                                                                                operation and faulted system operation.
+                                                                                A. Normal Power System Operation
+Fault Current (A)
+
+
+
+
+                                                                                   1) Reactor Energization
+                                                                                   Any device that has magnetic material in its construction is
+                                                                                prone to inrush currents during device energization. Shunt
+                                                                                reactors are either designed with air cores or with magnetic
+                                                                                cores with intentional air gaps. The purpose of both of these
+                                                                                designs is to increase the linearity of the device inductance,
+                                                                                which helps to reduce the harmonic content that the reactor
+                                                                                injects back into the power system. A reactor built with an air
+                                                                                core cannot saturate and thus is not prone to magnetizing
+Fig. 7. Comparison of secondary arcing current with and without neutral
+                                                                                inrush current. However, magnetic-core reactors, which are
+reactor
+                                                                                found almost exclusively on EHV lines because of their
+   Using (14), we calculate the impedance (Xn) or inductance                    superior energy density, often draw a slightly distorted
+(Ln) of the neutral reactor rather than its VAR rating. The                     sinusoidal current but with a significant dc component [5].
+neutral reactor only comes into play when a single-line-to-                     The slight distortion found in reactor inrush current is quite
+ground fault occurs on the system. With the A-phase                             unlike a power transformer inrush current, which is rich in
+experiencing a fault and the other two phases healthy, the                      second and fourth harmonics.
+voltage at the neutral of reactor bank (Vn) is:                                    The level of the dc component is most influenced by the
+
+                      Vn 
+                               VB  VC           VLN
+                                                                         (15)
+                                                                                point of the voltage waveform at which the reactor is
+                                                                                energized—a voltage zero crossing causing the worst offset.
+                             3   X l1 X n  3   X l1 X n 
+                                                                                This dc offset often takes several seconds to decay because of
+                                                                                the low losses exhibited by the reactor (high X/R ratio) and
+                                                                                can cause saturation of current transformers (CTs), as well as
+                                                                                saturation of local power transformers [6]. Because the
+                                                                                                                                                       6
+
+different phases of a saturated inductor draw unbalanced                    throughout the transmission line. This behavior is easily
+inrush current in the three phases, the neutral carries zero-               shown by examining (2). Here, we see that under no-load
+sequence current that might cause issues for zero-sequence                  conditions (i.e., the breaker at the receiving end is open), the
+protection elements.                                                        receiving-end current is zero and the ratio of the receiving-end
+   The reactor inrush current is only slightly distorted—even               voltage to the sending-end voltage is 1/A, where A has been
+when there is significant dc offset—because of the magnetic                 defined under (3).
+characteristics of the device. Shunt reactor magnetizing curves                A distributed line model was used for the transmission line
+are designed with a knee point around 1.25 pu of the operating              of the test system described. The positive-sequence line
+voltage, which is considerably higher than the knee point of a              impedance and shunt capacitance for this line are as follows:
+transformer, generally around 1.1 pu [2]. The shunt reactor has                                  Z1  107.6887.33 
+a greater operating range in the linear region compared with                                                                                         (17)
+that of a transformer. More importantly, the gaps introduced in                                  Y1  1.56290 mS
+the reactor core mean that the change in slope of the                          Computing the A factor using these circuit parameters
+magnetizing curve past the knee point of the core is much less              gives the following:
+dramatic than that of a transformer. Even when the reactor                                          A  0.9160.254                                 (18)
+core is operating in saturation, the gentler slope draws
+significantly less harmonic content compared with a power                      Thus, for the given model with the receiving end open-
+transformer.                                                                circuited, the receiving-end voltage is expected to be
+   Fig. 8 is a plot of the inrush current resulting from the                1/0.916 = 1.092, or approximately 9.2 percent higher than the
+energizing of a line reactor installed in the test system                   sending-end voltage. As the voltage level of the transmission
+described in the appendix. In the simulation, the reactor was               line increases, insulation degrades faster and surge arrestors
+energized at a voltage zero crossing. Notice from the plot how,             bleed off a steady-state current, reducing their useful life.
+unlike with transformer inrush current, the reactor inrush                     In order to maintain a level voltage profile, the shunt
+current is fairly sinusoidal but contains a significant dc offset.          reactors are switched in during times of light load. Adding
+                                                                            shunt reactors at both ends of the transmission line in the test
+           400
+                                                                            system has the following effect on the circuit constants of the
+           200                                                              transmission line:
+             0                                                                       VS   1         0 A B   1                 0   VR 
+                                                                                     I   Y         1   C D   YR _ reac   1   IR 
+                                                                                                                                                     (19)
+          –200                                                                       S   S _ reac
+          –400                                                                 where:
+          –600                                                                   YS_reac is the sending-end reactor admittance.
+          –800                                                                   YR_reac is the receiving-end reactor admittance.
+             0.2    0.3    0.4     0.5     0.6    0.7    0.8     0.9    1      Performing the matrix multiplication, we find the following
+                                         Time (s)
+                                                                            for the sending-end voltage:
+Fig. 8.   Shunt reactor inrush current when energized at voltage zero
+
+   An obvious but important point to mention is that shunt
+                                                                                                                    
+                                                                                           VS  A  B • YR _ reac • VR  B • I R                     (20)
+
+reactors installed on the bus stay energized so long as the bus                As before, we can compute the ratio of the receiving-end
+is energized and are not subjected to inrush currents when                  and sending-end voltages when the line is open-circuited as
+lines are switched in or out.                                               the inverse of the term (A + B • YR_reac), renamed Aeq. The B
+                                                                            term is simply the positive-sequence line impedance, and the
+   2) Overvoltage of Shunt Reactors                                         line is compensated at both ends using shunt reactors having
+   While overvoltage conditions can cause power
+                                                                            3.4 H/phase, resulting in an inductive admittance at 60 Hz of
+transformers to draw elevated third- and fifth-harmonic
+                                                                            –j0.78 mS. Substituting the known quantities into the
+currents, shunt reactors are rather immune to such operating
+                                                                            expression for Aeq and taking the reciprocal yields a value of
+conditions for the design reasons already mentioned. Because
+                                                                            approximately 1, meaning that the sending-end voltage equals
+the knee point of the reactor is around 1.25 pu of the nominal
+                                                                            the receiving-end voltage. This result stems from the fact that
+voltage, there is significant room for voltage increase before
+                                                                            the line reactors were sized to perfectly compensate the shunt
+the reactor core saturates. Additionally, if an overvoltage
+                                                                            capacitance of the transmission line.
+condition does cause core saturation, the third- and fifth-
+                                                                               The previous approximations of the ratio of the receiving-
+harmonic current content is limited because of the air gaps in
+                                                                            end voltage to the sending-end voltage are confirmed in the
+the reactor core.
+                                                                            test system. Fig. 9 shows the compensated and uncompensated
+   3) Shunt Reactors and System Loading Effects on the                      voltage profiles of the model with the receiving-end breakers
+Voltage Profile                                                             open. The ratio of the receiving end to the sending-end voltage
+   We have already mentioned that when a line is lightly                    of the uncompensated line is shown to be 623 kV/572 kV, or
+loaded, the VARs supplied to the power system exceed the                    109 percent, as was calculated previously. Additionally, by
+VARs consumed, which leads to elevated voltage levels                       inspection, the voltage magnitudes of the sending end and the
+                                                                                                                                                   7
+
+receiving end are equal when the line is compensated. The             B. Faulted Power System Conditions
+sending-end voltage differs between the two operating
+                                                                         1) Resonance With Line Capacitance
+conditions because of the voltage drop across the source                  When a single- or double-line-to-ground fault occurs and a
+impedance.                                                            transmission line experiences a three-pole trip, the healthy
+                                                                      phase(s) will experience resonance between the shunt reactors
+                                                                      and the shunt capacitance of the line.
+                                                                          This circuit resonance after fault clearing was demonstrated
+                                                                      in the test system, as depicted in Fig. 11, where the A-phase
+                                                                      experienced a fault to ground and the B-phase and C-phase
+                                                                      resonated after the breaker tripped all three poles. Note that
+                                                                      the B-phase and C-phase both experience an envelope
+                                                                      superimposed on their primary resonant frequency. This
+                                                                      envelope is a result of the circuit unbalance caused by the fault
+                                                                      at the instant the breakers open.
+                                                                                600
+Fig. 9.   Voltage profile of an unloaded line
+
+   As the line is loaded, the current in the line shifts from                   400
+
+being predominately capacitive to more resistive in nature, the                 200
+percentage of which depends upon the power factor. The                    VA
+resistive current flowing through the line inductance results in                  0
+                                                                          VB
+a voltage profile that droops in the direction of the power
+                                                                          VC –200
+flow. If the shunt reactors are left in, the inductive current they
+draw will further exacerbate the droop of the voltage profile.                 –400
+
+   Fig. 10 shows the voltage profile along the transmission                    –600
+line of the test system under heavy load conditions—both with                     0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75
+and without the shunt reactors switched in. The load current is                                          Time (s)
+
+825 A in the simulation.                                              Fig. 11. Phase-to-neutral voltages of the faulted and unfaulted phases before
+                                                                      and after the line is isolated
+
+                                                                         The frequency calculated from the three-phase voltages
+                                                                      before and after the breaker opened (line isolated) is shown in
+                                                                      Fig. 12. The frequency drops once the breaker opens because
+                                                                      the shunt reactors are sized to only compensate for 80 percent
+                                                                      of the line capacitance. This undercompensation results in a
+                                                                      resonant frequency that is below the nominal 60 Hz of the
+                                                                      system, typically by a few hertz.
+
+
+
+Fig. 10. Voltage profile of a loaded line
+
+   It is clear that, under heavy load conditions, the inductive
+current drawn by the reactor causes excessive voltage drop
+across the transmission line and therefore the reactors need to
+be switched out as the line load increases.
+   4) System Operation of Shunt Reactors
+    While the exact practices for operating shunt reactors will
+differ between American utilities, Oncor typically maintains
+its transmission-level voltages between 95 to 105 percent of
+the nominal operating voltage. Automated schemes are                  Fig. 12. Frequency of an unfaulted phase before and after the line is isolated
+designed to monitor the line load and voltage and switch                 2) Zero-Sequence Infeed
+reactors in and out as necessary to keep the voltage levels              As with any device connected to ground, shunt reactors can
+within the acceptable band. Reactors are often switched out on        be a source of zero-sequence infeed during faulted or system
+a daily basis, sometimes multiple times each day [7]. The             unbalance conditions. However, because their purpose is to
+exact number of times that the reactors are switched in and out       store energy, their zero-sequence impedance values tend to be
+varies with each line and is influenced by the autotransformers       much larger than system equivalent impedances (the zero-
+in the vicinity of the line, because this also impacts the line       sequence impedance of the reactor matches the zero-sequence
+magnitudes.                                                           impedance of the line). Therefore, they draw negligible zero-
+                                                                                                                                                            8
+
+sequence current. A simple diagram of the zero-sequence                      line-to-ground fault occurs on the transmission line, the
+circuit for the local line end during an internal single-line-to-            protection scheme can be designed to switch the reactor bank
+ground fault is shown in Fig. 13. The zero-sequence current                  back into service when the primary breaker has been opened,
+sourced through the reactor and line capacitance combination                 allowing for the extinction of the secondary arc. This scheme
+is dictated by a simple current divider.                                     would have a level of complexity associated with it.
+
+                                                                                         IV. CHALLENGES OF SHUNT REACTORS ON
+                                                                                                 PROTECTION SYSTEMS
+                                                                                Protection schemes either include the shunt reactors within
+                                                                             the line protection zone or exclude the shunt reactors from the
+                                                                             line protection zone. We begin by discussing the difference
+                                                                             between these two schemes and the protection issues unique to
+                                                                             each scheme; we then address issues that are experienced by
+                                                                             both schemes.
+                                                                             A. Including the Shunt Reactor in the Protection Zone
+                                                                                Fig. 14 is a sketch of the line protection zone when the line
+Fig. 13. Zero-sequence impedance diagram of the local end for a single-
+phase-to-ground fault                                                        reactor is included. The line reactor may be considered as an
+                                                                             extension of the line.
+   Solving for the ratio of the reactor/capacitor combination
+current to the source current (current seen by the relay) in
+terms of the zero-sequence impedances of the source and the
+reactor/capacitor gives the following:
+                          I0 _ Infeed       Z0 _ SRC
+                                                                     (21)
+                           I0 _ SRC         Z0 _ Infeed
+   where:
+     Z0 _ SRC is the zero-sequence impedance of the local
+     source.
+                   j• X 0 _ Cap • X 0 _ Reac
+     Z0 _ Infeed 
+                   X 0 _ Cap  X 0 _ Reac   
+     X 0 _ Cap is the zero-sequence capacitive line reactance.
+     X 0 _ Reac is the zero-sequence shunt reactance.
+   Equation (21) shows the following:
+      The zero-sequence current infeed is determined by the
+        compensation of the zero-sequence circuit (if the
+        system is 100 percent compensated, there is no infeed                Fig. 14. Sketch of a line shunt reactor included in the line protection zone
+        effect, or Z0_Infeed = ).
+                                                                                When shunt reactors are included in the line protection
+      The source strength determines the influence of the
+                                                                             zone, a fault in the reactor may result in the line protection
+        infeed effect; if the source is very weak, the reactor
+                                                                             operating and taking the line out of service. For example, a
+        infeed may become significant.
+                                                                             fault very close to the terminals of the reactor will have the
+   For the test system, the ratio of the reactor neutral current
+                                                                             same voltage and current profile as a fault close in to the line
+to the source neutral current during a single-line-to-ground
+                                                                             terminal and, as such, will be readily detected by the line
+fault was 2 percent when the reactor bank included a neutral
+                                                                             protection scheme. However, a fault close to the neutral of the
+reactor and 4.3 percent when the neutral reactor was removed.
+                                                                             reactor will not be detected by the line protection scheme.
+   3) Switching Operations for Single-Line-to-Ground Faults                  Fig. 15 shows the impedance as calculated by a phase-to-
+   As previously mentioned, many shunt reactors are sized to                 ground mho distance element for a ground fault close to the
+undercompensate in order to remain in service under nominal                  neutral of the reactor on the test system.
+load conditions. An added benefit of leaving the shunt reactors                 From Fig. 15, we can clearly see that the distance element
+in the system is that during single-line-to-ground faults, the               would never have detected this fault—the calculated
+neutral reactor is available for secondary arc extinction,                   impedance is 60 times greater than the Zone 1 reach
+provided that the neutral reactor is properly sized according to             (Z1G = 5 Ωsec). For this reason, the reactor is equipped with its
+the technique discussed in Section II. If the reactors have been             own protection scheme (e.g., a phase differential scheme).
+switched out because of heavy load conditions and a single-
+                                                                                                                                                                      9
+
+
+ Impedance (Ω Secondary)
+                           400                                                              The line reactor current can be subtracted from the line
+                           300                                                           breaker currents in two ways. The first method is external,
+                                                                                         connecting the CTs in parallel as shown in Fig. 17.
+                           200
+
+                           100
+                                                                                  Z1G
+                             0
+
+                           –100
+                              15   16   17   18   19    20    21   22   23   24     25
+                                                   Time (Cycles)
+
+Fig. 15. Calculated impedance for a fault close to the reactor neutral
+terminal
+
+   Some of the reasons for leaving the reactor within the line
+protection zone are as follows:
+     The scheme is less complex.
+                                                                                         Fig. 17. Summing the currents for the protected line zone externally by
+     The charging current compensation for the phase                                    connecting the CTs in parallel
+        differential (87P) element is unnecessary.
+                                                                                            The drawback of summing the CTs externally is that all the
+     The line cannot be kept in service without the shunt
+                                                                                         CTs must have the same ratio. If one of the CTs saturates, not
+        reactor.
+                                                                                         only will the saturated CT not faithfully reproduce its own
+     The shunt reactor has its own breaker and protection
+                                                                                         primary current but the healthy CTs will also circulate some of
+        scheme, and the line has the ability to autoreclose.
+                                                                                         their current through the saturated CT for an internal fault,
+        Under these circumstances, if a fault occurs within the
+                                                                                         thereby further decreasing the current presented to the relay.
+        reactor, the dedicated reactor protection scheme will
+                                                                                            The second method is internal. If the line is protected by a
+        trip the reactor breaker. If the line breaker is tripped,
+                                                                                         modern digital protective relay with more than one current
+        the line breaker can be reclosed via the autoreclose
+                                                                                         input, the line reactor current can be subtracted from the line
+        function so that the line will not be permanently
+                                                                                         breaker currents internally in the relay as follows:
+        tripped out of service for reactor faults.
+                                                                                                                   IBK1_ sec       I BK 2 _ sec       IREAC _ sec
+B. Excluding the Shunt Reactor From the Protection Zone                                                 I Line                                                   (22)
+                                                                                                                   TAPBK1          TAPBK 2            TAPREAC
+   The reason why reactors are excluded from the line
+protection zone is so that faults in the reactor do not result in                           where:
+the line being taken out of service. This applies to critical lines                                        CTPMax
+that can function without the use of a shunt reactor. To                                      TAPBK1 
+                                                                                                           CTPBK1
+exclude the reactors from the zone, the reactor currents must
+be subtracted from the current being supplied to the protection                                            CTPMax
+                                                                                              TAPBK 2 
+zone by the line breaker CTs. To accomplish this, the line                                                 CTPBK2
+reactors are fitted with their own CTs. This creates a
+                                                                                                           CTPMax
+protection zone as shown in Fig. 16.                                                          TAPReac 
+                                                                                                           CTPReac
+                                                                                              CTPMax  Max  CTPBK1 , CTPBK 2 , CTP Re ac 
+                                                                                              CTP is the CT primary current rating.
+                                                                                             Summing the currents internal to the relay allows the use of
+                                                                                         CTs with different ratios. Proper selection of the reactor CTs
+                                                                                         is important if the security of the scheme is to be guaranteed.
+                                                                                         We discuss this issue further in Section IV, Subsection E.
+                                                                                         C. Charging Current Compensation
+                                                                                           1) Steady State
+                                                                                            In Fig. 14 and Fig. 16, we see that from the power system
+                                                                                         point of view, nothing has changed. The line reactor
+                                                                                         compensates for the line charging current, and the effective
+                                                                                         current in the line is the load current (depending on the
+                                                                                         percentage reactor compensation), as shown in Fig. 18.
+
+
+
+
+Fig. 16. Breaker and shunt reactor CT connection
+                                                                                                                                                            10
+
+   ICHARGE                                                                              For ground differential (87G) elements, it will have a
+                                                                                         negligible effect for the same reason that it has no
+                                                                                         effect on the ground distance elements.
+                                                                     VLN                For phase differential (87P) elements, the charging
+                                                                                         current appears as a difference current; therefore, to
+  IREACTOR                                                       ILOAD ILINE             prevent the element from operating under steady-state
+                                                                      if
+                                                              ICHARGE IREACTOR
+                                                                                         conditions, the pickup current of the element will need
+                                                                                         to be increased.
+Fig. 18. Phasor diagram showing the relationship between the voltage and
+currents in the power system                                                                   jXL
+
+   From the protection scheme point of view, if the reactor is
+included in the protection zone, the current presented to the
+protection elements is reflective of the current in the primary
+system. This is not true for the protection scheme where the
+reactor is excluded. To see how the primary current and the
+current presented to the protection elements differ when the
+reactor is excluded, we assume the following. Breaker 1                                                                          Actual Load
+                                                                                                                                 Impedance
+(BK1) supplies k pu of the total current (for simplicity, we
+assume that the reactor and charging currents are supplied in                                                                                     R
+the same ratio) in the protection zone current and Breaker 2                                                        Calculated Load
+(BK2) the remainder:                                                                          –jXC                    Impedance
+
+             I BK1  kI Load  kIReac  kICap                                     Fig. 19. Sketch showing how not compensating for the capacitive current
+                                                                           (23)   affects the impedance calculated by a distance element
+             I BK 2  1  k  I Load  1  k  IReac + 1  k  ICap
+                                                                                     To summarize, the real charging current contributed from
+   Substituting this into (22), we obtain:                                        each end of the line is difficult to measure or calculate. For a
+                    I PROT _ line  IBK1  IBK 2   I Re ac                    line differential element, there is no need to know the
+                                                                           (24)   individual contribution as long as the total charging current
+                                 ILoad  ICap                                    can be subtracted from the zone current. If the reactor is
+   From (24), we see that the protection zone contains not                        excluded from the protection zone and charging current is not
+only the load current (ILoad) but also the line charging current                  subtracted from the zone current or if the shunt reactor is
+(ICap); therefore, to agree with what is seen by the primary                      included in the zone but not fully compensating for the line
+system current, the line charging current has to be subtracted                    charging current, the sensitivity of the phase differential
+from the protected line current. The line charging current can                    elements must be decreased (pickup setting must be
+be calculated by multiplying the susceptance (B) of the line by                   increased). The charging current, whether or not it is removed
+the derivative of the line voltage. If we subtract the line                       from the protection zone, has negligible impact on the
+charging current from the protection zone current (IPROT_line) in                 performance of the distance element.
+(24), we obtain the load current as shown by (25).                                   2) Transient State
+                                                    dV                               In a steady state, whether the relay calculates the charging
+                        I PROT  I PROT _ line  jB                               current based on voltage inputs and subtracts it from the
+                                                    dt                     (25)
+                                                                                  protection zone current in real time or the charging current is
+                                I Load
+                                                                                  counterbalanced by having the shunt reactor in the zone
+   This is, in effect, the same as if the reactor were not                        practically makes no difference. We now see if the same is
+removed from the protection zone. Should the line charging                        true under the following transient conditions:
+current not be subtracted from the protection zone current, the                         Line energization
+protection elements will be affected as follows:                                        In-zone fault
+     For ground distance (21G) elements, it will have a
+        negligible effect because, under normal system
+        conditions, the negative- and zero-sequence charging
+        currents are negligible.
+     For phase distance (21P) elements, it will result in the
+        phase currents becoming more capacitive and moving
+        the measured impedance towards the –jXC axis and
+        closer towards the origin, as shown in Fig. 19.
+                                                                                                                                                         11
+
+       a) Line Energization
+    Fig. 20 is the circuit diagram of a section of a simple power
+system; by closing the breaker, the line is energized. At the
+instant the line is energized (breaker closes), the capacitor
+appears as a short circuit and the shunt reactor appears as an
+open circuit because of the high frequency transient.
+Therefore, the initial current drawn when the breaker is closed
+is current to charge the capacitor.
+
+                ZS             BK                    ZL
+
+                                                                               Fig. 21. Difference between the reactor and capacitor currents due to inrush
+
+                                                                                   Suppose that the protection design includes the reactor in
+                             IDIF_LC
+                                                      IC                       the protection zone, fully removing the charging current seen
+                                                              XCap
+ ES                                          XReac                             by the relay in a steady state. However, at line energization,
+                                                                               the shunt reactor and line capacitance behave differently
+                                                                               because of the presence of high-frequency transients, which
+                                                                               results in transient difference currents (Fig. 21) that are
+                                                                               detected by line differential schemes. To facilitate discussion
+Fig. 20. Resonance between the series reactance and shunt capacitance          later in this section, we define this current as IDIF_LC. In
+   The magnitude of the current drawn by the capacitor is                      summary, during the first few cycles after energization, the
+determined by the sum of the impedances of the line and the                    inductive current does not cancel the capacitive current
+source (mainly inductive). The frequency of the current drawn                  because during the initial energization period, the line shunt
+is determined by the sum of the series inductances of the                      capacitance is the primary current sink until the line voltage is
+source and line (LS + LL) and the shunt capacitance of the line                elevated. The result is the difference current (IDIF_LC) between
+(CL). This is known as the resonance frequency, given in                       the shunt reactor and the line shunt capacitance. This current
+hertz, and is determined as follows:                                           is rich in third harmonics for our test system.
+                                                                                   The differing behaviors of the line reactor and the line
+                                       1
+                       f                                               (26)   shunt capacitance during energization conditions not only
+                            2  LS  L L  • C L                              challenge the scheme when the reactor is included in the
+                                                                               protection zone but also challenge the protection scheme when
+   As the line capacitor becomes charged, the voltage across
+                                                                               the line reactor is excluded from the protection scheme and the
+the capacitor increases, meaning the voltage across the shunt
+                                                                               charging current is calculated. To reduce complexity in
+reactor increases. This has the following two effects:
+                                                                               implementation, a lumped capacitance model of the
+      The current drawn by the capacitor decreases.
+                                                                               transmission line (in favor of a distributed capacitance model)
+      The shunt reactor begins to draw current from the
+                                                                               is frequently used in digital relays. The transfer functions of
+        source.
+                                                                               these two models differ, with the difference being more
+   The rate at which the capacitor is charged is known as the
+                                                                               pronounced as the line increases in length. Fig. 22 compares
+time constant and is determined by the sum of the source                       the charging current waveform from a digital simulation using
+resistance and line resistance (RS + RL) and the shunt
+                                                                               the Bergeron model (distributed model) with the result of an
+capacitance of the line (CL).
+                                                                               instantaneous C • (dV/dt) calculation using the lumped model.
+                             R S  R L  • CL                        (27)
+                                                                                                                            ICC_Distributed
+   When the capacitor is fully charged, the system draws                             2000
+                                                                                                                             ICC_Lumped
+current at the nominal frequency of the power system. For the
+                                                                                     1000
+power system in the appendix, the resonance is calculated at
+close to 180 Hz (third-harmonic frequency). This is confirmed                           0
+by a snapshot of the RTDS simulation in Fig. 21, which plots                       –1000
+the difference between the current drawn by the shunt reactor
+and the shunt capacitance (IDIF_LC in Fig. 20).                                    –2000
+
+
+                                                                                             0.28 0.3 0.32 0.34 0.36 0.38 0.4 0.42 0.44 0.46 0.48
+                                                                                                                   Time (s)
+
+                                                                               Fig. 22. Accuracy of the charging current estimation
+
+                                                                                 If we examine Fig. 22, we observe that initially, the two
+                                                                               models respond differently. However, as the high-frequency
+                                                                               component dies out, the two models agree with one another.
+                                                                                                                                                      12
+
+   The reason for the difference is that the lumped model does                       dynamic response is obtained than if the reactor is within the
+not correctly compensate for the higher harmonic currents.                           protection zone (Option 2, blue line). However, in both
+This can be proven by subtracting the charging current of the                        instances, the difference current is less than 20 percent of the
+lumped model from the distributed model.                                             full-load current of the line CT (1200/5). This difference
+                            I DIF _ CALC  ICC _ Distributed  ICC _ Lumped   (28)   would not cause a misoperation of either the distance (21P) or
+                                                                                     phase differential (87P) elements. Still, the first option is more
+   The result, IDIF_CALC in Fig. 23, has a very similar frequency                    secure than the second option during single-end feed transients
+and magnitude to the difference current (IDIF_LC) shown in                           such as capacitive inrush. The rich harmonic content of the
+Fig. 21.                                                                             differential current justifies the idea of using these currents to
+                                                                                     boost the fundamental restraint of the 87L element. This way,
+                  1500                                                               the sensitivity of the element does not need to be
+                  1000                                                               compromised.
+                                                                                        Typically, the reactor only compensates for 70 to
+ IDIFF_CALC (A)
+
+
+
+
+                   500
+                      0
+                                                                                     80 percent of the charging current. It is possible to calculate
+                                                                                     the line charging current and only subtract the portion of the
+                  –500
+                                                                                     charging current not compensated by the reactor from the
+                  –1000
+                                                                                     current entering the protection zone (compensated for net
+                  –1500
+                                                                                     capacitance). This is usually not done because more sensitive
+                          0.28 0.3 0.32 0.34 0.36 0.38 0.4 0.42 0.44 0.46 0.48       87L settings can be applied by letting the relay compensate for
+                                                 Time (s)                            full line charging current because the relay needs to run such a
+Fig. 23. Difference between the calculated (lumped) and measured                     calculation anyway.
+(distributed) capacitance currents during line energization                                  b) In-Zone Faults
+    Note that the difference between the distributed model and                          We know that the charging current drawn by a transmission
+                                                                                     line is dependent on the susceptance (jB) of the line and the
+the lumped model appears as a differential current in the 87LP
+                                                                                     voltage of the line. During a fault condition, the line
+element. Most digital relays operate on fundamental quantities
+only (a finite impulse response [FIR] filter is used to remove                       susceptance does not change but the voltage magnitude along
+                                                                                     the line decreases, as shown by Fig. 25.
+all other harmonic frequencies); therefore, our focus is on the
+fundamental component of the differential current. Fig. 24
+plots the magnitude of fundamental quantities with respect to
+time.
+
+
+
+
+                                                                                     Fig. 25. System voltage magnitude profile for an in-line fault
+
+                                                                                        A decrease of the line voltage results in not only the line
+Fig. 24. Fundamental component of difference currents                                charging current decreasing but also the compensation current
+   The green line represents the differential current when the                       from the reactor decreasing. Therefore, when the reactor is
+reactor is taken out of the protection zone and the relay does                       included in the protection scheme, the reactor current and line
+not perform charging current compensation for the differential                       charging current magnitudes change in a similar way.
+(87L) element. The blue line represents the differential current                     However, the reactors are connected to the terminals of the
+when the line reactor is inside the protection zone. The red                         line where, for an in-line fault, the voltages will be higher than
+line represents the differential current when the reactor is                         any other location of the line. The capacitive current drawn by
+taken out of the protection zone and the charging current is                         the line is determined by the susceptance (B) of the line and
+compensated for in the 87L elements. From Fig. 24, we see                            the average line voltage. Because the average voltage of the
+that the fundamental component (60 Hz) of the difference                             line (VoltageAVE) for an in-line fault will be lower than the
+current between the reactor and the line shunt capacitance is                        terminal voltage, the charging current for the line will be
+lower than the root-mean-square (rms) current shown in                               lower. The result is that during an in-line fault condition, the
+Fig. 21, where the primary current of 1,500 Apeak translates to                      reactor current decrease is lower than the charging current
+a secondary current of roughly 4.4 Arms. We can also see that                        decrease. Because the reactor typically only compensates for
+by calculating the charging current and then subtracting it                          70 to 80 percent of the charging current, the difference
+from the protection zone current (Option 1, red line), a better                      becomes less significant under these in-line fault conditions.
+                                                                                                                                                 13
+
+   When the reactor is excluded from the protection zone, the                         From Fig. 26, we can see that during the prefault and fault
+reactor current will also decrease because of the decrease in                      time periods, the voltage magnitude calculated by the relay is
+the line voltage. If the charging current is calculated using the                  consistent; however, once the line is isolated, the calculated
+measured line voltage, this is a self-regulating process because                   voltage is no longer consistent but is oscillatory. The reason
+the charging current calculated by the relay will be greater                       for this is that the relay is sampling this voltage at an integer
+than the actual charging current (the relay will use the line                      value of 60 Hz when the system is in fact at 49 Hz, which is
+terminal voltage to calculate the charging current of the line                     why the magnitude calculation is oscillating. As the relay
+and not the actual average voltage of the line). Therefore, the                    tracks to the new frequency, the oscillation decreases and the
+reactor current and calculated charging current remain in the                      magnitude calculation becomes more stable. The problem is
+same ratio to each other as before the fault because both see                      that the relay memorizes the voltage at a frequency of 49 Hz
+the same terminal voltage. If the reactor is excluded from the                     and the relay uses that voltage once the line is re-energized,
+protection zone and the charging current is determined by a                        which can lead to a misoperation of the distance elements. To
+method not involving the measured line voltage, the reactor                        prevent such a situation, distance relays need to be equipped
+current and charging current will not self-regulate during a                       with ringdown detection logic to flush the memory voltage
+fault condition. As a result, the relay will be presented a                        (set memory voltage to zero), so when the line is re-energized,
+charging current greater than in the actual primary power                          the distance elements will be momentarily blocked (0.5 to
+system. It can be argued that during fault conditions for a                        0.75 cycle) while the memory voltage is recharged. If a relay
+strong system, the fault current is much larger than the                           does not have ringdown logic to clear the memory voltage as
+charging current and, as such, this becomes a nonissue;                            described, then we extend the reclosing open interval delay
+however, this influences the accuracy of impedance-based                           beyond the relay memory action.
+fault location methods.                                                               In a similar manner, for a single-pole tripping design, the
+                                                                                   voltage from the opened phase should be excluded from either
+D. Reactor Ringdown
+                                                                                   frequency tracking or the memory voltage calculation. The
+    Fig. 11 is a plot of the line voltages for a fault on the test                 unfaulted phases still provide voltages that can be used to
+power system. As we can see, once the line is isolated, the                        update the polarization voltage so that the distance protection
+voltages on the unfaulted phases begin to oscillate and ring                       need not be interrupted.
+down. The reason for this is explained in Section III. We can
+ask, “Why does this impact the protection scheme?” The line                        E. Reactor CT Selection Criteria
+is isolated, and the fault is cleared. This is a valid argument                       It could be argued that this section is only valid for
+unless the protection scheme being used is a distance                              protection schemes where the reactor is excluded from the
+protection scheme where the distance elements are polarized                        protection zone, but the data presented here are also relevant
+using memory voltage and the potential transformers (PTs) are                      for schemes where the reactor is included in the line protection
+located on the line. Under these conditions, the memory                            zone. We examine how both ac and dc saturation of the CTs
+voltage logic may memorize the ringdown voltage and use this                       can affect the performance of the protection scheme and what
+when the line is re-energized. From Fig. 12, we see that for                       measures can be taken to secure the schemes under such
+our test system, once the line is isolated, the energy trapped in                  conditions.
+the shunt reactor and capacitor results in a voltage that has a
+                                                                                      1) DC Saturation
+frequency of approximately 49 Hz. To see how this impacts
+                                                                                       As pointed out in Section III, when a reactor is energized,
+the memory voltage of a distance relay, we plot the voltage
+                                                                                   the core saturation and magnetizing inrush are not as severe as
+magnitude as calculated by a distance relay before, during,
+                                                                                   in the case of a power transformer. The concern for protective
+and after a fault. Fig. 26 is a plot of the voltage magnitude as
+                                                                                   relay applications for reactors is the large X/R ratio of the
+calculated by a distance relay for a fault on the same test
+                                                                                   reactor, which may produce a slowly decaying dc offset when
+system.
+                                                                                   the reactor is energized. This long-lasting dc component can
+                                                                                   drive the reactor CT into saturation. A well-known equation
+                                                                                   for selecting CTs to avoid saturation is [8]:
+ Voltage Magnitude (V)
+
+
+
+
+                         80
+                              Prefault
+                                                                                                         X
+                         60
+                                                                                                        1   • I • R b  ALF                  (29)
+                                                                                                         R
+                         40
+                                                                                      where:
+                         20
+                                         Fault                                         I is the pu current.
+                         0
+                                                 Post-Fault                            Rb is the pu burden resistance.
+                                           20            40              60   80
+                                                         Time (Cycles)
+                                                                                       ALF is the accuracy limit factor (20 for C-class CTs).
+Fig. 26. Voltage magnitudes as calculated by a distance element before,
+during, and after a fault on the test system
+                                                                                                                                   14
+
+   Even though reactors draw a relatively small energization
+current and the CT burden for a digital relay and associated
+wiring is low, the X/R value of the reactor is high enough to
+violate the criteria in (29). Therefore, it is desirable under                   BK1
+
+unfaulted system conditions for a protective relay to detect if
+                                                                                                                    Remote End
+the dc component of any current input is greater than a
+percentage of the ac component, as shown in Fig. 27.
+
+
+                                                                                 BK2
+
+
+
+
+                                                                                                                  Reactor
+
+Fig. 27. DC saturation detection logic
+
+   For a distance protection (21P) scheme, CT saturation            Fig. 28. External fault at reactor terminal
+translates into an underreaching condition, so a misoperation
+of the distance element due to dc saturation under unfaulted           This means that the possibility of the reactor CT saturating
+system conditions is not an issue. However, the sensitivity of      is very high. When selecting a reactor CT, it may not be
+the scheme is compromised. One way to restore the sensitivity       possible to select a CT that meets the criteria given by (29). If
+of the scheme is that if the current signal that experiences high   this is the case, ensure that the following are met.
+dc content is from the line reactor, we can include the reactor             a) Distance Element
+in the protection zone and not compensate for the charging             The reverse directional elements can assert before the CT
+current. This method has the drawback that a fault in the           saturates (typically 0.75 to 1 cycle). Directional elements have
+reactor will result in the line being tripped.                      a high tolerance for CT saturation.
+   For a differential (87L) element, CT saturation decreases                b) Differential Element
+the security of the scheme. Therefore, if the relay detects high       For this element, it is suggested that the relay be equipped
+dc content on any of the current inputs, the differential           with external fault detection logic. This logic secures the
+element should be switched into a high-security mode [9]. The       differential element in the presence of high-magnitude ac fault
+following may be designed into a high-security mode:                currents. The logic requires that the CT faithfully reproduce
+                                                                    the primary current for 0.25 cycle. The external fault detection
+      The pickup current setting is increased.
+                                                                    logic in Fig. 29 measures the change in the difference current
+      The slope setting is increased.
+                                                                    (IDIF) and restraint current (IRST). If the logic detects a change
+      The security counts are increased.                           in the restraint current without a corresponding change in the
+   In high-security mode, the 87L element is not blocked but        difference current for 0.25 cycle, the logic declares the fault as
+the sensitivity of the element is decreased.
+                                                                    external.
+   For a directional overcurrent (67Q or 67G) element, CT
+saturation produces secondary sequence currents that do not                abs
+exist in the primary circuit. Due to the lack of sequence
+voltage, an impedance-based directional element with an
+offset characteristic may see the fault as forward. Proper
+security can be provided by performing the following:
+                                                                                                   abs
+      Increasing the pickup current setting.
+      Increasing the positive-sequence restraint factor.
+   Note that either of these actions reduces the fault resistance
+coverage.
+   2) AC Saturation
+   Should a fault occur within the reactor zone close to the        Fig. 29. External fault detection logic
+terminals of the reactor (Fig. 28), the fault current will be the
+same as for a fault directly in front of the relay—the only            Similar to the dc saturation logic when the relay detects the
+difference is that the reactor CT will see much more current        fault as being external, the differential element is switched
+than either of the breaker CTs.                                     into high-security mode.
+                                                                                                                                                 15
+
+F. Breaker Failure Consideration                                                                    TABLE I
+                                                                                 525 KV OVERHEAD TRANSMISSION LINE SYSTEM DATA
+   If the line protection device has enough current inputs to
+facilitate each individual CT that bounds the line zone at one                              Parameter                              Value
+terminal, then the line protection device can provide                                 Rated line-to-line voltage                   525 kV
+individual breaker failure protection for each breaker.
+                                                                                             Line length                          200 miles
+   Should the protection device not have enough current
+inputs to individually facilitate each CT that bounds the                                Z1L (positive-sequence impedance)    107.68 Ω87.33°
+protection zone and two or more CTs are paralleled externally                              r (positive-sequence resistance)     0.0251 Ω/mile
+before being input to the protection device, then the line
+                                                                                           l (positive-sequence inductance)     1.427 mH/mile
+protection device should not be called upon to facilitate
+breaker failure protection. This is because the line relay will                            Z0L (zero-sequence impedance)      434.48 Ω82.19°
+not be able to distinguish which current is associated with                                  r (zero-sequence resistance)       0.2952 Ω/mile
+which breaker. In this case, breaker failure protection should              Line            l (zero-sequence inductance)        5.709 mH/mile
+be performed by a separate device on a per-breaker basis.                 impedance
+                                                                                               B1L (positive-sequence
+                                                                                                                                  1.562 mS
+                                                                                            capacitive shunt susceptance)
+                        V. CONCLUSION
+                                                                                         C1 (positive-sequence capacitance)    0.02071 µF/mile
+    Shunt reactors are used in power systems to counteract the
+effect of the line parasitic capacitance, thereby stabilizing the                           B0L (zero-sequence capacitive
+                                                                                                                                  0.730 mS
+                                                                                                  shunt susceptance)
+system voltage within acceptable limits. The greatest threat
+posed by shunt reactors to sensitive line protection (67Q, 67G,                            C0 (zero-sequence capacitance)      0.00969 µF/mile
+87LQ, and 87LG) schemes is when they are energized or they                               Z1S (positive-sequence impedance)       35 Ω88.0°
+                                                                      Local source
+experience faults close to their terminals if the reactor is           impedance           Z0S (zero-sequence impedance)         45 Ω88.0°
+excluded from the protection zone. For these situations, it is
+recommended that the protection scheme be secured by dc                    Remote        Z1R (positive-sequence impedance)      200 Ω83.0°
+saturation and external fault detection logic.                              source
+                                                                          impedance        Z0R (zero-sequence impedance)        250 Ω83.0°
+    Infeed from the shunt reactor during faults on the power
+system is not a concern because the percentage of fault current                         Nominal load current                        800 A
+contributed by the shunt reactor is negligible and, for all
+practical purposes, can be neglected.                                                             VII. REFERENCES
+    Distance relays that are memory voltage polarized and are       [1]     W. D. Stevenson, Jr., Elements of Power System Analysis, 4th ed.
+connected to the power system via line PTs need to be fitted                McGraw-Hill, 1982.
+with ringdown detection so as not to corrupt the memory             [2]     Z. Gajić, B. Hillström, and F. Mekić, “HV Shunt Reactor Secrets for
+voltage when the line is de-energized.                                      Protection Engineers,” proceedings of the 30th Annual Western
+                                                                            Protective Relay Conference, Spokane, WA, October 2003.
+    When applying sensitive protection elements, excluding the
+                                                                    [3]     E. W. Kimbark, “Suppression of Ground-Fault Arcs on Single-Pole
+reactor from the line protection zone requires the protection               Switched EHV Lines by Shunt Reactors,” IEEE Transactions on Power
+device to compensate for the line charging current, whereas if              Apparatus and Systems, Vol. 83, Issue 3, pp. 285–290, March 1964.
+the reactor is included in the zone of protection, this is not      [4]     IEEE Standard 1048-2003, IEEE Guide for Protective Grounding of
+strictly required. When considering line protection, there is not           Power Lines.
+a significant advantage in including or excluding the shunt         [5]     CIGRE WG 13.07, “Controlled Switching of HVAC Circuit Breakers:
+                                                                            Guide for Application,” Part 2, ELECTRA, No. 185, August 1999.
+reactor from the protection zone.
+                                                                    [6]     D. Goldsworthy, T. Roseburg, D. Tziouvaras, and J. Pope, “Controlled
+                                                                            Switching of HVAC Circuit Breakers: Application Examples and
+                         VI. APPENDIX                                       Benefits,” proceedings of the 34th Annual Western Protective Relay
+                                                                            Conference, Spokane, WA, October 2007.
+   This appendix includes the circuit diagram and details of an
+                                                                    [7]     IEEE Standard C37.015-2009, IEEE Guide for the Application of Shunt
+RTDS model power system. We used this model to validate
+                                                                            Reactor Switching.
+the equations presented in this paper and to obtain the             [8]     G. Benmouyal, J. Roberts, and S. E. Zocholl, “Selecting CTs to
+transient and steady-state waveforms that are presented.                    Optimize Relay Performance,” proceedings of the 23rd Annual Western
+   ES                                                      ER               Protective Relay Conference, Spokane, WA, October 1996.
+                                                                    [9]     B. Kasztenny, G. Benmouyal, H. J. Altuve, and N. Fischer, “Tutorial on
+            ZS                 ZLINE               ZR                       Operating Characteristics of Microprocessor-Based Multiterminal Line
+                                                                            Current Differential Relays,” proceedings of the 38th Annual Western
+                                                                            Protective Relay Conference, Spokane, WA, October 2011.
+
+
+
+
+Fig. 30. RTDS model power system used
+                                                                                 16
+
+                          VIII. BIOGRAPHIES
+Eithar Nashawati is a conceptual design engineer in system protection at
+Oncor Electric Delivery and a Ph.D. student with the School of Electrical
+Engineering at the University of Texas at Arlington. He received his MSEE
+degree from the University of Texas at Arlington in 2004. He received his
+BSEE degree from the University of Damascus in 1999. He worked as a lead
+protection and control engineer and as an area substation engineer at Progress
+Energy. Mr. Nashawati is a registered professional engineer in the states of
+Texas and North Carolina.
+
+Normann Fischer received a Higher Diploma in Technology, with honors,
+from Witwatersrand Technikon, Johannesburg in 1988, a BSEE, with honors,
+from the University of Cape Town in 1993, and an MSEE from the University
+of Idaho in 2005. He joined Eskom as a protection technician in 1984 and was
+a senior design engineer in the Eskom protection design department for three
+years. He then joined IST Energy as a senior design engineer in 1996. In
+1999, he joined Schweitzer Engineering Laboratories, Inc. as a power
+engineer in the research and development division. Mr. Fischer is currently a
+member of IEEE and ASEE.
+
+Bin Le received his BSEE from Shanghai Jiao Tong University in 2006 and
+an MSEE degree from the University of Texas at Austin in 2008. He has been
+employed by Schweitzer Engineering Laboratories, Inc. ever since. Mr. Le
+currently holds the position of power engineer in the research and
+development division.
+
+Douglas Taylor received his BSEE and MSEE degrees from the University
+of Idaho in 2007 and 2009. Since 2009, he has worked at Schweitzer
+Engineering Laboratories, Inc. and currently is a power engineer in the
+transmission engineering group of the research and development division.
+
+
+
+
+                © 2011, 2013 by Oncor Electric Delivery and
+                 Schweitzer Engineering Laboratories, Inc.
+                            All rights reserved.
+                          20131121 • TP6515-01
+

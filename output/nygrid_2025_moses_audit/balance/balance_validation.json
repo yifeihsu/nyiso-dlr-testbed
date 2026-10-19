@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "input_files_unchanged": true,
+  "years": [
+    {
+      "year": 2019,
+      "hours": 8760,
+      "gamma": 1.0,
+      "pd_scope": "net_of_some_renewables",
+      "time_scope": "released_prepared_naive_local_labels",
+      "maximum_cut_identity_residual_mw": 2.7284841053187847e-12
+    },
+    {
+      "year": 2025,
+      "hours": 8663,
+      "gamma": 0.30012075175285535,
+      "pd_scope": "gross_load",
+      "time_scope": "physical_UTC_hours",
+      "maximum_cut_identity_residual_mw": 2.3874235921539366e-12
+    }
+  ],
+  "identity": "Moses = ZoneD generation - ZoneD PD - ZoneD GS + Ontario-to-D AC inflow",
+  "identity_scope": "model lossless regional balance; not an observed tie-flow identity",
+  "cross_year_comparison_is_causal": false,
+  "original140_to_slim148": {
+    "mean_change_public_mw": 1.2372399187398435,
+    "maximum_absolute_change_public_mw": 5.542131413947573
+  },
+  "error_correlations_not_causal": {
+    "Ontario_to_D_mw": 0.46390380868559733,
+    "zone_D_PD_mw": 0.41111944893122637,
+    "zone_D_total_PG_mw": -0.13345850025966666
+  },
+  "files": [
+    {
+      "path": "output/nygrid_2019_full_stage1/full_year.mat",
+      "sha256": "bc4627bf45c8964979dc6dfece4cef64700ad1c4052ac06f8de05f5ee89df4d0"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch.mat",
+      "sha256": "0599e66f1bce13cbb9204bba74d6578a94dc34bea2ba4c1b56493ea33492707c"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_network.mat",
+      "sha256": "7fa16e2160edfe79b0ce26ae9262ecac9f1bd4dfde8196637d896e34567451d3"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/dispatch_priors.mat",
+      "sha256": "495afac0bf995fc2dd4dcc9b107d272da3352154ae889910b62747fe1edad883"
+    },
+    {
+      "path": "output/nygrid_2025_dispatch/dispatch/model_generator_register.csv",
+      "sha256": "7c613350f8cb397dc80fbfffd78d1a5e6e8e956e46cccdb6fc3a238af0615dda"
+    },
+    {
+      "path": "output/nygrid_2025_inputs/load_source/interface_wide.csv",
+      "sha256": "3ed332c89e2d792352e8001e9756802713cc4713b799fc7bccb2aa2b7a4c398f"
+    },
+    {
+      "path": "output/nygrid_2025_slim/replay/topology_dated.mat",
+      "sha256": "7d86bea37e48f392a61b52b291e3e46638c56f50202d7fccf3688bb75a4b47b9"
+    }
+  ]
+}

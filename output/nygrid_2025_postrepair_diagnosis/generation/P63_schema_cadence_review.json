@@ -1,0 +1,41 @@
+{
+  "archive_month": "2025-01",
+  "daily_files": 31,
+  "columns": [
+    "Time Stamp",
+    "Time Zone",
+    "Fuel Category",
+    "Gen MW"
+  ],
+  "rows": 64295,
+  "fuel_categories": [
+    "Dual Fuel",
+    "Hydro",
+    "Natural Gas",
+    "Nuclear",
+    "Other Fossil Fuels",
+    "Other Renewables",
+    "Wind"
+  ],
+  "hydro_rows": 9185,
+  "date_start": "2025-01-01 00:05:00",
+  "date_end": "2025-02-01 00:00:00",
+  "hydro_time_deltas_seconds": {
+    "300.0": 8724,
+    "84.0": 18,
+    "90.0": 12,
+    "66.0": 10,
+    "96.0": 9,
+    "6.0": 8,
+    "234.0": 8,
+    "114.0": 7,
+    "102.0": 6,
+    "132.0": 6,
+    "168.0": 6,
+    "28.0": 6
+  },
+  "median_Hydro_interval_seconds": 300.0,
+  "nominal_five_minute_share": 0.9499128919860628,
+  "has_generator_name_or_PTID_column": false,
+  "scope": "Observed 2025-01 source-schema and nominal-cadence check; not certification of every annual interval."
+}

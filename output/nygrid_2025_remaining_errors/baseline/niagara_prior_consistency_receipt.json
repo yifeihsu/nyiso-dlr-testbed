@@ -1,0 +1,169 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-15T06:04:20.937587+00:00",
+  "git_branch": "codex/s13-phase1b-upny-coned",
+  "git_HEAD": "303b626bcab43215c839ad7e175e7274f25b4bdc",
+  "current_qualified_hours": 8170,
+  "original_DC_counterfactual_cohort_hours": 8651,
+  "source_hashes_unchanged": true,
+  "current_RMN_vs_counterfactual_baseline_max_difference_public_MW": 4.547473508864641e-13,
+  "earlier_generation_audit_dispatch_vs_current_max_difference_public_MW": 7.45165004523983,
+  "NY_gross_load_export_vs_current_annual_max_difference_model_MW": 2.7284841053187847e-12,
+  "EIA_calendar_mean_minus_current_selected_mean_range_public_MW": [
+    96.74149799539668,
+    172.47973328507646
+  ],
+  "EIA_minus_current_selected_mean_positive_months": 12,
+  "current_minus_frozen_prior_monthly_mean_range_public_MW": [
+    0.2811105651738891,
+    2.6308774343253596
+  ],
+  "interpretation": [
+    "Observed minus complete-cut midpoint is an oracle net-injection correction conditional on a midpoint meter convention and all other terms held fixed.",
+    "Holding the primary-minus-midpoint terminal effect fixed instead gives observed minus primary. Neither correction is observed Niagara dispatch or identifies its cause.",
+    "Full-calendar EIA mean minus selected-hour dispatch compares different populations; interpreting it as selected-hour correction requires representative missing hours.",
+    "Saved DC counterfactuals retain original 8651-hour design and monthly constraints. Only scoring is remasked to8170; no source constraint is retargeted and no current AC counterfactual is solved.",
+    "Load and source associations are descriptive correlations after stated group demeaning, not causal estimates."
+  ],
+  "default_model_changed": false,
+  "new_PF_run": false,
+  "sources": [
+    {
+      "path": "output/nygrid_2025_ac_loss_revision/comparison/combined/comparison_arrays.npz",
+      "sha256": "f54b5fc8425ed910da20711d7890e20b7de699ebf2330c7244e5cf9d64d50bad",
+      "bytes": 6349492
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/target_plant_hourly_audit.npz",
+      "sha256": "dd35edf7a7edcaee68013e302012ac9a2e0e7bb7c1b79855d5074268b8f6c5ad",
+      "bytes": 288586
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/generation/target_EIA923_final_monthly.csv",
+      "sha256": "271369eb6ba82dc55ffd892f67180e0a14e4f8f50411d28f6f238b9866f46e5d",
+      "bytes": 9513
+    },
+    {
+      "path": "output/nygrid_2025_western_audit/corrected/model_generator_register.csv",
+      "sha256": "5178d5c41b15891e25a1103451dbb6d859343fe48d411a04b37ff5ca4ff9bf05",
+      "bytes": 190996
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/accounting/current_gate_terms.csv",
+      "sha256": "4d6ba41f3b9544830701cd3784d59601068e712fab295fa25c729b86a4a23a92",
+      "bytes": 16691978
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/latest_model.mat",
+      "sha256": "3ed5353b4323994d36aa52d9e1640383d4ccc7ca30e168558e51d4bee4651171",
+      "bytes": 802063
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h0001_4380.mat",
+      "sha256": "0222fbfe420ace957477133fc5ffe99433c484ae27cd101ce4ac68cbf8110bc4",
+      "bytes": 54625507
+    },
+    {
+      "path": "output/nygrid_2025_latest_handoff/model/profiles_h4381_8760.mat",
+      "sha256": "d9f831e3e7600e3e8462ffd1b4ffec7d7e974d5ddae901f6c8c0ad1d5200dacf",
+      "bytes": 54767622
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/baseline.npz",
+      "sha256": "9b5f3deb8bf6d13a3fdc879628f45dde6a8812498c9f8a53089d014ce681c160",
+      "bytes": 10142208
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_legacy_bounded_outside_ab.npz",
+      "sha256": "1049e9a800696ec4740c68f73f24ea175ea9414eb80e4c4b0efdc5bd3a1682d2",
+      "bytes": 10140649
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_legacy_bounded_all_other.npz",
+      "sha256": "298f3b88ff6879fdb41cd099d04e0b85ec2a6259eac2345ec1c8a9ce700610e2",
+      "bytes": 10140756
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_literal_outside_ab.npz",
+      "sha256": "61f644b2d3f62582947dd53077139dd8f04604b6efc7ee57977edc2769321445",
+      "bytes": 10142037
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_literal_all_other.npz",
+      "sha256": "3a20b1193e0df277723550dd892d773dfd4fcfa480f22d6721e288835da03ae3",
+      "bytes": 10142340
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_constrained_outside_ab.npz",
+      "sha256": "9446489485cf797cf9fe3794315c9a4da17f20e74cc24934167d86142461dca8",
+      "bytes": 10141930
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/replay/niagara_month_shape_constrained_all_other.npz",
+      "sha256": "0af7e8f6d341065cd562ab4e1270584a49fefd7a6c743e8f6e5beb3373180fd8",
+      "bytes": 10142411
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_legacy_bounded_outside_ab.npz",
+      "sha256": "ac44a93250c8f720877b372fd762f6e1d9c039be03dbcc1b6924cc833017c4aa",
+      "bytes": 13528769
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_legacy_bounded_all_other.npz",
+      "sha256": "73a718a7a4c793b1816802b336d1f1b3995981151c15ffa6a1b3bbe223b8dfa5",
+      "bytes": 13774677
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_literal_outside_ab.npz",
+      "sha256": "9f987010b3fb3aeb4694e06ed9247acc515872640fa92a2e001932ab36224eed",
+      "bytes": 11982278
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_literal_all_other.npz",
+      "sha256": "e2871b2f94b8b2a6fed19fe258c6c711a622962a8567d09f81200981787a5ff9",
+      "bytes": 12236514
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_constrained_outside_ab.npz",
+      "sha256": "8ffc27b42fadc811b8c99ba7c25b12a8f9d45aee4f9d7ddfbfd52e674ad9bece",
+      "bytes": 11982156
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_month_shape_constrained_all_other.npz",
+      "sha256": "a5e05a598eb57744f75a7adfcfac2120422ec32c429603169e0b3969b6225f58",
+      "bytes": 12236505
+    },
+    {
+      "path": "output/nygrid_2025_western_counterfactuals/inputs/niagara_hourly_changes.csv.gz",
+      "sha256": "8de4dc42bcd6a7ff6feeeaf4539c3cd6f0e46ff88b63855becd073350f5ae00c",
+      "bytes": 6616266
+    }
+  ],
+  "producer": {
+    "path": "scripts/nygrid_2025_remaining_errors/baseline/niagara_prior_consistency.py",
+    "sha256": "73a280d08ee797768042956894746f23f7013a802b3540ee8b0a1217d8918b79",
+    "bytes": 13722
+  },
+  "outputs": [
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/niagara_monthly_prior_oracle_comparison.csv",
+      "sha256": "9da1593a52e66d13b78c75fbe090f08930d6dab986b6dad6abecc2d3fe2f70a5",
+      "bytes": 4462
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/niagara_saved_DC_counterfactuals_same8170_metrics.csv",
+      "sha256": "aa7559dc6730f67099e3a91f81410aa9be3f9d1560f5ff7053009a5c95edf173",
+      "bytes": 126828
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/niagara_saved_counterfactual_RMN_changes_same8170.csv",
+      "sha256": "8867ad518a0ff7130e59b4ebb2f2af4b99ee98295a21d8d79985b4120c9132d0",
+      "bytes": 8293
+    },
+    {
+      "path": "output/nygrid_2025_remaining_errors/baseline/western_source_shape_associations.csv",
+      "sha256": "066f6e3311261903677196ecf903c77a1bfd4b46f93ec89a14cca4d195381236",
+      "bytes": 1617
+    }
+  ]
+}

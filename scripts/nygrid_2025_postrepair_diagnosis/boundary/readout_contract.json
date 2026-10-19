@@ -1,0 +1,24 @@
+{
+  "scope": "Post-repair source/meter interpretation and fixed-cohort readout sensitivities; no model, map or package change",
+  "preliminary_results_already_seen": true,
+  "prospective_validation_design_claimed": false,
+  "primary_cohort": "Same 8651 source-qualified and equation/loss-qualified hours in the physical-repair baseline and Moses-repair candidate",
+  "PV20_added_term": "outward_export_proxy = -PV20_SandBar_import_to_NY_proxy_MW",
+  "direction_basis": "Official seasonal Central East/Total East definitions include Plattsburgh to Sand Bar under D-to-N; the archived PAR diagram defines the opposite Sand Bar to NY sign as positive",
+  "direction_chosen_using_P32_fit": false,
+  "opposite_direction_scored": false,
+  "variants": [
+    "baseline_legacy",
+    "candidate_legacy",
+    "baseline_legacy_plus_same_PV20_export_proxy",
+    "candidate_legacy_plus_PV20_export_proxy"
+  ],
+  "Moses_variants": ["baseline_legacy", "candidate_legacy"],
+  "baseline_augmentation_warning": "Baseline did not separately route PV20. Adding a reported PV20 component to its coarse readout is a hybrid sensitivity, not a corrected baseline physical prediction.",
+  "candidate_augmentation_warning": "Candidate routes the PV20 proxy explicitly but its frozen CE/TE operators omit it. Adding its export component is source-directed partial scope accounting, not certification of remaining physical circuit terms or the P32 expression.",
+  "native_P34_semantics": "Operator-reported native numeric flow values; adopted numeric-as-MW and forward-hold aggregation. Raw MWH header, publication origin and native timestamp support remain independently unresolved.",
+  "source_meter_qualification": "Sand Bar PAR is not the Plattsburgh boundary meter. South Hero net load/injection, intervening loss and bypass terms are unresolved; no complete numerical error bound is established.",
+  "historical_sign_qualification": "The 2026-01-09 and 2026-07-17 official diagrams corroborate the same Sand Bar sign; no retrieved source certifies its effective date throughout 2025.",
+  "CentralEast_channel_qualification": "The CEVC24 physical interface definition includes PV20, but exact public P32 CENTRAL EAST - VC telemetry weights/expression are not independently certified.",
+  "promotion": "None: retain all declared sensitivity rows and do not choose an operator, sign or source scale by its score."
+}

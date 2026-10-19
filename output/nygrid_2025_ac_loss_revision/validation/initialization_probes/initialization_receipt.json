@@ -1,0 +1,54 @@
+{
+  "completed": true,
+  "hour_index": 4860,
+  "rows": [
+    {
+      "strategy": "zero_budget_original_case_damping_1",
+      "full_policy_run": true,
+      "PF_success": false,
+      "policy_success": false,
+      "iterations": 2,
+      "status": "AC_NR_failed",
+      "seconds": 3.4904445,
+      "P_KCL_MW": 45188.342230310991,
+      "Q_KCL_MVAr": 233435.2345453614
+    },
+    {
+      "strategy": "zero_budget_original_case_damping_0.5",
+      "full_policy_run": true,
+      "PF_success": false,
+      "policy_success": false,
+      "iterations": 2,
+      "status": "AC_NR_failed",
+      "seconds": 0.4246328,
+      "P_KCL_MW": 29.58712327801004,
+      "Q_KCL_MVAr": 0.0025264382304044375
+    },
+    {
+      "strategy": "case_voltage_on_seed_budget",
+      "full_policy_run": false,
+      "PF_success": false,
+      "policy_success": false,
+      "iterations": 50,
+      "status": "inner_initialization_diagnostic_only",
+      "seconds": 0.0623489,
+      "P_KCL_MW": 241072.81310137315,
+      "Q_KCL_MVAr": 1.7827677947702692E+6
+    },
+    {
+      "strategy": "adjusted_DCPF_voltage_on_seed_budget",
+      "full_policy_run": false,
+      "PF_success": false,
+      "policy_success": false,
+      "iterations": 50,
+      "status": "inner_initialization_diagnostic_only",
+      "seconds": 0.0463234,
+      "P_KCL_MW": 41913.528362923389,
+      "Q_KCL_MVAr": 392725.61650252726
+    }
+  ],
+  "source_only_initializations": true,
+  "model_parameters_bounds_profiles_and_loss_equations_unchanged": true,
+  "OPF_or_internal_interface_observations_used": false,
+  "inner_only_success_is_not_final_policy_success": true
+}
