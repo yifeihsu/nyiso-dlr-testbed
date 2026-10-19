@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "nygrid-rmse-2019-2025",
+  "title": "Interface RMSE: 2019 reference and current 2025",
+  "chart": {
+    "type": "bar",
+    "x": "Interface",
+    "y": "RMSE_MW",
+    "series": "Model",
+    "showXAxisLabel": false,
+    "yLabel": "RMSE (public MW)"
+  },
+  "rows": [
+    {
+      "Interface": "Total East",
+      "Model": "2019 released DC",
+      "RMSE_MW": 346.23547877256294
+    },
+    {
+      "Interface": "Total East",
+      "Model": "2025 current AC",
+      "RMSE_MW": 612.4717176984728
+    },
+    {
+      "Interface": "Dysinger East",
+      "Model": "2019 released DC",
+      "RMSE_MW": 261.14648067521034
+    },
+    {
+      "Interface": "Dysinger East",
+      "Model": "2025 current AC",
+      "RMSE_MW": 313.9515773236575
+    },
+    {
+      "Interface": "West Central",
+      "Model": "2019 released DC",
+      "RMSE_MW": 270.2341307905345
+    },
+    {
+      "Interface": "West Central",
+      "Model": "2025 current AC",
+      "RMSE_MW": 311.8272298470642
+    },
+    {
+      "Interface": "UPNY-ConEd",
+      "Model": "2019 released DC",
+      "RMSE_MW": 325.2778478994487
+    },
+    {
+      "Interface": "UPNY-ConEd",
+      "Model": "2025 current AC",
+      "RMSE_MW": 297.99377057630744
+    },
+    {
+      "Interface": "Central East",
+      "Model": "2019 released DC",
+      "RMSE_MW": 260.5673628380644
+    },
+    {
+      "Interface": "Central East",
+      "Model": "2025 current AC",
+      "RMSE_MW": 257.7176321318396
+    },
+    {
+      "Interface": "SPR/DUN",
+      "Model": "2019 released DC",
+      "RMSE_MW": 395.2793275613497
+    },
+    {
+      "Interface": "SPR/DUN",
+      "Model": "2025 current AC",
+      "RMSE_MW": 226.5066663989097
+    },
+    {
+      "Interface": "Moses South",
+      "Model": "2019 released DC",
+      "RMSE_MW": 198.26071822151576
+    },
+    {
+      "Interface": "Moses South",
+      "Model": "2025 current AC",
+      "RMSE_MW": 138.23965374306104
+    }
+  ],
+  "columns": [
+    "Interface",
+    "Model",
+    "RMSE_MW"
+  ],
+  "source": {
+    "label": "Saved NYgrid hourly predictions and NYISO observations",
+    "files": [
+      {
+        "label": "2019 author-release annual partitions 1-4"
+      },
+      {
+        "label": "2025 moses_repair_v1 comparison arrays"
+      },
+      {
+        "label": "Current-model pointer and scoring receipts"
+      }
+    ],
+    "caveats": [
+      "2019 uses 8,760 prepared local-hour positions; 2025 uses 8,651 source-qualified physical hours.",
+      "The released 2019 DC case and current 2025 AC case have different inputs, physics and diagnostic operators. This comparison does not isolate topology effects.",
+      "Physical meter equivalence across the named interfaces and years remains unverified. Values were recomputed from saved results; no new power-flow run was performed."
+    ],
+    "filters": [
+      "2019: authors_released_if_map",
+      "2025: candidate_all_success; annual; legacy_signed_literal_from"
+    ],
+    "metricDefinitions": [
+      {
+        "label": "RMSE",
+        "definition": "Square root of mean squared prediction error, in public-scale MW. Larger hourly errors receive more weight."
+      }
+    ],
+    "evidenceFlow": [
+      {
+        "kind": "validation",
+        "title": "Independent source reconciliation",
+        "detail": "Primary metrics match the saved source tables within 5.684341886080802e-14 in their stated units. Source fingerprints and the current model pointer were checked."
+      }
+    ]
+  },
+  "height": 410,
+  "theme": "codex-classic",
+  "generatedAt": "2026-10-19T00:59:25.250736+00:00"
+}

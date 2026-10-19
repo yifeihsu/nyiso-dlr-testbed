@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "interface-rmse",
+      "title": "How do interface RMSE values compare?",
+      "queries": [
+        {
+          "id": "saved-hourly-rmse",
+          "source": {
+            "label": "Saved NYgrid hourly predictions and NYISO observations",
+            "files": [
+              {
+                "label": "2019 author-release annual partitions 1-4"
+              },
+              {
+                "label": "2025 moses_repair_v1 comparison arrays"
+              },
+              {
+                "label": "Current-model pointer and scoring receipts"
+              }
+            ],
+            "caveats": [
+              "2019 uses 8,760 prepared local-hour positions; 2025 uses 8,651 source-qualified physical hours.",
+              "The released 2019 DC case and current 2025 AC case have different inputs, physics and diagnostic operators. This comparison does not isolate topology effects.",
+              "Physical meter equivalence across the named interfaces and years remains unverified. Values were recomputed from saved results; no new power-flow run was performed."
+            ],
+            "filters": [
+              "2019: authors_released_if_map",
+              "2025: candidate_all_success; annual; legacy_signed_literal_from"
+            ],
+            "metricDefinitions": [
+              {
+                "label": "RMSE",
+                "definition": "Square root of mean squared prediction error, in public-scale MW. Larger hourly errors receive more weight."
+              }
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "Independent source reconciliation",
+                "detail": "Primary metrics match the saved source tables within 5.684341886080802e-14 in their stated units. Source fingerprints and the current model pointer were checked."
+              }
+            ]
+          },
+          "reportingPeriod": "2019 and 2025 annual cohorts",
+          "columns": [
+            "Interface",
+            "Model",
+            "RMSE_MW"
+          ],
+          "rows": [
+            {
+              "Interface": "Total East",
+              "Model": "2019 released DC",
+              "RMSE_MW": 346.23547877256294
+            },
+            {
+              "Interface": "Total East",
+              "Model": "2025 current AC",
+              "RMSE_MW": 612.4717176984728
+            },
+            {
+              "Interface": "Dysinger East",
+              "Model": "2019 released DC",
+              "RMSE_MW": 261.14648067521034
+            },
+            {
+              "Interface": "Dysinger East",
+              "Model": "2025 current AC",
+              "RMSE_MW": 313.9515773236575
+            },
+            {
+              "Interface": "West Central",
+              "Model": "2019 released DC",
+              "RMSE_MW": 270.2341307905345
+            },
+            {
+              "Interface": "West Central",
+              "Model": "2025 current AC",
+              "RMSE_MW": 311.8272298470642
+            },
+            {
+              "Interface": "UPNY-ConEd",
+              "Model": "2019 released DC",
+              "RMSE_MW": 325.2778478994487
+            },
+            {
+              "Interface": "UPNY-ConEd",
+              "Model": "2025 current AC",
+              "RMSE_MW": 297.99377057630744
+            },
+            {
+              "Interface": "Central East",
+              "Model": "2019 released DC",
+              "RMSE_MW": 260.5673628380644
+            },
+            {
+              "Interface": "Central East",
+              "Model": "2025 current AC",
+              "RMSE_MW": 257.7176321318396
+            },
+            {
+              "Interface": "SPR/DUN",
+              "Model": "2019 released DC",
+              "RMSE_MW": 395.2793275613497
+            },
+            {
+              "Interface": "SPR/DUN",
+              "Model": "2025 current AC",
+              "RMSE_MW": 226.5066663989097
+            },
+            {
+              "Interface": "Moses South",
+              "Model": "2019 released DC",
+              "RMSE_MW": 198.26071822151576
+            },
+            {
+              "Interface": "Moses South",
+              "Model": "2025 current AC",
+              "RMSE_MW": 138.23965374306104
+            }
+          ],
+          "methods": [
+            {
+              "language": "python",
+              "code": "def metrics(predicted,observed):\n    predicted=np.asarray(predicted,float).ravel()\n    observed=np.asarray(observed,float).ravel()\n    assert predicted.shape==observed.shape and len(predicted)>0\n    assert np.isfinite(predicted).all() and np.isfinite(observed).all()\n    error=predicted-observed;absolute=np.abs(error);obs_abs=np.abs(observed)\n    denominator=float(obs_abs.mean());assert denominator>0\n    mse=float(np.mean(error**2));bias=float(error.mean());sd=float(error.std(ddof=0))\n    assert np.isclose(mse,bias*bias+sd*sd,rtol=1e-12,atol=1e-8)\n    nonzero=obs_abs>0;guarded=obs_abs>=100\n    symmetric=np.abs(predicted)+obs_abs\n    smape=np.divide(200*absolute,symmetric,out=np.zeros_like(absolute),where=symmetric>0)\n    result=dict(hours=len(error),bias_MW=bias,MAE_MW=float(absolute.mean()),\n        MSE_MW2=mse,RMSE_MW=float(np.sqrt(mse)),error_SD_MW=sd,\n        median_AE_MW=float(np.median(absolute)),\n        p95_AE_MW=float(np.quantile(absolute,.95,method='linear')),\n        WAPE_percent=float(100*absolute.sum()/obs_abs.sum()),\n        nRMSE_percent=float(100*np.sqrt(mse)/denominator),\n        normalized_bias_percent=float(100*bias/denominator),\n        MAPE_nonzero_percent=float(100*np.mean(absolute[nonzero]/obs_abs[nonzero])),\n        MAPE_abs_actual_ge100_percent=float(100*np.mean(absolute[guarded]/obs_abs[guarded])),\n        sMAPE_percent=float(smape.mean()),\n        MAPE_nonzero_hours=int(nonzero.sum()),\n        MAPE_ge100_hours=int(guarded.sum()),\n        MAPE_nonzero_coverage_percent=float(100*nonzero.mean()),\n        MAPE_ge100_coverage_percent=float(100*guarded.mean()),\n        observed_zero_hours=int((~nonzero).sum()),\n        observed_abs_below100_hours=int((obs_abs<100).sum()),\n        mean_abs_observed_MW=denominator)\n    assert np.isclose(result['WAPE_percent'],100*result['MAE_MW']/denominator)\n    return result\n"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
